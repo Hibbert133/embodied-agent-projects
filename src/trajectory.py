@@ -14,6 +14,7 @@ import numpy as np
 class TrajectoryStep:
     """One action and its resulting environment transition."""
 
+    schema_version: int
     episode_id: int
     seed: int
     step: int
@@ -24,6 +25,11 @@ class TrajectoryStep:
     perturbed_action: list[float]
     executed_action: list[float]
     was_clipped: bool
+    clipped_element_count: int
+    commanded_action: list[float]
+    perturbation_type: str
+    perturbation_parameters: dict[str, Any]
+    task_progress_metrics: dict[str, Any]
     reward: float
     success: bool
     terminated: bool
@@ -46,6 +52,10 @@ class TrajectoryStep:
         perturbed_action: Sequence[float] | np.ndarray | None = None,
         executed_action: Sequence[float] | np.ndarray | None = None,
         was_clipped: bool | np.bool_ = False,
+        clipped_element_count: int = 0,
+        perturbation_type: str = "identity",
+        perturbation_parameters: dict[str, Any] | None = None,
+        task_progress_metrics: dict[str, Any] | None = None,
     ) -> "TrajectoryStep":
         if episode_id <= 0:
             raise ValueError("episode_id must be a positive integer")
@@ -61,6 +71,7 @@ class TrajectoryStep:
             np.asarray(executed_action, dtype=float).reshape(-1).tolist()
         )
         return cls(
+            schema_version=2,
             episode_id=int(episode_id),
             seed=int(seed),
             step=int(step),
@@ -72,6 +83,11 @@ class TrajectoryStep:
             ),
             executed_action=executed_list,
             was_clipped=bool(was_clipped),
+            clipped_element_count=int(clipped_element_count),
+            commanded_action=executed_list,
+            perturbation_type=str(perturbation_type),
+            perturbation_parameters=perturbation_parameters or {},
+            task_progress_metrics=task_progress_metrics or {},
             reward=float(reward),
             success=bool(success),
             terminated=bool(terminated),
@@ -80,6 +96,14 @@ class TrajectoryStep:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+    def to_agent_view(self) -> dict[str, Any]:
+        from src.trajectory_views import build_agent_view
+        return build_agent_view(self.to_dict())
+
+    def to_oracle_view(self) -> dict[str, Any]:
+        from src.trajectory_views import build_oracle_view
+        return build_oracle_view(self.to_dict())
 
 
 class TrajectoryRecorder:
@@ -125,6 +149,10 @@ class TrajectoryRecorder:
         perturbed_action: Sequence[float] | np.ndarray | None = None,
         executed_action: Sequence[float] | np.ndarray | None = None,
         was_clipped: bool | np.bool_ = False,
+        clipped_element_count: int = 0,
+        perturbation_type: str = "identity",
+        perturbation_parameters: dict[str, Any] | None = None,
+        task_progress_metrics: dict[str, Any] | None = None,
     ) -> None:
         self.record(
             TrajectoryStep.from_transition(
@@ -137,6 +165,10 @@ class TrajectoryRecorder:
                 perturbed_action=perturbed_action,
                 executed_action=executed_action,
                 was_clipped=was_clipped,
+                clipped_element_count=clipped_element_count,
+                perturbation_type=perturbation_type,
+                perturbation_parameters=perturbation_parameters,
+                task_progress_metrics=task_progress_metrics,
                 reward=reward,
                 success=success,
                 terminated=terminated,

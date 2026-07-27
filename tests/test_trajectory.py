@@ -47,9 +47,7 @@ class TrajectoryTest(unittest.TestCase):
 
         self.assertEqual(len(lines), 2)
         data = json.loads(lines[0])
-        self.assertEqual(
-            set(data),
-            {
+        self.assertTrue({
                 "episode_id",
                 "seed",
                 "step",
@@ -62,9 +60,16 @@ class TrajectoryTest(unittest.TestCase):
                 "reward",
                 "success",
                 "terminated",
-                "truncated",
-            },
-        )
+                "truncated", "schema_version", "commanded_action", "task_progress_metrics",
+                "perturbation_type", "perturbation_parameters", "clipped_element_count"
+            }.issubset(data))
+
+    def test_agent_and_oracle_views(self) -> None:
+        step = TrajectoryStep.from_transition(episode_id=1,seed=42,step=1,observation=[1,2],action=[.1,.2],reward=1,success=False,terminated=False,truncated=False,perturbation_type="action_bias",perturbation_parameters={"bias":[.1,0]})
+        agent=step.to_agent_view(); oracle=step.to_oracle_view()
+        for forbidden in ("raw_action","perturbed_action","perturbation_type","perturbation_parameters"):
+            self.assertNotIn(forbidden,agent)
+        self.assertEqual(oracle["perturbation_type"],"action_bias"); self.assertIn("raw_action",oracle)
 
     def test_success_never_changes_back_to_false(self) -> None:
         recorder = TrajectoryRecorder(episode_id=1, seed=42)

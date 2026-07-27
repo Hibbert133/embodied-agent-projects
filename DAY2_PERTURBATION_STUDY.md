@@ -7,7 +7,7 @@
 ## GitHub
 
 - 仓库：<https://github.com/Hibbert133/embodied-agent-projects.git>
-- Commit：Day 2 修改尚未提交；当前工作树基于 `2fdd9e1ce3568a522878cbcfd478fbaf5c1a2c07`
+- Commit：Day 2 已提交为 `c810465b8fe9c5e3bf55bf0b1d7e20d408db14ca`。
 
 ## Experimental Setup
 

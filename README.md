@@ -100,6 +100,12 @@ python scripts/render_perturbation_videos.py --max-steps 500 --fps 30
 完整的 Day 2 实验设置、真实结果、图表和代表性视频见
 [DAY2_PERTURBATION_STUDY.md](DAY2_PERTURBATION_STUDY.md)。
 
+Day 2.5 修正了扰动语义：默认 mask 为 `(x, y, z)`，gripper 不受 scale、noise
+或 bias 影响；bias 必须提供完整 4 维向量。轨迹 schema v2 提供无扰动真值的
+Agent View 和供审计使用的 Oracle View，并增加基于 MetaWorld 3.1.1 observation
+源码布局的 push 进度指标。完整说明和真实实验见
+[reports/day2_5_perturbation_hygiene.md](reports/day2_5_perturbation_hygiene.md)。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

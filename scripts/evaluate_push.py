@@ -27,14 +27,21 @@ DEFAULT_TRAJECTORY_DIR = PROJECT_ROOT / "outputs" / "push_trajectories"
 
 @dataclass(frozen=True)
 class EvaluationRow:
+    schema_version: int
     episode_id: int
     seed: int
     success: bool
     steps: int
     episode_return: float
     elapsed_time_ms: float
-    clip_count: int
-    clip_fraction: float
+    clipped_step_count: int
+    clipped_step_fraction: float
+    clipped_element_count: int
+    clipped_element_fraction: float
+    final_object_goal_distance: float
+    min_gripper_object_distance: float
+    object_displacement: float
+    progress_to_goal: float
     trajectory_path: str
 
 
@@ -114,14 +121,21 @@ def evaluate(
                 env.close()
 
         row = EvaluationRow(
+            schema_version=2,
             episode_id=episode_id,
             seed=seed,
             success=result.success,
             steps=result.steps,
             episode_return=result.episode_return,
             elapsed_time_ms=result.elapsed_time_ms,
-            clip_count=result.clip_count,
-            clip_fraction=result.clip_fraction,
+            clipped_step_count=result.clipped_step_count,
+            clipped_step_fraction=result.clipped_step_fraction,
+            clipped_element_count=result.clipped_element_count,
+            clipped_element_fraction=result.clipped_element_fraction,
+            final_object_goal_distance=result.final_object_goal_distance,
+            min_gripper_object_distance=result.min_gripper_object_distance,
+            object_displacement=result.object_displacement,
+            progress_to_goal=result.progress_to_goal,
             trajectory_path=str(trajectory_path.resolve()),
         )
         rows.append(row)

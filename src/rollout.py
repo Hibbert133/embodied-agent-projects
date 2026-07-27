@@ -12,6 +12,7 @@ import numpy as np
 
 from src.trajectory import TrajectoryRecorder
 from src.perturbations import ActionPerturbation, IdentityPerturbation
+from src.task_metrics import PushEpisodeMetrics, compute_push_step_metrics, summarize_push_episode
 
 
 @dataclass(frozen=True)
@@ -20,8 +21,18 @@ class EpisodeResult:
     steps: int
     episode_return: float
     elapsed_time_ms: float
-    clip_count: int
-    clip_fraction: float
+    clipped_step_count: int
+    clipped_step_fraction: float
+    clipped_element_count: int
+    clipped_element_fraction: float
+    final_object_goal_distance: float
+    min_gripper_object_distance: float
+    object_displacement: float
+    progress_to_goal: float
+    @property
+    def clip_count(self) -> int: return self.clipped_step_count
+    @property
+    def clip_fraction(self) -> float: return self.clipped_step_fraction
 
 
 def create_push_environment(seed: int, render_mode: str | None = None) -> Any:
@@ -91,7 +102,9 @@ def run_episode(
     success = False
     steps_run = 0
     episode_return = 0.0
-    clip_count = 0
+    clipped_step_count = 0
+    clipped_element_count = 0
+    metric_records = []
     active_perturbation = perturbation or IdentityPerturbation()
 
     try:
@@ -113,6 +126,7 @@ def run_episode(
 
         start_time = perf_counter()
         observation, _ = env.reset(seed=seed)
+        initial_observation = np.asarray(observation).copy()
         active_perturbation.reset(seed)
         if writer is not None:
             writer.append_data(_validate_frame(env.render()))
@@ -133,8 +147,10 @@ def run_episode(
             executed_action = np.clip(
                 perturbed_action, env.action_space.low, env.action_space.high
             )
-            was_clipped = bool(np.any(perturbed_action != executed_action))
-            clip_count += int(was_clipped)
+            clipped_elements = perturbed_action != executed_action
+            was_clipped = bool(np.any(clipped_elements))
+            clipped_step_count += int(was_clipped)
+            clipped_element_count += int(np.count_nonzero(clipped_elements))
             observation, reward, terminated, truncated, info = env.step(
                 executed_action
             )
@@ -142,6 +158,8 @@ def run_episode(
             success = success or step_success
             episode_return += float(reward)
             steps_run = step
+            step_metrics = compute_push_step_metrics(observation, initial_observation)
+            metric_records.append(step_metrics)
 
             recorder.record_transition(
                 step=step,
@@ -151,6 +169,10 @@ def run_episode(
                 perturbed_action=perturbed_action,
                 executed_action=executed_action,
                 was_clipped=was_clipped,
+                clipped_element_count=int(np.count_nonzero(clipped_elements)),
+                perturbation_type=active_perturbation.name,
+                perturbation_parameters=active_perturbation.parameters(),
+                task_progress_metrics=step_metrics.to_dict(),
                 reward=reward,
                 success=success,
                 terminated=terminated,
@@ -180,11 +202,19 @@ def run_episode(
         if temporary_video is not None and temporary_video.exists():
             temporary_video.unlink()
 
+    episode_metrics: PushEpisodeMetrics = summarize_push_episode(metric_records)
+    action_elements = steps_run * int(np.asarray(env.action_space.low).size)
     return EpisodeResult(
         success=success,
         steps=steps_run,
         episode_return=episode_return,
         elapsed_time_ms=elapsed_time_ms,
-        clip_count=clip_count,
-        clip_fraction=clip_count / steps_run if steps_run else 0.0,
+        clipped_step_count=clipped_step_count,
+        clipped_step_fraction=clipped_step_count / steps_run if steps_run else 0.0,
+        clipped_element_count=clipped_element_count,
+        clipped_element_fraction=clipped_element_count / action_elements if action_elements else 0.0,
+        final_object_goal_distance=episode_metrics.final_object_goal_distance,
+        min_gripper_object_distance=episode_metrics.minimum_gripper_object_distance,
+        object_displacement=episode_metrics.object_displacement,
+        progress_to_goal=episode_metrics.progress_to_goal,
     )

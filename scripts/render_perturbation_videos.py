@@ -61,21 +61,21 @@ CASES = (
         "action_bias",
         0.08,
         102,
-        lambda: ActionBiasPerturbation(0.08),
+        lambda: ActionBiasPerturbation((0.0, 0.08, 0.0, 0.0)),
     ),
     VideoCase(
         "bias_0.08_failure_seed100",
         "action_bias",
         0.08,
         100,
-        lambda: ActionBiasPerturbation(0.08),
+        lambda: ActionBiasPerturbation((0.0, 0.08, 0.0, 0.0)),
     ),
     VideoCase(
         "bias_0.10_failure_seed100",
         "action_bias",
         0.10,
         100,
-        lambda: ActionBiasPerturbation(0.10),
+        lambda: ActionBiasPerturbation((0.0, 0.10, 0.0, 0.0)),
     ),
 )
 
