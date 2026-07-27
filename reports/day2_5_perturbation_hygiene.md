@@ -24,8 +24,9 @@ schema-v2 Agent View，不能通过动作差值获知注入真值。
 
 旧 schema v1 缺少 `next_observation`，且 `commanded_action` 语义不可靠，不进行批量迁移。
 Day 3 只允许读取本修复后生成并通过必要字段校验的 schema v2。修复前生成的实验审计轨迹
-即使曾带有版本字段，也不应作为 Day 3 Agent View 输入；新的有效代表轨迹位于
-`outputs/day2_5/schema_v2_trajectories/`。
+即使曾带有版本字段，也不应作为 Day 3 Agent View 输入。旧代表轨迹现已由重新运行
+`scripts/render_day2_5_representatives.py` 产生的 schema-v2 文件覆盖；唯一统一目录为
+`outputs/representative_trajectories/`，Day 3 只能读取这些重新生成并通过验证器的文件。
 
 ## Observation and task metrics provenance
 
@@ -90,6 +91,8 @@ observation，不访问未来状态。return 保留为辅助指标，不作为�
 
 代表视频在 `outputs/videos/`：seed 100 为成功，seed 148 为典型失败，seed 135 为
 最接近目标但最终失败；对应 schema-v2 JSONL 位于 `outputs/representative_trajectories/`。
+轨迹语义修复只改变记录字段：相同 seeds 的 success、steps、return 和最终距离与原
+50-seed CSV 完全一致，既有实验结论不变。
 图表位于 `outputs/figures/`，全部直接读取真实 CSV。局限包括仅使用一个任务/脚本策略、
 50 seeds 的置信区间仍较宽、near-success 仅按最终距离选择，以及 MetaWorld observation-space
 边界 warning。没有实现失败诊断、适应、记忆、LLM 或学习。
