@@ -1,8 +1,8 @@
 # MetaWorld Push 可视化入门
 
-这是一个不训练强化学习模型的最小具身智能示例：在 MetaWorld 的 `push-v3`
+这是一个不训练强化学习模型的具身智能示例：在 MetaWorld 的 `push-v3`
 任务中运行内置脚本策略，用 MuJoCo 的 `render_mode="rgb_array"` 获取 RGB 帧，
-并保存为 `outputs/push_demo.mp4`。
+保存 rollout 视频和 JSONL 轨迹，并支持多个 episode 的批量评测。
 
 ## 项目结构
 
@@ -12,10 +12,19 @@
 ├── README.md
 ├── requirements.txt
 ├── outputs/
-│   └── push_demo.mp4       # 运行后生成
-└── scripts/
-    ├── check_install.py    # 版本、环境创建、渲染冒烟测试
-    └── demo_push.py        # push rollout 与视频保存
+│   ├── push_demo.mp4         # rollout 视频
+│   ├── push_demo.jsonl       # 视频对应的逐步轨迹
+│   ├── push_evaluation.csv   # 批量评测汇总
+│   └── push_trajectories/    # 每个评测 episode 的 JSONL
+├── src/
+│   ├── rollout.py            # 可复用的 episode rollout 逻辑
+│   └── trajectory.py         # 轨迹结构与 JSONL 保存
+├── scripts/
+│   ├── check_install.py      # 版本、环境创建、渲染冒烟测试
+│   ├── demo_push.py          # push rollout、视频与轨迹保存
+│   └── evaluate_push.py      # 多 episode 批量评测
+└── tests/
+    └── test_trajectory.py
 ```
 
 ## 完整运行命令
@@ -38,7 +47,40 @@ python scripts/demo_push.py
 python scripts/demo_push.py --output outputs/push_demo.mp4 --seed 42 --max-steps 500 --fps 30
 ```
 
-这两个脚本都应从项目根目录运行。它们不要求 GPU/CUDA，也不会训练或下载策略权重。
+默认还会将同一次 rollout 的轨迹保存到 `outputs/push_demo.jsonl`。可以单独指定：
+
+```powershell
+python scripts/demo_push.py --trajectory-output outputs/my_trajectory.jsonl
+```
+
+运行 10 个 episode 的批量评测：
+
+```powershell
+python scripts/evaluate_push.py --num-episodes 10 --seed-start 100 --max-steps 500 --output-csv outputs/push_evaluation.csv --trajectory-dir outputs/push_trajectories
+```
+
+评测在每个 episode 首次达到 success 时立即停止，汇总结果写入
+`outputs/push_evaluation.csv`，逐 episode 轨迹写入 `outputs/push_trajectories/`。
+运行轨迹单元测试：
+
+```powershell
+python -m unittest tests.test_trajectory -v
+```
+
+这些脚本都应从项目根目录运行。它们不要求 GPU/CUDA，也不会训练或下载策略权重。
+
+## Episode、rollout、trajectory、return 和 success rate
+
+- `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数
+  上限为止的一次完整尝试。
+- `rollout`：策略在环境中连续选择动作并产生状态转移的执行过程。一个 rollout
+  通常对应一个 episode；demo 为了保留完整 500 步视频，成功后仍继续到环境结束。
+- `trajectory`（轨迹）：rollout 中按时间排序的逐步记录。本项目每行 JSON 保存
+  episode_id、seed、step、执行动作前的 observation，以及该动作产生的 reward、
+  success、terminated 和 truncated。success 是累计状态，一旦成功就不会变回 False。
+- `return`（回报）：一个 episode 内所有 step reward 的总和。这里仅用于评价脚本策略，
+  不用于训练。
+- `success rate`（成功率）：成功 episode 数除以总 episode 数。
 
 ## 一次交互中各变量的含义
 
