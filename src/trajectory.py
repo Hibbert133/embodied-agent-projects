@@ -19,6 +19,7 @@ class TrajectoryStep:
     seed: int
     step: int
     observation: list[float]
+    next_observation: list[float]
     # ``action`` remains an alias for executed_action for old JSONL consumers.
     action: list[float]
     raw_action: list[float]
@@ -43,6 +44,7 @@ class TrajectoryStep:
         seed: int,
         step: int,
         observation: Sequence[float] | np.ndarray,
+        next_observation: Sequence[float] | np.ndarray,
         action: Sequence[float] | np.ndarray,
         reward: float | np.generic,
         success: bool | np.bool_,
@@ -67,6 +69,7 @@ class TrajectoryStep:
             perturbed_action = raw_action
         if executed_action is None:
             executed_action = action
+        raw_list = np.asarray(raw_action, dtype=float).reshape(-1).tolist()
         executed_list = (
             np.asarray(executed_action, dtype=float).reshape(-1).tolist()
         )
@@ -76,15 +79,16 @@ class TrajectoryStep:
             seed=int(seed),
             step=int(step),
             observation=np.asarray(observation, dtype=float).reshape(-1).tolist(),
+            next_observation=np.asarray(next_observation, dtype=float).reshape(-1).tolist(),
             action=executed_list,
-            raw_action=np.asarray(raw_action, dtype=float).reshape(-1).tolist(),
+            raw_action=raw_list,
             perturbed_action=(
                 np.asarray(perturbed_action, dtype=float).reshape(-1).tolist()
             ),
             executed_action=executed_list,
             was_clipped=bool(was_clipped),
             clipped_element_count=int(clipped_element_count),
-            commanded_action=executed_list,
+            commanded_action=raw_list,
             perturbation_type=str(perturbation_type),
             perturbation_parameters=perturbation_parameters or {},
             task_progress_metrics=task_progress_metrics or {},
@@ -140,6 +144,7 @@ class TrajectoryRecorder:
         *,
         step: int,
         observation: Sequence[float] | np.ndarray,
+        next_observation: Sequence[float] | np.ndarray,
         action: Sequence[float] | np.ndarray,
         reward: float | np.generic,
         success: bool | np.bool_,
@@ -160,6 +165,7 @@ class TrajectoryRecorder:
                 seed=self.seed,
                 step=step,
                 observation=observation,
+                next_observation=next_observation,
                 action=action,
                 raw_action=raw_action,
                 perturbed_action=perturbed_action,

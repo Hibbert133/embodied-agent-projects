@@ -1,4 +1,4 @@
-import tempfile,unittest
+import json,tempfile,unittest
 from pathlib import Path
 import numpy as np
 from src.perturbations import ActionBiasPerturbation,IdentityPerturbation
@@ -25,4 +25,16 @@ class RolloutTest(unittest.TestCase):
     def test_identity_matches_baseline(self):
         a=run_episode(Env(),Policy([.2,0,0,.2]),seed=1,max_steps=2); b=run_episode(Env(),Policy([.2,0,0,.2]),seed=1,max_steps=2,perturbation=IdentityPerturbation())
         self.assertEqual((a.success,a.steps,a.episode_return,a.clipped_step_count),(b.success,b.steps,b.episode_return,b.clipped_step_count))
+    def test_transition_alignment_and_command_semantics(self):
+        with tempfile.TemporaryDirectory() as directory:
+            path=Path(directory)/"trajectory.jsonl"
+            run_episode(Env(),Policy([.2,0,0,.2]),seed=1,max_steps=2,trajectory_path=path,stop_on_success=False,perturbation=ActionBiasPerturbation((.1,0,0,0)))
+            rows=[json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()]
+        first=rows[0]
+        np.testing.assert_array_equal(first["observation"],obs(0))
+        np.testing.assert_array_equal(first["next_observation"],obs(1))
+        np.testing.assert_array_equal(first["commanded_action"],first["raw_action"])
+        self.assertNotEqual(first["commanded_action"],first["perturbed_action"])
+        self.assertAlmostEqual(first["task_progress_metrics"]["object_position"][0],obs(1)[4])
+        np.testing.assert_array_equal(rows[1]["observation"],first["next_observation"])
 if __name__=='__main__': unittest.main()

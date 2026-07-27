@@ -11,10 +11,21 @@
 ## Agent View and Oracle View
 
 Agent View 仅含 `schema_version, episode_id, seed, step, observation,
-commanded_action, reward, success, terminated, truncated, task_progress_metrics`。
+next_observation, commanded_action, reward, success, terminated, truncated,
+task_progress_metrics`。其中 `commanded_action` 严格等于策略的 `raw_action`，表示策略向
+执行系统发出的命令，而不是注入偏差并裁剪后的动作。
 Oracle View 另外含 `raw_action, perturbed_action, executed_action,
 perturbation_type, perturbation_parameters, was_clipped, clipped_element_count`。
-未来诊断接口只能接收 Agent View，不能通过动作差值获知注入真值。
+`executed_action` 仅属于 Oracle View。每条 transition 对齐为
+`state_t + commanded_action_t → state_t+1`：`observation` 是动作前状态，
+`next_observation` 是环境 step 返回的动作后状态，reward、终止标志和 success 也属于这次
+step 的结果，task metrics 基于 `next_observation` 计算。未来诊断接口只能接收严格校验的
+schema-v2 Agent View，不能通过动作差值获知注入真值。
+
+旧 schema v1 缺少 `next_observation`，且 `commanded_action` 语义不可靠，不进行批量迁移。
+Day 3 只允许读取本修复后生成并通过必要字段校验的 schema v2。修复前生成的实验审计轨迹
+即使曾带有版本字段，也不应作为 Day 3 Agent View 输入；新的有效代表轨迹位于
+`outputs/day2_5/schema_v2_trajectories/`。
 
 ## Observation and task metrics provenance
 

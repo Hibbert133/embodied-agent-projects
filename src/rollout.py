@@ -151,19 +151,20 @@ def run_episode(
             was_clipped = bool(np.any(clipped_elements))
             clipped_step_count += int(was_clipped)
             clipped_element_count += int(np.count_nonzero(clipped_elements))
-            observation, reward, terminated, truncated, info = env.step(
+            next_observation, reward, terminated, truncated, info = env.step(
                 executed_action
             )
             step_success = bool(info.get("success", False))
             success = success or step_success
             episode_return += float(reward)
             steps_run = step
-            step_metrics = compute_push_step_metrics(observation, initial_observation)
+            step_metrics = compute_push_step_metrics(next_observation, initial_observation)
             metric_records.append(step_metrics)
 
             recorder.record_transition(
                 step=step,
                 observation=observation_before_action,
+                next_observation=next_observation,
                 action=executed_action,
                 raw_action=raw_action,
                 perturbed_action=perturbed_action,
@@ -178,6 +179,7 @@ def run_episode(
                 terminated=terminated,
                 truncated=truncated,
             )
+            observation = next_observation
             if writer is not None:
                 writer.append_data(_validate_frame(env.render()))
 

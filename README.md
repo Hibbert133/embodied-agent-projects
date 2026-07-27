@@ -106,6 +106,12 @@ Agent View 和供审计使用的 Oracle View，并增加基于 MetaWorld 3.1.1 o
 源码布局的 push 进度指标。完整说明和真实实验见
 [reports/day2_5_perturbation_hygiene.md](reports/day2_5_perturbation_hygiene.md)。
 
+轨迹 transition 的严格语义为
+`observation(state_t) + commanded_action(action_t) → next_observation(state_t+1)`。
+`commanded_action` 是策略原始输出；扰动后并裁剪的 `executed_action` 只在 Oracle View
+中用于实验审计。`task_progress_metrics` 基于 `next_observation` 计算。Day 3 只能读取
+严格校验后的 schema-v2 Agent View，不能读取人工注入 bias 的类型、方向、强度或动作差值。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数
