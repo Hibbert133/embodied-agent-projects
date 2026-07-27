@@ -15,14 +15,20 @@
 │   ├── push_demo.mp4         # rollout 视频
 │   ├── push_demo.jsonl       # 视频对应的逐步轨迹
 │   ├── push_evaluation.csv   # 批量评测汇总
-│   └── push_trajectories/    # 每个评测 episode 的 JSONL
+│   ├── push_trajectories/    # 每个评测 episode 的 JSONL
+│   ├── perturbation_sweep.csv    # 每个扰动 episode 的详细结果
+│   ├── perturbation_summary.csv  # 按扰动强度汇总的结果
+│   └── perturbation_videos/      # 代表性成功/失败 rollout 视频与轨迹
 ├── src/
 │   ├── rollout.py            # 可复用的 episode rollout 逻辑
-│   └── trajectory.py         # 轨迹结构与 JSONL 保存
+│   ├── trajectory.py         # 轨迹结构与 JSONL 保存
+│   └── perturbations.py      # 统一动作扰动接口
 ├── scripts/
 │   ├── check_install.py      # 版本、环境创建、渲染冒烟测试
 │   ├── demo_push.py          # push rollout、视频与轨迹保存
-│   └── evaluate_push.py      # 多 episode 批量评测
+│   ├── evaluate_push.py      # 多 episode 批量评测
+│   ├── sweep_perturbations.py # 配对 seed 的扰动强度扫描
+│   └── render_perturbation_videos.py # 扰动对比视频
 └── tests/
     └── test_trajectory.py
 ```
@@ -67,7 +73,32 @@ python scripts/evaluate_push.py --num-episodes 10 --seed-start 100 --max-steps 5
 python -m unittest tests.test_trajectory -v
 ```
 
+运行默认动作扰动扫描；每个配置使用完全相同的一组 episode seeds：
+
+```powershell
+python scripts/sweep_perturbations.py --num-episodes 20 --seed-start 100 --max-steps 500 --output-csv outputs/perturbation_sweep.csv --summary-csv outputs/perturbation_summary.csv
+```
+
+也可以选择一种扰动并指定强度：
+
+```powershell
+python scripts/sweep_perturbations.py --perturbation-type action_bias --levels 0.06 0.07 --num-episodes 20
+```
+
+生成一组可复现的代表性扰动 rollout 视频（包括成功和失败样本）：
+
+```powershell
+python scripts/render_perturbation_videos.py --max-steps 500 --fps 30
+```
+
+视频和对应 JSONL 轨迹写入 `outputs/perturbation_videos/`，实际结果清单写入该目录的
+`manifest.csv`。文件名标明扰动类型、强度、结果和 seed；脚本仍会重新执行每个 rollout，
+并把本次真实的 success、steps、return 和裁剪统计写入清单。
+
 这些脚本都应从项目根目录运行。它们不要求 GPU/CUDA，也不会训练或下载策略权重。
+
+完整的 Day 2 实验设置、真实结果、图表和代表性视频见
+[DAY2_PERTURBATION_STUDY.md](DAY2_PERTURBATION_STUDY.md)。
 
 ## Episode、rollout、trajectory、return 和 success rate
 
@@ -81,6 +112,22 @@ python -m unittest tests.test_trajectory -v
 - `return`（回报）：一个 episode 内所有 step reward 的总和。这里仅用于评价脚本策略，
   不用于训练。
 - `success rate`（成功率）：成功 episode 数除以总 episode 数。
+
+## 可控动作扰动
+
+- `ActionScalePerturbation`（动作缩放）：按固定比例缩放策略动作，用于模拟执行器
+  增益不足、运动速度下降或控制响应衰减。
+- `GaussianNoisePerturbation`（高斯噪声）：在每一步加入由 episode seed 独立生成的
+  随机噪声，用于模拟传感器到控制链路的抖动或低层控制噪声。它不使用全局
+  `np.random` 状态，相同 seed 可以完全复现。
+- `ActionBiasPerturbation`（固定偏差）：在动作上持续加入固定偏移，用于模拟执行器
+  零点误差、标定偏差或长期控制漂移。默认强度扫描使用标量偏差，并将它广播到
+  全部动作维度。
+
+动作依次经过 `raw_action`、`perturbed_action`、范围裁剪和 `executed_action`。
+轨迹格式已升级，新增这三个字段以及 `was_clipped`。为兼容旧读取代码，原有
+`action` 字段继续保留，并与真正送入环境的 `executed_action` 相同。每个 episode
+还会统计 `clip_count` 和 `clip_fraction`。
 
 ## 一次交互中各变量的含义
 

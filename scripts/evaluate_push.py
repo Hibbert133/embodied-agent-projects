@@ -33,6 +33,8 @@ class EvaluationRow:
     steps: int
     episode_return: float
     elapsed_time_ms: float
+    clip_count: int
+    clip_fraction: float
     trajectory_path: str
 
 
@@ -118,6 +120,8 @@ def evaluate(
             steps=result.steps,
             episode_return=result.episode_return,
             elapsed_time_ms=result.elapsed_time_ms,
+            clip_count=result.clip_count,
+            clip_fraction=result.clip_fraction,
             trajectory_path=str(trajectory_path.resolve()),
         )
         rows.append(row)
@@ -161,4 +165,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

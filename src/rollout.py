@@ -11,6 +11,7 @@ import imageio.v2 as imageio
 import numpy as np
 
 from src.trajectory import TrajectoryRecorder
+from src.perturbations import ActionPerturbation, IdentityPerturbation
 
 
 @dataclass(frozen=True)
@@ -19,6 +20,8 @@ class EpisodeResult:
     steps: int
     episode_return: float
     elapsed_time_ms: float
+    clip_count: int
+    clip_fraction: float
 
 
 def create_push_environment(seed: int, render_mode: str | None = None) -> Any:
@@ -70,6 +73,7 @@ def run_episode(
     video_path: Path | None = None,
     fps: int = 30,
     stop_on_success: bool = True,
+    perturbation: ActionPerturbation | None = None,
 ) -> EpisodeResult:
     """Run one episode, stopping at first success by default.
 
@@ -87,6 +91,8 @@ def run_episode(
     success = False
     steps_run = 0
     episode_return = 0.0
+    clip_count = 0
+    active_perturbation = perturbation or IdentityPerturbation()
 
     try:
         if video_path is not None:
@@ -107,14 +113,31 @@ def run_episode(
 
         start_time = perf_counter()
         observation, _ = env.reset(seed=seed)
+        active_perturbation.reset(seed)
         if writer is not None:
             writer.append_data(_validate_frame(env.render()))
 
         for step in range(1, max_steps + 1):
             observation_before_action = np.asarray(observation).copy()
-            action = np.asarray(policy.get_action(observation), dtype=np.float32)
-            action = np.clip(action, env.action_space.low, env.action_space.high)
-            observation, reward, terminated, truncated, info = env.step(action)
+            raw_action = np.asarray(
+                policy.get_action(observation), dtype=np.float32
+            )
+            perturbed_action = np.asarray(
+                active_perturbation.apply(raw_action), dtype=np.float32
+            )
+            if perturbed_action.shape != raw_action.shape:
+                raise ValueError(
+                    "perturbation changed action shape from "
+                    f"{raw_action.shape} to {perturbed_action.shape}"
+                )
+            executed_action = np.clip(
+                perturbed_action, env.action_space.low, env.action_space.high
+            )
+            was_clipped = bool(np.any(perturbed_action != executed_action))
+            clip_count += int(was_clipped)
+            observation, reward, terminated, truncated, info = env.step(
+                executed_action
+            )
             step_success = bool(info.get("success", False))
             success = success or step_success
             episode_return += float(reward)
@@ -123,7 +146,11 @@ def run_episode(
             recorder.record_transition(
                 step=step,
                 observation=observation_before_action,
-                action=action,
+                action=executed_action,
+                raw_action=raw_action,
+                perturbed_action=perturbed_action,
+                executed_action=executed_action,
+                was_clipped=was_clipped,
                 reward=reward,
                 success=success,
                 terminated=terminated,
@@ -158,4 +185,6 @@ def run_episode(
         steps=steps_run,
         episode_return=episode_return,
         elapsed_time_ms=elapsed_time_ms,
+        clip_count=clip_count,
+        clip_fraction=clip_count / steps_run if steps_run else 0.0,
     )

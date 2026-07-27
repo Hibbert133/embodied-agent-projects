@@ -55,6 +55,10 @@ class TrajectoryTest(unittest.TestCase):
                 "step",
                 "observation",
                 "action",
+                "raw_action",
+                "perturbed_action",
+                "executed_action",
+                "was_clipped",
                 "reward",
                 "success",
                 "terminated",
@@ -75,4 +79,3 @@ class TrajectoryTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-

@@ -18,7 +18,12 @@ class TrajectoryStep:
     seed: int
     step: int
     observation: list[float]
+    # ``action`` remains an alias for executed_action for old JSONL consumers.
     action: list[float]
+    raw_action: list[float]
+    perturbed_action: list[float]
+    executed_action: list[float]
+    was_clipped: bool
     reward: float
     success: bool
     terminated: bool
@@ -37,17 +42,36 @@ class TrajectoryStep:
         success: bool | np.bool_,
         terminated: bool | np.bool_,
         truncated: bool | np.bool_,
+        raw_action: Sequence[float] | np.ndarray | None = None,
+        perturbed_action: Sequence[float] | np.ndarray | None = None,
+        executed_action: Sequence[float] | np.ndarray | None = None,
+        was_clipped: bool | np.bool_ = False,
     ) -> "TrajectoryStep":
         if episode_id <= 0:
             raise ValueError("episode_id must be a positive integer")
         if step <= 0:
             raise ValueError("step must be a positive integer")
+        if raw_action is None:
+            raw_action = action
+        if perturbed_action is None:
+            perturbed_action = raw_action
+        if executed_action is None:
+            executed_action = action
+        executed_list = (
+            np.asarray(executed_action, dtype=float).reshape(-1).tolist()
+        )
         return cls(
             episode_id=int(episode_id),
             seed=int(seed),
             step=int(step),
             observation=np.asarray(observation, dtype=float).reshape(-1).tolist(),
-            action=np.asarray(action, dtype=float).reshape(-1).tolist(),
+            action=executed_list,
+            raw_action=np.asarray(raw_action, dtype=float).reshape(-1).tolist(),
+            perturbed_action=(
+                np.asarray(perturbed_action, dtype=float).reshape(-1).tolist()
+            ),
+            executed_action=executed_list,
+            was_clipped=bool(was_clipped),
             reward=float(reward),
             success=bool(success),
             terminated=bool(terminated),
@@ -97,6 +121,10 @@ class TrajectoryRecorder:
         success: bool | np.bool_,
         terminated: bool | np.bool_,
         truncated: bool | np.bool_,
+        raw_action: Sequence[float] | np.ndarray | None = None,
+        perturbed_action: Sequence[float] | np.ndarray | None = None,
+        executed_action: Sequence[float] | np.ndarray | None = None,
+        was_clipped: bool | np.bool_ = False,
     ) -> None:
         self.record(
             TrajectoryStep.from_transition(
@@ -105,6 +133,10 @@ class TrajectoryRecorder:
                 step=step,
                 observation=observation,
                 action=action,
+                raw_action=raw_action,
+                perturbed_action=perturbed_action,
+                executed_action=executed_action,
+                was_clipped=was_clipped,
                 reward=reward,
                 success=success,
                 terminated=terminated,
@@ -131,4 +163,3 @@ def save_jsonl(steps: Iterable[TrajectoryStep], path: Path | str) -> Path:
         if temporary.exists():
             temporary.unlink()
     return output
-
