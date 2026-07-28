@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import math
 from collections import defaultdict
 from pathlib import Path
 from statistics import mean
@@ -50,17 +51,45 @@ def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
                 "approach_steps": int(final.get("approach_steps", 0) or 0),
                 "push_steps": int(final.get("push_steps", 0) or 0),
                 "near_goal_steps": int(final.get("near_goal_steps", 0) or 0),
+                "initial_failed": ordered[0]["success"].lower() != "true",
+                "recovered_initial_failure": (
+                    ordered[0]["success"].lower() != "true"
+                    and any(item["success"].lower() == "true" for item in ordered[1:])
+                ),
+                "recovery_trial_steps": (
+                    int(final["steps"]) if ordered[0]["success"].lower() != "true" else 0
+                ),
             }
         )
     summaries: list[dict[str, object]] = []
     for planner, items in sorted(by_planner.items()):
         successes = sum(bool(item["success"]) for item in items)
+        initial_failures = sum(bool(item["initial_failed"]) for item in items)
+        recovered = sum(bool(item["recovered_initial_failure"]) for item in items)
+        recovery_rate = recovered / initial_failures if initial_failures else 0.0
+        if initial_failures:
+            z = 1.959963984540054
+            denominator = 1.0 + z * z / initial_failures
+            center = (recovery_rate + z * z / (2 * initial_failures)) / denominator
+            margin = z * math.sqrt(
+                recovery_rate * (1 - recovery_rate) / initial_failures
+                + z * z / (4 * initial_failures * initial_failures)
+            ) / denominator
+            wilson_low, wilson_high = center - margin, center + margin
+        else:
+            wilson_low, wilson_high = 0.0, 0.0
+        recovery_items = [item for item in items if item["initial_failed"]]
         summaries.append(
             {
                 "planner": planner,
                 "num_episodes": len(items),
                 "successes": successes,
                 "success_rate": successes / len(items),
+                "initial_failures": initial_failures,
+                "recovered_initial_failures": recovered,
+                "conditional_recovery_rate": recovery_rate,
+                "conditional_recovery_wilson_low": wilson_low,
+                "conditional_recovery_wilson_high": wilson_high,
                 "mean_trials": mean(float(item["trials"]) for item in items),
                 "mean_final_object_goal_distance": mean(float(item["final_distance"]) for item in items),
                 "mean_rollout_steps": mean(float(item["rollout_steps"]) for item in items),
@@ -69,6 +98,10 @@ def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
                 "mean_final_trial_approach_steps": mean(float(item["approach_steps"]) for item in items),
                 "mean_final_trial_push_steps": mean(float(item["push_steps"]) for item in items),
                 "mean_final_trial_near_goal_steps": mean(float(item["near_goal_steps"]) for item in items),
+                "mean_recovery_trial_steps": (
+                    mean(float(item["recovery_trial_steps"]) for item in recovery_items)
+                    if recovery_items else 0.0
+                ),
             }
         )
     return summaries

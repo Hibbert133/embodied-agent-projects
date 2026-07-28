@@ -253,6 +253,12 @@ CSV 额外记录 `correction_schedule`、`approach_steps`、`push_steps` 和
 held-out 评测。设计、真实结果和同 seed 视频对照见
 [reports/phase_aware_recovery_study.md](reports/phase_aware_recovery_study.md)。
 
+冻结配置的 held-out seeds `200-219` 结果见
+[reports/heldout_phase_recovery_evaluation.md](reports/heldout_phase_recovery_evaluation.md)。
+评测必须区分整体 success 和“初始失败后的条件恢复率”，避免把无需恢复的 episode 计为
+Agent recovery。该实验未证明 phase-aware 普遍优于 whole schedule，因此两者均保留为后续
+Agent 可选择的 repair tool。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

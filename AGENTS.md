@@ -167,6 +167,29 @@ value. If a key is exposed, require revocation before further use.
 
 ## Required Completion Report
 
+## Research Reasoning Communication
+
+Do not make the researcher passively watch implementation or receive only
+terminal-status updates. Before each experiment, briefly explain:
+
+1. the research question or hypothesis;
+2. why the experiment is the smallest useful test;
+3. the independent variable, controlled variables, seed split, and budget;
+4. what outcomes would support or weaken the hypothesis.
+
+After each experiment, provide a concise research interpretation containing:
+
+1. the real result and artifact path;
+2. the mechanism the evidence supports;
+3. alternative explanations or confounders;
+4. what the result cannot establish;
+5. the next decision implied by the evidence.
+
+Distinguish clearly among development, validation, held-out, smoke-test, and
+integration evidence. If an experiment fails technically, explain the failure
+and do not interpret partial output as scientific evidence. Keep intermediate
+updates concise, but always expose the reasoning behind experimental choices.
+
 Every completed task must report:
 
 ### Research progress

@@ -94,6 +94,10 @@ Implemented development evidence:
 - phase-aware correction recovered the seed-144 counterexample and reached 5/5
   on the development set, compared with 4/5 for whole-rollout correction;
 - the phase schedule and thresholds are now frozen pending held-out evaluation.
+- frozen held-out seeds `200-219` produced 11 initial failures; both whole and
+  phase-aware schedules recovered 11/11, while whole used fewer recovery steps;
+- phase gating is therefore retained as a useful repair option, not promoted as
+  a universally superior default.
 
 This milestone is not held-out evidence and does not yet establish that an LLM
 improves over deterministic probe-guided recovery.

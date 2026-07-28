@@ -16,6 +16,10 @@ class RecoverySummaryTest(unittest.TestCase):
         self.assertEqual(result["mean_rollout_steps"], 570)
         self.assertEqual(result["mean_probe_steps"], 32)
         self.assertEqual(result["mean_total_environment_steps"], 602)
+        self.assertEqual(result["initial_failures"], 1)
+        self.assertEqual(result["recovered_initial_failures"], 1)
+        self.assertEqual(result["conditional_recovery_rate"], 1.0)
+        self.assertEqual(result["mean_recovery_trial_steps"], 70)
 
 
 if __name__ == "__main__":

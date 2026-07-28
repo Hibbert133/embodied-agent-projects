@@ -118,12 +118,26 @@ def main() -> int:
         )
         for planner, episodes in groups.items()
     }
+    conditional_recovery = {}
+    mean_recovery_steps = {}
+    for planner, episodes in groups.items():
+        initial_failures = [episode for episode in episodes if episode[0]["success"].lower() != "true"]
+        conditional_recovery[planner] = (
+            mean(any(row["success"].lower() == "true" for row in episode[1:]) for episode in initial_failures)
+            if initial_failures else 0.0
+        )
+        mean_recovery_steps[planner] = (
+            mean(int(episode[-1]["steps"]) for episode in initial_failures)
+            if initial_failures else 0.0
+        )
     output = args.output_dir.expanduser().resolve()
     bar_chart(success_rates, "Recovery success rate", "Fraction of episodes", output / "recovery_success_rate.png", True)
     bar_chart(mean_trials, "Mean rollout trials used", "Rollouts", output / "recovery_mean_trials.png")
     recovery_curve(groups, output / "recovery_curve.png")
     bar_chart(mean_final_distance, "Mean final object-goal distance", "Distance (metres)", output / "recovery_final_distance.png")
     bar_chart(mean_total_steps, "Mean total environment interaction budget", "Rollout + probe steps", output / "recovery_total_environment_steps.png")
+    bar_chart(conditional_recovery, "Conditional recovery after initial failure", "Recovered initial failures", output / "conditional_recovery_rate.png", True)
+    bar_chart(mean_recovery_steps, "Mean recovery-trial steps", "Steps among initial failures", output / "mean_recovery_trial_steps.png")
     print(f"figures: {output}")
     return 0
 
