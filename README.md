@@ -271,6 +271,12 @@ Agent 可选择的 repair tool。
 共同选择配置。`+y` 无法同时满足中等失败率与裁剪约束，因此只作为 saturation stress test，
 不混入 primary balanced comparison。
 
+使用全新 seeds `240-259` 的 balanced single-axis held-out 评测见
+[reports/balanced_fault_heldout_evaluation.md](reports/balanced_fault_heldout_evaluation.md)。
+三个 primary fault 共形成 31 个真实初始失败；Agent 的 axis/sign audit 和条件恢复均为
+31/31，合并 Wilson 下界为 89.0%。该结果应描述为 active fault localization + bounded
+repair，不应描述为精确 bias system identification，也不代表多轴或随机噪声泛化。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

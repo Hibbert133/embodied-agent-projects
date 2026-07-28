@@ -12,7 +12,9 @@ from src.task_metrics import extract_push_positions
 from src.trajectory_views import build_agent_view
 
 
-DEFAULT_CORRECTION_MAGNITUDES = (0.0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.145, 0.16)
+DEFAULT_CORRECTION_MAGNITUDES = (
+    0.0, 0.02, 0.04, 0.06, 0.08, 0.10, 0.12, 0.145, 0.16, 0.18, 0.198, 0.20
+)
 
 
 @dataclass(frozen=True)

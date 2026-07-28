@@ -5,7 +5,10 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import math
+from collections import defaultdict
 from pathlib import Path
+from statistics import mean
 
 
 def parse_args() -> argparse.Namespace:
@@ -13,6 +16,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trial-csv", type=Path, nargs="+", required=True)
     parser.add_argument("--audit-jsonl", type=Path, nargs="+", required=True)
     parser.add_argument("--output-csv", type=Path, required=True)
+    parser.add_argument("--summary-csv", type=Path)
     return parser.parse_args()
 
 
@@ -47,6 +51,10 @@ def main() -> int:
                     "correction_axis": proposal["correction_axis"],
                     "correction_direction": proposal["correction_direction"],
                     "correction_magnitude": proposal["correction_magnitude"],
+                    "magnitude_absolute_error": abs(
+                        float(proposal["correction_magnitude"])
+                        - float(row["injected_bias_magnitude"])
+                    ),
                     "axis_correct": proposal["correction_axis"] == row["injected_bias_axis"],
                     "direction_correct": proposal["correction_direction"] == expected_direction,
                     "recovery_success": row["success"],
@@ -65,6 +73,44 @@ def main() -> int:
     print(f"axis correct: {axis_correct}/{len(output_rows)}")
     print(f"direction correct: {direction_correct}/{len(output_rows)}")
     print(f"summary: {output}")
+    if args.summary_csv is not None:
+        groups: dict[str, list[dict[str, object]]] = defaultdict(list)
+        for row in output_rows:
+            key = f"{row['fault_axis']}_{row['fault_sign']}_{float(row['fault_magnitude']):g}"
+            groups[key].append(row)
+            groups["all"].append(row)
+        summaries: list[dict[str, object]] = []
+        for condition, group in sorted(groups.items()):
+            successes = sum(str(row["recovery_success"]).lower() == "true" for row in group)
+            rate = successes / len(group)
+            z = 1.959963984540054
+            denominator = 1.0 + z * z / len(group)
+            center = (rate + z * z / (2 * len(group))) / denominator
+            margin = z * math.sqrt(
+                rate * (1 - rate) / len(group) + z * z / (4 * len(group) ** 2)
+            ) / denominator
+            summaries.append(
+                {
+                    "condition": condition,
+                    "recovery_cases": len(group),
+                    "axis_correct": sum(bool(row["axis_correct"]) for row in group),
+                    "direction_correct": sum(bool(row["direction_correct"]) for row in group),
+                    "recovery_successes": successes,
+                    "recovery_rate": rate,
+                    "recovery_wilson_low": center - margin,
+                    "recovery_wilson_high": center + margin,
+                    "mean_magnitude_absolute_error": mean(
+                        float(row["magnitude_absolute_error"]) for row in group
+                    ),
+                }
+            )
+        summary_output = args.summary_csv.expanduser().resolve()
+        summary_output.parent.mkdir(parents=True, exist_ok=True)
+        with summary_output.open("w", encoding="utf-8", newline="") as file:
+            writer = csv.DictWriter(file, fieldnames=list(summaries[0]))
+            writer.writeheader()
+            writer.writerows(summaries)
+        print(f"aggregate summary: {summary_output}")
     return 0
 
 

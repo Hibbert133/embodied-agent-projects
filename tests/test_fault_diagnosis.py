@@ -21,6 +21,10 @@ class FaultGroupingTest(unittest.TestCase):
         self.assertEqual(len(grouped), 2)
         self.assertNotEqual(grouped[0]["planner"], grouped[1]["planner"])
 
+    def test_magnitude_error_semantics(self) -> None:
+        self.assertAlmostEqual(abs(0.20 - 0.198), 0.002)
+        self.assertAlmostEqual(abs(0.10 - 0.145), 0.045)
+
 
 if __name__ == "__main__":
     unittest.main()

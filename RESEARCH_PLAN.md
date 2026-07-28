@@ -116,6 +116,13 @@ Direction-specific calibration on seeds `230-239` selected `+x 0.145`,
 showed a failure/clipping discontinuity and remains a separate saturation stress
 condition. Recovery parameters have not been tuned on this calibration split.
 
+Balanced held-out evaluation on new seeds `240-259` produced 31 initial
+failures across the three primary conditions. The frozen active-probe Agent
+identified 31/31 axes and opposing directions and recovered 31/31 cases; the
+combined Wilson lower bound is 89.0%. Magnitude estimates are approximate, so
+the supported mechanism is robust repair rather than exact identification.
+Single-axis recovery is now frozen as the reference before two-axis extension.
+
 ## Phase 3 — Adaptive Recovery
 
 **Status: partially completed**

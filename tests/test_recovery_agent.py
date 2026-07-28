@@ -140,6 +140,13 @@ class RecoveryAgentTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "confidence"):
             validate_proposal(ExperimentProposal("x", "positive", 0.02, "a", "b", 1.5))
 
+    def test_calibrated_correction_magnitudes_are_supported(self) -> None:
+        for magnitude in (0.18, 0.198, 0.20):
+            proposal = ExperimentProposal(
+                "x", "negative", magnitude, "calibrated fault", "oppose drift", 0.5
+            )
+            self.assertEqual(validate_proposal(proposal).correction_magnitude, magnitude)
+
     def test_compensated_policy_changes_only_xy_command(self) -> None:
         policy = CompensatedPolicy(BasePolicy(), [0.02, -0.04, 0.0, 0.0])
         action = policy.get_action(np.zeros(39))
