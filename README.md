@@ -259,6 +259,12 @@ held-out 评测。设计、真实结果和同 seed 视频对照见
 Agent recovery。该实验未证明 phase-aware 普遍优于 whole schedule，因此两者均保留为后续
 Agent 可选择的 repair tool。
 
+未见 `-x/+y/-y` 条件的主动诊断 pilot 见
+[reports/fault_axis_generalization_pilot.md](reports/fault_axis_generalization_pilot.md)。审计结果
+用于验证估计轴和修正方向，但只在实验后读取隐藏 fault label。由于相同 magnitude 在不同方向
+产生的初始失败率差异明显，后续必须先做 condition-specific severity calibration，不能直接把
+小样本的 100% 条件恢复率作为泛化结论。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

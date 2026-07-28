@@ -102,6 +102,15 @@ Implemented development evidence:
 This milestone is not held-out evidence and does not yet establish that an LLM
 improves over deterministic probe-guided recovery.
 
+### Cross-axis pilot
+
+With the estimator frozen, unseen `-x`, `+y`, and `-y` faults at magnitude
+0.145 produced six initial failures across 30 episodes. All six inferred axes
+and opposing correction directions matched audit truth, and all six recovered.
+This verifies cross-axis execution but not statistical robustness: directional
+failure prevalence was highly imbalanced. The next gate is fault-severity
+calibration on a separate split before multi-axis or stochastic faults.
+
 ## Phase 3 — Adaptive Recovery
 
 **Status: partially completed**

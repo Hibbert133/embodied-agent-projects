@@ -14,6 +14,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--input-csv", type=Path, nargs="+", required=True)
     parser.add_argument("--output-csv", type=Path, required=True)
+    parser.add_argument("--group-by-fault", action="store_true")
     return parser.parse_args()
 
 
@@ -27,11 +28,18 @@ def read_rows(paths: list[Path]) -> list[dict[str, str]]:
     return rows
 
 
-def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
+def summarize(
+    rows: list[dict[str, str]], *, group_by_fault: bool = False
+) -> list[dict[str, object]]:
     episodes: dict[tuple[str, int], list[dict[str, str]]] = defaultdict(list)
     for row in rows:
         schedule = row.get("correction_schedule", "")
         method = f"{row['planner']}:{schedule}" if schedule else row["planner"]
+        if group_by_fault:
+            method += (
+                f":{row['injected_bias_axis']}_{row['injected_bias_sign']}"
+                f"_{float(row['injected_bias_magnitude']):g}"
+            )
         episodes[(method, int(row["seed"]))].append(row)
     by_planner: dict[str, list[dict[str, object]]] = defaultdict(list)
     for (planner, seed), trials in episodes.items():
@@ -109,7 +117,7 @@ def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
 
 def main() -> int:
     args = parse_args()
-    summaries = summarize(read_rows(args.input_csv))
+    summaries = summarize(read_rows(args.input_csv), group_by_fault=args.group_by_fault)
     output = args.output_csv.expanduser().resolve()
     output.parent.mkdir(parents=True, exist_ok=True)
     with output.open("w", encoding="utf-8", newline="") as file:
