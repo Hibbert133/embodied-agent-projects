@@ -6,3 +6,6 @@ imageio-ffmpeg==0.6.0
 Pillow==12.3.0
 # MetaWorld 3.1.1 imports packaging at runtime but does not declare it.
 packaging==25.0
+# Optional at runtime unless scripts/run_recovery_agent.py --planner openai is used.
+openai==2.46.0
+anthropic==0.117.1

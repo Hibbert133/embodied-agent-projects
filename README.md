@@ -22,13 +22,16 @@
 ├── src/
 │   ├── rollout.py            # 可复用的 episode rollout 逻辑
 │   ├── trajectory.py         # 轨迹结构与 JSONL 保存
-│   └── perturbations.py      # 统一动作扰动接口
+│   ├── perturbations.py      # 统一动作扰动接口
+│   ├── recovery_agent.py     # 受约束的高层恢复 Agent 与对照组
+│   └── openai_recovery_planner.py # 可选 Responses API planner
 ├── scripts/
 │   ├── check_install.py      # 版本、环境创建、渲染冒烟测试
 │   ├── demo_push.py          # push rollout、视频与轨迹保存
 │   ├── evaluate_push.py      # 多 episode 批量评测
 │   ├── sweep_perturbations.py # 配对 seed 的扰动强度扫描
-│   └── render_perturbation_videos.py # 扰动对比视频
+│   ├── render_perturbation_videos.py # 扰动对比视频
+│   └── run_recovery_agent.py # 有限 rollout 预算恢复实验
 └── tests/
     └── test_trajectory.py
 ```
@@ -112,6 +115,92 @@ Agent View 和供审计使用的 Oracle View，并增加基于 MetaWorld 3.1.1 o
 中用于实验审计。`task_progress_metrics` 基于 `next_observation` 计算。Day 3 只能读取
 严格校验后的 schema-v2 Agent View，不能读取人工注入 bias 的类型、方向、强度或动作差值。
 
+## 高层恢复 Agent 与 OpenAI API
+
+本项目中的 Agent 不是替代 `SawyerPushV3Policy` 的逐步控制器。低层策略继续输出每个
+timestep 的动作；高层恢复 Agent 在一次完整失败 rollout 后读取 schema-v2 Agent View，
+提出下一次 rollout 使用的固定 x/y 命令补偿，并根据新证据决定下一次实验：
+
+```text
+失败轨迹 -> Agent-visible evidence -> 补偿提案 -> 本地校验 -> 新 rollout
+```
+
+提案只能选择 `x/y`、正负方向和预先批准的幅值。Agent 没有 shell、文件编辑或直接环境
+控制权限，也看不到 `perturbation_type`、注入 bias、`perturbed_action` 或
+`executed_action`。补偿由 `CompensatedPolicy` 加到低层策略输出中，因此它属于机器人
+真实发出的 `commanded_action`；隐藏扰动仍在其后由实验执行系统施加。
+
+系统支持无恢复、随机搜索、确定性规则、OpenAI planner 和知道隐藏 bias 的 Oracle 上界。
+运行规则 Agent：
+
+```powershell
+python scripts/run_recovery_agent.py --planner rule --seed-start 100 --num-episodes 3 --max-trials 5 --bias-axis x --bias-sign positive --bias-magnitude 0.145
+```
+
+只在代表性案例中显式开启视频，避免渲染影响量化实验耗时：
+
+```powershell
+python scripts/run_recovery_agent.py --planner oracle --seed-start 148 --max-trials 2 --video-dir outputs/recovery/videos
+```
+
+OpenAI planner 使用 Responses API。密钥只通过环境变量提供，不得写入仓库：
+
+```powershell
+$env:OPENAI_API_KEY="your-api-key"
+$env:OPENAI_MODEL="gpt-5.6-luna"
+python scripts/run_recovery_agent.py --planner openai --seed-start 100 --num-episodes 3 --max-trials 5 --bias-axis x --bias-sign positive --bias-magnitude 0.145
+```
+
+默认每个 episode 最多执行 5 个总 trial（包含初始无补偿 trial），成功立即停止。CSV 写入
+`outputs/recovery/trials.csv`，逐 trial 的 schema-v2 轨迹写入
+`outputs/recovery/trajectories/`，模型版本、prompt hash、response ID、token usage 和延迟写入
+`outputs/recovery/planner_audit.jsonl`。API 错误会被明确报告，不会静默换成规则 Agent；
+`none/random/rule/oracle` 均不需要 API key。
+
+系统也支持 Anthropic Messages 协议兼容服务，例如显式指定 `glm-5.1` 的 ModelArts
+端点。推荐使用安全启动脚本；它只在当前进程中临时设置密钥，结束时立即清除：
+
+```powershell
+.\scripts\run_anthropic_recovery.ps1 -Model glm-5.1 -Seed 148 -MaxTrials 5
+```
+
+该安全脚本默认按 `RunName` 把 CSV、审计、轨迹和每个 trial 的视频隔离保存到
+`outputs/recovery/runs/<RunName>/`；可通过 `-Fps` 修改帧率。视频渲染会增加 wall-clock
+时间，因此量化延迟比较仍应使用不录视频的
+`run_recovery_agent.py` 命令。
+
+兼容端点默认允许单次请求等待 180 秒并最多重试 2 次；可用
+`-ApiTimeout 300 -ApiMaxRetries 3` 调整。每个完成的 trial 会立即 checkpoint 到 CSV 和审计
+JSONL，因此后续请求超时不会丢失已完成的 rollout。
+
+也可以自行设置 `ANTHROPIC_API_KEY`、`ANTHROPIC_BASE_URL` 和 `LLM_MODEL` 后运行：
+
+```powershell
+python scripts/run_recovery_agent.py --planner anthropic --model glm-5.1 --base-url https://api.modelarts-maas.com/anthropic --seed-start 148 --max-trials 5
+```
+
+科研实验不要使用 `haiku` 等客户端别名，必须显式记录实际模型名。第三方兼容服务可能不
+支持 Anthropic 的全部参数，因此本项目只发送基础 Messages 请求，并在本地严格校验 JSON
+提案。`effortLevel` 属于特定客户端配置，目前不会作为未经验证的 API 参数发送。
+
+合并各实验 CSV 后生成真实结果图（可一次传入多个 CSV）：
+
+```powershell
+python scripts/plot_recovery_results.py --input-csv outputs/recovery/none.csv outputs/recovery/random.csv outputs/recovery/rule.csv outputs/recovery/openai.csv outputs/recovery/oracle.csv
+```
+
+脚本输出 `recovery_success_rate.png`、`recovery_mean_trials.png` 和
+`recovery_curve.png`，不会包含手工填写的数据。
+
+科研评测必须固定 prompt、模型、候选补偿集合、seed 和 rollout 预算，再比较恢复成功率、
+成功所需 trial 数及累计环境步数。LLM 组是额外对照组，不能替代确定性基线；Oracle 只用于
+估计上界，不能作为 Agent 输入。中英文设计说明见
+[reports/day3_recovery_agent_design.md](reports/day3_recovery_agent_design.md)。
+
+首个真实 `glm-5.1` 单 seed 接入实验及其失败分析见
+[reports/day3_glm51_pilot.md](reports/day3_glm51_pilot.md)。该结果仅用于验证 Agent 闭环和
+提出下一步消融，不作为统计性能结论。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数
@@ -133,13 +222,14 @@ Agent View 和供审计使用的 Oracle View，并增加基于 MetaWorld 3.1.1 o
   随机噪声，用于模拟传感器到控制链路的抖动或低层控制噪声。它不使用全局
   `np.random` 状态，相同 seed 可以完全复现。
 - `ActionBiasPerturbation`（固定偏差）：在动作上持续加入固定偏移，用于模拟执行器
-  零点误差、标定偏差或长期控制漂移。默认强度扫描使用标量偏差，并将它广播到
-  全部动作维度。
+  零点误差、标定偏差或长期控制漂移。bias 必须是完整 4 维向量；默认 mask 只允许
+  修改前三个平移维度，单轴实验只修改 x 或 y，绝不通过标量广播修改 gripper。
 
 动作依次经过 `raw_action`、`perturbed_action`、范围裁剪和 `executed_action`。
 轨迹格式已升级，新增这三个字段以及 `was_clipped`。为兼容旧读取代码，原有
 `action` 字段继续保留，并与真正送入环境的 `executed_action` 相同。每个 episode
-还会统计 `clip_count` 和 `clip_fraction`。
+还会统计 `clipped_step_count`、`clipped_step_fraction`、`clipped_element_count` 和
+`clipped_element_fraction`；旧的 `clip_count/clip_fraction` 属性仅作读取兼容。
 
 ## 一次交互中各变量的含义
 
