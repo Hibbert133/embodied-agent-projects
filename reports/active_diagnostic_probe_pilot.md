@@ -87,6 +87,31 @@ same probe context, and Oracle under identical seeds and explicit total
 interaction/API budgets. A phase-gated correction ablation should be tested
 before episodic memory or any Day 4 mechanism is introduced.
 
+## Fixed-seed non-API ablation
+
+A follow-up comparison used the identical development seeds and a maximum of
+two full rollouts. `none` stopped after the initial failure. `probe_rule` also
+used 32 diagnostic environment steps per failed episode. Results were computed
+by `scripts/summarize_recovery_ablation.py` directly from trial CSV files:
+
+| Planner | Successes | Mean final distance (m) | Mean total environment steps |
+|---|---:|---:|---:|
+| none | 0/5 | 0.265933 | 500.0 |
+| rule | 0/5 | 0.255673 | 1000.0 |
+| probe_rule | 4/5 | 0.052907 | 684.8 |
+| oracle | 5/5 | 0.048171 | 566.4 |
+
+These values show that agent-visible probing was useful on this development
+set and that the original final-geometry rule did not recover within one
+correction. They do not establish held-out performance or an LLM advantage.
+GLM-5.1 was not run in this follow-up because no API credential was present in
+the experiment process.
+
+Representative corrected-rollout videos were selected automatically from the
+real CSV rows. Seed 148 is a successful recovery, while seed 144 is the
+preserved failure counterexample. Their manifest is stored at
+`outputs/active_probes/representative_videos/manifest.csv`.
+
 ## Reproduction
 
 ```powershell

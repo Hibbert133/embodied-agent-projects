@@ -229,6 +229,16 @@ python scripts/run_recovery_agent.py --planner probe_rule --active-probes --seed
 预算之外。当前五 seed 结果仅是 development study，不是 held-out 性能结论；详见
 [reports/active_diagnostic_probe_pilot.md](reports/active_diagnostic_probe_pilot.md)。
 
+真实非 API 消融可通过下列脚本自动汇总和绘图，汇总过程不会手工输入实验数字：
+
+```powershell
+python scripts/summarize_recovery_ablation.py --input-csv outputs/active_probes/ablation_none.csv outputs/active_probes/ablation_rule.csv outputs/active_probes/probe_rule_stratified_trials.csv outputs/active_probes/ablation_oracle.csv --output-csv outputs/active_probes/ablation_summary.csv
+python scripts/plot_recovery_results.py --input-csv outputs/active_probes/ablation_none.csv outputs/active_probes/ablation_rule.csv outputs/active_probes/probe_rule_stratified_trials.csv outputs/active_probes/ablation_oracle.csv --output-dir outputs/active_probes/figures
+```
+
+代表性视频位于 `outputs/active_probes/representative_videos/`，并由同目录
+`manifest.csv` 关联 seed、修正、结果、步数和最终距离。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

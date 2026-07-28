@@ -104,10 +104,24 @@ def main() -> int:
         planner: mean(len(episode) for episode in episodes)
         for planner, episodes in groups.items()
     }
+    mean_final_distance = {
+        planner: mean(float(episode[-1]["final_object_goal_distance"]) for episode in episodes)
+        for planner, episodes in groups.items()
+    }
+    mean_total_steps = {
+        planner: mean(
+            sum(int(row["steps"]) for row in episode)
+            + max(int(row.get("probe_environment_steps", 0) or 0) for row in episode)
+            for episode in episodes
+        )
+        for planner, episodes in groups.items()
+    }
     output = args.output_dir.expanduser().resolve()
     bar_chart(success_rates, "Recovery success rate", "Fraction of episodes", output / "recovery_success_rate.png", True)
     bar_chart(mean_trials, "Mean rollout trials used", "Rollouts", output / "recovery_mean_trials.png")
     recovery_curve(groups, output / "recovery_curve.png")
+    bar_chart(mean_final_distance, "Mean final object-goal distance", "Distance (metres)", output / "recovery_final_distance.png")
+    bar_chart(mean_total_steps, "Mean total environment interaction budget", "Rollout + probe steps", output / "recovery_total_environment_steps.png")
     print(f"figures: {output}")
     return 0
 
