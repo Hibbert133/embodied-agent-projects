@@ -265,6 +265,12 @@ Agent 可选择的 repair tool。
 产生的初始失败率差异明显，后续必须先做 condition-specific severity calibration，不能直接把
 小样本的 100% 条件恢复率作为泛化结论。
 
+方向特定的 baseline 难度校准见
+[reports/severity_calibration_study.md](reports/severity_calibration_study.md)。主 benchmark 不再
+假设相同 bias magnitude 等价于相同难度，而使用真实 baseline failure rate 和动作裁剪上限
+共同选择配置。`+y` 无法同时满足中等失败率与裁剪约束，因此只作为 saturation stress test，
+不混入 primary balanced comparison。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

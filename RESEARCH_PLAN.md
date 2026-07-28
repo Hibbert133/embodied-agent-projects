@@ -111,6 +111,11 @@ This verifies cross-axis execution but not statistical robustness: directional
 failure prevalence was highly imbalanced. The next gate is fault-severity
 calibration on a separate split before multi-axis or stochastic faults.
 
+Direction-specific calibration on seeds `230-239` selected `+x 0.145`,
+`-x 0.180`, and `-y 0.198` for the primary balanced benchmark. Positive-y
+showed a failure/clipping discontinuity and remains a separate saturation stress
+condition. Recovery parameters have not been tuned on this calibration split.
+
 ## Phase 3 — Adaptive Recovery
 
 **Status: partially completed**
