@@ -332,6 +332,26 @@ success = bool(info.get("success", False))
 脚本使用 MetaWorld 自带的 `SawyerPushV3Policy`。它是手写脚本策略，不是训练得到的
 强化学习模型。
 
+## Two-axis active recovery pilot
+
+The single-axis reference has been extended to simultaneous planar bias without
+changing the old CLI. The Agent uses only reset-controlled probe transitions to
+estimate x/y drift and actuator response. `dominant_only` discards one inferred
+component, `sequential` tries it before the full vector, and `simultaneous`
+applies both visible-evidence components in one repair rollout. Hidden injected
+bias is used only by the post-hoc audit and Oracle upper bound.
+
+The fixed development and held-out experiment, raw CSV files, quantitative
+figure, and automatically selected videos are documented in
+[reports/planar_bias_recovery_pilot.md](reports/planar_bias_recovery_pilot.md).
+This is a small mechanism study for one diagonal fault, not a general multi-axis
+robustness claim.
+
+```powershell
+python scripts/evaluate_planar_bias_recovery.py --seeds 260 261 262 263 264 265 266 267 268 269 --bias-x 0.14 --bias-y -0.14 --max-steps 500 --output-dir outputs/planar_bias_pilot/xpos014_yneg014_heldout
+python scripts/plot_planar_bias_recovery.py --summary-csv outputs/planar_bias_pilot/xpos014_yneg014_heldout/summary.csv --output outputs/planar_bias_pilot/figures/heldout_2d_recovery.png
+```
+
 ## 常见错误
 
 - Python 不是 3.10：`check_install.py` 会直接报错并显示当前版本。
