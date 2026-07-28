@@ -10,6 +10,7 @@ from src.anthropic_recovery_planner import AnthropicRecoveryPlanner, extract_pro
 from src.openai_recovery_planner import OpenAIRecoveryPlanner
 from src.recovery_agent import (
     CompensatedPolicy,
+    PhaseGatedCompensatedPolicy,
     EpisodeEvidence,
     ExperimentProposal,
     PlannerHistoryItem,
@@ -17,6 +18,7 @@ from src.recovery_agent import (
     TrialOutcome,
     build_episode_evidence,
     run_budgeted_recovery,
+    classify_push_phase,
     validate_proposal,
 )
 from src.rollout import EpisodeResult
@@ -144,6 +146,26 @@ class RecoveryAgentTest(unittest.TestCase):
         np.testing.assert_allclose(action, [0.12, 0.16, 0.3, 0.4])
         with self.assertRaisesRegex(ValueError, "x or y"):
             CompensatedPolicy(BasePolicy(), [0.0, 0.0, 0.1, 0.0])
+
+    def test_phase_classifier_and_gated_correction(self) -> None:
+        observation = np.zeros(39)
+        observation[0:3] = [0.0, 0.0, 0.0]
+        observation[4:7] = [0.2, 0.0, 0.0]
+        observation[-3:] = [0.4, 0.0, 0.0]
+        self.assertEqual(classify_push_phase(observation), "approach")
+        policy = PhaseGatedCompensatedPolicy(
+            BasePolicy(), [0.1, 0.0, 0.0, 0.0], schedule="phase_aware"
+        )
+        np.testing.assert_allclose(policy.get_action(observation), [0.15, 0.2, 0.3, 0.4])
+
+        observation[0:3] = [0.16, 0.0, 0.0]
+        self.assertEqual(classify_push_phase(observation), "push")
+        np.testing.assert_allclose(policy.get_action(observation), [0.2, 0.2, 0.3, 0.4])
+
+        observation[4:7] = [0.35, 0.0, 0.0]
+        self.assertEqual(classify_push_phase(observation), "near_goal")
+        np.testing.assert_allclose(policy.get_action(observation), [0.125, 0.2, 0.3, 0.4])
+        self.assertEqual(policy.phase_counts, {"approach": 1, "push": 1, "near_goal": 1})
 
     def test_budgeted_loop_stops_on_success(self) -> None:
         calls: list[np.ndarray] = []

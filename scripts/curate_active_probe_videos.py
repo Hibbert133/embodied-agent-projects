@@ -17,12 +17,17 @@ def parse_args() -> argparse.Namespace:
         "--output-dir", type=Path,
         default=ROOT / "outputs" / "active_probes" / "representative_videos",
     )
+    parser.add_argument("--append", action="store_true", help="Preserve existing manifest rows")
     return parser.parse_args()
 
 
 def main() -> int:
     args = parse_args()
     selected: list[dict[str, str]] = []
+    manifest = args.output_dir.expanduser().resolve() / "manifest.csv"
+    if args.append and manifest.is_file():
+        with manifest.open(encoding="utf-8", newline="") as file:
+            selected.extend(csv.DictReader(file))
     for path in args.trial_csv:
         with path.expanduser().resolve().open(encoding="utf-8", newline="") as file:
             rows = list(csv.DictReader(file))
@@ -35,8 +40,9 @@ def main() -> int:
         if not source.is_file() or source.stat().st_size == 0:
             raise FileNotFoundError(f"video is missing or empty: {source}")
         result = "success" if corrected["success"].lower() == "true" else "failure"
+        schedule = corrected.get("correction_schedule", "whole") or "whole"
         name = (
-            f"probe_rule_x_negative_0.10_seed{corrected['seed']}_"
+            f"probe_rule_{schedule}_x_negative_0.10_seed{corrected['seed']}_"
             f"trial{int(corrected['trial']):02d}_{result}.mp4"
         )
         output = args.output_dir.expanduser().resolve()
@@ -50,15 +56,20 @@ def main() -> int:
                 "planner": corrected["planner"],
                 "trial": corrected["trial"],
                 "correction": "x_negative_0.10",
+                "correction_schedule": schedule,
                 "success": corrected["success"],
                 "steps": corrected["steps"],
                 "final_object_goal_distance": corrected["final_object_goal_distance"],
                 "probe_environment_steps": corrected.get("probe_environment_steps", "0"),
             }
         )
-    manifest = args.output_dir.expanduser().resolve() / "manifest.csv"
+    fieldnames = [
+        "video_path", "seed", "planner", "trial", "correction",
+        "correction_schedule", "success", "steps",
+        "final_object_goal_distance", "probe_environment_steps",
+    ]
     with manifest.open("w", encoding="utf-8", newline="") as file:
-        writer = csv.DictWriter(file, fieldnames=list(selected[0]))
+        writer = csv.DictWriter(file, fieldnames=fieldnames, extrasaction="ignore")
         writer.writeheader()
         writer.writerows(selected)
     print(f"selected videos: {len(selected)}")

@@ -25,6 +25,7 @@ from src.recovery_agent import (  # noqa: E402
     RandomRecoveryPlanner,
     RecoveryPlanner,
     ProbeGuidedRecoveryPlanner,
+    PhaseGatedCompensatedPolicy,
     RuleBasedRecoveryPlanner,
     TrialOutcome,
     run_budgeted_recovery,
@@ -62,6 +63,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--active-probes", action="store_true", help="Run four leakage-safe diagnostic probes before recovery planning")
     parser.add_argument("--probe-magnitude", type=float, default=0.2)
     parser.add_argument("--probe-steps", type=int, default=8)
+    parser.add_argument("--correction-schedule", choices=("whole", "push_only", "phase_aware"), default="whole")
+    parser.add_argument("--contact-distance", type=float, default=0.08)
+    parser.add_argument("--near-goal-distance", type=float, default=0.08)
     return parser.parse_args()
 
 
@@ -186,6 +190,7 @@ def main() -> int:
                 if args.active_probes else make_planner(args, seed, bias)
             )
             base_policy = create_push_policy()
+            phase_counts_by_trial: dict[int, dict[str, int]] = {}
 
             def run_trial(trial: int, correction: Any) -> TrialOutcome:
                 trajectory_path = args.trajectory_dir / (
@@ -200,9 +205,16 @@ def main() -> int:
                     seed, render_mode="rgb_array" if video_path is not None else None
                 )
                 try:
+                    compensated_policy = PhaseGatedCompensatedPolicy(
+                        base_policy,
+                        correction,
+                        schedule=args.correction_schedule,
+                        contact_distance=args.contact_distance,
+                        near_goal_distance=args.near_goal_distance,
+                    )
                     result = run_episode(
                         env,
-                        CompensatedPolicy(base_policy, correction),
+                        compensated_policy,
                         seed=seed,
                         max_steps=args.max_steps,
                         episode_id=trial,
@@ -211,6 +223,7 @@ def main() -> int:
                         fps=args.fps,
                         perturbation=ActionBiasPerturbation(bias),
                     )
+                    phase_counts_by_trial[trial] = dict(compensated_policy.phase_counts)
                 finally:
                     env.close()
                 return TrialOutcome(
@@ -254,6 +267,10 @@ def main() -> int:
                             int(diagnostic_context["probe_environment_steps"])
                             if diagnostic_context is not None else 0
                         ),
+                        "correction_schedule": args.correction_schedule,
+                        "approach_steps": phase_counts_by_trial[trial.trial]["approach"],
+                        "push_steps": phase_counts_by_trial[trial.trial]["push"],
+                        "near_goal_steps": phase_counts_by_trial[trial.trial]["near_goal"],
                     }
                 )
                 audit_rows.append(

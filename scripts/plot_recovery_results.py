@@ -33,7 +33,9 @@ def read_rows(paths: list[Path]) -> list[dict[str, str]]:
 def episode_groups(rows: list[dict[str, str]]) -> dict[str, list[list[dict[str, str]]]]:
     grouped: dict[tuple[str, str, str], list[dict[str, str]]] = defaultdict(list)
     for row in rows:
-        grouped[(row["planner"], row["episode_id"], row["seed"])].append(row)
+        schedule = row.get("correction_schedule", "")
+        method = f"{row['planner']}:{schedule}" if schedule else row["planner"]
+        grouped[(method, row["episode_id"], row["seed"])].append(row)
     result: dict[str, list[list[dict[str, str]]]] = defaultdict(list)
     for (planner, _, _), trials in grouped.items():
         result[planner].append(sorted(trials, key=lambda row: int(row["trial"])))

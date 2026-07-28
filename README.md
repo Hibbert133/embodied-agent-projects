@@ -239,6 +239,20 @@ python scripts/plot_recovery_results.py --input-csv outputs/active_probes/ablati
 代表性视频位于 `outputs/active_probes/representative_videos/`，并由同目录
 `manifest.csv` 关联 seed、修正、结果、步数和最终距离。
 
+### Phase-aware recovery
+
+`--correction-schedule` 支持 `whole`、`push_only` 和 `phase_aware`。阶段只由当前
+observation 的 gripper-object 与 object-goal 距离确定。开发实验使用：
+
+```powershell
+python scripts/run_recovery_agent.py --planner probe_rule --active-probes --seeds 103 107 108 144 148 --max-trials 2 --bias-axis x --bias-sign positive --bias-magnitude 0.145 --correction-schedule phase_aware --output-csv outputs/active_probes/phase_aware.csv --audit-jsonl outputs/active_probes/phase_aware_audit.jsonl --trajectory-dir outputs/active_probes/phase_trajectories/phase_aware
+```
+
+CSV 额外记录 `correction_schedule`、`approach_steps`、`push_steps` 和
+`near_goal_steps`。当前 schedule 是使用 development seeds 选择的，必须冻结后才能进行
+held-out 评测。设计、真实结果和同 seed 视频对照见
+[reports/phase_aware_recovery_study.md](reports/phase_aware_recovery_study.md)。
+
 ## Episode、rollout、trajectory、return 和 success rate
 
 - `episode`：环境从一次 `reset()` 开始，到成功、自然终止、时间截断或达到脚本步数

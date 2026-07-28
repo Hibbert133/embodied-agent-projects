@@ -8,6 +8,7 @@ from typing import Any, Callable, Mapping, Protocol, Sequence
 import numpy as np
 
 from src.rollout import EpisodeResult
+from src.task_metrics import extract_push_positions
 from src.trajectory_views import build_agent_view
 
 
@@ -261,6 +262,65 @@ class CompensatedPolicy:
         if action.shape != (4,):
             raise ValueError("base policy must return a four-dimensional action")
         return action + self.correction
+
+
+CORRECTION_SCHEDULES: dict[str, dict[str, float]] = {
+    "whole": {"approach": 1.0, "push": 1.0, "near_goal": 1.0},
+    "push_only": {"approach": 0.0, "push": 1.0, "near_goal": 0.25},
+    "phase_aware": {"approach": 0.5, "push": 1.0, "near_goal": 0.25},
+}
+
+
+def classify_push_phase(
+    observation: Sequence[float],
+    *,
+    contact_distance: float = 0.08,
+    near_goal_distance: float = 0.08,
+) -> str:
+    """Classify the causally visible push phase from the current observation."""
+
+    if contact_distance <= 0.0 or near_goal_distance <= 0.0:
+        raise ValueError("phase distance thresholds must be positive")
+    gripper, object_position, goal = extract_push_positions(observation)
+    if float(np.linalg.norm(object_position - goal)) <= near_goal_distance:
+        return "near_goal"
+    if float(np.linalg.norm(gripper - object_position)) <= contact_distance:
+        return "push"
+    return "approach"
+
+
+class PhaseGatedCompensatedPolicy(CompensatedPolicy):
+    """Apply a fixed repair with an observation-driven task-phase schedule."""
+
+    def __init__(
+        self,
+        base_policy: Any,
+        correction: Sequence[float],
+        *,
+        schedule: str = "phase_aware",
+        contact_distance: float = 0.08,
+        near_goal_distance: float = 0.08,
+    ) -> None:
+        super().__init__(base_policy, correction)
+        if schedule not in CORRECTION_SCHEDULES:
+            raise ValueError(f"unknown correction schedule: {schedule}")
+        self.schedule = schedule
+        self.contact_distance = float(contact_distance)
+        self.near_goal_distance = float(near_goal_distance)
+        self.phase_counts = {phase: 0 for phase in ("approach", "push", "near_goal")}
+
+    def get_action(self, observation: np.ndarray) -> np.ndarray:
+        action = np.asarray(self.base_policy.get_action(observation), dtype=np.float32)
+        if action.shape != (4,):
+            raise ValueError("base policy must return a four-dimensional action")
+        phase = classify_push_phase(
+            observation,
+            contact_distance=self.contact_distance,
+            near_goal_distance=self.near_goal_distance,
+        )
+        self.phase_counts[phase] += 1
+        scale = CORRECTION_SCHEDULES[self.schedule][phase]
+        return action + self.correction * np.float32(scale)
 
 
 class RandomRecoveryPlanner:

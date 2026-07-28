@@ -29,7 +29,9 @@ def read_rows(paths: list[Path]) -> list[dict[str, str]]:
 def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
     episodes: dict[tuple[str, int], list[dict[str, str]]] = defaultdict(list)
     for row in rows:
-        episodes[(row["planner"], int(row["seed"]))].append(row)
+        schedule = row.get("correction_schedule", "")
+        method = f"{row['planner']}:{schedule}" if schedule else row["planner"]
+        episodes[(method, int(row["seed"]))].append(row)
     by_planner: dict[str, list[dict[str, object]]] = defaultdict(list)
     for (planner, seed), trials in episodes.items():
         ordered = sorted(trials, key=lambda item: int(item["trial"]))
@@ -45,6 +47,9 @@ def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
                 "rollout_steps": rollout_steps,
                 "probe_steps": probe_steps,
                 "total_steps": rollout_steps + probe_steps,
+                "approach_steps": int(final.get("approach_steps", 0) or 0),
+                "push_steps": int(final.get("push_steps", 0) or 0),
+                "near_goal_steps": int(final.get("near_goal_steps", 0) or 0),
             }
         )
     summaries: list[dict[str, object]] = []
@@ -61,6 +66,9 @@ def summarize(rows: list[dict[str, str]]) -> list[dict[str, object]]:
                 "mean_rollout_steps": mean(float(item["rollout_steps"]) for item in items),
                 "mean_probe_steps": mean(float(item["probe_steps"]) for item in items),
                 "mean_total_environment_steps": mean(float(item["total_steps"]) for item in items),
+                "mean_final_trial_approach_steps": mean(float(item["approach_steps"]) for item in items),
+                "mean_final_trial_push_steps": mean(float(item["push_steps"]) for item in items),
+                "mean_final_trial_near_goal_steps": mean(float(item["near_goal_steps"]) for item in items),
             }
         )
     return summaries

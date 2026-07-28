@@ -90,6 +90,10 @@ Implemented development evidence:
 - deterministic probe-guided correction baseline;
 - fixed development seeds `103, 107, 108, 144, 148` with a preserved failure
   counterexample on seed 144.
+- observation-driven approach/push/near-goal phase classification;
+- phase-aware correction recovered the seed-144 counterexample and reached 5/5
+  on the development set, compared with 4/5 for whole-rollout correction;
+- the phase schedule and thresholds are now frozen pending held-out evaluation.
 
 This milestone is not held-out evidence and does not yet establish that an LLM
 improves over deterministic probe-guided recovery.
