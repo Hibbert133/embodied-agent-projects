@@ -6,7 +6,7 @@ import hashlib
 import json
 import os
 from time import perf_counter
-from typing import Any, Sequence
+from typing import Any, Mapping, Sequence
 
 from src.recovery_agent import (
     DEFAULT_CORRECTION_MAGNITUDES,
@@ -18,12 +18,34 @@ from src.recovery_agent import (
 )
 
 
-PROMPT_VERSION = "push-recovery-v1"
+PROMPT_VERSION = "push-recovery-v2-causal"
 SYSTEM_INSTRUCTIONS = """You are a high-level robotic experiment planner for MetaWorld push-v3.
-You receive only agent-visible rollout evidence; the injected control bias is hidden.
-Propose exactly one bounded x/y command correction for the next full rollout, or stop.
-Use trajectory evidence rather than episode return alone. Never claim knowledge of the
-hidden perturbation. The executor, not you, controls the robot and validates the proposal."""
+
+Semantics and coordinate system:
+- commanded_action=[dx,dy,dz,gripper] is the policy command, not the hidden executed action.
+- positive/negative x and y are MuJoCo world-frame command directions.
+- each transition is state_t + commanded_action_t -> state_t+1.
+- task metrics are computed from state_t+1 and distances are metres.
+
+Evidence boundary:
+- You receive only causally available Agent View summaries and optional active-probe evidence.
+- The injected control bias, perturbed action, executed action, and clipping audit are hidden.
+- Treat a bias axis/sign as a hypothesis inferred from observed motion; never claim it as fact.
+
+Decision procedure:
+1. Prioritize object-goal distance, signed object/goal geometry, contact distance, progress,
+   lateral drift, state displacement, and active-probe transitions. Return is auxiliary.
+2. Distinguish failure before contact, wrong pushing direction, overshoot/lateral drift, and
+   near-success. Do not infer control error solely from final reward.
+3. Under an additive-bias hypothesis, a compensating correction should oppose the inferred
+   drift direction. State the observed evidence and causal assumption in `hypothesis`.
+4. Review earlier proposals and outcomes. Do not repeat an ineffective setting unless the
+   evidence explicitly supports replication.
+5. Propose exactly one allowed x/y correction for the next full rollout, or stop when evidence
+   is insufficient or the remaining budget should not be spent.
+
+Output only the schema-conforming proposal. The executor validates and applies it; you never
+control the robot directly."""
 
 
 def proposal_json_schema(allowed_magnitudes: Sequence[float]) -> dict[str, Any]:
@@ -68,6 +90,7 @@ class OpenAIRecoveryPlanner:
         allowed_magnitudes: Sequence[float] = DEFAULT_CORRECTION_MAGNITUDES,
         client: Any | None = None,
         timeout_seconds: float = 60.0,
+        diagnostic_context: Mapping[str, Any] | None = None,
     ) -> None:
         if not model.strip():
             raise ValueError("model must be non-empty")
@@ -78,6 +101,7 @@ class OpenAIRecoveryPlanner:
         self.allowed_magnitudes = tuple(float(value) for value in allowed_magnitudes)
         self._client = client
         self.timeout_seconds = float(timeout_seconds)
+        self.diagnostic_context = dict(diagnostic_context or {})
         self.prompt_hash = hashlib.sha256(SYSTEM_INSTRUCTIONS.encode("utf-8")).hexdigest()
 
     def _get_client(self) -> Any:
@@ -103,6 +127,7 @@ class OpenAIRecoveryPlanner:
             "remaining_rollout_budget": remaining_budget,
             "allowed_correction_magnitudes": self.allowed_magnitudes,
             "trial_history": [item.to_dict() for item in history],
+            "active_probe_evidence": self.diagnostic_context or None,
         }
         start = perf_counter()
         try:

@@ -168,6 +168,30 @@ class RecoveryAgentTest(unittest.TestCase):
         self.assertNotEqual(float(np.linalg.norm(calls[1])), 0.0)
         self.assertEqual(observed_trials, [1, 2])
 
+    def test_active_planner_is_initialized_only_after_initial_failure(self) -> None:
+        events: list[str] = []
+
+        def runner(trial: int, correction: np.ndarray) -> TrialOutcome:
+            del correction
+            events.append(f"trial{trial}")
+            rows = [record(1), record(2, success=trial == 2)]
+            rows[1]["observation"] = rows[0]["next_observation"]
+            return TrialOutcome(episode_result(trial == 2), tuple(rows))
+
+        def initialize() -> RuleBasedRecoveryPlanner:
+            events.append("probe")
+            return RuleBasedRecoveryPlanner(allowed_magnitudes=(0.02,))
+
+        result = run_budgeted_recovery(
+            RuleBasedRecoveryPlanner(allowed_magnitudes=(0.02,)),
+            runner,
+            max_trials=2,
+            allowed_magnitudes=(0.02,),
+            planner_after_initial_failure=initialize,
+        )
+        self.assertTrue(result.success)
+        self.assertEqual(events, ["trial1", "probe", "trial2"])
+
     def test_openai_planner_sends_only_compact_evidence(self) -> None:
         response_proposal = {
             "correction_axis": "x",
@@ -234,6 +258,14 @@ class RecoveryAgentTest(unittest.TestCase):
         planner = AnthropicRecoveryPlanner(
             model="glm-test", base_url="https://example.invalid/anthropic",
             allowed_magnitudes=(0.0, 0.02), client=client,
+            diagnostic_context={
+                "protocol": "symmetric_world_frame_xy_v1",
+                "inference": {
+                    "dominant_axis": "x",
+                    "estimated_direction": "positive",
+                    "recommended_correction_direction": "negative",
+                },
+            },
         )
         output = planner.propose([PlannerHistoryItem(1, initial, evidence)], 4)
         self.assertEqual(output.proposal.correction_axis, "x")
@@ -241,6 +273,7 @@ class RecoveryAgentTest(unittest.TestCase):
         prompt = str(messages.kwargs["messages"])
         self.assertFalse(FORBIDDEN_AGENT_FIELDS & nested_keys(messages.kwargs["messages"]))
         self.assertNotIn("ANTHROPIC_API_KEY", prompt)
+        self.assertIn("symmetric_world_frame_xy_v1", prompt)
 
     def test_anthropic_json_extraction_handles_reasoning_and_rejects_ambiguity(self) -> None:
         proposal = {

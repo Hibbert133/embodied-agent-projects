@@ -55,7 +55,7 @@ Completed foundations:
   lateral drift;
 - compact agent-visible episode evidence.
 
-### Next milestone: active diagnostic probes
+### Active diagnostic probe pilot
 
 Hypothesis:
 
@@ -81,6 +81,18 @@ Probe protocol:
 Acceptance criteria concern implementation integrity, not a forced positive
 result: deterministic reproduction, no Oracle leakage, correct synthetic tests,
 real probe CSV, and honest sign/magnitude accuracy on the fixed seeds.
+
+Implemented development evidence:
+
+- four reset-controlled world-frame probes and symmetric-pair estimator;
+- separate agent-visible transition and Oracle audit tables;
+- causal prompt v2 and optional probe evidence for OpenAI/Anthropic planners;
+- deterministic probe-guided correction baseline;
+- fixed development seeds `103, 107, 108, 144, 148` with a preserved failure
+  counterexample on seed 144.
+
+This milestone is not held-out evidence and does not yet establish that an LLM
+improves over deterministic probe-guided recovery.
 
 ## Phase 3 — Adaptive Recovery
 

@@ -126,6 +126,7 @@ class RecoveryResult:
 
 TrialRunner = Callable[[int, np.ndarray], TrialOutcome]
 TrialObserver = Callable[[RecoveryTrial], None]
+PlannerInitializer = Callable[[], RecoveryPlanner]
 
 
 def build_episode_evidence(records: Sequence[Mapping[str, Any]]) -> EpisodeEvidence:
@@ -372,6 +373,55 @@ class RuleBasedRecoveryPlanner:
         return PlannerOutput(validate_proposal(proposal, self.allowed_magnitudes), {})
 
 
+class ProbeGuidedRecoveryPlanner:
+    """Deterministic correction derived only from active-probe inference."""
+
+    name = "probe_rule"
+
+    def __init__(
+        self,
+        diagnostic_context: Mapping[str, Any],
+        allowed_magnitudes: Sequence[float] = DEFAULT_CORRECTION_MAGNITUDES,
+    ) -> None:
+        inference = diagnostic_context.get("inference")
+        if not isinstance(inference, Mapping):
+            raise ValueError("probe-guided planner requires probe inference")
+        self.inference = dict(inference)
+        self.allowed_magnitudes = tuple(float(x) for x in allowed_magnitudes if x > 0)
+
+    def propose(
+        self, history: Sequence[PlannerHistoryItem], remaining_budget: int
+    ) -> PlannerOutput:
+        if not history or remaining_budget <= 0:
+            raise ValueError("probe-guided planner requires evidence and positive budget")
+        axis = str(self.inference["recommended_correction_axis"])
+        direction = str(self.inference["recommended_correction_direction"])
+        drift = np.asarray(self.inference["estimated_drift_per_step"], dtype=float)
+        gain = np.asarray(self.inference["axis_response_gain"], dtype=float)
+        axis_index = 0 if axis == "x" else 1
+        estimated_action_bias = abs(float(drift[axis_index])) / max(
+            abs(float(gain[axis_index])), 1e-9
+        )
+        magnitude = min(
+            self.allowed_magnitudes, key=lambda value: abs(value - estimated_action_bias)
+        )
+        proposal = ExperimentProposal(
+            correction_axis=axis,
+            correction_direction=direction,
+            correction_magnitude=magnitude,
+            hypothesis=(
+                "Symmetric visible state transitions indicate common drift on "
+                f"{axis}; compensate in the opposing direction."
+            ),
+            expected_effect="Reduce execution drift during the next rollout.",
+            confidence=float(self.inference.get("confidence", 0.0)),
+        )
+        return PlannerOutput(
+            validate_proposal(proposal, self.allowed_magnitudes),
+            {"source": "agent_visible_active_probe", "estimated_action_bias": estimated_action_bias},
+        )
+
+
 class OracleRecoveryPlanner:
     """Audit-only upper bound that receives the hidden injected bias."""
 
@@ -414,6 +464,7 @@ def run_budgeted_recovery(
     max_trials: int = 5,
     allowed_magnitudes: Sequence[float] = DEFAULT_CORRECTION_MAGNITUDES,
     trial_observer: TrialObserver | None = None,
+    planner_after_initial_failure: PlannerInitializer | None = None,
 ) -> RecoveryResult:
     """Run an initial uncorrected trial followed by bounded recovery trials."""
 
@@ -451,6 +502,8 @@ def run_budgeted_recovery(
             trial_observer(completed_trial)
         if outcome.result.success or trial_index == max_trials:
             break
+        if trial_index == 1 and planner_after_initial_failure is not None:
+            planner = planner_after_initial_failure()
         output = planner.propose(history, max_trials - trial_index)
         proposal = validate_proposal(output.proposal, allowed_magnitudes)
         audit = dict(output.audit)

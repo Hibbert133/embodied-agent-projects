@@ -23,6 +23,7 @@
 │   ├── rollout.py            # 可复用的 episode rollout 逻辑
 │   ├── trajectory.py         # 轨迹结构与 JSONL 保存
 │   ├── perturbations.py      # 统一动作扰动接口
+│   ├── diagnostic_probes.py  # 泄漏安全的主动对称探测与偏差估计
 │   ├── recovery_agent.py     # 受约束的高层恢复 Agent 与对照组
 │   └── openai_recovery_planner.py # 可选 Responses API planner
 ├── scripts/
@@ -30,6 +31,7 @@
 │   ├── demo_push.py          # push rollout、视频与轨迹保存
 │   ├── evaluate_push.py      # 多 episode 批量评测
 │   ├── sweep_perturbations.py # 配对 seed 的扰动强度扫描
+│   ├── run_active_diagnostic_probes.py # 主动探测证据采集
 │   ├── render_perturbation_videos.py # 扰动对比视频
 │   └── run_recovery_agent.py # 有限 rollout 预算恢复实验
 └── tests/
@@ -200,6 +202,32 @@ python scripts/plot_recovery_results.py --input-csv outputs/recovery/none.csv ou
 首个真实 `glm-5.1` 单 seed 接入实验及其失败分析见
 [reports/day3_glm51_pilot.md](reports/day3_glm51_pilot.md)。该结果仅用于验证 Agent 闭环和
 提出下一步消融，不作为统计性能结论。
+
+### 主动诊断探测与结构化 Prompt
+
+恢复 Prompt 使用 `push-recovery-v2-causal`：明确世界坐标系、
+`state_t + commanded_action_t -> state_t+1`、加性漂移应由反向 correction 抵消、return
+仅为辅助证据，并要求检查历史尝试以避免无依据重复。Prompt 不包含注入 bias、
+perturbed/executed action 或裁剪真值。
+
+以下命令从完全相同的 seeded reset 分别执行 `+x/-x/+y/-y` 八步短时命令，直接保存
+Agent 可见转移与独立 Oracle 审计表：
+
+```powershell
+python scripts/run_active_diagnostic_probes.py --seeds 103 107 108 144 148 --bias-axis x --bias-sign positive --bias-magnitude 0.145 --probe-magnitude 0.2 --probe-steps 8
+```
+
+无需 API 的 probe-guided 确定性消融使用 Agent 可见的成对位移估计共同漂移，并施加反向
+有界修正：
+
+```powershell
+python scripts/run_recovery_agent.py --planner probe_rule --active-probes --seeds 103 107 108 144 148 --max-trials 2 --bias-axis x --bias-sign positive --bias-magnitude 0.145 --output-csv outputs/active_probes/probe_rule_stratified_trials.csv --audit-jsonl outputs/active_probes/probe_rule_stratified_audit.jsonl --trajectory-dir outputs/active_probes/stratified_trajectories
+```
+
+`--active-probes` 也可与 `--planner anthropic` 或 `--planner openai` 组合，使结构化探测证据
+进入 planner payload。探测步数通过 `probe_environment_steps` 单独计费，不能隐藏在 rollout
+预算之外。当前五 seed 结果仅是 development study，不是 held-out 性能结论；详见
+[reports/active_diagnostic_probe_pilot.md](reports/active_diagnostic_probe_pilot.md)。
 
 ## Episode、rollout、trajectory、return 和 success rate
 

@@ -6,7 +6,7 @@ import hashlib
 import json
 import os
 from time import perf_counter
-from typing import Any, Sequence
+from typing import Any, Mapping, Sequence
 
 from src.openai_recovery_planner import PROMPT_VERSION, SYSTEM_INSTRUCTIONS, proposal_json_schema
 from src.recovery_agent import (
@@ -69,6 +69,7 @@ class AnthropicRecoveryPlanner:
         timeout_seconds: float = 180.0,
         max_retries: int = 2,
         max_tokens: int = 800,
+        diagnostic_context: Mapping[str, Any] | None = None,
     ) -> None:
         if not model.strip():
             raise ValueError("model must be non-empty")
@@ -85,6 +86,7 @@ class AnthropicRecoveryPlanner:
         self.timeout_seconds = float(timeout_seconds)
         self.max_tokens = int(max_tokens)
         self.max_retries = int(max_retries)
+        self.diagnostic_context = dict(diagnostic_context or {})
         prompt_material = SYSTEM_INSTRUCTIONS + json.dumps(
             proposal_json_schema(self.allowed_magnitudes), sort_keys=True
         )
@@ -140,6 +142,7 @@ class AnthropicRecoveryPlanner:
             "remaining_rollout_budget": remaining_budget,
             "allowed_correction_magnitudes": self.allowed_magnitudes,
             "trial_history": [item.to_dict() for item in history],
+            "active_probe_evidence": self.diagnostic_context or None,
         }
         schema = proposal_json_schema(self.allowed_magnitudes)
         user_prompt = (

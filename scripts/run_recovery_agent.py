@@ -24,19 +24,26 @@ from src.recovery_agent import (  # noqa: E402
     OracleRecoveryPlanner,
     RandomRecoveryPlanner,
     RecoveryPlanner,
+    ProbeGuidedRecoveryPlanner,
     RuleBasedRecoveryPlanner,
     TrialOutcome,
     run_budgeted_recovery,
 )
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 from src.trajectory_views import build_agent_view  # noqa: E402
+from src.diagnostic_probes import (  # noqa: E402
+    build_agent_probe_context,
+    estimate_planar_bias,
+    run_symmetric_probes,
+)
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--planner", choices=("none", "random", "rule", "openai", "anthropic", "oracle"), default="rule")
+    parser.add_argument("--planner", choices=("none", "random", "rule", "probe_rule", "openai", "anthropic", "oracle"), default="rule")
     parser.add_argument("--num-episodes", type=int, default=1)
     parser.add_argument("--seed-start", type=int, default=100)
+    parser.add_argument("--seeds", type=int, nargs="+", help="Explicit seed list; overrides --num-episodes and --seed-start")
     parser.add_argument("--max-steps", type=int, default=500)
     parser.add_argument("--max-trials", type=int, default=5)
     parser.add_argument("--bias-axis", choices=("x", "y"), default="x")
@@ -52,6 +59,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--trajectory-dir", type=Path, default=PROJECT_ROOT / "outputs" / "recovery" / "trajectories")
     parser.add_argument("--video-dir", type=Path, help="Record every trial to this directory")
     parser.add_argument("--fps", type=int, default=30)
+    parser.add_argument("--active-probes", action="store_true", help="Run four leakage-safe diagnostic probes before recovery planning")
+    parser.add_argument("--probe-magnitude", type=float, default=0.2)
+    parser.add_argument("--probe-steps", type=int, default=8)
     return parser.parse_args()
 
 
@@ -65,22 +75,33 @@ def hidden_bias(args: argparse.Namespace) -> tuple[float, float, float, float]:
     return tuple(vector)
 
 
-def make_planner(args: argparse.Namespace, seed: int, bias: tuple[float, ...]) -> RecoveryPlanner:
+def make_planner(
+    args: argparse.Namespace,
+    seed: int,
+    bias: tuple[float, ...],
+    diagnostic_context: dict[str, Any] | None = None,
+) -> RecoveryPlanner:
     if args.planner == "none":
         return NoRecoveryPlanner()
     if args.planner == "random":
         return RandomRecoveryPlanner(seed)
     if args.planner == "rule":
         return RuleBasedRecoveryPlanner()
+    if args.planner == "probe_rule":
+        if diagnostic_context is None:
+            raise ValueError("--planner probe_rule requires --active-probes")
+        return ProbeGuidedRecoveryPlanner(diagnostic_context)
     if args.planner == "oracle":
         return OracleRecoveryPlanner(bias)
     if args.planner == "anthropic":
         return AnthropicRecoveryPlanner(
             model=args.model or "glm-5.1", base_url=args.base_url,
             timeout_seconds=args.api_timeout, max_retries=args.api_max_retries,
+            diagnostic_context=diagnostic_context,
         )
     return OpenAIRecoveryPlanner(
-        model=args.model or "gpt-5.6-luna", reasoning_effort=args.reasoning_effort
+        model=args.model or "gpt-5.6-luna", reasoning_effort=args.reasoning_effort,
+        diagnostic_context=diagnostic_context,
     )
 
 
@@ -140,9 +161,30 @@ def main() -> int:
         bias = hidden_bias(args)
         output_rows: list[dict[str, Any]] = []
         audit_rows: list[dict[str, Any]] = []
-        for episode_index in range(args.num_episodes):
-            seed = args.seed_start + episode_index
-            planner = make_planner(args, seed, bias)
+        episode_seeds = args.seeds or [
+            args.seed_start + index for index in range(args.num_episodes)
+        ]
+        for episode_index, seed in enumerate(episode_seeds):
+            diagnostic_context = None
+
+            def initialize_active_planner() -> RecoveryPlanner:
+                nonlocal diagnostic_context
+                probe_results = run_symmetric_probes(
+                    lambda: create_push_environment(seed),
+                    seed=seed,
+                    perturbation_factory=lambda: ActionBiasPerturbation(bias),
+                    magnitude=args.probe_magnitude,
+                    steps=args.probe_steps,
+                )
+                diagnostic_context = build_agent_probe_context(
+                    probe_results, estimate_planar_bias(probe_results)
+                )
+                return make_planner(args, seed, bias, diagnostic_context)
+
+            planner = (
+                RuleBasedRecoveryPlanner()
+                if args.active_probes else make_planner(args, seed, bias)
+            )
             base_policy = create_push_policy()
 
             def run_trial(trial: int, correction: Any) -> TrialOutcome:
@@ -208,6 +250,10 @@ def main() -> int:
                         "clipped_element_fraction": trial.episode_result.clipped_element_fraction,
                         "trajectory_path": trial.trajectory_path,
                         "video_path": trial.video_path,
+                        "probe_environment_steps": (
+                            int(diagnostic_context["probe_environment_steps"])
+                            if diagnostic_context is not None else 0
+                        ),
                     }
                 )
                 audit_rows.append(
@@ -226,6 +272,9 @@ def main() -> int:
             recovery = run_budgeted_recovery(
                 planner, run_trial, max_trials=args.max_trials,
                 trial_observer=checkpoint,
+                planner_after_initial_failure=(
+                    initialize_active_planner if args.active_probes else None
+                ),
             )
             print(
                 f"episode={episode_index + 1} seed={seed} success={recovery.success} "
