@@ -12,7 +12,8 @@ system-level experimentation, not controlling the robot. Propose exactly two
 configs from the supplied discrete search space. Ground each change in observed
 agent-visible counterexamples and state one falsifiable hypothesis. Never infer
 or request injected fault labels. Do not generate code, actions, or parameters
-outside the schema. Return exactly one JSON object."""
+outside the schema. Candidate IDs are assigned by the experiment harness, so do
+not include config_id. Return exactly one JSON object."""
 
 def extract_object(text: str) -> Mapping[str, Any]:
     decoder=json.JSONDecoder(); found=[]
@@ -24,11 +25,19 @@ def extract_object(text: str) -> Mapping[str, Any]:
     if len(found)!=1: raise ValueError(f"expected one research proposal, found {len(found)}")
     return found[0]
 
-def parse_proposal(value: Mapping[str, Any]) -> ResearchProposal:
+def parse_proposal(
+    value: Mapping[str, Any], *, config_id_prefix: str = "research"
+) -> ResearchProposal:
     try:
         raw=value["candidates"]
         if not isinstance(raw,list) or len(raw)!=2: raise ValueError("exactly two candidates required")
-        candidates=tuple(RecoveryPolicyConfig.from_mapping(x) for x in raw)
+        if not config_id_prefix.strip(): raise ValueError("config_id_prefix must be non-empty")
+        candidates=tuple(
+            RecoveryPolicyConfig.from_mapping(
+                {**dict(candidate), "config_id": f"{config_id_prefix}_c{index}"}
+            )
+            for index, candidate in enumerate(raw, start=1)
+        )
         return ResearchProposal(
             candidates=(candidates[0],candidates[1]), hypothesis=str(value["hypothesis"]),
             targeted_counterexample_ids=tuple(str(x) for x in value["targeted_counterexample_ids"]),
@@ -57,7 +66,12 @@ class AnthropicResearchAgent:
         payload={"task":"improve leakage-safe push-v3 recovery interaction efficiency","prompt_version":PROMPT_VERSION,
                  "round":round_id,"agent_visible_cases":list(agent_cases),"prior_candidate_results":list(prior_results),
                  "bounded_search_space":dict(search_space),"objective_order":["recovery_success","environment_steps","abstention_quality"],
-                 "response_schema":{"candidates":"exactly two complete config objects","hypothesis":"falsifiable string",
+                 "response_schema":{"candidates":{"count":2,"fields":{
+                 "probe_steps_per_direction":"one supplied value","probe_magnitude":"one supplied value",
+                 "secondary_axis_threshold":"one supplied value","dominance_ratio":"one supplied value",
+                 "allowed_schedules":"one supplied option","offer_abstain":True,
+                 "evidence_detail":"one supplied value","max_recovery_rollouts":1},"config_id":"omitted; assigned by harness"},
+                 "hypothesis":"falsifiable string",
                  "targeted_counterexample_ids":"non-empty list of supplied case IDs","expected_metric_change":"measurable prediction"}}
         start=perf_counter()
         try:
@@ -66,7 +80,9 @@ class AnthropicResearchAgent:
         except Exception as exc: raise RuntimeError(f"Anthropic-compatible research request failed: {exc}") from exc
         latency=(perf_counter()-start)*1000
         text="".join(str(getattr(b,"text","")) for b in getattr(response,"content",()) if getattr(b,"type",None)=="text").strip()
-        try: proposal=parse_proposal(extract_object(text))
+        try: proposal=parse_proposal(
+            extract_object(text), config_id_prefix=f"research_r{round_id}"
+        )
         except ValueError as exc: raise RuntimeError(f"invalid research-agent response: {exc}") from exc
         valid_ids={str(c["case_id"]) for c in agent_cases}
         if not set(proposal.targeted_counterexample_ids)<=valid_ids: raise RuntimeError("proposal targets unknown counterexample IDs")

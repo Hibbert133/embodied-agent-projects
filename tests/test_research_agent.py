@@ -17,6 +17,15 @@ class ResearchAgentTest(unittest.TestCase):
         agent=AnthropicResearchAgent(client=SimpleNamespace(messages=Messages(payload)))
         proposal,audit=agent.propose(agent_cases=[{"case_id":"case_1"}],prior_results=[],search_space={"probe_steps":[2,4,8]},round_id=1)
         self.assertEqual(len(proposal.candidates),2); self.assertEqual(audit["usage"]["output_tokens"],2)
+        self.assertEqual(proposal.candidates[0].config_id,"research_r1_c1")
+    def test_missing_model_config_ids_are_assigned_by_harness(self):
+        first=self.config("ignored"); second=self.config("also_ignored")
+        first.pop("config_id"); second.pop("config_id")
+        payload={"candidates":[first,second],"hypothesis":"reduce probe cost",
+                 "targeted_counterexample_ids":["case_1"],"expected_metric_change":"fewer steps"}
+        agent=AnthropicResearchAgent(client=SimpleNamespace(messages=Messages(payload)))
+        proposal,_=agent.propose(agent_cases=[{"case_id":"case_1"}],prior_results=[],search_space={},round_id=2)
+        self.assertEqual([x.config_id for x in proposal.candidates],["research_r2_c1","research_r2_c2"])
     def test_unknown_target_fails_closed(self):
         payload={"candidates":[self.config("a"),self.config("b")],"hypothesis":"h","targeted_counterexample_ids":["oracle_case"],"expected_metric_change":"m"}
         agent=AnthropicResearchAgent(client=SimpleNamespace(messages=Messages(payload)))
