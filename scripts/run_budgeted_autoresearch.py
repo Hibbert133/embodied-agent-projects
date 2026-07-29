@@ -46,6 +46,12 @@ def random_config(rng:np.random.Generator,i:int)->RecoveryPolicyConfig:
   "probe_magnitude":float(rng.choice(PROBE_MAGNITUDES)),"secondary_axis_threshold":float(rng.choice(SECONDARY_AXIS_THRESHOLDS)),
   "dominance_ratio":float(rng.choice(DOMINANCE_RATIOS)),"allowed_schedules":list(SCHEDULE_OPTIONS[int(rng.integers(0,len(SCHEDULE_OPTIONS)))]),
   "offer_abstain":True,"evidence_detail":str(rng.choice(EVIDENCE_DETAILS)),"max_recovery_rollouts":1})
+def ensure_fresh_output(output:Path)->None:
+ if (output/"candidate_summary.csv").exists():
+  raise RuntimeError(
+   f"output directory already contains a completed run: {output}; "
+   "choose a new --output-dir to preserve API and budget audit history"
+  )
 def evaluate(config:RecoveryPolicyConfig,a:argparse.Namespace,case_ids:list[str],method:str)->dict[str,Any]:
  dest=a.output_dir/method/config.config_id; dest.mkdir(parents=True,exist_ok=True); config_path=dest/"candidate.json"
  config_path.write_text(json.dumps(config.to_dict(),indent=2),encoding="utf-8")
@@ -56,6 +62,7 @@ def evaluate(config:RecoveryPolicyConfig,a:argparse.Namespace,case_ids:list[str]
 def main()->int:
  a=parse(); output=a.output_dir.resolve(); budget=ExperimentBudget(a.max_api_calls,a.max_environment_steps)
  try:
+  ensure_fresh_output(output)
   ids=choose_cases(a.benchmark_dir/"cases.csv"); all_cases={x["case_id"]:x for x in load_jsonl(a.benchmark_dir/"agent_cases.jsonl")}; visible=[all_cases[x] for x in ids]
   agent=AnthropicResearchAgent(model=a.model,base_url=a.base_url,timeout_seconds=a.api_timeout,max_retries=a.api_max_retries)
   results=[]; audits=[]; used=set(); prior=[]

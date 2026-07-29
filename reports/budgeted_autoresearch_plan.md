@@ -59,8 +59,31 @@ by the online Research Agent.
 The PowerShell wrapper requests the API key through hidden input and removes it
 afterward. Never place a credential in Git or logs.
 
+## Online tuning result
+
+The first completed GLM-5.1 tuning artifact contains two Research-Agent calls,
+four proposed Research-Agent configs, and four seeded random-search configs. On
+the six fixed cases, the best Research-Agent config (`research_r1_c1`) recovered
+5/6 with 161.00 mean recovery environment steps. The best random config
+(`random_03`) also recovered 5/6 with 159.83 mean steps. Under the registered
+success-then-steps ordering, random search ranks first by 1.17 mean steps.
+
+Both Research-Agent rounds predicted that changing the simultaneous-axis decision
+boundary would recover the Gaussian OOD counterexample. It remained unsuccessful,
+so the claimed 6/6 improvement was falsified. This indicates an identifiability
+limitation in the current probe evidence, not evidence that a larger language
+model or a broader search space would solve the problem.
+
+The command was apparently launched repeatedly while using the original fixed
+output directory. Earlier artifacts were overwritten, so `budget.json` certifies
+only the final run's two API calls; total calls across the terminal session cannot
+be recovered reliably. New runs use timestamped directories and refuse to overwrite
+a completed result.
+
 ## Current limitation
 
-The online search, validation promotion, held-out evaluation, plots, and videos
-remain pending. Current numbers establish benchmark and interface evidence, not
-superiority over random search or general robotic-agent performance.
+Validation promotion, held-out evaluation, plots, and videos remain pending.
+The tuning result does not show superiority over random search or general robotic-
+agent performance. Before held-out evaluation, the smallest useful experiment is
+to test an agent-visible probe-consistency feature that can separate persistent
+bias from stochastic execution noise without reading injected fault labels.

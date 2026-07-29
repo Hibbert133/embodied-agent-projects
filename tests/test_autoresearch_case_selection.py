@@ -1,7 +1,12 @@
 import csv,tempfile,unittest
 from pathlib import Path
-from scripts.run_budgeted_autoresearch import choose_cases
+from scripts.run_budgeted_autoresearch import choose_cases,ensure_fresh_output
 class CaseSelectionTest(unittest.TestCase):
+ def test_completed_run_cannot_be_silently_overwritten(self):
+  with tempfile.TemporaryDirectory() as d:
+   path=Path(d);(path/"candidate_summary.csv").write_text("done",encoding="utf-8")
+   with self.assertRaisesRegex(RuntimeError,"completed run"):
+    ensure_fresh_output(path)
  def test_selection_covers_labels_then_conditions_deterministically(self):
   rows=[
    {"case_id":"c1","initial_success":"False","counterfactual_label":"a","condition_id":"f1"},
