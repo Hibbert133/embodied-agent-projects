@@ -58,6 +58,22 @@ class BiasEstimate:
         return asdict(self)
 
 
+@dataclass(frozen=True)
+class ProbeConsistencyMetrics:
+    """Repeatability evidence computed only from visible probe transitions."""
+
+    repeat_count: int
+    estimated_bias_mean: tuple[float, float]
+    estimated_bias_std: tuple[float, float]
+    estimated_bias_std_norm: float
+    relative_bias_std: float
+    mean_estimation_residual: float
+    dominant_axis_sign_agreement: float
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
 def build_agent_probe_context(
     results: Sequence[ProbeResult], estimate: BiasEstimate
 ) -> dict[str, Any]:
@@ -71,6 +87,61 @@ def build_agent_probe_context(
     }
 
 
+def summarize_probe_consistency(
+    estimates: Sequence[BiasEstimate], *, minimum_gain: float = 1e-6
+) -> ProbeConsistencyMetrics:
+    """Summarize cross-repeat stability without perturbation labels or parameters."""
+
+    if len(estimates) < 2 or minimum_gain <= 0.0:
+        raise ValueError("at least two estimates and positive minimum_gain are required")
+    inferred = []
+    signed_axes = []
+    for estimate in estimates:
+        drift = np.asarray(estimate.estimated_drift_per_step, dtype=float)
+        gain = np.asarray(estimate.axis_response_gain, dtype=float)
+        safe_gain = np.where(np.abs(gain) >= minimum_gain, gain, np.nan)
+        bias = np.nan_to_num(drift / safe_gain, nan=0.0, posinf=0.0, neginf=0.0)
+        inferred.append(bias)
+        dominant = int(np.argmax(np.abs(bias)))
+        signed_axes.append((dominant, int(np.sign(bias[dominant]))))
+    values = np.stack(inferred)
+    bias_mean = np.mean(values, axis=0)
+    bias_std = np.std(values, axis=0, ddof=0)
+    std_norm = float(np.linalg.norm(bias_std))
+    reference = max(set(signed_axes), key=signed_axes.count)
+    agreement = signed_axes.count(reference) / len(signed_axes)
+    return ProbeConsistencyMetrics(
+        repeat_count=len(estimates),
+        estimated_bias_mean=(float(bias_mean[0]), float(bias_mean[1])),
+        estimated_bias_std=(float(bias_std[0]), float(bias_std[1])),
+        estimated_bias_std_norm=std_norm,
+        relative_bias_std=std_norm / (float(np.linalg.norm(bias_mean)) + 1e-12),
+        mean_estimation_residual=float(np.mean([item.residual for item in estimates])),
+        dominant_axis_sign_agreement=float(agreement),
+    )
+
+
+def build_repeated_agent_probe_context(
+    repetitions: Sequence[Sequence[ProbeResult]], estimates: Sequence[BiasEstimate]
+) -> dict[str, Any]:
+    if len(repetitions) != len(estimates):
+        raise ValueError("probe repetitions and estimates must have equal lengths")
+    consistency = summarize_probe_consistency(estimates)
+    return {
+        "protocol": "repeated_symmetric_world_frame_xy_v1",
+        "probe_environment_steps": sum(row.steps for group in repetitions for row in group),
+        "repetitions": [
+            {
+                "repeat_index": index,
+                "transitions": [row.to_dict() for row in group],
+                "inference": estimate.to_dict(),
+            }
+            for index, (group, estimate) in enumerate(zip(repetitions, estimates))
+        ],
+        "consistency": consistency.to_dict(),
+    }
+
+
 StepFunction = Callable[[np.ndarray], tuple[np.ndarray, float, bool, bool, Mapping[str, Any]]]
 
 
@@ -81,6 +152,7 @@ def run_symmetric_probes(
     perturbation_factory: Callable[[], Any],
     magnitude: float = 0.2,
     steps: int = 8,
+    perturbation_seed: int | None = None,
 ) -> tuple[ProbeResult, ...]:
     """Run +x/-x/+y/-y from identical seeded resets.
 
@@ -97,7 +169,7 @@ def run_symmetric_probes(
         perturbation = perturbation_factory()
         try:
             observation, _ = env.reset(seed=seed)
-            perturbation.reset(seed)
+            perturbation.reset(seed if perturbation_seed is None else perturbation_seed)
             start_gripper, start_object, _ = extract_push_positions(observation)
             minimum_distance = float(np.linalg.norm(start_gripper - start_object))
             command = unit_action * np.float32(magnitude)
@@ -131,6 +203,29 @@ def run_symmetric_probes(
         finally:
             env.close()
     return tuple(results)
+
+
+def run_repeated_symmetric_probes(
+    env_factory: Callable[[], Any], *, seed: int,
+    perturbation_factory: Callable[[], Any], repeats: int = 4,
+    magnitude: float = 0.2, steps: int = 4,
+) -> tuple[tuple[ProbeResult, ...], ...]:
+    """Repeat the probe protocol with deterministic independent noise streams."""
+
+    if repeats < 2:
+        raise ValueError("repeated probes require at least two repetitions")
+    groups = []
+    for repeat_index in range(repeats):
+        derived_seed = int(
+            np.random.SeedSequence([int(seed), repeat_index, 0xA17E]).generate_state(1)[0]
+        )
+        groups.append(
+            run_symmetric_probes(
+                env_factory, seed=seed, perturbation_factory=perturbation_factory,
+                magnitude=magnitude, steps=steps, perturbation_seed=derived_seed,
+            )
+        )
+    return tuple(groups)
 
 
 def estimate_planar_bias(results: Sequence[ProbeResult]) -> BiasEstimate:

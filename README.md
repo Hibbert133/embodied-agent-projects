@@ -393,6 +393,13 @@ six-case pre-search reference. It does not yet claim that the online Research
 Agent outperforms random search. See
 [reports/budgeted_autoresearch_plan.md](reports/budgeted_autoresearch_plan.md).
 
+The follow-up [probe consistency study](reports/probe_consistency_study.md) adds
+repeatability evidence that is visible to the Agent but not an injected-fault
+label. A frozen threshold separates deterministic bias from Gaussian execution
+noise across tuning and validation seeds, and an end-to-end tuning ablation keeps
+recovery success unchanged while reducing interaction cost. The report states the
+important simulator and reset-access limitations.
+
 ```powershell
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
 ```

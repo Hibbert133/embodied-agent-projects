@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import unittest
 
-from src.diagnostic_probes import ProbeResult, build_agent_probe_context, estimate_planar_bias
+from src.diagnostic_probes import BiasEstimate, ProbeResult, build_agent_probe_context, estimate_planar_bias, summarize_probe_consistency
 from src.recovery_agent import EpisodeEvidence, ExperimentProposal, PlannerHistoryItem, ProbeGuidedRecoveryPlanner
 
 
@@ -23,6 +23,16 @@ def probe(direction: str, command: tuple[float, float], velocity: tuple[float, f
 
 
 class DiagnosticProbeTest(unittest.TestCase):
+    def test_repeat_consistency_separates_stable_and_variable_visible_estimates(self) -> None:
+        def estimate(x: float, y: float) -> BiasEstimate:
+            return BiasEstimate("x", "positive", (x, y), (1.0, 1.0), 0.01, 0.8, "x", "negative")
+        stable = summarize_probe_consistency([estimate(0.1, 0.0)] * 4)
+        variable = summarize_probe_consistency([
+            estimate(0.1, 0.0), estimate(-0.1, 0.08), estimate(0.02, -0.1), estimate(0.15, 0.1)
+        ])
+        self.assertAlmostEqual(stable.estimated_bias_std_norm, 0.0)
+        self.assertGreater(variable.estimated_bias_std_norm, 0.05)
+        self.assertLess(variable.dominant_axis_sign_agreement, 1.0)
     def test_symmetric_estimator_recovers_axis_sign_and_opposing_correction(self) -> None:
         # Local synthetic dynamics: velocity = 0.5 * command + [0.03, 0.005].
         rows = [
