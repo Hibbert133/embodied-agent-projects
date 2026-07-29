@@ -55,7 +55,7 @@ class FakeMessages:
 class RecoverySkillsTest(unittest.TestCase):
     def test_registry_exposes_grounded_dominant_and_simultaneous_repairs(self) -> None:
         diagnosis, skills = build_planar_recovery_skills(context())
-        self.assertEqual(len(skills), 2)
+        self.assertEqual(len(skills), 3)
         dominant = select_skill(skills, "dominant_axis_repair")
         simultaneous = select_skill(skills, "simultaneous_xy_repair")
         self.assertEqual(np.count_nonzero(dominant.correction[:2]), 1)

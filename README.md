@@ -380,6 +380,26 @@ python scripts/evaluate_planar_bias_recovery.py --seeds 260 261 262 263 264 265 
 python scripts/plot_planar_bias_recovery.py --summary-csv outputs/planar_bias_pilot/xpos014_yneg014_heldout/summary.csv --output outputs/planar_bias_pilot/figures/heldout_2d_recovery.png
 ```
 
+## Budgeted robotic autoresearch
+
+The outer Research Agent performs ENPIRE-inspired, system-level search over a
+strictly discrete recovery-policy schema. It may change active-probe budgets,
+axis-selection thresholds, schedules, and abstention behavior; it cannot generate
+code, low-level actions, or read injected fault truth. A trusted evaluator runs
+the proposed configs, and a seeded random-search control receives four candidates.
+
+The current checkpoint contains a real heterogeneous tuning benchmark and a
+six-case pre-search reference. It does not yet claim that the online Research
+Agent outperforms random search. See
+[reports/budgeted_autoresearch_plan.md](reports/budgeted_autoresearch_plan.md).
+
+```powershell
+.\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
+```
+
+The wrapper accepts the API key through hidden local input. Do not paste keys into
+chat, commands, config files, experiment artifacts, or Git.
+
 ## 常见错误
 
 - Python 不是 3.10：`check_install.py` 会直接报错并显示当前版本。

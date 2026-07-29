@@ -65,6 +65,16 @@ def build_planar_recovery_skills(
             verifier_metrics=common_verifiers,
             failure_modes=("probe model mismatch", "phase-dependent over-correction"),
         ),
+        RecoverySkillContract(
+            skill_id="abstain_and_escalate",
+            description="Do not spend the final rollout on unsupported bias compensation.",
+            correction=(0.0, 0.0, 0.0, 0.0),
+            preconditions=("available skills lack sufficient evidence",),
+            expected_effect="Avoid an unnecessary failed recovery rollout.",
+            rollout_cost=0,
+            verifier_metrics=common_verifiers,
+            failure_modes=("foregone recovery when evidence was sufficient",),
+        ),
     )
     structured_diagnosis = {
         "protocol": "symmetric_world_frame_xy_v1",
