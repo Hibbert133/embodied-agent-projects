@@ -332,6 +332,18 @@ success = bool(info.get("success", False))
 脚本使用 MetaWorld 自带的 `SawyerPushV3Policy`。它是手写脚本策略，不是训练得到的
 强化学习模型。
 
+## Skill-grounded online recovery
+
+The raw-probe GLM-5.1 pilot is preserved as a negative result. The next frozen
+ablation gives the online model typed, executable recovery skills generated
+solely from Agent-visible probe evidence. The model selects a skill and schedule
+but cannot invent correction values or low-level actions. See
+[reports/skill_grounded_recovery_protocol.md](reports/skill_grounded_recovery_protocol.md).
+
+```powershell
+.\scripts\run_skill_grounded_planar_agent.ps1 -Model glm-5.2 -BaseUrl https://api.modelarts-maas.com/anthropic -RunName glm52_skills_dev -ApiTimeout 300
+```
+
 ## Online high-level Agent pilot
 
 The online Agent is deliberately above the low-level policy. It receives only

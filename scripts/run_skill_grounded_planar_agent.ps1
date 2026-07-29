@@ -1,8 +1,8 @@
 param(
     [string]$Model = "glm-5.2",
     [string]$BaseUrl = "https://api.modelarts-maas.com/anthropic",
-    [string]$RunName = "glm52_planar_dev",
-    [double]$ApiTimeout = 180,
+    [string]$RunName = "glm52_skills_dev",
+    [double]$ApiTimeout = 300,
     [int]$ApiMaxRetries = 2
 )
 
@@ -11,13 +11,12 @@ $python = Join-Path $projectRoot ".venv\Scripts\python.exe"
 if (-not (Test-Path -LiteralPath $python)) {
     throw "Python environment not found: $python"
 }
-
 $secureKey = Read-Host "Enter a new ANTHROPIC_API_KEY (input is hidden)" -AsSecureString
 try {
     $runDir = Join-Path $projectRoot ("outputs\online_planar_agent\" + $RunName)
     $env:ANTHROPIC_API_KEY = [System.Net.NetworkCredential]::new("", $secureKey).Password
     $env:ANTHROPIC_BASE_URL = $BaseUrl
-    & $python (Join-Path $projectRoot "scripts\run_online_planar_agent.py") `
+    & $python (Join-Path $projectRoot "scripts\run_skill_grounded_planar_agent.py") `
         --seeds 250 251 252 253 254 `
         --bias-x 0.14 `
         --bias-y -0.14 `
