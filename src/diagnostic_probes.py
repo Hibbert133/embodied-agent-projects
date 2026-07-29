@@ -153,19 +153,21 @@ def run_symmetric_probes(
     magnitude: float = 0.2,
     steps: int = 8,
     perturbation_seed: int | None = None,
+    shared_env: Any | None = None,
 ) -> tuple[ProbeResult, ...]:
     """Run +x/-x/+y/-y from identical seeded resets.
 
-    Each probe owns a fresh environment and perturbation instance. This keeps
-    reset state identical and prevents stochastic state from leaking across
-    probes. No rendering is performed.
+    Each direction resets to the same environment seed and owns a fresh
+    perturbation instance. A caller may reuse one environment object to reduce
+    construction overhead; reset semantics remain unchanged. No rendering occurs.
     """
 
     if not 0.0 < magnitude <= 1.0 or steps <= 0:
         raise ValueError("probe magnitude must be in (0, 1] and steps must be positive")
     results: list[ProbeResult] = []
     for direction, unit_action in PROBE_DIRECTIONS:
-        env = env_factory()
+        env = shared_env if shared_env is not None else env_factory()
+        owns_environment = shared_env is None
         perturbation = perturbation_factory()
         try:
             observation, _ = env.reset(seed=seed)
@@ -201,7 +203,8 @@ def run_symmetric_probes(
                 )
             )
         finally:
-            env.close()
+            if owns_environment:
+                env.close()
     return tuple(results)
 
 
@@ -215,16 +218,21 @@ def run_repeated_symmetric_probes(
     if repeats < 2:
         raise ValueError("repeated probes require at least two repetitions")
     groups = []
-    for repeat_index in range(repeats):
-        derived_seed = int(
-            np.random.SeedSequence([int(seed), repeat_index, 0xA17E]).generate_state(1)[0]
-        )
-        groups.append(
-            run_symmetric_probes(
-                env_factory, seed=seed, perturbation_factory=perturbation_factory,
-                magnitude=magnitude, steps=steps, perturbation_seed=derived_seed,
+    shared_env = env_factory()
+    try:
+        for repeat_index in range(repeats):
+            derived_seed = int(
+                np.random.SeedSequence([int(seed), repeat_index, 0xA17E]).generate_state(1)[0]
             )
-        )
+            groups.append(
+                run_symmetric_probes(
+                    env_factory, seed=seed, perturbation_factory=perturbation_factory,
+                    magnitude=magnitude, steps=steps, perturbation_seed=derived_seed,
+                    shared_env=shared_env,
+                )
+            )
+    finally:
+        shared_env.close()
     return tuple(groups)
 
 

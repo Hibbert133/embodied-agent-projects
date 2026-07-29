@@ -396,9 +396,10 @@ Agent outperforms random search. See
 The follow-up [probe consistency study](reports/probe_consistency_study.md) adds
 repeatability evidence that is visible to the Agent but not an injected-fault
 label. A frozen threshold separates deterministic bias from Gaussian execution
-noise across tuning and validation seeds, and an end-to-end tuning ablation keeps
-recovery success unchanged while reducing interaction cost. The report states the
-important simulator and reset-access limitations.
+noise across tuning and validation seeds. Although a six-case tuning ablation
+reduced interaction cost, complete validation rejected the gate: two stochastic
+failures were recoverable, so OOD detection was not equivalent to recovery value.
+The report preserves this negative result and its simulator limitations.
 
 ```powershell
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
