@@ -332,6 +332,22 @@ success = bool(info.get("success", False))
 脚本使用 MetaWorld 自带的 `SawyerPushV3Policy`。它是手写脚本策略，不是训练得到的
 强化学习模型。
 
+## Online high-level Agent pilot
+
+The online Agent is deliberately above the low-level policy. It receives only
+schema-v2 episode evidence and active-probe inference, then chooses a bounded
+planar repair mode, x/y correction, and observation-driven schedule. It cannot
+read injected bias or output step-level robot actions. The frozen protocol and
+secure hidden-key command are documented in
+[reports/online_planar_agent_protocol.md](reports/online_planar_agent_protocol.md).
+
+```powershell
+.\scripts\run_online_planar_agent.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -RunName glm51_planar_dev
+```
+
+Until this command is run with a valid credential, mock tests establish only
+interface correctness and leakage prevention, not online model performance.
+
 ## Two-axis active recovery pilot
 
 The single-axis reference has been extended to simultaneous planar bias without
