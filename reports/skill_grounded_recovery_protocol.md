@@ -57,3 +57,25 @@ generalization beyond this development condition.
 
 The wrapper reads the key through a hidden prompt and removes it from the child
 process environment in `finally`.
+
+## Completed GLM-5.2 skill-grounded pilot
+
+The preregistered run completed successfully on all five development seeds.
+GLM-5.2 selected `simultaneous_xy_repair` with the `whole` schedule in every
+case. It recovered 5/5 initial failures, with mean total recovery cost 92.0
+environment steps and mean final object-goal distance 0.04808. Mean API latency
+was 33.26 seconds; total input/output usage was 8,922/6,331 tokens. These values
+come from `outputs/online_planar_agent/glm52_skills_dev`.
+
+The executed correction and resulting robot trajectories match the frozen
+deterministic simultaneous candidate, so this demonstrates correct grounded
+skill selection rather than a new low-level controller. It improves over the
+completed GLM-5.1 raw interface (2/5), but the comparison changes both model
+version and interface. Causal attribution requires the remaining 2x2 cells:
+
+- GLM-5.1 with the skill-grounded interface;
+- GLM-5.2 with the raw-probe interface.
+
+Furthermore, all five episodes expose nearly identical planar estimates and
+share the same optimal skill. This is an integration/mechanism result, not yet
+evidence of adaptive selection across heterogeneous failure types.
