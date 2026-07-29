@@ -76,6 +76,12 @@ version and interface. Causal attribution requires the remaining 2x2 cells:
 - GLM-5.1 with the skill-grounded interface;
 - GLM-5.2 with the raw-probe interface.
 
+Run both missing cells with one hidden credential prompt:
+
+```powershell
+.\scripts\run_online_interface_ablation.ps1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
+```
+
 Furthermore, all five episodes expose nearly identical planar estimates and
 share the same optimal skill. This is an integration/mechanism result, not yet
 evidence of adaptive selection across heterogeneous failure types.
