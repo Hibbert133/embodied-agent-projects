@@ -401,6 +401,12 @@ reduced interaction cost, complete validation rejected the gate: two stochastic
 failures were recoverable, so OOD detection was not equivalent to recovery value.
 The report preserves this negative result and its simulator limitations.
 
+A second [stochastic retry study](reports/stochastic_retry_study.md) tests whether
+identified noise should trigger a fresh execution realization instead of abstention.
+It improves tuning success but fails frozen validation: compensation recovers both
+stochastic validation failures while independent retry recovers one. This further
+shows that fault classification alone is not recovery-utility estimation.
+
 ```powershell
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
 ```

@@ -15,7 +15,17 @@ class Env:
 class Policy:
     def __init__(self,a): self.a=np.asarray(a,dtype=np.float32)
     def get_action(self,o): return self.a.copy()
+class SeedTrackingPerturbation:
+    name="seed_tracking"
+    def __init__(self): self.reset_seed=None
+    def reset(self,seed): self.reset_seed=seed
+    def apply(self,action): return np.asarray(action,dtype=np.float32).copy()
+    def parameters(self): return {}
 class RolloutTest(unittest.TestCase):
+    def test_perturbation_seed_can_differ_from_environment_seed(self):
+        perturbation=SeedTrackingPerturbation()
+        run_episode(Env(),Policy([.2,0,0,.2]),seed=11,perturbation_seed=29,max_steps=2,perturbation=perturbation)
+        self.assertEqual(perturbation.reset_seed,29)
     def test_clipping_statistics(self):
         r=run_episode(Env(),Policy([2,-2,.5,.2]),seed=1,max_steps=2,stop_on_success=False)
         self.assertEqual(r.clipped_step_count,2); self.assertEqual(r.clipped_step_fraction,1); self.assertEqual(r.clipped_element_count,4); self.assertEqual(r.clipped_element_fraction,.5)

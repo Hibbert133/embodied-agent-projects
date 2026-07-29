@@ -85,6 +85,7 @@ def run_episode(
     fps: int = 30,
     stop_on_success: bool = True,
     perturbation: ActionPerturbation | None = None,
+    perturbation_seed: int | None = None,
 ) -> EpisodeResult:
     """Run one episode, stopping at first success by default.
 
@@ -127,7 +128,7 @@ def run_episode(
         start_time = perf_counter()
         observation, _ = env.reset(seed=seed)
         initial_observation = np.asarray(observation).copy()
-        active_perturbation.reset(seed)
+        active_perturbation.reset(seed if perturbation_seed is None else perturbation_seed)
         if writer is not None:
             writer.append_data(_validate_frame(env.render()))
 

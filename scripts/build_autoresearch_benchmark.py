@@ -54,9 +54,10 @@ def save_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
     path.parent.mkdir(parents=True, exist_ok=True); tmp=path.with_name(f".{path.name}.tmp")
     tmp.write_text("".join(json.dumps(r, ensure_ascii=False)+"\n" for r in rows), encoding="utf-8"); tmp.replace(path)
 
-def rollout(seed: int, fault: FaultCondition, correction: tuple[float, ...], schedule: str, max_steps: int) -> Any:
+def rollout(seed: int, fault: FaultCondition, correction: tuple[float, ...], schedule: str, max_steps: int,
+            perturbation_seed: int | None = None) -> Any:
     env=create_push_environment(seed); policy=PhaseGatedCompensatedPolicy(create_push_policy(), correction, schedule=schedule)
-    try: return run_episode(env, policy, seed=seed, max_steps=max_steps, perturbation=fault.build())
+    try: return run_episode(env, policy, seed=seed, max_steps=max_steps, perturbation=fault.build(),perturbation_seed=perturbation_seed)
     finally: env.close()
 
 def result_view(r: Any) -> dict[str, Any]:
