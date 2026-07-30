@@ -420,8 +420,16 @@ limits are documented in
 ```
 
 The command checkpoints each completed case and safely resumes the same run after
-a network timeout. Until a credentialed run completes, this stage provides tested
-online-Agent infrastructure but no model-performance claim.
+a network timeout. Before a credentialed run completes, the interface tests alone
+must not be treated as a model-performance claim.
+
+The completed GLM-5.1 development run is reported in
+[reports/online_candidate_utility_results.md](reports/online_candidate_utility_results.md).
+It is a useful negative result: the online Agent matches a simple probe-greedy rule
+on all six cases and recovers 5/6, while fixed compensation recovers 6/6 with lower
+interaction cost. The failed case exposes horizon mismatch between an 80-step
+candidate probe and delayed full-rollout recovery; it does not support an online
+Agent performance claim.
 
 ```powershell
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
