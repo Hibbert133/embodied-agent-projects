@@ -77,6 +77,16 @@ class TrajectoryTest(unittest.TestCase):
         self.assertEqual(oracle["perturbation_type"],"action_bias")
         self.assertIn("executed_action",oracle)
 
+    def test_agent_jsonl_contains_no_oracle_fields(self) -> None:
+        recorder = TrajectoryRecorder(episode_id=1, seed=42)
+        recorder.record(self.make_step(step=1, success=False))
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            path = Path(temporary_directory) / "agent.jsonl"
+            recorder.save_agent_jsonl(path)
+            record = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(set(record), set(AGENT_FIELDS))
+        self.assertFalse(FORBIDDEN_AGENT_FIELDS & set(record))
+
     def test_agent_view_rejects_missing_required_fields(self) -> None:
         record = self.make_step(step=1, success=False).to_dict()
         del record["next_observation"]

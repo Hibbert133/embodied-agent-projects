@@ -185,6 +185,11 @@ class TrajectoryRecorder:
     def save_jsonl(self, path: Path | str) -> Path:
         return save_jsonl(self._steps, path)
 
+    def save_agent_jsonl(self, path: Path | str) -> Path:
+        """Persist only the leakage-safe schema-v2 Agent View."""
+
+        return save_agent_jsonl(self._steps, path)
+
 
 def save_jsonl(steps: Iterable[TrajectoryStep], path: Path | str) -> Path:
     """Atomically write one JSON object per line using UTF-8."""
@@ -196,6 +201,25 @@ def save_jsonl(steps: Iterable[TrajectoryStep], path: Path | str) -> Path:
         with temporary.open("w", encoding="utf-8", newline="\n") as file:
             for step in steps:
                 file.write(json.dumps(step.to_dict(), ensure_ascii=False) + "\n")
+        temporary.replace(output)
+    finally:
+        if temporary.exists():
+            temporary.unlink()
+    return output
+
+
+def save_agent_jsonl(steps: Iterable[TrajectoryStep], path: Path | str) -> Path:
+    """Atomically write Agent Views without perturbation audit fields."""
+
+    output = Path(path).expanduser().resolve()
+    output.parent.mkdir(parents=True, exist_ok=True)
+    temporary = output.with_name(f".{output.name}.tmp")
+    try:
+        with temporary.open("w", encoding="utf-8", newline="\n") as file:
+            for step in steps:
+                file.write(
+                    json.dumps(step.to_agent_view(), ensure_ascii=False) + "\n"
+                )
         temporary.replace(output)
     finally:
         if temporary.exists():

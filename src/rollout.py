@@ -81,6 +81,7 @@ def run_episode(
     max_steps: int,
     episode_id: int = 1,
     trajectory_path: Path | None = None,
+    agent_trajectory_path: Path | None = None,
     video_path: Path | None = None,
     fps: int = 30,
     stop_on_success: bool = True,
@@ -199,6 +200,8 @@ def run_episode(
 
         if trajectory_path is not None:
             recorder.save_jsonl(trajectory_path)
+        if agent_trajectory_path is not None:
+            recorder.save_agent_jsonl(agent_trajectory_path)
     finally:
         if writer is not None:
             writer.close()

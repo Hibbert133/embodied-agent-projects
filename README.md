@@ -431,6 +431,13 @@ interaction cost. The failed case exposes horizon mismatch between an 80-step
 candidate probe and delayed full-rollout recovery; it does not support an online
 Agent performance claim.
 
+The subsequent [evidence-horizon study](reports/horizon_utility_study.md) corrects
+the candidate-probe comparison with common random numbers and an independent final
+stream. Extending one probe from 80 to 500 steps does not improve recovery beyond
+5/6 and sharply increases interaction cost. The stochastic case reverses candidate
+ranking across realizations, motivating repeated uncertainty-aware utility
+estimation rather than longer single-trajectory prompting.
+
 ```powershell
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
 ```
