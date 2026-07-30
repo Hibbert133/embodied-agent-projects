@@ -102,11 +102,11 @@ class TrajectoryStep:
         return asdict(self)
 
     def to_agent_view(self) -> dict[str, Any]:
-        from src.trajectory_views import build_agent_view
+        from src.trajectory.views import build_agent_view
         return build_agent_view(self.to_dict())
 
     def to_oracle_view(self) -> dict[str, Any]:
-        from src.trajectory_views import build_oracle_view
+        from src.trajectory.views import build_oracle_view
         return build_oracle_view(self.to_dict())
 
 
