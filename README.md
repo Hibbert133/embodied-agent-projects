@@ -68,6 +68,13 @@ same Agent-visible uncertainty evidence and passed its verification rollout.
 See [reports/online_active_evidence_glm52_pilot.md](reports/online_active_evidence_glm52_pilot.md).
 This is API integration evidence, not an online-agent performance claim.
 
+The subsequent severity-stratified dev5 study found that GLM-5.2 requested a
+probe for all 5/5 cases. A frozen deterministic gate reduced probes on ten
+held-out cases, but passive correction already succeeded on 10/10. This negative
+result motivates ambiguity-pair benchmarks rather than further tuning on simple
+single-axis bias. See
+[reports/active_evidence_dev5_heldout_study.md](reports/active_evidence_dev5_heldout_study.md).
+
 Two recent development results motivate the refocus:
 
 - The online GLM-5.1 candidate-utility agent recovered 5/6 frozen tuning cases,
@@ -206,6 +213,12 @@ rollout 改进和交互成本，而不是只看 reward 或 Push 成功率。
 对称 probe，并通过 verification rollout。详见
 [在线实验报告](reports/online_active_evidence_glm52_pilot.md)。它只证明在线接口闭环，
 不构成在线 Agent 性能结论。
+
+后续 severity-stratified dev5 实验发现 GLM-5.2 对 5/5 cases 全部请求 probe；冻结规则
+虽然在十个 held-out cases 上减少 probe，但 passive correction 已经达到 10/10。
+该负面结果说明下一步应构造被动证据难以区分的 ambiguity pairs，而不是继续在简单单轴
+bias 上调参。详见
+[dev/held-out 报告](reports/active_evidence_dev5_heldout_study.md)。
 
 最近两个 development 结果推动了本次研究重构：
 

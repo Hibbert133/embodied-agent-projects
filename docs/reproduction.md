@@ -26,6 +26,8 @@ python scripts/validate_schema_v2_trajectories.py
 
 ```powershell
 python scripts/run_active_evidence_campaign.py --config configs/campaigns/active_evidence_smoke.json
+python scripts/validate_active_evidence_selection.py --config configs/campaigns/active_evidence_glm52_dev5.json
+python scripts/analyze_active_evidence_campaign.py --run-dir outputs/campaigns/active_evidence_glm52_dev5_v1
 python scripts/run_active_diagnostic_probes.py
 python scripts/evaluate_planar_bias_recovery.py --seeds 260 261 262 263 264 265 266 267 268 269 --bias-x 0.14 --bias-y -0.14 --max-steps 500 --output-dir outputs/planar_bias_pilot/xpos014_yneg014_heldout
 python scripts/evaluate_horizon_utility.py --run-dir outputs/online_utility_agent/glm51_utility_dev
