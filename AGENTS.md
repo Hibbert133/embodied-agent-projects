@@ -27,13 +27,13 @@ assumptions clearly without oversimplifying systems or ML concepts.
 
 ## Project Mission
 
-The project is a **Failure-Aware Self-Improving Embodied Agent**.
+The project is an **Active-Evidence Embodied Research Agent**.
 
 The central question is:
 
-> When robot policies face execution error, control bias, and uncertainty, can
-> agent-visible trajectory evidence support reliable failure understanding,
-> adaptive correction, and eventually reusable episodic experience?
+> How can an embodied agent actively acquire diagnostic evidence after a failed
+> rollout, generate hypotheses about latent execution failures, and improve
+> subsequent rollouts through iterative reasoning?
 
 The project must not become a MetaWorld tutorial, a collection of attractive
 demos, or an unstructured reinforcement-learning baseline. It should develop a
@@ -43,8 +43,10 @@ coherent chain:
 problem definition
 -> reproducible baseline
 -> controlled failure
--> failure evidence and diagnosis
--> adaptive recovery
+-> uncertainty estimation and evidence decision
+-> active diagnostic probe
+-> mechanism hypothesis revision
+-> corrective intervention and verification
 -> ablation and evaluation
 -> research report
 ```
@@ -57,15 +59,19 @@ problem definition
   `state_t + commanded_action_t -> state_t+1` transitions.
 - Controlled failures: masked action scale, noise, and single-axis bias.
 - Data boundary: leakage-safe Agent View versus audit-only Oracle View.
-- Recovery: bounded random, rule-based, OpenAI-compatible,
-  Anthropic-compatible, and Oracle planners.
-- Current evidence: a real single-seed GLM-5.1 pilot; it is integration evidence,
-  not a statistical performance claim.
+- Intervention baselines: bounded random, deterministic, OpenAI-compatible,
+  Anthropic-compatible, and Oracle audit planners.
+- Current evidence: the online utility Agent matched a simple greedy rule on six
+  tuning cases and underperformed fixed compensation; a later horizon study found
+  candidate-ranking reversal across stochastic execution realizations.
+- Current phase: architecture and uncertainty-aware evidence allocation.
 
-The bounded LLM planner is an allowed experimental comparison. Do not expand
-into episodic memory, reinforcement learning, VLA training, behavior cloning,
-complex policy learning, or additional robot tasks until the corresponding
-research phase is explicitly approved.
+The bounded LLM planner is an allowed experimental comparison. Probing must follow
+an explicit uncertainty/evidence decision. A corrective intervention must declare
+verification criteria, and memory may contain only accepted verification results.
+During the architecture phase, define memory contracts only; do not implement
+operational episodic memory, reinforcement learning, VLA training, behavior
+cloning, complex policy learning, or additional robot tasks.
 
 ## Research and Coding Principles
 

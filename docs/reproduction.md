@@ -32,8 +32,15 @@ python scripts/evaluate_horizon_utility.py --run-dir outputs/online_utility_agen
 
 ## Online model experiments
 
-Online wrappers use a hidden key prompt in the legacy workflow. The research branch
-adds a one-time encrypted local credential bootstrap documented by the setup script.
+Configure a newly issued credential once. Windows DPAPI encrypts the local file for
+the current Windows user, and Git ignores it. Do not reuse a key exposed in chat.
+
+```powershell
+.\scripts\configure_agent_api.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic
+.\scripts\check_agent_api_config.ps1
+```
+
+After setup, online wrappers load and clear the process credential automatically:
 
 ```powershell
 .\scripts\run_online_utility_agent.ps1 -Model glm-5.1 -RunName glm51_utility_dev
@@ -45,6 +52,7 @@ adds a one-time encrypted local credential bootstrap documented by the setup scr
 ```powershell
 python -m unittest discover -s tests -v
 python -m pip check
+python scripts/check_tracked_secrets.py
 git diff --check
 ```
 

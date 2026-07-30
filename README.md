@@ -91,7 +91,8 @@ flowchart TD
 ```
 
 See [research question](docs/research_question.md),
-[architecture](docs/architecture.md), and [terminology](docs/terminology.md).
+[architecture](docs/architecture.md), [terminology](docs/terminology.md), and the
+[architecture design review](docs/design_review_active_evidence_agent.md).
 
 ## Reproduce the platform
 

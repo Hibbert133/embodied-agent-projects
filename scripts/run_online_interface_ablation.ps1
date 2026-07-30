@@ -1,18 +1,18 @@
 param(
-    [string]$BaseUrl = "https://api.modelarts-maas.com/anthropic",
+    [string]$BaseUrl = "",
     [double]$ApiTimeout = 300,
     [int]$ApiMaxRetries = 2
 )
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot "common\agent_api.ps1")
 $python = Join-Path $projectRoot ".venv\Scripts\python.exe"
 if (-not (Test-Path -LiteralPath $python)) {
     throw "Python environment not found: $python"
 }
-$secureKey = Read-Host "Enter a new ANTHROPIC_API_KEY (input is hidden)" -AsSecureString
+$apiState = Enter-AgentApiEnvironment -ProjectRoot $projectRoot -RequestedModel "glm-5.1" -RequestedBaseUrl $BaseUrl
+$BaseUrl = $apiState.BaseUrl
 try {
-    $env:ANTHROPIC_API_KEY = [System.Net.NetworkCredential]::new("", $secureKey).Password
-    $env:ANTHROPIC_BASE_URL = $BaseUrl
 
     $skillsOutput = Join-Path $projectRoot "outputs\online_planar_agent\glm51_skills_dev"
     & $python (Join-Path $projectRoot "scripts\run_skill_grounded_planar_agent.py") `
@@ -37,7 +37,5 @@ try {
     }
 }
 finally {
-    Remove-Item Env:ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
-    Remove-Item Env:ANTHROPIC_BASE_URL -ErrorAction SilentlyContinue
-    Remove-Variable secureKey -ErrorAction SilentlyContinue
+    Exit-AgentApiEnvironment -State $apiState
 }

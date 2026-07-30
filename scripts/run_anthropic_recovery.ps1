@@ -1,6 +1,6 @@
 param(
-    [string]$Model = "glm-5.1",
-    [string]$BaseUrl = "https://api.modelarts-maas.com/anthropic",
+    [string]$Model = "",
+    [string]$BaseUrl = "",
     [int]$Seed = 148,
     [int]$MaxTrials = 5,
     [double]$ApiTimeout = 180,
@@ -13,20 +13,20 @@ param(
 )
 
 $projectRoot = Split-Path -Parent $PSScriptRoot
+. (Join-Path $PSScriptRoot "common\agent_api.ps1")
 $python = Join-Path $projectRoot ".venv\Scripts\python.exe"
 if (-not (Test-Path -LiteralPath $python)) {
     throw "Python environment not found: $python"
 }
 
-$secureKey = Read-Host "Enter a new ANTHROPIC_API_KEY (input is hidden)" -AsSecureString
+$apiState = Enter-AgentApiEnvironment -ProjectRoot $projectRoot -RequestedModel $Model -RequestedBaseUrl $BaseUrl
+$Model = $apiState.Model
+$BaseUrl = $apiState.BaseUrl
 try {
     if (-not $RunName) {
         $RunName = "glm51_seed${Seed}_video"
     }
     $runDir = Join-Path $projectRoot ("outputs\recovery\runs\" + $RunName)
-    $env:ANTHROPIC_API_KEY = [System.Net.NetworkCredential]::new("", $secureKey).Password
-    $env:ANTHROPIC_BASE_URL = $BaseUrl
-    $env:LLM_MODEL = $Model
     & $python (Join-Path $projectRoot "scripts\run_recovery_agent.py") `
         --planner anthropic `
         --model $Model `
@@ -47,8 +47,5 @@ try {
     exit $LASTEXITCODE
 }
 finally {
-    Remove-Item Env:ANTHROPIC_API_KEY -ErrorAction SilentlyContinue
-    Remove-Item Env:ANTHROPIC_BASE_URL -ErrorAction SilentlyContinue
-    Remove-Item Env:LLM_MODEL -ErrorAction SilentlyContinue
-    Remove-Variable secureKey -ErrorAction SilentlyContinue
+    Exit-AgentApiEnvironment -State $apiState
 }
