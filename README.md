@@ -138,6 +138,13 @@ selective Agent succeeds: repeated evidence is useful, while the current passive
 uncertainty signal fails to allocate it. Exact costs and limitations are in the
 [held-out active-evidence pilot](reports/ambiguity_agent_heldout_pilot.md).
 
+A subsequent development study tested an Agent-visible temporal response residual
+as the evidence-need signal. It reached 10/10 development diagnoses only by probing
+9/10 cases; probe-need ROC AUC was 0.667. The candidate was rejected before another
+held-out run because it behaved almost like always-probe. This negative result and
+the phase-conditioned next hypothesis are documented in the
+[temporal evidence-need study](reports/temporal_evidence_need_development.md).
+
 Reports containing the actual commands and artifacts are under `reports/`. The
 [experiment plan](docs/experiment_plan.md) defines the next controlled comparisons.
 

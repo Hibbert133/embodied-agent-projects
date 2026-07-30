@@ -1,0 +1,15 @@
+{
+  "threshold": 0.7120197309436274,
+  "selection_direction": "request probe when temporal_uncertainty >= threshold",
+  "selection_rule": "maximize development diagnostic accuracy, then minimize probe requests; higher threshold tie-break",
+  "development_cases": 10,
+  "development_correct": 10,
+  "development_accuracy": 1.0,
+  "development_probe_requests": 9,
+  "development_probe_request_rate": 0.9,
+  "probe_need_roc_auc": 0.6666666666666666,
+  "probe_needed_cases": 4,
+  "development_tuning": true,
+  "heldout_evaluated": false,
+  "future_status": "development-only candidate; promotion decision is documented separately"
+}

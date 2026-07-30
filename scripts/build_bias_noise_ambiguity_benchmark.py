@@ -327,11 +327,11 @@ def build_benchmark(
         "mean_standardized_passive_distance": mean(
             pair.standardized_distance for pair in pairs
         ),
-        "claim_boundary": (
-            "tuning pilot only; selected cases and threshold are not a held-out claim"
-            if split == "tuning"
-            else "held-out cases with a tuning-frozen probe threshold; report sample size"
-        ),
+        "claim_boundary": {
+            "tuning": "tuning pilot only; selected cases and threshold are not a held-out claim",
+            "development": "development cases for candidate selection; not a held-out claim",
+            "heldout": "held-out cases with a tuning-frozen probe threshold; report sample size",
+        }[split],
     }
     output_dir.mkdir(parents=True, exist_ok=True)
     _write_csv(output_dir / "pairs.csv", pair_rows)
@@ -367,7 +367,9 @@ def parse_args() -> argparse.Namespace:
         default=ROOT / "outputs/ambiguity_benchmark/bias_noise_tuning_v1",
     )
     parser.add_argument("--benchmark-id", default="bias_noise_tuning_v1")
-    parser.add_argument("--split", choices=("tuning", "heldout"), default="tuning")
+    parser.add_argument(
+        "--split", choices=("tuning", "development", "heldout"), default="tuning"
+    )
     return parser.parse_args()
 
 

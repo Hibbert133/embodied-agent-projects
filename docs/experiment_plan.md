@@ -159,6 +159,11 @@ centroid-margin gate requested no probes. Thus probe informativeness has initial
 held-out support, but selective evidence allocation has not passed its gate. See
 [`reports/ambiguity_agent_heldout_pilot.md`](../reports/ambiguity_agent_heldout_pilot.md).
 
+The next development attempt reused the schema-v2 passive planar response model as
+a temporal uncertainty score. It requested probes for 9/10 matched cases and was
+not promoted to held-out evaluation. This identifies policy-phase and contact-state
+mixing as the next confound to test, rather than justifying another threshold fit.
+
 ### E4 — Hypothesis-grounded intervention
 
 Map stable bias to bounded compensation and stochastic noise to an appropriate

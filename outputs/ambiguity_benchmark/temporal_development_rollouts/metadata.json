@@ -1,0 +1,14 @@
+{
+  "split": "development",
+  "seed_start": 320,
+  "num_seeds": 10,
+  "max_steps": 500,
+  "noise_std": 0.6,
+  "trajectory_view": "schema-v2 Agent View",
+  "raw_trajectories_retained": false,
+  "rendering": false,
+  "api_calls": 0,
+  "feature_model": "per-axis gripper_delta = response_gain * commanded_action + execution_drift",
+  "metaworld_action_scale": 0.01,
+  "action_semantics_source": "MetaWorld 3.1.1 metaworld/sawyer_xyz_env.py set_xyz_action"
+}
