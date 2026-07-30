@@ -14,7 +14,7 @@ if (-not $RunName) { $RunName = "utility_" + (Get-Date -Format "yyyyMMdd_HHmmss"
 $apiState = $null
 try {
     if ($PrepareOnly) {
-        if (-not $Model) { $Model = "glm-5.1" }
+        if (-not $Model) { $Model = "glm-5.2" }
         if (-not $BaseUrl) { $BaseUrl = "https://api.modelarts-maas.com/anthropic" }
     } else {
         $apiState = Enter-AgentApiEnvironment -ProjectRoot $projectRoot -RequestedModel $Model -RequestedBaseUrl $BaseUrl

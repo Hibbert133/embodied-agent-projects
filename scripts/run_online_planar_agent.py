@@ -29,13 +29,13 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-steps", type=int, default=500)
     parser.add_argument("--probe-magnitude", type=float, default=0.2)
     parser.add_argument("--probe-steps", type=int, default=8)
-    parser.add_argument("--model", default="glm-5.1")
+    parser.add_argument("--model", default="glm-5.2")
     parser.add_argument("--base-url")
     parser.add_argument("--api-timeout", type=float, default=180.0)
     parser.add_argument("--api-max-retries", type=int, default=2)
     parser.add_argument(
         "--output-dir", type=Path,
-        default=PROJECT_ROOT / "outputs" / "online_planar_agent" / "glm51_dev",
+        default=PROJECT_ROOT / "outputs" / "online_planar_agent" / "glm52_dev",
     )
     return parser.parse_args()
 

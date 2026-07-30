@@ -12,7 +12,7 @@ from src.autoresearch import (DOMINANCE_RATIOS,EVIDENCE_DETAILS,PROBE_MAGNITUDES
 from src.research_agent import AnthropicResearchAgent  # noqa:E402
 
 def parse()->argparse.Namespace:
- p=argparse.ArgumentParser(description=__doc__); p.add_argument("--model",default="glm-5.1");p.add_argument("--base-url")
+ p=argparse.ArgumentParser(description=__doc__); p.add_argument("--model",default="glm-5.2");p.add_argument("--base-url")
  p.add_argument("--api-timeout",type=float,default=300);p.add_argument("--api-max-retries",type=int,default=2)
  p.add_argument("--benchmark-dir",type=Path,default=ROOT/"outputs/autoresearch/benchmark_tuning")
  p.add_argument("--output-dir",type=Path,default=ROOT/"outputs/autoresearch/search_tuning")

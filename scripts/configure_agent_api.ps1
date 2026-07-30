@@ -1,6 +1,6 @@
 param(
     [string]$BaseUrl = "https://api.modelarts-maas.com/anthropic",
-    [string]$Model = "glm-5.1",
+    [string]$Model = "glm-5.2",
     [switch]$Force
 )
 

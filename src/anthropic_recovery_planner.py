@@ -62,7 +62,7 @@ class AnthropicRecoveryPlanner:
     def __init__(
         self,
         *,
-        model: str = "glm-5.1",
+        model: str = "glm-5.2",
         base_url: str | None = None,
         allowed_magnitudes: Sequence[float] = DEFAULT_CORRECTION_MAGNITUDES,
         client: Any | None = None,

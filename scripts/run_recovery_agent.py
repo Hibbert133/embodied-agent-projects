@@ -99,7 +99,7 @@ def make_planner(
         return OracleRecoveryPlanner(bias)
     if args.planner == "anthropic":
         return AnthropicRecoveryPlanner(
-            model=args.model or "glm-5.1", base_url=args.base_url,
+            model=args.model or "glm-5.2", base_url=args.base_url,
             timeout_seconds=args.api_timeout, max_retries=args.api_max_retries,
             diagnostic_context=diagnostic_context,
         )

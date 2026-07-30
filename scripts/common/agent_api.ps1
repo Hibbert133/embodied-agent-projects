@@ -48,7 +48,7 @@ function Enter-AgentApiEnvironment {
     $model = $RequestedModel
     if (-not $model) { $model = $env:LLM_MODEL }
     if (-not $model -and $null -ne $config) { $model = [string]$config.Model }
-    if (-not $model) { $model = "glm-5.1" }
+    if (-not $model) { $model = "glm-5.2" }
 
     $env:ANTHROPIC_API_KEY = $key
     $env:ANTHROPIC_BASE_URL = $baseUrl

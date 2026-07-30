@@ -149,7 +149,7 @@ class AnthropicPlanarRecoveryAgent:
     name = "anthropic_planar"
 
     def __init__(
-        self, *, model: str = "glm-5.1", base_url: str | None = None,
+        self, *, model: str = "glm-5.2", base_url: str | None = None,
         allowed_magnitudes: Sequence[float] = DEFAULT_CORRECTION_MAGNITUDES,
         timeout_seconds: float = 180.0, max_retries: int = 2,
         max_tokens: int = 900, client: Any | None = None,
