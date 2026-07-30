@@ -407,6 +407,22 @@ It improves tuning success but fails frozen validation: compensation recovers bo
 stochastic validation failures while independent retry recovers one. This further
 shows that fault classification alone is not recovery-utility estimation.
 
+The next bounded online-Agent experiment therefore reasons over candidate-specific
+utility. It compares short, independently sampled probes of a typed compensation
+candidate and a fresh stochastic retry, then selects exactly one full recovery
+rollout. The model cannot invent low-level actions or read perturbation truth. The
+frozen six-case development protocol, leakage boundary, budget, and interpretation
+limits are documented in
+[reports/online_candidate_utility_protocol.md](reports/online_candidate_utility_protocol.md).
+
+```powershell
+.\scripts\run_online_utility_agent.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -RunName glm51_utility_dev -ApiTimeout 300
+```
+
+The command checkpoints each completed case and safely resumes the same run after
+a network timeout. Until a credentialed run completes, this stage provides tested
+online-Agent infrastructure but no model-performance claim.
+
 ```powershell
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.1 -BaseUrl https://api.modelarts-maas.com/anthropic -ApiTimeout 300
 ```
