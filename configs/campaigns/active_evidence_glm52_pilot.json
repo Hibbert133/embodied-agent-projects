@@ -1,0 +1,28 @@
+{
+  "campaign_id": "active_evidence_glm52_seed148_pilot_v1",
+  "experiment_role": "online_integration_pilot_not_statistical_evidence",
+  "task": "MetaWorld push-v3",
+  "seeds": [148],
+  "repeats": 1,
+  "conditions": [
+    {
+      "condition_id": "x_positive_0.145",
+      "kind": "action_bias",
+      "bias": [0.145, 0.0, 0.0, 0.0],
+      "oracle_axis": "x",
+      "oracle_direction": "positive"
+    }
+  ],
+  "methods": ["online_glm52"],
+  "max_steps": 500,
+  "probe_steps": 8,
+  "probe_magnitude": 0.2,
+  "uncertainty_threshold": 0.55,
+  "random_probe_probability": 0.5,
+  "budget": {
+    "max_jobs": 1,
+    "max_environment_steps": 1500,
+    "max_api_calls": 1,
+    "max_wall_time_seconds": 1800
+  }
+}

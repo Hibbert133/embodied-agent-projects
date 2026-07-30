@@ -40,15 +40,20 @@ from src.recovery_agent import (  # noqa: E402
     DEFAULT_CORRECTION_MAGNITUDES,
     PhaseGatedCompensatedPolicy,
 )
+from src.reasoning import EvidencePacket, EvidenceSource  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 from src.uncertainty import (  # noqa: E402
+    AnthropicEvidencePolicy,
     EvidenceAction,
     ThresholdEvidencePolicy,
     UncertaintyEstimate,
 )
 
 
-METHODS = ("passive", "always_probe", "random_probe", "uncertainty_gated")
+METHODS = (
+    "passive", "always_probe", "random_probe", "uncertainty_gated",
+    "online_glm52",
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -59,6 +64,10 @@ def parse_args() -> argparse.Namespace:
         default=PROJECT_ROOT / "configs" / "campaigns" / "active_evidence_smoke.json",
     )
     parser.add_argument("--output-dir", type=Path)
+    parser.add_argument("--model", default="glm-5.2")
+    parser.add_argument("--base-url")
+    parser.add_argument("--api-timeout", type=float, default=300.0)
+    parser.add_argument("--api-max-retries", type=int, default=2)
     return parser.parse_args()
 
 
@@ -160,10 +169,12 @@ class MetaWorldCampaignExecutor:
     def __init__(
         self, config: Mapping[str, Any], output_dir: Path,
         conditions: Mapping[str, Mapping[str, Any]],
+        online_policy: AnthropicEvidencePolicy | None = None,
     ) -> None:
         self.config = config
         self.output_dir = output_dir
         self.conditions = conditions
+        self.online_policy = online_policy
 
     def __call__(self, job: CampaignJob) -> CampaignOutcome:
         condition = self.conditions[job.condition_id]
@@ -207,15 +218,76 @@ class MetaWorldCampaignExecutor:
             )
 
         passive = estimate_passive_planar_drift(load_jsonl(agent_path))
-        requested, decision_action = should_probe(
-            job.method,
-            uncertainty=passive.uncertainty,
-            threshold=float(self.config["uncertainty_threshold"]),
-            seed=job.seed,
-            repeat=job.repeat,
-            random_probe_probability=float(self.config.get("random_probe_probability", 0.5)),
-            probe_budget=probe_budget,
-        )
+        api_calls = 0
+        online_decision: dict[str, Any] | None = None
+        if job.method == "online_glm52":
+            if self.online_policy is None:
+                raise RuntimeError("online_glm52 requires an initialized online policy")
+            evidence = EvidencePacket(
+                evidence_id=f"failed_rollout_{job.seed}_{job.repeat}",
+                source=EvidenceSource.FAILED_ROLLOUT,
+                episode_id=1,
+                step_count=initial.steps,
+                payload={
+                    "task": "push-v3",
+                    "outcome": {
+                        "success": initial.success,
+                        "steps": initial.steps,
+                        "final_object_goal_distance": initial.final_object_goal_distance,
+                        "progress_to_goal": initial.progress_to_goal,
+                    },
+                    "passive_planar_estimate": passive.to_dict(),
+                },
+            )
+            decision, online_audit = self.online_policy.decide(
+                evidence, available_probe_steps=probe_budget
+            )
+            api_calls = 1
+            online_decision = decision.to_dict()
+            requested = decision.action is EvidenceAction.REQUEST_PROBE
+            decision_action = decision.action.value
+            atomic_json(job_dir / "online_api_audit.json", online_audit)
+        else:
+            requested, decision_action = should_probe(
+                job.method,
+                uncertainty=passive.uncertainty,
+                threshold=float(self.config["uncertainty_threshold"]),
+                seed=job.seed,
+                repeat=job.repeat,
+                random_probe_probability=float(
+                    self.config.get("random_probe_probability", 0.5)
+                ),
+                probe_budget=probe_budget,
+            )
+
+        if decision_action == EvidenceAction.ABSTAIN.value:
+            atomic_json(
+                job_dir / "agent_decision.json",
+                {
+                    "job_id": job.job_id,
+                    "method": job.method,
+                    "initial_success": False,
+                    "passive_estimate": passive.to_dict(),
+                    "evidence_action": decision_action,
+                    "probe_requested": False,
+                    "online_decision": online_decision,
+                    "verification_success": False,
+                    "stop_reason": "agent_abstained",
+                },
+            )
+            return CampaignOutcome(
+                job.job_id, False, initial.steps, api_calls,
+                {
+                    "initial_success": False,
+                    "verification_success": False,
+                    "probe_requested": False,
+                    "probe_environment_steps": 0,
+                    "uncertainty": passive.uncertainty,
+                    "passive_confidence": passive.overall_confidence,
+                    "final_object_goal_distance": initial.final_object_goal_distance,
+                    "stop_reason": "agent_abstained",
+                },
+            )
 
         probe_environment_steps = 0
         if requested:
@@ -266,6 +338,7 @@ class MetaWorldCampaignExecutor:
             "probe_requested": requested,
             "evidence_source": evidence_source,
             "selected_correction": list(correction.simultaneous_correction),
+            "online_decision": online_decision,
             "verification_success": verification.success,
         }
         atomic_json(job_dir / "agent_decision.json", agent_decision)
@@ -283,7 +356,7 @@ class MetaWorldCampaignExecutor:
             job.job_id,
             verification.success,
             initial.steps + probe_environment_steps + verification.steps,
-            0,
+            api_calls,
             {
                 "initial_success": False,
                 "verification_success": verification.success,
@@ -325,6 +398,7 @@ def build_jobs(config: Mapping[str, Any]) -> list[CampaignJob]:
                             seed=int(seed),
                             repeat=repeat,
                             reserved_environment_steps=reservation,
+                            reserved_api_calls=1 if method == "online_glm52" else 0,
                         )
                     )
     return jobs
@@ -375,11 +449,21 @@ def main() -> int:
         conditions = {row["condition_id"]: row for row in config["conditions"]}
         budget = CampaignBudget(**config["budget"])
         ledger = CampaignLedger(output_dir / "run_ledger.jsonl")
+        online_policy = None
+        if "online_glm52" in config["methods"]:
+            online_policy = AnthropicEvidencePolicy(
+                model=args.model,
+                base_url=args.base_url,
+                timeout_seconds=args.api_timeout,
+                max_retries=args.api_max_retries,
+            )
         summary = run_campaign(
             build_jobs(config),
             ledger=ledger,
             budget=budget,
-            executor=MetaWorldCampaignExecutor(config, output_dir, conditions),
+            executor=MetaWorldCampaignExecutor(
+                config, output_dir, conditions, online_policy=online_policy
+            ),
         )
         write_summary(ledger, output_dir / "summary.csv")
         atomic_json(output_dir / "status.json", asdict(summary))

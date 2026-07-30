@@ -49,6 +49,7 @@ the current Windows user, and Git ignores it. Do not reuse a key exposed in chat
 After setup, online wrappers load and clear the process credential automatically:
 
 ```powershell
+.\scripts\run_active_evidence_campaign.ps1 -Config configs\campaigns\active_evidence_glm52_pilot.json -ApiTimeout 300
 .\scripts\run_online_utility_agent.ps1 -Model glm-5.2 -RunName glm52_utility_dev
 .\scripts\run_budgeted_autoresearch.ps1 -Model glm-5.2
 ```

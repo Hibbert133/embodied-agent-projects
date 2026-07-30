@@ -63,6 +63,11 @@ accounting, and interruption-safe resume. Its result is documented in
 [reports/active_evidence_campaign_smoke.md](reports/active_evidence_campaign_smoke.md);
 it is explicitly not a statistical performance claim.
 
+A separate one-call GLM-5.2 pilot selected the bounded symmetric probe from the
+same Agent-visible uncertainty evidence and passed its verification rollout.
+See [reports/online_active_evidence_glm52_pilot.md](reports/online_active_evidence_glm52_pilot.md).
+This is API integration evidence, not an online-agent performance claim.
+
 Two recent development results motivate the refocus:
 
 - The online GLM-5.1 candidate-utility agent recovered 5/6 frozen tuning cases,
@@ -196,6 +201,11 @@ rollout 改进和交互成本，而不是只看 reward 或 Push 成功率。
 一个单 seed 的 active-evidence integration smoke 进一步验证了被动轨迹 uncertainty、
 显式 probe gate、verification、追加式成本记录和断点续跑。结果见
 [实验报告](reports/active_evidence_campaign_smoke.md)，该结果不构成统计性能结论。
+
+另一个单次 API 调用的 GLM-5.2 pilot 基于相同 Agent-visible uncertainty 选择了受约束
+对称 probe，并通过 verification rollout。详见
+[在线实验报告](reports/online_active_evidence_glm52_pilot.md)。它只证明在线接口闭环，
+不构成在线 Agent 性能结论。
 
 最近两个 development 结果推动了本次研究重构：
 
