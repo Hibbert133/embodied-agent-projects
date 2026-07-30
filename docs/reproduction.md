@@ -25,10 +25,16 @@ python scripts/validate_schema_v2_trajectories.py
 ## Active evidence and bounded interventions
 
 ```powershell
+python scripts/run_active_evidence_campaign.py --config configs/campaigns/active_evidence_smoke.json
 python scripts/run_active_diagnostic_probes.py
 python scripts/evaluate_planar_bias_recovery.py --seeds 260 261 262 263 264 265 266 267 268 269 --bias-x 0.14 --bias-y -0.14 --max-steps 500 --output-dir outputs/planar_bias_pilot/xpos014_yneg014_heldout
 python scripts/evaluate_horizon_utility.py --run-dir outputs/online_utility_agent/glm51_utility_dev
 ```
+
+The campaign command is resumable: completed stable job IDs are loaded from
+`run_ledger.jsonl`. Its configuration declares maximum jobs, environment steps,
+API calls, and wall time before execution. The included smoke configuration is
+integration evidence only, not a performance benchmark.
 
 ## Online model experiments
 

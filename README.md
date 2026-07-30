@@ -57,6 +57,12 @@ controlled masked perturbations, leakage-safe trajectory views, progress metrics
 active directional probes, bounded interventions, online model adapters, and
 paired evaluation controls.
 
+A one-seed active-evidence integration smoke now also validates passive
+trajectory uncertainty, explicit probe gating, verification, append-only cost
+accounting, and interruption-safe resume. Its result is documented in
+[reports/active_evidence_campaign_smoke.md](reports/active_evidence_campaign_smoke.md);
+it is explicitly not a statistical performance claim.
+
 Two recent development results motivate the refocus:
 
 - The online GLM-5.1 candidate-utility agent recovered 5/6 frozen tuning cases,
@@ -186,6 +192,10 @@ rollout 改进和交互成本，而不是只看 reward 或 Push 成功率。
 
 仓库已经具备可复现 rollout、视频、轨迹、受控扰动、Agent/Oracle 数据边界、任务进度
 指标、方向性主动 probe、有限 intervention、在线模型接口和配对对照评测。
+
+一个单 seed 的 active-evidence integration smoke 进一步验证了被动轨迹 uncertainty、
+显式 probe gate、verification、追加式成本记录和断点续跑。结果见
+[实验报告](reports/active_evidence_campaign_smoke.md)，该结果不构成统计性能结论。
 
 最近两个 development 结果推动了本次研究重构：
 
