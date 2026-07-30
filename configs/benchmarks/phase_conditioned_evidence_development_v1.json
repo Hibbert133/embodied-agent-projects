@@ -1,0 +1,21 @@
+{
+  "experiment_id": "phase_conditioned_evidence_development_v1",
+  "split": "development",
+  "seeds": [320, 321, 322, 323, 324, 325, 326, 327, 328, 329],
+  "phase_definition": {
+    "near_goal_distance_m": 0.08,
+    "contact_distance_m": 0.08,
+    "phases": ["approach", "push", "near_goal"]
+  },
+  "minimum_phase_samples": 8,
+  "score": "eligible-sample-weighted mean within-phase normalized residual norm",
+  "probe_direction": "request when phase_inconsistency is high",
+  "promotion_gate": {
+    "minimum_probe_need_roc_auc": 0.75,
+    "minimum_diagnostic_accuracy_relative_to_always_probe": 1.0,
+    "maximum_probe_request_rate": 0.60
+  },
+  "online_agent_rule": "call GLM-5.2 only if every promotion criterion passes",
+  "heldout_evaluation": false,
+  "api_calls_before_promotion": 0
+}

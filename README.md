@@ -151,6 +151,14 @@ for all 10/10 cases, matching always-probe accuracy and evidence cost while addi
 API latency. This validates the online integration but not selective reasoning;
 see the [online temporal Agent pilot](reports/online_temporal_evidence_agent_pilot.md).
 
+A preregistered phase-conditioned development study then separated approach,
+contact/push, and near-goal response fits. Its transparent gate retained 10/10
+development accuracy while reducing requests from 10 to 6 (384 versus 640 probe
+steps), passing the declared promotion criteria. However, a bounded ten-call
+GLM-5.2 comparison still requested all probes. The deterministic signal is now
+eligible for one frozen held-out test; the online result remains negative. See the
+[phase-conditioned evidence study](reports/phase_conditioned_evidence_development.md).
+
 Reports containing the actual commands and artifacts are under `reports/`. The
 [experiment plan](docs/experiment_plan.md) defines the next controlled comparisons.
 

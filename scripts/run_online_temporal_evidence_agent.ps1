@@ -4,6 +4,8 @@ param(
     [double]$ApiTimeout = 300,
     [int]$ApiMaxRetries = 2,
     [int]$MaxApiCalls = 10,
+    [ValidateSet("global", "phase_conditioned")]
+    [string]$EvidenceMode = "global",
     [string]$OutputDir = "outputs\online_evidence_agent\glm52_temporal_development_v1"
 )
 
@@ -25,6 +27,7 @@ try {
         --api-timeout $ApiTimeout `
         --api-max-retries $ApiMaxRetries `
         --max-api-calls $MaxApiCalls `
+        --evidence-mode $EvidenceMode `
         --output-dir (Join-Path $projectRoot $OutputDir)
     if ($LASTEXITCODE -ne 0) {
         throw "Online temporal evidence agent failed with exit code $LASTEXITCODE"

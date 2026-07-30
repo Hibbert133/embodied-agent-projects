@@ -169,6 +169,15 @@ probes for all 10/10 cases. It therefore matched always-probe rather than improv
 evidence allocation. Online reasoning remains an experimental baseline; the next
 method change must improve causal evidence structure before another model study.
 
+The preregistered phase-conditioned follow-up separated approach, push, and
+near-goal response fits. On the ten development cases its frozen-candidate gate
+matched always-probe diagnosis with 6/10 requests (384 rather than 640 probe
+steps), and probe-need ROC AUC was 0.792. All declared development promotion gates
+passed. A ten-call GLM-5.2 comparison nevertheless requested 10/10 probes, so the
+online model remains an always-probe baseline. The next permitted experiment is a
+single frozen-threshold evaluation on new seeds 330--339; no prompt retuning is
+allowed on that split.
+
 ### E4 — Hypothesis-grounded intervention
 
 Map stable bias to bounded compensation and stochastic noise to an appropriate

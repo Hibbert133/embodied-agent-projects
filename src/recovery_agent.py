@@ -8,7 +8,7 @@ from typing import Any, Callable, Mapping, Protocol, Sequence
 import numpy as np
 
 from src.rollout import EpisodeResult
-from src.task_metrics import extract_push_positions
+from src.task_metrics import classify_push_phase, extract_push_positions
 from src.trajectory_views import build_agent_view
 
 
@@ -271,24 +271,6 @@ CORRECTION_SCHEDULES: dict[str, dict[str, float]] = {
     "push_only": {"approach": 0.0, "push": 1.0, "near_goal": 0.25},
     "phase_aware": {"approach": 0.5, "push": 1.0, "near_goal": 0.25},
 }
-
-
-def classify_push_phase(
-    observation: Sequence[float],
-    *,
-    contact_distance: float = 0.08,
-    near_goal_distance: float = 0.08,
-) -> str:
-    """Classify the causally visible push phase from the current observation."""
-
-    if contact_distance <= 0.0 or near_goal_distance <= 0.0:
-        raise ValueError("phase distance thresholds must be positive")
-    gripper, object_position, goal = extract_push_positions(observation)
-    if float(np.linalg.norm(object_position - goal)) <= near_goal_distance:
-        return "near_goal"
-    if float(np.linalg.norm(gripper - object_position)) <= contact_distance:
-        return "push"
-    return "approach"
 
 
 class PhaseGatedCompensatedPolicy(CompensatedPolicy):

@@ -16,11 +16,13 @@ if str(ROOT) not in sys.path:
 from scripts.evaluate_ambiguity_agents import fit_passive_centroid  # noqa: E402
 
 
-def select_temporal_threshold(rows: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
+def select_temporal_threshold(
+    rows: Sequence[Mapping[str, Any]], *, score_field: str = "temporal_uncertainty"
+) -> dict[str, Any]:
     """Select a high-uncertainty probe rule using development labels only."""
     if not rows:
         raise ValueError("development rows are required")
-    scores = sorted({float(row["temporal_uncertainty"]) for row in rows})
+    scores = sorted({float(row[score_field]) for row in rows})
     candidates = [
         scores[0] - 1e-12,
         *[(lower + upper) / 2.0 for lower, upper in zip(scores, scores[1:])],
@@ -31,7 +33,7 @@ def select_temporal_threshold(rows: Sequence[Mapping[str, Any]]) -> dict[str, An
         correct = 0
         requests = 0
         for row in rows:
-            request = float(row["temporal_uncertainty"]) >= threshold
+            request = float(row[score_field]) >= threshold
             predicted = row["probe_prediction"] if request else row["passive_prediction"]
             correct += int(predicted == row["mechanism_class_oracle"])
             requests += int(request)
@@ -41,7 +43,7 @@ def select_temporal_threshold(rows: Sequence[Mapping[str, Any]]) -> dict[str, An
     )
     return {
         "threshold": threshold,
-        "selection_direction": "request probe when temporal_uncertainty >= threshold",
+        "selection_direction": f"request probe when {score_field} >= threshold",
         "selection_rule": (
             "maximize development diagnostic accuracy, then minimize probe requests; "
             "higher threshold tie-break"
@@ -54,17 +56,18 @@ def select_temporal_threshold(rows: Sequence[Mapping[str, Any]]) -> dict[str, An
     }
 
 
-def roc_auc_for_probe_need(rows: Sequence[Mapping[str, Any]]) -> float:
+def roc_auc_for_probe_need(
+    rows: Sequence[Mapping[str, Any]], *, score_field: str = "temporal_uncertainty"
+) -> float:
     positives = [row for row in rows if bool(row["probe_needed_oracle"])]
     negatives = [row for row in rows if not bool(row["probe_needed_oracle"])]
     if not positives or not negatives:
         raise ValueError("probe-need ROC AUC requires both classes")
     return sum(
-        (float(positive["temporal_uncertainty"]) > float(negative["temporal_uncertainty"]))
+        (float(positive[score_field]) > float(negative[score_field]))
         + 0.5
         * (
-            float(positive["temporal_uncertainty"])
-            == float(negative["temporal_uncertainty"])
+            float(positive[score_field]) == float(negative[score_field])
         )
         for positive in positives
         for negative in negatives

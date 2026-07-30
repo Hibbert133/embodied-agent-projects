@@ -23,6 +23,10 @@ from src.diagnosis.passive_planar import (  # noqa: E402
     PassivePlanarEstimate,
     estimate_passive_planar_drift,
 )
+from src.diagnosis.phase_conditioned import (  # noqa: E402
+    PhaseConditionedEstimate,
+    estimate_phase_conditioned_response,
+)
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 
 
@@ -51,6 +55,33 @@ def temporal_feature_row(
         "action_excitation_y": estimate.action_excitation[1],
         "sample_count": estimate.sample_count,
     }
+
+
+def phase_feature_row(
+    *,
+    condition_id: str,
+    seed: int,
+    case_id: str,
+    estimate: PhaseConditionedEstimate,
+) -> dict[str, Any]:
+    by_phase = {item.phase: item for item in estimate.phase_estimates}
+    row: dict[str, Any] = {
+        "case_id": case_id,
+        "condition_id": condition_id,
+        "seed": seed,
+        "phase_inconsistency": estimate.phase_inconsistency,
+        "eligible_sample_fraction": estimate.eligible_sample_fraction,
+        "sample_count": estimate.sample_count,
+        "phase_sample_counts": json.dumps(estimate.phase_sample_counts, separators=(",", ":")),
+    }
+    for phase in ("approach", "push", "near_goal"):
+        phase_estimate = by_phase.get(phase)
+        row[f"{phase}_eligible"] = phase_estimate is not None
+        row[f"{phase}_sample_count"] = estimate.phase_sample_counts[phase]
+        row[f"{phase}_residual_norm"] = (
+            phase_estimate.normalized_residual_norm if phase_estimate is not None else ""
+        )
+    return row
 
 
 def _load_agent_rows(path: Path) -> list[Mapping[str, Any]]:
@@ -92,6 +123,7 @@ def main() -> int:
         oracle_rows: list[dict[str, Any]] = []
         baseline_rows: list[dict[str, Any]] = []
         temporal_rows: list[dict[str, Any]] = []
+        phase_rows: list[dict[str, Any]] = []
         number = 0
         with tempfile.TemporaryDirectory(prefix="agent_view_", dir=output_dir) as temporary:
             temporary_dir = Path(temporary)
@@ -115,6 +147,7 @@ def main() -> int:
                         env.close()
                     agent_rows = _load_agent_rows(trajectory_path)
                     estimate = estimate_passive_planar_drift(agent_rows)
+                    phase_estimate = estimate_phase_conditioned_response(agent_rows)
                     baseline = {
                         "success": result.success,
                         "steps": result.steps,
@@ -143,6 +176,14 @@ def main() -> int:
                             estimate=estimate,
                         )
                     )
+                    phase_rows.append(
+                        phase_feature_row(
+                            condition_id=fault.condition_id,
+                            seed=seed,
+                            case_id=case_id,
+                            estimate=phase_estimate,
+                        )
+                    )
                     print(
                         f"condition={fault.condition_id} seed={seed} "
                         f"success={result.success} temporal_uncertainty={estimate.uncertainty:.6f}"
@@ -150,6 +191,7 @@ def main() -> int:
         save_jsonl(output_dir / "oracle_audit.jsonl", oracle_rows)
         save_csv(output_dir / "baselines.csv", baseline_rows)
         save_csv(output_dir / "temporal_features.csv", temporal_rows)
+        save_csv(output_dir / "phase_features.csv", phase_rows)
         metadata = {
             "split": "development",
             "seed_start": args.seed_start,
@@ -164,6 +206,9 @@ def main() -> int:
                 "per-axis gripper_delta = response_gain * commanded_action + execution_drift"
             ),
             "metaworld_action_scale": 0.01,
+            "phase_conditioned_score": (
+                "eligible-sample-weighted mean within-phase normalized residual norm"
+            ),
             "action_semantics_source": (
                 "MetaWorld 3.1.1 metaworld/sawyer_xyz_env.py set_xyz_action"
             ),
@@ -172,6 +217,7 @@ def main() -> int:
             json.dumps(metadata, indent=2) + "\n", encoding="utf-8"
         )
         print(f"temporal features: {output_dir / 'temporal_features.csv'}")
+        print(f"phase features: {output_dir / 'phase_features.csv'}")
         return 0
     except Exception as exc:
         print(f"[FAIL] {type(exc).__name__}: {exc}", file=sys.stderr)

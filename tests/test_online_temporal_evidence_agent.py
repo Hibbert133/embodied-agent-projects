@@ -3,6 +3,7 @@ import unittest
 from scripts.run_online_temporal_evidence_agent import (
     _read_csv,
     build_online_evidence_packet,
+    build_phase_online_evidence_packet,
     decision_prediction,
     summarize_results,
 )
@@ -62,6 +63,28 @@ class OnlineTemporalEvidenceAgentTest(unittest.TestCase):
             decision_prediction(decision, "stochastic_noise"),
             ("stochastic_noise", True),
         )
+
+    def test_phase_packet_adds_visible_structure_without_threshold_or_truth(self) -> None:
+        phase = {
+            "phase_inconsistency": "0.8",
+            "eligible_sample_fraction": "0.9",
+            "approach_sample_count": "50",
+            "approach_eligible": "True",
+            "approach_residual_norm": "0.7",
+            "push_sample_count": "40",
+            "push_eligible": "True",
+            "push_residual_norm": "0.9",
+            "near_goal_sample_count": "10",
+            "near_goal_eligible": "False",
+            "near_goal_residual_norm": "",
+        }
+        packet = build_phase_online_evidence_packet(self.case, self.temporal, phase)
+        payload = packet.payload
+        self.assertIn("phase_conditioned_response", payload)
+        serialized = str(payload)
+        self.assertNotIn("threshold", serialized)
+        self.assertNotIn("mechanism_class", serialized)
+        self.assertNotIn("condition_id", serialized)
 
     def test_summary_counts_api_and_probe_cost(self) -> None:
         rows = [

@@ -10,5 +10,6 @@
   "api_calls": 0,
   "feature_model": "per-axis gripper_delta = response_gain * commanded_action + execution_drift",
   "metaworld_action_scale": 0.01,
+  "phase_conditioned_score": "eligible-sample-weighted mean within-phase normalized residual norm",
   "action_semantics_source": "MetaWorld 3.1.1 metaworld/sawyer_xyz_env.py set_xyz_action"
 }

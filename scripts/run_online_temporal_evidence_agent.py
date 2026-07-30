@@ -76,6 +76,52 @@ def build_online_evidence_packet(
     )
 
 
+def build_phase_online_evidence_packet(
+    case: Mapping[str, Any], temporal: Mapping[str, Any], phase: Mapping[str, Any]
+) -> EvidencePacket:
+    """Add phase-conditioned response evidence without exposing tuned thresholds."""
+    base = build_online_evidence_packet(case, temporal)
+    payload = dict(base.payload)
+    temporal_payload = dict(payload["temporal_response"])
+    temporal_payload["known_limitation"] = (
+        "global fit is provided for context; phase-conditioned fits reduce phase mixing"
+    )
+    payload["temporal_response"] = temporal_payload
+
+    def optional_float(value: Any) -> float | None:
+        return None if value is None or str(value).strip() == "" else float(value)
+
+    payload["phase_conditioned_response"] = {
+        "score_semantics": (
+            "phase_inconsistency is the sample-weighted normalized within-phase "
+            "response residual; higher means less repeatable response"
+        ),
+        "phase_inconsistency": float(phase["phase_inconsistency"]),
+        "eligible_sample_fraction": float(phase["eligible_sample_fraction"]),
+        "phases": {
+            name: {
+                "sample_count": int(phase[f"{name}_sample_count"]),
+                "eligible": str(phase[f"{name}_eligible"]).lower() == "true",
+                "normalized_residual_norm": optional_float(
+                    phase[f"{name}_residual_norm"]
+                ),
+            }
+            for name in ("approach", "push", "near_goal")
+        },
+        "known_limitations": (
+            "phase classification uses visible geometry and residuals may still "
+            "reflect contact dynamics or workspace constraints"
+        ),
+    }
+    return EvidencePacket(
+        evidence_id=f"online_phase_temporal_{case['case_id']}",
+        source=EvidenceSource.FAILED_ROLLOUT,
+        episode_id=1,
+        step_count=int(float(temporal["sample_count"])),
+        payload=payload,
+    )
+
+
 def decision_prediction(
     decision: OnlineEvidenceDecision, probe_prediction: str
 ) -> tuple[str, bool]:
@@ -171,6 +217,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--api-max-retries", type=int, default=2)
     parser.add_argument("--max-api-calls", type=int, default=10)
     parser.add_argument(
+        "--evidence-mode", choices=("global", "phase_conditioned"), default="global"
+    )
+    parser.add_argument(
         "--cases",
         type=Path,
         default=ROOT
@@ -189,6 +238,12 @@ def parse_args() -> argparse.Namespace:
         / "outputs/ambiguity_benchmark/temporal_development_rollouts/temporal_features.csv",
     )
     parser.add_argument(
+        "--phase-features",
+        type=Path,
+        default=ROOT
+        / "outputs/ambiguity_benchmark/temporal_development_rollouts/phase_features.csv",
+    )
+    parser.add_argument(
         "--output-dir",
         type=Path,
         default=ROOT / "outputs/online_evidence_agent/glm52_temporal_development_v1",
@@ -203,11 +258,20 @@ def main() -> int:
         if not cases or len(cases) > args.max_api_calls:
             raise ValueError("case count must be positive and within max-api-calls")
         temporal = {row["case_id"]: row for row in _read_csv(args.temporal_features)}
+        phases = (
+            {row["case_id"]: row for row in _read_csv(args.phase_features)}
+            if args.evidence_mode == "phase_conditioned"
+            else {}
+        )
         probes = {row["case_id"]: row for row in _read_csv(args.probe_audit)}
         output = args.output_dir.resolve()
         output.mkdir(parents=True, exist_ok=True)
         config = {
-            "protocol": "online-temporal-evidence-allocation-v1",
+            "protocol": (
+                "online-phase-conditioned-evidence-allocation-v1"
+                if args.evidence_mode == "phase_conditioned"
+                else "online-temporal-evidence-allocation-v1"
+            ),
             "model": args.model,
             "base_url": args.base_url or "environment",
             "case_ids": [row["case_id"] for row in cases],
@@ -216,6 +280,9 @@ def main() -> int:
             "probe_cost_environment_steps": 64,
             "agent_view_only": True,
         }
+        if args.evidence_mode == "phase_conditioned":
+            config["evidence_mode"] = args.evidence_mode
+            config["tuned_phase_threshold_visible_to_model"] = False
         config_path = output / "run_config.json"
         if config_path.exists() and json.loads(config_path.read_text(encoding="utf-8")) != config:
             raise RuntimeError("existing run config differs; use a new output directory")
@@ -245,7 +312,15 @@ def main() -> int:
                 continue
             if case_id not in temporal or case_id not in probes:
                 raise ValueError(f"missing temporal or probe evidence for {case_id}")
-            packet = build_online_evidence_packet(case, temporal[case_id])
+            if args.evidence_mode == "phase_conditioned" and case_id not in phases:
+                raise ValueError(f"missing phase evidence for {case_id}")
+            packet = (
+                build_phase_online_evidence_packet(
+                    case, temporal[case_id], phases[case_id]
+                )
+                if args.evidence_mode == "phase_conditioned"
+                else build_online_evidence_packet(case, temporal[case_id])
+            )
             decision, api_audit = policy.decide(packet, available_probe_steps=64)
             prediction, requested = decision_prediction(
                 decision, probes[case_id]["predicted_mechanism"]
@@ -254,6 +329,7 @@ def main() -> int:
             result = {
                 "case_id": case_id,
                 "seed": int(case["seed"]),
+                "evidence_mode": args.evidence_mode,
                 "action": decision.action.value,
                 "probe_requested": requested,
                 "hypothesis_mechanism": decision.hypothesis_mechanism,
