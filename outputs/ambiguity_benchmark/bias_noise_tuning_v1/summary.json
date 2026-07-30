@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "bias_noise_tuning_v1",
+  "split": "tuning",
+  "source_oracle_audit": "outputs/autoresearch/benchmark_tuning/oracle_audit.jsonl",
+  "source_oracle_audit_sha256": "b98771d4c8143d364f61888a5f037e4418f864150f789cace4b2f3e49e031104",
+  "source_probe_results": "outputs/autoresearch/probe_consistency_tuning/results.csv",
+  "source_probe_results_sha256": "bad81c5608d30fdc0e6eef8db1f4cd10a01e55e5d8c14364f7ce5282564c5cdb",
+  "source_threshold": "outputs/autoresearch/probe_consistency_tuning/threshold_selection.json",
+  "source_threshold_sha256": "8f7218aaea49d0d695926f55f2a7c2543c8a96af91b26f9f21e91bd75b09e866",
+  "selection_rule": "global one-to-one minimum standardized Euclidean distance; probe evidence excluded from matching",
+  "selection_features": [
+    "episode_return",
+    "final_object_goal_distance",
+    "progress_to_goal"
+  ],
+  "candidate_bias_failures": 30,
+  "candidate_noise_failures": 4,
+  "matched_pairs": 4,
+  "matched_cases": 8,
+  "frozen_probe_threshold": 0.11560838098372882,
+  "post_selection_probe_accuracy": 1.0,
+  "post_selection_probe_balanced_accuracy": 1.0,
+  "mean_standardized_passive_distance": 0.7304878890803872,
+  "claim_boundary": "tuning pilot only; selected cases and threshold are not a held-out claim"
+}

@@ -139,6 +139,14 @@ Build matched stable-bias/noise cases and compare passive versus repeated-probe
 mechanism accuracy. Promotion requires a measurable diagnostic gap, not merely a
 successful probe rollout.
 
+The first tuning-only manifest is now frozen in
+`outputs/ambiguity_benchmark/bias_noise_tuning_v1/`. Its global one-to-one matching
+uses only return, final object-goal distance, and progress from failed initial
+rollouts. Repeated-probe evidence is joined only after selection. The resulting
+8-case tuning pilot is documented in
+[`reports/bias_noise_ambiguity_benchmark.md`](../reports/bias_noise_ambiguity_benchmark.md);
+it must not be reported as held-out evidence.
+
 ### E3 — Evidence-allocation ablation
 
 Compare passive, always-probe, random-probe, and frozen threshold gating on the

@@ -124,6 +124,13 @@ need for active evidence. The next benchmark must use **ambiguity pairs**, such 
 stable bias versus stochastic noise, where passive trajectories can support
 multiple mechanisms and probe consistency can resolve them.
 
+A first tuning-only bias–noise manifest now pairs eight real failed rollouts using
+only passive return, final distance, and progress. Post-selection audit shows that
+the existing repeated probe separates these synthetic mechanisms on all eight
+tuning cases, but deterministic bias has zero repeat variance and noise std is
+large. This is benchmark-construction evidence, not a held-out active-agent claim;
+see the [ambiguity benchmark report](reports/bias_noise_ambiguity_benchmark.md).
+
 Reports containing the actual commands and artifacts are under `reports/`. The
 [experiment plan](docs/experiment_plan.md) defines the next controlled comparisons.
 
