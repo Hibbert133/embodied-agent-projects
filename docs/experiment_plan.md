@@ -164,6 +164,11 @@ a temporal uncertainty score. It requested probes for 9/10 matched cases and was
 not promoted to held-out evaluation. This identifies policy-phase and contact-state
 mixing as the next confound to test, rather than justifying another threshold fit.
 
+An online GLM-5.2 development comparison consumed the same evidence and requested
+probes for all 10/10 cases. It therefore matched always-probe rather than improving
+evidence allocation. Online reasoning remains an experimental baseline; the next
+method change must improve causal evidence structure before another model study.
+
 ### E4 — Hypothesis-grounded intervention
 
 Map stable bias to bounded compensation and stochastic noise to an appropriate

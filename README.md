@@ -145,6 +145,12 @@ held-out run because it behaved almost like always-probe. This negative result a
 the phase-conditioned next hypothesis are documented in the
 [temporal evidence-need study](reports/temporal_evidence_need_development.md).
 
+A real ten-call GLM-5.2 development pilot then exposed the same evidence through a
+bounded online research-agent interface. The model requested the registered probe
+for all 10/10 cases, matching always-probe accuracy and evidence cost while adding
+API latency. This validates the online integration but not selective reasoning;
+see the [online temporal Agent pilot](reports/online_temporal_evidence_agent_pilot.md).
+
 Reports containing the actual commands and artifacts are under `reports/`. The
 [experiment plan](docs/experiment_plan.md) defines the next controlled comparisons.
 
