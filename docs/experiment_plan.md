@@ -153,6 +153,12 @@ Compare passive, always-probe, random-probe, and frozen threshold gating on the
 ambiguity benchmark. The target is to approach always-probe diagnostic accuracy
 with fewer probe steps and no held-out retuning.
 
+The first four-case held-out pilot produced a deliberately retained negative
+result: always-probe resolved both passive errors, while the tuning-frozen
+centroid-margin gate requested no probes. Thus probe informativeness has initial
+held-out support, but selective evidence allocation has not passed its gate. See
+[`reports/ambiguity_agent_heldout_pilot.md`](../reports/ambiguity_agent_heldout_pilot.md).
+
 ### E4 — Hypothesis-grounded intervention
 
 Map stable bias to bounded compensation and stochastic noise to an appropriate

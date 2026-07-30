@@ -131,6 +131,13 @@ tuning cases, but deterministic bias has zero repeat variance and noise std is
 large. This is benchmark-construction evidence, not a held-out active-agent claim;
 see the [ambiguity benchmark report](reports/bias_noise_ambiguity_benchmark.md).
 
+On the first four-case held-out manifest, passive diagnosis scored 2/4 and the
+always-probe baseline scored 4/4, but the tuning-frozen uncertainty gate requested
+no probes and remained at 2/4. The scientific conclusion is therefore not that the
+selective Agent succeeds: repeated evidence is useful, while the current passive
+uncertainty signal fails to allocate it. Exact costs and limitations are in the
+[held-out active-evidence pilot](reports/ambiguity_agent_heldout_pilot.md).
+
 Reports containing the actual commands and artifacts are under `reports/`. The
 [experiment plan](docs/experiment_plan.md) defines the next controlled comparisons.
 

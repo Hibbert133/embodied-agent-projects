@@ -226,6 +226,9 @@ def build_benchmark(
     probe_path: Path,
     threshold_path: Path,
     output_dir: Path,
+    *,
+    benchmark_id: str = "bias_noise_tuning_v1",
+    split: str = "tuning",
 ) -> dict[str, Any]:
     failures = _load_oracle_failures(oracle_path)
     bias_cases = [case for case in failures if case.mechanism_class == "stable_bias"]
@@ -301,8 +304,8 @@ def build_benchmark(
     ]
     summary = {
         "schema_version": SCHEMA_VERSION,
-        "benchmark_id": "bias_noise_tuning_v1",
-        "split": "tuning",
+        "benchmark_id": benchmark_id,
+        "split": split,
         "source_oracle_audit": _relative(oracle_path),
         "source_oracle_audit_sha256": _sha256(oracle_path),
         "source_probe_results": _relative(probe_path),
@@ -326,6 +329,8 @@ def build_benchmark(
         ),
         "claim_boundary": (
             "tuning pilot only; selected cases and threshold are not a held-out claim"
+            if split == "tuning"
+            else "held-out cases with a tuning-frozen probe threshold; report sample size"
         ),
     }
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -361,6 +366,8 @@ def parse_args() -> argparse.Namespace:
         type=Path,
         default=ROOT / "outputs/ambiguity_benchmark/bias_noise_tuning_v1",
     )
+    parser.add_argument("--benchmark-id", default="bias_noise_tuning_v1")
+    parser.add_argument("--split", choices=("tuning", "heldout"), default="tuning")
     return parser.parse_args()
 
 
@@ -372,6 +379,8 @@ def main() -> int:
             args.probe_results,
             args.threshold_selection,
             args.output_dir.resolve(),
+            benchmark_id=args.benchmark_id,
+            split=args.split,
         )
         print(json.dumps(summary, indent=2, ensure_ascii=False))
         return 0
