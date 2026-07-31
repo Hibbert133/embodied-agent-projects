@@ -1,0 +1,70 @@
+{
+  "protocol_id": "noise_repeatability_source_v1",
+  "protocol_version": 2,
+  "study_kind": "noise_stratum_coverage",
+  "split": "development",
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "seed_start": 500,
+  "num_seeds": 60,
+  "target_paired_comparable_operational_units": 20,
+  "max_initial_steps": 500,
+  "max_verification_steps": 500,
+  "recovery_policy_config": "configs/autoresearch/recovery_policy_r1_c1.json",
+  "registered_probe": {
+    "probe_id": "symmetric_xy_repeated_v1",
+    "max_environment_steps": 64,
+    "outcome_classifier_threshold": 0.11560838098372882
+  },
+  "structured_evidence": {
+    "minimum_phase_samples": 8,
+    "contact_distance_m": 0.08,
+    "near_goal_distance_m": 0.08
+  },
+  "conditions": [
+    {"condition_id": "fault_05", "evaluator_mechanism": "stochastic_noise"}
+  ],
+  "candidates": ["probe_grounded_compensation", "stochastic_retry"],
+  "unavailable_candidate_handling": {
+    "abstain_is_executable": false,
+    "execute_remaining_candidates": true,
+    "paired_utility_population": "operational cases with both candidates executable",
+    "report_coverage": true
+  },
+  "registered_agent_visible_features": {
+    "phase_inconsistency": "audit only",
+    "temporal_uncertainty": "audit only",
+    "probe_score": "audit only"
+  },
+  "evaluator_label": {
+    "name": "outcome_preferred_candidate",
+    "oracle_only": true,
+    "exclude_ties": false,
+    "exclude_unavailable_candidates": true
+  },
+  "stopping_rule": {
+    "depends_only_on": "paired-comparable operational count",
+    "target": 20,
+    "maximum_initial_units": 60,
+    "may_read_utility_label": false
+  },
+  "random_seed_namespaces": {
+    "initial_perturbation": 5011,
+    "registered_probe": 5012,
+    "paired_verification": 5013
+  },
+  "utility_order": {
+    "primary": "verification status: ACCEPTED > INCONCLUSIVE > REJECTED",
+    "accepted_tie_break": "fewer steps then lower distance",
+    "failed_tie_break": "lower distance then fewer steps"
+  },
+  "analysis": {
+    "fit_threshold": false,
+    "source_only": true,
+    "outcomes_hidden_until_repeatability_selection_is_frozen": true
+  },
+  "claim_boundary": "Fresh development source population for repeatability evidence; no held-out claim",
+  "rendering": false,
+  "api_calls": 0,
+  "overwrite_existing_run": false
+}
