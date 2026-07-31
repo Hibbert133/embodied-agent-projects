@@ -1,0 +1,24 @@
+{
+  "protocol_id": "candidate_repeatability_decision_change_audit_v1",
+  "protocol_version": 1,
+  "split": "development",
+  "repeatability_run_id": "repeatability_20260731T070645Z_9650e171518a",
+  "repeatability_run_commit": "9650e171518a66eb3a4fb1498143e3b18dd3eacd",
+  "source_run_id": "development_20260731T070305Z_1046f463d168",
+  "comparison": {"before_repetitions": 1, "after_repetitions": 3},
+  "population": "all cases whose selected candidate changes between k=1 and k=3",
+  "outcome_classes": {
+    "HELPFUL": "k=1 verification failed and k=3 verification succeeded",
+    "HARMFUL": "k=1 verification succeeded and k=3 verification failed",
+    "NEUTRAL": "verification success is unchanged"
+  },
+  "evidence_driver_classes": {
+    "PREFIX_SUCCESS_PRIORITY": "selected k=3 candidate has a strictly larger prefix success count",
+    "ROBUST_DISTANCE_RANK_FLIP": "prefix success counts tie and robust distance ordering changes"
+  },
+  "representative_rule": "within each outcome class, largest absolute k=3 robust-score margin; break ties by seed",
+  "fit_selector": false,
+  "rendering": false,
+  "api_calls": 0,
+  "claim_boundary": "Descriptive development audit only; no new decision rule or performance claim"
+}
