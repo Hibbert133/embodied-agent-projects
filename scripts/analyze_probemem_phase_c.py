@@ -80,6 +80,14 @@ def main() -> int:
             for episode_id, episode_rows in by_episode.items()
             if {row["method"] for row in episode_rows} == set(methods)
         )
+        operational_episode_ids = [
+            episode_id
+            for episode_id in complete_episode_ids
+            if any(
+                _as_bool(row["decision_required"])
+                for row in by_episode[episode_id]
+            )
+        ]
 
         chronology_violations: list[str] = []
         leakage_violations: list[str] = []
@@ -128,12 +136,24 @@ def main() -> int:
                     "method": method,
                     "completed_cases": len(selected),
                     "operational_cases": len(operational),
+                    "accepted_rate": (
+                        sum(row["verification_status"] == "ACCEPTED" for row in operational)
+                        / len(operational)
+                        if operational
+                        else 0.0
+                    ),
                     "accepted": sum(row["verification_status"] == "ACCEPTED" for row in operational),
                     "inconclusive": sum(row["verification_status"] == "INCONCLUSIVE" for row in operational),
                     "rejected": sum(row["verification_status"] == "REJECTED" for row in operational),
                     "not_run": sum(row["verification_status"] == "NOT_RUN" for row in operational),
                     "memory_use_cases": sum(_as_bool(row["memory_used"]) for row in operational),
                     "retrieved_records": sum(int(row["retrieved_records"]) for row in operational),
+                    "retrieval_coverage": (
+                        sum(int(row["retrieved_records"]) > 0 for row in operational)
+                        / len(operational)
+                        if operational
+                        else 0.0
+                    ),
                     "api_calls": sum(int(row["api_calls"]) for row in operational),
                     "api_latency_ms_median": statistics.median(latencies) if latencies else 0.0,
                     "api_latency_ms_max": max(latencies, default=0.0),
@@ -154,10 +174,24 @@ def main() -> int:
 
         paired_outcome_ties = 0
         paired_skill_ties = 0
-        for episode_id in complete_episode_ids:
+        for episode_id in operational_episode_ids:
             episode_rows = by_episode[episode_id]
             paired_outcome_ties += len({row["verification_status"] for row in episode_rows}) == 1
             paired_skill_ties += len({row["selected_skill"] for row in episode_rows}) == 1
+
+        raw_rejected_exposures = sum(
+            retrieved["observed_verification_status"] != "ACCEPTED"
+            for record in audits
+            if record["method"] == "raw_episodic_retrieval_development_only"
+            for retrieved in record["retrieved_episode_records"]
+        )
+        completed_cleanly = (
+            status["status"] == "COMPLETED"
+            and len(rows) == expected_rows
+            and not chronology_violations
+            and not leakage_violations
+            and not budget_violations
+        )
 
         audit = {
             "experiment_run_id": manifest["experiment_run_id"],
@@ -169,26 +203,86 @@ def main() -> int:
             "expected_episodes": expected_episodes,
             "complete_paired_episodes": len(complete_episode_ids),
             "complete_episode_ids": complete_episode_ids,
+            "operational_paired_episodes": len(operational_episode_ids),
+            "operational_episode_ids": operational_episode_ids,
             "operational_audit_records": len(audits),
             "chronology_violations": chronology_violations,
             "leakage_violations": leakage_violations,
             "budget_violations": budget_violations,
             "paired_outcome_ties": paired_outcome_ties,
             "paired_skill_ties": paired_skill_ties,
-            "claim_eligible": (
-                status["status"] == "COMPLETED"
-                and len(rows) == expected_rows
-                and not chronology_violations
-                and not leakage_violations
-                and not budget_violations
+            "raw_nonaccepted_record_exposures": raw_rejected_exposures,
+            "development_comparison_complete": completed_cleanly,
+            "memory_changed_any_intervention": (
+                paired_skill_ties < len(operational_episode_ids)
             ),
+            "memory_changed_any_verification_outcome": (
+                paired_outcome_ties < len(operational_episode_ids)
+            ),
+            "claim_eligible": completed_cleanly,
         }
         _write_csv(args.output_summary.resolve(), summary_rows)
         args.output_audit.resolve().parent.mkdir(parents=True, exist_ok=True)
         args.output_audit.resolve().write_text(json.dumps(audit, indent=2) + "\n", encoding="utf-8")
 
+        if completed_cleanly:
+            title = "# ProbeMem Phase C: Completed Sequential Retrieval Development Run"
+            status_lines = [
+                f"The immutable development run completed all {len(rows)}/{expected_rows} "
+                f"method-cases ({len(complete_episode_ids)}/{expected_episodes} paired "
+                f"episodes; {len(operational_episode_ids)} required an online decision).",
+                "",
+                "This artifact supports a narrow development conclusion: episodic "
+                "records were retrieved through a chronological leakage-safe interface, "
+                "but neither raw nor accepted-only retrieval changed the intervention "
+                "or verification outcome on this stream. It does not establish broad "
+                "method equivalence or a memory benefit.",
+            ]
+            interpretation = (
+                "All operational pairs selected the same bounded intervention and had "
+                "the same verification outcome. Raw retrieval exposed the model to "
+                f"{raw_rejected_exposures} non-accepted historical records, while "
+                "verified retrieval excluded them. The absence of behavioral change "
+                "shows that retrieval alone is insufficient in this registered setup; "
+                "Phase D must not be promoted merely because memory was cited."
+            )
+            final_note = (
+                "This is a completed development result. Held-out or stronger memory "
+                "claims require a separately frozen protocol and cannot be inferred here."
+            )
+        else:
+            title = "# ProbeMem Phase C: Incomplete Sequential Retrieval Run"
+            status_lines = [
+                f"The immutable development run ended with `{status['status']}` after "
+                f"{len(rows)}/{expected_rows} method-cases ({len(complete_episode_ids)}/"
+                f"{expected_episodes} complete paired episodes). The recorded error was "
+                f"`{status.get('error_type')}: {status.get('error')}`.",
+                "",
+                "This artifact is **not claim-eligible** and must not be used to state "
+                "that episodic retrieval improves or harms recovery. It is retained as "
+                "an incomplete infrastructure result.",
+            ]
+            interpretation = (
+                "The completed prefix is useful for integration and cost auditing only. "
+                "Identical paired outcomes in an incomplete prefix are neither evidence "
+                "of benefit nor evidence of equivalence."
+            )
+            final_note = (
+                "A new full run requires a new immutable manifest and an explicit "
+                "decision to spend the API budget again. This run must not be overwritten."
+            )
+
+        method_lines = []
+        for row in summary_rows:
+            method_lines.append(
+                f"- `{row['method']}`: {row['accepted']}/{row['operational_cases']} "
+                f"accepted, {row['retrieved_records']} retrieved records, "
+                f"{row['api_calls']} API calls, {row['api_input_tokens']} input and "
+                f"{row['api_output_tokens']} output tokens."
+            )
+
         lines = [
-            "# ProbeMem Phase C: Incomplete Sequential Retrieval Run",
+            title,
             "",
             f"Run: `{manifest['experiment_run_id']}`",
             f"Manifest: `{manifest['manifest_id']}`",
@@ -196,28 +290,26 @@ def main() -> int:
             "",
             "## Status",
             "",
-            f"The immutable development run ended with `{status['status']}` after "
-            f"{len(rows)}/{expected_rows} method-cases ({len(complete_episode_ids)}/"
-            f"{expected_episodes} complete paired episodes). The recorded error was "
-            f"`{status.get('error_type')}: {status.get('error')}`.",
+            *status_lines,
             "",
-            "This artifact is **not claim-eligible** and must not be used to state that "
-            "episodic retrieval improves or harms recovery. It is retained as an "
-            "incomplete infrastructure result.",
+            "## Method results",
             "",
-            "## Completed-prefix audit",
+            *method_lines,
+            "",
+            "## Integrity audit",
             "",
             f"- Operational audit records: {len(audits)}.",
             f"- Chronology violations: {len(chronology_violations)}.",
             f"- Agent/Oracle leakage violations: {len(leakage_violations)}.",
             f"- Interaction-budget violations: {len(budget_violations)}.",
-            f"- Paired outcome ties: {paired_outcome_ties}/{len(complete_episode_ids)}.",
-            f"- Paired intervention-skill ties: {paired_skill_ties}/{len(complete_episode_ids)}.",
+            f"- Operational paired episodes: {len(operational_episode_ids)}.",
+            f"- Paired outcome ties: {paired_outcome_ties}/{len(operational_episode_ids)}.",
+            f"- Paired intervention-skill ties: {paired_skill_ties}/{len(operational_episode_ids)}.",
+            f"- Raw-memory non-accepted record exposures: {raw_rejected_exposures}.",
             "",
-            "The completed prefix is useful for integration and cost auditing only. "
-            "Raw and verified retrieval were exercised chronologically, but identical "
-            "paired outcomes in this incomplete prefix are neither evidence of benefit "
-            "nor evidence of equivalence.",
+            "## Interpretation",
+            "",
+            interpretation,
             "",
             "## Reproduction",
             "",
@@ -226,8 +318,7 @@ def main() -> int:
             f".\\.venv\\Scripts\\python.exe scripts\\analyze_probemem_phase_c.py --run-dir \"{run_dir}\"",
             "```",
             "",
-            "A new full run requires a new immutable manifest and an explicit decision "
-            "to spend the API budget again. This failed run must not be overwritten.",
+            final_note,
         ]
         args.output_report.resolve().parent.mkdir(parents=True, exist_ok=True)
         args.output_report.resolve().write_text("\n".join(lines) + "\n", encoding="utf-8")

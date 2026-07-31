@@ -12,14 +12,14 @@ attempts were accepted and one direct stochastic retry was rejected. This is an
 integration result, not a memory or model-performance claim. See the
 [Phase-B report](reports/probemem_v2_phase_b_promoted_smoke.md).
 
-ProbeMem Phase C then exercised stateless, raw-episodic, and accepted-only
-retrieval over 18 complete paired development episodes. The immutable run
-stopped at 54/60 method-cases because the Windows host exhausted available
-commit/pagefile capacity. Its completed prefix had zero chronology, leakage, or
-interaction-budget violations, but the run is explicitly **not claim-eligible**
-and does not establish a memory benefit. See the
-[incomplete-run audit](reports/probemem_v2_phase_c_incomplete_run.md) and
-[MuJoCo infrastructure blocker](reports/probemem_v2_mujoco_endurance_blocker.md).
+ProbeMem Phase C completed a 20-episode paired development comparison of
+stateless, raw-episodic, and accepted-only retrieval. Ten episodes required an
+online decision; every method obtained 5/10 accepted verifications and selected
+the same intervention on every operational pair. Raw and verified memory were
+actually cited in 9/10 and 8/10 cases, respectively, but retrieval changed no
+intervention or outcome while increasing model-context cost. This is a real
+negative result: chronological retrieval alone did not improve recovery. See
+the [completed Phase-C report](reports/probemem_v2_phase_c_completed_run.md).
 
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
@@ -116,7 +116,7 @@ selection, or intervention planning.
 | Diagnosis | Mechanism hypotheses and passive planar estimation | Partial |
 | Correction | Bounded planar corrective skills | Implemented baseline |
 | Verification | Fresh rollout and accepted/rejected/inconclusive contracts | Partial |
-| Memory | Chronological raw/verified episodic development comparison | Incomplete; no benefit claim |
+| Memory | Chronological raw/verified episodic development comparison | Completed negative result |
 
 Fault injection and Oracle audit are experimental infrastructure, not powers
 available to the Agent. Existing online-model adapters are retained as optional
@@ -364,9 +364,10 @@ intervention 规划。
 
 仓库明确保留正结果和负结果，不把 integration pilot 包装成通用性能结论。
 
-- ProbeMem Phase C 已真实完成 18/20 个 paired development episodes，但因 Windows
-  commit/pagefile 耗尽在 54/60 method-cases 停止；该前缀无 chronology、leakage
-  或预算违规，但 `claim_eligible=false`，不能用于声称 memory 有效或等价。
+- ProbeMem Phase C 已完成 20/20 个 paired development episodes。10 个 operational
+  episodes 中，stateless、raw retrieval 和 verified retrieval 均为 5/10 accepted，
+  且 10/10 的 intervention 与 outcome 完全相同。memory 确实被模型引用，但没有改变
+  行为，并增加了上下文与 latency 成本；这是“简单 retrieval 不足”的真实负结果。
 
 - 单轴可控扰动实验建立了可复现失败、schema-v2 轨迹、真实 CSV 和代表性视频。
 - 一次受约束 GLM-5.2 pilot 证明外部模型可以在不知道 Oracle 故障字段的情况下选择已注册

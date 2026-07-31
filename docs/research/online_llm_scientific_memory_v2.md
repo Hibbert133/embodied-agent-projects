@@ -85,19 +85,22 @@ Negative and incomplete results are retained without held-out retuning.
 
 ## Current execution status
 
-Phase B passed its development-only constrained-tool integration gate. Phase C
-then ran the registered stateless, raw episodic, and accepted-only episodic
-comparison on seeds 720–739. The immutable run completed 18 paired episodes
-(54/60 method-cases) before MuJoCo returned `Could not allocate memory`.
+Phase B passed its development-only constrained-tool integration gate. An
+initial Phase-C run stopped at 54/60 method-cases under host commit/pagefile
+exhaustion and remains an immutable incomplete artifact. After a restart, the
+registered no-API endurance preflight completed 100 environment lifecycle
+cycles and 20 full rollouts, enabling a new immutable run.
 
-The completed prefix contains no chronology, leakage, or budget violations, but
-it is not claim-eligible. A separate no-API endurance preflight subsequently
-failed before its first environment construction with 200.56 MB of Windows
-commit/pagefile capacity available. Phase C is paused as
-`INCOMPLETE_INFRASTRUCTURE`; Phase D must not begin, and no memory benefit or
-equivalence claim may be drawn from the prefix. A new full run requires restored
-host commit capacity, a completed endurance preflight, and a new immutable
-manifest.
+The replacement Phase-C run completed the registered stateless, raw episodic,
+and accepted-only comparison on all seeds 720–739. Ten of 20 paired episodes
+required online decisions. All three methods obtained 5/10 accepted
+verifications and selected the same intervention on all operational pairs. Raw
+retrieval was cited in 9/10 cases and verified retrieval in 8/10, but neither
+changed an intervention or verification outcome. Chronology, leakage, budget,
+and structured-output audits all passed. This completed development result
+supports a narrow negative conclusion—retrieval alone was behaviorally inert
+while adding context cost—not method equivalence or a memory benefit. Phase D
+is not promoted by this result.
 
 ## Scope
 

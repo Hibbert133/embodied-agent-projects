@@ -11,21 +11,21 @@ later registered phases pass their own gates.
 
 ProbeMem Phase B passed its bounded tool-integration gate on five development
 failures, with five fresh verification rollouts and no invalid skill execution
-or budget overrun. Phase C implemented the stateless/raw/accepted-only
-chronological comparison and completed 18 of 20 paired development episodes.
-The immutable run then stopped at 54/60 method-cases with a MuJoCo allocation
-error. A separate no-API preflight failed before the first environment creation
-with only 200.56 MB of Windows commit/pagefile capacity available, despite
-3663.68 MB of available physical memory. Phase C is therefore
-`INCOMPLETE_INFRASTRUCTURE`, not promoted, and not evidence for or against a
-memory benefit. Reports preserve both the completed-prefix audit and the host
-resource blocker.
+or budget overrun. An initial Phase-C run stopped at 54/60 method-cases because
+the Windows host exhausted commit/pagefile capacity; that immutable incomplete
+artifact remains preserved. After a restart, a registered no-API endurance
+preflight completed 100 environment lifecycle cycles and 20 full rollouts with
+process RSS plateauing below 147 MB.
 
-After a host restart restored more than 10 GB of available commit capacity, the
-registered no-API endurance preflight completed 100 environment lifecycle
-cycles and 20 full rollouts with process RSS plateauing below 147 MB. The host
-blocker is therefore resolved for a new run, while the original incomplete
-artifact remains immutable and non-claim-eligible.
+The new immutable Phase-C run then completed all 60 method-cases over 20 paired
+development episodes. Ten episodes required online decisions. Stateless, raw
+episodic retrieval, and accepted-only verified retrieval each obtained 5/10
+accepted verifications, with identical intervention selections and outcomes on
+all 10 operational pairs. Raw and verified histories were cited in 9/10 and
+8/10 cases, but did not change behavior; they increased token and latency cost.
+Phase C therefore records a completed negative result: chronological retrieval
+alone is insufficient for recovery improvement in this setup. This does not
+promote Phase D or justify a held-out memory claim.
 
 The canonical experimental roadmap is maintained in:
 
