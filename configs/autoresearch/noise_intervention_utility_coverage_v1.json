@@ -1,0 +1,75 @@
+{
+  "protocol_id": "noise_intervention_utility_coverage_v1",
+  "protocol_version": 1,
+  "study_kind": "noise_stratum_coverage",
+  "split": "development",
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "seed_start": 430,
+  "num_seeds": 60,
+  "target_paired_comparable_operational_units": 20,
+  "max_initial_steps": 500,
+  "max_verification_steps": 500,
+  "recovery_policy_config": "configs/autoresearch/recovery_policy_r1_c1.json",
+  "registered_probe": {
+    "probe_id": "symmetric_xy_repeated_v1",
+    "max_environment_steps": 64,
+    "outcome_classifier_threshold": 0.11560838098372882
+  },
+  "structured_evidence": {
+    "minimum_phase_samples": 8,
+    "contact_distance_m": 0.08,
+    "near_goal_distance_m": 0.08
+  },
+  "conditions": [
+    {"condition_id": "fault_05", "evaluator_mechanism": "stochastic_noise"}
+  ],
+  "candidates": ["probe_grounded_compensation", "stochastic_retry"],
+  "unavailable_candidate_handling": {
+    "abstain_is_executable": false,
+    "execute_remaining_candidates": true,
+    "paired_utility_population": "operational cases with both candidates executable",
+    "report_coverage": true
+  },
+  "registered_agent_visible_features": {
+    "phase_inconsistency": "higher predicts retry preference",
+    "temporal_uncertainty": "higher predicts retry preference",
+    "probe_score": "higher predicts retry preference",
+    "probe_relative_bias_std": "higher predicts retry preference",
+    "probe_mean_estimation_residual": "higher predicts retry preference",
+    "probe_sign_disagreement": "higher predicts retry preference"
+  },
+  "evaluator_label": {
+    "name": "retry_preferred",
+    "oracle_only": true,
+    "exclude_ties": true,
+    "exclude_unavailable_candidates": true
+  },
+  "stopping_rule": {
+    "depends_only_on": "paired-comparable operational count",
+    "target": 20,
+    "maximum_initial_units": 60,
+    "may_read_utility_label": false
+  },
+  "random_seed_namespaces": {
+    "initial_perturbation": 5001,
+    "registered_probe": 5002,
+    "paired_verification": 5003
+  },
+  "utility_order": {
+    "primary": "verification status: ACCEPTED > INCONCLUSIVE > REJECTED",
+    "accepted_tie_break": "fewer steps then lower distance",
+    "failed_tie_break": "lower distance then fewer steps"
+  },
+  "analysis": {
+    "fit_threshold": false,
+    "report_label_prevalence": true,
+    "report_feature_medians_by_label": true,
+    "report_single_feature_roc_auc": true,
+    "report_single_feature_pr_auc": true
+  },
+  "claim_boundary": "Coverage development only; no selector and no held-out claim",
+  "rendering": false,
+  "api_calls": 0,
+  "overwrite_existing_run": false
+}

@@ -124,6 +124,18 @@ def validate_development_config(config: Mapping[str, Any]) -> None:
         )
         if condition_ids != ["fault_05"] or seeds & set(range(400, 410)):
             raise ValueError("noise extension must use fault_05 and fresh post-409 seeds")
+    if config.get("study_kind") == "noise_stratum_coverage":
+        target = int(config.get("target_paired_comparable_operational_units", 0))
+        stopping = config.get("stopping_rule", {})
+        if (
+            condition_ids != ["fault_05"]
+            or int(config["seed_start"]) < 430
+            or target <= 0
+            or int(stopping.get("target", -1)) != target
+            or bool(stopping.get("may_read_utility_label", True))
+            or int(stopping.get("maximum_initial_units", -1)) != int(config["num_seeds"])
+        ):
+            raise ValueError("coverage study requires a label-blind bounded stop rule")
     handling = config.get("unavailable_candidate_handling")
     if int(config.get("protocol_version", 1)) >= 2 and (
         not isinstance(handling, Mapping)
@@ -330,6 +342,9 @@ def main() -> int:
         agent_rows: list[dict[str, Any]] = []
         oracle_rows: list[dict[str, Any]] = []
         episode_id = 0
+        target_comparable = int(
+            config.get("target_paired_comparable_operational_units", 0)
+        )
 
         with tempfile.TemporaryDirectory(prefix="identifiability_agent_view_") as temporary:
             temporary_dir = Path(temporary)
@@ -339,6 +354,10 @@ def main() -> int:
                     int(config["seed_start"]),
                     int(config["seed_start"]) + int(config["num_seeds"]),
                 ):
+                    if target_comparable and sum(
+                        bool(row.get("paired_comparable")) for row in case_rows
+                    ) >= target_comparable:
+                        break
                     episode_id += 1
                     case_id = f"development_case_{episode_id:04d}"
                     trajectory_path = temporary_dir / f"{case_id}.jsonl"
@@ -581,6 +600,14 @@ def main() -> int:
                     )
 
         summary = {**manifest, **_summary(case_rows, candidate_rows)}
+        summary["target_paired_comparable_operational_units"] = (
+            target_comparable or None
+        )
+        summary["coverage_target_reached"] = (
+            summary["paired_comparable_units"] >= target_comparable
+            if target_comparable
+            else None
+        )
         _write_json(run_directory / "summary.json", summary)
         _write_json(
             run_directory / "run_status.json",
@@ -589,6 +616,8 @@ def main() -> int:
                 "status": "COMPLETED",
                 "full_collection_units": len(case_rows),
                 "operational_units": summary["operational_units"],
+                "paired_comparable_units": summary["paired_comparable_units"],
+                "coverage_target_reached": summary["coverage_target_reached"],
             },
         )
         print(f"run: {run_id}")
