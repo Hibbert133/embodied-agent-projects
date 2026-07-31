@@ -1,0 +1,52 @@
+{
+  "manifest_schema_version": 1,
+  "protocol_id": "budgeted_active_evidence_heldout_v1",
+  "protocol_version": 1,
+  "source_git_commit": "cbd51c3c602cf4909bad226297aba8f323a3c9c0",
+  "source_worktree_clean": true,
+  "config_path": "configs/autoresearch/heldout_allocation_v1.json",
+  "config_sha256": "90b6e50af62bf3189892bbf58c2a7a1e4f6961d84be0e160d4b6a3598895489a",
+  "execution_timestamp_utc": "2026-07-31T01:45:47+00:00",
+  "seed_range": {
+    "start": 330,
+    "stop_inclusive": 339,
+    "count": 10
+  },
+  "allocation": {
+    "score": "phase_inconsistency",
+    "threshold": 0.91612970415368,
+    "minimum_phase_samples": 8
+  },
+  "condition_mapping_version": "registered_execution_conditions_v1",
+  "condition_ids": [
+    "fault_01",
+    "fault_02",
+    "fault_03",
+    "fault_04",
+    "fault_05"
+  ],
+  "matching_rule_version": "global_passive_failure_matching_v1",
+  "probe_implementation_version": "symmetric_xy_repeated_v1",
+  "probe_max_environment_steps": 64,
+  "evidence_feature_schema_version": "structured_evidence_v1",
+  "implementation_git_blob_hashes": {
+    "matching": "46d12b1a13c1daac263e5f757662c68c53fd49b5",
+    "probe": "18566183acf6d636df7f1fbabe61b6089191fd1f",
+    "structured_evidence": "3774a51de998fa598d89474dd6ef23d54cb6a489",
+    "budgeted_policy": "a75e116fa6904dcc795034ec5bd4aa11ff3919d6"
+  },
+  "dependencies": {
+    "python": "3.10.11",
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "gymnasium": "1.3.0",
+    "numpy": "2.2.6"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64"
+  },
+  "manifest_id": "364f4d851f2e1c717c28b9d75fc5bc0af250fc271ca7c67d72041b749ac602bc",
+  "experiment_run_id": "heldout_20260731T014547Z_364f4d851f2e"
+}
