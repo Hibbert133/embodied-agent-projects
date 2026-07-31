@@ -1,0 +1,72 @@
+{
+  "protocol_id": "evidence_grounded_intervention_heldout_v1",
+  "protocol_version": 1,
+  "source_allocation_run_id": "heldout_20260731T015847Z_a39271db862f",
+  "source_allocation_manifest_id": "a39271db862f28574ad9eb47de4b2bf476950b58749b21baaac59117cf75981c",
+  "source_allocation_commit": "c656ad787e5d77174ecbf8e76cdaf9c1b6ac1dab",
+  "source_allocation_directory": "outputs/heldout_allocation/runs/heldout_20260731T015847Z_a39271db862f",
+  "population": "operational_decision",
+  "expected_operational_units": 33,
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "recovery_policy_config": "configs/autoresearch/recovery_policy_r1_c1.json",
+  "methods": [
+    "no_intervention",
+    "bias_compensation_for_all",
+    "stochastic_retry_for_all",
+    "passive_diagnosis_intervention",
+    "active_evidence_intervention",
+    "oracle_mechanism_intervention"
+  ],
+  "intervention_semantics": {
+    "stable_bias": "bounded planar compensation",
+    "stochastic_noise": "independent-seed zero-correction retry",
+    "passive_compensation_source": "initial StructuredEvidenceState temporal response",
+    "probe_compensation_source": "first repetition of the registered 64-step probe",
+    "compensation_quantization": "DEFAULT_CORRECTION_MAGNITUDES",
+    "skill_and_schedule_rule": "frozen research_r1_c1 choose_runtime_skill",
+    "no_intervention": "retain initial failure with zero adaptation cost and no verification rollout"
+  },
+  "verification": {
+    "maximum_steps": 500,
+    "perturbation_seed_namespace": 4101,
+    "shared_realization_across_methods": true,
+    "deduplicate_identical_interventions": true,
+    "accepted": "fresh verification succeeds",
+    "inconclusive": "fresh verification fails but final object-goal distance is strictly lower than initial",
+    "rejected": "fresh verification fails without strictly lower final object-goal distance"
+  },
+  "budget": {
+    "total_case_environment_steps": 1064,
+    "registered_probe_environment_steps": 64,
+    "minimum_reserved_verification_steps": 500,
+    "maximum_diagnostic_probes": 1,
+    "maximum_corrective_verifications": 1,
+    "maximum_attempt_id": 2
+  },
+  "causal_metrics": {
+    "decision_change_rate_denominator": "active probe requests",
+    "useful_probe": "probe changes intervention and active verification status is strictly better than passive",
+    "decision_probe_needed": "same definition as useful_probe; evaluator-only post-hoc label",
+    "status_order": ["REJECTED", "INCONCLUSIVE", "ACCEPTED"]
+  },
+  "statistics": {
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260731,
+    "confidence_level": 0.95,
+    "paired_unit": "same source allocation case",
+    "report_mechanism_strata": true,
+    "report_win_tie_loss": true
+  },
+  "promotion_gate": {
+    "require_at_least_one_intervention_change": true,
+    "require_at_least_one_useful_probe": true,
+    "minimum_active_recovery_relative_to_passive": 1.0,
+    "require_active_probe_cost_below_always_probe": true,
+    "require_no_agent_oracle_leakage": true
+  },
+  "rendering": false,
+  "api_calls": 0,
+  "heldout_retuning": false,
+  "overwrite_existing_run": false
+}
