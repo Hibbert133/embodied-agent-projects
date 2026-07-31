@@ -12,7 +12,7 @@ from scripts.run_intervention_identifiability_development import (
 )
 
 
-CONFIG = Path("configs/autoresearch/intervention_identifiability_development_v1.json")
+CONFIG = Path("configs/autoresearch/intervention_identifiability_development_v2.json")
 
 
 class InterventionIdentifiabilityProtocolTest(unittest.TestCase):
@@ -32,6 +32,9 @@ class InterventionIdentifiabilityProtocolTest(unittest.TestCase):
     def test_protocol_has_no_rendering_or_api_calls(self) -> None:
         self.assertFalse(self.config["rendering"])
         self.assertEqual(self.config["api_calls"], 0)
+        self.assertFalse(
+            self.config["unavailable_candidate_handling"]["abstain_is_executable"]
+        )
 
     def test_mechanism_mapping_is_explicit(self) -> None:
         self.assertEqual(_candidate_from_mechanism("stable_bias"), COMPENSATION)

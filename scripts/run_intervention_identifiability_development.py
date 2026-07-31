@@ -46,7 +46,7 @@ from src.reasoning.structured_evidence import build_structured_evidence_state  #
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 
 
-DEFAULT_CONFIG = ROOT / "configs/autoresearch/intervention_identifiability_development_v1.json"
+DEFAULT_CONFIG = ROOT / "configs/autoresearch/intervention_identifiability_development_v2.json"
 NOISE_SELECTION = ROOT / "outputs/autoresearch/noise_calibration/selected.json"
 COMPENSATION = "probe_grounded_compensation"
 RETRY = "stochastic_retry"
@@ -114,6 +114,13 @@ def validate_development_config(config: Mapping[str, Any]) -> None:
     condition_ids = [str(item["condition_id"]) for item in config["conditions"]]
     if condition_ids != [f"fault_{index:02d}" for index in range(1, 6)]:
         raise ValueError("development audit must retain the five registered conditions")
+    handling = config.get("unavailable_candidate_handling")
+    if int(config.get("protocol_version", 1)) >= 2 and (
+        not isinstance(handling, Mapping)
+        or handling.get("abstain_is_executable") is not False
+        or handling.get("execute_remaining_candidates") is not True
+    ):
+        raise ValueError("v2 must preserve abstention and report remaining candidates")
 
 
 def _agent_rows(path: Path) -> list[dict[str, Any]]:
@@ -152,6 +159,7 @@ def _summary(
     cases: Sequence[Mapping[str, Any]], candidates: Sequence[Mapping[str, Any]]
 ) -> dict[str, Any]:
     operational = [row for row in cases if bool(row["decision_required"])]
+    comparable = [row for row in operational if bool(row.get("paired_comparable"))]
     candidate_summary: dict[str, Any] = {}
     for candidate_id in (COMPENSATION, RETRY):
         selected = [row for row in candidates if row["candidate_id"] == candidate_id]
@@ -176,8 +184,8 @@ def _summary(
     strata: dict[str, Any] = {}
     for field in ("condition_id", "mechanism_class_oracle"):
         strata[field] = {}
-        for value in sorted({str(row[field]) for row in operational}):
-            selected = [row for row in operational if str(row[field]) == value]
+        for value in sorted({str(row[field]) for row in comparable}):
+            selected = [row for row in comparable if str(row[field]) == value]
             strata[field][value] = {
                 "units": len(selected),
                 "compensation_best": sum(
@@ -199,25 +207,30 @@ def _summary(
     return {
         "full_collection_units": len(cases),
         "operational_units": len(operational),
+        "paired_comparable_units": len(comparable),
+        "compensation_unavailable_units": sum(
+            not bool(row.get("compensation_available")) for row in operational
+        ),
+        "paired_coverage": len(comparable) / len(operational) if operational else None,
         "winner_counts": {
-            COMPENSATION: sum(row["best_candidate_ids"] == COMPENSATION for row in operational),
-            RETRY: sum(row["best_candidate_ids"] == RETRY for row in operational),
-            "tie": sum("," in str(row["best_candidate_ids"]) for row in operational),
+            COMPENSATION: sum(row["best_candidate_ids"] == COMPENSATION for row in comparable),
+            RETRY: sum(row["best_candidate_ids"] == RETRY for row in comparable),
+            "tie": sum("," in str(row["best_candidate_ids"]) for row in comparable),
         },
         "oracle_mechanism_alignment_rate": mean(
-            bool(row["oracle_mechanism_candidate_is_best"]) for row in operational
+            bool(row["oracle_mechanism_candidate_is_best"]) for row in comparable
         )
-        if operational
+        if comparable
         else None,
         "passive_belief_alignment_rate": mean(
-            bool(row["passive_candidate_is_best"]) for row in operational
+            bool(row["passive_candidate_is_best"]) for row in comparable
         )
-        if operational
+        if comparable
         else None,
         "probe_belief_alignment_rate": mean(
-            bool(row["probe_candidate_is_best"]) for row in operational
+            bool(row["probe_candidate_is_best"]) for row in comparable
         )
-        if operational
+        if comparable
         else None,
         "belief_change_count": sum(bool(row["belief_changed"]) for row in operational),
         "probe_selected_outcome_improved_count": sum(
@@ -247,6 +260,7 @@ def parse_args() -> argparse.Namespace:
 def main() -> int:
     args = parse_args()
     run_directory: Path | None = None
+    manifest: dict[str, Any] | None = None
     try:
         config_path = args.config.resolve()
         config = json.loads(config_path.read_text(encoding="utf-8"))
@@ -350,7 +364,14 @@ def main() -> int:
                         ),
                     }
                     if not state.decision_required:
-                        case_rows.append({**base, "best_candidate_ids": ""})
+                        case_rows.append(
+                            {
+                                **base,
+                                "paired_comparable": False,
+                                "compensation_available": "",
+                                "best_candidate_ids": "",
+                            }
+                        )
                         oracle_rows.append(
                             {
                                 **base,
@@ -403,11 +424,10 @@ def main() -> int:
                         recovery_config=recovery_config,
                         evidence_source="initial_rollout",
                     )
-                    if not compensation.requires_fresh_verification:
-                        raise RuntimeError(
-                            f"registered compensation candidate abstained: {case_id}"
-                        )
-                    plans = {COMPENSATION: compensation, RETRY: retry}
+                    compensation_available = compensation.requires_fresh_verification
+                    plans = {RETRY: retry}
+                    if compensation_available:
+                        plans = {COMPENSATION: compensation, RETRY: retry}
                     verification_seed = derive_random_seed(
                         seed, int(namespaces["paired_verification"])
                     )
@@ -446,12 +466,19 @@ def main() -> int:
                                 "verification_perturbation_seed": verification_seed,
                             }
                         )
-                    winners = best_candidate_ids(list(outcomes.values()))
                     passive_candidate = _candidate_from_mechanism(passive.mechanism)
                     probe_candidate = _candidate_from_mechanism(probe_prediction)
                     oracle_candidate = _candidate_from_mechanism(mechanism)
-                    selected_comparison = _selected_comparison(
-                        passive_candidate, probe_candidate, outcomes
+                    paired_comparable = len(outcomes) == 2
+                    winners = (
+                        best_candidate_ids(list(outcomes.values()))
+                        if paired_comparable
+                        else ()
+                    )
+                    selected_comparison = (
+                        _selected_comparison(passive_candidate, probe_candidate, outcomes)
+                        if paired_comparable
+                        else None
                     )
                     case_result = {
                         **base,
@@ -466,12 +493,27 @@ def main() -> int:
                         "probe_candidate": probe_candidate,
                         "oracle_mechanism_candidate": oracle_candidate,
                         "best_candidate_ids": ",".join(winners),
-                        "passive_candidate_is_best": passive_candidate in winners,
-                        "probe_candidate_is_best": probe_candidate in winners,
-                        "oracle_mechanism_candidate_is_best": oracle_candidate in winners,
+                        "paired_comparable": paired_comparable,
+                        "compensation_available": compensation_available,
+                        "compensation_unavailable_reason": (
+                            "registered_recovery_policy_abstained"
+                            if not compensation_available
+                            else ""
+                        ),
+                        "passive_candidate_is_best": (
+                            passive_candidate in winners if paired_comparable else ""
+                        ),
+                        "probe_candidate_is_best": (
+                            probe_candidate in winners if paired_comparable else ""
+                        ),
+                        "oracle_mechanism_candidate_is_best": (
+                            oracle_candidate in winners if paired_comparable else ""
+                        ),
                         "belief_changed": passive.mechanism != probe_prediction,
                         "intervention_changed": passive_candidate != probe_candidate,
-                        "probe_vs_passive_selected_outcome": selected_comparison.value,
+                        "probe_vs_passive_selected_outcome": (
+                            selected_comparison.value if selected_comparison is not None else "UNAVAILABLE"
+                        ),
                         "registered_probe_environment_steps": int(
                             probe_context["probe_environment_steps"]
                         ),
@@ -527,7 +569,12 @@ def main() -> int:
         if run_directory is not None and run_directory.exists():
             _write_json(
                 run_directory / "run_status.json",
-                {"status": "FAILED", "error_type": type(exc).__name__, "error": str(exc)},
+                {
+                    **(manifest or {}),
+                    "status": "FAILED",
+                    "error_type": type(exc).__name__,
+                    "error": str(exc),
+                },
             )
         print(f"[FAIL] {type(exc).__name__}: {exc}", file=sys.stderr)
         return 1
