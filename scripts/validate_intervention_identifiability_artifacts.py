@@ -33,7 +33,13 @@ def main() -> int:
             raise ValueError("artifact validation requires a completed run")
         keys = ("experiment_run_id", "source_git_commit", "config_sha256")
         identity = tuple(manifest[key] for key in keys)
-        for artifact in (status, summary):
+        artifacts = [status, summary]
+        feature_analysis_path = run / "feature_analysis.json"
+        if feature_analysis_path.is_file():
+            artifacts.append(
+                json.loads(feature_analysis_path.read_text(encoding="utf-8"))
+            )
+        for artifact in artifacts:
             if tuple(artifact[key] for key in keys) != identity:
                 raise ValueError("artifact provenance does not match manifest")
 

@@ -143,6 +143,13 @@ The complete result, including one unavailable compensation candidate, is in
 the [identifiability report](reports/intervention_identifiability_development_v2.md).
 No frozen held-out parameter was changed.
 
+A preregistered noise-only extension on fresh seeds 410--429 produced seven
+operational failures: four preferred compensation and three preferred retry,
+despite all sharing the same stochastic-noise mechanism. Phase inconsistency,
+temporal uncertainty, and relative probe variance each reached ROC AUC 0.75,
+but n=7 is too small to freeze a selector. The result and paired videos are in
+the [noise utility report](reports/noise_intervention_utility_development_v1.md).
+
 - Controlled single-axis perturbation experiments established reproducible
   failures, schema-v2 trajectories, real CSV summaries, and representative videos.
 - A bounded online GLM-5.2 pilot demonstrated that an external model can select a

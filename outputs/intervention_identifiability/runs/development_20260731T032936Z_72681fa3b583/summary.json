@@ -1,0 +1,72 @@
+{
+  "experiment_run_id": "development_20260731T032936Z_72681fa3b583",
+  "protocol_id": "noise_intervention_utility_development_v1",
+  "source_git_commit": "72681fa3b5837da2a1a49025763095ebc506979f",
+  "config_path": "configs/autoresearch/noise_intervention_utility_development_v1.json",
+  "config_sha256": "458199b42c98e255d6d8b36b44ff7fda6ec91e550f5a1963cbac3abc9d7cca93",
+  "execution_timestamp_utc": "2026-07-31T03:29:36.946890+00:00",
+  "seed_range": [
+    410,
+    429
+  ],
+  "dependencies": {
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "gymnasium": "1.3.0",
+    "numpy": "2.2.6"
+  },
+  "split": "development",
+  "heldout_retuning": false,
+  "full_collection_units": 20,
+  "operational_units": 7,
+  "paired_comparable_units": 7,
+  "compensation_unavailable_units": 0,
+  "paired_coverage": 1.0,
+  "winner_counts": {
+    "probe_grounded_compensation": 4,
+    "stochastic_retry": 3,
+    "tie": 0
+  },
+  "oracle_mechanism_alignment_rate": 0.42857142857142855,
+  "passive_belief_alignment_rate": 0.7142857142857143,
+  "probe_belief_alignment_rate": 0.42857142857142855,
+  "belief_change_count": 6,
+  "probe_selected_outcome_improved_count": 2,
+  "probe_selected_outcome_worsened_count": 4,
+  "candidate_summary": {
+    "probe_grounded_compensation": {
+      "units": 7,
+      "accepted": 4,
+      "recovery_rate": 0.5714285714285714,
+      "mean_verification_steps": 285.7142857142857,
+      "mean_final_object_goal_distance": 0.1841672698142184
+    },
+    "stochastic_retry": {
+      "units": 7,
+      "accepted": 4,
+      "recovery_rate": 0.5714285714285714,
+      "mean_verification_steps": 283.2857142857143,
+      "mean_final_object_goal_distance": 0.13061996482798968
+    }
+  },
+  "stratified_summary": {
+    "condition_id": {
+      "fault_05": {
+        "units": 7,
+        "compensation_best": 4,
+        "retry_best": 3,
+        "oracle_mechanism_alignment_rate": 0.42857142857142855,
+        "probe_belief_alignment_rate": 0.42857142857142855
+      }
+    },
+    "mechanism_class_oracle": {
+      "stochastic_noise": {
+        "units": 7,
+        "compensation_best": 4,
+        "retry_best": 3,
+        "oracle_mechanism_alignment_rate": 0.42857142857142855,
+        "probe_belief_alignment_rate": 0.42857142857142855
+      }
+    }
+  }
+}

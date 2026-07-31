@@ -45,6 +45,14 @@ actually useful. Protocol
 400--409 and cannot alter completed held-out results. P2 memory and P3 GLM remain
 blocked while this abstraction failure is unresolved.
 
+The follow-up noise-only development extension on seeds 410--429 confirmed that
+the stochastic-noise mechanism is utility-heterogeneous: four of seven failures
+preferred compensation and three preferred retry. Some preregistered visible
+scores showed AUC 0.75, but the operational population is too small to freeze a
+selector. The next step must increase independent operational coverage or define
+a stronger action-conditional evidence source; it must not tune on held-out
+seeds or promote memory from this exploratory result.
+
 ## Deferred milestones
 
 - additional probe families, only when tied to a defined ambiguity;
