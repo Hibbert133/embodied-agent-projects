@@ -96,6 +96,7 @@ def main() -> int:
             "condition_cycle": config["condition_cycle"],
             "candidates": config["candidates"],
             "budget": config["budget"],
+            "stopping_rule": config.get("stopping_rule"),
             "execution_timestamp_utc": timestamp,
             "dependencies": {
                 "python": platform.python_version(),

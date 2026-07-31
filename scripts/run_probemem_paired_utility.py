@@ -93,6 +93,25 @@ def _candidate_outcome(candidate_id: str, result: Any, execution: dict[str, Any]
     )
 
 
+def validate_stopping_rule(config: dict[str, Any]) -> int:
+    """Return the label-blind coverage target, or zero for a fixed stream."""
+    stopping_rule = config.get("stopping_rule")
+    if stopping_rule is None:
+        return 0
+    seed_start, seed_stop = (int(item) for item in config["seed_range"])
+    target_pairs = int(stopping_rule["target_paired_operational_units"])
+    maximum_units = int(stopping_rule["maximum_initial_units"])
+    if (
+        target_pairs <= 0
+        or maximum_units != seed_stop - seed_start + 1
+        or bool(stopping_rule["may_read_candidate_outcome"])
+        or bool(stopping_rule["may_read_winner_label"])
+        or stopping_rule["stop_signal"] != "paired candidate executability only"
+    ):
+        raise ValueError("invalid label-blind paired coverage stopping rule")
+    return target_pairs
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
@@ -130,10 +149,15 @@ def main() -> int:
         namespaces = config["random_seed_namespaces"]
         budget = config["budget"]
         seed_start, seed_stop = (int(item) for item in config["seed_range"])
+        target_pairs = validate_stopping_rule(config)
         case_rows: list[dict[str, Any]] = []
         candidate_rows: list[dict[str, Any]] = []
 
         for index, seed in enumerate(range(seed_start, seed_stop + 1)):
+            if target_pairs and sum(
+                bool(row["paired_comparable"]) for row in case_rows
+            ) >= target_pairs:
+                break
             episode_id = index + 1
             fault = conditions[cycle[index % len(cycle)]]
             trajectory = (
@@ -355,6 +379,10 @@ def main() -> int:
             "rendering": False,
             "actionable_memory_writes": 0,
             "principles_generated": 0,
+            "target_paired_operational_units": target_pairs or None,
+            "coverage_target_reached": (
+                len(comparable) >= target_pairs if target_pairs else None
+            ),
             "claim_scope": "development paired action-utility collection only",
         }
         _write_json(run_dir / "summary.json", summary)
@@ -366,6 +394,10 @@ def main() -> int:
                 "full_collection_units": len(case_rows),
                 "operational_units": len(operational),
                 "paired_comparable_units": len(comparable),
+                "target_paired_operational_units": target_pairs or None,
+                "coverage_target_reached": (
+                    len(comparable) >= target_pairs if target_pairs else None
+                ),
             },
         )
         print(f"run: {run_dir}")

@@ -59,6 +59,13 @@ noise-condition initial rollouts succeeded, so the operational population had
 zero noise cases. Status is `INSUFFICIENT_ACTION_UTILITY_DIVERSITY`: the run
 does not permit selector fitting, Phase-D promotion, or a held-out claim.
 
+The next registered collection is the
+[label-blind noise utility coverage protocol](docs/protocols/probemem_noise_intervention_utility_coverage_v1.md).
+It scans fresh seeds 760--839 and stops at 20 complete operational noise pairs
+or 80 initial units. The stopping rule cannot read candidate outcomes or winner
+labels. This is a coverage repair for the incomplete development population,
+not held-out tuning.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
