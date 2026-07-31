@@ -27,6 +27,13 @@ neither changed an intervention. The failure is therefore at the
 reasoning-to-action boundary, not simply a failure to retrieve or acknowledge
 memory.
 
+The follow-up [intervention-utility audit](reports/probemem_v2_phase_c_intervention_utility_audit.md)
+converted the same immutable trace into 10 falsifiable records: 5 supported,
+3 unresolved, and 2 contradicted executions, with 5 negative prediction
+surprises. All records concern the same compensation skill, so they expose
+prediction failures but cannot identify a better alternative. They are
+explicitly non-actionable and ineligible for principle promotion.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

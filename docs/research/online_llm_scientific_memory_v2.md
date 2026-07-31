@@ -112,6 +112,15 @@ a confound, so these differences are descriptive associations. The audit
 motivates an action-discriminative intervention-utility contract before any
 principle-promotion experiment.
 
+The first `InterventionUtilityRecord` audit binds the post-probe Agent-visible
+signature to the predicted outcome, executed bounded skill, and fresh observed
+outcome. Host-derived labels produced 5 supported, 3 unresolved, and 2
+contradicted executions, with 5 matched predictions and 5 negative surprises.
+All 10 records used only `BOUNDED_PLANAR_COMPENSATION`; consequently they audit
+resonance for an executed action but cannot rank compensation against retry.
+Schema-v1 utility records are development-only, non-actionable, and ineligible
+for principle promotion.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

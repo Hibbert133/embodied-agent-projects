@@ -15,6 +15,14 @@ from src.probemem.episodic_memory import (
     RetrievedEpisode,
     VerifiedRecoveryEpisode,
 )
+from src.probemem.intervention_utility import (
+    FreshVerificationObservation,
+    InterventionUtilityRecord,
+    PredictionRelation,
+    UtilityVerdict,
+    prediction_relation,
+    utility_verdict,
+)
 from src.probemem.runtime import CaseBudget, ProbeMemState, ProbeMemStateMachine
 from src.probemem.tools import ToolRegistry, build_default_tool_registry
 
@@ -22,7 +30,9 @@ __all__ = [
     "CaseBudget",
     "ChronologicalEpisodeMemory",
     "EvidenceSignature",
+    "FreshVerificationObservation",
     "InterventionSkill",
+    "InterventionUtilityRecord",
     "MechanismHypothesis",
     "MemorySnapshot",
     "PredictedOutcome",
@@ -30,9 +40,13 @@ __all__ = [
     "ProbeMemState",
     "ProbeMemStateMachine",
     "ProbeMemTool",
+    "PredictionRelation",
     "RecoveryExperience",
     "RetrievedEpisode",
     "ToolRegistry",
+    "UtilityVerdict",
     "VerifiedRecoveryEpisode",
     "build_default_tool_registry",
+    "prediction_relation",
+    "utility_verdict",
 ]

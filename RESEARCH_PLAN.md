@@ -34,6 +34,15 @@ still produced zero intervention changes. Phase D must therefore begin with a
 development-only, falsifiable intervention-utility record and contradiction
 test; it must not promote free-form principles merely because memory was cited.
 
+The resulting development-only `InterventionUtilityRecord` contract now binds
+Agent-visible applicability evidence, one bounded skill, its predicted outcome,
+and a fresh observed outcome. Applied to the immutable Phase-C trace, it yielded
+5 supported, 3 unresolved, and 2 contradicted records, including 5 negative
+prediction surprises. Because all 10 records executed only planar compensation,
+they are not action-discriminative training evidence: zero are actionable memory
+or principle-promotion inputs. A new paired development experiment is required
+before Phase D.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
