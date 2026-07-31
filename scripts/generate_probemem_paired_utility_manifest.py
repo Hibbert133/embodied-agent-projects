@@ -17,6 +17,7 @@ from typing import Any, Mapping
 ROOT = Path(__file__).resolve().parents[1]
 IMPLEMENTATION_PATHS = (
     Path("src/probemem/intervention_utility.py"),
+    Path("src/probemem/intervention_selector.py"),
     Path("src/evaluation/intervention_utility.py"),
     Path("scripts/run_probemem_paired_utility.py"),
     Path("scripts/run_probemem_v2_smoke.py"),

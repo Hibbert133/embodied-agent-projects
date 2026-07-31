@@ -147,6 +147,14 @@ selector candidate, but it does not validate one. The feature ranking was
 post-hoc on only 8 decisive cases; Phase D remains blocked until a separately
 specified candidate is evaluated on fresh development data.
 
+The next development-validation protocol freezes exactly one candidate before
+using seeds 840--899: choose independent retry when the Agent-visible
+`probe_relative_bias_std <= 2.0`, otherwise choose bounded compensation. The
+rounded threshold is explicitly post-hoc from the preceding development run.
+It is compared once against always retry, always compensation, and the
+evaluator-only Oracle; failure is retained and cannot trigger threshold
+revision on this stream.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,
