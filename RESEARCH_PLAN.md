@@ -93,6 +93,16 @@ this one Agent-visible feature is insufficient for reliable intervention
 selection. This is an analysis result, not permission to refit on the same
 stream.
 
+The next post-hoc retrieval-feasibility audit used the complete 13-feature
+Agent-visible signature, with 8 earlier decisive references and 7 later
+decisive queries. Scaling was fit only on the historical references. A raw
+nearest-reference rule agreed with the accepted skill in 2/7 queries, compared
+with 4/7 for the frozen single-feature selector. Four of five compensation-only
+queries were misassigned to retry. This supports the motivation for
+applicability, contradiction, and abstention guards around episodic retrieval,
+but it is not an operational-memory result because preferred historical skills
+were derived from evaluator-only paired counterfactuals.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

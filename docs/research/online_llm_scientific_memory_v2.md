@@ -173,6 +173,16 @@ motivates richer verification-grounded applicability evidence, but does not
 authorize feature search, threshold revision, or Phase-D promotion on the same
 data.
 
+A chronological retrieval-feasibility audit also tested whether the full
+13-feature signature rescued the failure. It standardized eight earlier
+decisive references using reference-only statistics and queried seven later
+decisive cases. Nearest-reference skill agreement was only 2/7, versus 4/7 for
+the frozen single-feature rule, with four compensation-only queries mapped to
+retry. This is consistent with raw episodic retrieval becoming dogmatic under
+a changed outcome mixture. However, reference skill labels came from
+evaluator-only paired counterfactuals, so the result is a separability audit,
+not actionable Verified Episodic Memory or online self-improvement.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

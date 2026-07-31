@@ -65,6 +65,15 @@ high-variation retry-only case, so intervention utility is not monotonic in the
 single registered feature. See the
 [causal-audit figure](outputs/probemem_v2/figures/noise_selector_causal_audit.png).
 
+A chronological, post-hoc nearest-reference audit then compared all 13
+Agent-visible applicability features. Eight earlier decisive cases were used as
+references for seven later decisive queries, with normalization fit on the
+earlier cases only. Raw nearest-reference agreement was 2/7, below the frozen
+single-feature rule's 4/7. This is evidence against naive episodic similarity,
+not a memory benchmark: the historical preferred skills are evaluator-only
+counterfactual labels and are prohibited from actionable memory. See the
+[retrieval audit](outputs/probemem_v2/figures/applicability_retrieval_audit.png).
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
