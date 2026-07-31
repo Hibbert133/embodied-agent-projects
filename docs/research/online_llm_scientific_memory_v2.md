@@ -102,6 +102,16 @@ supports a narrow negative conclusion—retrieval alone was behaviorally inert
 while adding context cost—not method equivalence or a memory benefit. Phase D
 is not promoted by this result.
 
+The registered post-hoc decision-trace audit uses no new API calls or robot
+rollouts. Raw retrieval differed from the stateless predicted verification
+status in 6/10 operational cases (2 improved and 4 worsened exact prediction
+matches), and verified retrieval changed post-probe confidence in 4/10. All
+post-probe mechanism hypotheses nevertheless collapsed to `stable_bias`, and
+all methods chose `BOUNDED_PLANAR_COMPENSATION`. Independent model sampling is
+a confound, so these differences are descriptive associations. The audit
+motivates an action-discriminative intervention-utility contract before any
+principle-promotion experiment.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

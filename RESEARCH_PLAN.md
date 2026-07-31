@@ -27,6 +27,13 @@ Phase C therefore records a completed negative result: chronological retrieval
 alone is insufficient for recovery improvement in this setup. This does not
 promote Phase D or justify a held-out memory claim.
 
+A no-API trace audit further localizes this negative result. Raw retrieval was
+associated with a different predicted verification status in 6/10 operational
+cases, while verified retrieval changed post-probe confidence in 4/10. Both
+still produced zero intervention changes. Phase D must therefore begin with a
+development-only, falsifiable intervention-utility record and contradiction
+test; it must not promote free-form principles merely because memory was cited.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

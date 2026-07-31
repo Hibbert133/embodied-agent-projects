@@ -19,7 +19,13 @@ the same intervention on every operational pair. Raw and verified memory were
 actually cited in 9/10 and 8/10 cases, respectively, but retrieval changed no
 intervention or outcome while increasing model-context cost. This is a real
 negative result: chronological retrieval alone did not improve recovery. See
-the [completed Phase-C report](reports/probemem_v2_phase_c_completed_run.md).
+the [completed Phase-C report](reports/probemem_v2_phase_c_completed_run.md)
+and [decision-trace audit](reports/probemem_v2_phase_c_decision_audit.md). The
+audit refines the result: raw memory changed predicted verification status in
+6/10 operational cases and verified memory changed confidence in 4/10, yet
+neither changed an intervention. The failure is therefore at the
+reasoning-to-action boundary, not simply a failure to retrieve or acknowledge
+memory.
 
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
