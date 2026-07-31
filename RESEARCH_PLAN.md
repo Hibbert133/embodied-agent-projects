@@ -9,11 +9,17 @@ chronological scientific memory. Phase B first validates the constrained LLM
 tool boundary with an empty memory snapshot; memory benefit is not claimed until
 later registered phases pass their own gates.
 
-ProbeMem Phase B has now passed its bounded tool-integration gate on five
-development failures, with five fresh verification rollouts and no invalid skill
-execution or budget overrun. Phase C has begun with an accepted-only,
-chronological episodic-memory storage smoke. This is not yet evidence that memory
-improves recovery; the stateless/raw/verified comparison remains pending.
+ProbeMem Phase B passed its bounded tool-integration gate on five development
+failures, with five fresh verification rollouts and no invalid skill execution
+or budget overrun. Phase C implemented the stateless/raw/accepted-only
+chronological comparison and completed 18 of 20 paired development episodes.
+The immutable run then stopped at 54/60 method-cases with a MuJoCo allocation
+error. A separate no-API preflight failed before the first environment creation
+with only 200.56 MB of Windows commit/pagefile capacity available, despite
+3663.68 MB of available physical memory. Phase C is therefore
+`INCOMPLETE_INFRASTRUCTURE`, not promoted, and not evidence for or against a
+memory benefit. Reports preserve both the completed-prefix audit and the host
+resource blocker.
 
 The canonical experimental roadmap is maintained in:
 

@@ -83,6 +83,22 @@ not implement or claim memory-based improvement.
 Later phases are blocked until their predecessor's promotion gate is evaluated.
 Negative and incomplete results are retained without held-out retuning.
 
+## Current execution status
+
+Phase B passed its development-only constrained-tool integration gate. Phase C
+then ran the registered stateless, raw episodic, and accepted-only episodic
+comparison on seeds 720–739. The immutable run completed 18 paired episodes
+(54/60 method-cases) before MuJoCo returned `Could not allocate memory`.
+
+The completed prefix contains no chronology, leakage, or budget violations, but
+it is not claim-eligible. A separate no-API endurance preflight subsequently
+failed before its first environment construction with 200.56 MB of Windows
+commit/pagefile capacity available. Phase C is paused as
+`INCOMPLETE_INFRASTRUCTURE`; Phase D must not begin, and no memory benefit or
+equivalence claim may be drawn from the prefix. A new full run requires restored
+host commit capacity, a completed endurance preflight, and a new immutable
+manifest.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

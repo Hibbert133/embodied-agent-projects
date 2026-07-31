@@ -12,6 +12,15 @@ attempts were accepted and one direct stochastic retry was rejected. This is an
 integration result, not a memory or model-performance claim. See the
 [Phase-B report](reports/probemem_v2_phase_b_promoted_smoke.md).
 
+ProbeMem Phase C then exercised stateless, raw-episodic, and accepted-only
+retrieval over 18 complete paired development episodes. The immutable run
+stopped at 54/60 method-cases because the Windows host exhausted available
+commit/pagefile capacity. Its completed prefix had zero chronology, leakage, or
+interaction-budget violations, but the run is explicitly **not claim-eligible**
+and does not establish a memory benefit. See the
+[incomplete-run audit](reports/probemem_v2_phase_c_incomplete_run.md) and
+[MuJoCo infrastructure blocker](reports/probemem_v2_mujoco_endurance_blocker.md).
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
@@ -107,7 +116,7 @@ selection, or intervention planning.
 | Diagnosis | Mechanism hypotheses and passive planar estimation | Partial |
 | Correction | Bounded planar corrective skills | Implemented baseline |
 | Verification | Fresh rollout and accepted/rejected/inconclusive contracts | Partial |
-| Memory | Verified-only storage interface | Interface only |
+| Memory | Chronological raw/verified episodic development comparison | Incomplete; no benefit claim |
 
 Fault injection and Oracle audit are experimental infrastructure, not powers
 available to the Agent. Existing online-model adapters are retained as optional
@@ -346,7 +355,7 @@ intervention 规划。
 | Diagnosis | 机制假设和被动平面漂移估计 | 部分实现 |
 | Correction | 有限平面纠正 skill | 基线已实现 |
 | Verification | 新 rollout 与三态验证合同 | 部分实现 |
-| Memory | 只允许 verified experience 的接口 | 仅接口 |
+| Memory | chronological raw/verified episodic development 对照 | 实验不完整，不宣称收益 |
 
 故障注入和 Oracle audit 是实验基础设施，不是 Agent 能力。仓库保留已有在线模型适配器
 作为可选历史对照，但项目的核心研究贡献是主动证据获取，而不是某一个语言模型。
@@ -354,6 +363,10 @@ intervention 规划。
 ## 当前真实证据
 
 仓库明确保留正结果和负结果，不把 integration pilot 包装成通用性能结论。
+
+- ProbeMem Phase C 已真实完成 18/20 个 paired development episodes，但因 Windows
+  commit/pagefile 耗尽在 54/60 method-cases 停止；该前缀无 chronology、leakage
+  或预算违规，但 `claim_eligible=false`，不能用于声称 memory 有效或等价。
 
 - 单轴可控扰动实验建立了可复现失败、schema-v2 轨迹、真实 CSV 和代表性视频。
 - 一次受约束 GLM-5.2 pilot 证明外部模型可以在不知道 Oracle 故障字段的情况下选择已注册
