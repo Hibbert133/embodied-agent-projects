@@ -17,6 +17,7 @@ from src.probemem.episodic_memory import (
 )
 from src.probemem.intervention_utility import (
     FreshVerificationObservation,
+    InterventionApplicabilitySignature,
     InterventionUtilityRecord,
     PredictionRelation,
     UtilityVerdict,
@@ -32,6 +33,7 @@ __all__ = [
     "EvidenceSignature",
     "FreshVerificationObservation",
     "InterventionSkill",
+    "InterventionApplicabilitySignature",
     "InterventionUtilityRecord",
     "MechanismHypothesis",
     "MemorySnapshot",

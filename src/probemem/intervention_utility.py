@@ -10,7 +10,8 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
-from typing import Any
+import math
+from typing import Any, Mapping
 
 from src.probemem.episodic_memory import EvidenceSignature
 from src.probemem.models import InterventionSkill, PredictedOutcome
@@ -19,6 +20,21 @@ from src.reasoning.evidence import validate_no_oracle_evidence
 
 INTERVENTION_UTILITY_SCHEMA_VERSION = 1
 _STATUS_RANK = {"REJECTED": 0, "INCONCLUSIVE": 1, "ACCEPTED": 2}
+INTERVENTION_APPLICABILITY_FEATURES = (
+    "progress_to_goal",
+    "final_object_goal_distance",
+    "temporal_uncertainty",
+    "phase_inconsistency",
+    "estimated_drift_x",
+    "estimated_drift_y",
+    "normalized_residual_norm",
+    "probe_estimated_bias_x",
+    "probe_estimated_bias_y",
+    "probe_estimated_bias_std_norm",
+    "probe_relative_bias_std",
+    "probe_mean_estimation_residual",
+    "probe_dominant_axis_sign_agreement",
+)
 
 
 class PredictionRelation(str, Enum):
@@ -31,6 +47,64 @@ class UtilityVerdict(str, Enum):
     SUPPORTED = "SUPPORTED"
     UNRESOLVED = "UNRESOLVED"
     CONTRADICTED = "CONTRADICTED"
+
+
+@dataclass(frozen=True)
+class InterventionApplicabilitySignature:
+    """Agent-visible state and registered-probe evidence at intervention time."""
+
+    schema_version: int
+    evidence_id: str
+    episode_id: int
+    values: tuple[float, ...]
+
+    def __post_init__(self) -> None:
+        if self.schema_version != INTERVENTION_UTILITY_SCHEMA_VERSION:
+            raise ValueError("unsupported intervention applicability schema version")
+        if not self.evidence_id.strip() or self.episode_id <= 0:
+            raise ValueError("applicability signature requires causal provenance")
+        if len(self.values) != len(INTERVENTION_APPLICABILITY_FEATURES):
+            raise ValueError("applicability signature has an invalid feature count")
+        if not all(math.isfinite(item) for item in self.values):
+            raise ValueError("applicability signature requires finite features")
+
+    @classmethod
+    def from_agent_evidence(
+        cls, evidence: Mapping[str, Any]
+    ) -> "InterventionApplicabilitySignature":
+        validate_no_oracle_evidence(evidence)
+        base = EvidenceSignature.from_structured_evidence(evidence)
+        probe = evidence.get("registered_probe_evidence")
+        if not isinstance(probe, Mapping):
+            raise ValueError("intervention applicability requires registered probe evidence")
+        consistency = probe.get("consistency")
+        if not isinstance(consistency, Mapping):
+            raise ValueError("registered probe evidence requires consistency statistics")
+        bias = tuple(float(item) for item in consistency["estimated_bias_mean"])
+        if len(bias) != 2:
+            raise ValueError("registered probe bias estimate must be two-dimensional")
+        values = base.values + (
+            bias[0],
+            bias[1],
+            float(consistency["estimated_bias_std_norm"]),
+            float(consistency["relative_bias_std"]),
+            float(consistency["mean_estimation_residual"]),
+            float(consistency["dominant_axis_sign_agreement"]),
+        )
+        return cls(
+            schema_version=INTERVENTION_UTILITY_SCHEMA_VERSION,
+            evidence_id=str(evidence["evidence_id"]),
+            episode_id=int(evidence["episode_id"]),
+            values=values,
+        )
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "schema_version": self.schema_version,
+            "evidence_id": self.evidence_id,
+            "episode_id": self.episode_id,
+            "features": dict(zip(INTERVENTION_APPLICABILITY_FEATURES, self.values)),
+        }
 
 
 @dataclass(frozen=True)
@@ -102,7 +176,7 @@ class InterventionUtilityRecord:
     source_run_id: str
     source_manifest_id: str
     source_method: str
-    applicability_signature: EvidenceSignature
+    applicability_signature: InterventionApplicabilitySignature
     selected_skill: InterventionSkill
     predicted_outcome: PredictedOutcome
     observed_outcome: FreshVerificationObservation
@@ -153,7 +227,7 @@ class InterventionUtilityRecord:
         source_run_id: str,
         source_manifest_id: str,
         source_method: str,
-        applicability_signature: EvidenceSignature,
+        applicability_signature: InterventionApplicabilitySignature,
         selected_skill: InterventionSkill,
         predicted_outcome: PredictedOutcome,
         observed_outcome: FreshVerificationObservation,

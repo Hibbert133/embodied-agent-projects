@@ -43,6 +43,14 @@ they are not action-discriminative training evidence: zero are actionable memory
 or principle-promotion inputs. A new paired development experiment is required
 before Phase D.
 
+That next experiment is now preregistered in the
+[ProbeMem paired intervention-utility protocol](docs/protocols/probemem_paired_intervention_utility_development_v1.md).
+It uses fresh cyclic development seeds 740--759 and common-random-number fresh
+verification of the two existing skills from the same failed initial rollout
+and probe evidence. Candidate outcomes and winners are evaluator-only; the
+online Agent budget remains a single verification, while the second rollout is
+reported separately as development counterfactual collection cost.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

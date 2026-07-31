@@ -6,8 +6,8 @@ import unittest
 from dataclasses import replace
 
 from src.probemem import (
-    EvidenceSignature,
     FreshVerificationObservation,
+    InterventionApplicabilitySignature,
     InterventionSkill,
     InterventionUtilityRecord,
     PredictedOutcome,
@@ -24,11 +24,14 @@ def _record(status: str = "ACCEPTED") -> InterventionUtilityRecord:
         source_run_id="run_development",
         source_manifest_id="manifest_development",
         source_method="verified_episodic_retrieval",
-        applicability_signature=EvidenceSignature(
+        applicability_signature=InterventionApplicabilitySignature(
             schema_version=1,
             evidence_id="post_probe_evidence_001",
             episode_id=1,
-            values=(0.1, 0.2, 0.3, 0.4, 0.01, -0.01, 0.5),
+            values=(
+                0.1, 0.2, 0.3, 0.4, 0.01, -0.01, 0.5,
+                0.08, -0.02, 0.01, 0.1, 0.02, 0.75,
+            ),
         ),
         selected_skill=InterventionSkill.BOUNDED_PLANAR_COMPENSATION,
         predicted_outcome=PredictedOutcome("ACCEPTED", 0.1, 500),
@@ -56,6 +59,10 @@ class ProbeMemInterventionUtilityTest(unittest.TestCase):
         record = _record("REJECTED")
         self.assertIs(record.utility_verdict, UtilityVerdict.CONTRADICTED)
         self.assertIs(record.prediction_relation, PredictionRelation.NEGATIVE_SURPRISE)
+
+    def test_applicability_signature_requires_probe_features(self) -> None:
+        with self.assertRaisesRegex(ValueError, "feature count"):
+            InterventionApplicabilitySignature(1, "evidence", 1, (0.1,) * 7)
 
     def test_inconclusive_verification_is_not_promoted_or_rejected(self) -> None:
         record = _record("INCONCLUSIVE")

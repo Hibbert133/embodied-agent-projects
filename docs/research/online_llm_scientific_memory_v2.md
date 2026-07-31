@@ -121,6 +121,14 @@ resonance for an executed action but cannot rank compensation against retry.
 Schema-v1 utility records are development-only, non-actionable, and ineligible
 for principle promotion.
 
+The next development protocol freezes a paired evaluator collection on seeds
+740--759. For every failed initial rollout, compensation and independent retry
+receive the same initial state, registered probe evidence, and common
+verification random stream. The second verification is evaluator-only and is
+not presented as online Agent behavior. This collection tests whether the
+13-feature Agent-visible applicability signature is action-discriminative
+before any hypothesis or principle generation is enabled.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

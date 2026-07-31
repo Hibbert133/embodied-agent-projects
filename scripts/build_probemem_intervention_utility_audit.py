@@ -16,8 +16,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from src.probemem import (  # noqa: E402
-    EvidenceSignature,
     FreshVerificationObservation,
+    InterventionApplicabilitySignature,
     InterventionSkill,
     InterventionUtilityRecord,
     PredictedOutcome,
@@ -99,7 +99,9 @@ def build_records(
                 source_run_id=str(audit["experiment_run_id"]),
                 source_manifest_id=str(audit["manifest_id"]),
                 source_method=source_method,
-                applicability_signature=EvidenceSignature.from_structured_evidence(evidence),
+                applicability_signature=InterventionApplicabilitySignature.from_agent_evidence(
+                    evidence
+                ),
                 selected_skill=InterventionSkill(str(final_decision["selected_skill"])),
                 predicted_outcome=PredictedOutcome.from_mapping(
                     final_decision["predicted_outcome"]
