@@ -53,7 +53,7 @@ class _MemoryStatusEx(ctypes.Structure):
     ]
 
 
-def _windows_memory_mb() -> tuple[float, float]:
+def _windows_memory_mb() -> tuple[float, float, float]:
     ctypes.windll.kernel32.GetCurrentProcess.argtypes = []
     ctypes.windll.kernel32.GetCurrentProcess.restype = wintypes.HANDLE
     ctypes.windll.psapi.GetProcessMemoryInfo.argtypes = [
@@ -78,10 +78,14 @@ def _windows_memory_mb() -> tuple[float, float]:
     if not ctypes.windll.kernel32.GlobalMemoryStatusEx(ctypes.byref(status)):
         raise OSError("GlobalMemoryStatusEx failed")
     scale = 1024.0 * 1024.0
-    return counters.WorkingSetSize / scale, status.ullAvailPhys / scale
+    return (
+        counters.WorkingSetSize / scale,
+        status.ullAvailPhys / scale,
+        status.ullAvailPageFile / scale,
+    )
 
 
-def memory_mb() -> tuple[float, float]:
+def memory_mb() -> tuple[float, float, float]:
     if platform.system() != "Windows":
         raise RuntimeError("this registered preflight currently supports Windows only")
     return _windows_memory_mb()
@@ -92,6 +96,9 @@ def summarize_samples(samples: Sequence[dict[str, Any]]) -> dict[str, Any]:
         raise ValueError("at least one memory sample is required")
     rss = [float(item["process_rss_mb"]) for item in samples]
     available = [float(item["system_available_mb"]) for item in samples]
+    available_commit = [
+        float(item["system_available_commit_mb"]) for item in samples
+    ]
     return {
         "sample_count": len(samples),
         "process_rss_start_mb": rss[0],
@@ -101,6 +108,9 @@ def summarize_samples(samples: Sequence[dict[str, Any]]) -> dict[str, Any]:
         "system_available_start_mb": available[0],
         "system_available_final_mb": available[-1],
         "system_available_min_mb": min(available),
+        "system_available_commit_start_mb": available_commit[0],
+        "system_available_commit_final_mb": available_commit[-1],
+        "system_available_commit_min_mb": min(available_commit),
     }
 
 
@@ -114,7 +124,7 @@ def _write_csv(path: Path, rows: Sequence[dict[str, Any]]) -> None:
 
 def _sample(stage: str, index: int, seed: int, steps: int) -> dict[str, Any]:
     gc.collect()
-    rss, available = memory_mb()
+    rss, available, available_commit = memory_mb()
     return {
         "stage": stage,
         "index": index,
@@ -122,6 +132,7 @@ def _sample(stage: str, index: int, seed: int, steps: int) -> dict[str, Any]:
         "environment_steps": steps,
         "process_rss_mb": rss,
         "system_available_mb": available,
+        "system_available_commit_mb": available_commit,
     }
 
 
@@ -144,6 +155,7 @@ def main() -> int:
     )
     args = parser.parse_args()
     samples: list[dict[str, Any]] = []
+    config: dict[str, Any] | None = None
     try:
         config = json.loads(args.config.resolve().read_text(encoding="utf-8"))
         if int(config["api_calls"]) != 0 or bool(config["rendering"]):
@@ -216,7 +228,12 @@ def main() -> int:
         if samples:
             _write_csv(args.output_csv.resolve(), samples)
         failure = {
+            "protocol": config.get("protocol") if config else "CONFIG_NOT_LOADED",
             "status": "FAILED",
+            "source_failed_run_id": (
+                config.get("source_failed_run_id") if config else "UNKNOWN"
+            ),
+            "source_git_commit": os.environ.get("PROBEMEM_SOURCE_COMMIT", "UNSET"),
             "error_type": type(exc).__name__,
             "error": str(exc),
             **(summarize_samples(samples) if samples else {}),

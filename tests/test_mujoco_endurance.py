@@ -9,22 +9,36 @@ from scripts.check_mujoco_endurance import memory_mb, summarize_samples
 
 class MujocoEnduranceTest(unittest.TestCase):
     def test_windows_memory_probe_returns_positive_values(self) -> None:
-        rss_mb, available_mb = memory_mb()
+        rss_mb, available_mb, available_commit_mb = memory_mb()
         self.assertGreater(rss_mb, 0.0)
         self.assertGreater(available_mb, 0.0)
+        self.assertGreater(available_commit_mb, 0.0)
 
     def test_summary_preserves_start_peak_final_and_minimum(self) -> None:
         summary = summarize_samples(
             [
-                {"process_rss_mb": 100.0, "system_available_mb": 1000.0},
-                {"process_rss_mb": 140.0, "system_available_mb": 900.0},
-                {"process_rss_mb": 120.0, "system_available_mb": 950.0},
+                {
+                    "process_rss_mb": 100.0,
+                    "system_available_mb": 1000.0,
+                    "system_available_commit_mb": 800.0,
+                },
+                {
+                    "process_rss_mb": 140.0,
+                    "system_available_mb": 900.0,
+                    "system_available_commit_mb": 600.0,
+                },
+                {
+                    "process_rss_mb": 120.0,
+                    "system_available_mb": 950.0,
+                    "system_available_commit_mb": 700.0,
+                },
             ]
         )
         self.assertEqual(summary["sample_count"], 3)
         self.assertEqual(summary["process_rss_peak_mb"], 140.0)
         self.assertEqual(summary["process_rss_change_mb"], 20.0)
         self.assertEqual(summary["system_available_min_mb"], 900.0)
+        self.assertEqual(summary["system_available_commit_min_mb"], 600.0)
 
     def test_empty_samples_are_rejected(self) -> None:
         with self.assertRaisesRegex(ValueError, "at least one"):
