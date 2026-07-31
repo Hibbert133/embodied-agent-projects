@@ -1,0 +1,44 @@
+{
+  "paired_operational_units": 20,
+  "selected_skill_counts": {
+    "BOUNDED_PLANAR_COMPENSATION": 8,
+    "INDEPENDENT_STOCHASTIC_RETRY": 12
+  },
+  "accepted_recoveries": {
+    "frozen_selector": 13,
+    "always_retry": 11,
+    "always_compensation": 14
+  },
+  "selector_vs_always_retry": {
+    "win": 3,
+    "tie": 16,
+    "loss": 1
+  },
+  "selector_vs_always_compensation": {
+    "win": 1,
+    "tie": 17,
+    "loss": 2
+  },
+  "net_accepted_gain_over_always_retry": 2,
+  "net_accepted_gain_over_always_compensation": -1,
+  "total_online_environment_steps": 16350,
+  "mean_online_environment_steps": 817.5,
+  "experiment_run_id": "probemem_paired_utility_20260731T174415Z_ddd061fcec73",
+  "manifest_id": "a45c2620a73ab8f6c6542a2d7063ce5dea10587deab458e66620482be5633984",
+  "source_git_commit": "ddd061fcec73b100d31546ee20f3196f5fad4d1b",
+  "selector_id": "rounded_relative_probe_variation_v1",
+  "frozen_threshold": 2.0,
+  "full_collection_units": 56,
+  "gate_checks": {
+    "enough_pairs": true,
+    "nondegenerate_selection": true,
+    "gain_over_retry": true,
+    "no_loss_vs_compensation": false,
+    "zero_leakage": true
+  },
+  "promotion_gate_passed": false,
+  "agent_oracle_leakage_violations": 0,
+  "api_calls": 0,
+  "principles_generated": 0,
+  "heldout_claim_eligible": false
+}

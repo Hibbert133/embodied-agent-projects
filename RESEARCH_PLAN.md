@@ -76,6 +76,14 @@ post-hoc audit on the 8 decisive cases ranked `probe_relative_bias_std` highest
 any selector candidate must be specified separately and evaluated on fresh
 development seeds.
 
+The frozen `probe_relative_bias_std <= 2.0` retry selector was evaluated once
+on fresh seeds 840--895. It selected retry in 12/20 cases and compensation in
+8/20, recovering 13/20. This was better than always retry (11/20; paired 3
+wins, 16 ties, 1 loss) but worse than always compensation (14/20; paired 1 win,
+17 ties, 2 losses). The preregistered gate therefore failed. Phase D remains
+blocked, the threshold is not revised on this stream, and no principle is
+promoted.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

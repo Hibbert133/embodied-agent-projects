@@ -155,6 +155,15 @@ It is compared once against always retry, always compensation, and the
 evaluator-only Oracle; failure is retained and cannot trigger threshold
 revision on this stream.
 
+The fresh validation scanned 56 initial units and stopped at 20 operational
+pairs. The selector chose retry 12 times and compensation 8 times, recovering
+13/20. Always retry recovered 11/20, while always compensation recovered 14/20.
+The selector gained three and lost one case relative to retry, but gained one
+and lost two relative to compensation. Because the registered no-loss gate
+against compensation failed, this is a retained negative result. Phase D is
+still blocked and no threshold revision, principle generation, or held-out run
+is permitted from this result.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

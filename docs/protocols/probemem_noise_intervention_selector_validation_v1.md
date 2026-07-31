@@ -40,3 +40,18 @@ does not promote a scientific-memory principle or support a held-out claim.
 
 Negative results are retained. The threshold, feature, direction, stop rule,
 and gate must not be changed after execution begins.
+
+## Immutable result
+
+- Run ID: `probemem_paired_utility_20260731T174415Z_ddd061fcec73`
+- Manifest ID: `a45c2620a73ab8f6c6542a2d7063ce5dea10587deab458e66620482be5633984`
+- Source commit: `ddd061fcec73b100d31546ee20f3196f5fad4d1b`
+- Initial units scanned: 56
+- Operational pairs: 20
+- Frozen selector: 13/20 accepted
+- Always retry: 11/20 accepted
+- Always compensation: 14/20 accepted
+- Promotion gate: **FAILED** (`no_loss_vs_compensation == false`)
+
+The threshold was not revised. No principle, memory record, API conclusion, or
+held-out claim was produced.

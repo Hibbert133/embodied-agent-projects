@@ -51,6 +51,13 @@ accepted, and 4 neither accepted. This establishes development action-utility
 diversity, not a learned selector: the exploratory feature audit used only the
 8 decisive cases and did not fit or freeze a threshold.
 
+The resulting frozen development selector was then evaluated once on fresh
+seeds 840--895. It recovered 13/20 operational cases, versus 11/20 for always
+retry and 14/20 for always compensation. Because it lost one net recovery to
+the stronger fixed baseline, its preregistered promotion gate failed. The
+negative result is retained; the threshold was not revised and no memory
+principle was created.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
