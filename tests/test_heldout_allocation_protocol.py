@@ -17,6 +17,9 @@ class HeldoutAllocationProtocolTest(unittest.TestCase):
     def test_frozen_sources_exist(self) -> None:
         self.assertTrue(ROOT.joinpath("docs/research/frozen_execution_plan_v1.md").is_file())
         self.assertTrue(ROOT.joinpath("docs/protocols/heldout_allocation_v1.md").is_file())
+        self.assertTrue(
+            ROOT.joinpath("docs/protocols/structured_evidence_schema_v1.md").is_file()
+        )
 
     def test_seed_threshold_and_phase_definition_are_frozen(self) -> None:
         self.assertEqual(self.config["seed_start"], 330)

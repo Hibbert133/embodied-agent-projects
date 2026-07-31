@@ -6,6 +6,11 @@ from src.uncertainty.models import (
     UncertaintyEstimate,
 )
 from src.uncertainty.policy import ThresholdEvidencePolicy
+from src.uncertainty.budgeted_policy import (
+    EvidenceDecision,
+    EvidenceDecisionKind,
+    select_evidence_action,
+)
 from src.uncertainty.online_policy import (
     AnthropicEvidencePolicy,
     OnlineEvidenceDecision,
@@ -17,5 +22,8 @@ __all__ = [
     "AnthropicEvidencePolicy",
     "OnlineEvidenceDecision",
     "ThresholdEvidencePolicy",
+    "EvidenceDecision",
+    "EvidenceDecisionKind",
+    "select_evidence_action",
     "UncertaintyEstimate",
 ]

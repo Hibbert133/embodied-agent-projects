@@ -57,7 +57,8 @@ as **online decision-layer adaptation** above a fixed robot policy.
 
 The complete executable settings are frozen in
 `configs/autoresearch/heldout_allocation_v1.json`. The held-out protocol is
-defined in `docs/protocols/heldout_allocation_v1.md`.
+defined in `docs/protocols/heldout_allocation_v1.md`, and field-level evidence
+provenance is frozen in `docs/protocols/structured_evidence_schema_v1.md`.
 
 ## Evidence and causal boundary
 
