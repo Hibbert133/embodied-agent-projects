@@ -103,6 +103,15 @@ applicability, contradiction, and abstention guards around episodic retrieval,
 but it is not an operational-memory result because preferred historical skills
 were derived from evaluator-only paired counterfactuals.
 
+The first legitimate post-probe verified-episode snapshot is now separated
+from that audit. It contains only 13 selector-chosen interventions with fresh
+`ACCEPTED` verification (7 retry, 6 compensation). Three inconclusive and four
+rejected selected outcomes are retained in the immutable source audit but are
+not actionable records; no unselected counterfactual is exported. The snapshot
+uses a versioned 13-feature schema and has operational retrieval disabled.
+This prepares a future Phase-C applicability protocol without overriding the
+failed Phase-D promotion gate.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

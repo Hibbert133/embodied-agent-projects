@@ -24,6 +24,7 @@ from src.probemem.intervention_utility import (
     prediction_relation,
     utility_verdict,
 )
+from src.probemem.intervention_memory import VerifiedInterventionEpisode
 from src.probemem.runtime import CaseBudget, ProbeMemState, ProbeMemStateMachine
 from src.probemem.tools import ToolRegistry, build_default_tool_registry
 
@@ -48,6 +49,7 @@ __all__ = [
     "ToolRegistry",
     "UtilityVerdict",
     "VerifiedRecoveryEpisode",
+    "VerifiedInterventionEpisode",
     "build_default_tool_registry",
     "prediction_relation",
     "utility_verdict",

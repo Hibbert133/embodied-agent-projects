@@ -74,6 +74,14 @@ not a memory benchmark: the historical preferred skills are evaluator-only
 counterfactual labels and are prohibited from actionable memory. See the
 [retrieval audit](outputs/probemem_v2/figures/applicability_retrieval_audit.png).
 
+To prevent that evaluator-only audit from being mistaken for memory, the
+repository now has a separate accepted-only post-probe episode schema. From the
+frozen selector run, 13/20 actually selected interventions passed fresh
+verification and entered a development snapshot (7 retry, 6 compensation); 3
+inconclusive and 4 rejected outcomes were excluded, and no unselected
+counterfactual was exported. Operational retrieval remains disabled until a
+new protocol freezes applicability and abstention behavior.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

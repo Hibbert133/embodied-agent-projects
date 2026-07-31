@@ -183,6 +183,15 @@ a changed outcome mixture. However, reference skill labels came from
 evaluator-only paired counterfactuals, so the result is a separability audit,
 not actionable Verified Episodic Memory or online self-improvement.
 
+The repository therefore separates evaluator analysis from legitimate memory
+construction. A new post-probe episode schema exported only the 13
+selector-chosen interventions that received fresh `ACCEPTED` verification: 7
+retry and 6 compensation. Three inconclusive and four rejected selected
+outcomes, plus every unselected counterfactual, remain outside actionable
+memory. Operational retrieval is deliberately disabled pending a separately
+frozen applicability/abstention protocol, so this snapshot is infrastructure,
+not a memory-benefit claim or Phase-D promotion.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,
