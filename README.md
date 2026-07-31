@@ -6,6 +6,12 @@
 > intervention experience over a chronological deployment stream. This v2 work
 > is isolated from, and does not rewrite, the frozen budgeted-evidence v1 results.
 
+ProbeMem Phase B now has a real five-failure development smoke in which all five
+online decisions reached fresh verification: four probe-grounded compensation
+attempts were accepted and one direct stochastic retry was rejected. This is an
+integration result, not a memory or model-performance claim. See the
+[Phase-B report](reports/probemem_v2_phase_b_promoted_smoke.md).
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
