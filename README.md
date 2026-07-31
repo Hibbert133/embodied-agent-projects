@@ -34,6 +34,14 @@ surprises. All records concern the same compensation skill, so they expose
 prediction failures but cannot identify a better alternative. They are
 explicitly non-actionable and ineligible for principle promotion.
 
+A new immutable [paired intervention-utility development run](reports/probemem_v2_paired_utility_development.md)
+then evaluated compensation and retry from the same failure and probe evidence
+on seeds 740--759. Ten failures yielded complete pairs: compensation recovered
+9/10, retry recovered 0/10. The sole retry utility winner was a both-rejected
+case where retry merely avoided harmful compensation. No stochastic-noise case
+entered the operational population. The result is therefore
+`INSUFFICIENT_ACTION_UTILITY_DIVERSITY`; no selector or memory principle was fit.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

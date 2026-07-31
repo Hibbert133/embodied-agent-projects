@@ -129,6 +129,14 @@ not presented as online Agent behavior. This collection tests whether the
 13-feature Agent-visible applicability signature is action-discriminative
 before any hypothesis or principle generation is enabled.
 
+The paired run completed 20/20 initial units and 10 complete operational pairs.
+Compensation achieved 9/10 accepted recoveries; retry achieved 0/10. The only
+retry utility win occurred when both skills were rejected and retry merely
+avoided harmful compensation. No stochastic-noise rollout failed initially,
+leaving no operational noise cases. This is an
+`INSUFFICIENT_ACTION_UTILITY_DIVERSITY` development result, not evidence for a
+selector, scientific-memory principle, or held-out promotion.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

@@ -62,3 +62,14 @@ The manifest binds source commit, configuration, code hashes, recovery config,
 noise calibration, dependencies, seeds, candidates, and budgets. Runs are
 written to new directories and never overwritten. No API calls or video
 rendering occur in this collection.
+
+## Immutable result
+
+Run `probemem_paired_utility_20260731T172244Z_44bc5d206ddf` completed all 20
+initial units and all 10 operational candidate pairs. Compensation recovered
+9/10; retry recovered 0/10. The sole retry utility winner was a both-rejected
+case where compensation worsened final distance and retry preserved it. The
+four noise-condition initial rollouts all succeeded, so none entered the
+operational population. The result is retained as
+`INSUFFICIENT_ACTION_UTILITY_DIVERSITY`; it does not authorize selector fitting
+or Phase-D promotion.

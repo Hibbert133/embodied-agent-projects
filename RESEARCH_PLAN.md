@@ -51,6 +51,14 @@ and probe evidence. Candidate outcomes and winners are evaluator-only; the
 online Agent budget remains a single verification, while the second rollout is
 reported separately as development counterfactual collection cost.
 
+The immutable run completed all 20 initial units and 10/10 operational pairs.
+Compensation recovered 9 cases, while retry recovered none. Retry was the
+evaluator utility winner once only because both candidates failed and retry
+avoided the larger final-distance regression caused by compensation. All four
+noise-condition initial rollouts succeeded, so the operational population had
+zero noise cases. Status is `INSUFFICIENT_ACTION_UTILITY_DIVERSITY`: the run
+does not permit selector fitting, Phase-D promotion, or a held-out claim.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
