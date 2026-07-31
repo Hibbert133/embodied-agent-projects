@@ -18,6 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 IMPLEMENTATION_PATHS = (
     Path("src/probemem/intervention_utility.py"),
     Path("src/probemem/intervention_selector.py"),
+    Path("src/probemem/intervention_memory.py"),
+    Path("src/probemem/intervention_memory_gate.py"),
     Path("src/evaluation/intervention_utility.py"),
     Path("scripts/run_probemem_paired_utility.py"),
     Path("scripts/run_probemem_v2_smoke.py"),
@@ -82,6 +84,10 @@ def main() -> int:
             ),
             config["noise_selection"]: _sha256(ROOT / config["noise_selection"]),
         }
+        if "verified_memory_snapshot" in config:
+            input_paths[config["verified_memory_snapshot"]] = _sha256(
+                ROOT / config["verified_memory_snapshot"]
+            )
         content = {
             "manifest_schema_version": 1,
             "protocol": config["protocol"],

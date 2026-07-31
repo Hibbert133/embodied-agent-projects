@@ -1,0 +1,81 @@
+{
+  "protocol": "probemem_coverage_aware_memory_development_v1",
+  "stage": "phase_c_verified_memory_applicability_extension",
+  "status": "development",
+  "seed_range": [980, 1059],
+  "heldout_seed_range": [900, 979],
+  "task": "push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "condition_cycle": ["fault_05"],
+  "candidates": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
+  "verified_memory_snapshot": "outputs/probemem_v2/verified_selected_intervention_episodes.jsonl",
+  "memory_applicability": {
+    "feature_schema": "intervention_applicability_signature_v1",
+    "feature_count": 13,
+    "normalization": "verified_snapshot_population_std",
+    "neighbor_count": 3,
+    "required_skill_agreement": "unanimous",
+    "coverage_radius": "90th_percentile_leave_one_out_nearest_distance",
+    "coverage_quantile": 0.9,
+    "outside_coverage_action": "ABSTAIN",
+    "conflict_action": "ABSTAIN",
+    "insufficient_budget_action": "ABSTAIN",
+    "reserved_verification_steps": 500
+  },
+  "stopping_rule": {
+    "target_paired_operational_units": 20,
+    "maximum_initial_units": 80,
+    "may_read_candidate_outcome": false,
+    "may_read_winner_label": false,
+    "stop_signal": "paired candidate executability only"
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "online_single_candidate_max_steps": 1064,
+    "evaluator_paired_collection_max_steps": 1564
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "random_seed_namespaces": {
+    "initial_rollout": 7601,
+    "diagnostic_probe": 7602,
+    "shared_paired_verification": 7603
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "utility_order": {
+    "primary": "ACCEPTED > INCONCLUSIVE > REJECTED",
+    "accepted_tie_break": "fewer steps, then lower final object-goal distance",
+    "failed_tie_break": "lower final object-goal distance, then fewer steps"
+  },
+  "paired_execution": {
+    "same_initial_rollout": true,
+    "same_probe_evidence": true,
+    "common_verification_random_numbers": true,
+    "counterfactual_outcomes_evaluator_only": true
+  },
+  "promotion_gate": {
+    "minimum_paired_operational_units": 20,
+    "minimum_memory_use_decisions": 5,
+    "minimum_selective_accepted_rate": 0.75,
+    "maximum_wrong_memory_application_rate": 0.20,
+    "maximum_agent_oracle_leakage_violations": 0,
+    "maximum_budget_overruns": 0
+  },
+  "scope": {
+    "api_calls": 0,
+    "rendering": false,
+    "principle_generation": false,
+    "heldout_claim": false,
+    "phase_d_promotion": false
+  }
+}

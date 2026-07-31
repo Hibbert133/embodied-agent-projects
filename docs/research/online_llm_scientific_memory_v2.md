@@ -192,6 +192,14 @@ memory. Operational retrieval is deliberately disabled pending a separately
 frozen applicability/abstention protocol, so this snapshot is infrastructure,
 not a memory-benefit claim or Phase-D promotion.
 
+The next Phase-C development extension freezes a coverage-aware gate over this
+snapshot. It uses snapshot-only normalization, a 90th-percentile leave-one-out
+coverage radius, three-neighbor unanimous skill support, and a full 500-step
+verification reservation. Queries outside coverage or with conflicting local
+experience must abstain. The rule is committed before fresh seeds 980--1059;
+held-out seeds 900--979 remain untouched, and Phase D stays blocked regardless
+of this extension until its own promotion requirements are satisfied.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

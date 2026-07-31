@@ -112,6 +112,14 @@ uses a versioned 13-feature schema and has operational retrieval disabled.
 This prepares a future Phase-C applicability protocol without overriding the
 failed Phase-D promotion gate.
 
+The next registered Phase-C extension freezes a coverage-aware retrieval gate
+before using fresh development seeds 980--1059. It derives feature scaling and
+a 90th-percentile leave-one-out coverage radius from the 13 accepted records,
+requires unanimous skill agreement among the three nearest verified episodes,
+and reserves 500 steps for fresh verification. Outside coverage, under local
+skill conflict, or under insufficient budget, it must `ABSTAIN`. Held-out seeds
+900--979 remain untouched.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

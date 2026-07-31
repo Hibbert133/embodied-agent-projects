@@ -25,6 +25,11 @@ from src.probemem.intervention_utility import (
     utility_verdict,
 )
 from src.probemem.intervention_memory import VerifiedInterventionEpisode
+from src.probemem.intervention_memory_gate import (
+    CoverageAwareInterventionMemory,
+    MemoryApplicabilityAction,
+    MemoryApplicabilityDecision,
+)
 from src.probemem.runtime import CaseBudget, ProbeMemState, ProbeMemStateMachine
 from src.probemem.tools import ToolRegistry, build_default_tool_registry
 
@@ -50,6 +55,9 @@ __all__ = [
     "UtilityVerdict",
     "VerifiedRecoveryEpisode",
     "VerifiedInterventionEpisode",
+    "CoverageAwareInterventionMemory",
+    "MemoryApplicabilityAction",
+    "MemoryApplicabilityDecision",
     "build_default_tool_registry",
     "prediction_relation",
     "utility_verdict",
