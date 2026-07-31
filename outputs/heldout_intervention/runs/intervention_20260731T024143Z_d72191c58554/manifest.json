@@ -1,0 +1,56 @@
+{
+  "manifest_schema_version": 1,
+  "protocol_id": "evidence_grounded_intervention_heldout_v1",
+  "protocol_version": 1,
+  "source_git_commit": "5f38aca299057f7d16b4473b6be6670e998f23e5",
+  "config_path": "configs/autoresearch/heldout_intervention_v1.json",
+  "config_sha256": "9309311aa8ab2e87fed453f1eb3352b0fdbd5a63565ba1672341bb2dc95747b9",
+  "execution_timestamp_utc": "2026-07-31T02:41:43+00:00",
+  "parent_allocation_run_id": "heldout_20260731T015847Z_a39271db862f",
+  "parent_allocation_manifest_id": "a39271db862f28574ad9eb47de4b2bf476950b58749b21baaac59117cf75981c",
+  "operational_units": 33,
+  "verification_seed_namespace": 4101,
+  "methods": [
+    "no_intervention",
+    "bias_compensation_for_all",
+    "stochastic_retry_for_all",
+    "passive_diagnosis_intervention",
+    "active_evidence_intervention",
+    "oracle_mechanism_intervention"
+  ],
+  "implementation_paths": {
+    "runner": "scripts/run_frozen_heldout_intervention.py",
+    "planner": "src/planner/evidence_grounded.py",
+    "rollout": "src/rollout/engine.py",
+    "recovery_policy": "src/autoresearch.py",
+    "metrics": "src/evaluation/allocation_metrics.py"
+  },
+  "implementation_git_blob_hashes": {
+    "runner": "62df736c96b8a65bb5045207fd2578353b14d5b0",
+    "planner": "259fad74ebe885e36cbebcd9307656e21b9514bc",
+    "rollout": "f64880b22b12bba9b352aca125115bfa7120c160",
+    "recovery_policy": "651aa5aff35e937e43deb7421c6018006a321630",
+    "metrics": "92959f39bdb861962ef01bd34087f83a77c1e4fa"
+  },
+  "source_artifact_sha256": {
+    "parent_manifest": "9c90ec6cd10ba8fc30d0eae9d99154cdc58132f1dc1fa7992609f06621a34100",
+    "parent_case_audit": "ff7852d367c4d6b1eb24ee218e398a0a20a03fd8318fb48cc10e72f31c297f34",
+    "parent_agent_evidence": "df2839d33da47dcbf11b6fbf5f1cdf346e3e10c97cc112a0fec668b58da69eb6",
+    "parent_probe_evidence": "7d6f0a77a5a826d378c0a1faabcc35e87bb460fdeaa926e8bd5667c45a17ea0b",
+    "recovery_policy_config": "9994acd40d97d157d615c09057c8e97288d3cb442d9a8b3bbf0348868e950144"
+  },
+  "dependencies": {
+    "python": "3.10.11",
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "gymnasium": "1.3.0",
+    "numpy": "2.2.6"
+  },
+  "platform": {
+    "system": "Windows",
+    "release": "10",
+    "machine": "AMD64"
+  },
+  "manifest_id": "d72191c58554208dff0ec0ef6768bd37639ed54f603ca4ce562f239dfe2dc922",
+  "experiment_run_id": "intervention_20260731T024143Z_d72191c58554"
+}

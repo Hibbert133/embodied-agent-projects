@@ -125,6 +125,16 @@ runtime, leakage boundary, and limitations are in the
 must test whether the changed belief improves a corrective intervention under a
 fresh matched verification rollout; no held-out threshold will be retuned.
 
+That fresh-verification test is now complete and produced an important negative
+result. Active evidence changed four mechanism beliefs and six executable
+interventions among seven probe requests, but improved verification in 0/7.
+Passive diagnosis-driven intervention recovered 30/33 cases, compared with 29/33
+for active evidence; the active method also spent 25.3 more additional environment
+steps per case. Even Oracle mechanism routing recovered only 29/33. The result
+rejects a simple `mechanism label -> intervention family` design and motivates
+candidate-specific intervention-utility evidence on a new development split. See
+the [P1 negative-result report](reports/evidence_grounded_intervention_negative.md).
+
 - Controlled single-axis perturbation experiments established reproducible
   failures, schema-v2 trajectories, real CSV summaries, and representative videos.
 - A bounded online GLM-5.2 pilot demonstrated that an external model can select a
