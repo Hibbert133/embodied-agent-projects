@@ -82,6 +82,14 @@ inconclusive and 4 rejected outcomes were excluded, and no unselected
 counterfactual was exported. Operational retrieval remains disabled until a
 new protocol freezes applicability and abstention behavior.
 
+The first frozen coverage-aware memory evaluation was also negative. On 20
+fresh operational cases from seeds 980--1040, the gate used memory twice and
+abstained 18 times (14 local skill conflicts, 4 outside historical coverage).
+Both memory uses failed while the alternative intervention succeeded, so the
+registered promotion gate failed. This shows that accepted-only storage and
+geometric coverage are necessary hygiene but not sufficient evidence of
+transferable intervention knowledge.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

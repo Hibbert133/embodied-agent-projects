@@ -200,6 +200,15 @@ experience must abstain. The rule is committed before fresh seeds 980--1059;
 held-out seeds 900--979 remain untouched, and Phase D stays blocked regardless
 of this extension until its own promotion requirements are satisfied.
 
+The fresh development run produced a strict negative result. Among 20
+operational queries, the gate used memory twice and abstained 18 times: 14 for
+conflicting nearby verified skills and 4 outside coverage. Neither memory use
+was accepted, and in both cases the alternative intervention was accepted.
+Thus accepted-only provenance, geometric coverage, and unanimous local support
+did not establish transferable action utility. The registered gate failed;
+parameters remain frozen, held-out seeds remain untouched, and Phase D remains
+blocked.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

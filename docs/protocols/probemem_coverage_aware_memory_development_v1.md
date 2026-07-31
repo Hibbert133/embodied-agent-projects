@@ -49,3 +49,18 @@ coverage quantile, neighbor count, agreement, features, or seed stream.
 Passing would support only a development coverage-aware episodic retrieval
 candidate. It would not promote Phase D principles, prove long-term
 self-improvement, or authorize held-out tuning.
+
+## Immutable result
+
+- Run ID: `probemem_paired_utility_20260731T184353Z_cca94dad8cbe`
+- Manifest ID: `12a47860c1b8f6b95858be5cf3d5b9e0b50ccdef017fd41102b445b40a63f9e9`
+- Source commit: `cca94dad8cbe002647ae50920ea5c557731ec33d`
+- Initial units scanned: 61
+- Operational pairs: 20
+- Memory uses: 2
+- Abstentions: 18 (14 conflict, 4 outside coverage)
+- Accepted memory uses: 0/2
+- Wrong-memory applications with accepted alternative: 2/2
+- Promotion gate: **FAILED**
+
+No coverage, neighbor, agreement, feature, or gate parameter was revised.

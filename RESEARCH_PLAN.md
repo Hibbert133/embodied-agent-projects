@@ -120,6 +120,14 @@ and reserves 500 steps for fresh verification. Outside coverage, under local
 skill conflict, or under insufficient budget, it must `ABSTAIN`. Held-out seeds
 900--979 remain untouched.
 
+The immutable run scanned 61 initial units and reached 20 operational pairs.
+The gate used memory in only 2 cases and abstained in 18; both uses were
+wrong-memory applications with an accepted alternative. Fourteen abstentions
+came from conflicting local skills and four from outside coverage. The
+promotion gate failed and no parameter was revised. This blocks any claim that
+accepted-only episodic similarity plus geometric coverage provides reliable
+intervention transfer.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
