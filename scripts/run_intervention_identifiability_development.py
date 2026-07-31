@@ -112,8 +112,18 @@ def validate_development_config(config: Mapping[str, Any]) -> None:
     if config.get("rendering") is not False or int(config.get("api_calls", -1)) != 0:
         raise ValueError("development timing audit cannot render or call an API")
     condition_ids = [str(item["condition_id"]) for item in config["conditions"]]
-    if condition_ids != [f"fault_{index:02d}" for index in range(1, 6)]:
-        raise ValueError("development audit must retain the five registered conditions")
+    registered_all = [f"fault_{index:02d}" for index in range(1, 6)]
+    if condition_ids not in (registered_all, ["fault_05"]):
+        raise ValueError("development audit must use all conditions or noise-only fault_05")
+    if config.get("study_kind") == "noise_stratum_extension":
+        seeds = set(
+            range(
+                int(config["seed_start"]),
+                int(config["seed_start"]) + int(config["num_seeds"]),
+            )
+        )
+        if condition_ids != ["fault_05"] or seeds & set(range(400, 410)):
+            raise ValueError("noise extension must use fault_05 and fresh post-409 seeds")
     handling = config.get("unavailable_candidate_handling")
     if int(config.get("protocol_version", 1)) >= 2 and (
         not isinstance(handling, Mapping)
@@ -300,7 +310,14 @@ def main() -> int:
         )
         passive_model = _load_passive_model()
         noise_std = float(json.loads(NOISE_SELECTION.read_text(encoding="utf-8"))["noise_std"])
-        faults = get_conditions(noise_std)
+        registered_condition_ids = {
+            str(item["condition_id"]) for item in config["conditions"]
+        }
+        faults = [
+            fault
+            for fault in get_conditions(noise_std)
+            if fault.condition_id in registered_condition_ids
+        ]
         mechanism_by_condition = {
             str(item["condition_id"]): str(item["evaluator_mechanism"])
             for item in config["conditions"]
@@ -487,6 +504,18 @@ def main() -> int:
                         "passive_prediction": passive.mechanism,
                         "probe_prediction": probe_prediction,
                         "probe_score": probe_score,
+                        "probe_relative_bias_std": float(
+                            probe_context["consistency"]["relative_bias_std"]
+                        ),
+                        "probe_mean_estimation_residual": float(
+                            probe_context["consistency"]["mean_estimation_residual"]
+                        ),
+                        "probe_sign_disagreement": 1.0
+                        - float(
+                            probe_context["consistency"][
+                                "dominant_axis_sign_agreement"
+                            ]
+                        ),
                         "phase_inconsistency": state.phase_response.phase_inconsistency,
                         "temporal_uncertainty": state.temporal_response.uncertainty,
                         "passive_candidate": passive_candidate,
