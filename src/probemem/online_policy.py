@@ -25,7 +25,11 @@ verified memory snapshot, registered discrete tools, and registered skills.
 Never infer or request injected fault truth. Never output continuous actions or
 skill parameters. Return exactly one JSON object matching response_schema and
 do not repeat fields listed in host_owned_envelope. If
-evidence is inadequate and a valid probe is unavailable, choose abstain."""
+evidence is inadequate and a valid probe is unavailable, choose abstain.
+For predicted_outcome.verification_status use exactly one uppercase enum:
+ACCEPTED, INCONCLUSIVE, or REJECTED. Never use pending, verified, success,
+stable_bias_compensated, or another invented status. expected_progress must be
+a JSON number, never a qualitative word."""
 
 MODEL_DECISION_FIELDS = {
     "memory_used",
@@ -217,6 +221,39 @@ class AnthropicProbeMemPolicy:
                     "principle_applicable": False,
                 },
             },
+            "valid_response_example": (
+                {
+                    "memory_used": False,
+                    "retrieved_principle_ids": [],
+                    "retrieved_episode_ids": [],
+                    "principle_applicable": False,
+                    "evidence_sufficient": False,
+                    "requested_tool": "request_diagnostic_probe",
+                    "mechanism_hypothesis": "insufficient_evidence",
+                    "selected_skill": None,
+                    "predicted_outcome": None,
+                    "reason": "Current evidence does not distinguish a stable from unstable response.",
+                    "confidence": "medium",
+                }
+                if ProbeMemTool.REQUEST_DIAGNOSTIC_PROBE in set(allowed_tools)
+                else {
+                    "memory_used": False,
+                    "retrieved_principle_ids": [],
+                    "retrieved_episode_ids": [],
+                    "principle_applicable": False,
+                    "evidence_sufficient": True,
+                    "requested_tool": "select_intervention_skill",
+                    "mechanism_hypothesis": "stable_bias",
+                    "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+                    "predicted_outcome": {
+                        "verification_status": "ACCEPTED",
+                        "expected_progress": 0.1,
+                        "expected_additional_steps": 500,
+                    },
+                    "reason": "Repeated probe evidence supports a bounded compensation skill.",
+                    "confidence": "medium",
+                }
+            ),
         }
         attempts: list[dict[str, Any]] = []
         maximum_attempts = 2 if allow_schema_repair else 1

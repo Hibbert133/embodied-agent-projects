@@ -80,7 +80,7 @@ class ProbeMemContractsTest(unittest.TestCase):
         decision.validate_context(
             evidence_id="evidence_1",
             snapshot=self.snapshot,
-            allowed_tools=self.registry.decision_tools(probe_available=True),
+            allowed_tools=self.registry.decision_tools(probe_available=False),
             allowed_skills=self.registry.available_skills(probe_collected=False),
         )
         extra = valid_decision(extra_oracle_label="fault_01")
@@ -178,7 +178,7 @@ class ProbeMemContractsTest(unittest.TestCase):
             decision_id="decision_1",
             evidence={"evidence_id": "evidence_1", "response_variance": 0.3},
             memory_snapshot=self.snapshot,
-            allowed_tools=self.registry.decision_tools(probe_available=True),
+            allowed_tools=self.registry.decision_tools(probe_available=False),
             allowed_skills=self.registry.available_skills(probe_collected=False),
             remaining_environment_steps=564,
             call_budget=ApiCallBudget(1),
@@ -189,6 +189,10 @@ class ProbeMemContractsTest(unittest.TestCase):
         body = json.loads(client.messages.requests[0]["messages"][0]["content"])
         self.assertIn("host_owned_envelope", body)
         self.assertNotIn("schema_version", body["response_schema"])
+        self.assertEqual(
+            body["valid_response_example"]["predicted_outcome"]["verification_status"],
+            "ACCEPTED",
+        )
         self.assertEqual(audit["status"], "valid")
 
     def test_state_machine_rejects_skipped_evidence(self) -> None:

@@ -31,10 +31,13 @@ def main() -> int:
             and not row["decision_trace"][0]["api"].get("schema_repair_used", False)
             for row in audits
         )
+        reasoning_failures = [
+            row for row in audits
+            if row["decision_trace"][-1]["api"]["status"] == "fail_closed"
+        ]
         fail_closed = sum(
-            row["decision_trace"][-1]["api"]["status"] == "fail_closed"
-            and row["decision_trace"][-1]["decision"]["requested_tool"] == "abstain"
-            for row in audits
+            row["decision_trace"][-1]["decision"]["requested_tool"] == "abstain"
+            for row in reasoning_failures
         )
         budget_overruns = sum(int(row["total_environment_steps"]) > int(config["budget"]["total_case_max_steps"]) for row in operational)
         unverified_interventions = sum(
@@ -45,7 +48,9 @@ def main() -> int:
         fresh = [row for row in operational if row["verification_status"] in {"ACCEPTED", "INCONCLUSIVE", "REJECTED"}]
         gate = config["promotion_gate"]
         validity = first_pass_valid / len(operational) if operational else 0.0
-        fail_closed_rate = fail_closed / len(audits) if audits else 0.0
+        fail_closed_rate = (
+            fail_closed / len(reasoning_failures) if reasoning_failures else 1.0
+        )
         checks = {
             "operational_case_count": len(operational) == int(gate["required_operational_cases"]),
             "first_pass_structured_validity": validity >= float(gate["minimum_first_pass_structured_validity"]),
@@ -71,6 +76,7 @@ def main() -> int:
             "api_calls": sum(int(row["api_calls"]) for row in operational),
             "first_pass_valid_decisions": first_pass_valid,
             "first_pass_structured_validity": validity,
+            "reasoning_failure_cases": len(reasoning_failures),
             "fail_closed_cases": fail_closed,
             "fail_closed_rate": fail_closed_rate,
             "probe_requests": sum(int(row["probe_steps"]) > 0 for row in operational),
