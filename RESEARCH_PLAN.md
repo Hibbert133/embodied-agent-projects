@@ -9,6 +9,12 @@ chronological scientific memory. Phase B first validates the constrained LLM
 tool boundary with an empty memory snapshot; memory benefit is not claimed until
 later registered phases pass their own gates.
 
+ProbeMem Phase B has now passed its bounded tool-integration gate on five
+development failures, with five fresh verification rollouts and no invalid skill
+execution or budget overrun. Phase C has begun with an accepted-only,
+chronological episodic-memory storage smoke. This is not yet evidence that memory
+improves recovery; the stateless/raw/verified comparison remains pending.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

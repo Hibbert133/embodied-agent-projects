@@ -1,0 +1,38 @@
+{
+  "protocol": "online_llm_scientific_memory_v2",
+  "stage": "phase_c_verified_episodic_development",
+  "status": "development",
+  "source_phase_b_manifest_id": "a76e003d13229e4932eae907b14c6fe67e5dc4a9cce7971ae4c9f063e327503b",
+  "seed_range": [720, 739],
+  "heldout_seed_range": [900, 979],
+  "methods": [
+    "stateless_online_llm",
+    "raw_episodic_retrieval_development_only",
+    "verified_episodic_retrieval"
+  ],
+  "retrieval": {
+    "maximum_episodes": 3,
+    "feature_names": [
+      "progress_to_goal",
+      "final_object_goal_distance",
+      "temporal_uncertainty",
+      "phase_inconsistency",
+      "estimated_drift_x",
+      "estimated_drift_y",
+      "normalized_residual_norm"
+    ],
+    "fixed_scales": [1.0, 0.3, 1.0, 1.0, 0.02, 0.02, 1.5]
+  },
+  "chronology": {
+    "strictly_earlier_episode_only": true,
+    "accepted_only_actionable_memory": true,
+    "raw_retrieval_development_only": true,
+    "future_access_is_fatal": true
+  },
+  "scope": {
+    "principle_abstraction": false,
+    "resonance": false,
+    "memory_forgetting": false,
+    "heldout_claim": false
+  }
+}
