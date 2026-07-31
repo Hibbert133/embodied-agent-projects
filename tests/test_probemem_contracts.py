@@ -140,6 +140,8 @@ class ProbeMemContractsTest(unittest.TestCase):
         self.assertIs(decision.requested_tool, ProbeMemTool.ABSTAIN)
         self.assertEqual(audit["status"], "fail_closed")
         self.assertEqual(budget.calls_used, 2)
+        self.assertEqual(audit["attempts"][0]["raw_response"], "not json")
+        self.assertIn("conditional_rules", audit["request_payload"])
 
     def test_valid_online_decision_contains_no_oracle_payload(self) -> None:
         client = FakeClient([json.dumps(valid_decision())])

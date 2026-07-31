@@ -108,12 +108,12 @@ class AnthropicProbeMemPolicy:
             "evidence_sufficient": "boolean",
             "requested_tool": "request_diagnostic_probe | select_intervention_skill | abstain",
             "mechanism_hypothesis": "stable_bias | stochastic_or_unstable_response | insufficient_evidence",
-            "selected_skill": "allowed skill or null",
-            "predicted_outcome": {
-                "verification_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
-                "expected_progress": "number in [-1, 1]",
-                "expected_additional_steps": "non-negative integer",
-            },
+            "selected_skill": "allowed skill only for select_intervention_skill; otherwise null",
+            "predicted_outcome": (
+                "object only for select_intervention_skill, with exactly: "
+                "verification_status, expected_progress, expected_additional_steps; "
+                "otherwise null"
+            ),
             "reason": "brief evidence-grounded reason",
             "confidence": "low | medium | high",
         }
@@ -175,6 +175,28 @@ class AnthropicProbeMemPolicy:
             "allowed_tools": [item.value for item in allowed_tools],
             "allowed_skills": [item.value for item in allowed_skills],
             "response_schema": self.response_schema(),
+            "conditional_rules": {
+                "request_diagnostic_probe": {
+                    "evidence_sufficient": False,
+                    "selected_skill": None,
+                    "predicted_outcome": None,
+                },
+                "select_intervention_skill": {
+                    "evidence_sufficient": True,
+                    "selected_skill": "one exact allowed_skills value",
+                    "predicted_outcome": "required object",
+                },
+                "abstain": {
+                    "selected_skill": "ABSTAIN or null",
+                    "predicted_outcome": None,
+                },
+                "empty_memory_snapshot": {
+                    "memory_used": False,
+                    "retrieved_principle_ids": [],
+                    "retrieved_episode_ids": [],
+                    "principle_applicable": False,
+                },
+            },
         }
         attempts: list[dict[str, Any]] = []
         maximum_attempts = 2 if allow_schema_repair else 1
@@ -189,8 +211,10 @@ class AnthropicProbeMemPolicy:
                         "instruction": "Return one corrected JSON object only.",
                     },
                 }
+            text = ""
+            request_audit: dict[str, Any] = {}
             try:
-                text, audit = self._request(request_payload, call_budget)
+                text, request_audit = self._request(request_payload, call_budget)
                 parsed = _extract_single_json(text)
                 decision = ProbeMemDecision.from_mapping(parsed)
                 decision.validate_context(
@@ -199,18 +223,31 @@ class AnthropicProbeMemPolicy:
                     allowed_tools=allowed_tools,
                     allowed_skills=allowed_skills,
                 )
-                attempts.append({**audit, "attempt_index": attempt_index, "valid": True, "structured_response": decision.to_dict()})
+                attempts.append({
+                    **request_audit,
+                    "attempt_index": attempt_index,
+                    "valid": True,
+                    "raw_response": text,
+                    "structured_response": decision.to_dict(),
+                })
                 return decision, {
                     "status": "valid",
                     "schema_repair_used": bool(attempt_index),
                     "request_payload_hash": hashlib.sha256(
                         json.dumps(payload, sort_keys=True).encode("utf-8")
                     ).hexdigest(),
+                    "request_payload": payload,
                     "attempts": attempts,
                 }
             except Exception as exc:
                 last_error = f"{type(exc).__name__}: {exc}"
-                attempts.append({"attempt_index": attempt_index, "valid": False, "error": last_error})
+                attempts.append({
+                    **request_audit,
+                    "attempt_index": attempt_index,
+                    "valid": False,
+                    "error": last_error,
+                    "raw_response": text,
+                })
                 if call_budget.calls_used >= call_budget.maximum_calls:
                     break
         decision = ProbeMemDecision.fail_closed(
@@ -226,5 +263,6 @@ class AnthropicProbeMemPolicy:
             "request_payload_hash": hashlib.sha256(
                 json.dumps(payload, sort_keys=True).encode("utf-8")
             ).hexdigest(),
+            "request_payload": payload,
             "attempts": attempts,
         }
