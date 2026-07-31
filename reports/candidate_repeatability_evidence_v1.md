@@ -61,6 +61,37 @@ changed by added evidence, using Agent-visible trajectories to identify when
 short-horizon ranking diverges from full-rollout utility. No new selector should
 be proposed until that mechanism is understood on development data.
 
+## Decision-change audit
+
+The preregistered audit covered all 11 decisions changed between k=1 and k=3:
+
+- helpful: 2;
+- neutral: 3;
+- harmful: 6;
+- robust-distance rank flip: 10;
+- prefix-success priority: 1.
+
+The only prefix-success-priority change was helpful (seed 636), whereas most
+changes were driven by small reversals in the robust-distance ordering. This is
+a descriptive clue, not a decision rule: one positive example cannot justify a
+new selector. It does show why the `mean + std` abstraction failed—the summary
+can reverse candidate rank without demonstrating task completion or durable
+contact behavior.
+
+## Representative verification videos
+
+Cases were selected mechanically by the largest absolute k=3 robust-score
+margin within each registered outcome class. Both candidates were rerendered
+using the exact frozen verification random stream, and success, steps, and final
+distance were checked against the source CSV.
+
+- helpful seed 636: compensation fails; retry succeeds;
+- harmful seed 620: k=3 changes from successful retry to failed compensation;
+- neutral seed 600: both candidates fail.
+
+The paired videos and their provenance are stored under
+`outputs/videos/candidate_repeatability_changes_v1/manifest.csv`.
+
 ## Execution note
 
 The foreground command wrapper returned exit 124 at its wall-time boundary,
