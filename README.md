@@ -135,6 +135,14 @@ rejects a simple `mechanism label -> intervention family` design and motivates
 candidate-specific intervention-utility evidence on a new development split. See
 the [P1 negative-result report](reports/evidence_grounded_intervention_negative.md).
 
+A subsequent development-only identifiability audit on seeds 400--409 found
+that mechanism class is a strong but incomplete intervention prior. All 27
+comparable stable-bias failures preferred compensation, while one of four
+comparable stochastic-noise failures still preferred compensation over retry.
+The complete result, including one unavailable compensation candidate, is in
+the [identifiability report](reports/intervention_identifiability_development_v2.md).
+No frozen held-out parameter was changed.
+
 - Controlled single-axis perturbation experiments established reproducible
   failures, schema-v2 trajectories, real CSV summaries, and representative videos.
 - A bounded online GLM-5.2 pilot demonstrated that an external model can select a
