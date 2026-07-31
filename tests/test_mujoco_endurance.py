@@ -4,10 +4,15 @@ from __future__ import annotations
 
 import unittest
 
-from scripts.check_mujoco_endurance import summarize_samples
+from scripts.check_mujoco_endurance import memory_mb, summarize_samples
 
 
 class MujocoEnduranceTest(unittest.TestCase):
+    def test_windows_memory_probe_returns_positive_values(self) -> None:
+        rss_mb, available_mb = memory_mb()
+        self.assertGreater(rss_mb, 0.0)
+        self.assertGreater(available_mb, 0.0)
+
     def test_summary_preserves_start_peak_final_and_minimum(self) -> None:
         summary = summarize_samples(
             [

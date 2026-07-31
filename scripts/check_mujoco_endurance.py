@@ -54,6 +54,18 @@ class _MemoryStatusEx(ctypes.Structure):
 
 
 def _windows_memory_mb() -> tuple[float, float]:
+    ctypes.windll.kernel32.GetCurrentProcess.argtypes = []
+    ctypes.windll.kernel32.GetCurrentProcess.restype = wintypes.HANDLE
+    ctypes.windll.psapi.GetProcessMemoryInfo.argtypes = [
+        wintypes.HANDLE,
+        ctypes.POINTER(_ProcessMemoryCounters),
+        wintypes.DWORD,
+    ]
+    ctypes.windll.psapi.GetProcessMemoryInfo.restype = wintypes.BOOL
+    ctypes.windll.kernel32.GlobalMemoryStatusEx.argtypes = [
+        ctypes.POINTER(_MemoryStatusEx)
+    ]
+    ctypes.windll.kernel32.GlobalMemoryStatusEx.restype = wintypes.BOOL
     counters = _ProcessMemoryCounters()
     counters.cb = ctypes.sizeof(counters)
     process = ctypes.windll.kernel32.GetCurrentProcess()
