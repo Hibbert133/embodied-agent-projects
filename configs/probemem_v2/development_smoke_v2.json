@@ -1,0 +1,55 @@
+{
+  "protocol": "online_llm_scientific_memory_v2",
+  "stage": "phase_b_tool_grounded_smoke",
+  "status": "development",
+  "task": "push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "model": "glm-5.2",
+  "seed_partitions": {
+    "smoke": [700, 719],
+    "development": [720, 799],
+    "validation": [800, 839],
+    "reserved": [840, 899],
+    "heldout": [900, 979]
+  },
+  "smoke": {
+    "target_operational_failures": 5,
+    "maximum_api_calls": 10,
+    "maximum_api_calls_per_case": 2,
+    "condition_cycle": ["fault_01", "fault_02", "fault_03", "fault_04", "fault_05"]
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps": 500,
+    "total_case_max_steps": 1064,
+    "maximum_diagnostic_probes": 1,
+    "maximum_fresh_verifications": 1
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "random_seed_namespaces": {
+    "initial_rollout": 6001,
+    "diagnostic_probe": 6002,
+    "fresh_verification": 6003,
+    "stochastic_retry": 6004
+  },
+  "memory": {
+    "snapshot_schema_version": 1,
+    "phase_b_mode": "empty_snapshot_only"
+  },
+  "promotion_gate": {
+    "required_operational_cases": 5,
+    "minimum_first_pass_structured_validity": 0.8,
+    "maximum_leakage_events": 0,
+    "maximum_invalid_skill_executions": 0,
+    "maximum_budget_overruns": 0,
+    "maximum_unverified_interventions": 0,
+    "required_fail_closed_rate": 1.0,
+    "required_fresh_verification_reproduction": 1.0
+  }
+}

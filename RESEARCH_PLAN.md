@@ -1,5 +1,14 @@
 # Budgeted Active Evidence Acquisition Research Roadmap
 
+## Versioned successor under development
+
+The completed and falsified v1 milestones below remain immutable. A separate
+development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
+now investigates whether action-conditional fresh verification can support
+chronological scientific memory. Phase B first validates the constrained LLM
+tool boundary with an empty memory snapshot; memory benefit is not claimed until
+later registered phases pass their own gates.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

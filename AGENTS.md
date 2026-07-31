@@ -221,3 +221,16 @@ For `pip check`, distinguish project-introduced conflicts from pre-existing host
 * Use `git commit -S` only when cryptographic signing is already configured.
 * `git commit -s` is DCO sign-off, not cryptographic signing.
 * Preserve negative and incomplete experiment results.
+
+## ProbeMem v2 development overlay
+
+Work on branch `research/probemem-v2` follows
+`docs/research/online_llm_scientific_memory_v2.md` and
+`configs/probemem_v2/development_smoke_v2.json`. This is a new development
+protocol and must not modify budgeted-evidence v1 artifacts or frozen seeds.
+
+In Phase B, the retrieval tools return a versioned empty memory snapshot. The
+only valid claim is tool-grounded online integration with leakage, budget,
+fail-closed, and fresh-verification audit. Do not describe it as learned memory.
+The LLM may select only registered tools and skills; deterministic host code
+owns continuous parameters, environment execution, verification, and audit.

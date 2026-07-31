@@ -1,5 +1,11 @@
 # Active Evidence Acquisition for Self-Improving Embodied Agents
 
+> **New development protocol:** [ProbeMem: Verification-Grounded Scientific
+> Memory for Online Embodied Agents](docs/research/online_llm_scientific_memory_v2.md)
+> studies whether a constrained online LLM Agent can reuse only freshly verified
+> intervention experience over a chronological deployment stream. This v2 work
+> is isolated from, and does not rewrite, the frozen budgeted-evidence v1 results.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
