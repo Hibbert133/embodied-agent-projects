@@ -164,6 +164,15 @@ against compensation failed, this is a retained negative result. Phase D is
 still blocked and no threshold revision, principle generation, or held-out run
 is permitted from this result.
 
+A post-hoc causal audit then examined the seven exclusive-recovery cases
+without new rollout or API interaction. The selector chose correctly in four
+and incorrectly in three. Because compensation-only outcomes occur below the
+threshold and a retry-only outcome occurs far above it, the relationship is
+non-monotonic rather than merely sensitive to threshold rounding. This finding
+motivates richer verification-grounded applicability evidence, but does not
+authorize feature search, threshold revision, or Phase-D promotion on the same
+data.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

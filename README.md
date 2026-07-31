@@ -58,6 +58,13 @@ the stronger fixed baseline, its preregistered promotion gate failed. The
 negative result is retained; the threshold was not revised and no memory
 principle was created.
 
+A no-new-rollout causal audit localized the failure: among 7 exclusive-recovery
+cases, the selector chose the accepted skill in 4 and the wrong skill in 3.
+The errors include both low-variation compensation-only cases and an extreme
+high-variation retry-only case, so intervention utility is not monotonic in the
+single registered feature. See the
+[causal-audit figure](outputs/probemem_v2/figures/noise_selector_causal_audit.png).
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

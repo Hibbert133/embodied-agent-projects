@@ -84,6 +84,15 @@ wins, 16 ties, 1 loss) but worse than always compensation (14/20; paired 1 win,
 blocked, the threshold is not revised on this stream, and no principle is
 promoted.
 
+The post-hoc causal audit used no new rollout or API call. Of 7 decisive
+exclusive-recovery cases, 4 were selected correctly and 3 incorrectly (seeds
+865, 883, and 884). Their absolute distances from the frozen threshold were
+0.946, 0.389, and 11.714, respectively. The extreme error rules out a purely
+local threshold-boundary explanation and supports the narrower conclusion that
+this one Agent-visible feature is insufficient for reliable intervention
+selection. This is an analysis result, not permission to refit on the same
+stream.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
