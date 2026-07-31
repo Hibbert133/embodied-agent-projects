@@ -39,3 +39,18 @@ No LLM API, rendering, memory write, principle generation, selector fitting, or
 held-out seed is permitted. If the target is not reached, or if no retry-only
 accepted recovery is observed, the result remains incomplete for an
 action-discriminative selector. Existing negative results are not overwritten.
+
+## Immutable result
+
+The completed development run is:
+
+- run ID: `probemem_paired_utility_20260731T173200Z_aceee1a6eca2`;
+- manifest ID: `f191171b0dd485a9e6f08f232acf17205d687c5de52cf7a83ebb39d542e3f76f`;
+- source commit: `aceee1a6eca2d3313bb0b7c71629d0828b5ada3d`.
+
+It scanned 58 initial units and stopped at the registered target of 20
+operational pairs. Compensation was accepted in 10/20 cases, retry in 14/20,
+and the evaluator-only per-case Oracle upper bound was 16/20. There were 2
+compensation-only, 6 retry-only, 8 both-accepted, and 4 neither-accepted cases.
+No selector, threshold, memory principle, API decision, or held-out claim was
+produced from this run.

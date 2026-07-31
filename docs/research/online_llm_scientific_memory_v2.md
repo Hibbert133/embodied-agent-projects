@@ -137,6 +137,16 @@ leaving no operational noise cases. This is an
 `INSUFFICIENT_ACTION_UTILITY_DIVERSITY` development result, not evidence for a
 selector, scientific-memory principle, or held-out promotion.
 
+The registered label-blind noise extension then scanned 58 fresh initial
+rollout units and stopped at 20 operational paired cases without inspecting
+candidate outcomes. Compensation was accepted in 10/20 cases, retry in 14/20,
+and an evaluator-only per-case Oracle could choose an accepted candidate in
+16/20. The partitions were 2 compensation-only, 6 retry-only, 8 both accepted,
+and 4 neither. This establishes the action-utility diversity needed to design a
+selector candidate, but it does not validate one. The feature ranking was
+post-hoc on only 8 decisive cases; Phase D remains blocked until a separately
+specified candidate is evaluated on fresh development data.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

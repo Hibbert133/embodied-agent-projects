@@ -1,0 +1,50 @@
+{
+  "full_collection_units": 58,
+  "operational_units": 20,
+  "paired_comparable_units": 20,
+  "winner_counts_oracle": {
+    "BOUNDED_PLANAR_COMPENSATION": 10,
+    "INDEPENDENT_STOCHASTIC_RETRY": 10
+  },
+  "accepted_recoveries": {
+    "BOUNDED_PLANAR_COMPENSATION": 10,
+    "INDEPENDENT_STOCHASTIC_RETRY": 14
+  },
+  "exclusive_recovery_cases": {
+    "BOUNDED_PLANAR_COMPENSATION": 2,
+    "INDEPENDENT_STOCHASTIC_RETRY": 6
+  },
+  "harmful_compensation_episode_ids": [
+    4,
+    9,
+    54
+  ],
+  "operational_condition_counts_oracle": {
+    "fault_05": 20
+  },
+  "operational_noise_cases": 20,
+  "recovery_selector_improvement_available": true,
+  "experiment_interpretation_status": "READY_FOR_DEVELOPMENT_SELECTOR_TEST",
+  "experiment_run_id": "probemem_paired_utility_20260731T173200Z_aceee1a6eca2",
+  "manifest_id": "f191171b0dd485a9e6f08f232acf17205d687c5de52cf7a83ebb39d542e3f76f",
+  "source_git_commit": "aceee1a6eca2d3313bb0b7c71629d0828b5ada3d",
+  "coverage_target": 20,
+  "coverage_target_reached": true,
+  "outcome_partition_counts": {
+    "COMPENSATION_ONLY_RECOVERY": 2,
+    "RETRY_ONLY_RECOVERY": 6,
+    "BOTH_RECOVER": 8,
+    "NEITHER_RECOVERS": 4
+  },
+  "oracle_skill_selection_recoveries": 16,
+  "oracle_skill_selection_rate": 0.8,
+  "maximum_gain_over_always_retry": 2,
+  "maximum_gain_over_always_compensation": 6,
+  "decisive_recovery_cases": 8,
+  "agent_oracle_leakage_violations": 0,
+  "selector_fitted": false,
+  "principles_generated": 0,
+  "api_calls": 0,
+  "heldout_claim_eligible": false,
+  "next_status": "READY_FOR_DEVELOPMENT_SELECTOR_CANDIDATE"
+}

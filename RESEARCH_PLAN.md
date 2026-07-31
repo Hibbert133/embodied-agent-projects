@@ -66,6 +66,16 @@ or 80 initial units. The stopping rule cannot read candidate outcomes or winner
 labels. This is a coverage repair for the incomplete development population,
 not held-out tuning.
 
+The completed run scanned 58 initial units before reaching 20 operational
+pairs. Compensation was accepted in 10/20, independent retry in 14/20, and the
+evaluator-only per-case Oracle upper bound was 16/20. The outcome partitions
+were 2 compensation-only, 6 retry-only, 8 both accepted, and 4 neither. A
+post-hoc audit on the 8 decisive cases ranked `probe_relative_bias_std` highest
+(ROC AUC 0.917 after post-hoc direction selection), but the audit contains only
+2 compensation-only negatives. No selector threshold or principle was fit;
+any selector candidate must be specified separately and evaluated on fresh
+development seeds.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

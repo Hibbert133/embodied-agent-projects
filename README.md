@@ -42,6 +42,15 @@ case where retry merely avoided harmful compensation. No stochastic-noise case
 entered the operational population. The result is therefore
 `INSUFFICIENT_ACTION_UTILITY_DIVERSITY`; no selector or memory principle was fit.
 
+A subsequent label-blind noise-coverage run scanned 58 fresh initial rollout
+units and stopped after collecting 20 operational paired cases. Bounded planar
+compensation was accepted in 10/20 cases, independent stochastic retry in
+14/20, and an evaluator-only per-case Oracle could select an accepted candidate
+in 16/20. The partitions were 2 compensation-only, 6 retry-only, 8 both
+accepted, and 4 neither accepted. This establishes development action-utility
+diversity, not a learned selector: the exploratory feature audit used only the
+8 decisive cases and did not fit or freeze a threshold.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
