@@ -47,6 +47,8 @@ class ProbeMemEpisodicMemoryTest(unittest.TestCase):
         memory.record(experience(2, "ACCEPTED"))
         snapshot = memory.snapshot_before(3)
         self.assertEqual(snapshot.verified_episode_ids, ("record_2",))
+        self.assertEqual(snapshot.retrievable_episode_ids, ("record_2",))
+        self.assertEqual(snapshot.memory_mode, "verified_episodic")
 
     def test_rejects_nonaccepted_verified_episode(self) -> None:
         with self.assertRaisesRegex(ValueError, "only freshly ACCEPTED"):
@@ -71,6 +73,9 @@ class ProbeMemEpisodicMemoryTest(unittest.TestCase):
             signature(2), current_episode_id=2, limit=1, development_only=True
         )
         self.assertEqual(rows[0].observed_verification_status, "REJECTED")
+        snapshot = memory.raw_snapshot_before(2)
+        self.assertEqual(snapshot.memory_mode, "raw_development")
+        self.assertEqual(snapshot.retrievable_episode_ids, ("record_1",))
 
     def test_oracle_fields_cannot_build_signature(self) -> None:
         with self.assertRaisesRegex(ValueError, "Oracle-only"):

@@ -200,6 +200,22 @@ class ProbeMemContractsTest(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "invalid ProbeMem transition"):
             machine.advance(ProbeMemState.LLM_DECISION)
 
+    def test_online_policy_rejects_memory_records_outside_snapshot(self) -> None:
+        client = FakeClient([json.dumps(valid_model_body())])
+        policy = AnthropicProbeMemPolicy(client=client)
+        with self.assertRaisesRegex(ValueError, "differ from the memory snapshot"):
+            policy.decide(
+                decision_id="decision_1",
+                evidence={"evidence_id": "evidence_1"},
+                memory_snapshot=self.snapshot,
+                allowed_tools=self.registry.decision_tools(probe_available=False),
+                allowed_skills=self.registry.available_skills(probe_collected=False),
+                remaining_environment_steps=500,
+                call_budget=ApiCallBudget(1),
+                retrieved_episode_records=[{"record_id": "future_record"}],
+            )
+        self.assertEqual(client.messages.requests, [])
+
 
 if __name__ == "__main__":
     unittest.main()

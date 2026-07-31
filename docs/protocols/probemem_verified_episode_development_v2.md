@@ -53,5 +53,19 @@ cost, API latency/tokens, and full manifest provenance. Analysis must report
 memory coverage, retrieval hit rate, rejected-record exposure for the raw
 ablation, recovery outcome, and interaction cost over episode index.
 
+## Frozen development execution
+
+The executable stream is 20 seeds (720–739) crossed with a five-condition
+cycle. The three methods share each initial rollout and then maintain separate,
+chronological memory states. The registered upper bounds are 120 API calls
+(at most two per method-case) and 1064 environment steps per method-case:
+500 initial, 64 probe, and 500 reserved for fresh verification. Randomness for
+the initial rollout, diagnostic probe, fresh verification, and stochastic retry
+uses distinct recorded namespaces.
+
+This is a development comparison, not a held-out result. Seeds 900–979 remain
+untouched. The immutable manifest must be generated from a clean committed
+worktree before execution, and every output row must reference that manifest.
+
 Phase D principle abstraction remains blocked until this comparison is stable
 and its result—positive or negative—is preserved.

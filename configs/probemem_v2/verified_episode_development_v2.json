@@ -5,6 +5,32 @@
   "source_phase_b_manifest_id": "a76e003d13229e4932eae907b14c6fe67e5dc4a9cce7971ae4c9f063e327503b",
   "seed_range": [720, 739],
   "heldout_seed_range": [900, 979],
+  "task": "push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "model": "glm-5.2",
+  "condition_cycle": ["fault_01", "fault_02", "fault_03", "fault_04", "fault_05"],
+  "api_budget": {
+    "maximum_calls": 120,
+    "maximum_calls_per_method_case": 2
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps": 500,
+    "total_case_max_steps": 1064
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "random_seed_namespaces": {
+    "initial_rollout": 6201,
+    "diagnostic_probe": 6202,
+    "fresh_verification": 6203,
+    "stochastic_retry": 6204
+  },
   "methods": [
     "stateless_online_llm",
     "raw_episodic_retrieval_development_only",

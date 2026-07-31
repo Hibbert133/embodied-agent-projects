@@ -67,9 +67,11 @@ class MemorySnapshot:
     created_before_episode_id: int
     verified_principle_ids: tuple[str, ...] = ()
     verified_episode_ids: tuple[str, ...] = ()
+    retrievable_episode_ids: tuple[str, ...] = ()
+    memory_mode: str = "empty"
 
     def __post_init__(self) -> None:
-        if self.schema_version != MEMORY_SNAPSHOT_SCHEMA_VERSION:
+        if self.schema_version not in {MEMORY_SNAPSHOT_SCHEMA_VERSION, 2}:
             raise ValueError("unsupported memory snapshot schema version")
         if not self.snapshot_id.strip() or self.created_before_episode_id <= 0:
             raise ValueError("memory snapshot requires causal provenance")
@@ -77,6 +79,16 @@ class MemorySnapshot:
             raise ValueError("principle IDs must be unique")
         if len(set(self.verified_episode_ids)) != len(self.verified_episode_ids):
             raise ValueError("episode IDs must be unique")
+        if len(set(self.retrievable_episode_ids)) != len(self.retrievable_episode_ids):
+            raise ValueError("retrievable episode IDs must be unique")
+        if self.memory_mode not in {"empty", "raw_development", "verified_episodic"}:
+            raise ValueError("unsupported memory snapshot mode")
+        if self.schema_version == 1 and self.retrievable_episode_ids:
+            raise ValueError("schema-v1 snapshots cannot expose generic retrieval IDs")
+        if self.memory_mode == "verified_episodic" and not (
+            set(self.retrievable_episode_ids) <= set(self.verified_episode_ids)
+        ):
+            raise ValueError("verified retrieval may contain only verified episode IDs")
 
     @classmethod
     def empty_for_episode(cls, episode_id: int) -> "MemorySnapshot":
@@ -88,6 +100,10 @@ class MemorySnapshot:
 
     def to_dict(self) -> dict[str, Any]:
         return asdict(self)
+
+    @property
+    def available_episode_ids(self) -> tuple[str, ...]:
+        return self.retrievable_episode_ids or self.verified_episode_ids
 
 
 @dataclass(frozen=True)
@@ -148,7 +164,7 @@ class ProbeMemDecision:
             raise ValueError("decision provenance does not match the current evidence context")
         if not set(self.retrieved_principle_ids) <= set(snapshot.verified_principle_ids):
             raise ValueError("decision cites principles outside the current memory snapshot")
-        if not set(self.retrieved_episode_ids) <= set(snapshot.verified_episode_ids):
+        if not set(self.retrieved_episode_ids) <= set(snapshot.available_episode_ids):
             raise ValueError("decision cites episodes outside the current memory snapshot")
         if self.requested_tool not in set(allowed_tools):
             raise ValueError("requested tool is not allowed in the current state")

@@ -148,6 +148,21 @@ class RetrievedEpisode:
     distance: float
     selected_skill: InterventionSkill
     observed_verification_status: str
+    predicted_verification_status: str
+    interaction_cost: int
+    evidence_features: Mapping[str, float]
+
+    def to_prompt_dict(self) -> dict[str, Any]:
+        return {
+            "record_id": self.record_id,
+            "source_episode_id": self.source_episode_id,
+            "distance": self.distance,
+            "selected_skill": self.selected_skill.value,
+            "predicted_verification_status": self.predicted_verification_status,
+            "observed_verification_status": self.observed_verification_status,
+            "interaction_cost": self.interaction_cost,
+            "evidence_features": dict(self.evidence_features),
+        }
 
 
 def signature_distance(
@@ -190,10 +205,24 @@ class ChronologicalEpisodeMemory:
             raise ValueError("snapshot target episode must be positive")
         eligible = tuple(item for item in self._verified if item.episode_id < episode_id)
         return MemorySnapshot(
-            schema_version=1,
+            schema_version=2,
             snapshot_id=f"verified_memory_before_episode_{episode_id:04d}",
             created_before_episode_id=episode_id,
             verified_episode_ids=tuple(item.record_id for item in eligible),
+            retrievable_episode_ids=tuple(item.record_id for item in eligible),
+            memory_mode="verified_episodic",
+        )
+
+    def raw_snapshot_before(self, episode_id: int) -> MemorySnapshot:
+        if episode_id <= 0:
+            raise ValueError("snapshot target episode must be positive")
+        eligible = tuple(item for item in self._audit if item.source_episode_id < episode_id)
+        return MemorySnapshot(
+            schema_version=2,
+            snapshot_id=f"raw_development_memory_before_episode_{episode_id:04d}",
+            created_before_episode_id=episode_id,
+            retrievable_episode_ids=tuple(item.record_id for item in eligible),
+            memory_mode="raw_development",
         )
 
     def retrieve_verified(
@@ -217,6 +246,11 @@ class ChronologicalEpisodeMemory:
                 distance=signature_distance(query, item.experience.signature, scales=self.scales),
                 selected_skill=item.experience.selected_skill,
                 observed_verification_status=item.experience.observed_verification_status,
+                predicted_verification_status=item.experience.predicted_verification_status,
+                interaction_cost=item.experience.interaction_cost,
+                evidence_features=dict(
+                    zip(SIGNATURE_FEATURES, item.experience.signature.values)
+                ),
             )
             for item in ranked
         )
@@ -249,6 +283,9 @@ class ChronologicalEpisodeMemory:
                 distance=signature_distance(query, item.signature, scales=self.scales),
                 selected_skill=item.selected_skill,
                 observed_verification_status=item.observed_verification_status,
+                predicted_verification_status=item.predicted_verification_status,
+                interaction_cost=item.interaction_cost,
+                evidence_features=dict(zip(SIGNATURE_FEATURES, item.signature.values)),
             )
             for item in ranked
         )
