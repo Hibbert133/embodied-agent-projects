@@ -107,6 +107,24 @@ not the choice of language model.
 The repository preserves positive and negative results rather than presenting
 integration pilots as general performance claims.
 
+### Preliminary frozen result: budgeted evidence allocation
+
+The first preregistered Phase-2 run is complete on 50 rollout units (seeds
+330--339 across five registered execution conditions); 33 failed initial
+rollouts formed the operational decision population. The frozen
+phase-conditioned gate matched Always-probe mechanism diagnosis (33/33) while
+requesting 7 rather than 33 probes: 448 versus 2,112 diagnostic environment
+steps, a 78.8% probe-cost reduction. The evaluator-only probe-need score achieved
+ROC AUC 0.966 and PR AUC 0.830 with 4 positive and 29 negative cases.
+
+This is an evidence-allocation result, not yet a recovery result. All positive
+probe-need cases were stochastic-noise cases, and three of seven requested probes
+were unnecessary under the strict label. The exact manifest, paired bootstrap,
+runtime, leakage boundary, and limitations are in the
+[Milestone-A report](reports/evidence_allocation_milestone_a.md). The next claim
+must test whether the changed belief improves a corrective intervention under a
+fresh matched verification rollout; no held-out threshold will be retuned.
+
 - Controlled single-axis perturbation experiments established reproducible
   failures, schema-v2 trajectories, real CSV summaries, and representative videos.
 - A bounded online GLM-5.2 pilot demonstrated that an external model can select a

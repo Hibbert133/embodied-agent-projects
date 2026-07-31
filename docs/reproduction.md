@@ -2,6 +2,21 @@
 
 Run all commands from the repository root with Python 3.10.
 
+## Frozen Phase-2 evidence allocation
+
+Generate a new immutable manifest only from a clean committed worktree. Never
+reuse the literal run ID below for changed code or dependencies.
+
+```powershell
+python scripts/generate_heldout_manifest.py
+python scripts/run_frozen_heldout_allocation.py --manifest outputs/heldout_allocation/runs/<new-run-id>/manifest.json
+python scripts/plot_heldout_allocation.py --run-dir outputs/heldout_allocation/runs/<new-run-id> --output outputs/figures/evidence_allocation_frontier.png
+```
+
+The completed registered run is
+`heldout_20260731T015847Z_a39271db862f`; its source commit is
+`c656ad787e5d77174ecbf8e76cdaf9c1b6ac1dab`.
+
 ## Installation and baseline
 
 ```powershell
