@@ -23,8 +23,23 @@ SYSTEM_PROMPT = """You are an attempt-level embodied research Agent above a
 fixed robot policy. Use only the supplied Agent-visible evidence, empty or
 verified memory snapshot, registered discrete tools, and registered skills.
 Never infer or request injected fault truth. Never output continuous actions or
-skill parameters. Return exactly one JSON object matching response_schema. If
+skill parameters. Return exactly one JSON object matching response_schema and
+do not repeat fields listed in host_owned_envelope. If
 evidence is inadequate and a valid probe is unavailable, choose abstain."""
+
+MODEL_DECISION_FIELDS = {
+    "memory_used",
+    "retrieved_principle_ids",
+    "retrieved_episode_ids",
+    "principle_applicable",
+    "evidence_sufficient",
+    "requested_tool",
+    "mechanism_hypothesis",
+    "selected_skill",
+    "predicted_outcome",
+    "reason",
+    "confidence",
+}
 
 
 def _extract_single_json(text: str) -> Mapping[str, Any]:
@@ -97,10 +112,6 @@ class AnthropicProbeMemPolicy:
     @staticmethod
     def response_schema() -> dict[str, Any]:
         return {
-            "schema_version": 1,
-            "decision_id": "copy current decision_id",
-            "evidence_id": "copy current evidence_id",
-            "memory_snapshot_id": "copy current memory_snapshot_id",
             "memory_used": "boolean; true iff retrieved IDs are non-empty",
             "retrieved_principle_ids": ["only IDs present in memory snapshot"],
             "retrieved_episode_ids": ["only IDs present in memory snapshot"],
@@ -169,11 +180,20 @@ class AnthropicProbeMemPolicy:
             "task": "select the next bounded ProbeMem tool at attempt level",
             "prompt_version": PROMPT_VERSION,
             "decision_id": decision_id,
+            "evidence_id": str(evidence["evidence_id"]),
+            "memory_snapshot_id": memory_snapshot.snapshot_id,
             "agent_visible_evidence": dict(evidence),
             "memory_snapshot": memory_snapshot.to_dict(),
             "remaining_environment_steps": int(remaining_environment_steps),
             "allowed_tools": [item.value for item in allowed_tools],
             "allowed_skills": [item.value for item in allowed_skills],
+            "host_owned_envelope": {
+                "schema_version": 1,
+                "decision_id": decision_id,
+                "evidence_id": str(evidence["evidence_id"]),
+                "memory_snapshot_id": memory_snapshot.snapshot_id,
+                "instruction": "These fields are added by the host. Do not return them.",
+            },
             "response_schema": self.response_schema(),
             "conditional_rules": {
                 "request_diagnostic_probe": {
@@ -215,8 +235,19 @@ class AnthropicProbeMemPolicy:
             request_audit: dict[str, Any] = {}
             try:
                 text, request_audit = self._request(request_payload, call_budget)
-                parsed = _extract_single_json(text)
-                decision = ProbeMemDecision.from_mapping(parsed)
+                model_body = dict(_extract_single_json(text))
+                if set(model_body) != MODEL_DECISION_FIELDS:
+                    raise ValueError(
+                        f"model decision fields must be exactly {sorted(MODEL_DECISION_FIELDS)}"
+                    )
+                enveloped = {
+                    "schema_version": 1,
+                    "decision_id": decision_id,
+                    "evidence_id": str(evidence["evidence_id"]),
+                    "memory_snapshot_id": memory_snapshot.snapshot_id,
+                    **model_body,
+                }
+                decision = ProbeMemDecision.from_mapping(enveloped)
                 decision.validate_context(
                     evidence_id=str(evidence["evidence_id"]),
                     snapshot=memory_snapshot,

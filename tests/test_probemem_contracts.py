@@ -41,6 +41,14 @@ def valid_decision(**changes: object) -> dict[str, object]:
     return value
 
 
+def valid_model_body(**changes: object) -> dict[str, object]:
+    value = valid_decision()
+    for field in ("schema_version", "decision_id", "evidence_id", "memory_snapshot_id"):
+        value.pop(field)
+    value.update(changes)
+    return value
+
+
 class FakeMessages:
     def __init__(self, responses: list[str]) -> None:
         self.responses = responses
@@ -80,7 +88,7 @@ class ProbeMemContractsTest(unittest.TestCase):
             ProbeMemDecision.from_mapping(extra)
 
     def test_rejects_nested_oracle_evidence_before_api_call(self) -> None:
-        client = FakeClient([json.dumps(valid_decision())])
+        client = FakeClient([json.dumps(valid_model_body())])
         policy = AnthropicProbeMemPolicy(client=client)
         with self.assertRaisesRegex(ValueError, "Oracle-only"):
             policy.decide(
@@ -144,7 +152,7 @@ class ProbeMemContractsTest(unittest.TestCase):
         self.assertIn("conditional_rules", audit["request_payload"])
 
     def test_valid_online_decision_contains_no_oracle_payload(self) -> None:
-        client = FakeClient([json.dumps(valid_decision())])
+        client = FakeClient([json.dumps(valid_model_body())])
         policy = AnthropicProbeMemPolicy(client=client)
         decision, audit = policy.decide(
             decision_id="decision_1",
@@ -162,6 +170,26 @@ class ProbeMemContractsTest(unittest.TestCase):
         self.assertNotIn("perturbation", serialized)
         self.assertEqual(audit["status"], "valid")
         self.assertNotIn("api_key", json.dumps(audit))
+
+    def test_host_adds_provenance_envelope_to_model_body(self) -> None:
+        client = FakeClient([json.dumps(valid_model_body())])
+        policy = AnthropicProbeMemPolicy(client=client)
+        decision, audit = policy.decide(
+            decision_id="decision_1",
+            evidence={"evidence_id": "evidence_1", "response_variance": 0.3},
+            memory_snapshot=self.snapshot,
+            allowed_tools=self.registry.decision_tools(probe_available=True),
+            allowed_skills=self.registry.available_skills(probe_collected=False),
+            remaining_environment_steps=564,
+            call_budget=ApiCallBudget(1),
+        )
+        self.assertEqual(decision.schema_version, 1)
+        self.assertEqual(decision.decision_id, "decision_1")
+        self.assertEqual(decision.evidence_id, "evidence_1")
+        body = json.loads(client.messages.requests[0]["messages"][0]["content"])
+        self.assertIn("host_owned_envelope", body)
+        self.assertNotIn("schema_version", body["response_schema"])
+        self.assertEqual(audit["status"], "valid")
 
     def test_state_machine_rejects_skipped_evidence(self) -> None:
         machine = ProbeMemStateMachine()

@@ -55,6 +55,12 @@ def main() -> int:
             "fail_closed_behavior": fail_closed_rate >= float(gate["required_fail_closed_rate"]),
             "fresh_verification_reproduction": bool(fresh),
         }
+        raw_responses_retained = all(
+            "raw_response" in attempt
+            for row in audits
+            for trace in row["decision_trace"]
+            for attempt in trace["api"]["attempts"]
+        )
         evaluation = {
             "experiment_run_id": manifest["experiment_run_id"],
             "manifest_id": manifest["manifest_id"],
@@ -72,9 +78,10 @@ def main() -> int:
             "budget_overruns": budget_overruns,
             "unverified_interventions": unverified_interventions,
             "promotion_checks": checks,
-            "audit_limitation": (
-                "This first run predates raw invalid-response retention; validation "
-                "errors and response hashes are retained, but invalid response text is not."
+            "raw_responses_retained": raw_responses_retained,
+            "audit_limitation": None if raw_responses_retained else (
+                "This run predates raw invalid-response retention; validation errors "
+                "and response hashes are retained, but invalid response text is not."
             ),
         }
         path = run_dir / "promotion_evaluation.json"
