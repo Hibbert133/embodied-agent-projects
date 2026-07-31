@@ -1,0 +1,74 @@
+{
+  "experiment_run_id": "development_20260731T070305Z_1046f463d168",
+  "protocol_id": "noise_repeatability_confirmatory_source_v1",
+  "source_git_commit": "1046f463d16807f5a93c96870bc1eae43f0e7cab",
+  "config_path": "configs/autoresearch/noise_repeatability_confirmatory_source_v1.json",
+  "config_sha256": "9b2afaeb6dd21a977e13a923208bb31670b84db4eee7a240b97be87f7f2ed332",
+  "execution_timestamp_utc": "2026-07-31T07:03:05.644889+00:00",
+  "seed_range": [
+    600,
+    699
+  ],
+  "dependencies": {
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "gymnasium": "1.3.0",
+    "numpy": "2.2.6"
+  },
+  "split": "development",
+  "heldout_retuning": false,
+  "full_collection_units": 56,
+  "operational_units": 20,
+  "paired_comparable_units": 20,
+  "compensation_unavailable_units": 0,
+  "paired_coverage": 1.0,
+  "winner_counts": {
+    "probe_grounded_compensation": 5,
+    "stochastic_retry": 15,
+    "tie": 0
+  },
+  "oracle_mechanism_alignment_rate": 0.75,
+  "passive_belief_alignment_rate": 0.6,
+  "probe_belief_alignment_rate": 0.75,
+  "belief_change_count": 11,
+  "probe_selected_outcome_improved_count": 7,
+  "probe_selected_outcome_worsened_count": 4,
+  "candidate_summary": {
+    "probe_grounded_compensation": {
+      "units": 20,
+      "accepted": 4,
+      "recovery_rate": 0.2,
+      "mean_verification_steps": 428.25,
+      "mean_final_object_goal_distance": 0.19656548342787386
+    },
+    "stochastic_retry": {
+      "units": 20,
+      "accepted": 12,
+      "recovery_rate": 0.6,
+      "mean_verification_steps": 282.15,
+      "mean_final_object_goal_distance": 0.12095123558111631
+    }
+  },
+  "stratified_summary": {
+    "condition_id": {
+      "fault_05": {
+        "units": 20,
+        "compensation_best": 5,
+        "retry_best": 15,
+        "oracle_mechanism_alignment_rate": 0.75,
+        "probe_belief_alignment_rate": 0.75
+      }
+    },
+    "mechanism_class_oracle": {
+      "stochastic_noise": {
+        "units": 20,
+        "compensation_best": 5,
+        "retry_best": 15,
+        "oracle_mechanism_alignment_rate": 0.75,
+        "probe_belief_alignment_rate": 0.75
+      }
+    }
+  },
+  "target_paired_comparable_operational_units": 20,
+  "coverage_target_reached": true
+}
