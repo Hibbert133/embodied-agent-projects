@@ -1,229 +1,223 @@
-# Embodied Agent Research Project Instructions
-
-## Role
-
-You are a **Research Engineer / PhD Research Assistant** working on embodied AI
-and robotic agents. Do not describe yourself as a coding assistant.
-
-Your purpose is not merely to complete implementation tasks. Help build a
-credible research project for PhD applications and faculty outreach. Every
-change must consider:
-
-1. scientific value;
-2. experimental credibility;
-3. reproducibility;
-4. narrative coherence;
-5. value for a CV, research statement, technical report, and project interview.
-
-## Researcher Background and Audience
-
-The researcher has prior experience in computer vision, time-series anomaly
-detection, Transformer systems, LLM inference optimization, NPU acceleration,
-and kernel optimization. They are transitioning toward embodied AI agents and
-robotic agents and intend to apply to relevant PhD programs in China and abroad.
-
-Communicate at a research-engineering level. Explain robotics-specific
-assumptions clearly without oversimplifying systems or ML concepts.
+# AGENTS.md
 
 ## Project Mission
 
-The project is an **Active-Evidence Embodied Research Agent**.
+This repository studies budgeted active evidence gathering for an embodied research agent operating above a fixed low-level robot policy.
 
-The central question is:
+The first-version research question is:
 
-> How can an embodied agent actively acquire diagnostic evidence after a failed
-> rollout, generate hypotheses about latent execution failures, and improve
-> subsequent rollouts through iterative reasoning?
+> Given a fixed diagnostic probe, can the Agent decide whether and when the expected diagnostic value justifies its interaction cost?
 
-The project must not become a MetaWorld tutorial, a collection of attractive
-demos, or an unstructured reinforcement-learning baseline. It should develop a
-coherent chain:
+The Agent performs attempt-level online adaptation:
 
 ```text
-problem definition
--> reproducible baseline
--> controlled failure
--> uncertainty estimation and evidence decision
--> active diagnostic probe
--> mechanism hypothesis revision
--> corrective intervention and verification
--> ablation and evaluation
--> research report
+INITIAL_ROLLOUT
+→ BUILD_EVIDENCE
+→ ALLOCATE_PROBE_BUDGET
+→ OPTIONAL_PROBE
+→ UPDATE_BELIEF
+→ SELECT_INTERVENTION
+→ FRESH_VERIFICATION
+→ OPTIONAL_MEMORY_WRITE
 ```
 
-## Current Technical Context
+The project does not claim step-level planning, continuous control, multi-probe selection, online policy-weight learning, VLA improvement, or safety-aware planning.
 
-- Environment: MetaWorld 3.1.1 and MuJoCo.
-- Current task: `push-v3` with `SawyerPushV3Policy`.
-- Trajectories: schema v2 with aligned
-  `state_t + commanded_action_t -> state_t+1` transitions.
-- Controlled failures: masked action scale, noise, and single-axis bias.
-- Data boundary: leakage-safe Agent View versus audit-only Oracle View.
-- Intervention baselines: bounded random, deterministic, OpenAI-compatible,
-  Anthropic-compatible, and Oracle audit planners.
-- Current evidence: the online utility Agent matched a simple greedy rule on six
-  tuning cases and underperformed fixed compensation; a later horizon study found
-  candidate-ranking reversal across stochastic execution realizations.
-- Current phase: architecture and uncertainty-aware evidence allocation.
+## Source of Truth
 
-The bounded LLM planner is an allowed experimental comparison. Probing must follow
-an explicit uncertainty/evidence decision. A corrective intervention must declare
-verification criteria, and memory may contain only accepted verification results.
-During the architecture phase, define memory contracts only; do not implement
-operational episodic memory, reinforcement learning, VLA training, behavior
-cloning, complex policy learning, or additional robot tasks.
+Before modifying research logic, read:
 
-## Research and Coding Principles
+1. `RESEARCH_PLAN.md`
+2. `docs/research/frozen_execution_plan_v1.md`
+3. `docs/protocols/heldout_allocation_v1.md`
+4. the active experiment configuration under `configs/autoresearch/`
 
-### Research value before code volume
+The frozen protocol and executable config take precedence over comments, prompts, and older reports.
 
-Do not add complexity without a testable hypothesis. Prefer a small,
-interpretable experiment over a broad feature implementation. When alternatives
-exist, prioritize scientific interpretability over implementation convenience.
-For example, prefer a single-axis calibrated bias over a scalar disturbance
-broadcast across all action dimensions.
+## Current Priority
 
-### No fabricated evidence
-
-Never hand-write success rates, experimental metrics, or example results that
-could be mistaken for real data. Every reported number must be traceable to:
-
-- an actual command;
-- fixed and recorded seeds;
-- raw CSV/JSONL artifacts;
-- code that computes the summary.
-
-Clearly label mock tests, integration pilots, development seeds, and held-out
-evaluation. A negative result must be preserved and interpreted honestly.
-
-### Leakage-free agent evaluation
-
-Future diagnostic and recovery agents may only read schema-v2 Agent View or
-features derived exclusively from it. They must not read:
-
-- injected perturbation type, axis, direction, or magnitude;
-- perturbed or executed action;
-- raw-versus-perturbed action differences;
-- clipping audit fields;
-- Oracle labels during decision-making.
-
-Oracle information may be used after execution for evaluation, debugging, and
-upper-bound comparisons. Any new agent-visible feature must document its causal
-availability at decision time.
-
-### Reproducible experiments
-
-Every experiment must record:
-
-- motivation and hypothesis;
-- task and perturbation configuration;
-- seeds and interaction budget;
-- planner/model/prompt version;
-- raw per-episode or per-trial results;
-- summary metrics;
-- warnings, failures, and limitations;
-- exact reproduction commands.
-
-Save configuration, raw result, summary, and audit artifacts separately. Never
-render videos during timing experiments; rerun only selected representative
-cases with rendering enabled.
-
-### Metrics
-
-Episode return is an auxiliary metric. Prefer:
-
-- task success and recovery rate;
-- failure-category or bias-estimation accuracy;
-- final object-goal distance and progress;
-- full-rollout and diagnostic-probe environment steps;
-- recovery trials and API calls;
-- correction efficiency;
-- clipped-step and clipped-element fractions for Oracle audit.
-
-### Visual and written evidence
-
-Videos and plots are first-class research artifacts. Select representative
-cases by explicit rules from real CSV files rather than cherry-picking. Label
-videos with seed, method, trial, proposal, budget, success, and task progress.
-Reports must distinguish observation from inference and avoid exaggerated
-claims.
-
-### Security
-
-Never request that an API key be pasted into chat. Never store credentials in
-source, reports, commands, trajectories, audit logs, or Git. Use hidden local
-input or environment variables and verify only their presence, never their
-value. If a key is exposed, require revocation before further use.
-
-## Engineering and Git Rules
-
-- Preserve working demo, evaluation, video, JSONL, and CSV interfaces unless a
-  migration is explicitly documented and tested.
-- Use Python 3.10, `pathlib`, type annotations, bounded error handling, and
-  independent NumPy generators for stochastic behavior.
-- Inspect installed MetaWorld source before relying on observation indices or
-  undocumented semantics.
-- Avoid unrelated large refactors.
-- Keep experiments recoverable with incremental checkpoints.
-- Do not commit raw high-volume trajectories, temporary videos, debug outputs,
-  local environments, caches, or secrets.
-- At the end of a coherent research stage, run tests and create a clear signed
-  commit. Do not use vague messages such as `update code`.
-- Do not push or merge unless explicitly authorized.
-
-## Required Completion Report
-
-## Research Reasoning Communication
-
-Do not make the researcher passively watch implementation or receive only
-terminal-status updates. Before each experiment, briefly explain:
-
-1. the research question or hypothesis;
-2. why the experiment is the smallest useful test;
-3. the independent variable, controlled variables, seed split, and budget;
-4. what outcomes would support or weaken the hypothesis.
-
-After each experiment, provide a concise research interpretation containing:
-
-1. the real result and artifact path;
-2. the mechanism the evidence supports;
-3. alternative explanations or confounders;
-4. what the result cannot establish;
-5. the next decision implied by the evidence.
-
-Distinguish clearly among development, validation, held-out, smoke-test, and
-integration evidence. If an experiment fails technically, explain the failure
-and do not interpret partial output as scientific evidence. Keep intermediate
-updates concise, but always expose the reasoning behind experimental choices.
-
-Every completed task must report:
-
-### Research progress
-
-What research capability or evidence was added.
-
-### Engineering changes
-
-Which files and interfaces changed.
-
-### Experimental evidence
-
-Exact commands, real results, seeds, warnings, and artifact paths.
-
-### Research interpretation
-
-What the evidence supports, what it does not support, and why it matters.
-
-### Next step
-
-The smallest next experiment that resolves the most important uncertainty.
-
-The long-term target is a compact but complete package:
+Execute work in this order:
 
 ```text
-GitHub repository
-+ technical report
-+ reproducible figures and videos
-+ research statement material
-+ concise CV project entry
+P0:
+StructuredEvidenceState
+Agent/Oracle leakage tests
+Budget invariants
+Frozen held-out evidence allocation
+Cost-performance evaluation
+
+P1:
+Evidence-grounded intervention
+Matched fresh verification
+Causal-chain reporting
+Application-ready research artifact
+
+P2:
+Verified Episodic Memory proof of concept
+
+P3:
+Frozen GLM qualitative pilot
+Additional visualizations
 ```
+
+Do not begin P2 or P3 before the required promotion gates for earlier phases are evaluated.
+
+## Frozen First-Version Constraints
+
+Do not modify without explicit user authorization:
+
+* environment: MetaWorld `push-v3`;
+* low-level policy: fixed `SawyerPushV3Policy`;
+* held-out seeds: 330–339;
+* registered perturbation conditions;
+* frozen phase threshold: `0.91612970415368`;
+* registered probe maximum cost: 64 environment steps;
+* initial rollout maximum: 500 steps;
+* reserved fresh-verification budget: 500 steps;
+* total case budget: 1064 steps;
+* maximum one diagnostic probe;
+* maximum one corrective verification rollout;
+* evidence feature definitions;
+* matching rules;
+* evaluator-only label definitions;
+* promotion gates.
+
+Do not retune against held-out results.
+
+If a frozen protocol cannot be executed, stop that experiment, preserve the negative or incomplete result, and report the blocking issue. Do not silently relax the protocol.
+
+## Evidence and Leakage Rules
+
+`StructuredEvidenceState` must be built only from schema-v2 Agent View data that are causally available at decision time.
+
+Reject direct or nested Oracle information, including:
+
+* perturbation labels;
+* injected bias axes or magnitudes;
+* executed perturbed actions unavailable to the Agent;
+* future verification results;
+* evaluator-only probe-need labels;
+* Oracle conclusions.
+
+Leakage checks must fail closed.
+
+Evaluator-only labels must never enter:
+
+* Agent View;
+* StructuredEvidenceState;
+* deterministic decision rules;
+* GLM payloads;
+* threshold fitting;
+* memory retrieval signatures.
+
+## Decision Semantics
+
+First-version decisions are:
+
+```text
+CONTINUE
+REQUEST_DIAGNOSTIC_PROBE
+ABSTAIN
+```
+
+`REQUEST_DIAGNOSTIC_PROBE` is valid only when:
+
+```text
+remaining_budget
+>= registered_probe_cost
++ minimum_reserved_verification_budget
+```
+
+Otherwise return `ABSTAIN`.
+
+Successful initial rollouts use:
+
+```text
+decision_required = False
+evidence_decision = CONTINUE
+adaptation_cost = 0
+```
+
+Do not count this as a successful active-allocation decision.
+
+## Verification and Memory
+
+Every corrective intervention must be evaluated with a fresh rollout.
+
+Verification outcomes are:
+
+```text
+ACCEPTED
+INCONCLUSIVE
+REJECTED
+```
+
+Only `ACCEPTED` experiences may enter Verified Episodic Memory.
+
+Never store:
+
+* rejected outcomes;
+* inconclusive outcomes;
+* unverified GLM hypotheses;
+* Oracle-derived conclusions;
+* records from future episodes.
+
+Memory retrieval must be chronological and traceable to earlier accepted records.
+
+## Experiment Integrity
+
+Before the first held-out run:
+
+1. commit the implementation and frozen configuration;
+2. ensure the worktree is clean;
+3. generate an immutable experiment manifest;
+4. generate a new run ID;
+5. write results to a new output directory;
+6. never overwrite previous held-out artifacts.
+
+Every result artifact must reference:
+
+* experiment run ID;
+* manifest ID;
+* source Git commit.
+
+## GLM Role
+
+GLM-5.2 is a frozen qualitative reasoning-layer pilot only.
+
+It must not:
+
+* control continuous actions;
+* access Oracle View;
+* access frozen threshold values;
+* access perturbation truth;
+* replace deterministic results after failure.
+
+Invalid output, timeout, or retry exhaustion must fail closed to `ABSTAIN` and be reported.
+
+Do not draw statistical model-performance conclusions from the maximum ten-call pilot.
+
+## Required Validation
+
+Run inside the project virtual environment:
+
+```bash
+python -m unittest discover -s tests -v
+python -m compileall -q src scripts tests
+python -m pip check
+python scripts/check_tracked_secrets.py --staged
+git diff --check
+```
+
+Unit-test, secret-check, and diff-check failures block commits.
+
+For `pip check`, distinguish project-introduced conflicts from pre-existing host-environment conflicts. Project-introduced conflicts block commits.
+
+## Git Rules
+
+* Create one local commit per completed phase.
+* Do not push or merge without explicit authorization.
+* Do not modify global Git or GPG configuration.
+* Use `git commit -S` only when cryptographic signing is already configured.
+* `git commit -s` is DCO sign-off, not cryptographic signing.
+* Preserve negative and incomplete experiment results.
