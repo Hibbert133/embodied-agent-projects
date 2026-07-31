@@ -30,13 +30,20 @@ The executable frozen configuration is
 used to change the threshold, features, matching, evaluator labels, or promotion
 gate.
 
-## Immediate milestone: P1 / Evidence-Grounded Intervention
+## Completed falsification: P1 / Evidence-Grounded Intervention
 
-Execute `configs/autoresearch/heldout_intervention_v1.json` without changing the
-completed allocation artifacts. The registered causal question is whether a
-probe changes mechanism belief, changes the bounded intervention, and improves a
-matched fresh verification outcome. The existing negative stochastic-retry study
-makes this a genuine falsification test rather than an assumed extension.
+The immutable P1 run completed with status `NOT_PROMOTED`. The registered probe
+changed six executable interventions but improved zero matched fresh-
+verification outcomes. Active evidence recovered 29/33 operational cases versus
+30/33 for passive diagnosis while adding probe cost. The result is preserved in
+`reports/evidence_grounded_intervention_negative.md`.
+
+The immediate development question is now intervention identifiability: whether
+the broad mechanism class is sufficient to determine which bounded candidate is
+actually useful. Protocol
+`docs/protocols/intervention_identifiability_development_v1.md` uses fresh seeds
+400--409 and cannot alter completed held-out results. P2 memory and P3 GLM remain
+blocked while this abstraction failure is unresolved.
 
 ## Deferred milestones
 
