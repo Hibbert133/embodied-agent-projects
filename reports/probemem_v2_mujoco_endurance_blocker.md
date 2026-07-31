@@ -67,3 +67,30 @@ Raw samples and summary:
 
 - `outputs/probemem_v2/mujoco_endurance_preflight.csv`
 - `outputs/probemem_v2/mujoco_endurance_preflight_summary.json`
+
+## Post-reboot resolution
+
+After the host was restarted, available commit capacity increased from the
+200.56 MB failure state to 10847.25 MB. The same registered preflight then
+completed all 100 environment construction cycles and all 20 full baseline
+rollouts:
+
+```text
+status: COMPLETED
+memory samples: 121
+process RSS start: 27.67 MB
+process RSS peak: 146.23 MB
+process RSS final: 144.93 MB
+minimum available physical memory: 11533.21 MB
+minimum available commit/pagefile: 10392.46 MB
+```
+
+RSS reached a stable plateau rather than increasing across the 100 construction
+cycles and 20 rollouts. This resolves the immediate infrastructure blocker and
+supports creating a new immutable Phase-C run. It does not repair, extend, or
+make the earlier incomplete run claim-eligible.
+
+Post-reboot artifacts:
+
+- `outputs/probemem_v2/mujoco_endurance_preflight_after_reboot.csv`
+- `outputs/probemem_v2/mujoco_endurance_preflight_after_reboot_summary.json`

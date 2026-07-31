@@ -21,6 +21,12 @@ with only 200.56 MB of Windows commit/pagefile capacity available, despite
 memory benefit. Reports preserve both the completed-prefix audit and the host
 resource blocker.
 
+After a host restart restored more than 10 GB of available commit capacity, the
+registered no-API endurance preflight completed 100 environment lifecycle
+cycles and 20 full rollouts with process RSS plateauing below 147 MB. The host
+blocker is therefore resolved for a new run, while the original incomplete
+artifact remains immutable and non-claim-eligible.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
