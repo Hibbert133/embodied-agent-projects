@@ -1,0 +1,136 @@
+{
+  "protocol_id": "budgeted_active_evidence_heldout_v1",
+  "protocol_version": 1,
+  "split": "heldout",
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "seed_start": 330,
+  "num_seeds": 10,
+  "initial_rollout_repetitions": 1,
+  "max_initial_steps": 500,
+  "registered_probe": {
+    "probe_id": "symmetric_xy_repeated_v1",
+    "max_environment_steps": 64,
+    "outcome_score": "estimated_bias_std_norm",
+    "outcome_classifier_threshold": 0.11560838098372882,
+    "outcome_rule": "score > threshold predicts stochastic_noise"
+  },
+  "allocation": {
+    "score": "phase_inconsistency",
+    "threshold": 0.91612970415368,
+    "rule": "request when score >= threshold and budget invariant holds",
+    "minimum_phase_samples": 8,
+    "contact_distance_m": 0.08,
+    "near_goal_distance_m": 0.08
+  },
+  "budget": {
+    "total_case_environment_steps": 1064,
+    "registered_probe_environment_steps": 64,
+    "minimum_reserved_verification_steps": 500,
+    "maximum_diagnostic_probes": 1,
+    "maximum_corrective_verifications": 1,
+    "maximum_attempt_id": 2
+  },
+  "condition_mapping_version": "registered_execution_conditions_v1",
+  "conditions": [
+    {
+      "condition_id": "fault_01",
+      "perturbation_type": "action_bias",
+      "parameters": {"bias": [0.145, 0.0, 0.0, 0.0]},
+      "evaluator_mechanism": "stable_bias",
+      "intervention_family": "bounded_x_compensation"
+    },
+    {
+      "condition_id": "fault_02",
+      "perturbation_type": "action_bias",
+      "parameters": {"bias": [-0.18, 0.0, 0.0, 0.0]},
+      "evaluator_mechanism": "stable_bias",
+      "intervention_family": "bounded_x_compensation"
+    },
+    {
+      "condition_id": "fault_03",
+      "perturbation_type": "action_bias",
+      "parameters": {"bias": [0.0, -0.198, 0.0, 0.0]},
+      "evaluator_mechanism": "stable_bias",
+      "intervention_family": "bounded_y_compensation"
+    },
+    {
+      "condition_id": "fault_04",
+      "perturbation_type": "action_bias",
+      "parameters": {"bias": [0.14, -0.14, 0.0, 0.0]},
+      "evaluator_mechanism": "stable_bias",
+      "intervention_family": "bounded_planar_compensation"
+    },
+    {
+      "condition_id": "fault_05",
+      "perturbation_type": "gaussian_noise",
+      "parameters_source": "outputs/autoresearch/noise_calibration/selected.json",
+      "evaluator_mechanism": "stochastic_noise",
+      "intervention_family": "independent_seed_stochastic_retry"
+    }
+  ],
+  "populations": {
+    "full_collection": "all 50 initial rollout units",
+    "operational_decision": "failed initial rollouts with decision_required true",
+    "successful_initial_decision": "CONTINUE with zero adaptation cost"
+  },
+  "matching": {
+    "version": "global_passive_failure_matching_v1",
+    "candidate_filter": "failed initial rollouts only",
+    "features": [
+      "episode_return",
+      "final_object_goal_distance",
+      "progress_to_goal"
+    ],
+    "standardization": "candidate pool population mean and standard deviation",
+    "assignment": "global one-to-one minimum standardized Euclidean distance",
+    "noise_coverage": "match every failed noise case",
+    "tie_break": "lexicographic bias case_id",
+    "probe_evidence_used": false,
+    "on_failure": "mark experiment incomplete without relaxing matching"
+  },
+  "evaluator_labels": {
+    "diagnostic_probe_needed": "passive mechanism incorrect and registered-probe mechanism correct",
+    "decision_probe_needed": "probe changes intervention and strictly improves matched fresh-verification status",
+    "single_class_status": "INCOMPLETE_FOR_PROBE_NEED_EVALUATION",
+    "oracle_only": true
+  },
+  "methods": [
+    "passive",
+    "seeded_random_probe",
+    "always_probe",
+    "global_temporal_gate",
+    "frozen_phase_conditioned_gate",
+    "oracle_audit"
+  ],
+  "random_probe_probability": 0.6,
+  "random_seed_namespaces": {
+    "perturbation": 4097,
+    "random_probe_decision": 4098,
+    "probe_execution": 4099,
+    "stochastic_retry": 4100,
+    "verification_perturbation": 4101
+  },
+  "statistics": {
+    "bootstrap_repetitions": 10000,
+    "bootstrap_seed": 20260731,
+    "confidence_level": 0.95,
+    "report_wilson_intervals": true,
+    "report_roc_auc": true,
+    "report_pr_auc": true,
+    "report_mechanism_strata": true,
+    "report_paired_win_tie_loss": true
+  },
+  "promotion_gate": {
+    "minimum_accuracy_relative_to_always_probe": 0.9,
+    "maximum_probe_request_rate": 0.6,
+    "minimum_probe_need_roc_auc": 0.75,
+    "require_both_probe_need_classes": true,
+    "require_lower_probe_cost_than_always_probe": true,
+    "require_no_agent_oracle_leakage": true
+  },
+  "evidence_feature_schema": "structured_evidence_v1",
+  "rendering": false,
+  "heldout_retuning": false,
+  "overwrite_existing_run": false
+}
