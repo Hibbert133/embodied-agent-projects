@@ -225,6 +225,7 @@ def run_repeated_symmetric_probes(
     env_factory: Callable[[], Any], *, seed: int,
     perturbation_factory: Callable[[], Any], repeats: int = 4,
     magnitude: float = 0.2, steps: int = 4,
+    perturbation_seed_base: int | None = None,
 ) -> tuple[tuple[ProbeResult, ...], ...]:
     """Repeat the probe protocol with deterministic independent noise streams."""
 
@@ -234,8 +235,11 @@ def run_repeated_symmetric_probes(
     shared_env = env_factory()
     try:
         for repeat_index in range(repeats):
+            random_seed = seed if perturbation_seed_base is None else perturbation_seed_base
             derived_seed = int(
-                np.random.SeedSequence([int(seed), repeat_index, 0xA17E]).generate_state(1)[0]
+                np.random.SeedSequence(
+                    [int(random_seed), repeat_index, 0xA17E]
+                ).generate_state(1)[0]
             )
             groups.append(
                 run_symmetric_probes(

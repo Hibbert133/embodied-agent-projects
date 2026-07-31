@@ -25,6 +25,12 @@ class HeldoutManifestTest(unittest.TestCase):
             source_commit="a" * 40,
             timestamp_utc="2026-07-31T00:00:00+00:00",
             implementation_hashes={"matching": "b" * 40},
+            frozen_source_artifacts={
+                "passive_tuning_cases": {
+                    "path": "outputs/example.csv",
+                    "sha256": "c" * 64,
+                }
+            },
             dependency_versions={"python": "3.10.0", "metaworld": "3.1.1"},
         )
 
@@ -41,6 +47,8 @@ class HeldoutManifestTest(unittest.TestCase):
         })
         self.assertEqual(manifest["allocation"]["threshold"], 0.91612970415368)
         self.assertEqual(manifest["probe_max_environment_steps"], 64)
+        self.assertIn("heldout_runner", manifest["implementation_paths"])
+        self.assertIn("passive_tuning_cases", manifest["frozen_source_artifacts"])
         self.assertIn(manifest["manifest_id"][:12], manifest["experiment_run_id"])
         self.assertTrue(manifest["experiment_run_id"].startswith("heldout_20260731T000000Z_"))
 

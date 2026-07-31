@@ -21,6 +21,17 @@ IMPLEMENTATION_PATHS = {
     "probe": Path("src/probe/directional.py"),
     "structured_evidence": Path("src/reasoning/structured_evidence.py"),
     "budgeted_policy": Path("src/uncertainty/budgeted_policy.py"),
+    "allocation_metrics": Path("src/evaluation/allocation_metrics.py"),
+    "heldout_runner": Path("scripts/run_frozen_heldout_allocation.py"),
+}
+FROZEN_SOURCE_ARTIFACTS = {
+    "passive_tuning_cases": Path(
+        "outputs/ambiguity_benchmark/bias_noise_tuning_v1/cases.csv"
+    ),
+    "global_gate_threshold": Path(
+        "outputs/ambiguity_benchmark/temporal_gate_development_v1/candidate_threshold.json"
+    ),
+    "noise_calibration": Path("outputs/autoresearch/noise_calibration/selected.json"),
 }
 
 
@@ -74,6 +85,7 @@ def build_manifest(
     timestamp_utc: str,
     implementation_hashes: Mapping[str, str],
     dependency_versions: Mapping[str, str],
+    frozen_source_artifacts: Mapping[str, Mapping[str, str]] | None = None,
 ) -> dict[str, Any]:
     """Build canonical content before adding its self-derived identifiers."""
 
@@ -105,7 +117,11 @@ def build_manifest(
         "probe_implementation_version": probe["probe_id"],
         "probe_max_environment_steps": probe["max_environment_steps"],
         "evidence_feature_schema_version": config["evidence_feature_schema"],
+        "implementation_paths": {
+            name: path.as_posix() for name, path in IMPLEMENTATION_PATHS.items()
+        },
         "implementation_git_blob_hashes": dict(implementation_hashes),
+        "frozen_source_artifacts": dict(frozen_source_artifacts or {}),
         "dependencies": dict(dependency_versions),
         "platform": {
             "system": platform.system(),
@@ -160,6 +176,10 @@ def main() -> int:
             name: _git("hash-object", path.as_posix())
             for name, path in IMPLEMENTATION_PATHS.items()
         }
+        frozen_source_artifacts = {
+            name: {"path": path.as_posix(), "sha256": sha256_file(ROOT / path)}
+            for name, path in FROZEN_SOURCE_ARTIFACTS.items()
+        }
         dependencies = {
             "python": platform.python_version(),
             "metaworld": installed_version("metaworld"),
@@ -174,6 +194,7 @@ def main() -> int:
             source_commit=source_commit,
             timestamp_utc=timestamp,
             implementation_hashes=implementation_hashes,
+            frozen_source_artifacts=frozen_source_artifacts,
             dependency_versions=dependencies,
         )
         path = write_manifest(manifest, args.output_root.resolve())
