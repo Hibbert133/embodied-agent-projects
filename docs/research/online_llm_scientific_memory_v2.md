@@ -89,3 +89,28 @@ The first result keeps one task, a fixed low-level policy, one registered probe,
 two intervention families, structured state evidence, and fresh verification.
 It excludes RGB perception, VLA/RL training, policy-weight updates, multiple
 robot embodiments, unrestricted coding agents, and claims of real-world safety.
+
+## Phase B execution
+
+Activate the project virtual environment, validate the committed implementation,
+then create a new immutable run directory:
+
+```bash
+python -m unittest discover -s tests -v
+python -m compileall -q src scripts tests
+python scripts/generate_probemem_v2_manifest.py
+```
+
+The manifest command prints the unique path used by the online runner. On
+Windows, the local DPAPI-protected API configuration can be loaded without
+placing credentials in the command or repository:
+
+```powershell
+.\scripts\run_probemem_v2_smoke.ps1 `
+  -Manifest outputs\probemem_v2\runs\<run-id>\manifest.json `
+  -ApiTimeout 300
+```
+
+The smoke scans seeds 700--719 in a fixed five-condition cycle and stops after
+the first five failed initial rollouts. This stopping rule does not inspect
+recovery outcomes. Timing runs do not render video.
