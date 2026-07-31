@@ -53,6 +53,13 @@ selector. The next step must increase independent operational coverage or define
 a stronger action-conditional evidence source; it must not tune on held-out
 seeds or promote memory from this exploratory result.
 
+A label-blind coverage extension then reached 20 comparable stochastic-noise
+failures after 59 initial units. Compensation was preferred in 12 and retry in
+8; both recovered 8/20. The earlier phase/temporal AUC 0.75 signals fell to
+0.469, while probe bias variability reached only 0.698. This larger development
+result blocks freezing the current aggregate features as an intervention-
+utility gate and motivates genuinely action-conditional evidence.
+
 ## Deferred milestones
 
 - additional probe families, only when tied to a defined ambiguity;
