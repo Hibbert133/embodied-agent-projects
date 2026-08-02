@@ -71,8 +71,8 @@ class ActionOutcomeRecord:
             raise ValueError("record may become available only after its source episode")
         if self.intervention_skill not in EXECUTABLE_ACR_SKILLS:
             raise ValueError("action-outcome record requires a registered ACR skill")
-        if (self.predicted_status is None) != (self.predicted_progress is None):
-            raise ValueError("predicted status and progress must both be present or absent")
+        if self.predicted_status is None and self.predicted_progress is not None:
+            raise ValueError("predicted progress requires a predicted status")
         if self.predicted_status is not None and self.predicted_status not in OUTCOME_STATUSES:
             raise ValueError("unsupported predicted outcome status")
         if self.observed_status not in OUTCOME_STATUSES:

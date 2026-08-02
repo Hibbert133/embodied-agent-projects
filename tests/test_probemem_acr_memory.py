@@ -60,6 +60,14 @@ def record(
 
 
 class ProbeMemAcrMemoryTest(unittest.TestCase):
+    def test_cold_start_status_allows_null_progress_prediction(self) -> None:
+        payload = record(1, COMPENSATION, "ACCEPTED").to_dict()
+        payload["predicted_status"] = "INCONCLUSIVE"
+        payload["predicted_progress"] = None
+        restored = ActionOutcomeRecord.from_dict(payload)
+        self.assertEqual(restored.predicted_status, "INCONCLUSIVE")
+        self.assertIsNone(restored.predicted_progress)
+
     def test_counterfactual_cannot_enter_operational_memory(self) -> None:
         payload = record(1, COMPENSATION, "ACCEPTED").to_dict()
         payload["operational_retrieval_eligible"] = True
