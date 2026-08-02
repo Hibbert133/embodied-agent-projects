@@ -3,8 +3,12 @@
 from __future__ import annotations
 
 import unittest
+from types import SimpleNamespace
 
 from scripts.analyze_probemem_acr import _paired_bootstrap, oracle_winners
+from scripts.run_probemem_acr_development import _serialize_coverage_decision
+from src.probemem import InterventionSkill, MemoryApplicabilityAction
+from src.reasoning import validate_no_oracle_evidence
 
 
 def candidate(status: str, progress: float, steps: int) -> dict[str, object]:
@@ -50,6 +54,18 @@ class ProbeMemAcrEvaluationTest(unittest.TestCase):
         left = _paired_bootstrap([1.0, 0.0, -1.0], seed=9301, resamples=100)
         right = _paired_bootstrap([1.0, 0.0, -1.0], seed=9301, resamples=100)
         self.assertEqual(left, right)
+
+    def test_coverage_audit_does_not_use_agent_forbidden_action_key(self) -> None:
+        serialized = _serialize_coverage_decision(SimpleNamespace(
+            action=MemoryApplicabilityAction.USE_VERIFIED_EPISODE,
+            reason="within frozen coverage",
+            selected_skill=InterventionSkill.BOUNDED_PLANAR_COMPENSATION,
+            retrieved_record_ids=("record_1",),
+            nearest_distance=0.1,
+            coverage_radius=0.2,
+        ))
+        validate_no_oracle_evidence(serialized)
+        self.assertNotIn("action", serialized)
 
 
 if __name__ == "__main__":

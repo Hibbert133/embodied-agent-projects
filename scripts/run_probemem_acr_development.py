@@ -66,6 +66,19 @@ def _write_json(path: Path, value: Any) -> None:
     temporary.replace(path)
 
 
+def _serialize_coverage_decision(decision: Any) -> dict[str, Any]:
+    """Serialize the baseline decision without an Agent-forbidden action key."""
+
+    return {
+        "memory_applicability_decision": decision.action.value,
+        "reason": decision.reason,
+        "selected_skill": decision.selected_skill.value if decision.selected_skill else None,
+        "retrieved_record_ids": list(decision.retrieved_record_ids),
+        "nearest_distance": decision.nearest_distance,
+        "coverage_radius": decision.coverage_radius,
+    }
+
+
 def _validate_manifest(path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     manifest = json.loads(path.read_text(encoding="utf-8"))
     if path.parent.name != manifest["experiment_run_id"]:
@@ -252,16 +265,7 @@ def main() -> int:
                 "action_conditional_evidence_pack": pack.to_dict(),
                 "action_conditional_decision": acr.to_dict(),
                 "state_only_decision": state_only,
-                "v2_coverage_decision": {
-                    "action": coverage_decision.action.value,
-                    "reason": coverage_decision.reason,
-                    "selected_skill": (
-                        coverage_decision.selected_skill.value if coverage_decision.selected_skill else None
-                    ),
-                    "retrieved_record_ids": list(coverage_decision.retrieved_record_ids),
-                    "nearest_distance": coverage_decision.nearest_distance,
-                    "coverage_radius": coverage_decision.coverage_radius,
-                },
+                "v2_coverage_decision": _serialize_coverage_decision(coverage_decision),
                 "method_selections": methods,
             }
             validate_no_oracle_evidence(predecision)
