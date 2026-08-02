@@ -253,3 +253,9 @@ Seeds 1100--1199 are a single frozen development run. Estimator and baseline
 predictions must be written before the current episode's candidate outcomes
 are executed or appended. A failed promotion gate is retained without tuning
 or rerunning this seed range.
+
+After the ACR v1 promotion failure, the only authorized successor experiment
+is `docs/protocols/probemem_acr_retry_utility_replication_v1.md`. It may execute
+only seeds 1400--1499 under registered condition `fault_05` and may test only
+the two frozen directional endpoints. It must not fit a threshold, create a
+selector, call an LLM, or execute reserved seeds 1500--1599.

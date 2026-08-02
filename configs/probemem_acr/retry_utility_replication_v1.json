@@ -1,0 +1,45 @@
+{
+  "protocol": "probemem_acr_retry_utility_replication_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "prospective development replication of two evaluator-only feature directions; no selector",
+  "environment": "MetaWorld push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "registered_condition": "fault_05",
+  "seed_partitions": {
+    "development_replication": [1400, 1499],
+    "validation_reserved": [1500, 1549],
+    "heldout_reserved": [1550, 1599]
+  },
+  "random_namespaces": {
+    "initial_perturbation": 8401,
+    "registered_probe": 8402,
+    "paired_verification": 8403
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "evaluator_paired_collection_max_steps": 1564
+  },
+  "registered_directional_hypotheses": {
+    "phase_inconsistency": "RETRY_ONLY_HIGHER_THAN_COMPENSATION_ONLY",
+    "probe_mean_estimation_residual": "RETRY_ONLY_HIGHER_THAN_COMPENSATION_ONLY"
+  },
+  "replication_gate": {
+    "operational_cases_minimum": 30,
+    "retry_only_cases_minimum": 8,
+    "compensation_only_cases_minimum": 8,
+    "rank_probability_retry_greater_minimum_per_feature": 0.7,
+    "chronology_violations_maximum": 0,
+    "oracle_leakage_events_maximum": 0,
+    "budget_violations_maximum": 0
+  },
+  "prohibitions": {
+    "fit_threshold": true,
+    "create_selector": true,
+    "call_llm": true,
+    "run_validation": true,
+    "run_heldout": true,
+    "modify_acr_development_v1": true
+  }
+}

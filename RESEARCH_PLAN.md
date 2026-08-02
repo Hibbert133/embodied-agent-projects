@@ -14,6 +14,14 @@ authorized. The negative result is preserved in
 `reports/probemem_acr_development_v1.md`; frozen parameters will not be retuned
 on seeds 1100--1199.
 
+The subsequent evaluator-only localization identified four retry-only cases,
+all under `fault_05`; ACR selected compensation in all four. Apparent separation
+in phase inconsistency and probe estimation residual is condition-confounded,
+because only one same-condition compensation-only case exists. The next legal
+experiment is therefore the separately frozen within-`fault_05` prospective
+replication on seeds 1400--1499. It tests feature direction only and cannot
+create an intervention selector or unlock validation by itself.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

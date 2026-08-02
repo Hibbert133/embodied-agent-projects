@@ -113,6 +113,14 @@ generation remain unauthorized. This development-only counterfactual result is
 documented in the [ACR report](reports/probemem_acr_development_v1.md) and is
 not an online-learning or memory-benefit claim.
 
+A no-new-rollout localization audit found that ACR selected compensation in all
+four retry-only cases. Two existing Agent-visible features showed perfect
+post-hoc rank separation, but all four cases belonged to `fault_05` and only
+one same-condition compensation-only case existed. The signal is therefore
+condition-confounded. A fresh [retry-utility replication protocol](docs/protocols/probemem_acr_retry_utility_replication_v1.md)
+reserves seeds 1400--1499 to test only the two feature directions within
+`fault_05`; it does not fit a threshold or authorize an LLM stage.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
