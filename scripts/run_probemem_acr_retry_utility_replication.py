@@ -78,6 +78,17 @@ def _validate_manifest(path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     return manifest, config
 
 
+def _load_registered_inputs(config: dict[str, Any]) -> tuple[Any, RecoveryPolicyConfig]:
+    noise_std = float(
+        json.loads((ROOT / config["noise_selection"]).read_text(encoding="utf-8"))["noise_std"]
+    )
+    fault = {item.condition_id: item for item in get_conditions(noise_std)}["fault_05"]
+    recovery = RecoveryPolicyConfig.from_mapping(
+        json.loads((ROOT / config["recovery_policy_config"]).read_text(encoding="utf-8"))
+    )
+    return fault, recovery
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
@@ -91,10 +102,7 @@ def main() -> int:
         if status_path.exists():
             raise FileExistsError("replication run already started")
         _write_json(status_path, {"status": "RUNNING", "manifest_id": manifest["manifest_id"]})
-        fault = get_conditions(ROOT / config["noise_selection"])["fault_05"]
-        recovery_config = RecoveryPolicyConfig.from_dict(
-            json.loads((ROOT / config["recovery_policy_config"]).read_text(encoding="utf-8"))
-        )
+        fault, recovery_config = _load_registered_inputs(config)
         case_rows: list[dict[str, Any]] = []
         candidate_rows: list[dict[str, Any]] = []
         budget_violations = 0

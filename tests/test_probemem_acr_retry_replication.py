@@ -8,6 +8,7 @@ from pathlib import Path
 
 from scripts.analyze_probemem_acr_retry_utility_replication import _bootstrap_rank_ci
 from scripts.generate_probemem_acr_retry_replication_manifest import IMPLEMENTATION_PATHS
+from scripts.run_probemem_acr_retry_utility_replication import _load_registered_inputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -40,6 +41,14 @@ class ProbeMemAcrRetryReplicationTest(unittest.TestCase):
         right = _bootstrap_rank_ci([2.0, 3.0], [0.0, 1.0], seed=9401, resamples=100)
         self.assertEqual(left, right)
         self.assertEqual(left, {"low": 1.0, "high": 1.0})
+
+    def test_registered_fault_and_recovery_inputs_load_from_frozen_files(self) -> None:
+        config = json.loads(
+            (ROOT / "configs/probemem_acr/retry_utility_replication_v1.json").read_text(encoding="utf-8")
+        )
+        fault, recovery = _load_registered_inputs(config)
+        self.assertEqual(fault.condition_id, "fault_05")
+        self.assertTrue(recovery.config_id)
 
 
 if __name__ == "__main__":
