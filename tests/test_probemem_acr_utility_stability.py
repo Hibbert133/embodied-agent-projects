@@ -13,6 +13,7 @@ from scripts.analyze_probemem_acr_utility_stability import (
     _winner,
 )
 from scripts.generate_probemem_acr_utility_stability_manifest import IMPLEMENTATION_PATHS
+from scripts.run_probemem_acr_utility_stability import _load_inputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -37,6 +38,15 @@ class ProbeMemAcrUtilityStabilityTest(unittest.TestCase):
         self.assertIn("scripts/run_probemem_acr_utility_stability.py", paths)
         self.assertIn("scripts/analyze_probemem_acr_utility_stability.py", paths)
         self.assertIn("src/reasoning/evidence.py", paths)
+        self.assertIn("src/reasoning/structured_evidence.py", paths)
+
+    def test_registered_fault_and_recovery_inputs_load(self) -> None:
+        config = json.loads(
+            (ROOT / "configs/probemem_acr/utility_realization_stability_v1.json").read_text(encoding="utf-8")
+        )
+        fault, recovery = _load_inputs(config)
+        self.assertEqual(fault.condition_id, "fault_05")
+        self.assertTrue(recovery.config_id)
 
     def test_winner_is_status_then_progress_then_cost(self) -> None:
         accepted = {"status_utility": 1.0, "progress": 0.0, "steps": 500.0}
