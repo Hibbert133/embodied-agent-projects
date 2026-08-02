@@ -81,6 +81,15 @@ fixed switch, status-conditioned switch, and cost-saving abstention. Paired
 second outcomes are evaluator-only. Passing this feasibility test is required
 before verification feedback could support any memory or LLM claim.
 
+That development run reached 30 second-decision cases after scanning 151 seeds.
+Status conditioning recovered 65/75 eligible failures versus 63/75 for the
+strongest fixed second policy, with 448 fewer total online environment steps.
+It passed the registered development gate, but its paired-bootstrap difference
+interval crossed zero. The scientific conclusion is therefore narrow: causal
+fresh-verification status is a promising action-selection signal that warrants
+a separately frozen validation, not evidence of general online learning or
+memory benefit.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

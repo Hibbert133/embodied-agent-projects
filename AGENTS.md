@@ -332,3 +332,12 @@ verification using only the first verification status. The online protocol has
 at most two verification attempts; paired second candidates are evaluator-only.
 Do not call an LLM, write memory, tune on the stream, or execute reserved seeds
 3050--3199.
+
+The resonance development run completed 75 eligible first attempts and 30
+registered second-decision cases. The status-conditioned rule achieved 65/75
+accepted versus 63/75 for always-repeat and used fewer total online steps,
+passing its preregistered development route. The paired-bootstrap confidence
+interval crosses zero, so this is a feasibility signal only. Do not retune on
+seeds 2850--3049 or treat this as validation, held-out, memory, LLM, or online-
+learning evidence. Reserved seeds remain blocked pending a separately frozen
+protocol and explicit user authorization.
