@@ -72,6 +72,15 @@ utility calibration was worse. Contextual abstention again had zero
 post-exploration coverage. Both promotion routes failed, so contextual GLM,
 principle, validation, and held-out phases remain unauthorized.
 
+The next development-only question changes the evidence source rather than
+retuning another state model. The separately frozen second-verification
+protocol asks whether the observed status of one fixed fresh retry can justify
+and select at most one additional recovery attempt. It scans fresh seeds
+2850--3049, uses independent random namespaces, and compares fixed repeat,
+fixed switch, status-conditioned switch, and cost-saving abstention. Paired
+second outcomes are evaluator-only. Passing this feasibility test is required
+before verification feedback could support any memory or LLM claim.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

@@ -323,3 +323,12 @@ greedy changed 17 decisions but produced 5 helpful and 5 harmful changes, with
 no net accepted-recovery gain over the global posterior. Contextual abstention
 had zero post-exploration coverage. Do not tune the 13-feature model on seeds
 2500--2699 or advance to GLM, principles, validation, or held-out evaluation.
+
+The user then authorized the separately frozen attempt-level feedback protocol
+in `docs/protocols/probemem_acr_resonance_second_verification_development_v1.md`.
+It may scan fresh development seeds 2850--3049 until 30 first retry
+verifications are non-accepted. It compares one registered optional second
+verification using only the first verification status. The online protocol has
+at most two verification attempts; paired second candidates are evaluator-only.
+Do not call an LLM, write memory, tune on the stream, or execute reserved seeds
+3050--3199.

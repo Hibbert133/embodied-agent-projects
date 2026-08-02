@@ -77,3 +77,18 @@ Only development seeds may be scanned, with a label-blind stop at 60 eligible
 failures. The protocol tests a frozen Bayesian linear action model over all 13
 Agent-visible applicability features. It may not tune features or model priors,
 call an API, or execute the reserved partitions.
+
+## Resonance second-verification development reservation
+
+The separately registered
+`probemem_acr_resonance_second_verification_development_v1` protocol reserves:
+
+- development: 2850--3049;
+- validation reserved: 3050--3099;
+- held-out reserved: 3100--3199.
+
+Only development seeds may be scanned. The stopping rule reads only the causal
+first-verification status and stops at 30 non-accepted first verifications. It
+must not read paired second-candidate outcomes. This protocol permits at most
+one additional recovery verification and does not authorize API calls, memory,
+validation, or held-out execution.
