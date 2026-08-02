@@ -32,6 +32,33 @@ from src.probemem.intervention_memory_gate import (
 )
 from src.probemem.runtime import CaseBudget, ProbeMemState, ProbeMemStateMachine
 from src.probemem.tools import ToolRegistry, build_default_tool_registry
+from src.probemem.action_memory import (
+    ACTION_OUTCOME_SCHEMA_VERSION,
+    EXECUTABLE_ACR_SKILLS,
+    OUTCOME_STATUSES,
+    ActionOutcomeMemory,
+    ActionOutcomeRecord,
+    ActionRecordOrigin,
+    RetrievedActionOutcome,
+    standardized_rms_distance,
+    unique_episode_scales,
+)
+from src.probemem.action_evidence import (
+    ActionClassEvidence,
+    ActionConditionalEvidencePack,
+    CandidateActionEvidence,
+    build_action_conditional_evidence_pack,
+)
+from src.probemem.action_prediction import (
+    ActionConditionalDecision,
+    CandidateActionPrediction,
+    DeterministicActionConditionalEstimator,
+)
+from src.probemem.resonance import (
+    ResonanceClass,
+    ResonanceRecord,
+    classify_resonance,
+)
 
 __all__ = [
     "CaseBudget",
@@ -61,4 +88,23 @@ __all__ = [
     "build_default_tool_registry",
     "prediction_relation",
     "utility_verdict",
+    "ACTION_OUTCOME_SCHEMA_VERSION",
+    "EXECUTABLE_ACR_SKILLS",
+    "OUTCOME_STATUSES",
+    "ActionOutcomeMemory",
+    "ActionOutcomeRecord",
+    "ActionRecordOrigin",
+    "RetrievedActionOutcome",
+    "standardized_rms_distance",
+    "unique_episode_scales",
+    "ActionClassEvidence",
+    "ActionConditionalEvidencePack",
+    "CandidateActionEvidence",
+    "build_action_conditional_evidence_pack",
+    "ActionConditionalDecision",
+    "CandidateActionPrediction",
+    "DeterministicActionConditionalEstimator",
+    "ResonanceClass",
+    "ResonanceRecord",
+    "classify_resonance",
 ]
