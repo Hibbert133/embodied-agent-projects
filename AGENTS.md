@@ -317,3 +317,9 @@ global posterior with Bayesian linear action models over the complete 13-field
 Agent-visible signature. Only selected outcomes at earlier episodes may update
 each method. Do not select features, retune priors or thresholds, call an LLM,
 promote principles, or execute reserved seeds 2700--2849.
+
+That contextual run completed and failed both promotion routes. Contextual
+greedy changed 17 decisions but produced 5 helpful and 5 harmful changes, with
+no net accepted-recovery gain over the global posterior. Contextual abstention
+had zero post-exploration coverage. Do not tune the 13-feature model on seeds
+2500--2699 or advance to GLM, principles, validation, or held-out evaluation.

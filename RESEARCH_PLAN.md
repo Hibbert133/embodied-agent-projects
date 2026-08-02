@@ -65,6 +65,13 @@ or outcome-driven feature selection. Each chronological method learns only from
 its own earlier selected outcomes. Passing this deterministic test is required
 before any contextual GLM reasoning experiment can be considered.
 
+The contextual run completed 60 operational cases. Contextual greedy changed 17
+actions relative to the global posterior, but the changes split into 5 helpful,
+5 harmful, and 7 neutral and yielded the same 37/60 accepted recovery. Its
+utility calibration was worse. Contextual abstention again had zero
+post-exploration coverage. Both promotion routes failed, so contextual GLM,
+principle, validation, and held-out phases remain unauthorized.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support
