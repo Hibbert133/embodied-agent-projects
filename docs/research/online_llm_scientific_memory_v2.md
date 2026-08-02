@@ -209,6 +209,13 @@ did not establish transferable action utility. The registered gate failed;
 parameters remain frozen, held-out seeds remain untouched, and Phase D remains
 blocked.
 
+An evaluator-only contradiction audit treated each selected accepted precedent
+as an implicit prediction that the same skill would again be `ACCEPTED`. The
+two memory uses produced one `INCONCLUSIVE` and one `REJECTED` fresh result.
+Both were inside the registered coverage radius with unanimous neighbor
+support. Nearest-neighbor coverage is therefore not considered a valid
+resonance model or a verified intervention principle.
+
 ## Scope
 
 The first result keeps one task, a fixed low-level policy, one registered probe,

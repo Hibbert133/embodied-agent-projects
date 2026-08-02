@@ -128,6 +128,13 @@ promotion gate failed and no parameter was revised. This blocks any claim that
 accepted-only episodic similarity plus geometric coverage provides reliable
 intervention transfer.
 
+The evaluator-only contradiction audit found zero supported implicit
+`ACCEPTED` predictions across the two memory uses: one was unresolved and one
+was contradicted. Since both failures occurred inside coverage with unanimous
+local support, Phase D remains blocked pending a separately frozen protocol
+for action-conditional outcome prediction and explicit resonance testing. The
+audit is evidence analysis, not a new selector or a promotion attempt.
+
 The canonical experimental roadmap is maintained in:
 
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)

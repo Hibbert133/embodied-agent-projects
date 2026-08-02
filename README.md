@@ -90,6 +90,15 @@ registered promotion gate failed. This shows that accepted-only storage and
 geometric coverage are necessary hygiene but not sufficient evidence of
 transferable intervention knowledge.
 
+A post-hoc contradiction audit further found that the two memory uses produced
+one inconclusive and one rejected fresh outcome, with no supported implicit
+`ACCEPTED` prediction. Both queries were well inside the frozen coverage radius
+and had unanimous local skill support. The 14 local-conflict cases also spanned
+both-recover, single-skill-recovery, and neither-recovers outcomes. This audit
+is evaluator-only and does not create actionable memory; it shows that
+geometric similarity is not yet a reliable proxy for action-conditional
+intervention utility.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
