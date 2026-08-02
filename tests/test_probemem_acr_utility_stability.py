@@ -13,6 +13,7 @@ from scripts.analyze_probemem_acr_utility_stability import (
     _winner,
 )
 from scripts.generate_probemem_acr_utility_stability_manifest import IMPLEMENTATION_PATHS
+from scripts.render_probemem_acr_stochastic_reversal import select_reversal
 from scripts.run_probemem_acr_utility_stability import _compensation_is_constructible, _load_inputs
 
 
@@ -71,6 +72,20 @@ class ProbeMemAcrUtilityStabilityTest(unittest.TestCase):
         right = _bootstrap_reliability([(4, 6), (3, 5)], seed=9501, resamples=100)
         self.assertEqual(left, right)
         self.assertIsNotNone(left)
+
+    def test_reversal_selection_is_mechanical_and_seed_ordered(self) -> None:
+        rows = []
+        for seed, realization, compensation, retry in (
+            (5, 1, "ACCEPTED", "REJECTED"),
+            (5, 2, "REJECTED", "ACCEPTED"),
+            (3, 1, "ACCEPTED", "REJECTED"),
+            (3, 4, "INCONCLUSIVE", "ACCEPTED"),
+        ):
+            rows.extend([
+                {"seed": str(seed), "realization_index": str(realization), "candidate_id": COMPENSATION, "verification_status": compensation},
+                {"seed": str(seed), "realization_index": str(realization), "candidate_id": RETRY, "verification_status": retry},
+            ])
+        self.assertEqual(select_reversal(rows), (3, 1, 4))
 
 
 if __name__ == "__main__":

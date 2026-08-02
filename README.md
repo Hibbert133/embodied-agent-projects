@@ -130,6 +130,22 @@ minimum of eight cases. The replication gate failed. No selector, GLM stage,
 validation, or held-out execution was authorized; see the
 [replication report](reports/probemem_acr_retry_utility_replication_v1.md).
 
+The next prospective study tested whether a single paired winner is itself a
+stable action-utility label under stochastic execution. On 20 fresh `fault_05`
+states, each candidate was independently verified six times. Candidate winner
+reversed across realizations in 18/20 states. A single realization agreed with
+the leave-one-realization-out expected winner in only 77/120 comparisons
+(64.2%, cluster-bootstrap 95% CI 55.0%--73.3%), below the frozen 70% gate.
+Independent retry was accepted in 82/120 executions versus 61/120 for bounded
+compensation, but this population-level difference does not validate a
+per-state selector. The result motivates distributional action-outcome memory
+and abstention rather than storing a single verified winner. See the
+[utility-stability report](reports/probemem_acr_utility_realization_stability_v2.md)
+and [result figure](outputs/probemem_acr/figures/acr_utility_realization_stability.png).
+An audited [same-state reversal manifest](outputs/probemem_acr/videos/stochastic_reversal/manifest.csv)
+links four videos for seed 1805: compensation is accepted in one realization
+and rejected in another, while retry shows the opposite ordering.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

@@ -277,3 +277,10 @@ later failed case could not construct bounded compensation. The partial run is
 audit-only. The corrected v2 protocol uses fresh seeds 1800--1899, requires
 both registered candidates to be constructible before candidate execution,
 and reserves 1900--1999. It retains the same estimands and prohibitions.
+
+The v2 utility-stability run completed and failed its feasibility gate:
+candidate winner reversed in 18/20 states and single-realization reliability
+was 64.2%, below 70%. Treat one paired outcome as a stochastic sample, not a
+stable action label. Do not fit a selector, invoke an LLM, promote a principle,
+or execute seeds 1900--1999 from this result. A successor must explicitly model
+action-outcome distributions and abstention under a new protocol.

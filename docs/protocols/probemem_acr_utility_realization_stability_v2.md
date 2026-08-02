@@ -1,6 +1,6 @@
 # ProbeMem-ACR Utility Realization Stability v2
 
-Status: `FROZEN_BEFORE_EXECUTION`
+Status: `COMPLETED_NOT_PROMOTED`
 
 This protocol preserves every question, estimand, repetition count, and gate
 from v1. The v1 run stopped after 13 complete operational cases when the host
@@ -25,3 +25,12 @@ All remaining execution rules and estimands are defined in
 `probemem_acr_utility_realization_stability_v1.md`. V2 still cannot fit a
 selector, invoke an LLM, write online memory, or execute validation/held-out
 partitions.
+
+## Frozen outcome
+
+V2 scanned 45 initial units, excluded one Agent-visibly ineligible failure,
+and completed 20 operational states with 240 candidate rollouts. Candidate
+winner reversed across realizations in 18/20 states. Leave-one-realization-out
+winner reliability was 77/120 (64.2%, cluster-bootstrap 95% CI 55.0%--73.3%),
+below the frozen 70% criterion. The gate failed with zero chronology, leakage,
+budget, pair-completeness, or random-stream violations.

@@ -29,6 +29,16 @@ not (0.673 versus the frozen 0.70 requirement). The population and combined
 replication gates failed. Seeds 1500--1599 remain untouched, and this line does
 not authorize selector fitting, GLM reasoning, validation, or held-out claims.
 
+A separately frozen utility-realization study then used fresh seeds 1800--1899
+to repeat both candidates six times for 20 eligible failed states. Eighteen of
+20 states exhibited a candidate-winner reversal across stochastic
+realizations. Leave-one-realization-out winner reliability was 64.2% (95% CI
+55.0%--73.3%), below the registered 70% feasibility gate, despite 11 states
+having an estimated mean-utility margin of at least 0.20. This falsifies the
+use of one paired outcome as a stable state-action label in this setting.
+Future ACR work must model action-outcome distributions and abstention; no
+selector, LLM, validation, held-out, or principle-memory phase is authorized.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support
