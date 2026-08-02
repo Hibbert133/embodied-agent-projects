@@ -26,7 +26,8 @@ IMPLEMENTATION_PATHS = (
     Path("scripts/run_probemem_v2_smoke.py"),
     Path("src/probemem/intervention_utility.py"),
     Path("src/reasoning/evidence.py"),
-    Path("src/rollout.py"),
+    Path("src/rollout/__init__.py"),
+    Path("src/rollout/engine.py"),
 )
 INPUT_PATHS = (
     Path("configs/autoresearch/default_recovery_config.json"),
