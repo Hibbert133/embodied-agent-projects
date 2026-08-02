@@ -39,6 +39,15 @@ use of one paired outcome as a stable state-action label in this setting.
 Future ACR work must model action-outcome distributions and abstention; no
 selector, LLM, validation, held-out, or principle-memory phase is authorized.
 
+The first chronological distributional-memory successor then scanned all 100
+fresh seeds 2000--2099 but produced 39 eligible failed cases against its frozen
+minimum of 40. It is preserved as `INCOMPLETE_POPULATION`; method replay was not
+run and no performance claim was made. A separately versioned capacity
+correction keeps the estimator and gate unchanged, expands only the fresh
+development population to seeds 2200--2349, and retains the same label-blind
+stop at 40 operational cases. Validation and held-out seeds 2350--2499 remain
+unauthorized.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

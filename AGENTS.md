@@ -293,3 +293,12 @@ method may append only its own selected outcome after deciding. Rejected and
 inconclusive outcomes are statistical posterior evidence, not actionable
 episodic records. Do not call an LLM, fit on this stream, promote principles,
 or execute seeds 2100--2199.
+
+That run exhausted its 100 initial units with 39/40 operational cases and is
+immutably `INCOMPLETE_POPULATION`; do not extend or replay it. The user then
+authorized the separately frozen v2 capacity correction in
+`docs/protocols/probemem_acr_distributional_memory_development_v2.md`. It may
+scan fresh development seeds 2200--2349 and stop at the unchanged target of 40
+eligible failures. It uses the unchanged methods, posterior, abstention rule,
+and promotion gate. Do not execute reserved seeds 2350--2499, call an LLM,
+promote principles, or tune from either distributional stream.
