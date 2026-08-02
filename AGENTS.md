@@ -234,3 +234,22 @@ only valid claim is tool-grounded online integration with leakage, budget,
 fail-closed, and fresh-verification audit. Do not describe it as learned memory.
 The LLM may select only registered tools and skills; deterministic host code
 owns continuous parameters, environment execution, verification, and audit.
+
+## ProbeMem-ACR v3 development overlay
+
+Work on branch `research/probemem-acr-v3` follows
+`docs/research/probemem_acr_v3.md` and
+`docs/protocols/probemem_acr_development_v1.md`. ProbeMem v2 artifacts and
+negative results are immutable inputs, not results to overwrite or reframe.
+
+The first ACR phase is a development-only paired counterfactual feasibility
+study. It may implement deterministic action-conditioned outcome estimation
+and evaluator resonance, but it must not call an LLM, generate or promote
+principles, run validation or held-out seeds, or claim online learning. Paired
+counterfactual records are research data and must never be represented as
+experience naturally available to a deployed Agent.
+
+Seeds 1100--1199 are a single frozen development run. Estimator and baseline
+predictions must be written before the current episode's candidate outcomes
+are executed or appended. A failed promotion gate is retained without tuning
+or rerunning this seed range.

@@ -1,0 +1,73 @@
+{
+  "protocol": "probemem_acr_deterministic_development_v1",
+  "stage": "action_conditional_feasibility",
+  "status": "development_frozen_before_execution",
+  "task": "push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "seed_range": [1100, 1199],
+  "condition_cycle": ["fault_01", "fault_02", "fault_03", "fault_04", "fault_05"],
+  "condition_assignment": "(seed - 1100) % len(condition_cycle)",
+  "candidates": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "random_seed_namespaces": {
+    "initial_rollout": 8301,
+    "diagnostic_probe": 8302,
+    "shared_paired_verification": 8303,
+    "paired_bootstrap": 9301
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "evaluator_paired_collection_max_steps": 1564
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "estimator": {
+    "feature_schema": "intervention_applicability_signature_v1",
+    "feature_count": 13,
+    "standardization": "unique_prior_episode_population_std",
+    "zero_variance_epsilon": 1e-12,
+    "zero_variance_scale": 1.0,
+    "distance": "standardized_root_mean_square",
+    "neighbors_per_action_outcome_class": 5,
+    "minimum_history_per_action": 3,
+    "weight": "1/(1+distance)",
+    "dirichlet_prior": {"ACCEPTED": 1.0, "INCONCLUSIVE": 1.0, "REJECTED": 1.0},
+    "inconclusive_utility": 0.5,
+    "posterior_tie_status": "INCONCLUSIVE",
+    "action_utility_tie": "ABSTAIN_TIE"
+  },
+  "v2_coverage_baseline": {
+    "mode": "fixed_original_13_record_snapshot",
+    "snapshot": "outputs/probemem_v2/verified_selected_intervention_episodes.jsonl",
+    "implementation": "src/probemem/intervention_memory_gate.py",
+    "append_current_stream": false
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "promotion_gate": {
+    "minimum_operational_cases": 40,
+    "minimum_exclusive_recovery_cases": 12,
+    "minimum_decisive_accuracy_percentage_point_gain": 10.0,
+    "minimum_net_decisive_correct_gain": 3,
+    "minimum_harmful_transfer_relative_reduction": 0.30,
+    "minimum_harmful_transfer_absolute_reduction": 2,
+    "maximum_accepted_recovery_case_deficit_to_fixed_baseline": 1,
+    "maximum_chronology_violations": 0,
+    "maximum_oracle_leakage_events": 0,
+    "maximum_budget_violations": 0
+  },
+  "bootstrap": {"resamples": 10000, "seed": 9301, "unit": "episode"},
+  "scope": {
+    "api_calls": 0,
+    "rendering": false,
+    "principle_generation": false,
+    "validation": false,
+    "heldout_claim": false,
+    "online_learning_claim": false
+  }
+}
