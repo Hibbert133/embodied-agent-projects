@@ -44,3 +44,10 @@ eligibility was underspecified. Its partial artifacts remain immutable. The v2
 correction uses fresh development seeds 1800--1899 and reserves 1900--1999;
 eligibility requires both candidates to be constructible before any outcome is
 executed or read.
+
+## Distributional memory development reservation
+
+The `probemem_acr_distributional_memory_development_v1` protocol uses fresh
+development seeds 2000--2099 and reserves 2100--2199. It stops after 40
+Agent-visibly eligible failed cases without reading candidate outcomes. Only
+2000--2099 may be executed; validation and held-out partitions remain blocked.

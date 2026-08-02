@@ -284,3 +284,12 @@ was 64.2%, below 70%. Treat one paired outcome as a stochastic sample, not a
 stable action label. Do not fit a selector, invoke an LLM, promote a principle,
 or execute seeds 1900--1999 from this result. A successor must explicitly model
 action-outcome distributions and abstention under a new protocol.
+
+The user authorized that successor as
+`docs/protocols/probemem_acr_distributional_memory_development_v1.md`.
+It may collect one evaluator-only paired outcome for 40 eligible failures from
+seeds 2000--2099 and replay frozen chronological deterministic methods. Each
+method may append only its own selected outcome after deciding. Rejected and
+inconclusive outcomes are statistical posterior evidence, not actionable
+episodic records. Do not call an LLM, fit on this stream, promote principles,
+or execute seeds 2100--2199.
