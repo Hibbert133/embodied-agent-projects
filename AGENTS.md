@@ -259,3 +259,8 @@ is `docs/protocols/probemem_acr_retry_utility_replication_v1.md`. It may execute
 only seeds 1400--1499 under registered condition `fault_05` and may test only
 the two frozen directional endpoints. It must not fit a threshold, create a
 selector, call an LLM, or execute reserved seeds 1500--1599.
+
+That replication has completed and failed its combined gate. Do not extend the
+1400--1499 run, fit a selector from it, or execute seeds 1500--1599 under this
+protocol. A further experiment requires explicit user authorization and a new
+scientific protocol with fresh seeds.

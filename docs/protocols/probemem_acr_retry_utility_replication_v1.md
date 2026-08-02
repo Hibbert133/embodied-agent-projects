@@ -56,3 +56,12 @@ Passing would justify a separately frozen development-stage selector design;
 it would not itself show improved recovery. Failure blocks threshold fitting,
 GLM action prediction, validation, and held-out execution under this line of
 work.
+
+## Frozen outcome
+
+The run completed 100 initial units and 36 operational pairs. There were 11
+retry-only, 5 compensation-only, 14 both-recover, and 6 neither-recover cases.
+Phase inconsistency achieved rank probability 0.673 and failed its 0.70
+criterion. Probe mean estimation residual achieved 0.727, but the required
+minimum of eight compensation-only cases was not met. The replication gate
+failed; seeds 1500--1599 were not executed.

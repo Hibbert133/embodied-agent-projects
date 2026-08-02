@@ -22,6 +22,13 @@ experiment is therefore the separately frozen within-`fault_05` prospective
 replication on seeds 1400--1499. It tests feature direction only and cannot
 create an intervention selector or unlock validation by itself.
 
+The replication completed 100 fresh `fault_05` units and 36 operational pairs.
+It produced 11 retry-only but only 5 compensation-only cases. Probe estimation
+residual met its directional criterion (0.727), while phase inconsistency did
+not (0.673 versus the frozen 0.70 requirement). The population and combined
+replication gates failed. Seeds 1500--1599 remain untouched, and this line does
+not authorize selector fitting, GLM reasoning, validation, or held-out claims.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

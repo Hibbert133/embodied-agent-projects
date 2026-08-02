@@ -121,6 +121,15 @@ condition-confounded. A fresh [retry-utility replication protocol](docs/protocol
 reserves seeds 1400--1499 to test only the two feature directions within
 `fault_05`; it does not fit a threshold or authorize an LLM stage.
 
+That prospective replication is now complete. Among 100 fresh initial units,
+36 required paired evaluation: 11 were retry-only, 5 compensation-only, 14
+both-recover, and 6 neither-recover. Probe residual retained the registered
+direction (rank probability 0.727), but phase inconsistency did not reach the
+frozen 0.70 criterion (0.673), and the compensation-only population missed its
+minimum of eight cases. The replication gate failed. No selector, GLM stage,
+validation, or held-out execution was authorized; see the
+[replication report](reports/probemem_acr_retry_utility_replication_v1.md).
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?
