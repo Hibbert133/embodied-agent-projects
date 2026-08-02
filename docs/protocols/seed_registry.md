@@ -38,3 +38,9 @@ The separately versioned
 Only development seeds 1600--1699 may be scanned, with a label-blind stop after
 20 failed initial rollouts. The protocol estimates repeated action-outcome
 distributions and cannot fit a selector or execute the reserved partitions.
+
+The v1 execution stopped after 13 complete cases because paired-candidate
+eligibility was underspecified. Its partial artifacts remain immutable. The v2
+correction uses fresh development seeds 1800--1899 and reserves 1900--1999;
+eligibility requires both candidates to be constructible before any outcome is
+executed or read.

@@ -21,6 +21,7 @@ from scripts.build_autoresearch_benchmark import get_conditions  # noqa: E402
 from scripts.run_probemem_v2_smoke import _probe_context, _read_jsonl, _run_verification  # noqa: E402
 from src.autoresearch import RecoveryPolicyConfig  # noqa: E402
 from src.probemem import InterventionApplicabilitySignature, InterventionSkill  # noqa: E402
+from src.planner.evidence_grounded import first_registered_probe_context, select_grounded_intervention  # noqa: E402
 from src.reasoning import EvidenceSource, build_structured_evidence_state, validate_no_oracle_evidence  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 
@@ -91,6 +92,20 @@ def _load_inputs(config: dict[str, Any]) -> tuple[Any, RecoveryPolicyConfig]:
     return fault, recovery
 
 
+def _compensation_is_constructible(
+    *, seed: int, probe_context: dict[str, Any], recovery_config: RecoveryPolicyConfig
+) -> bool:
+    plan = select_grounded_intervention(
+        plan_id=f"utility_stability_eligibility_seed{seed}",
+        evidence_id=f"utility_stability_probe_seed{seed}",
+        mechanism_belief="stable_bias",
+        correction_context=first_registered_probe_context(probe_context),
+        recovery_config=recovery_config,
+        evidence_source="registered_probe",
+    )
+    return bool(plan.requires_fresh_verification)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--manifest", type=Path, required=True)
@@ -143,6 +158,8 @@ def main() -> int:
                 "initial_steps": initial.steps,
                 "initial_final_object_goal_distance": initial.final_object_goal_distance,
                 "probe_steps": 0,
+                "paired_candidate_eligible": False,
+                "ineligibility_reason": "initial_success" if initial.success else "not_yet_evaluated",
                 "paired_repetitions": 0,
                 "evaluator_collection_steps": initial.steps,
             }
@@ -152,12 +169,25 @@ def main() -> int:
                 print(f"episode={episode_id} seed={seed} initial=success")
                 continue
 
-            operational += 1
             probe_context = _probe_context(fault, seed, config, int(unit["diagnostic_probe_seed"]))
             probe_steps = int(probe_context["probe_environment_steps"])
             if probe_steps > int(config["budget"]["registered_probe_max_steps"]):
                 integrity["budget_violations"] += 1
                 raise RuntimeError("registered probe exceeded utility-stability budget")
+            if not _compensation_is_constructible(
+                seed=seed, probe_context=probe_context, recovery_config=recovery_config
+            ):
+                case_rows.append({
+                    **base,
+                    "probe_steps": probe_steps,
+                    "paired_candidate_eligible": False,
+                    "ineligibility_reason": "bounded_compensation_not_constructible",
+                    "evaluator_collection_steps": initial.steps + probe_steps,
+                })
+                _write_csv(run_dir / "case_results.csv", case_rows)
+                print(f"episode={episode_id} seed={seed} initial=failure candidate=ineligible")
+                continue
+            operational += 1
             probe_evidence = {
                 **state.to_dict(),
                 "evidence_id": f"utility_stability_episode{episode_id:03d}_attempt1",
@@ -199,6 +229,8 @@ def main() -> int:
                     candidate_rows.append({
                         **base,
                         "probe_steps": probe_steps,
+                        "paired_candidate_eligible": True,
+                        "ineligibility_reason": "",
                         "evaluator_collection_steps": evaluator_steps,
                         "realization_index": repetition,
                         "candidate_id": skill.value,
@@ -217,6 +249,8 @@ def main() -> int:
             case_rows.append({
                 **base,
                 "probe_steps": probe_steps,
+                "paired_candidate_eligible": True,
+                "ineligibility_reason": "",
                 "paired_repetitions": len(paired_seeds),
                 "evaluator_collection_steps": evaluator_steps,
             })

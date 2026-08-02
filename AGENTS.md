@@ -271,3 +271,9 @@ It may scan development seeds 1600--1699 and collect six evaluator-only paired
 verification realizations for at most 20 failed `fault_05` initial rollouts.
 It may estimate target stability only. It must not fit a selector, call an LLM,
 write online memory, or execute reserved seeds 1700--1799.
+
+The v1 utility-stability execution stopped after 13 complete cases because a
+later failed case could not construct bounded compensation. The partial run is
+audit-only. The corrected v2 protocol uses fresh seeds 1800--1899, requires
+both registered candidates to be constructible before candidate execution,
+and reserves 1900--1999. It retains the same estimands and prohibitions.

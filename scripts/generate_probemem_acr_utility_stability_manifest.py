@@ -18,8 +18,9 @@ if str(ROOT) not in sys.path:
 from scripts.run_probemem_v2_smoke import _seed  # noqa: E402
 
 
-CONFIG_PATH = Path("configs/probemem_acr/utility_realization_stability_v1.json")
+CONFIG_PATH = Path("configs/probemem_acr/utility_realization_stability_v2.json")
 IMPLEMENTATION_PATHS = (
+    Path("scripts/check_probemem_acr_utility_stability_v2_seeds.py"),
     Path("scripts/run_probemem_acr_utility_stability.py"),
     Path("scripts/analyze_probemem_acr_utility_stability.py"),
     Path("scripts/run_probemem_v2_smoke.py"),
@@ -55,13 +56,13 @@ def main() -> int:
         if _git("status", "--porcelain"):
             raise RuntimeError("utility-stability manifest requires a clean worktree")
         subprocess.run(
-            [sys.executable, str(ROOT / "scripts/check_probemem_acr_utility_stability_seeds.py")],
+            [sys.executable, str(ROOT / "scripts/check_probemem_acr_utility_stability_v2_seeds.py")],
             cwd=ROOT, check=True,
         )
         config = json.loads((ROOT / CONFIG_PATH).read_text(encoding="utf-8"))
         start, stop = config["seed_partitions"]["development"]
-        if [start, stop] != [1600, 1699]:
-            raise ValueError("utility-stability development seeds must remain 1600--1699")
+        if [start, stop] != [1800, 1899]:
+            raise ValueError("utility-stability v2 development seeds must remain 1800--1899")
         repetitions = int(config["verification_repetitions"])
         namespaces = config["random_namespaces"]
         units = []

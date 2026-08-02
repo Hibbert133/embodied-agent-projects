@@ -13,7 +13,7 @@ from scripts.analyze_probemem_acr_utility_stability import (
     _winner,
 )
 from scripts.generate_probemem_acr_utility_stability_manifest import IMPLEMENTATION_PATHS
-from scripts.run_probemem_acr_utility_stability import _load_inputs
+from scripts.run_probemem_acr_utility_stability import _compensation_is_constructible, _load_inputs
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -22,11 +22,12 @@ ROOT = Path(__file__).resolve().parents[1]
 class ProbeMemAcrUtilityStabilityTest(unittest.TestCase):
     def test_protocol_is_repeated_paired_development_only(self) -> None:
         config = json.loads(
-            (ROOT / "configs/probemem_acr/utility_realization_stability_v1.json").read_text(encoding="utf-8")
+            (ROOT / "configs/probemem_acr/utility_realization_stability_v2.json").read_text(encoding="utf-8")
         )
         self.assertEqual(config["registered_condition"], "fault_05")
         self.assertEqual(config["verification_repetitions"], 6)
-        self.assertEqual(config["seed_partitions"]["development"], [1600, 1699])
+        self.assertEqual(config["seed_partitions"]["development"], [1800, 1899])
+        self.assertIn("both registered candidate skills", config["stopping_rule"]["operational_eligibility"])
         self.assertEqual(config["stopping_rule"]["target_operational_cases"], 20)
         self.assertFalse(config["stopping_rule"]["reads_candidate_outcomes"])
         self.assertTrue(config["prohibitions"]["fit_selector"])
@@ -42,11 +43,16 @@ class ProbeMemAcrUtilityStabilityTest(unittest.TestCase):
 
     def test_registered_fault_and_recovery_inputs_load(self) -> None:
         config = json.loads(
-            (ROOT / "configs/probemem_acr/utility_realization_stability_v1.json").read_text(encoding="utf-8")
+            (ROOT / "configs/probemem_acr/utility_realization_stability_v2.json").read_text(encoding="utf-8")
         )
         fault, recovery = _load_inputs(config)
         self.assertEqual(fault.condition_id, "fault_05")
         self.assertTrue(recovery.config_id)
+
+    def test_candidate_eligibility_is_checked_without_outcomes(self) -> None:
+        # The callable contract has no candidate-result argument; a real probe
+        # context is integration-tested by the formal collector.
+        self.assertNotIn("outcome", _compensation_is_constructible.__annotations__)
 
     def test_winner_is_status_then_progress_then_cost(self) -> None:
         accepted = {"status_utility": 1.0, "progress": 0.0, "steps": 500.0}
