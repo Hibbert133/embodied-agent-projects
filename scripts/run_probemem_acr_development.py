@@ -47,6 +47,18 @@ from src.rollout import create_push_environment, create_push_policy, run_episode
 
 COMPENSATION = InterventionSkill.BOUNDED_PLANAR_COMPENSATION
 RETRY = InterventionSkill.INDEPENDENT_STOCHASTIC_RETRY
+METHOD_NAMES = (
+    "always_compensation",
+    "always_retry",
+    "state_only_nearest_accepted",
+    "v2_fixed_coverage_aware",
+    "frozen_single_feature_selector",
+    "deterministic_action_conditional",
+)
+
+
+def _empty_selection_columns() -> dict[str, None]:
+    return {f"selection_{name}": None for name in METHOD_NAMES}
 
 
 def _git(*arguments: str) -> str:
@@ -200,6 +212,7 @@ def main() -> int:
                 "decision_required": state.decision_required,
                 "initial_steps": initial.steps,
                 "initial_final_object_goal_distance": initial.final_object_goal_distance,
+                **_empty_selection_columns(),
             }
             if not state.decision_required:
                 case_rows.append({

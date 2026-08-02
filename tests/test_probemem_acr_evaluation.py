@@ -6,7 +6,11 @@ import unittest
 from types import SimpleNamespace
 
 from scripts.analyze_probemem_acr import _paired_bootstrap, oracle_winners
-from scripts.run_probemem_acr_development import _serialize_coverage_decision
+from scripts.run_probemem_acr_development import (
+    METHOD_NAMES,
+    _empty_selection_columns,
+    _serialize_coverage_decision,
+)
 from src.probemem import InterventionSkill, MemoryApplicabilityAction
 from src.reasoning import validate_no_oracle_evidence
 
@@ -20,6 +24,11 @@ def candidate(status: str, progress: float, steps: int) -> dict[str, object]:
 
 
 class ProbeMemAcrEvaluationTest(unittest.TestCase):
+    def test_non_operational_rows_keep_the_fixed_selection_schema(self) -> None:
+        columns = _empty_selection_columns()
+        self.assertEqual(set(columns), {f"selection_{name}" for name in METHOD_NAMES})
+        self.assertTrue(all(value is None for value in columns.values()))
+
     def test_oracle_uses_status_then_progress_then_cost(self) -> None:
         self.assertEqual(
             oracle_winners({
