@@ -57,6 +57,14 @@ abstained on all 32 post-exploration cases and missed 24 recoverable cases. Both
 promotion routes failed. No GLM, principle, validation, or held-out phase is
 authorized from this result.
 
+The next authorized feasibility test is separately preregistered rather than
+retuning that global posterior. It uses fresh development seeds 2500--2699 and
+a Bayesian linear action model conditioned on the complete frozen 13-feature
+Agent-visible applicability signature. It performs no nearest-neighbor copying
+or outcome-driven feature selection. Each chronological method learns only from
+its own earlier selected outcomes. Passing this deterministic test is required
+before any contextual GLM reasoning experiment can be considered.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

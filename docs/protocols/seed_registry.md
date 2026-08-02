@@ -63,3 +63,17 @@ versioned v2 population reserves:
 Only 2200--2349 may be scanned under v2, with the unchanged label-blind stop at
 40 eligible failures. The larger initial population is a preregistered capacity
 correction; it does not relax the operational target or estimator gate.
+
+## Contextual utility development reservation
+
+The separately registered `probemem_acr_contextual_utility_development_v1`
+protocol reserves:
+
+- development: 2500--2699;
+- validation reserved: 2700--2749;
+- held-out reserved: 2750--2849.
+
+Only development seeds may be scanned, with a label-blind stop at 60 eligible
+failures. The protocol tests a frozen Bayesian linear action model over all 13
+Agent-visible applicability features. It may not tune features or model priors,
+call an API, or execute the reserved partitions.

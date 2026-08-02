@@ -1,0 +1,87 @@
+{
+  "protocol": "probemem_acr_contextual_utility_development_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "development-only chronological feasibility of case-conditioned Bayesian action utility",
+  "environment": "MetaWorld push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "registered_condition": "fault_05",
+  "seed_partitions": {
+    "development": [2500, 2699],
+    "validation_reserved": [2700, 2749],
+    "heldout_reserved": [2750, 2849]
+  },
+  "stopping_rule": {
+    "target_operational_cases": 60,
+    "maximum_initial_units": 200,
+    "operational_eligibility": "initial failure and both candidate skills constructible before candidate execution",
+    "reads_candidate_outcomes": false
+  },
+  "random_namespaces": {
+    "initial_perturbation": 8721,
+    "registered_probe": 8722,
+    "paired_verification": 8723,
+    "global_posterior_sampling": 9721,
+    "paired_bootstrap": 9722
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "evaluator_collection_max_steps_per_operational_case": 1564
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "methods": [
+    "always_compensation",
+    "always_retry",
+    "accepted_only_last",
+    "posterior_greedy",
+    "contextual_greedy",
+    "contextual_abstain"
+  ],
+  "global_posterior": {
+    "exploration_episodes": 16,
+    "superiority_probability": 0.9,
+    "monte_carlo_samples": 20000
+  },
+  "contextual_model": {
+    "feature_schema": "INTERVENTION_APPLICABILITY_FEATURES_v1_all_13",
+    "feature_selection": false,
+    "exploration_episodes": 16,
+    "prior_mean_utility": 0.5,
+    "prior_precision": 1.0,
+    "noise_variance": 0.25,
+    "superiority_probability": 0.8,
+    "standardization_epsilon": 1e-12,
+    "rebuild_scaler_and_model_from_prior_selected_history_each_episode": true
+  },
+  "promotion_gate": {
+    "operational_cases_minimum": 60,
+    "integrity_violations_maximum": 0,
+    "strongest_fixed_accepted_shortfall_maximum": 1,
+    "contextual_greedy_net_accepted_gain_over_global_minimum": 3,
+    "contextual_greedy_harmful_transfer_not_higher": true,
+    "or_contextual_abstain_harmful_transfer_relative_reduction_minimum": 0.3,
+    "or_contextual_abstain_harmful_transfer_absolute_reduction_minimum": 2,
+    "or_contextual_abstain_post_exploration_coverage_minimum": 0.5,
+    "or_contextual_abstain_post_exploration_precision_gain_minimum": 0.1
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "unit": "operational_episode"
+  },
+  "prohibitions": {
+    "retune_on_stream": true,
+    "call_llm": true,
+    "promote_principle": true,
+    "run_validation": true,
+    "run_heldout": true,
+    "claim_online_learning": true
+  }
+}

@@ -308,3 +308,12 @@ routes. Posterior greedy exactly matched accepted-only last at 22/40 accepted;
 posterior abstention had zero post-exploration coverage. Preserve this negative
 result. Do not revise the frozen posterior or abstention threshold on seeds
 2200--2349, and do not execute 2350--2499, call an LLM, or promote principles.
+
+The user subsequently authorized the separately registered contextual
+feasibility protocol in
+`docs/protocols/probemem_acr_contextual_utility_development_v1.md`. It may scan
+fresh seeds 2500--2699 for at most 60 eligible failures and compare the frozen
+global posterior with Bayesian linear action models over the complete 13-field
+Agent-visible signature. Only selected outcomes at earlier episodes may update
+each method. Do not select features, retune priors or thresholds, call an LLM,
+promote principles, or execute reserved seeds 2700--2849.
