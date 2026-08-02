@@ -302,3 +302,9 @@ scan fresh development seeds 2200--2349 and stop at the unchanged target of 40
 eligible failures. It uses the unchanged methods, posterior, abstention rule,
 and promotion gate. Do not execute reserved seeds 2350--2499, call an LLM,
 promote principles, or tune from either distributional stream.
+
+Distributional v2 completed 40 operational cases and failed both promotion
+routes. Posterior greedy exactly matched accepted-only last at 22/40 accepted;
+posterior abstention had zero post-exploration coverage. Preserve this negative
+result. Do not revise the frozen posterior or abstention threshold on seeds
+2200--2349, and do not execute 2350--2499, call an LLM, or promote principles.

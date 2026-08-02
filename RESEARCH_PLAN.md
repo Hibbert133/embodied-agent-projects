@@ -48,6 +48,15 @@ development population to seeds 2200--2349, and retains the same label-blind
 stop at 40 operational cases. Validation and held-out seeds 2350--2499 remain
 unauthorized.
 
+That capacity-corrected run reached 40 operational cases after 119 initial
+units. Always retry was the strongest fixed baseline at 24/40 accepted.
+Accepted-only last and posterior greedy both achieved 22/40 and made identical
+choices, so the posterior again failed to cross the reasoning-to-action
+boundary. Posterior abstention reduced harmful transfers from 9 to 4 but
+abstained on all 32 post-exploration cases and missed 24 recoverable cases. Both
+promotion routes failed. No GLM, principle, validation, or held-out phase is
+authorized from this result.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support
