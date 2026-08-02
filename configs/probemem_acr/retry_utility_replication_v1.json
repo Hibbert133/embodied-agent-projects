@@ -5,6 +5,10 @@
   "environment": "MetaWorld push-v3",
   "low_level_policy": "SawyerPushV3Policy",
   "registered_condition": "fault_05",
+  "candidates": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
   "seed_partitions": {
     "development_replication": [1400, 1499],
     "validation_reserved": [1500, 1549],
@@ -21,6 +25,14 @@
     "fresh_verification_max_steps_per_candidate": 500,
     "evaluator_paired_collection_max_steps": 1564
   },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
   "registered_directional_hypotheses": {
     "phase_inconsistency": "RETRY_ONLY_HIGHER_THAN_COMPENSATION_ONLY",
     "probe_mean_estimation_residual": "RETRY_ONLY_HIGHER_THAN_COMPENSATION_ONLY"
@@ -33,6 +45,11 @@
     "chronology_violations_maximum": 0,
     "oracle_leakage_events_maximum": 0,
     "budget_violations_maximum": 0
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "seed": 9401,
+    "unit": "exclusive_recovery_episode"
   },
   "prohibitions": {
     "fit_threshold": true,
