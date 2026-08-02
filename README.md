@@ -99,6 +99,20 @@ is evaluator-only and does not create actionable memory; it shows that
 geometric similarity is not yet a reliable proxy for action-conditional
 intervention utility.
 
+ProbeMem-ACR v3 then tested the narrower deterministic hypothesis directly on
+100 new development units (seeds 1100--1199). Exactly one registered condition
+was assigned to each seed; 66 failed initial rollouts formed the operational
+paired population. The collection contained 47 compensation-only recoveries,
+4 retry-only recoveries, 2 both-recover cases, and 13 neither-recover cases.
+The frozen action-conditional estimator recovered 46/66, compared with 48/66
+for chronological state-only retrieval and 49/66 for always compensation. Its
+decisive-status accuracy was 54/61 versus 56/61 for state-only retrieval, and
+both methods caused 4 harmful transfers. The preregistered promotion gate
+therefore failed; validation, held-out execution, LLM reasoning, and principle
+generation remain unauthorized. This development-only counterfactual result is
+documented in the [ACR report](reports/probemem_acr_development_v1.md) and is
+not an online-learning or memory-benefit claim.
+
 > Can an embodied agent recognize when a failed rollout is diagnostically
 > ambiguous, acquire only the missing evidence, and verify a corrective
 > intervention before treating it as reusable experience?

@@ -83,7 +83,9 @@ def _calibration_figure(rows: list[dict[str, str]], output: Path) -> None:
         draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill="#d1495b")
         draw.text((x + radius + 4, y - 10), f"n={len(values)}", fill="#374151", font=_font(17))
     draw.text((left + 180, 820), "Predicted ACCEPTED probability", fill="#374151", font=_font(20))
-    draw.text((800, 390), "Observed ACCEPTED rate", fill="#374151", font=_font(20))
+    draw.text((left, 95), "Observed ACCEPTED rate", fill="#374151", font=_font(20))
+    draw.text((85, top - 10), "1.0", fill="#64748b", font=_font(15))
+    draw.text((85, top + size - 10), "0.0", fill="#64748b", font=_font(15))
     image.save(output, format="PNG", dpi=(180, 180))
 
 

@@ -2,6 +2,18 @@
 
 ## Versioned successor under development
 
+ProbeMem-ACR v3 is the latest development-only successor. Its first frozen
+campaign completed 100 initial units on seeds 1100--1199 and 66 operational
+paired counterfactual cases. The action-conditional estimator did not pass its
+promotion gate: it achieved 46/66 accepted recoveries and 54/61 decisive-status
+selections, while always compensation achieved 49/66 and chronological
+state-only retrieval achieved 48/66 and 56/61. Harmful transfer remained 4
+cases for both ACR and state-only retrieval. Consequently no validation,
+held-out, LLM-memory, resonance-policy, or principle-learning phase is
+authorized. The negative result is preserved in
+`reports/probemem_acr_development_v1.md`; frozen parameters will not be retuned
+on seeds 1100--1199.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

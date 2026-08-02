@@ -32,3 +32,13 @@ Passing the development gate would justify only a frozen validation study of
 action-conditioned outcome estimation. Failure is retained without retuning.
 Neither result establishes online adaptation, LLM benefit, principle learning,
 or held-out recovery improvement.
+
+## Frozen development outcome
+
+Run `probemem_acr_20260802T103454Z_dedbf7f07ec8` completed all 100 initial
+units and 66 operational pairs with zero chronology, Oracle-leakage, or budget
+violations. Deterministic ACR achieved 46/66 accepted recoveries and 54/61
+decisive selections, below always compensation (49/66 accepted) and state-only
+retrieval (48/66 accepted; 56/61 decisive). Harmful transfer remained 4 cases.
+The promotion gate failed, so validation, held-out execution, and the LLM phase
+are not authorized under this protocol.
