@@ -264,3 +264,10 @@ That replication has completed and failed its combined gate. Do not extend the
 1400--1499 run, fit a selector from it, or execute seeds 1500--1599 under this
 protocol. A further experiment requires explicit user authorization and a new
 scientific protocol with fresh seeds.
+
+The user subsequently authorized continuation under the new
+`docs/protocols/probemem_acr_utility_realization_stability_v1.md` protocol.
+It may scan development seeds 1600--1699 and collect six evaluator-only paired
+verification realizations for at most 20 failed `fault_05` initial rollouts.
+It may estimate target stability only. It must not fit a selector, call an LLM,
+write online memory, or execute reserved seeds 1700--1799.

@@ -25,3 +25,16 @@ reserves fresh ranges after the original ACR registry:
 
 These ranges were checked against existing configs and outputs before the
 protocol was frozen. Only 1400--1499 may be executed by the replication.
+
+## Utility-realization stability reservation
+
+The separately versioned
+`probemem_acr_utility_realization_stability_v1` protocol reserves:
+
+- development: 1600--1699;
+- validation reserved: 1700--1749;
+- held-out reserved: 1750--1799.
+
+Only development seeds 1600--1699 may be scanned, with a label-blind stop after
+20 failed initial rollouts. The protocol estimates repeated action-outcome
+distributions and cannot fit a selector or execute the reserved partitions.
