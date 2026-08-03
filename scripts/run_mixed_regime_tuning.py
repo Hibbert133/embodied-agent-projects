@@ -14,7 +14,7 @@ from scripts.run_probemem_acr_utility_stability import _compensation_is_construc
 from scripts.run_probemem_v2_smoke import _probe_context,_read_jsonl,_run_verification  # noqa:E402
 from src.perturbations import BiasNoisePerturbation  # noqa:E402
 from src.probemem.models import InterventionSkill  # noqa:E402
-from src.recovery_agent import RecoveryPolicyConfig  # noqa:E402
+from src.autoresearch import RecoveryPolicyConfig  # noqa:E402
 from src.reasoning import EvidenceSource,build_structured_evidence_state,validate_no_oracle_evidence  # noqa:E402
 from src.rollout import create_push_environment,create_push_policy,run_episode  # noqa:E402
 
