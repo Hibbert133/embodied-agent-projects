@@ -89,7 +89,7 @@ def main() -> int:
             finally:
                 env.close()
             state = build_structured_evidence_state(_read_jsonl(trajectory), evidence_id=f"feedback_episode{episode_id:03d}_attempt0", source=EvidenceSource.FAILED_ROLLOUT, attempt_id=0)
-            base = {"experiment_run_id": manifest["experiment_run_id"], "manifest_id": manifest["manifest_id"], "source_git_commit": manifest["source_git_commit"], "episode_id": episode_id, "seed": seed, "condition_id_oracle": "fault_05", "initial_success": initial.success, "initial_steps": initial.steps, "initial_final_object_goal_distance": initial.final_object_goal_distance, "eligible_state": False, "ineligibility_reason": "initial_success" if initial.success else "not_yet_evaluated"}
+            base = {"experiment_run_id": manifest["experiment_run_id"], "manifest_id": manifest["manifest_id"], "source_git_commit": manifest["source_git_commit"], "episode_id": episode_id, "seed": seed, "condition_id_oracle": "fault_05", "initial_success": initial.success, "initial_steps": initial.steps, "initial_final_object_goal_distance": initial.final_object_goal_distance, "probe_steps": 0, "eligible_state": False, "ineligibility_reason": "initial_success" if initial.success else "not_yet_evaluated", "eligible_state_index": 0, "realizations": 0, "evaluator_collection_steps": initial.steps}
             if not state.decision_required:
                 cases.append(base); _write_csv(run_dir / "case_results.csv", cases)
                 print(f"episode={episode_id} seed={seed} initial=success", flush=True); continue
@@ -98,7 +98,7 @@ def main() -> int:
             if probe_steps > int(budget["registered_probe_max_steps"]):
                 integrity["budget_violations"] += 1; raise RuntimeError("probe budget exceeded")
             if not _compensation_is_constructible(seed=seed, probe_context=probe, recovery_config=recovery):
-                cases.append({**base, "probe_steps": probe_steps, "ineligibility_reason": "bounded_compensation_not_constructible"}); _write_csv(run_dir / "case_results.csv", cases)
+                cases.append({**base, "probe_steps": probe_steps, "ineligibility_reason": "bounded_compensation_not_constructible", "evaluator_collection_steps": initial.steps + probe_steps}); _write_csv(run_dir / "case_results.csv", cases)
                 print(f"episode={episode_id} seed={seed} candidate=ineligible", flush=True); continue
             eligible += 1
             probe_evidence = {**state.to_dict(), "evidence_id": f"feedback_episode{episode_id:03d}_attempt1", "attempt_id": 1, "source": EvidenceSource.DIAGNOSTIC_PROBE.value, "parent_evidence_ids": [state.evidence_id], "registered_probe_evidence": probe}
