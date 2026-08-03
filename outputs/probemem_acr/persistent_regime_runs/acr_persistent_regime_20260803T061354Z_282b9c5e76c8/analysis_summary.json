@@ -1,0 +1,57 @@
+{
+  "experiment_run_id": "acr_persistent_regime_20260803T061354Z_282b9c5e76c8",
+  "manifest_id": "193a741a195085e255c7baac20ce22207aa268371dd425df56f55fa73e7d1129",
+  "source_git_commit": "282b9c5e76c82fc99d1b48dceedb4e265896d676",
+  "initial_units": 100,
+  "operational_cases": 40,
+  "operational_by_condition": {
+    "fault_05": 15,
+    "fault_01": 25
+  },
+  "exclusive_recovery_cases": 32,
+  "exclusive_selection_correct": 32,
+  "exclusive_selection_accuracy": 1.0,
+  "condition_mechanism_accuracy": {
+    "fault_05": 1.0,
+    "fault_01": 1.0
+  },
+  "method_summaries": {
+    "always_compensation": {
+      "cases": 40,
+      "accepted": 23,
+      "accepted_rate": 0.575,
+      "harmful": 10,
+      "mean_verification_steps": 251.325
+    },
+    "always_retry": {
+      "cases": 40,
+      "accepted": 11,
+      "accepted_rate": 0.275,
+      "harmful": 22,
+      "mean_verification_steps": 392.775
+    },
+    "frozen_probe_rule": {
+      "cases": 40,
+      "accepted": 33,
+      "accepted_rate": 0.825,
+      "harmful": 0,
+      "mean_verification_steps": 154.075
+    },
+    "oracle": {
+      "cases": 40,
+      "accepted": 33,
+      "accepted_rate": 0.825,
+      "harmful": 0,
+      "mean_verification_steps": 153.275
+    }
+  },
+  "strongest_fixed": "always_compensation",
+  "population_complete": true,
+  "promotion_gate_passed": true,
+  "glm_action_development_authorized": true,
+  "memory_authorized": false,
+  "validation_authorized": false,
+  "heldout_authorized": false,
+  "api_calls": 0,
+  "claim_scope": "development-only paired feasibility of action selection under an episode-persistent latent execution regime"
+}
