@@ -1,0 +1,30 @@
+{
+  "protocol": "probemem_acr_persistent_regime_development_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "development-only paired feasibility of action selection under an episode-persistent latent execution regime",
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "seed_range": [3900, 3949],
+  "reserved_not_executed": [3950, 3999],
+  "heldout_not_executed": [3100, 3199],
+  "conditions": ["fault_01", "fault_05"],
+  "units": "50 task seeds crossed with two registered conditions = 100 initial units",
+  "persistent_context": "condition identity and parameters remain fixed across initial rollout, diagnostic probe, and paired verification attempts; random streams remain independent",
+  "random_namespaces": {"initial_perturbation": 18101, "registered_probe": 18102, "paired_verification": 18103, "paired_bootstrap": 18104},
+  "registered_probe": {"protocol": "repeated_symmetric_world_frame_xy_v1", "repeats": 4, "steps_per_direction": 4, "magnitude": 0.2, "maximum_steps": 64},
+  "frozen_mechanism_rule": {
+    "score": "registered_probe_evidence.consistency.estimated_bias_std_norm",
+    "threshold": 0.11560838098372882,
+    "threshold_source": "configs/autoresearch/heldout_allocation_v1.json registered probe outcome classifier; not retuned",
+    "above_threshold": "INDEPENDENT_STOCHASTIC_RETRY",
+    "at_or_below_threshold": "BOUNDED_PLANAR_COMPENSATION"
+  },
+  "candidates": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps_per_candidate": 500, "evaluator_max_steps_per_case": 1564},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "completion_gate": {"operational_cases_minimum": 30, "operational_cases_per_condition_minimum": 10, "exclusive_recovery_cases_minimum": 12, "integrity_violations_maximum": 0},
+  "promotion_gate": {"exclusive_selection_accuracy_minimum": 0.75, "accepted_case_deficit_to_strongest_fixed_maximum": 1, "harmful_selection_not_above_strongest_fixed": true},
+  "bootstrap": {"resamples": 10000, "seed": 18104},
+  "prohibitions": {"call_llm": true, "write_memory": true, "retune_threshold": true, "run_validation": true, "run_heldout": true, "performance_claim": true}
+}

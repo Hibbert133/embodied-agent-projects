@@ -413,3 +413,15 @@ GLM-5.2 on exactly three allowlisted development rows with at most six calls.
 Every output is non-executing and cannot support a performance, memory,
 validation, or held-out claim. This exception tests the reasoning interface; it
 does not lift the scientific promotion block.
+
+The user then authorized a fresh persistent-execution-regime feasibility
+protocol in
+`docs/protocols/probemem_acr_persistent_regime_development_v1.md`. It may cross
+task seeds 3900--3949 with registered `fault_01` stable bias and `fault_05`
+stochastic noise, using the historical repeated-probe consistency threshold
+without retuning. Paired compensation and retry outcomes are evaluator-only;
+the Agent decision must be written before either outcome is collected. Seeds
+3950--3999 and held-out seeds 3100--3199 remain untouched. This run must not
+call GLM or write memory. Passing its frozen gate authorizes only a separately
+frozen development GLM action-selection experiment; failure must be preserved
+without threshold tuning.
