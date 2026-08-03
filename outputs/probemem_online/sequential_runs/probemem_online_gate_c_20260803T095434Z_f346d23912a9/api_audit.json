@@ -1,0 +1,106 @@
+[
+  {
+    "valid": true,
+    "latency_ms": 30244.567499990808,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.15,\n      \"confidence\": 0.7\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.75,\n      \"confidence\": 0.7\n    }\n  },\n  \"memory_used\": false,\n  \"supporting_memory_ids\": [],\n  \"contradicting_memory_ids\": [],\n  \"memory_applicable\": false,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"Probe responses show high variance (relative_bias_std=1.44) and unstable direction (dominant_axis_sign_agreement=0.5), rejecting bounded compensation. The estimated drift magnitudes are very small and inconsistent across probes, matching INDEPENDENT_STOCHASTIC_RETRY's precondition of highly variable responses with no stable signed correction. Sufficient budget (500) and 4 probe samples provide adequate evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 1250,
+      "output_tokens": 946
+    },
+    "response_hash": "841d51a09e7a26d02461bdd6976ff9a12d1a88bd1a00696e90a6094b5c0daa2d",
+    "episode_id": 21,
+    "method": "STATELESS_GLM",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 78281.19549999246,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.22,\n      \"confidence\": 0.78\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.35,\n      \"confidence\": 0.55\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode004_independent_stochastic_retry\",\n    \"bootstrap_episode013_independent_stochastic_retry\",\n    \"bootstrap_episode018_independent_stochastic_retry\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"Current probe evidence shows high response variance (relative_bias_std=1.44>1) and no stable directional drift (dominant_axis_sign_agreement=0.5, drift magnitudes ~1e-4). This directly violates BOUNDED_PLANAR_COMPENSATION's applicability condition ('not_appropriate_when probe responses show no stable direction or have high variance') and semantically supports INDEPENDENT_STOCHASTIC_RETRY. Despite weaker historical memory (3 support vs 6 contradictions, accepted_probability=0.30), the current physical evidence is valid, probe_sample_count=4 is sufficient, and budget remains (500). Current evidence overrides historical priors for skill selection.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2047,
+      "output_tokens": 2766
+    },
+    "response_hash": "6353d822e14acc540a85c7e65ed4e425c5ae761abc1a16bc2ae0982cb4a72546",
+    "episode_id": 21,
+    "method": "GLM_FROZEN_BOOTSTRAP_MEMORY",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 94056.5360999899,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.72,\n      \"confidence\": 0.58\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.3,\n      \"confidence\": 0.35\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode019_bounded_planar_compensation\",\n    \"bootstrap_episode009_bounded_planar_compensation\",\n    \"bootstrap_episode014_bounded_planar_compensation\",\n    \"bootstrap_episode017_bounded_planar_compensation\",\n    \"bootstrap_episode006_bounded_planar_compensation\",\n    \"bootstrap_episode020_bounded_planar_compensation\",\n    \"bootstrap_episode016_bounded_planar_compensation\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode012_bounded_planar_compensation\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Current probe evidence is mixed: drift is tiny ([0.0002, -0.0003]) with sign agreement only 0.5 and relative_bias_std 1.44, weakly contradicting BOUNDED_PLANAR_COMPENSATION's directional-stability requirement. However, memory strongly favors BOUNDED_PLANAR_COMPENSATION (7 verified supports, accepted_probability 0.72, mean_progress 0.11) over INDEPENDENT_STOCHASTIC_RETRY (6 contradictions, accepted_probability 0.30). The non-zero signed drift and moderate bias_std_norm (0.141) combined with dominant memory support justify selecting BOUNDED_PLANAR_COMPENSATION despite borderline current evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2043,
+      "output_tokens": 3434
+    },
+    "response_hash": "fa5f9b722f29d9e2446828068c8166d8eb8d7db6015b8952cb32a307b1dbc490",
+    "episode_id": 21,
+    "method": "GLM_ONLINE_ACTION_MEMORY",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 78889.80030000675,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.25,\n      \"confidence\": 0.75\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.55,\n      \"confidence\": 0.6\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode004_independent_stochastic_retry\",\n    \"bootstrap_episode013_independent_stochastic_retry\",\n    \"bootstrap_episode018_independent_stochastic_retry\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"Current probe evidence shows high response variance (relative_bias_std=1.44>1) and no stable directional drift (dominant_axis_sign_agreement=0.5, essentially random). Per skill semantics, BOUNDED_PLANAR_COMPENSATION is explicitly not appropriate when probe responses show no stable direction or have high variance. INDEPENDENT_STOCHASTIC_RETRY is designed for exactly this scenario. Although memory shows more historical support for BOUNDED_PLANAR_COMPENSATION (7 supports vs 3) and many contradictions for INDEPENDENT_STOCHASTIC_RETRY (6), the current physical evidence directly governs skill applicability and clearly favors stochastic retry. Budget is sufficient (500 remaining).\"\n}\n```",
+    "usage": {
+      "input_tokens": 2045,
+      "output_tokens": 2867
+    },
+    "response_hash": "661351b28ec4f620ba7be66d3b3bb75631438cbb3805235fed73654344cfaf4e",
+    "episode_id": 21,
+    "method": "GLM_ONLINE_MEMORY_RESONANCE",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 67561.71209999593,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": false,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.55,\n      \"confidence\": 0.5\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.3,\n      \"confidence\": 0.4\n    }\n  },\n  \"memory_used\": false,\n  \"supporting_memory_ids\": [],\n  \"contradicting_memory_ids\": [],\n  \"memory_applicable\": false,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Probe responses show a moderately stable directional bias: dominant_axis_sign_agreement of 0.75 and a very small mean_estimation_residual (3.19e-07) indicate the estimated drift direction is consistent across samples. The relative_bias_std of 0.274 is moderate, not high enough to invalidate a bounded correction. The estimated drift vector [0.00041, -0.00036] is small but signed, supporting a bounded planar compensation over an independent stochastic retry. No memory records exist for either skill, so the decision is based solely on current probe evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 1252,
+      "output_tokens": 2399
+    },
+    "response_hash": "322ab9a5cddd92077c42b17c7206f3c81f4707a1743e4ebd89481331d9e33d36",
+    "episode_id": 22,
+    "method": "STATELESS_GLM",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 36227.37710000365,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": false,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.76,\n      \"confidence\": 0.72\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.26,\n      \"confidence\": 0.65\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode009_bounded_planar_compensation\",\n    \"bootstrap_episode006_bounded_planar_compensation\",\n    \"bootstrap_episode017_bounded_planar_compensation\",\n    \"bootstrap_episode014_bounded_planar_compensation\",\n    \"bootstrap_episode019_bounded_planar_compensation\",\n    \"bootstrap_episode020_bounded_planar_compensation\",\n    \"bootstrap_episode016_bounded_planar_compensation\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode012_bounded_planar_compensation\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Probe responses show a stable directional drift: dominant_axis_sign_agreement=0.75 (3/4 probes agree), estimated_bias_std_norm=0.042 is low, and mean_estimation_residual is near zero. This supports a bounded planar compensation rather than stochastic retry. Memory strongly supports BPC (7 supports, accepted_probability=0.76) while ISR has 6 contradictions and accepted_probability=0.26. Sufficient budget (500) and 4 probe samples provide adequate evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2040,
+      "output_tokens": 1384
+    },
+    "response_hash": "770ab237472e8699040153df8a7a5b371e0113d6fe4f1fa4ac8c50aa79be3ff9",
+    "episode_id": 22,
+    "method": "GLM_FROZEN_BOOTSTRAP_MEMORY",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 41321.91289999173,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": false,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.736,\n      \"confidence\": 0.72\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.258,\n      \"confidence\": 0.68\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode006_bounded_planar_compensation\",\n    \"bootstrap_episode008_bounded_planar_compensation\",\n    \"bootstrap_episode009_bounded_planar_compensation\",\n    \"bootstrap_episode014_bounded_planar_compensation\",\n    \"bootstrap_episode016_bounded_planar_compensation\",\n    \"bootstrap_episode017_bounded_planar_compensation\",\n    \"bootstrap_episode019_bounded_planar_compensation\",\n    \"bootstrap_episode020_bounded_planar_compensation\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode012_bounded_planar_compensation\",\n    \"glm_online_action_memory_episode21\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Probe responses show a stable signed drift: dominant_axis_sign_agreement=0.75, mean_estimation_residual\u22480, and relative_bias_std=0.274 is moderate rather than high, indicating a consistent directional bias suitable for bounded compensation. Memory strongly favors BOUNDED_PLANAR_COMPENSATION (recent accepted_probability=0.736, mean_progress=0.113, positive acceptance delta) over INDEPENDENT_STOCHASTIC_RETRY (accepted_probability=0.258, 6 recent contradictions). Sufficient budget (500) and 4 probe samples provide adequate evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2043,
+      "output_tokens": 1552
+    },
+    "response_hash": "a410f0ed7460fa6fd9e0a6c1f0a802cecca6e2ca873308206d10e69a94c36dcc",
+    "episode_id": 22,
+    "method": "GLM_ONLINE_ACTION_MEMORY",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 32109.73909997847,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": false,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.76,\n      \"confidence\": 0.82\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.25,\n      \"confidence\": 0.75\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode009_bounded_planar_compensation\",\n    \"bootstrap_episode006_bounded_planar_compensation\",\n    \"bootstrap_episode017_bounded_planar_compensation\",\n    \"bootstrap_episode014_bounded_planar_compensation\",\n    \"bootstrap_episode019_bounded_planar_compensation\",\n    \"bootstrap_episode020_bounded_planar_compensation\",\n    \"bootstrap_episode016_bounded_planar_compensation\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode012_bounded_planar_compensation\",\n    \"bootstrap_episode015_independent_stochastic_retry\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Current probe evidence shows stable directional drift: dominant_axis_sign_agreement=0.75, mean_estimation_residual\u22483.2e-7 (negligible), and moderate relative_bias_std=0.274. The estimated_drift_xy=[0.0004,-0.0004] is small but consistent, matching BOUNDED_PLANAR_COMPENSATION's purpose. Memory strongly supports this skill (7 supports, 1 contradiction, accepted_probability=0.76). INDEPENDENT_STOCHASTIC_RETRY is inappropriate because response variance is not high and its memory shows 6 contradictions with only 0.25 acceptance probability.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2042,
+      "output_tokens": 1225
+    },
+    "response_hash": "cd66e25d107d41e026197c799203981e8a4c849728d0a65b30587dbd3bb190f3",
+    "episode_id": 22,
+    "method": "GLM_ONLINE_MEMORY_RESONANCE",
+    "repair": false
+  }
+]
