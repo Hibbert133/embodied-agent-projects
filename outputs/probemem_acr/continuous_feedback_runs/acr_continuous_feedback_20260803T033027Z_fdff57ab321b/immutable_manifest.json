@@ -1,0 +1,2731 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "acr_continuous_feedback_20260803T033027Z_fdff57ab321b",
+  "source_git_commit": "fdff57ab321bbf4edc5f8ed6e17bcd8a83c4c17a",
+  "created_at_utc": "20260803T033027Z",
+  "config_path": "configs/probemem_acr/continuous_feedback_development_v1.json",
+  "config_sha256": "3e5216f8a607e8eb9471cb55db77f949dfca96d464808c6e76d0a834809fd6c0",
+  "implementation_sha256": {
+    "scripts/check_continuous_feedback_seeds.py": "7583685db5b09fc5b416ca56f9549d0233913f77975def7f10382b4391002a0d",
+    "scripts/generate_continuous_feedback_manifest.py": "f1f38efa29d2ed757b1f743f1a31e72f2ededec2ea0dd565d66acea57492c32d",
+    "scripts/run_continuous_feedback_development.py": "821048184259e185daff05ab93d8a11c642ff22d63bc271623eaa904982f3082",
+    "scripts/analyze_continuous_feedback_development.py": "9991079bbe7f590446b680d9d17d2283dc215ffdbb4e91b3f12428417e887571",
+    "scripts/run_probemem_acr_utility_stability.py": "59c6cdcf843b3867bec503d52b4c99291cf3daa0b5730741bf396d19a2e75f75",
+    "scripts/run_probemem_v2_smoke.py": "855e0811fc5e5e36a4656e33b9aa0156f481d0e51b9f213358e4ade55ee742ec",
+    "src/probemem/continuous_feedback_policy.py": "91622a5890c5d14aad1572008382a3093b36626d331522290c387927f7b299ea",
+    "src/probemem/resonance_policy.py": "441bb022d4f92eaa68ecdb36cd985dbf5243af5fb2fa9b73ed74207a650a3b7a",
+    "src/reasoning/structured_evidence.py": "84a49e8435968d8a8257c6935bd9364235c80f97cb612b316ab568cfaf2565ea",
+    "src/rollout/engine.py": "a347c0d8acb76bc200af476150e6c9f699d43bf7b1fca6318aba7fe526906c28"
+  },
+  "input_sha256": {
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "outputs/autoresearch/noise_calibration/selected.json": "748b6ab6e143ec0939b68cb4bca73e96dcdf934f3f153aa4936f7607923a5e2c",
+    "docs/protocols/seed_registry.json": "256ed6cae18d6e53c9b0e2c5e605b5cefb468b32f27f454b59373429e051ab17"
+  },
+  "population_units": [
+    {
+      "episode_id": 1,
+      "environment_seed": 3500,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1959426510,
+      "diagnostic_probe_seed": 3465280507,
+      "first_verification_seed": 890119507,
+      "paired_second_verification_seed": 1373032188
+    },
+    {
+      "episode_id": 2,
+      "environment_seed": 3501,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2274180528,
+      "diagnostic_probe_seed": 1980772061,
+      "first_verification_seed": 2442467056,
+      "paired_second_verification_seed": 2163747754
+    },
+    {
+      "episode_id": 3,
+      "environment_seed": 3502,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1675985246,
+      "diagnostic_probe_seed": 2339912728,
+      "first_verification_seed": 228010318,
+      "paired_second_verification_seed": 297728484
+    },
+    {
+      "episode_id": 4,
+      "environment_seed": 3503,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3144035698,
+      "diagnostic_probe_seed": 2138872399,
+      "first_verification_seed": 1436216741,
+      "paired_second_verification_seed": 3330307823
+    },
+    {
+      "episode_id": 5,
+      "environment_seed": 3504,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 833043481,
+      "diagnostic_probe_seed": 2457565356,
+      "first_verification_seed": 1184766600,
+      "paired_second_verification_seed": 4010072765
+    },
+    {
+      "episode_id": 6,
+      "environment_seed": 3505,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3998058742,
+      "diagnostic_probe_seed": 2612239329,
+      "first_verification_seed": 3203868038,
+      "paired_second_verification_seed": 839779269
+    },
+    {
+      "episode_id": 7,
+      "environment_seed": 3506,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1677915845,
+      "diagnostic_probe_seed": 2823478123,
+      "first_verification_seed": 2522142920,
+      "paired_second_verification_seed": 1020337862
+    },
+    {
+      "episode_id": 8,
+      "environment_seed": 3507,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1102650335,
+      "diagnostic_probe_seed": 3340141871,
+      "first_verification_seed": 266788640,
+      "paired_second_verification_seed": 4138230788
+    },
+    {
+      "episode_id": 9,
+      "environment_seed": 3508,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3338788194,
+      "diagnostic_probe_seed": 2697087255,
+      "first_verification_seed": 1693575990,
+      "paired_second_verification_seed": 2948845316
+    },
+    {
+      "episode_id": 10,
+      "environment_seed": 3509,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3585056682,
+      "diagnostic_probe_seed": 176601635,
+      "first_verification_seed": 244615761,
+      "paired_second_verification_seed": 1091013323
+    },
+    {
+      "episode_id": 11,
+      "environment_seed": 3510,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3234445503,
+      "diagnostic_probe_seed": 2361873107,
+      "first_verification_seed": 4083489892,
+      "paired_second_verification_seed": 2868308232
+    },
+    {
+      "episode_id": 12,
+      "environment_seed": 3511,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 526898319,
+      "diagnostic_probe_seed": 806665711,
+      "first_verification_seed": 41395856,
+      "paired_second_verification_seed": 3957499006
+    },
+    {
+      "episode_id": 13,
+      "environment_seed": 3512,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 690041763,
+      "diagnostic_probe_seed": 483995705,
+      "first_verification_seed": 4067357609,
+      "paired_second_verification_seed": 4244551833
+    },
+    {
+      "episode_id": 14,
+      "environment_seed": 3513,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3155629803,
+      "diagnostic_probe_seed": 3181224576,
+      "first_verification_seed": 949644358,
+      "paired_second_verification_seed": 2529674373
+    },
+    {
+      "episode_id": 15,
+      "environment_seed": 3514,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4280565851,
+      "diagnostic_probe_seed": 42309798,
+      "first_verification_seed": 3046152341,
+      "paired_second_verification_seed": 460719296
+    },
+    {
+      "episode_id": 16,
+      "environment_seed": 3515,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3821822626,
+      "diagnostic_probe_seed": 3327463212,
+      "first_verification_seed": 2466774867,
+      "paired_second_verification_seed": 949983867
+    },
+    {
+      "episode_id": 17,
+      "environment_seed": 3516,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2807687875,
+      "diagnostic_probe_seed": 3788382030,
+      "first_verification_seed": 3732213078,
+      "paired_second_verification_seed": 1193224503
+    },
+    {
+      "episode_id": 18,
+      "environment_seed": 3517,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 135447107,
+      "diagnostic_probe_seed": 3863368971,
+      "first_verification_seed": 4183213552,
+      "paired_second_verification_seed": 3024254487
+    },
+    {
+      "episode_id": 19,
+      "environment_seed": 3518,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 239574285,
+      "diagnostic_probe_seed": 2655248259,
+      "first_verification_seed": 57266314,
+      "paired_second_verification_seed": 1392536832
+    },
+    {
+      "episode_id": 20,
+      "environment_seed": 3519,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1130167851,
+      "diagnostic_probe_seed": 687364279,
+      "first_verification_seed": 4241359062,
+      "paired_second_verification_seed": 3021344554
+    },
+    {
+      "episode_id": 21,
+      "environment_seed": 3520,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1408019434,
+      "diagnostic_probe_seed": 2679350421,
+      "first_verification_seed": 633816896,
+      "paired_second_verification_seed": 611388256
+    },
+    {
+      "episode_id": 22,
+      "environment_seed": 3521,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4170745710,
+      "diagnostic_probe_seed": 2011669881,
+      "first_verification_seed": 598475265,
+      "paired_second_verification_seed": 1053182874
+    },
+    {
+      "episode_id": 23,
+      "environment_seed": 3522,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1503102194,
+      "diagnostic_probe_seed": 1406109522,
+      "first_verification_seed": 2711497868,
+      "paired_second_verification_seed": 3856689426
+    },
+    {
+      "episode_id": 24,
+      "environment_seed": 3523,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3429277467,
+      "diagnostic_probe_seed": 664988639,
+      "first_verification_seed": 3534269742,
+      "paired_second_verification_seed": 2538104932
+    },
+    {
+      "episode_id": 25,
+      "environment_seed": 3524,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3855472772,
+      "diagnostic_probe_seed": 3577890617,
+      "first_verification_seed": 4143090323,
+      "paired_second_verification_seed": 2503983968
+    },
+    {
+      "episode_id": 26,
+      "environment_seed": 3525,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3036781296,
+      "diagnostic_probe_seed": 2692299522,
+      "first_verification_seed": 2411319624,
+      "paired_second_verification_seed": 2481181231
+    },
+    {
+      "episode_id": 27,
+      "environment_seed": 3526,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3867487878,
+      "diagnostic_probe_seed": 3142393206,
+      "first_verification_seed": 722630454,
+      "paired_second_verification_seed": 1608810809
+    },
+    {
+      "episode_id": 28,
+      "environment_seed": 3527,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1386203508,
+      "diagnostic_probe_seed": 592187245,
+      "first_verification_seed": 923480643,
+      "paired_second_verification_seed": 203711472
+    },
+    {
+      "episode_id": 29,
+      "environment_seed": 3528,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1757118588,
+      "diagnostic_probe_seed": 1116907394,
+      "first_verification_seed": 3526565139,
+      "paired_second_verification_seed": 3945848477
+    },
+    {
+      "episode_id": 30,
+      "environment_seed": 3529,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2190755867,
+      "diagnostic_probe_seed": 1547462088,
+      "first_verification_seed": 2913877097,
+      "paired_second_verification_seed": 3273439545
+    },
+    {
+      "episode_id": 31,
+      "environment_seed": 3530,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2029504333,
+      "diagnostic_probe_seed": 164021746,
+      "first_verification_seed": 4143599939,
+      "paired_second_verification_seed": 2278583719
+    },
+    {
+      "episode_id": 32,
+      "environment_seed": 3531,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2978236916,
+      "diagnostic_probe_seed": 407681011,
+      "first_verification_seed": 1104133504,
+      "paired_second_verification_seed": 3233725106
+    },
+    {
+      "episode_id": 33,
+      "environment_seed": 3532,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2239414904,
+      "diagnostic_probe_seed": 1698431800,
+      "first_verification_seed": 2481245404,
+      "paired_second_verification_seed": 1841178211
+    },
+    {
+      "episode_id": 34,
+      "environment_seed": 3533,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3328796967,
+      "diagnostic_probe_seed": 980303890,
+      "first_verification_seed": 3353593933,
+      "paired_second_verification_seed": 3755851433
+    },
+    {
+      "episode_id": 35,
+      "environment_seed": 3534,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2812900699,
+      "diagnostic_probe_seed": 4128314126,
+      "first_verification_seed": 2030467397,
+      "paired_second_verification_seed": 2869940643
+    },
+    {
+      "episode_id": 36,
+      "environment_seed": 3535,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2793730007,
+      "diagnostic_probe_seed": 351266473,
+      "first_verification_seed": 3815490426,
+      "paired_second_verification_seed": 3976168202
+    },
+    {
+      "episode_id": 37,
+      "environment_seed": 3536,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1615501431,
+      "diagnostic_probe_seed": 3741536238,
+      "first_verification_seed": 4277154873,
+      "paired_second_verification_seed": 2200362796
+    },
+    {
+      "episode_id": 38,
+      "environment_seed": 3537,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3192821383,
+      "diagnostic_probe_seed": 2671698297,
+      "first_verification_seed": 2383172807,
+      "paired_second_verification_seed": 2784242047
+    },
+    {
+      "episode_id": 39,
+      "environment_seed": 3538,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2571780650,
+      "diagnostic_probe_seed": 2629999054,
+      "first_verification_seed": 920790890,
+      "paired_second_verification_seed": 1113851604
+    },
+    {
+      "episode_id": 40,
+      "environment_seed": 3539,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1323618520,
+      "diagnostic_probe_seed": 348836769,
+      "first_verification_seed": 1950524184,
+      "paired_second_verification_seed": 492876874
+    },
+    {
+      "episode_id": 41,
+      "environment_seed": 3540,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 788118391,
+      "diagnostic_probe_seed": 1776925241,
+      "first_verification_seed": 2372779686,
+      "paired_second_verification_seed": 4140953679
+    },
+    {
+      "episode_id": 42,
+      "environment_seed": 3541,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1332770378,
+      "diagnostic_probe_seed": 4071240164,
+      "first_verification_seed": 3064991609,
+      "paired_second_verification_seed": 1477881762
+    },
+    {
+      "episode_id": 43,
+      "environment_seed": 3542,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3212228769,
+      "diagnostic_probe_seed": 128153397,
+      "first_verification_seed": 3537137493,
+      "paired_second_verification_seed": 3769869575
+    },
+    {
+      "episode_id": 44,
+      "environment_seed": 3543,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 424833591,
+      "diagnostic_probe_seed": 4161726590,
+      "first_verification_seed": 1849918381,
+      "paired_second_verification_seed": 3313863056
+    },
+    {
+      "episode_id": 45,
+      "environment_seed": 3544,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2566753690,
+      "diagnostic_probe_seed": 726999333,
+      "first_verification_seed": 2321430101,
+      "paired_second_verification_seed": 962583406
+    },
+    {
+      "episode_id": 46,
+      "environment_seed": 3545,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1103001859,
+      "diagnostic_probe_seed": 4062511330,
+      "first_verification_seed": 1622270274,
+      "paired_second_verification_seed": 12532008
+    },
+    {
+      "episode_id": 47,
+      "environment_seed": 3546,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2187155709,
+      "diagnostic_probe_seed": 4079252106,
+      "first_verification_seed": 290516001,
+      "paired_second_verification_seed": 3413542808
+    },
+    {
+      "episode_id": 48,
+      "environment_seed": 3547,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 384437792,
+      "diagnostic_probe_seed": 2575169316,
+      "first_verification_seed": 3507509020,
+      "paired_second_verification_seed": 1538876994
+    },
+    {
+      "episode_id": 49,
+      "environment_seed": 3548,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3145472645,
+      "diagnostic_probe_seed": 4109868411,
+      "first_verification_seed": 1045294914,
+      "paired_second_verification_seed": 2597698252
+    },
+    {
+      "episode_id": 50,
+      "environment_seed": 3549,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2472582915,
+      "diagnostic_probe_seed": 2761910250,
+      "first_verification_seed": 4031923007,
+      "paired_second_verification_seed": 4234787483
+    },
+    {
+      "episode_id": 51,
+      "environment_seed": 3550,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2969648861,
+      "diagnostic_probe_seed": 493707006,
+      "first_verification_seed": 3556228863,
+      "paired_second_verification_seed": 3430899313
+    },
+    {
+      "episode_id": 52,
+      "environment_seed": 3551,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1535519769,
+      "diagnostic_probe_seed": 4059843614,
+      "first_verification_seed": 592044351,
+      "paired_second_verification_seed": 3236999406
+    },
+    {
+      "episode_id": 53,
+      "environment_seed": 3552,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 583280156,
+      "diagnostic_probe_seed": 1430398618,
+      "first_verification_seed": 505783412,
+      "paired_second_verification_seed": 1602405014
+    },
+    {
+      "episode_id": 54,
+      "environment_seed": 3553,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3787770836,
+      "diagnostic_probe_seed": 4167425501,
+      "first_verification_seed": 1048379644,
+      "paired_second_verification_seed": 551679299
+    },
+    {
+      "episode_id": 55,
+      "environment_seed": 3554,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2101007435,
+      "diagnostic_probe_seed": 2143816996,
+      "first_verification_seed": 1266611235,
+      "paired_second_verification_seed": 1790897811
+    },
+    {
+      "episode_id": 56,
+      "environment_seed": 3555,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1727608170,
+      "diagnostic_probe_seed": 85357929,
+      "first_verification_seed": 4043733247,
+      "paired_second_verification_seed": 3537293005
+    },
+    {
+      "episode_id": 57,
+      "environment_seed": 3556,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2792513106,
+      "diagnostic_probe_seed": 1010790474,
+      "first_verification_seed": 4088076307,
+      "paired_second_verification_seed": 2941067832
+    },
+    {
+      "episode_id": 58,
+      "environment_seed": 3557,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2860734947,
+      "diagnostic_probe_seed": 2624090169,
+      "first_verification_seed": 3502849904,
+      "paired_second_verification_seed": 598516965
+    },
+    {
+      "episode_id": 59,
+      "environment_seed": 3558,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2219769401,
+      "diagnostic_probe_seed": 155270582,
+      "first_verification_seed": 1140727686,
+      "paired_second_verification_seed": 992361573
+    },
+    {
+      "episode_id": 60,
+      "environment_seed": 3559,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2009226948,
+      "diagnostic_probe_seed": 3412854946,
+      "first_verification_seed": 2576119949,
+      "paired_second_verification_seed": 2275612532
+    },
+    {
+      "episode_id": 61,
+      "environment_seed": 3560,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1638498830,
+      "diagnostic_probe_seed": 2054868947,
+      "first_verification_seed": 755853687,
+      "paired_second_verification_seed": 2685887251
+    },
+    {
+      "episode_id": 62,
+      "environment_seed": 3561,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1278002723,
+      "diagnostic_probe_seed": 2757395435,
+      "first_verification_seed": 171168879,
+      "paired_second_verification_seed": 3494915871
+    },
+    {
+      "episode_id": 63,
+      "environment_seed": 3562,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 258751771,
+      "diagnostic_probe_seed": 3796811253,
+      "first_verification_seed": 1345763866,
+      "paired_second_verification_seed": 2895576272
+    },
+    {
+      "episode_id": 64,
+      "environment_seed": 3563,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2822236939,
+      "diagnostic_probe_seed": 367445364,
+      "first_verification_seed": 1804625321,
+      "paired_second_verification_seed": 4030615293
+    },
+    {
+      "episode_id": 65,
+      "environment_seed": 3564,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2162795351,
+      "diagnostic_probe_seed": 3689003727,
+      "first_verification_seed": 3666996840,
+      "paired_second_verification_seed": 3066771278
+    },
+    {
+      "episode_id": 66,
+      "environment_seed": 3565,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1934163375,
+      "diagnostic_probe_seed": 3660921696,
+      "first_verification_seed": 3832318092,
+      "paired_second_verification_seed": 1443428225
+    },
+    {
+      "episode_id": 67,
+      "environment_seed": 3566,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2039735582,
+      "diagnostic_probe_seed": 1798938595,
+      "first_verification_seed": 561078409,
+      "paired_second_verification_seed": 3936618378
+    },
+    {
+      "episode_id": 68,
+      "environment_seed": 3567,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1780348780,
+      "diagnostic_probe_seed": 2266346692,
+      "first_verification_seed": 849706576,
+      "paired_second_verification_seed": 3056597335
+    },
+    {
+      "episode_id": 69,
+      "environment_seed": 3568,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 549066568,
+      "diagnostic_probe_seed": 2035934260,
+      "first_verification_seed": 1262926937,
+      "paired_second_verification_seed": 149689083
+    },
+    {
+      "episode_id": 70,
+      "environment_seed": 3569,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 981150848,
+      "diagnostic_probe_seed": 1364896194,
+      "first_verification_seed": 1495161968,
+      "paired_second_verification_seed": 584683340
+    },
+    {
+      "episode_id": 71,
+      "environment_seed": 3570,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1192014391,
+      "diagnostic_probe_seed": 108482474,
+      "first_verification_seed": 2079647058,
+      "paired_second_verification_seed": 354378138
+    },
+    {
+      "episode_id": 72,
+      "environment_seed": 3571,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4290268189,
+      "diagnostic_probe_seed": 424680070,
+      "first_verification_seed": 2811541739,
+      "paired_second_verification_seed": 1849674264
+    },
+    {
+      "episode_id": 73,
+      "environment_seed": 3572,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2021459883,
+      "diagnostic_probe_seed": 1246168432,
+      "first_verification_seed": 2747221923,
+      "paired_second_verification_seed": 501226647
+    },
+    {
+      "episode_id": 74,
+      "environment_seed": 3573,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3208277236,
+      "diagnostic_probe_seed": 2352826822,
+      "first_verification_seed": 1766244987,
+      "paired_second_verification_seed": 3804781113
+    },
+    {
+      "episode_id": 75,
+      "environment_seed": 3574,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1211013505,
+      "diagnostic_probe_seed": 235265977,
+      "first_verification_seed": 257959861,
+      "paired_second_verification_seed": 2521647793
+    },
+    {
+      "episode_id": 76,
+      "environment_seed": 3575,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2027106743,
+      "diagnostic_probe_seed": 2257127145,
+      "first_verification_seed": 1931921948,
+      "paired_second_verification_seed": 144517932
+    },
+    {
+      "episode_id": 77,
+      "environment_seed": 3576,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1929767935,
+      "diagnostic_probe_seed": 1364259803,
+      "first_verification_seed": 2677572904,
+      "paired_second_verification_seed": 2497480459
+    },
+    {
+      "episode_id": 78,
+      "environment_seed": 3577,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1052848336,
+      "diagnostic_probe_seed": 3073175422,
+      "first_verification_seed": 4040528174,
+      "paired_second_verification_seed": 159186464
+    },
+    {
+      "episode_id": 79,
+      "environment_seed": 3578,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4128609166,
+      "diagnostic_probe_seed": 3726265491,
+      "first_verification_seed": 1444108023,
+      "paired_second_verification_seed": 3353494827
+    },
+    {
+      "episode_id": 80,
+      "environment_seed": 3579,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 816630123,
+      "diagnostic_probe_seed": 3178585049,
+      "first_verification_seed": 2203881071,
+      "paired_second_verification_seed": 3774340303
+    },
+    {
+      "episode_id": 81,
+      "environment_seed": 3580,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1496230861,
+      "diagnostic_probe_seed": 226589428,
+      "first_verification_seed": 128308556,
+      "paired_second_verification_seed": 2223506968
+    },
+    {
+      "episode_id": 82,
+      "environment_seed": 3581,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2689558528,
+      "diagnostic_probe_seed": 3832364059,
+      "first_verification_seed": 4207578291,
+      "paired_second_verification_seed": 3041110100
+    },
+    {
+      "episode_id": 83,
+      "environment_seed": 3582,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 9306472,
+      "diagnostic_probe_seed": 2418970188,
+      "first_verification_seed": 1388439461,
+      "paired_second_verification_seed": 1440760845
+    },
+    {
+      "episode_id": 84,
+      "environment_seed": 3583,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3760382147,
+      "diagnostic_probe_seed": 4223473416,
+      "first_verification_seed": 3734141511,
+      "paired_second_verification_seed": 1494894954
+    },
+    {
+      "episode_id": 85,
+      "environment_seed": 3584,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1167847702,
+      "diagnostic_probe_seed": 3841648239,
+      "first_verification_seed": 63400289,
+      "paired_second_verification_seed": 2418383888
+    },
+    {
+      "episode_id": 86,
+      "environment_seed": 3585,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3629209989,
+      "diagnostic_probe_seed": 3009955725,
+      "first_verification_seed": 3218799940,
+      "paired_second_verification_seed": 3114465412
+    },
+    {
+      "episode_id": 87,
+      "environment_seed": 3586,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 607214616,
+      "diagnostic_probe_seed": 4168054452,
+      "first_verification_seed": 3387944348,
+      "paired_second_verification_seed": 3938782565
+    },
+    {
+      "episode_id": 88,
+      "environment_seed": 3587,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3708018722,
+      "diagnostic_probe_seed": 666779469,
+      "first_verification_seed": 1440455623,
+      "paired_second_verification_seed": 2003773489
+    },
+    {
+      "episode_id": 89,
+      "environment_seed": 3588,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2354657524,
+      "diagnostic_probe_seed": 4235171374,
+      "first_verification_seed": 2857935652,
+      "paired_second_verification_seed": 2559581058
+    },
+    {
+      "episode_id": 90,
+      "environment_seed": 3589,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 444607791,
+      "diagnostic_probe_seed": 588390245,
+      "first_verification_seed": 2271214901,
+      "paired_second_verification_seed": 1013704114
+    },
+    {
+      "episode_id": 91,
+      "environment_seed": 3590,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3991917077,
+      "diagnostic_probe_seed": 4269159550,
+      "first_verification_seed": 604468748,
+      "paired_second_verification_seed": 2471434836
+    },
+    {
+      "episode_id": 92,
+      "environment_seed": 3591,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 496272059,
+      "diagnostic_probe_seed": 1224811446,
+      "first_verification_seed": 187083990,
+      "paired_second_verification_seed": 709521275
+    },
+    {
+      "episode_id": 93,
+      "environment_seed": 3592,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1713774261,
+      "diagnostic_probe_seed": 2002402201,
+      "first_verification_seed": 3899770813,
+      "paired_second_verification_seed": 2073033211
+    },
+    {
+      "episode_id": 94,
+      "environment_seed": 3593,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2312296082,
+      "diagnostic_probe_seed": 3899462652,
+      "first_verification_seed": 3745139904,
+      "paired_second_verification_seed": 1890089271
+    },
+    {
+      "episode_id": 95,
+      "environment_seed": 3594,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1433592635,
+      "diagnostic_probe_seed": 3686775829,
+      "first_verification_seed": 1407050195,
+      "paired_second_verification_seed": 1417795001
+    },
+    {
+      "episode_id": 96,
+      "environment_seed": 3595,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1872879101,
+      "diagnostic_probe_seed": 733954034,
+      "first_verification_seed": 3500340796,
+      "paired_second_verification_seed": 1067583718
+    },
+    {
+      "episode_id": 97,
+      "environment_seed": 3596,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 405998286,
+      "diagnostic_probe_seed": 987152806,
+      "first_verification_seed": 3078405878,
+      "paired_second_verification_seed": 1577431012
+    },
+    {
+      "episode_id": 98,
+      "environment_seed": 3597,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1438269046,
+      "diagnostic_probe_seed": 623497400,
+      "first_verification_seed": 2354027879,
+      "paired_second_verification_seed": 3253131965
+    },
+    {
+      "episode_id": 99,
+      "environment_seed": 3598,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3347231289,
+      "diagnostic_probe_seed": 1974514070,
+      "first_verification_seed": 1890003329,
+      "paired_second_verification_seed": 707972639
+    },
+    {
+      "episode_id": 100,
+      "environment_seed": 3599,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4129728382,
+      "diagnostic_probe_seed": 3933822328,
+      "first_verification_seed": 3680717680,
+      "paired_second_verification_seed": 73785938
+    },
+    {
+      "episode_id": 101,
+      "environment_seed": 3600,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2962099140,
+      "diagnostic_probe_seed": 2404027572,
+      "first_verification_seed": 1872388310,
+      "paired_second_verification_seed": 296967221
+    },
+    {
+      "episode_id": 102,
+      "environment_seed": 3601,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 12990017,
+      "diagnostic_probe_seed": 1510753587,
+      "first_verification_seed": 4104576019,
+      "paired_second_verification_seed": 1215437148
+    },
+    {
+      "episode_id": 103,
+      "environment_seed": 3602,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3936469111,
+      "diagnostic_probe_seed": 4047666600,
+      "first_verification_seed": 3478207037,
+      "paired_second_verification_seed": 1667191403
+    },
+    {
+      "episode_id": 104,
+      "environment_seed": 3603,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3419846985,
+      "diagnostic_probe_seed": 4042557358,
+      "first_verification_seed": 173420905,
+      "paired_second_verification_seed": 3187317310
+    },
+    {
+      "episode_id": 105,
+      "environment_seed": 3604,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 698333872,
+      "diagnostic_probe_seed": 2642641007,
+      "first_verification_seed": 3797714379,
+      "paired_second_verification_seed": 290656074
+    },
+    {
+      "episode_id": 106,
+      "environment_seed": 3605,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2999388732,
+      "diagnostic_probe_seed": 3828838796,
+      "first_verification_seed": 4130565778,
+      "paired_second_verification_seed": 3740597758
+    },
+    {
+      "episode_id": 107,
+      "environment_seed": 3606,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 299021904,
+      "diagnostic_probe_seed": 2830918497,
+      "first_verification_seed": 484044887,
+      "paired_second_verification_seed": 3353948603
+    },
+    {
+      "episode_id": 108,
+      "environment_seed": 3607,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1212065384,
+      "diagnostic_probe_seed": 3489511517,
+      "first_verification_seed": 1397479947,
+      "paired_second_verification_seed": 4007230702
+    },
+    {
+      "episode_id": 109,
+      "environment_seed": 3608,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3371938274,
+      "diagnostic_probe_seed": 1735921414,
+      "first_verification_seed": 2844897111,
+      "paired_second_verification_seed": 1283654682
+    },
+    {
+      "episode_id": 110,
+      "environment_seed": 3609,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1277445887,
+      "diagnostic_probe_seed": 974617314,
+      "first_verification_seed": 1679963717,
+      "paired_second_verification_seed": 346157067
+    },
+    {
+      "episode_id": 111,
+      "environment_seed": 3610,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 841355849,
+      "diagnostic_probe_seed": 3163487620,
+      "first_verification_seed": 3939553462,
+      "paired_second_verification_seed": 3999450634
+    },
+    {
+      "episode_id": 112,
+      "environment_seed": 3611,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2761931143,
+      "diagnostic_probe_seed": 107705877,
+      "first_verification_seed": 3523151391,
+      "paired_second_verification_seed": 264556833
+    },
+    {
+      "episode_id": 113,
+      "environment_seed": 3612,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3634331709,
+      "diagnostic_probe_seed": 3847256031,
+      "first_verification_seed": 3153649700,
+      "paired_second_verification_seed": 3830773666
+    },
+    {
+      "episode_id": 114,
+      "environment_seed": 3613,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1325966,
+      "diagnostic_probe_seed": 579152805,
+      "first_verification_seed": 3667218253,
+      "paired_second_verification_seed": 399445984
+    },
+    {
+      "episode_id": 115,
+      "environment_seed": 3614,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3501512358,
+      "diagnostic_probe_seed": 3686990172,
+      "first_verification_seed": 2302062451,
+      "paired_second_verification_seed": 1748878481
+    },
+    {
+      "episode_id": 116,
+      "environment_seed": 3615,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2843117630,
+      "diagnostic_probe_seed": 2534813261,
+      "first_verification_seed": 1956714646,
+      "paired_second_verification_seed": 3057557638
+    },
+    {
+      "episode_id": 117,
+      "environment_seed": 3616,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3636117314,
+      "diagnostic_probe_seed": 4124611728,
+      "first_verification_seed": 2138069896,
+      "paired_second_verification_seed": 2206406036
+    },
+    {
+      "episode_id": 118,
+      "environment_seed": 3617,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3547271423,
+      "diagnostic_probe_seed": 10618362,
+      "first_verification_seed": 2062502577,
+      "paired_second_verification_seed": 3945238172
+    },
+    {
+      "episode_id": 119,
+      "environment_seed": 3618,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1109591576,
+      "diagnostic_probe_seed": 3023724114,
+      "first_verification_seed": 200806887,
+      "paired_second_verification_seed": 3732532851
+    },
+    {
+      "episode_id": 120,
+      "environment_seed": 3619,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3542410017,
+      "diagnostic_probe_seed": 4034374220,
+      "first_verification_seed": 2394719760,
+      "paired_second_verification_seed": 1432027888
+    },
+    {
+      "episode_id": 121,
+      "environment_seed": 3620,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1122948503,
+      "diagnostic_probe_seed": 314096048,
+      "first_verification_seed": 396072323,
+      "paired_second_verification_seed": 4271659966
+    },
+    {
+      "episode_id": 122,
+      "environment_seed": 3621,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2180163422,
+      "diagnostic_probe_seed": 2101743114,
+      "first_verification_seed": 3078512306,
+      "paired_second_verification_seed": 562208895
+    },
+    {
+      "episode_id": 123,
+      "environment_seed": 3622,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1024274019,
+      "diagnostic_probe_seed": 3724240642,
+      "first_verification_seed": 3486761801,
+      "paired_second_verification_seed": 1459611618
+    },
+    {
+      "episode_id": 124,
+      "environment_seed": 3623,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2804161995,
+      "diagnostic_probe_seed": 1359780746,
+      "first_verification_seed": 4048370092,
+      "paired_second_verification_seed": 56265534
+    },
+    {
+      "episode_id": 125,
+      "environment_seed": 3624,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2670807141,
+      "diagnostic_probe_seed": 2798296043,
+      "first_verification_seed": 4138475307,
+      "paired_second_verification_seed": 3650409689
+    },
+    {
+      "episode_id": 126,
+      "environment_seed": 3625,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3585942301,
+      "diagnostic_probe_seed": 3487600504,
+      "first_verification_seed": 1254310366,
+      "paired_second_verification_seed": 1392641922
+    },
+    {
+      "episode_id": 127,
+      "environment_seed": 3626,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3980162758,
+      "diagnostic_probe_seed": 1859059650,
+      "first_verification_seed": 3458826037,
+      "paired_second_verification_seed": 1244469396
+    },
+    {
+      "episode_id": 128,
+      "environment_seed": 3627,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1916518272,
+      "diagnostic_probe_seed": 1156494246,
+      "first_verification_seed": 1341549206,
+      "paired_second_verification_seed": 3744910141
+    },
+    {
+      "episode_id": 129,
+      "environment_seed": 3628,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2580447024,
+      "diagnostic_probe_seed": 2415427916,
+      "first_verification_seed": 3897826178,
+      "paired_second_verification_seed": 165843880
+    },
+    {
+      "episode_id": 130,
+      "environment_seed": 3629,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2799877549,
+      "diagnostic_probe_seed": 3029859132,
+      "first_verification_seed": 3993166881,
+      "paired_second_verification_seed": 1350742340
+    },
+    {
+      "episode_id": 131,
+      "environment_seed": 3630,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 240840630,
+      "diagnostic_probe_seed": 2715631490,
+      "first_verification_seed": 1421480257,
+      "paired_second_verification_seed": 4115822475
+    },
+    {
+      "episode_id": 132,
+      "environment_seed": 3631,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2516692768,
+      "diagnostic_probe_seed": 537916953,
+      "first_verification_seed": 2240088649,
+      "paired_second_verification_seed": 2135819757
+    },
+    {
+      "episode_id": 133,
+      "environment_seed": 3632,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1286117024,
+      "diagnostic_probe_seed": 2524493350,
+      "first_verification_seed": 419985024,
+      "paired_second_verification_seed": 3725616990
+    },
+    {
+      "episode_id": 134,
+      "environment_seed": 3633,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1606857839,
+      "diagnostic_probe_seed": 1343503378,
+      "first_verification_seed": 1248347251,
+      "paired_second_verification_seed": 2489730066
+    },
+    {
+      "episode_id": 135,
+      "environment_seed": 3634,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 52469949,
+      "diagnostic_probe_seed": 3162729875,
+      "first_verification_seed": 562323251,
+      "paired_second_verification_seed": 1214351542
+    },
+    {
+      "episode_id": 136,
+      "environment_seed": 3635,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3136969904,
+      "diagnostic_probe_seed": 175887653,
+      "first_verification_seed": 3160046492,
+      "paired_second_verification_seed": 2378778767
+    },
+    {
+      "episode_id": 137,
+      "environment_seed": 3636,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3543516890,
+      "diagnostic_probe_seed": 3455109498,
+      "first_verification_seed": 3477340372,
+      "paired_second_verification_seed": 3846104677
+    },
+    {
+      "episode_id": 138,
+      "environment_seed": 3637,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2048566496,
+      "diagnostic_probe_seed": 199544900,
+      "first_verification_seed": 4002406484,
+      "paired_second_verification_seed": 1541769655
+    },
+    {
+      "episode_id": 139,
+      "environment_seed": 3638,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 754042497,
+      "diagnostic_probe_seed": 1516450965,
+      "first_verification_seed": 224423596,
+      "paired_second_verification_seed": 3819439734
+    },
+    {
+      "episode_id": 140,
+      "environment_seed": 3639,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1544957719,
+      "diagnostic_probe_seed": 2573396288,
+      "first_verification_seed": 3610219852,
+      "paired_second_verification_seed": 1706801395
+    },
+    {
+      "episode_id": 141,
+      "environment_seed": 3640,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 514777350,
+      "diagnostic_probe_seed": 3788667287,
+      "first_verification_seed": 3343130203,
+      "paired_second_verification_seed": 1519910355
+    },
+    {
+      "episode_id": 142,
+      "environment_seed": 3641,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 504757081,
+      "diagnostic_probe_seed": 1422575125,
+      "first_verification_seed": 26977376,
+      "paired_second_verification_seed": 762649749
+    },
+    {
+      "episode_id": 143,
+      "environment_seed": 3642,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3889623421,
+      "diagnostic_probe_seed": 3675125630,
+      "first_verification_seed": 2713660533,
+      "paired_second_verification_seed": 2916158516
+    },
+    {
+      "episode_id": 144,
+      "environment_seed": 3643,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1258283542,
+      "diagnostic_probe_seed": 848235387,
+      "first_verification_seed": 368414188,
+      "paired_second_verification_seed": 382365325
+    },
+    {
+      "episode_id": 145,
+      "environment_seed": 3644,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4220392421,
+      "diagnostic_probe_seed": 4182054865,
+      "first_verification_seed": 2615997537,
+      "paired_second_verification_seed": 3284284358
+    },
+    {
+      "episode_id": 146,
+      "environment_seed": 3645,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3506295439,
+      "diagnostic_probe_seed": 153916069,
+      "first_verification_seed": 2020581860,
+      "paired_second_verification_seed": 484124555
+    },
+    {
+      "episode_id": 147,
+      "environment_seed": 3646,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2970057942,
+      "diagnostic_probe_seed": 4240128190,
+      "first_verification_seed": 3088740527,
+      "paired_second_verification_seed": 1001261068
+    },
+    {
+      "episode_id": 148,
+      "environment_seed": 3647,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4130277319,
+      "diagnostic_probe_seed": 2152148691,
+      "first_verification_seed": 2254959882,
+      "paired_second_verification_seed": 2397078463
+    },
+    {
+      "episode_id": 149,
+      "environment_seed": 3648,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2721505728,
+      "diagnostic_probe_seed": 1321483072,
+      "first_verification_seed": 4261767774,
+      "paired_second_verification_seed": 3444722581
+    },
+    {
+      "episode_id": 150,
+      "environment_seed": 3649,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1015342399,
+      "diagnostic_probe_seed": 3054014886,
+      "first_verification_seed": 754396453,
+      "paired_second_verification_seed": 821205909
+    },
+    {
+      "episode_id": 151,
+      "environment_seed": 3650,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2247778960,
+      "diagnostic_probe_seed": 1768816654,
+      "first_verification_seed": 3518471203,
+      "paired_second_verification_seed": 1770880119
+    },
+    {
+      "episode_id": 152,
+      "environment_seed": 3651,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2448454276,
+      "diagnostic_probe_seed": 1226878462,
+      "first_verification_seed": 3638300294,
+      "paired_second_verification_seed": 1723419313
+    },
+    {
+      "episode_id": 153,
+      "environment_seed": 3652,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4099851737,
+      "diagnostic_probe_seed": 2596823570,
+      "first_verification_seed": 2879185703,
+      "paired_second_verification_seed": 723442435
+    },
+    {
+      "episode_id": 154,
+      "environment_seed": 3653,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 530431607,
+      "diagnostic_probe_seed": 1337010115,
+      "first_verification_seed": 3056498481,
+      "paired_second_verification_seed": 2904085527
+    },
+    {
+      "episode_id": 155,
+      "environment_seed": 3654,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1849710319,
+      "diagnostic_probe_seed": 2616086446,
+      "first_verification_seed": 436351981,
+      "paired_second_verification_seed": 139637467
+    },
+    {
+      "episode_id": 156,
+      "environment_seed": 3655,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 87976874,
+      "diagnostic_probe_seed": 2161925313,
+      "first_verification_seed": 1848555852,
+      "paired_second_verification_seed": 1867995229
+    },
+    {
+      "episode_id": 157,
+      "environment_seed": 3656,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1146406934,
+      "diagnostic_probe_seed": 771322043,
+      "first_verification_seed": 1625938037,
+      "paired_second_verification_seed": 2858067649
+    },
+    {
+      "episode_id": 158,
+      "environment_seed": 3657,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 842790111,
+      "diagnostic_probe_seed": 1394621119,
+      "first_verification_seed": 205229178,
+      "paired_second_verification_seed": 3996347010
+    },
+    {
+      "episode_id": 159,
+      "environment_seed": 3658,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 45378891,
+      "diagnostic_probe_seed": 844206932,
+      "first_verification_seed": 812260560,
+      "paired_second_verification_seed": 3036136643
+    },
+    {
+      "episode_id": 160,
+      "environment_seed": 3659,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3010020410,
+      "diagnostic_probe_seed": 3617672211,
+      "first_verification_seed": 2758549542,
+      "paired_second_verification_seed": 3151131512
+    },
+    {
+      "episode_id": 161,
+      "environment_seed": 3660,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2250051488,
+      "diagnostic_probe_seed": 1056032164,
+      "first_verification_seed": 945463585,
+      "paired_second_verification_seed": 231522922
+    },
+    {
+      "episode_id": 162,
+      "environment_seed": 3661,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 145624911,
+      "diagnostic_probe_seed": 1954658857,
+      "first_verification_seed": 3395564749,
+      "paired_second_verification_seed": 3413494117
+    },
+    {
+      "episode_id": 163,
+      "environment_seed": 3662,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 386441927,
+      "diagnostic_probe_seed": 4150248250,
+      "first_verification_seed": 759412504,
+      "paired_second_verification_seed": 2988072488
+    },
+    {
+      "episode_id": 164,
+      "environment_seed": 3663,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 216707022,
+      "diagnostic_probe_seed": 917743864,
+      "first_verification_seed": 2736369300,
+      "paired_second_verification_seed": 2365954966
+    },
+    {
+      "episode_id": 165,
+      "environment_seed": 3664,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 412110575,
+      "diagnostic_probe_seed": 1516876607,
+      "first_verification_seed": 124448035,
+      "paired_second_verification_seed": 143698961
+    },
+    {
+      "episode_id": 166,
+      "environment_seed": 3665,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3154822038,
+      "diagnostic_probe_seed": 1521133298,
+      "first_verification_seed": 2453882590,
+      "paired_second_verification_seed": 268202755
+    },
+    {
+      "episode_id": 167,
+      "environment_seed": 3666,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1957245539,
+      "diagnostic_probe_seed": 2774096513,
+      "first_verification_seed": 2623469798,
+      "paired_second_verification_seed": 736878759
+    },
+    {
+      "episode_id": 168,
+      "environment_seed": 3667,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1854933694,
+      "diagnostic_probe_seed": 2864590951,
+      "first_verification_seed": 1298072319,
+      "paired_second_verification_seed": 698633701
+    },
+    {
+      "episode_id": 169,
+      "environment_seed": 3668,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 74836532,
+      "diagnostic_probe_seed": 2147180506,
+      "first_verification_seed": 385978226,
+      "paired_second_verification_seed": 595689244
+    },
+    {
+      "episode_id": 170,
+      "environment_seed": 3669,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2915503798,
+      "diagnostic_probe_seed": 3499514583,
+      "first_verification_seed": 3867686391,
+      "paired_second_verification_seed": 1750920018
+    },
+    {
+      "episode_id": 171,
+      "environment_seed": 3670,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4059790833,
+      "diagnostic_probe_seed": 1471413981,
+      "first_verification_seed": 279734543,
+      "paired_second_verification_seed": 12019275
+    },
+    {
+      "episode_id": 172,
+      "environment_seed": 3671,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3145242207,
+      "diagnostic_probe_seed": 2890140727,
+      "first_verification_seed": 2773790311,
+      "paired_second_verification_seed": 4053771838
+    },
+    {
+      "episode_id": 173,
+      "environment_seed": 3672,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3956595526,
+      "diagnostic_probe_seed": 1583074233,
+      "first_verification_seed": 1170557312,
+      "paired_second_verification_seed": 3686956450
+    },
+    {
+      "episode_id": 174,
+      "environment_seed": 3673,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 879540745,
+      "diagnostic_probe_seed": 1592350545,
+      "first_verification_seed": 3158629342,
+      "paired_second_verification_seed": 563870937
+    },
+    {
+      "episode_id": 175,
+      "environment_seed": 3674,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1659835674,
+      "diagnostic_probe_seed": 2921194719,
+      "first_verification_seed": 83852193,
+      "paired_second_verification_seed": 906476966
+    },
+    {
+      "episode_id": 176,
+      "environment_seed": 3675,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2673927619,
+      "diagnostic_probe_seed": 4079247343,
+      "first_verification_seed": 2794849386,
+      "paired_second_verification_seed": 2073795006
+    },
+    {
+      "episode_id": 177,
+      "environment_seed": 3676,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 89144255,
+      "diagnostic_probe_seed": 1442049050,
+      "first_verification_seed": 1634883539,
+      "paired_second_verification_seed": 704583256
+    },
+    {
+      "episode_id": 178,
+      "environment_seed": 3677,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2997065973,
+      "diagnostic_probe_seed": 1735019387,
+      "first_verification_seed": 4054082246,
+      "paired_second_verification_seed": 1945138415
+    },
+    {
+      "episode_id": 179,
+      "environment_seed": 3678,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1024097714,
+      "diagnostic_probe_seed": 1264714107,
+      "first_verification_seed": 1562630903,
+      "paired_second_verification_seed": 3481636756
+    },
+    {
+      "episode_id": 180,
+      "environment_seed": 3679,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 944291877,
+      "diagnostic_probe_seed": 220685756,
+      "first_verification_seed": 3882086237,
+      "paired_second_verification_seed": 1462426874
+    },
+    {
+      "episode_id": 181,
+      "environment_seed": 3680,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1026869357,
+      "diagnostic_probe_seed": 2151643685,
+      "first_verification_seed": 4249902963,
+      "paired_second_verification_seed": 2982404008
+    },
+    {
+      "episode_id": 182,
+      "environment_seed": 3681,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 906973737,
+      "diagnostic_probe_seed": 2094362985,
+      "first_verification_seed": 3593315505,
+      "paired_second_verification_seed": 947549905
+    },
+    {
+      "episode_id": 183,
+      "environment_seed": 3682,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 788667956,
+      "diagnostic_probe_seed": 1512679620,
+      "first_verification_seed": 1683211225,
+      "paired_second_verification_seed": 3012643748
+    },
+    {
+      "episode_id": 184,
+      "environment_seed": 3683,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2354517736,
+      "diagnostic_probe_seed": 1615500943,
+      "first_verification_seed": 3578480175,
+      "paired_second_verification_seed": 1781392365
+    },
+    {
+      "episode_id": 185,
+      "environment_seed": 3684,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 373057854,
+      "diagnostic_probe_seed": 312867512,
+      "first_verification_seed": 1381059307,
+      "paired_second_verification_seed": 1260854478
+    },
+    {
+      "episode_id": 186,
+      "environment_seed": 3685,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3746807596,
+      "diagnostic_probe_seed": 3010530306,
+      "first_verification_seed": 2478458489,
+      "paired_second_verification_seed": 4264677912
+    },
+    {
+      "episode_id": 187,
+      "environment_seed": 3686,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4121269996,
+      "diagnostic_probe_seed": 2169804645,
+      "first_verification_seed": 2739386602,
+      "paired_second_verification_seed": 1152197347
+    },
+    {
+      "episode_id": 188,
+      "environment_seed": 3687,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3470200584,
+      "diagnostic_probe_seed": 1434039495,
+      "first_verification_seed": 884280289,
+      "paired_second_verification_seed": 1860908357
+    },
+    {
+      "episode_id": 189,
+      "environment_seed": 3688,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 485827364,
+      "diagnostic_probe_seed": 2588852117,
+      "first_verification_seed": 2853798281,
+      "paired_second_verification_seed": 2150488791
+    },
+    {
+      "episode_id": 190,
+      "environment_seed": 3689,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 383664901,
+      "diagnostic_probe_seed": 2175455545,
+      "first_verification_seed": 1769990628,
+      "paired_second_verification_seed": 1469335221
+    },
+    {
+      "episode_id": 191,
+      "environment_seed": 3690,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3177657164,
+      "diagnostic_probe_seed": 2134074883,
+      "first_verification_seed": 2331913265,
+      "paired_second_verification_seed": 794206435
+    },
+    {
+      "episode_id": 192,
+      "environment_seed": 3691,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1019518202,
+      "diagnostic_probe_seed": 336051294,
+      "first_verification_seed": 3215370273,
+      "paired_second_verification_seed": 488611435
+    },
+    {
+      "episode_id": 193,
+      "environment_seed": 3692,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1251692991,
+      "diagnostic_probe_seed": 1168573105,
+      "first_verification_seed": 1237753658,
+      "paired_second_verification_seed": 2598159267
+    },
+    {
+      "episode_id": 194,
+      "environment_seed": 3693,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 59972807,
+      "diagnostic_probe_seed": 4004760828,
+      "first_verification_seed": 1112404443,
+      "paired_second_verification_seed": 3220350447
+    },
+    {
+      "episode_id": 195,
+      "environment_seed": 3694,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3019478711,
+      "diagnostic_probe_seed": 3916210464,
+      "first_verification_seed": 2493775933,
+      "paired_second_verification_seed": 2021667338
+    },
+    {
+      "episode_id": 196,
+      "environment_seed": 3695,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 444202563,
+      "diagnostic_probe_seed": 2002267074,
+      "first_verification_seed": 2669102907,
+      "paired_second_verification_seed": 3111158457
+    },
+    {
+      "episode_id": 197,
+      "environment_seed": 3696,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4110339671,
+      "diagnostic_probe_seed": 4011471703,
+      "first_verification_seed": 1645563524,
+      "paired_second_verification_seed": 955164113
+    },
+    {
+      "episode_id": 198,
+      "environment_seed": 3697,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2709028478,
+      "diagnostic_probe_seed": 4148520791,
+      "first_verification_seed": 2932368873,
+      "paired_second_verification_seed": 709419790
+    },
+    {
+      "episode_id": 199,
+      "environment_seed": 3698,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2633849664,
+      "diagnostic_probe_seed": 2791694626,
+      "first_verification_seed": 51500506,
+      "paired_second_verification_seed": 408874006
+    },
+    {
+      "episode_id": 200,
+      "environment_seed": 3699,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2205852411,
+      "diagnostic_probe_seed": 3614174697,
+      "first_verification_seed": 1677915366,
+      "paired_second_verification_seed": 25416183
+    },
+    {
+      "episode_id": 201,
+      "environment_seed": 3700,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 186922057,
+      "diagnostic_probe_seed": 1564145260,
+      "first_verification_seed": 714488186,
+      "paired_second_verification_seed": 2744005645
+    },
+    {
+      "episode_id": 202,
+      "environment_seed": 3701,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3420647395,
+      "diagnostic_probe_seed": 173464229,
+      "first_verification_seed": 2614957921,
+      "paired_second_verification_seed": 2775981556
+    },
+    {
+      "episode_id": 203,
+      "environment_seed": 3702,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1268975541,
+      "diagnostic_probe_seed": 4020279925,
+      "first_verification_seed": 1979023506,
+      "paired_second_verification_seed": 916741819
+    },
+    {
+      "episode_id": 204,
+      "environment_seed": 3703,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2635926372,
+      "diagnostic_probe_seed": 2071796453,
+      "first_verification_seed": 2758691192,
+      "paired_second_verification_seed": 2802118805
+    },
+    {
+      "episode_id": 205,
+      "environment_seed": 3704,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3561543737,
+      "diagnostic_probe_seed": 2158747784,
+      "first_verification_seed": 974739611,
+      "paired_second_verification_seed": 3218275546
+    },
+    {
+      "episode_id": 206,
+      "environment_seed": 3705,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1584115086,
+      "diagnostic_probe_seed": 2230455771,
+      "first_verification_seed": 698880174,
+      "paired_second_verification_seed": 2017571339
+    },
+    {
+      "episode_id": 207,
+      "environment_seed": 3706,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1618913445,
+      "diagnostic_probe_seed": 2408572398,
+      "first_verification_seed": 3315111573,
+      "paired_second_verification_seed": 1811995221
+    },
+    {
+      "episode_id": 208,
+      "environment_seed": 3707,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4111423358,
+      "diagnostic_probe_seed": 2405267342,
+      "first_verification_seed": 396057920,
+      "paired_second_verification_seed": 3029918542
+    },
+    {
+      "episode_id": 209,
+      "environment_seed": 3708,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1374640271,
+      "diagnostic_probe_seed": 3719450310,
+      "first_verification_seed": 3848863395,
+      "paired_second_verification_seed": 2968042244
+    },
+    {
+      "episode_id": 210,
+      "environment_seed": 3709,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 32306717,
+      "diagnostic_probe_seed": 1612140510,
+      "first_verification_seed": 3534995349,
+      "paired_second_verification_seed": 2156272506
+    },
+    {
+      "episode_id": 211,
+      "environment_seed": 3710,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2612987046,
+      "diagnostic_probe_seed": 2371728813,
+      "first_verification_seed": 1051515742,
+      "paired_second_verification_seed": 2118155354
+    },
+    {
+      "episode_id": 212,
+      "environment_seed": 3711,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3233481165,
+      "diagnostic_probe_seed": 2006426217,
+      "first_verification_seed": 2129310765,
+      "paired_second_verification_seed": 1900248247
+    },
+    {
+      "episode_id": 213,
+      "environment_seed": 3712,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 179957871,
+      "diagnostic_probe_seed": 3898120823,
+      "first_verification_seed": 2655590880,
+      "paired_second_verification_seed": 1497007310
+    },
+    {
+      "episode_id": 214,
+      "environment_seed": 3713,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3308536593,
+      "diagnostic_probe_seed": 459851395,
+      "first_verification_seed": 1020821595,
+      "paired_second_verification_seed": 27162044
+    },
+    {
+      "episode_id": 215,
+      "environment_seed": 3714,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1421669981,
+      "diagnostic_probe_seed": 3091813277,
+      "first_verification_seed": 3750739614,
+      "paired_second_verification_seed": 2393203183
+    },
+    {
+      "episode_id": 216,
+      "environment_seed": 3715,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3749306325,
+      "diagnostic_probe_seed": 227281281,
+      "first_verification_seed": 820762181,
+      "paired_second_verification_seed": 2422903182
+    },
+    {
+      "episode_id": 217,
+      "environment_seed": 3716,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1720174290,
+      "diagnostic_probe_seed": 3374212937,
+      "first_verification_seed": 2565295051,
+      "paired_second_verification_seed": 2570741944
+    },
+    {
+      "episode_id": 218,
+      "environment_seed": 3717,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2685916356,
+      "diagnostic_probe_seed": 2175262331,
+      "first_verification_seed": 3102196529,
+      "paired_second_verification_seed": 2877873139
+    },
+    {
+      "episode_id": 219,
+      "environment_seed": 3718,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1725013634,
+      "diagnostic_probe_seed": 648695309,
+      "first_verification_seed": 2407888349,
+      "paired_second_verification_seed": 795849944
+    },
+    {
+      "episode_id": 220,
+      "environment_seed": 3719,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2732060033,
+      "diagnostic_probe_seed": 3432250507,
+      "first_verification_seed": 4076551100,
+      "paired_second_verification_seed": 860887556
+    },
+    {
+      "episode_id": 221,
+      "environment_seed": 3720,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4083175695,
+      "diagnostic_probe_seed": 2482716903,
+      "first_verification_seed": 2829244792,
+      "paired_second_verification_seed": 3183477400
+    },
+    {
+      "episode_id": 222,
+      "environment_seed": 3721,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1274682987,
+      "diagnostic_probe_seed": 3066839401,
+      "first_verification_seed": 3287142128,
+      "paired_second_verification_seed": 1224477330
+    },
+    {
+      "episode_id": 223,
+      "environment_seed": 3722,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 988087988,
+      "diagnostic_probe_seed": 2348508347,
+      "first_verification_seed": 3894175969,
+      "paired_second_verification_seed": 2767207663
+    },
+    {
+      "episode_id": 224,
+      "environment_seed": 3723,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3608663579,
+      "diagnostic_probe_seed": 2992877088,
+      "first_verification_seed": 3953452507,
+      "paired_second_verification_seed": 3984046601
+    },
+    {
+      "episode_id": 225,
+      "environment_seed": 3724,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2127167391,
+      "diagnostic_probe_seed": 3140311008,
+      "first_verification_seed": 1689990303,
+      "paired_second_verification_seed": 2554482824
+    },
+    {
+      "episode_id": 226,
+      "environment_seed": 3725,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1831187644,
+      "diagnostic_probe_seed": 3921377543,
+      "first_verification_seed": 2346967442,
+      "paired_second_verification_seed": 32348446
+    },
+    {
+      "episode_id": 227,
+      "environment_seed": 3726,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3908919126,
+      "diagnostic_probe_seed": 380754819,
+      "first_verification_seed": 3531943664,
+      "paired_second_verification_seed": 334193769
+    },
+    {
+      "episode_id": 228,
+      "environment_seed": 3727,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4232127860,
+      "diagnostic_probe_seed": 1805057456,
+      "first_verification_seed": 3563412826,
+      "paired_second_verification_seed": 3149745774
+    },
+    {
+      "episode_id": 229,
+      "environment_seed": 3728,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2734788323,
+      "diagnostic_probe_seed": 3631383657,
+      "first_verification_seed": 3858957240,
+      "paired_second_verification_seed": 1319009160
+    },
+    {
+      "episode_id": 230,
+      "environment_seed": 3729,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3866839610,
+      "diagnostic_probe_seed": 3766230043,
+      "first_verification_seed": 2278123795,
+      "paired_second_verification_seed": 2976485623
+    },
+    {
+      "episode_id": 231,
+      "environment_seed": 3730,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3029933064,
+      "diagnostic_probe_seed": 1969407524,
+      "first_verification_seed": 799319404,
+      "paired_second_verification_seed": 2603958154
+    },
+    {
+      "episode_id": 232,
+      "environment_seed": 3731,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2673056910,
+      "diagnostic_probe_seed": 1108183115,
+      "first_verification_seed": 127523998,
+      "paired_second_verification_seed": 3894179637
+    },
+    {
+      "episode_id": 233,
+      "environment_seed": 3732,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3343495205,
+      "diagnostic_probe_seed": 2065894938,
+      "first_verification_seed": 461348532,
+      "paired_second_verification_seed": 2385281907
+    },
+    {
+      "episode_id": 234,
+      "environment_seed": 3733,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2354997719,
+      "diagnostic_probe_seed": 2799994586,
+      "first_verification_seed": 3494187835,
+      "paired_second_verification_seed": 3155221810
+    },
+    {
+      "episode_id": 235,
+      "environment_seed": 3734,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2091527437,
+      "diagnostic_probe_seed": 2150236430,
+      "first_verification_seed": 2985411314,
+      "paired_second_verification_seed": 463784708
+    },
+    {
+      "episode_id": 236,
+      "environment_seed": 3735,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3381245449,
+      "diagnostic_probe_seed": 3172217233,
+      "first_verification_seed": 670686237,
+      "paired_second_verification_seed": 1658104797
+    },
+    {
+      "episode_id": 237,
+      "environment_seed": 3736,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3859229995,
+      "diagnostic_probe_seed": 3154272980,
+      "first_verification_seed": 1860142866,
+      "paired_second_verification_seed": 2052863745
+    },
+    {
+      "episode_id": 238,
+      "environment_seed": 3737,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 685654186,
+      "diagnostic_probe_seed": 2993670858,
+      "first_verification_seed": 513666435,
+      "paired_second_verification_seed": 2868118193
+    },
+    {
+      "episode_id": 239,
+      "environment_seed": 3738,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3668011997,
+      "diagnostic_probe_seed": 2186685890,
+      "first_verification_seed": 2425141116,
+      "paired_second_verification_seed": 482568757
+    },
+    {
+      "episode_id": 240,
+      "environment_seed": 3739,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 776402480,
+      "diagnostic_probe_seed": 1166968878,
+      "first_verification_seed": 1708909376,
+      "paired_second_verification_seed": 447287709
+    },
+    {
+      "episode_id": 241,
+      "environment_seed": 3740,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 540181542,
+      "diagnostic_probe_seed": 3489843578,
+      "first_verification_seed": 246312566,
+      "paired_second_verification_seed": 1065292261
+    },
+    {
+      "episode_id": 242,
+      "environment_seed": 3741,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2494003163,
+      "diagnostic_probe_seed": 4201723605,
+      "first_verification_seed": 1784311119,
+      "paired_second_verification_seed": 1597576915
+    },
+    {
+      "episode_id": 243,
+      "environment_seed": 3742,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1484383518,
+      "diagnostic_probe_seed": 337401208,
+      "first_verification_seed": 2629314593,
+      "paired_second_verification_seed": 2998872980
+    },
+    {
+      "episode_id": 244,
+      "environment_seed": 3743,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1717934520,
+      "diagnostic_probe_seed": 846505492,
+      "first_verification_seed": 3775422817,
+      "paired_second_verification_seed": 2502797582
+    },
+    {
+      "episode_id": 245,
+      "environment_seed": 3744,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 52238590,
+      "diagnostic_probe_seed": 3335316096,
+      "first_verification_seed": 3108623181,
+      "paired_second_verification_seed": 3844410128
+    },
+    {
+      "episode_id": 246,
+      "environment_seed": 3745,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 799940611,
+      "diagnostic_probe_seed": 847015642,
+      "first_verification_seed": 4152855353,
+      "paired_second_verification_seed": 1763657139
+    },
+    {
+      "episode_id": 247,
+      "environment_seed": 3746,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2681866472,
+      "diagnostic_probe_seed": 3691136288,
+      "first_verification_seed": 4276310101,
+      "paired_second_verification_seed": 549455175
+    },
+    {
+      "episode_id": 248,
+      "environment_seed": 3747,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 926191626,
+      "diagnostic_probe_seed": 3964849701,
+      "first_verification_seed": 2376753922,
+      "paired_second_verification_seed": 2528108163
+    },
+    {
+      "episode_id": 249,
+      "environment_seed": 3748,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1529673992,
+      "diagnostic_probe_seed": 1392672442,
+      "first_verification_seed": 467239322,
+      "paired_second_verification_seed": 1414688893
+    },
+    {
+      "episode_id": 250,
+      "environment_seed": 3749,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 779344197,
+      "diagnostic_probe_seed": 2716036872,
+      "first_verification_seed": 2725962097,
+      "paired_second_verification_seed": 2813379913
+    },
+    {
+      "episode_id": 251,
+      "environment_seed": 3750,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2174779983,
+      "diagnostic_probe_seed": 2317242420,
+      "first_verification_seed": 1443690452,
+      "paired_second_verification_seed": 3888660206
+    },
+    {
+      "episode_id": 252,
+      "environment_seed": 3751,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 429105871,
+      "diagnostic_probe_seed": 2296902086,
+      "first_verification_seed": 2448000335,
+      "paired_second_verification_seed": 4245008962
+    },
+    {
+      "episode_id": 253,
+      "environment_seed": 3752,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1748403111,
+      "diagnostic_probe_seed": 1477595159,
+      "first_verification_seed": 2506931779,
+      "paired_second_verification_seed": 1726309437
+    },
+    {
+      "episode_id": 254,
+      "environment_seed": 3753,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 785624670,
+      "diagnostic_probe_seed": 3493279312,
+      "first_verification_seed": 4054857041,
+      "paired_second_verification_seed": 4241895903
+    },
+    {
+      "episode_id": 255,
+      "environment_seed": 3754,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2229312670,
+      "diagnostic_probe_seed": 2395520009,
+      "first_verification_seed": 4256174572,
+      "paired_second_verification_seed": 980181833
+    },
+    {
+      "episode_id": 256,
+      "environment_seed": 3755,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1083637103,
+      "diagnostic_probe_seed": 294958845,
+      "first_verification_seed": 2121204165,
+      "paired_second_verification_seed": 28177288
+    },
+    {
+      "episode_id": 257,
+      "environment_seed": 3756,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4068485091,
+      "diagnostic_probe_seed": 533565379,
+      "first_verification_seed": 2485439167,
+      "paired_second_verification_seed": 1304855416
+    },
+    {
+      "episode_id": 258,
+      "environment_seed": 3757,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 481830673,
+      "diagnostic_probe_seed": 1100315857,
+      "first_verification_seed": 933715904,
+      "paired_second_verification_seed": 443663512
+    },
+    {
+      "episode_id": 259,
+      "environment_seed": 3758,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 649921035,
+      "diagnostic_probe_seed": 1603945242,
+      "first_verification_seed": 3190046477,
+      "paired_second_verification_seed": 3510368641
+    },
+    {
+      "episode_id": 260,
+      "environment_seed": 3759,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1213714841,
+      "diagnostic_probe_seed": 331878757,
+      "first_verification_seed": 3712948653,
+      "paired_second_verification_seed": 3115391271
+    },
+    {
+      "episode_id": 261,
+      "environment_seed": 3760,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1432846050,
+      "diagnostic_probe_seed": 1493787264,
+      "first_verification_seed": 418458839,
+      "paired_second_verification_seed": 902335347
+    },
+    {
+      "episode_id": 262,
+      "environment_seed": 3761,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 136366978,
+      "diagnostic_probe_seed": 754459303,
+      "first_verification_seed": 2456372854,
+      "paired_second_verification_seed": 4239255732
+    },
+    {
+      "episode_id": 263,
+      "environment_seed": 3762,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 771071667,
+      "diagnostic_probe_seed": 1045101563,
+      "first_verification_seed": 2409076329,
+      "paired_second_verification_seed": 12388272
+    },
+    {
+      "episode_id": 264,
+      "environment_seed": 3763,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2849166106,
+      "diagnostic_probe_seed": 3172969592,
+      "first_verification_seed": 61952255,
+      "paired_second_verification_seed": 1440907182
+    },
+    {
+      "episode_id": 265,
+      "environment_seed": 3764,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3127188657,
+      "diagnostic_probe_seed": 1897360269,
+      "first_verification_seed": 3617031465,
+      "paired_second_verification_seed": 1363970510
+    },
+    {
+      "episode_id": 266,
+      "environment_seed": 3765,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 624357378,
+      "diagnostic_probe_seed": 3413712373,
+      "first_verification_seed": 1436182495,
+      "paired_second_verification_seed": 4191859885
+    },
+    {
+      "episode_id": 267,
+      "environment_seed": 3766,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2325352273,
+      "diagnostic_probe_seed": 3454996485,
+      "first_verification_seed": 879060551,
+      "paired_second_verification_seed": 1051995313
+    },
+    {
+      "episode_id": 268,
+      "environment_seed": 3767,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 10704218,
+      "diagnostic_probe_seed": 210111073,
+      "first_verification_seed": 888409165,
+      "paired_second_verification_seed": 3155305812
+    },
+    {
+      "episode_id": 269,
+      "environment_seed": 3768,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1578660970,
+      "diagnostic_probe_seed": 2385704694,
+      "first_verification_seed": 2957298696,
+      "paired_second_verification_seed": 712887194
+    },
+    {
+      "episode_id": 270,
+      "environment_seed": 3769,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2082430647,
+      "diagnostic_probe_seed": 1331406916,
+      "first_verification_seed": 3150292822,
+      "paired_second_verification_seed": 1938155121
+    },
+    {
+      "episode_id": 271,
+      "environment_seed": 3770,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 817565141,
+      "diagnostic_probe_seed": 3174173513,
+      "first_verification_seed": 1815251870,
+      "paired_second_verification_seed": 1726705944
+    },
+    {
+      "episode_id": 272,
+      "environment_seed": 3771,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 503091137,
+      "diagnostic_probe_seed": 488602852,
+      "first_verification_seed": 2819149066,
+      "paired_second_verification_seed": 1572280046
+    },
+    {
+      "episode_id": 273,
+      "environment_seed": 3772,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3650940111,
+      "diagnostic_probe_seed": 680095216,
+      "first_verification_seed": 2825986597,
+      "paired_second_verification_seed": 303560267
+    },
+    {
+      "episode_id": 274,
+      "environment_seed": 3773,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 613729507,
+      "diagnostic_probe_seed": 2931237873,
+      "first_verification_seed": 1666605647,
+      "paired_second_verification_seed": 2852687610
+    },
+    {
+      "episode_id": 275,
+      "environment_seed": 3774,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1743513885,
+      "diagnostic_probe_seed": 4216754888,
+      "first_verification_seed": 2446172237,
+      "paired_second_verification_seed": 2002161488
+    },
+    {
+      "episode_id": 276,
+      "environment_seed": 3775,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2893344856,
+      "diagnostic_probe_seed": 2301614004,
+      "first_verification_seed": 980244693,
+      "paired_second_verification_seed": 3270658495
+    },
+    {
+      "episode_id": 277,
+      "environment_seed": 3776,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1327406684,
+      "diagnostic_probe_seed": 1927918775,
+      "first_verification_seed": 799062966,
+      "paired_second_verification_seed": 3076671578
+    },
+    {
+      "episode_id": 278,
+      "environment_seed": 3777,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 21213860,
+      "diagnostic_probe_seed": 1855240057,
+      "first_verification_seed": 4267760984,
+      "paired_second_verification_seed": 121404310
+    },
+    {
+      "episode_id": 279,
+      "environment_seed": 3778,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2618310653,
+      "diagnostic_probe_seed": 1636936095,
+      "first_verification_seed": 4107098823,
+      "paired_second_verification_seed": 2616798811
+    },
+    {
+      "episode_id": 280,
+      "environment_seed": 3779,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1908800992,
+      "diagnostic_probe_seed": 529359373,
+      "first_verification_seed": 3187776021,
+      "paired_second_verification_seed": 3065185083
+    },
+    {
+      "episode_id": 281,
+      "environment_seed": 3780,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 557777529,
+      "diagnostic_probe_seed": 744888531,
+      "first_verification_seed": 426124462,
+      "paired_second_verification_seed": 5018594
+    },
+    {
+      "episode_id": 282,
+      "environment_seed": 3781,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2182185596,
+      "diagnostic_probe_seed": 1983654928,
+      "first_verification_seed": 351412149,
+      "paired_second_verification_seed": 2013621324
+    },
+    {
+      "episode_id": 283,
+      "environment_seed": 3782,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4147364072,
+      "diagnostic_probe_seed": 4194602093,
+      "first_verification_seed": 4118539912,
+      "paired_second_verification_seed": 4107987863
+    },
+    {
+      "episode_id": 284,
+      "environment_seed": 3783,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1406314645,
+      "diagnostic_probe_seed": 3397764364,
+      "first_verification_seed": 164178893,
+      "paired_second_verification_seed": 399437989
+    },
+    {
+      "episode_id": 285,
+      "environment_seed": 3784,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2067414327,
+      "diagnostic_probe_seed": 1319485311,
+      "first_verification_seed": 1033949525,
+      "paired_second_verification_seed": 2375528408
+    },
+    {
+      "episode_id": 286,
+      "environment_seed": 3785,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 523641843,
+      "diagnostic_probe_seed": 337996808,
+      "first_verification_seed": 831547264,
+      "paired_second_verification_seed": 2060702842
+    },
+    {
+      "episode_id": 287,
+      "environment_seed": 3786,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2960532519,
+      "diagnostic_probe_seed": 3010829465,
+      "first_verification_seed": 2392175383,
+      "paired_second_verification_seed": 647040366
+    },
+    {
+      "episode_id": 288,
+      "environment_seed": 3787,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 845561548,
+      "diagnostic_probe_seed": 3700450093,
+      "first_verification_seed": 799818765,
+      "paired_second_verification_seed": 3108990270
+    },
+    {
+      "episode_id": 289,
+      "environment_seed": 3788,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 382895994,
+      "diagnostic_probe_seed": 1441899751,
+      "first_verification_seed": 1717981007,
+      "paired_second_verification_seed": 1707493497
+    },
+    {
+      "episode_id": 290,
+      "environment_seed": 3789,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2628001905,
+      "diagnostic_probe_seed": 2565105084,
+      "first_verification_seed": 989281651,
+      "paired_second_verification_seed": 2065569481
+    },
+    {
+      "episode_id": 291,
+      "environment_seed": 3790,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4194892922,
+      "diagnostic_probe_seed": 971579489,
+      "first_verification_seed": 392683892,
+      "paired_second_verification_seed": 1471969301
+    },
+    {
+      "episode_id": 292,
+      "environment_seed": 3791,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2874940075,
+      "diagnostic_probe_seed": 3752757237,
+      "first_verification_seed": 3435102123,
+      "paired_second_verification_seed": 2027352771
+    },
+    {
+      "episode_id": 293,
+      "environment_seed": 3792,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1539724166,
+      "diagnostic_probe_seed": 3165087152,
+      "first_verification_seed": 2954199146,
+      "paired_second_verification_seed": 1637973576
+    },
+    {
+      "episode_id": 294,
+      "environment_seed": 3793,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3019729419,
+      "diagnostic_probe_seed": 2417986607,
+      "first_verification_seed": 4248062348,
+      "paired_second_verification_seed": 2049714385
+    },
+    {
+      "episode_id": 295,
+      "environment_seed": 3794,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2294303139,
+      "diagnostic_probe_seed": 1038322179,
+      "first_verification_seed": 2132601244,
+      "paired_second_verification_seed": 880783684
+    },
+    {
+      "episode_id": 296,
+      "environment_seed": 3795,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1704510039,
+      "diagnostic_probe_seed": 2761781089,
+      "first_verification_seed": 1621728801,
+      "paired_second_verification_seed": 3079819437
+    },
+    {
+      "episode_id": 297,
+      "environment_seed": 3796,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 8245138,
+      "diagnostic_probe_seed": 3699815581,
+      "first_verification_seed": 3883743365,
+      "paired_second_verification_seed": 3044216288
+    },
+    {
+      "episode_id": 298,
+      "environment_seed": 3797,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1574284905,
+      "diagnostic_probe_seed": 2787266540,
+      "first_verification_seed": 1492634295,
+      "paired_second_verification_seed": 1483530182
+    },
+    {
+      "episode_id": 299,
+      "environment_seed": 3798,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3282361713,
+      "diagnostic_probe_seed": 313052799,
+      "first_verification_seed": 1564077923,
+      "paired_second_verification_seed": 621130444
+    },
+    {
+      "episode_id": 300,
+      "environment_seed": 3799,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1825794545,
+      "diagnostic_probe_seed": 1587545678,
+      "first_verification_seed": 2624924784,
+      "paired_second_verification_seed": 2989909292
+    }
+  ],
+  "continuous_rule_hash": "af5db441f1b187cfd5aae3517e415172c256aaba44c5f0c96cd0447dea6362b5",
+  "promotion_gate_hash": "4b9bb37e6fcf6a747c6ac850b9aa182bd603a4778fbe604386030b32b946cba9",
+  "claim_scope": "prospective development test of a non-fitted continuous first-progress decision rule",
+  "manifest_id": "4bca2c97898ef8f36e3fc100cf5df19fe37808f9da44de5205b17a09d3d9e856"
+}

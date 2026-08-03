@@ -381,3 +381,10 @@ with always-repeat, always-switch, and the historical status rule. The rule and
 zero threshold are frozen before outcomes. Seeds 3800--3899 and held-out seeds
 3100--3199 must not be executed. No LLM, memory, fitting, or validation claim is
 authorized.
+
+The prospective zero-progress run completed 30 second-decision cases and failed
+its gate. The rule exactly reproduced the old status mapping and recovered
+70/85 eligible first attempts versus 74/85 for always-repeat, with 11 versus 7
+harmful selections. Preserve this negative result. Do not tune a nonzero
+threshold on seeds 3500--3730 or advance to GLM, memory, validation, or held-out
+execution. A successor requires a new question rather than another threshold.

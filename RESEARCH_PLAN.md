@@ -262,6 +262,13 @@ compensation. It compares against fixed and historical status policies with
 paired fresh verification. The threshold cannot be retuned and the experiment
 remains development-only.
 
+The prospective run reached 30 second-decision cases after scanning 231 initial
+units. The zero-progress rule exactly matched the historical status rule and
+recovered 70/85, below always-repeat at 74/85. It also caused more harmful
+selections. The earlier continuous-feedback rank AUC therefore did not translate
+into a useful fixed physical boundary. This line is not promoted and must not be
+retuned on the same stream.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)
