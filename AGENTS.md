@@ -455,3 +455,10 @@ repair calls. GLM decisions cannot execute. Gate B is blocked until Gate A's
 registered promotion gate is evaluated. Seeds 4100--4599 retain their v4
 registry roles and must not be executed early; historical held-out and reserved
 partitions remain blocked.
+
+Gate A run `probemem_online_interface_ablation_20260803T072817Z_1c19c23bafb3`
+passed its frozen promotion gate. Gate B may collect the outcome-blind bootstrap
+defined in `configs/probemem_online/bootstrap_memory_v1.json`. Gate B stores
+exactly one manifest-assigned selected action per episode; unselected paired
+outcomes are prohibited. Gate C, mixed-regime execution, validation, held-out,
+and principle generation remain blocked until Gate B integrity is recorded.

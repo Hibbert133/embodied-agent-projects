@@ -1,0 +1,16 @@
+{
+  "protocol": "probemem_online_bootstrap_memory_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "outcome-blind selected-action bootstrap for Gate B infrastructure",
+  "seed_range": [4100, 4199],
+  "conditions": ["fault_01", "fault_05"],
+  "selected_skills": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "target_per_condition_skill_cell": 5,
+  "assignment": "(seed - 4100) mod 4 indexes fault_01/compensation, fault_01/retry, fault_05/compensation, fault_05/retry",
+  "registered_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps": 500, "online_max_steps": 1064},
+  "random_namespaces": {"initial_perturbation": 19201, "registered_probe": 19202, "selected_verification": 19203},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "prohibitions": {"call_llm": true, "execute_unselected_candidate": true, "store_counterfactual": true, "retune": true, "run_gate_c": true, "run_validation": true, "run_heldout": true}
+}
