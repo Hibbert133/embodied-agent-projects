@@ -1,0 +1,27 @@
+{
+  "protocol": "probemem_acr_conditional_retry_identifiability_audit_v1",
+  "status": "FROZEN_POST_HOC_AUDIT",
+  "claim_scope": "state-stratified evaluator-only audit of whether first-retry feedback predicts an independent retry beyond fixed initial-state difficulty",
+  "source_run_id": "acr_feedback_sufficiency_20260803T031147Z_dc82fef58e26",
+  "source_manifest_id": "e7ee616e070af571479838f8719be1ff0e6da0e348026d463035e709af4e237a",
+  "source_run_directory": "outputs/probemem_acr/feedback_sufficiency_runs/acr_feedback_sufficiency_20260803T031147Z_dc82fef58e26",
+  "population": "non-accepted first-retry branches with a paired independent stochastic-retry outcome",
+  "evaluator_label": "paired INDEPENDENT_STOCHASTIC_RETRY verification_status == ACCEPTED",
+  "registered_scores": {
+    "first_observed_progress": "higher_is_more_retry_value",
+    "negative_first_final_object_goal_distance": "higher_is_more_retry_value",
+    "categorical_status": {"INCONCLUSIVE": 1.0, "REJECTED": 0.0}
+  },
+  "conditional_estimator": "pairwise tie-aware AUC using positive-negative pairs only within the same episode_id",
+  "permutation_test": {"resamples": 10000, "seed": 17621, "alternative": "greater", "shuffle": "labels within episode_id"},
+  "prohibitions": {
+    "new_environment_interaction": true,
+    "threshold_selection": true,
+    "feature_selection": true,
+    "online_policy_claim": true,
+    "call_llm": true,
+    "write_memory": true,
+    "run_validation": true,
+    "run_heldout": true
+  }
+}
