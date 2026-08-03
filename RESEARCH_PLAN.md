@@ -240,6 +240,14 @@ audit is evidence analysis, not a new selector or a promotion attempt.
 
 The canonical experimental roadmap is maintained in:
 
+The one-shot resonance validation finished incomplete and descriptively favored
+the always-repeat baseline over the frozen status rule. The development signal
+did not independently replicate. A separately registered development-only audit
+on fresh seeds 3300--3499 now asks why: whether one categorical retry status is
+stable across independent execution realizations, and whether fixed continuous
+feedback measures contain prospective signal. This is mechanism analysis only;
+it cannot authorize GLM, memory, validation, or held-out claims.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)

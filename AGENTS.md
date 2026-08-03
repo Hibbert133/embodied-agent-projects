@@ -356,3 +356,12 @@ replaced. Descriptively, the frozen status rule recovered 47/55 versus 50/55
 for always-repeat, with more harmful selections and higher cost. Treat the
 development signal as not independently replicated. Do not call GLM, write
 transition memory, execute held-out seeds, or tune on this validation result.
+
+The user subsequently authorized a fresh development-only verification-feedback
+sufficiency audit under
+`docs/protocols/probemem_acr_verification_feedback_sufficiency_development_v1.md`.
+It may scan seeds 3300--3499 and collect repeated first-retry realizations plus
+paired evaluator-only second candidates for at most 30 eligible initial states.
+The audit may measure categorical-status stability and preregistered continuous
+feedback signals only. It must not fit a selector, call an LLM, write online
+memory, execute seeds 3500--3599, or revive the failed validation claim.
