@@ -93,7 +93,7 @@ def main() -> int:
             state = build_structured_evidence_state(_read_jsonl(trajectory), evidence_id=f"persistent_episode{episode_id:03d}_attempt0", source=EvidenceSource.FAILED_ROLLOUT, attempt_id=0)
             base = {"experiment_run_id": manifest["experiment_run_id"], "manifest_id": manifest["manifest_id"], "source_git_commit": manifest["source_git_commit"], "episode_id": episode_id, "seed": seed, "condition_id_oracle": condition_id, "initial_success": initial.success, "initial_steps": initial.steps, "initial_final_object_goal_distance": initial.final_object_goal_distance, "decision_required": state.decision_required}
             if not state.decision_required:
-                rows.append({**base, "paired_comparable": False, "ineligibility_reason": "initial_success", "probe_steps": 0, "selected_skill": None, "probe_consistency_score": None})
+                rows.append({**base, "paired_comparable": False, "ineligibility_reason": "initial_success", "probe_steps": 0, "selected_skill": None, "probe_consistency_score": None, "evaluator_collection_steps": initial.steps})
                 _write_csv(run_dir / "case_results.csv", rows)
                 continue
             probe = _probe_context(fault, seed, config, int(unit["diagnostic_probe_seed"]))
@@ -102,7 +102,7 @@ def main() -> int:
                 integrity["budget_violations"] += 1
                 raise RuntimeError("probe budget exceeded")
             if not _compensation_is_constructible(seed=seed, probe_context=probe, recovery_config=recovery):
-                rows.append({**base, "paired_comparable": False, "ineligibility_reason": "compensation_not_constructible", "probe_steps": probe_steps, "selected_skill": None, "probe_consistency_score": None})
+                rows.append({**base, "paired_comparable": False, "ineligibility_reason": "compensation_not_constructible", "probe_steps": probe_steps, "selected_skill": None, "probe_consistency_score": None, "evaluator_collection_steps": initial.steps + probe_steps})
                 _write_csv(run_dir / "case_results.csv", rows)
                 continue
             agent_evidence = {"evidence_id": f"persistent_episode{episode_id:03d}_attempt1", "episode_id": episode_id, "initial_evidence": state.to_dict(), "registered_probe_evidence": probe, "remaining_verification_budget": int(config["budget"]["verification_max_steps_per_candidate"])}

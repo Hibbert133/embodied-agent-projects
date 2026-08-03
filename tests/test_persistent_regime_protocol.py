@@ -3,8 +3,10 @@ from __future__ import annotations
 import json
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 from scripts.generate_persistent_regime_manifest import build_units
+from scripts.run_probemem_acr_utility_stability import _write_csv
 from src.probemem.models import InterventionSkill
 from src.probemem.persistent_regime import FROZEN_CONSISTENCY_THRESHOLD, select_from_persistent_probe
 
@@ -35,6 +37,17 @@ class PersistentRegimeProtocolTests(unittest.TestCase):
         config = json.loads((ROOT / "configs/probemem_acr/persistent_regime_development_v1.json").read_text())
         self.assertTrue(config["prohibitions"]["call_llm"])
         self.assertTrue(config["prohibitions"]["run_heldout"])
+
+    def test_case_csv_schema_accepts_eligible_and_ineligible_rows(self) -> None:
+        fields = {
+            "paired_comparable": False,
+            "ineligibility_reason": "initial_success",
+            "evaluator_collection_steps": 125,
+        }
+        with TemporaryDirectory() as directory:
+            path = Path(directory) / "cases.csv"
+            _write_csv(path, [fields, {**fields, "paired_comparable": True, "ineligibility_reason": ""}])
+            self.assertTrue(path.is_file())
 
 
 if __name__ == "__main__":
