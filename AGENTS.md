@@ -406,3 +406,10 @@ evidence that one independently seeded retry predicts the next. Do not add
 another scalar threshold or use these evaluator counterfactuals as online
 memory. A successor must change the causal evidence design, such as a persistent
 latent execution context, under a separately frozen protocol.
+
+The user explicitly authorized GLM acceleration as a shadow-only integration
+smoke. Protocol `docs/protocols/probemem_acr_glm_shadow_smoke_v1.md` may call
+GLM-5.2 on exactly three allowlisted development rows with at most six calls.
+Every output is non-executing and cannot support a performance, memory,
+validation, or held-out claim. This exception tests the reasoning interface; it
+does not lift the scientific promotion block.
