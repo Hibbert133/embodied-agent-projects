@@ -6,8 +6,10 @@ This development-only audit investigates why the frozen attempt-level status
 rule did not replicate in independent validation. It does not test an online
 selector, memory, GLM reasoning, validation, or held-out performance.
 
-Run ID: `acr_feedback_sufficiency_20260803T031147Z_dc82fef58e26`  
-Manifest ID: `e7ee616e070af571479838f8719be1ff0e6da0e348026d463035e709af4e237a`  
+Run ID: `acr_feedback_sufficiency_20260803T031147Z_dc82fef58e26`
+
+Manifest ID: `e7ee616e070af571479838f8719be1ff0e6da0e348026d463035e709af4e237a`
+
 Source commit: `dc82fef58e2693c0c91ed23a9147964d4177492b`
 
 An earlier run under commit `cc72bb3b562e` failed because heterogeneous CSV
