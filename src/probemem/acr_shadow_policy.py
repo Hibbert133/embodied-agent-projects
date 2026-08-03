@@ -102,13 +102,15 @@ class AcrShadowDecision:
 
 class AcrGlmShadowPolicy:
     def __init__(self, *, model: str = "glm-5.2", base_url: str | None = None,
-                 timeout_seconds: float = 300.0, max_tokens: int = 900, client: Any | None = None) -> None:
+                 timeout_seconds: float = 300.0, max_tokens: int = 900, client: Any | None = None,
+                 system_prompt: str = SYSTEM_PROMPT) -> None:
         self.model = model
         self.base_url = base_url or os.environ.get("ANTHROPIC_BASE_URL")
         self.timeout_seconds = timeout_seconds
         self.max_tokens = max_tokens
+        self.system_prompt = system_prompt
         self._client = client
-        self.prompt_hash = hashlib.sha256(SYSTEM_PROMPT.encode()).hexdigest()
+        self.prompt_hash = hashlib.sha256(self.system_prompt.encode()).hexdigest()
 
     def _get_client(self) -> Any:
         if self._client is not None:
@@ -140,7 +142,7 @@ class AcrGlmShadowPolicy:
             start = perf_counter()
             text = ""
             try:
-                response = self._get_client().messages.create(model=self.model, max_tokens=self.max_tokens, temperature=0.0, system=SYSTEM_PROMPT, messages=[{"role": "user", "content": json.dumps(request)}])
+                response = self._get_client().messages.create(model=self.model, max_tokens=self.max_tokens, temperature=0.0, system=self.system_prompt, messages=[{"role": "user", "content": json.dumps(request)}])
                 latency = (perf_counter() - start) * 1000.0
                 text = "".join(str(getattr(block, "text", "")) for block in getattr(response, "content", ()) if getattr(block, "type", None) == "text").strip()
                 decision = AcrShadowDecision.from_mapping(_single_json(text))

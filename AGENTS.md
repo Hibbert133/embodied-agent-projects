@@ -425,3 +425,13 @@ the Agent decision must be written before either outcome is collected. Seeds
 call GLM or write memory. Passing its frozen gate authorizes only a separately
 frozen development GLM action-selection experiment; failure must be preserved
 without threshold tuning.
+
+The persistent-regime run passed that gate on 40 operational cases. The user
+therefore authorized the qualitative pilot in
+`docs/protocols/probemem_acr_persistent_glm_pilot_v1.md`. It may make exactly
+one GLM-5.2 call on each of ten preregistered, condition-balanced development
+cases. Condition identity is evaluator-only and must not enter the payload.
+The model must not see the frozen threshold or paired outcomes, and its choices
+must not execute. This pilot may report validity, decisions, matched audit,
+latency, tokens, and disagreement only; it cannot support a statistical GLM,
+memory, validation, or held-out claim.

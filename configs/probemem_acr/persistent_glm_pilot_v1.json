@@ -1,0 +1,25 @@
+{
+  "protocol": "probemem_acr_persistent_glm_pilot_v1",
+  "status": "FROZEN_QUALITATIVE_ACTION_SELECTION_PILOT",
+  "claim_scope": "ten-case GLM-5.2 action-selection pilot on frozen persistent-regime Agent-visible evidence; no statistical performance claim",
+  "model": "glm-5.2",
+  "source_run": "outputs/probemem_acr/persistent_regime_runs/acr_persistent_regime_20260803T061354Z_282b9c5e76c8",
+  "source_manifest_id": "193a741a195085e255c7baac20ce22207aa268371dd425df56f55fa73e7d1129",
+  "case_selection": "first five operational episode IDs per evaluator-only registered condition; condition is used for stratified selection only and is never sent to GLM",
+  "cases_per_condition": 5,
+  "maximum_cases": 10,
+  "maximum_api_calls": 10,
+  "schema_repair_attempts_per_case": 0,
+  "allowed_decisions": ["REPEAT_STOCHASTIC_RETRY", "SWITCH_TO_BOUNDED_COMPENSATION", "ABSTAIN"],
+  "candidate_actions": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "prohibitions": {
+    "execute_model_action": true,
+    "send_condition_identity": true,
+    "send_frozen_threshold": true,
+    "send_evaluator_outcome": true,
+    "statistical_model_claim": true,
+    "write_memory": true,
+    "run_validation": true,
+    "run_heldout": true
+  }
+}
