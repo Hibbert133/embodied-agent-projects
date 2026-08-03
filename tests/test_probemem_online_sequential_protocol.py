@@ -8,6 +8,8 @@ from pathlib import Path
 import unittest
 
 from scripts.generate_online_memory_manifest import build_units
+from scripts.run_online_memory_development import _host_decision, _status_probabilities
+from src.probemem.online_glm_contract import SkillPrediction
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,6 +61,14 @@ class ProbeMemOnlineSequentialProtocolTest(unittest.TestCase):
         self.assertEqual(units[50]["segment_id_oracle"], "noise_dominant")
         self.assertTrue(all("outcome" not in key for unit in units for key in unit))
         self.assertTrue(all(len({unit["initial_perturbation_seed"], unit["diagnostic_probe_seed"], unit["paired_verification_seed"]}) == 3 for unit in units))
+
+    def test_host_baseline_and_probability_adapter_are_bounded(self) -> None:
+        decision = _host_decision("INDEPENDENT_STOCHASTIC_RETRY")
+        self.assertEqual(decision.selected_skill, "INDEPENDENT_STOCHASTIC_RETRY")
+        self.assertFalse(decision.memory_used)
+        probabilities = _status_probabilities(SkillPrediction("ACCEPTED", 0.7, 0.8))
+        self.assertAlmostEqual(sum(probabilities.values()), 1.0)
+        self.assertTrue(all(0.0 <= value <= 1.0 for value in probabilities.values()))
 
 
 if __name__ == "__main__":

@@ -20,6 +20,7 @@ from scripts.run_probemem_v2_smoke import _seed  # noqa: E402
 CONFIG = Path("configs/probemem_online/sequential_development_v1.json")
 IMPLEMENTATION = (
     Path("scripts/generate_online_memory_manifest.py"),
+    Path("scripts/run_online_memory_development.py"),
     Path("src/probemem/compact_evidence.py"),
     Path("src/probemem/regime_memory.py"),
     Path("src/probemem/memory_tools.py"),
