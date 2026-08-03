@@ -397,3 +397,12 @@ not support selective retry allocation. Do not choose a threshold from the
 descriptive frontier, rerun the source stream, or treat paired counterfactuals
 as online experience. GLM, memory, validation, and held-out execution remain
 blocked.
+
+A state-stratified audit then controlled for fixed initial-state difficulty on
+the earlier repeated-realization run. Across 14 informative within-state
+positive-negative pairs, all three registered feedback scores had conditional
+AUC 0.500, with one-sided permutation p-values 0.589--0.662. This provides no
+evidence that one independently seeded retry predicts the next. Do not add
+another scalar threshold or use these evaluator counterfactuals as online
+memory. A successor must change the causal evidence design, such as a persistent
+latent execution context, under a separately frozen protocol.

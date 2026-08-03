@@ -278,6 +278,14 @@ identify those cases. This closes scalar threshold search on the current stream;
 the next protocol must introduce a genuinely different evidence source or
 identification design rather than another fitted cutoff.
 
+State-stratified analysis strengthens that conclusion. On the repeated-
+realization audit, first progress, final distance, and categorical status each
+had conditional AUC 0.500 across 14 informative within-state pairs. Marginal
+state difficulty therefore does not become attempt-level predictive evidence
+for the next independent retry. A scientifically meaningful successor should
+use an episode-persistent latent execution property or pay for repeated evidence
+to estimate a distribution; it should not add another endpoint classifier.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)

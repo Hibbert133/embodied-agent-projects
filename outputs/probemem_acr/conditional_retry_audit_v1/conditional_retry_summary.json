@@ -1,0 +1,48 @@
+{
+  "audit_protocol": "probemem_acr_conditional_retry_identifiability_audit_v1",
+  "source_run_id": "acr_feedback_sufficiency_20260803T031147Z_dc82fef58e26",
+  "source_manifest_id": "e7ee616e070af571479838f8719be1ff0e6da0e348026d463035e709af4e237a",
+  "source_git_commit": "dc82fef58e2693c0c91ed23a9147964d4177492b",
+  "branches": 39,
+  "unique_initial_states": 22,
+  "repeat_accepted": 24,
+  "repeat_not_accepted": 15,
+  "analyses": {
+    "first_observed_progress": {
+      "marginal_roc_auc": 0.49444444444444446,
+      "marginal_pr_auc": 0.6271363374625955,
+      "conditional": {
+        "observed_auc": 0.5,
+        "informative_groups": 9,
+        "within_group_pairs": 14,
+        "p_value_greater": 0.5889411058894111
+      }
+    },
+    "negative_first_final_object_goal_distance": {
+      "marginal_roc_auc": 0.5388888888888889,
+      "marginal_pr_auc": 0.6626292030411192,
+      "conditional": {
+        "observed_auc": 0.5,
+        "informative_groups": 9,
+        "within_group_pairs": 14,
+        "p_value_greater": 0.5903409659034097
+      }
+    },
+    "categorical_status": {
+      "marginal_roc_auc": 0.5166666666666667,
+      "marginal_pr_auc": 0.6234817813765182,
+      "conditional": {
+        "observed_auc": 0.5,
+        "informative_groups": 9,
+        "within_group_pairs": 14,
+        "p_value_greater": 0.6623337666233376
+      }
+    }
+  },
+  "new_environment_interactions": 0,
+  "api_calls": 0,
+  "selector_authorized": false,
+  "validation_authorized": false,
+  "heldout_authorized": false,
+  "claim_scope": "state-stratified evaluator-only audit of whether first-retry feedback predicts an independent retry beyond fixed initial-state difficulty"
+}
