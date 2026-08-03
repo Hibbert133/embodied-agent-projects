@@ -1,0 +1,278 @@
+{
+  "summary": {
+    "protocol": "probemem_acr_glm_shadow_smoke_v1",
+    "run_id": "acr_glm_shadow_20260803T042234Z_cab016100670",
+    "source_git_commit": "cab01610067029708d0d00cb9ca467fa78cc3e00",
+    "model": "glm-5.2",
+    "cases": 3,
+    "api_calls": 3,
+    "valid_cases": 3,
+    "fail_closed_cases": 0,
+    "environment_steps": 0,
+    "model_actions_executed": 0,
+    "performance_claim_authorized": false
+  },
+  "results": [
+    {
+      "evidence": {
+        "evidence_id": "shadow_episode004_realization2",
+        "episode_id": 4,
+        "realization_index": 2,
+        "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+        "first_verification_status": "REJECTED",
+        "first_observed_progress": -0.051700551690337354,
+        "first_final_object_goal_distance": 0.2692776309934933,
+        "remaining_second_attempt_budget": 500
+      },
+      "decision": {
+        "evidence_sufficient": true,
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "predicted_status": "INCONCLUSIVE",
+            "accept_probability": 0.45,
+            "confidence": 0.6
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "predicted_status": "REJECTED",
+            "accept_probability": 0.25,
+            "confidence": 0.65
+          }
+        },
+        "selected_decision": "SWITCH_TO_BOUNDED_COMPENSATION",
+        "reason": "First stochastic retry was REJECTED with negative progress (-0.052), indicating the random perturbation moved the agent away from the goal. Repeating the same undirected strategy carries similar regression risk. Switching to bounded planar compensation offers a directed correction opportunity against the observed regression, with remaining budget (500) sufficient for a second attempt."
+      },
+      "audit": {
+        "status": "valid",
+        "prompt_hash": "8a2a1b8c00320045941cba1bd43d6b75c303b8f0f8e2448ea227cfce7d01d4cc",
+        "request_payload": {
+          "mode": "shadow_only_no_action_execution",
+          "prompt_version": "probemem-acr-shadow-v1",
+          "agent_visible_evidence": {
+            "evidence_id": "shadow_episode004_realization2",
+            "episode_id": 4,
+            "realization_index": 2,
+            "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+            "first_verification_status": "REJECTED",
+            "first_observed_progress": -0.051700551690337354,
+            "first_final_object_goal_distance": 0.2692776309934933,
+            "remaining_second_attempt_budget": 500
+          },
+          "candidate_actions": [
+            "BOUNDED_PLANAR_COMPENSATION",
+            "INDEPENDENT_STOCHASTIC_RETRY"
+          ],
+          "allowed_decisions": [
+            "ABSTAIN",
+            "REPEAT_STOCHASTIC_RETRY",
+            "SWITCH_TO_BOUNDED_COMPENSATION"
+          ],
+          "response_schema": {
+            "evidence_sufficient": "boolean",
+            "action_predictions": {
+              "BOUNDED_PLANAR_COMPENSATION": {
+                "predicted_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
+                "accept_probability": "0..1",
+                "confidence": "0..1"
+              },
+              "INDEPENDENT_STOCHASTIC_RETRY": {
+                "predicted_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
+                "accept_probability": "0..1",
+                "confidence": "0..1"
+              }
+            },
+            "selected_decision": "REPEAT_STOCHASTIC_RETRY | SWITCH_TO_BOUNDED_COMPENSATION | ABSTAIN",
+            "reason": "brief evidence-grounded reason"
+          }
+        },
+        "attempts": [
+          {
+            "attempt_index": 0,
+            "valid": true,
+            "latency_ms": 22588.44650001265,
+            "response_hash": "c4b91dc49b73305a66eb84902f9297373bbe7670c61909674b399c4ba3d84b01",
+            "raw_response": "```json\n{\n  \"evidence_sufficient\": true,\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.45,\n      \"confidence\": 0.6\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.25,\n      \"confidence\": 0.65\n    }\n  },\n  \"selected_decision\": \"SWITCH_TO_BOUNDED_COMPENSATION\",\n  \"reason\": \"First stochastic retry was REJECTED with negative progress (-0.052), indicating the random perturbation moved the agent away from the goal. Repeating the same undirected strategy carries similar regression risk. Switching to bounded planar compensation offers a directed correction opportunity against the observed regression, with remaining budget (500) sufficient for a second attempt.\"\n}\n```",
+            "usage": {
+              "input_tokens": 425,
+              "output_tokens": 726
+            }
+          }
+        ]
+      },
+      "action_executed": false
+    },
+    {
+      "evidence": {
+        "evidence_id": "shadow_episode004_realization3",
+        "episode_id": 4,
+        "realization_index": 3,
+        "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+        "first_verification_status": "REJECTED",
+        "first_observed_progress": -0.09069484691897631,
+        "first_final_object_goal_distance": 0.30827192622213223,
+        "remaining_second_attempt_budget": 500
+      },
+      "decision": {
+        "evidence_sufficient": true,
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "predicted_status": "INCONCLUSIVE",
+            "accept_probability": 0.45,
+            "confidence": 0.4
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "predicted_status": "REJECTED",
+            "accept_probability": 0.25,
+            "confidence": 0.55
+          }
+        },
+        "selected_decision": "SWITCH_TO_BOUNDED_COMPENSATION",
+        "reason": "First stochastic retry was REJECTED with negative progress (-0.091), indicating the undirected perturbation moved the object away from the goal. Repeating the same stochastic strategy carries similar regression risk. Switching to bounded planar compensation offers a structured correction that may address the observed regression direction, though without fault-direction evidence the outcome remains inconclusive."
+      },
+      "audit": {
+        "status": "valid",
+        "prompt_hash": "8a2a1b8c00320045941cba1bd43d6b75c303b8f0f8e2448ea227cfce7d01d4cc",
+        "request_payload": {
+          "mode": "shadow_only_no_action_execution",
+          "prompt_version": "probemem-acr-shadow-v1",
+          "agent_visible_evidence": {
+            "evidence_id": "shadow_episode004_realization3",
+            "episode_id": 4,
+            "realization_index": 3,
+            "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+            "first_verification_status": "REJECTED",
+            "first_observed_progress": -0.09069484691897631,
+            "first_final_object_goal_distance": 0.30827192622213223,
+            "remaining_second_attempt_budget": 500
+          },
+          "candidate_actions": [
+            "BOUNDED_PLANAR_COMPENSATION",
+            "INDEPENDENT_STOCHASTIC_RETRY"
+          ],
+          "allowed_decisions": [
+            "ABSTAIN",
+            "REPEAT_STOCHASTIC_RETRY",
+            "SWITCH_TO_BOUNDED_COMPENSATION"
+          ],
+          "response_schema": {
+            "evidence_sufficient": "boolean",
+            "action_predictions": {
+              "BOUNDED_PLANAR_COMPENSATION": {
+                "predicted_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
+                "accept_probability": "0..1",
+                "confidence": "0..1"
+              },
+              "INDEPENDENT_STOCHASTIC_RETRY": {
+                "predicted_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
+                "accept_probability": "0..1",
+                "confidence": "0..1"
+              }
+            },
+            "selected_decision": "REPEAT_STOCHASTIC_RETRY | SWITCH_TO_BOUNDED_COMPENSATION | ABSTAIN",
+            "reason": "brief evidence-grounded reason"
+          }
+        },
+        "attempts": [
+          {
+            "attempt_index": 0,
+            "valid": true,
+            "latency_ms": 25420.484299975215,
+            "response_hash": "5e1007df77f38cd793e1d1e902b68359d9dac30d721a2730b061e54b15906a9f",
+            "raw_response": "```json\n{\n  \"evidence_sufficient\": true,\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.45,\n      \"confidence\": 0.4\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.25,\n      \"confidence\": 0.55\n    }\n  },\n  \"selected_decision\": \"SWITCH_TO_BOUNDED_COMPENSATION\",\n  \"reason\": \"First stochastic retry was REJECTED with negative progress (-0.091), indicating the undirected perturbation moved the object away from the goal. Repeating the same stochastic strategy carries similar regression risk. Switching to bounded planar compensation offers a structured correction that may address the observed regression direction, though without fault-direction evidence the outcome remains inconclusive.\"\n}\n```",
+            "usage": {
+              "input_tokens": 422,
+              "output_tokens": 868
+            }
+          }
+        ]
+      },
+      "action_executed": false
+    },
+    {
+      "evidence": {
+        "evidence_id": "shadow_episode004_realization4",
+        "episode_id": 4,
+        "realization_index": 4,
+        "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+        "first_verification_status": "REJECTED",
+        "first_observed_progress": -0.002989394725599781,
+        "first_final_object_goal_distance": 0.2205664740287557,
+        "remaining_second_attempt_budget": 500
+      },
+      "decision": {
+        "evidence_sufficient": true,
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "predicted_status": "INCONCLUSIVE",
+            "accept_probability": 0.45,
+            "confidence": 0.6
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "predicted_status": "REJECTED",
+            "accept_probability": 0.2,
+            "confidence": 0.65
+          }
+        },
+        "selected_decision": "SWITCH_TO_BOUNDED_COMPENSATION",
+        "reason": "First stochastic retry was REJECTED with near-zero progress (-0.003) and object remains 0.22 from goal. Repeating the same undirected strategy has low expected value given observed ineffectiveness. Switching to bounded planar compensation offers a structured correction that may address the systematic shortfall."
+      },
+      "audit": {
+        "status": "valid",
+        "prompt_hash": "8a2a1b8c00320045941cba1bd43d6b75c303b8f0f8e2448ea227cfce7d01d4cc",
+        "request_payload": {
+          "mode": "shadow_only_no_action_execution",
+          "prompt_version": "probemem-acr-shadow-v1",
+          "agent_visible_evidence": {
+            "evidence_id": "shadow_episode004_realization4",
+            "episode_id": 4,
+            "realization_index": 4,
+            "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+            "first_verification_status": "REJECTED",
+            "first_observed_progress": -0.002989394725599781,
+            "first_final_object_goal_distance": 0.2205664740287557,
+            "remaining_second_attempt_budget": 500
+          },
+          "candidate_actions": [
+            "BOUNDED_PLANAR_COMPENSATION",
+            "INDEPENDENT_STOCHASTIC_RETRY"
+          ],
+          "allowed_decisions": [
+            "ABSTAIN",
+            "REPEAT_STOCHASTIC_RETRY",
+            "SWITCH_TO_BOUNDED_COMPENSATION"
+          ],
+          "response_schema": {
+            "evidence_sufficient": "boolean",
+            "action_predictions": {
+              "BOUNDED_PLANAR_COMPENSATION": {
+                "predicted_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
+                "accept_probability": "0..1",
+                "confidence": "0..1"
+              },
+              "INDEPENDENT_STOCHASTIC_RETRY": {
+                "predicted_status": "ACCEPTED | INCONCLUSIVE | REJECTED",
+                "accept_probability": "0..1",
+                "confidence": "0..1"
+              }
+            },
+            "selected_decision": "REPEAT_STOCHASTIC_RETRY | SWITCH_TO_BOUNDED_COMPENSATION | ABSTAIN",
+            "reason": "brief evidence-grounded reason"
+          }
+        },
+        "attempts": [
+          {
+            "attempt_index": 0,
+            "valid": true,
+            "latency_ms": 21286.77560001961,
+            "response_hash": "98c53e41b6f960c5fc414d41d3157bc6963a4b33c4b6d9c82b750f2d46d96310",
+            "raw_response": "```json\n{\n  \"evidence_sufficient\": true,\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.45,\n      \"confidence\": 0.6\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.2,\n      \"confidence\": 0.65\n    }\n  },\n  \"selected_decision\": \"SWITCH_TO_BOUNDED_COMPENSATION\",\n  \"reason\": \"First stochastic retry was REJECTED with near-zero progress (-0.003) and object remains 0.22 from goal. Repeating the same undirected strategy has low expected value given observed ineffectiveness. Switching to bounded planar compensation offers a structured correction that may address the systematic shortfall.\"\n}\n```",
+            "usage": {
+              "input_tokens": 424,
+              "output_tokens": 696
+            }
+          }
+        ]
+      },
+      "action_executed": false
+    }
+  ]
+}

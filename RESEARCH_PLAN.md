@@ -286,6 +286,14 @@ for the next independent retry. A scientifically meaningful successor should
 use an episode-persistent latent execution property or pay for repeated evidence
 to estimate a distribution; it should not add another endpoint classifier.
 
+The GLM-5.2 integration has nevertheless been accelerated in a non-executing
+shadow mode. A three-case frozen smoke produced 3/3 valid structured outputs,
+zero schema repairs, and zero fail-closed cases while exposing no evaluator
+outcomes and executing no model action. All three decisions selected the same
+compensation action, so this is interface evidence only. The GLM layer is ready
+to reuse once a persistent-latent development benchmark establishes an
+identifiable action-utility signal.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)
