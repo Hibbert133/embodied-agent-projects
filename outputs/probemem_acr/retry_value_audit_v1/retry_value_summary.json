@@ -1,0 +1,43 @@
+{
+  "audit_protocol": "probemem_acr_retry_value_identifiability_audit_v1",
+  "source_run_id": "acr_continuous_feedback_20260803T033027Z_fdff57ab321b",
+  "source_manifest_id": "4bca2c97898ef8f36e3fc100cf5df19fe37808f9da44de5205b17a09d3d9e856",
+  "source_git_commit": "fdff57ab321bbf4edc5f8ed6e17bcd8a83c4c17a",
+  "population_size": 30,
+  "positive_repeat_accepted": 19,
+  "negative_repeat_not_accepted": 11,
+  "positive_prevalence": 0.6333333333333333,
+  "scores": {
+    "first_observed_progress": {
+      "score_name": "first_observed_progress",
+      "roc_auc": 0.46411483253588515,
+      "pr_auc_average_precision": 0.6326930193108258,
+      "positive_mean": -0.006167254254664934,
+      "positive_median": -0.009892262686744119,
+      "negative_mean": -0.023744145191040723,
+      "negative_median": -0.004201976609582658
+    },
+    "negative_first_final_distance": {
+      "score_name": "negative_first_final_distance",
+      "roc_auc": 0.4880382775119617,
+      "pr_auc_average_precision": 0.6782936625915068,
+      "positive_mean": -0.27177386550777766,
+      "positive_median": -0.2750109763526503,
+      "negative_mean": -0.30353942420853186,
+      "negative_median": -0.26828249271174714
+    },
+    "categorical_status": {
+      "score_name": "categorical_status",
+      "roc_auc": 0.4569377990430622,
+      "pr_auc_average_precision": 0.6149122807017544,
+      "positive_mean": 0.3684210526315789,
+      "positive_median": 0.0,
+      "negative_mean": 0.45454545454545453,
+      "negative_median": 0.0
+    }
+  },
+  "new_environment_interactions": 0,
+  "api_calls": 0,
+  "threshold_selected": false,
+  "claim_scope": "evaluator-only identifiability audit of whether first-verification feedback ranks the value of one additional stochastic retry"
+}

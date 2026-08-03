@@ -388,3 +388,12 @@ its gate. The rule exactly reproduced the old status mapping and recovered
 harmful selections. Preserve this negative result. Do not tune a nonzero
 threshold on seeds 3500--3730 or advance to GLM, memory, validation, or held-out
 execution. A successor requires a new question rather than another threshold.
+
+The evaluator-only retry-value identifiability audit subsequently reused that
+immutable run without new environment interaction. First progress, negative
+final distance, and categorical status obtained ROC AUC values 0.464, 0.488,
+and 0.457 for whether an independent second retry was accepted. These scores do
+not support selective retry allocation. Do not choose a threshold from the
+descriptive frontier, rerun the source stream, or treat paired counterfactuals
+as online experience. GLM, memory, validation, and held-out execution remain
+blocked.

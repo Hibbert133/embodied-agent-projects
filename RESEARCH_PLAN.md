@@ -269,6 +269,15 @@ selections. The earlier continuous-feedback rank AUC therefore did not translate
 into a useful fixed physical boundary. This line is not promoted and must not be
 retuned on the same stream.
 
+A final evaluator-only audit asked the narrower cost question without collecting
+new rollouts: can the first verification feedback rank whether a second retry is
+worth executing? On the 30 paired decision cases, first progress, negative final
+distance, and categorical status produced ROC AUC 0.464, 0.488, and 0.457.
+Although the second retry recovered 19/30 cases, the registered feedback cannot
+identify those cases. This closes scalar threshold search on the current stream;
+the next protocol must introduce a genuinely different evidence source or
+identification design rather than another fitted cutoff.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)
