@@ -2,6 +2,7 @@
   "protocol": "probemem_online_sequential_development_v1",
   "status": "DEVELOPMENT_FROZEN_BEFORE_EXECUTION",
   "seed_range": [4300, 4499],
+  "first_online_episode_id": 21,
   "target_operational_cases": 60,
   "segments": [
     {"segment_id": "bias_dominant", "seed_range": [4300, 4349], "regime_cycle": ["A_bias_low_noise", "C_bias_dominant_mixed"]},
@@ -33,6 +34,8 @@
   "memory": {
     "bootstrap_snapshot": "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/bootstrap_snapshot.json",
     "bootstrap_sha256": "a3535f5fdee0d5f0dfac056a7b23b03f78d0e4a46e165d87b4bad9fb875af5fa",
+    "bootstrap_records": "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/action_outcome_records.json",
+    "bootstrap_records_sha256": "d723325ac33ec56c5592071ae77abbc1a1e0f9576fcea3d2cc3a294d880a5811",
     "recent_count": 10,
     "top_k": 10,
     "write_after_fresh_verification_only": true,

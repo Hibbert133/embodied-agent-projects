@@ -7,6 +7,8 @@ import json
 from pathlib import Path
 import unittest
 
+from scripts.generate_online_memory_manifest import build_units
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CONFIG = ROOT / "configs/probemem_online/sequential_development_v1.json"
@@ -20,6 +22,7 @@ class ProbeMemOnlineSequentialProtocolTest(unittest.TestCase):
         self.assertEqual(self.config["status"], "DEVELOPMENT_FROZEN_BEFORE_EXECUTION")
         self.assertEqual(self.config["seed_range"], [4300, 4499])
         self.assertEqual(self.config["target_operational_cases"], 60)
+        self.assertEqual(self.config["first_online_episode_id"], 21)
         self.assertTrue(self.config["prohibitions"]["validation"])
         self.assertTrue(self.config["prohibitions"]["heldout"])
 
@@ -37,6 +40,8 @@ class ProbeMemOnlineSequentialProtocolTest(unittest.TestCase):
         snapshot = ROOT / memory["bootstrap_snapshot"]
         self.assertTrue(snapshot.is_file())
         self.assertEqual(hashlib.sha256(snapshot.read_bytes()).hexdigest(), memory["bootstrap_sha256"])
+        records = ROOT / memory["bootstrap_records"]
+        self.assertEqual(hashlib.sha256(records.read_bytes()).hexdigest(), memory["bootstrap_records_sha256"])
 
     def test_random_namespaces_and_budget_are_independent(self) -> None:
         namespaces = list(self.config["random_namespaces"].values())
@@ -46,6 +51,14 @@ class ProbeMemOnlineSequentialProtocolTest(unittest.TestCase):
             budget["total_case_max_steps"],
             budget["initial_max_steps"] + budget["probe_max_steps"] + budget["verification_max_steps"],
         )
+
+    def test_manifest_assignment_is_fixed_and_does_not_expose_outcomes(self) -> None:
+        units = build_units(self.config)
+        self.assertEqual(len(units), 200)
+        self.assertEqual(units[0]["segment_id_oracle"], "bias_dominant")
+        self.assertEqual(units[50]["segment_id_oracle"], "noise_dominant")
+        self.assertTrue(all("outcome" not in key for unit in units for key in unit))
+        self.assertTrue(all(len({unit["initial_perturbation_seed"], unit["diagnostic_probe_seed"], unit["paired_verification_seed"]}) == 3 for unit in units))
 
 
 if __name__ == "__main__":
