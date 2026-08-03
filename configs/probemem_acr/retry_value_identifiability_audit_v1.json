@@ -1,0 +1,30 @@
+{
+  "protocol": "probemem_acr_retry_value_identifiability_audit_v1",
+  "status": "FROZEN_POST_HOC_AUDIT",
+  "claim_scope": "evaluator-only identifiability audit of whether first-verification feedback ranks the value of one additional stochastic retry",
+  "source_run_id": "acr_continuous_feedback_20260803T033027Z_fdff57ab321b",
+  "source_manifest_id": "4bca2c97898ef8f36e3fc100cf5df19fe37808f9da44de5205b17a09d3d9e856",
+  "source_run_directory": "outputs/probemem_acr/continuous_feedback_runs/acr_continuous_feedback_20260803T033027Z_fdff57ab321b",
+  "population": "source-run cases with second_decision_required == true",
+  "evaluator_label": "paired INDEPENDENT_STOCHASTIC_RETRY verification_status == ACCEPTED",
+  "registered_scores": {
+    "first_observed_progress": {"field": "first_observed_progress", "orientation": "higher_is_more_retry_value"},
+    "negative_first_final_distance": {"field": "first_final_object_goal_distance", "orientation": "lower_is_more_retry_value"},
+    "categorical_status": {"field": "first_verification_status", "mapping": {"INCONCLUSIVE": 1.0, "REJECTED": 0.0}}
+  },
+  "frontier": {
+    "decision": "execute retry when score >= threshold; otherwise stop after the first retry",
+    "thresholds": "all unique observed score boundaries plus never-retry and always-retry endpoints",
+    "purpose": "descriptive evaluator-only cost-recovery frontier",
+    "threshold_selection_authorized": false
+  },
+  "prohibitions": {
+    "new_environment_interaction": true,
+    "fit_or_select_threshold": true,
+    "online_policy_claim": true,
+    "call_llm": true,
+    "write_memory": true,
+    "run_validation": true,
+    "run_heldout": true
+  }
+}
