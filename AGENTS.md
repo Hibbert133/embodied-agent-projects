@@ -365,3 +365,10 @@ paired evaluator-only second candidates for at most 30 eligible initial states.
 The audit may measure categorical-status stability and preregistered continuous
 feedback signals only. It must not fit a selector, call an LLM, write online
 memory, execute seeds 3500--3599, or revive the failed validation claim.
+
+That audit completed on 30 eligible states. Seventy percent showed multiple
+first statuses across four realizations, and the frozen status rule tied
+always-repeat. Preregistered continuous progress produced raw AUC 0.798 on 20
+evaluator-only exclusive-recovery branches. This is a signal for a separately
+frozen prospective development protocol only; no selector, GLM, memory,
+validation, or held-out phase is authorized from the audit itself.

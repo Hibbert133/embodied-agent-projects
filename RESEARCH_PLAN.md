@@ -248,6 +248,13 @@ stable across independent execution realizations, and whether fixed continuous
 feedback measures contain prospective signal. This is mechanism analysis only;
 it cannot authorize GLM, memory, validation, or held-out claims.
 
+The audit completed with 30 eligible states and found categorical instability:
+21/30 states changed first status across four realizations. The status rule tied
+always-repeat, while preregistered continuous first-attempt progress achieved a
+development-only raw AUC of 0.798 on 20 exclusive branches. This motivates a
+future fresh-seed prospective test of continuous response, not post-hoc fitting
+or advancement to GLM or memory.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)
