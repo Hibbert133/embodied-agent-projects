@@ -1,0 +1,17 @@
+{
+  "protocol": "probemem_online_gate_a_collection_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "fresh development-only evidence collection for a shadow GLM interface ablation",
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "seed_range": [4000, 4099],
+  "conditions": ["fault_01", "fault_05"],
+  "operational_target_per_condition": 15,
+  "operational_definition": "initial failure, valid registered probe, and both candidate skills constructible before outcomes",
+  "registered_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps_per_candidate": 500, "evaluator_max_steps_per_case": 1564},
+  "random_namespaces": {"initial_perturbation": 19101, "registered_probe": 19102, "paired_verification": 19103},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "prohibitions": {"call_llm": true, "write_memory": true, "retune": true, "run_validation": true, "run_heldout": true}
+}

@@ -1,0 +1,24 @@
+{
+  "protocol": "probemem_online_interface_ablation_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "model": "glm-5.2",
+  "temperature": 0.0,
+  "max_tokens": 900,
+  "timeout_seconds": 300,
+  "interfaces": ["FULL_PAYLOAD", "COMPACT_EVIDENCE", "COMPACT_WITH_SKILL_SEMANTICS"],
+  "cases": 30,
+  "base_api_calls": 90,
+  "repair_attempts_per_invalid_output": 1,
+  "maximum_api_calls": 105,
+  "call_order": "episode-index Latin square over the three interfaces; repairs occur only after all 90 base calls",
+  "registered_target_mapping_evaluator_only": {"fault_01": "BOUNDED_PLANAR_COMPENSATION", "fault_05": "INDEPENDENT_STOCHASTIC_RETRY"},
+  "promotion_gate": {
+    "post_repair_validity_minimum": 0.90,
+    "stable_bias_compensation_rate_minimum": 0.80,
+    "stochastic_retry_rate_minimum": 0.70,
+    "stochastic_abstention_rate_maximum": 0.20,
+    "compact_semantics_correct_selection_net_gain_minimum": 3,
+    "compact_semantics_stochastic_abstention_reduction_minimum": 0.50
+  },
+  "prohibitions": {"execute_model_action": true, "send_condition_identity": true, "send_threshold": true, "send_candidate_outcome": true, "write_memory": true, "run_validation": true, "run_heldout": true}
+}

@@ -446,3 +446,12 @@ ten cases. A successor may test a compact causally sufficient evidence summary
 and explicit registered-skill semantics only on fresh development cases under
 a separately frozen protocol. Memory, validation, and held-out execution remain
 unauthorized.
+
+Branch `research/probemem-online-v4` follows
+`docs/research/probemem_online_v4.md`. Gate A may use fresh seeds 4000--4099 to
+collect exactly 15 eligible stable-bias and 15 eligible stochastic-noise cases,
+then run the frozen 90-call three-interface shadow ablation with at most 15
+repair calls. GLM decisions cannot execute. Gate B is blocked until Gate A's
+registered promotion gate is evaluated. Seeds 4100--4599 retain their v4
+registry roles and must not be executed early; historical held-out and reserved
+partitions remain blocked.
