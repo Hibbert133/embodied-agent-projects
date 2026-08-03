@@ -435,3 +435,14 @@ The model must not see the frozen threshold or paired outcomes, and its choices
 must not execute. This pilot may report validity, decisions, matched audit,
 latency, tokens, and disagreement only; it cannot support a statistical GLM,
 memory, validation, or held-out claim.
+
+That pilot completed with 9/10 valid structured outputs and one fail-closed
+case. GLM selected compensation on all five stable-bias cases, but abstained on
+four of five stochastic-noise cases; all four abstained cases had an accepted
+evaluator-only retry. Descriptively, its shadow choices corresponded to 4/10
+accepted outcomes versus 8/10 for the frozen deterministic rule. Preserve this
+negative reasoning-to-action result. Do not revise the prompt and rerun these
+ten cases. A successor may test a compact causally sufficient evidence summary
+and explicit registered-skill semantics only on fresh development cases under
+a separately frozen protocol. Memory, validation, and held-out execution remain
+unauthorized.
