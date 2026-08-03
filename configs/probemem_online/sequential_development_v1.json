@@ -1,0 +1,44 @@
+{
+  "protocol": "probemem_online_sequential_development_v1",
+  "status": "DEVELOPMENT_FROZEN_BEFORE_EXECUTION",
+  "seed_range": [4300, 4499],
+  "target_operational_cases": 60,
+  "segments": [
+    {"segment_id": "bias_dominant", "seed_range": [4300, 4349], "regime_cycle": ["A_bias_low_noise", "C_bias_dominant_mixed"]},
+    {"segment_id": "noise_dominant", "seed_range": [4350, 4399], "regime_cycle": ["B_zero_mean_noise", "D_noise_dominant_mixed"]},
+    {"segment_id": "mixed", "seed_range": [4400, 4449], "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"]},
+    {"segment_id": "recurrence", "seed_range": [4450, 4499], "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise"]}
+  ],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "registered_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps": 500, "total_case_max_steps": 1064},
+  "random_namespaces": {"initial_perturbation": 19401, "registered_probe": 19402, "method_verification_base": 19500},
+  "methods": [
+    "ALWAYS_COMPENSATION",
+    "ALWAYS_RETRY",
+    "FROZEN_VARIANCE_RULE",
+    "DETERMINISTIC_ACTION_POSTERIOR",
+    "STATELESS_GLM",
+    "GLM_FROZEN_BOOTSTRAP_MEMORY",
+    "GLM_ONLINE_ACTION_MEMORY",
+    "GLM_ONLINE_MEMORY_RESONANCE",
+    "EVALUATOR_ONLY_ORACLE"
+  ],
+  "glm": {"model": "glm-5.2", "temperature": 0.0, "max_tokens": 1100, "timeout_seconds": 300, "maximum_schema_repairs_per_decision": 1},
+  "memory": {
+    "bootstrap_snapshot": "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/bootstrap_snapshot.json",
+    "bootstrap_sha256": "a3535f5fdee0d5f0dfac056a7b23b03f78d0e4a46e165d87b4bad9fb875af5fa",
+    "recent_count": 10,
+    "top_k": 10,
+    "write_after_fresh_verification_only": true,
+    "one_selected_action_per_episode": true
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "claim_boundary": "development_only_no_validation_or_heldout_claim",
+  "prohibitions": {"continuous_llm_action": true, "counterfactual_memory_write": true, "future_memory_access": true, "fault_label_in_payload": true, "validation": true, "heldout": true}
+}
