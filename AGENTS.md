@@ -348,3 +348,11 @@ The user explicitly authorized the independent validation protocol in
 rule. Seeds 3100--3199 remain held-out and must not be executed. Validation may
 collect paired second outcomes for evaluation only; it must not call an LLM,
 write memory, retune the rule, replace the run, or advance on a failed gate.
+
+The immutable validation run completed all 150 initial units but produced only
+55 eligible first attempts and 16 second-decision cases, below the frozen 60/25
+population minima. It is `INCOMPLETE_FOR_VALIDATION` and cannot be extended or
+replaced. Descriptively, the frozen status rule recovered 47/55 versus 50/55
+for always-repeat, with more harmful selections and higher cost. Treat the
+development signal as not independently replicated. Do not call GLM, write
+transition memory, execute held-out seeds, or tune on this validation result.

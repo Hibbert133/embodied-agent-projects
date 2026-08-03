@@ -96,6 +96,15 @@ is preserved. The validation freezes the development status mapping and runs
 once without outcome-dependent stopping or replacement. GLM and transition
 memory remain blocked until its promotion gate is evaluated.
 
+The one-shot validation executed all 150 frozen initial units but yielded 55
+eligible first attempts and 16 second-decision cases, below its preregistered
+60/25 population requirements. It is preserved as
+`INCOMPLETE_FOR_VALIDATION`. Its descriptive result also opposes promotion:
+always-repeat recovered 50/55 while the frozen status-conditioned rule recovered
+47/55, with more harmful selections and higher interaction cost. The narrow
+development signal did not independently replicate; GLM, transition memory,
+and held-out evaluation remain blocked.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support
