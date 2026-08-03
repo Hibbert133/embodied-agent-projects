@@ -1,0 +1,622 @@
+[
+  {
+    "episode_id": 1,
+    "unit_id": 2,
+    "agent_visible_evidence": {
+      "evidence_id": "online_bootstrap_episode001_attempt1",
+      "episode_id": 1,
+      "initial_evidence": {
+        "schema_version": 1,
+        "evidence_id": "online_bootstrap_episode001_attempt0",
+        "source": "failed_rollout",
+        "episode_id": 1,
+        "attempt_id": 0,
+        "seed": 4101,
+        "decision_required": true,
+        "environment_step_cost": 500,
+        "parent_evidence_ids": [],
+        "task_state": {
+          "final_object_goal_distance": 0.11150052438504514,
+          "minimum_gripper_object_distance": 0.033827515245907734,
+          "object_displacement": 0.31458498655102735,
+          "progress_to_goal": 0.14686733556818593
+        },
+        "temporal_response": {
+          "response_gain_xy": [
+            0.007865553719928055,
+            0.0034295961693229598
+          ],
+          "estimated_drift_xy": [
+            0.0010989925402844318,
+            -0.00012323056982057551
+          ],
+          "normalized_residual_xy": [
+            0.6180055522521885,
+            0.7279036697717051
+          ],
+          "action_excitation_xy": [
+            0.07886404526083682,
+            0.3888049982737037
+          ],
+          "uncertainty": 0.6729546110119468,
+          "sample_count": 500
+        },
+        "phase_response": {
+          "phase_inconsistency": 0.7943291643771566,
+          "eligible_sample_fraction": 1.0,
+          "sample_counts": {
+            "approach": 355,
+            "push": 48,
+            "near_goal": 97
+          },
+          "normalized_residual_norms": {
+            "approach": 0.8379917927747055,
+            "push": 0.704205998221491,
+            "near_goal": 0.6791299777208899
+          }
+        },
+        "historical_verified_case_count": 0,
+        "missing_evidence": [
+          "repeat_consistency"
+        ]
+      },
+      "registered_probe_evidence": {
+        "protocol": "repeated_symmetric_world_frame_xy_v1",
+        "probe_environment_steps": 64,
+        "repetitions": [
+          {
+            "repeat_index": 0,
+            "transitions": [
+              {
+                "seed": 4101,
+                "direction": "x_positive",
+                "commanded_action": [
+                  0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.008940664488301806,
+                  0.5997398958893607,
+                  0.19466337875467615
+                ],
+                "gripper_displacement": [
+                  0.004356464063912416,
+                  -0.0016482177366285988,
+                  -0.00048007616302811473
+                ],
+                "minimum_gripper_object_distance": 0.1806504292087309,
+                "object_displacement": 1.6528697171457387e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "x_negative",
+                "commanded_action": [
+                  -0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0031105416301432653,
+                  0.6004382967060155,
+                  0.1944528193620822
+                ],
+                "gripper_displacement": [
+                  -0.0014736587942461247,
+                  -0.0009498169199738671,
+                  -0.0006906355556220711
+                ],
+                "minimum_gripper_object_distance": 0.18927584010049095,
+                "object_displacement": 1.1110701525811628e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "y_positive",
+                "commanded_action": [
+                  0.0,
+                  0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0057726774596117405,
+                  0.6027695181384576,
+                  0.19467117290007468
+                ],
+                "gripper_displacement": [
+                  0.0011884770352223505,
+                  0.001381404512468265,
+                  -0.0004722820176295828
+                ],
+                "minimum_gripper_object_distance": 0.18828582719699213,
+                "object_displacement": 1.1110701525830383e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "y_negative",
+                "commanded_action": [
+                  0.0,
+                  -0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.006280090972529577,
+                  0.597410692586081,
+                  0.1944436654807552
+                ],
+                "gripper_displacement": [
+                  0.0016958905481401871,
+                  -0.00397742103990828,
+                  -0.0006997894369490665
+                ],
+                "minimum_gripper_object_distance": 0.17723392710053515,
+                "object_displacement": 6.756719036437894e-06
+              }
+            ],
+            "inference": {
+              "dominant_axis": "x",
+              "estimated_direction": "positive",
+              "estimated_drift_per_step": [
+                0.0003604483033143018,
+                -0.00032462819900265505
+              ],
+              "axis_response_gain": [
+                0.0036438267320518386,
+                0.003349265920327389
+              ],
+              "residual": 3.19023642389303e-07,
+              "confidence": 0.5258982428925038,
+              "recommended_correction_axis": "x",
+              "recommended_correction_direction": "negative"
+            }
+          },
+          {
+            "repeat_index": 1,
+            "transitions": [
+              {
+                "seed": 4101,
+                "direction": "x_positive",
+                "commanded_action": [
+                  0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.008940664488301806,
+                  0.5997398958893607,
+                  0.19466337875467615
+                ],
+                "gripper_displacement": [
+                  0.004356464063912416,
+                  -0.0016482177366285988,
+                  -0.00048007616302811473
+                ],
+                "minimum_gripper_object_distance": 0.1844882390663036,
+                "object_displacement": 4.752988562235861e-06
+              },
+              {
+                "seed": 4101,
+                "direction": "x_negative",
+                "commanded_action": [
+                  -0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0031105416301432653,
+                  0.6004382967060155,
+                  0.1944528193620822
+                ],
+                "gripper_displacement": [
+                  -0.0014736587942461247,
+                  -0.0009498169199738671,
+                  -0.0006906355556220711
+                ],
+                "minimum_gripper_object_distance": 0.17511118240855839,
+                "object_displacement": 3.1285004322526725e-06
+              },
+              {
+                "seed": 4101,
+                "direction": "y_positive",
+                "commanded_action": [
+                  0.0,
+                  0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0057726774596117405,
+                  0.6027695181384576,
+                  0.19467117290007468
+                ],
+                "gripper_displacement": [
+                  0.0011884770352223505,
+                  0.001381404512468265,
+                  -0.0004722820176295828
+                ],
+                "minimum_gripper_object_distance": 0.178648508161892,
+                "object_displacement": 6.874930224415818e-06
+              },
+              {
+                "seed": 4101,
+                "direction": "y_negative",
+                "commanded_action": [
+                  0.0,
+                  -0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.006280090972529577,
+                  0.597410692586081,
+                  0.1944436654807552
+                ],
+                "gripper_displacement": [
+                  0.0016958905481401871,
+                  -0.00397742103990828,
+                  -0.0006997894369490665
+                ],
+                "minimum_gripper_object_distance": 0.1801841966805222,
+                "object_displacement": 1.63260176846369e-05
+              }
+            ],
+            "inference": {
+              "dominant_axis": "x",
+              "estimated_direction": "positive",
+              "estimated_drift_per_step": [
+                0.0003604483033143018,
+                -0.00032462819900265505
+              ],
+              "axis_response_gain": [
+                0.0036438267320518386,
+                0.003349265920327389
+              ],
+              "residual": 3.19023642389303e-07,
+              "confidence": 0.5258982428925038,
+              "recommended_correction_axis": "x",
+              "recommended_correction_direction": "negative"
+            }
+          },
+          {
+            "repeat_index": 2,
+            "transitions": [
+              {
+                "seed": 4101,
+                "direction": "x_positive",
+                "commanded_action": [
+                  0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.008940664488301806,
+                  0.5997398958893607,
+                  0.19466337875467615
+                ],
+                "gripper_displacement": [
+                  0.004356464063912416,
+                  -0.0016482177366285988,
+                  -0.00048007616302811473
+                ],
+                "minimum_gripper_object_distance": 0.1874314889168292,
+                "object_displacement": 1.420371237455129e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "x_negative",
+                "commanded_action": [
+                  -0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0031105416301432653,
+                  0.6004382967060155,
+                  0.1944528193620822
+                ],
+                "gripper_displacement": [
+                  -0.0014736587942461247,
+                  -0.0009498169199738671,
+                  -0.0006906355556220711
+                ],
+                "minimum_gripper_object_distance": 0.18126710889529105,
+                "object_displacement": 2.75852106452589e-06
+              },
+              {
+                "seed": 4101,
+                "direction": "y_positive",
+                "commanded_action": [
+                  0.0,
+                  0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0057726774596117405,
+                  0.6027695181384576,
+                  0.19467117290007468
+                ],
+                "gripper_displacement": [
+                  0.0011884770352223505,
+                  0.001381404512468265,
+                  -0.0004722820176295828
+                ],
+                "minimum_gripper_object_distance": 0.19934024307125894,
+                "object_displacement": 2.7919636930736653e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "y_negative",
+                "commanded_action": [
+                  0.0,
+                  -0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.006280090972529577,
+                  0.597410692586081,
+                  0.1944436654807552
+                ],
+                "gripper_displacement": [
+                  0.0016958905481401871,
+                  -0.00397742103990828,
+                  -0.0006997894369490665
+                ],
+                "minimum_gripper_object_distance": 0.1844427041852776,
+                "object_displacement": 4.752988562235027e-06
+              }
+            ],
+            "inference": {
+              "dominant_axis": "x",
+              "estimated_direction": "positive",
+              "estimated_drift_per_step": [
+                0.0003604483033143018,
+                -0.00032462819900265505
+              ],
+              "axis_response_gain": [
+                0.0036438267320518386,
+                0.003349265920327389
+              ],
+              "residual": 3.19023642389303e-07,
+              "confidence": 0.5258982428925038,
+              "recommended_correction_axis": "x",
+              "recommended_correction_direction": "negative"
+            }
+          },
+          {
+            "repeat_index": 3,
+            "transitions": [
+              {
+                "seed": 4101,
+                "direction": "x_positive",
+                "commanded_action": [
+                  0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.008940664488301806,
+                  0.5997398958893607,
+                  0.19466337875467615
+                ],
+                "gripper_displacement": [
+                  0.004356464063912416,
+                  -0.0016482177366285988,
+                  -0.00048007616302811473
+                ],
+                "minimum_gripper_object_distance": 0.1874314889168292,
+                "object_displacement": 1.420371237455129e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "x_negative",
+                "commanded_action": [
+                  -0.20000000298023224,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0031105416301432653,
+                  0.6004382967060155,
+                  0.1944528193620822
+                ],
+                "gripper_displacement": [
+                  -0.0014736587942461247,
+                  -0.0009498169199738671,
+                  -0.0006906355556220711
+                ],
+                "minimum_gripper_object_distance": 0.19242517951558105,
+                "object_displacement": 5.452547024904513e-06
+              },
+              {
+                "seed": 4101,
+                "direction": "y_positive",
+                "commanded_action": [
+                  0.0,
+                  0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.0057726774596117405,
+                  0.6027695181384576,
+                  0.19467117290007468
+                ],
+                "gripper_displacement": [
+                  0.0011884770352223505,
+                  0.001381404512468265,
+                  -0.0004722820176295828
+                ],
+                "minimum_gripper_object_distance": 0.18652278887485116,
+                "object_displacement": 1.4203712374460224e-05
+              },
+              {
+                "seed": 4101,
+                "direction": "y_negative",
+                "commanded_action": [
+                  0.0,
+                  -0.20000000298023224,
+                  0.0,
+                  0.0
+                ],
+                "steps": 4,
+                "start_gripper_position": [
+                  0.00458420042438939,
+                  0.6013881136259893,
+                  0.19514345491770427
+                ],
+                "end_gripper_position": [
+                  0.006280090972529577,
+                  0.597410692586081,
+                  0.1944436654807552
+                ],
+                "gripper_displacement": [
+                  0.0016958905481401871,
+                  -0.00397742103990828,
+                  -0.0006997894369490665
+                ],
+                "minimum_gripper_object_distance": 0.19182673930273836,
+                "object_displacement": 5.45254702490152e-06
+              }
+            ],
+            "inference": {
+              "dominant_axis": "x",
+              "estimated_direction": "positive",
+              "estimated_drift_per_step": [
+                0.0003604483033143018,
+                -0.00032462819900265505
+              ],
+              "axis_response_gain": [
+                0.0036438267320518386,
+                0.003349265920327389
+              ],
+              "residual": 3.19023642389303e-07,
+              "confidence": 0.5258982428925038,
+              "recommended_correction_axis": "x",
+              "recommended_correction_direction": "negative"
+            }
+          }
+        ],
+        "consistency": {
+          "repeat_count": 4,
+          "estimated_bias_mean": [
+            0.09892026427703751,
+            -0.09692517904667385
+          ],
+          "estimated_bias_std": [
+            0.0,
+            0.0
+          ],
+          "estimated_bias_std_norm": 0.0,
+          "relative_bias_std": 0.0,
+          "mean_estimation_residual": 3.19023642389303e-07,
+          "dominant_axis_sign_agreement": 1.0
+        }
+      },
+      "remaining_verification_budget": 500
+    },
+    "assigned_action_manifest_only": "INDEPENDENT_STOCHASTIC_RETRY",
+    "decision_timestamp_ns": 236741808652400,
+    "outcome_available": false
+  }
+]

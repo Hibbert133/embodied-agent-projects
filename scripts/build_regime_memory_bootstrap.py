@@ -114,6 +114,8 @@ def main() -> int:
                 "unit_id": unit_id, "seed": seed, "condition_id_oracle": condition_id,
                 "assigned_skill": skill.value, "initial_success": initial.success,
                 "initial_steps": initial.steps, "initial_final_object_goal_distance": initial.final_object_goal_distance,
+                "episode_id": None, "verification_status": "", "verification_success": False,
+                "verification_steps": 0, "probe_steps": 0, "final_object_goal_distance": None,
             }
             if not state.decision_required:
                 cases.append({**base, "operational": False, "ineligibility_reason": "initial_success"})
