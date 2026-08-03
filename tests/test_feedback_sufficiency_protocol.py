@@ -5,6 +5,8 @@ import unittest
 from pathlib import Path
 
 from scripts.check_probemem_acr_feedback_sufficiency_seeds import development_seeds
+from scripts.analyze_feedback_sufficiency_audit import _auc
+from scripts.generate_feedback_sufficiency_manifest import IMPLEMENTATION_PATHS, build_population_units
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +30,24 @@ class FeedbackSufficiencyProtocolTests(unittest.TestCase):
         prohibited = self.config["prohibitions"]
         for key in ("fit_selector", "call_llm", "write_online_memory", "run_validation", "run_heldout"):
             self.assertTrue(prohibited[key])
+
+    def test_manifest_has_independent_repeated_streams(self) -> None:
+        units = build_population_units(self.config)
+        self.assertEqual(len(units), 200)
+        for unit in units:
+            streams = [unit["initial_perturbation_seed"], unit["diagnostic_probe_seed"], *unit["first_verification_seeds"], *unit["paired_second_verification_seeds"]]
+            self.assertEqual(len(streams), len(set(streams)))
+            self.assertEqual(len(unit["first_verification_seeds"]), 4)
+
+    def test_manifest_hashes_collector_and_analyzer(self) -> None:
+        paths = {path.as_posix() for path in IMPLEMENTATION_PATHS}
+        self.assertIn("scripts/run_feedback_sufficiency_audit.py", paths)
+        self.assertIn("scripts/analyze_feedback_sufficiency_audit.py", paths)
+
+    def test_auc_has_frozen_orientation_and_tie_handling(self) -> None:
+        self.assertEqual(_auc([1, 1, 0, 0], [3.0, 2.0, 1.0, 0.0]), 1.0)
+        self.assertEqual(_auc([1, 0], [1.0, 1.0]), 0.5)
+        self.assertIsNone(_auc([1, 1], [0.0, 1.0]))
 
 
 if __name__ == "__main__":
