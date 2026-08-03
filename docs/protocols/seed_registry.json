@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "registry_snapshot": "probemem_acr_resonance_validation_v1",
+  "created_for_protocol": "probemem_acr_resonance_validation_v1",
+  "earlier_acr_reserved_or_executed": [1100, 3049],
+  "validation_seed_blocks": [[3050, 3099], [3200, 3299]],
+  "heldout_reserved_not_executed": [3100, 3199],
+  "validation_initial_units": 150,
+  "validation_seed_order": "3050..3099 followed by 3200..3299",
+  "collision_scan_scope": ["configs/**", "reports/**", "outputs/**"],
+  "collision_scan_result_before_freeze": "NO_EXTERNAL_EPISODE_SEED_COLLISIONS",
+  "random_namespaces_are_not_episode_seeds": true
+}

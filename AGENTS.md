@@ -341,3 +341,10 @@ interval crosses zero, so this is a feasibility signal only. Do not retune on
 seeds 2850--3049 or treat this as validation, held-out, memory, LLM, or online-
 learning evidence. Reserved seeds remain blocked pending a separately frozen
 protocol and explicit user authorization.
+
+The user explicitly authorized the independent validation protocol in
+`docs/protocols/resonance_validation_v1.md`. It may execute exactly seeds
+3050--3099 followed by 3200--3299 once, using the frozen status-conditioned
+rule. Seeds 3100--3199 remain held-out and must not be executed. Validation may
+collect paired second outcomes for evaluation only; it must not call an LLM,
+write memory, retune the rule, replace the run, or advance on a failed gate.

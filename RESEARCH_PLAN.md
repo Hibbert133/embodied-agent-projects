@@ -90,6 +90,12 @@ fresh-verification status is a promising action-selection signal that warrants
 a separately frozen validation, not evidence of general online learning or
 memory benefit.
 
+Independent validation is now preregistered on 150 fixed initial units:
+3050--3099 followed by 3200--3299. The original 3100--3199 held-out reservation
+is preserved. The validation freezes the development status mapping and runs
+once without outcome-dependent stopping or replacement. GLM and transition
+memory remain blocked until its promotion gate is evaluated.
+
 The completed and falsified v1 milestones below remain immutable. A separate
 development protocol, [ProbeMem v2](docs/research/online_llm_scientific_memory_v2.md),
 now investigates whether action-conditional fresh verification can support

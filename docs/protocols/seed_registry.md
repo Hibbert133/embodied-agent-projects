@@ -92,3 +92,10 @@ first-verification status and stops at 30 non-accepted first verifications. It
 must not read paired second-candidate outcomes. This protocol permits at most
 one additional recovery verification and does not authorize API calls, memory,
 validation, or held-out execution.
+
+## Resonance validation reservation
+
+The independently frozen validation uses exactly 150 initial units in fixed
+order: 3050--3099 followed by newly reserved 3200--3299. Seeds 3100--3199 remain
+untouched held-out data. Validation runs every unit without early stopping and
+cannot add or replace seeds after outcomes are observed.
