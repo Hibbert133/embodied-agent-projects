@@ -255,6 +255,13 @@ development-only raw AUC of 0.798 on 20 exclusive branches. This motivates a
 future fresh-seed prospective test of continuous response, not post-hoc fitting
 or advancement to GLM or memory.
 
+The authorized successor freezes that prospective test before execution. It
+uses fresh seeds 3500--3799 and an exact zero-metre physical boundary: positive
+first-retry progress repeats retry, while non-positive progress switches to
+compensation. It compares against fixed and historical status policies with
+paired fresh verification. The threshold cannot be retuned and the experiment
+remains development-only.
+
 - [Frozen Execution Plan v1](docs/research/frozen_execution_plan_v1.md)
 - [Held-Out Allocation Protocol v1](docs/protocols/heldout_allocation_v1.md)
 - [Held-Out Intervention Protocol v1](docs/protocols/heldout_intervention_v1.md)

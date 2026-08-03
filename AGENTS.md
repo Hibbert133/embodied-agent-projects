@@ -372,3 +372,12 @@ always-repeat. Preregistered continuous progress produced raw AUC 0.798 on 20
 evaluator-only exclusive-recovery branches. This is a signal for a separately
 frozen prospective development protocol only; no selector, GLM, memory,
 validation, or held-out phase is authorized from the audit itself.
+
+The user then authorized the separately frozen prospective continuous-feedback
+development protocol in
+`docs/protocols/probemem_acr_continuous_feedback_development_v1.md`. It may scan
+fresh seeds 3500--3799 once and compare a zero-threshold physical-progress rule
+with always-repeat, always-switch, and the historical status rule. The rule and
+zero threshold are frozen before outcomes. Seeds 3800--3899 and held-out seeds
+3100--3199 must not be executed. No LLM, memory, fitting, or validation claim is
+authorized.
