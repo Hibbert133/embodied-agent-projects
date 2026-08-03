@@ -1,0 +1,823 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_online_mixed_tuning_20260803T093907Z_f9b56fbeba64",
+  "source_git_commit": "f9b56fbeba6405443dffcf040daaed423f37e3a6",
+  "created_at_utc": "20260803T093907Z",
+  "config_path": "configs/probemem_online/mixed_regime_tuning_v1.json",
+  "config_sha256": "d83a1e5a743318fedd47484512ee0bcad25dc140a6058864fb0ade309f6d6378",
+  "implementation_sha256": {
+    "scripts/generate_mixed_regime_tuning_manifest.py": "87bc58af50d6feb2b938b00aaef82b01e719c6a2cb4e18d45b27836baac7a0b3",
+    "scripts/run_mixed_regime_tuning.py": "7b0ad11b4f77000f4c77fb0f96aa6380df43c4a54625c6ccae0d31986a6232e2",
+    "src/perturbations.py": "7d8814e4ca20c69c42a0f596d71c51fef25038bbe4c320e8a7c63ad538c9cd77",
+    "scripts/run_probemem_v2_smoke.py": "855e0811fc5e5e36a4656e33b9aa0156f481d0e51b9f213358e4ade55ee742ec",
+    "src/rollout/engine.py": "a347c0d8acb76bc200af476150e6c9f699d43bf7b1fca6318aba7fe526906c28"
+  },
+  "input_sha256": {
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "configs/probemem_online/seed_registry_v1.json": "66a2fe855e5d96217a8011b9f742663c22d8fe9c323f9246554c00209ce3c8ba",
+    "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/bootstrap_snapshot.json": "a3535f5fdee0d5f0dfac056a7b23b03f78d0e4a46e165d87b4bad9fb875af5fa"
+  },
+  "population_units": [
+    {
+      "unit_id": 1,
+      "environment_seed": 4200,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 4000735729,
+      "diagnostic_probe_seed": 2135477483,
+      "paired_verification_seed": 2435467154
+    },
+    {
+      "unit_id": 2,
+      "environment_seed": 4200,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1361614816,
+      "diagnostic_probe_seed": 182023064,
+      "paired_verification_seed": 2481114696
+    },
+    {
+      "unit_id": 3,
+      "environment_seed": 4200,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3107828959,
+      "diagnostic_probe_seed": 4077757245,
+      "paired_verification_seed": 1139781232
+    },
+    {
+      "unit_id": 4,
+      "environment_seed": 4200,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3553333927,
+      "diagnostic_probe_seed": 2982477772,
+      "paired_verification_seed": 1288461766
+    },
+    {
+      "unit_id": 5,
+      "environment_seed": 4201,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3808091079,
+      "diagnostic_probe_seed": 2690146305,
+      "paired_verification_seed": 4155221649
+    },
+    {
+      "unit_id": 6,
+      "environment_seed": 4201,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3947465948,
+      "diagnostic_probe_seed": 2546532575,
+      "paired_verification_seed": 1070240305
+    },
+    {
+      "unit_id": 7,
+      "environment_seed": 4201,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3939086459,
+      "diagnostic_probe_seed": 2297484989,
+      "paired_verification_seed": 3493573997
+    },
+    {
+      "unit_id": 8,
+      "environment_seed": 4201,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2853576757,
+      "diagnostic_probe_seed": 1368684232,
+      "paired_verification_seed": 2261409384
+    },
+    {
+      "unit_id": 9,
+      "environment_seed": 4202,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1867002088,
+      "diagnostic_probe_seed": 1744988688,
+      "paired_verification_seed": 810203427
+    },
+    {
+      "unit_id": 10,
+      "environment_seed": 4202,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3195235130,
+      "diagnostic_probe_seed": 3257863051,
+      "paired_verification_seed": 4227719222
+    },
+    {
+      "unit_id": 11,
+      "environment_seed": 4202,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 610560565,
+      "diagnostic_probe_seed": 1401096942,
+      "paired_verification_seed": 4052195874
+    },
+    {
+      "unit_id": 12,
+      "environment_seed": 4202,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2777190600,
+      "diagnostic_probe_seed": 1902944278,
+      "paired_verification_seed": 2600632021
+    },
+    {
+      "unit_id": 13,
+      "environment_seed": 4203,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 563907610,
+      "diagnostic_probe_seed": 2888093601,
+      "paired_verification_seed": 1117379462
+    },
+    {
+      "unit_id": 14,
+      "environment_seed": 4203,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1370126096,
+      "diagnostic_probe_seed": 591446365,
+      "paired_verification_seed": 3258338881
+    },
+    {
+      "unit_id": 15,
+      "environment_seed": 4203,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2983610165,
+      "diagnostic_probe_seed": 1395424892,
+      "paired_verification_seed": 320967447
+    },
+    {
+      "unit_id": 16,
+      "environment_seed": 4203,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1498170713,
+      "diagnostic_probe_seed": 338702756,
+      "paired_verification_seed": 169287678
+    },
+    {
+      "unit_id": 17,
+      "environment_seed": 4204,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3344741579,
+      "diagnostic_probe_seed": 3358362269,
+      "paired_verification_seed": 102610647
+    },
+    {
+      "unit_id": 18,
+      "environment_seed": 4204,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 202608154,
+      "diagnostic_probe_seed": 1317583710,
+      "paired_verification_seed": 893028225
+    },
+    {
+      "unit_id": 19,
+      "environment_seed": 4204,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 4130978017,
+      "diagnostic_probe_seed": 3160020911,
+      "paired_verification_seed": 1883733762
+    },
+    {
+      "unit_id": 20,
+      "environment_seed": 4204,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1568355821,
+      "diagnostic_probe_seed": 284510546,
+      "paired_verification_seed": 112852977
+    },
+    {
+      "unit_id": 21,
+      "environment_seed": 4205,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1559501328,
+      "diagnostic_probe_seed": 1419481133,
+      "paired_verification_seed": 3254482691
+    },
+    {
+      "unit_id": 22,
+      "environment_seed": 4205,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 846738573,
+      "diagnostic_probe_seed": 3395808626,
+      "paired_verification_seed": 375020490
+    },
+    {
+      "unit_id": 23,
+      "environment_seed": 4205,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 4269386883,
+      "diagnostic_probe_seed": 1338392821,
+      "paired_verification_seed": 476927650
+    },
+    {
+      "unit_id": 24,
+      "environment_seed": 4205,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2691984742,
+      "diagnostic_probe_seed": 2001078046,
+      "paired_verification_seed": 928965836
+    },
+    {
+      "unit_id": 25,
+      "environment_seed": 4206,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3775839849,
+      "diagnostic_probe_seed": 929300719,
+      "paired_verification_seed": 700754285
+    },
+    {
+      "unit_id": 26,
+      "environment_seed": 4206,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 867178419,
+      "diagnostic_probe_seed": 838070555,
+      "paired_verification_seed": 4078193697
+    },
+    {
+      "unit_id": 27,
+      "environment_seed": 4206,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 42035884,
+      "diagnostic_probe_seed": 3565811464,
+      "paired_verification_seed": 2876471928
+    },
+    {
+      "unit_id": 28,
+      "environment_seed": 4206,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2550542731,
+      "diagnostic_probe_seed": 1406177500,
+      "paired_verification_seed": 3206930917
+    },
+    {
+      "unit_id": 29,
+      "environment_seed": 4207,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3105986926,
+      "diagnostic_probe_seed": 3574717318,
+      "paired_verification_seed": 3962281147
+    },
+    {
+      "unit_id": 30,
+      "environment_seed": 4207,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2299080219,
+      "diagnostic_probe_seed": 970714894,
+      "paired_verification_seed": 2841748653
+    },
+    {
+      "unit_id": 31,
+      "environment_seed": 4207,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1688456836,
+      "diagnostic_probe_seed": 2615850799,
+      "paired_verification_seed": 2638693741
+    },
+    {
+      "unit_id": 32,
+      "environment_seed": 4207,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2256886087,
+      "diagnostic_probe_seed": 3943044246,
+      "paired_verification_seed": 1932084221
+    },
+    {
+      "unit_id": 33,
+      "environment_seed": 4208,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2241754204,
+      "diagnostic_probe_seed": 3329978083,
+      "paired_verification_seed": 3870982835
+    },
+    {
+      "unit_id": 34,
+      "environment_seed": 4208,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2149946666,
+      "diagnostic_probe_seed": 638658057,
+      "paired_verification_seed": 1329144451
+    },
+    {
+      "unit_id": 35,
+      "environment_seed": 4208,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 81205454,
+      "diagnostic_probe_seed": 3365007407,
+      "paired_verification_seed": 668717449
+    },
+    {
+      "unit_id": 36,
+      "environment_seed": 4208,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3248751312,
+      "diagnostic_probe_seed": 2514020078,
+      "paired_verification_seed": 830271558
+    },
+    {
+      "unit_id": 37,
+      "environment_seed": 4209,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 727715702,
+      "diagnostic_probe_seed": 3090345908,
+      "paired_verification_seed": 1289366363
+    },
+    {
+      "unit_id": 38,
+      "environment_seed": 4209,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2507329162,
+      "diagnostic_probe_seed": 492640006,
+      "paired_verification_seed": 1370945092
+    },
+    {
+      "unit_id": 39,
+      "environment_seed": 4209,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1728559731,
+      "diagnostic_probe_seed": 3200644108,
+      "paired_verification_seed": 1282386917
+    },
+    {
+      "unit_id": 40,
+      "environment_seed": 4209,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1096254690,
+      "diagnostic_probe_seed": 27484570,
+      "paired_verification_seed": 4242941034
+    },
+    {
+      "unit_id": 41,
+      "environment_seed": 4210,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3305219128,
+      "diagnostic_probe_seed": 3340337158,
+      "paired_verification_seed": 3095557480
+    },
+    {
+      "unit_id": 42,
+      "environment_seed": 4210,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1058760427,
+      "diagnostic_probe_seed": 759073619,
+      "paired_verification_seed": 740663763
+    },
+    {
+      "unit_id": 43,
+      "environment_seed": 4210,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2038416846,
+      "diagnostic_probe_seed": 882168191,
+      "paired_verification_seed": 4167504351
+    },
+    {
+      "unit_id": 44,
+      "environment_seed": 4210,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2487614129,
+      "diagnostic_probe_seed": 3480440548,
+      "paired_verification_seed": 781179209
+    },
+    {
+      "unit_id": 45,
+      "environment_seed": 4211,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 4102921435,
+      "diagnostic_probe_seed": 2885375357,
+      "paired_verification_seed": 1113607027
+    },
+    {
+      "unit_id": 46,
+      "environment_seed": 4211,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3901647389,
+      "diagnostic_probe_seed": 1010233359,
+      "paired_verification_seed": 3361784018
+    },
+    {
+      "unit_id": 47,
+      "environment_seed": 4211,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3798476706,
+      "diagnostic_probe_seed": 3902418147,
+      "paired_verification_seed": 3496595828
+    },
+    {
+      "unit_id": 48,
+      "environment_seed": 4211,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1082734548,
+      "diagnostic_probe_seed": 2114749590,
+      "paired_verification_seed": 3265971340
+    },
+    {
+      "unit_id": 49,
+      "environment_seed": 4212,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 4083902821,
+      "diagnostic_probe_seed": 3886255583,
+      "paired_verification_seed": 501272970
+    },
+    {
+      "unit_id": 50,
+      "environment_seed": 4212,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1269212266,
+      "diagnostic_probe_seed": 1627246495,
+      "paired_verification_seed": 3012096729
+    },
+    {
+      "unit_id": 51,
+      "environment_seed": 4212,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2875719229,
+      "diagnostic_probe_seed": 3580836763,
+      "paired_verification_seed": 3742487588
+    },
+    {
+      "unit_id": 52,
+      "environment_seed": 4212,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 255969782,
+      "diagnostic_probe_seed": 507497977,
+      "paired_verification_seed": 1145864207
+    },
+    {
+      "unit_id": 53,
+      "environment_seed": 4213,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3533472005,
+      "diagnostic_probe_seed": 1425593824,
+      "paired_verification_seed": 2493049772
+    },
+    {
+      "unit_id": 54,
+      "environment_seed": 4213,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3867950668,
+      "diagnostic_probe_seed": 3634036779,
+      "paired_verification_seed": 460178821
+    },
+    {
+      "unit_id": 55,
+      "environment_seed": 4213,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1064235980,
+      "diagnostic_probe_seed": 929732995,
+      "paired_verification_seed": 736649243
+    },
+    {
+      "unit_id": 56,
+      "environment_seed": 4213,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3289846910,
+      "diagnostic_probe_seed": 2858332944,
+      "paired_verification_seed": 3546793270
+    },
+    {
+      "unit_id": 57,
+      "environment_seed": 4214,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 877224459,
+      "diagnostic_probe_seed": 117228806,
+      "paired_verification_seed": 2141181815
+    },
+    {
+      "unit_id": 58,
+      "environment_seed": 4214,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 289164594,
+      "diagnostic_probe_seed": 2511091927,
+      "paired_verification_seed": 3895821594
+    },
+    {
+      "unit_id": 59,
+      "environment_seed": 4214,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 4128088148,
+      "diagnostic_probe_seed": 2490425314,
+      "paired_verification_seed": 646612187
+    },
+    {
+      "unit_id": 60,
+      "environment_seed": 4214,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2220086265,
+      "diagnostic_probe_seed": 3452501683,
+      "paired_verification_seed": 1397357842
+    },
+    {
+      "unit_id": 61,
+      "environment_seed": 4215,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1965493137,
+      "diagnostic_probe_seed": 3084872754,
+      "paired_verification_seed": 782376699
+    },
+    {
+      "unit_id": 62,
+      "environment_seed": 4215,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 714328066,
+      "diagnostic_probe_seed": 449617049,
+      "paired_verification_seed": 2134587711
+    },
+    {
+      "unit_id": 63,
+      "environment_seed": 4215,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3471988802,
+      "diagnostic_probe_seed": 3233801586,
+      "paired_verification_seed": 594150280
+    },
+    {
+      "unit_id": 64,
+      "environment_seed": 4215,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3264861806,
+      "diagnostic_probe_seed": 305054925,
+      "paired_verification_seed": 3676088665
+    },
+    {
+      "unit_id": 65,
+      "environment_seed": 4216,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 4209630054,
+      "diagnostic_probe_seed": 4100019230,
+      "paired_verification_seed": 2917218154
+    },
+    {
+      "unit_id": 66,
+      "environment_seed": 4216,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1091334424,
+      "diagnostic_probe_seed": 4099995352,
+      "paired_verification_seed": 1103965205
+    },
+    {
+      "unit_id": 67,
+      "environment_seed": 4216,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 592735492,
+      "diagnostic_probe_seed": 3701550131,
+      "paired_verification_seed": 1904257453
+    },
+    {
+      "unit_id": 68,
+      "environment_seed": 4216,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 4189414050,
+      "diagnostic_probe_seed": 1026785359,
+      "paired_verification_seed": 386068230
+    },
+    {
+      "unit_id": 69,
+      "environment_seed": 4217,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2434693949,
+      "diagnostic_probe_seed": 1918764574,
+      "paired_verification_seed": 3902795234
+    },
+    {
+      "unit_id": 70,
+      "environment_seed": 4217,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 958055820,
+      "diagnostic_probe_seed": 1764429894,
+      "paired_verification_seed": 583486117
+    },
+    {
+      "unit_id": 71,
+      "environment_seed": 4217,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3007254118,
+      "diagnostic_probe_seed": 2797467839,
+      "paired_verification_seed": 3645531283
+    },
+    {
+      "unit_id": 72,
+      "environment_seed": 4217,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1923961124,
+      "diagnostic_probe_seed": 2312194189,
+      "paired_verification_seed": 3722029130
+    },
+    {
+      "unit_id": 73,
+      "environment_seed": 4218,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2094415877,
+      "diagnostic_probe_seed": 3699917882,
+      "paired_verification_seed": 4282508070
+    },
+    {
+      "unit_id": 74,
+      "environment_seed": 4218,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 132197989,
+      "diagnostic_probe_seed": 2028066254,
+      "paired_verification_seed": 2066351016
+    },
+    {
+      "unit_id": 75,
+      "environment_seed": 4218,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1036995987,
+      "diagnostic_probe_seed": 2681652725,
+      "paired_verification_seed": 593549640
+    },
+    {
+      "unit_id": 76,
+      "environment_seed": 4218,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2804295984,
+      "diagnostic_probe_seed": 1020075023,
+      "paired_verification_seed": 798411720
+    },
+    {
+      "unit_id": 77,
+      "environment_seed": 4219,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1940600375,
+      "diagnostic_probe_seed": 3551067218,
+      "paired_verification_seed": 3701678870
+    },
+    {
+      "unit_id": 78,
+      "environment_seed": 4219,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1565217979,
+      "diagnostic_probe_seed": 3615867159,
+      "paired_verification_seed": 1329274523
+    },
+    {
+      "unit_id": 79,
+      "environment_seed": 4219,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3279664972,
+      "diagnostic_probe_seed": 4120707684,
+      "paired_verification_seed": 1394480420
+    },
+    {
+      "unit_id": 80,
+      "environment_seed": 4219,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1403403888,
+      "diagnostic_probe_seed": 3261304241,
+      "paired_verification_seed": 2470141471
+    },
+    {
+      "unit_id": 81,
+      "environment_seed": 4220,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 697884233,
+      "diagnostic_probe_seed": 921420708,
+      "paired_verification_seed": 516110055
+    },
+    {
+      "unit_id": 82,
+      "environment_seed": 4220,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1596814057,
+      "diagnostic_probe_seed": 522946520,
+      "paired_verification_seed": 3293369429
+    },
+    {
+      "unit_id": 83,
+      "environment_seed": 4220,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 749284156,
+      "diagnostic_probe_seed": 625557031,
+      "paired_verification_seed": 3481032762
+    },
+    {
+      "unit_id": 84,
+      "environment_seed": 4220,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2796281433,
+      "diagnostic_probe_seed": 2375668590,
+      "paired_verification_seed": 3989206040
+    },
+    {
+      "unit_id": 85,
+      "environment_seed": 4221,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1547310140,
+      "diagnostic_probe_seed": 584885147,
+      "paired_verification_seed": 292756822
+    },
+    {
+      "unit_id": 86,
+      "environment_seed": 4221,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 848909320,
+      "diagnostic_probe_seed": 1168053206,
+      "paired_verification_seed": 3190822372
+    },
+    {
+      "unit_id": 87,
+      "environment_seed": 4221,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2479374519,
+      "diagnostic_probe_seed": 496862330,
+      "paired_verification_seed": 4247429658
+    },
+    {
+      "unit_id": 88,
+      "environment_seed": 4221,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2380220589,
+      "diagnostic_probe_seed": 396433238,
+      "paired_verification_seed": 1920105159
+    },
+    {
+      "unit_id": 89,
+      "environment_seed": 4222,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3021700120,
+      "diagnostic_probe_seed": 671214852,
+      "paired_verification_seed": 1299373485
+    },
+    {
+      "unit_id": 90,
+      "environment_seed": 4222,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3551504232,
+      "diagnostic_probe_seed": 3394216909,
+      "paired_verification_seed": 1498416520
+    },
+    {
+      "unit_id": 91,
+      "environment_seed": 4222,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 889811941,
+      "diagnostic_probe_seed": 3621726599,
+      "paired_verification_seed": 1644092721
+    },
+    {
+      "unit_id": 92,
+      "environment_seed": 4222,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3427072045,
+      "diagnostic_probe_seed": 691631213,
+      "paired_verification_seed": 2742214378
+    },
+    {
+      "unit_id": 93,
+      "environment_seed": 4223,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1432228792,
+      "diagnostic_probe_seed": 4005604065,
+      "paired_verification_seed": 1901086616
+    },
+    {
+      "unit_id": 94,
+      "environment_seed": 4223,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 236001870,
+      "diagnostic_probe_seed": 2273285340,
+      "paired_verification_seed": 1775584719
+    },
+    {
+      "unit_id": 95,
+      "environment_seed": 4223,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2962566263,
+      "diagnostic_probe_seed": 2950778144,
+      "paired_verification_seed": 398464045
+    },
+    {
+      "unit_id": 96,
+      "environment_seed": 4223,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 296172319,
+      "diagnostic_probe_seed": 3823579639,
+      "paired_verification_seed": 1690749687
+    },
+    {
+      "unit_id": 97,
+      "environment_seed": 4224,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 504586234,
+      "diagnostic_probe_seed": 3437989461,
+      "paired_verification_seed": 66748645
+    },
+    {
+      "unit_id": 98,
+      "environment_seed": 4224,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1440141520,
+      "diagnostic_probe_seed": 536600206,
+      "paired_verification_seed": 3284849223
+    },
+    {
+      "unit_id": 99,
+      "environment_seed": 4224,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 566469299,
+      "diagnostic_probe_seed": 2438761004,
+      "paired_verification_seed": 3879845461
+    },
+    {
+      "unit_id": 100,
+      "environment_seed": 4224,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2967911737,
+      "diagnostic_probe_seed": 508310590,
+      "paired_verification_seed": 1081681849
+    }
+  ],
+  "manifest_id": "dc6da911985a78ce05509a92079d0a763f19100e43c53814af56f602556d1271"
+}

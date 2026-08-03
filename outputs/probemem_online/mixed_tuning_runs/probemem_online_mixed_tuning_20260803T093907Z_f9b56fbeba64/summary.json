@@ -1,0 +1,39 @@
+{
+  "experiment_run_id": "probemem_online_mixed_tuning_20260803T093907Z_f9b56fbeba64",
+  "manifest_id": "dc6da911985a78ce05509a92079d0a763f19100e43c53814af56f602556d1271",
+  "source_git_commit": "f9b56fbeba6405443dffcf040daaed423f37e3a6",
+  "population_units": 100,
+  "operational_cases": 39,
+  "outcome_classes": {
+    "both_recover": 15,
+    "exclusive_recovery": 19,
+    "neither_recovers": 5
+  },
+  "outcomes_by_regime": {
+    "A_bias_low_noise": {
+      "both_recover": 7,
+      "exclusive_recovery": 10
+    },
+    "B_zero_mean_noise": {
+      "both_recover": 4,
+      "neither_recovers": 2,
+      "exclusive_recovery": 4
+    },
+    "C_bias_dominant_mixed": {
+      "both_recover": 2,
+      "neither_recovers": 2,
+      "exclusive_recovery": 4
+    },
+    "D_noise_dominant_mixed": {
+      "exclusive_recovery": 1,
+      "neither_recovers": 1,
+      "both_recover": 2
+    }
+  },
+  "chronology_violations": 0,
+  "oracle_leakage_events": 0,
+  "budget_violations": 0,
+  "random_namespace_violations": 0,
+  "api_calls": 0,
+  "operational_memory_writes": 0
+}
