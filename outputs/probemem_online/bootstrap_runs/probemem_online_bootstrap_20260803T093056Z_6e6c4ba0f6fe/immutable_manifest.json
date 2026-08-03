@@ -1,0 +1,927 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe",
+  "source_git_commit": "6e6c4ba0f6fe5e8de3469013ced8872cc9e68471",
+  "created_at_utc": "20260803T093056Z",
+  "config_path": "configs/probemem_online/bootstrap_memory_v1.json",
+  "config_sha256": "3b9aa30cb2c5d7811f44c5c394757cd5e2b0b1f3a4102ea9b9f92b85203387d7",
+  "implementation_sha256": {
+    "scripts/generate_online_memory_bootstrap_manifest.py": "6084846098feaa0419921ced05f69f0e332591926c31a9276c421803f14916c4",
+    "scripts/build_regime_memory_bootstrap.py": "2928cd46f17105b3a7a18c906aa56a2056a84198c276e31df8c7f5512de4ddce",
+    "src/probemem/regime_memory.py": "4758d526fffcbfad26a19ef5e3d742ca31a9a261dd5674159a6c8f1430ed5b6e",
+    "src/probemem/memory_tools.py": "5952f49c92d47c3ede745cd6a597f75ecc0deea58b80c2bb0f962c6656370a01",
+    "src/probemem/memory_resonance.py": "694931e4d5e7fdd8063ef6510767ecc8b20b39d7c95d29832cc027de7d8c3597",
+    "scripts/run_probemem_v2_smoke.py": "855e0811fc5e5e36a4656e33b9aa0156f481d0e51b9f213358e4ade55ee742ec",
+    "src/rollout/engine.py": "a347c0d8acb76bc200af476150e6c9f699d43bf7b1fca6318aba7fe526906c28"
+  },
+  "input_sha256": {
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "outputs/autoresearch/noise_calibration/selected.json": "748b6ab6e143ec0939b68cb4bca73e96dcdf934f3f153aa4936f7607923a5e2c",
+    "configs/probemem_online/seed_registry_v1.json": "66a2fe855e5d96217a8011b9f742663c22d8fe9c323f9246554c00209ce3c8ba",
+    "outputs/probemem_online/interface_ablation_runs/probemem_online_interface_ablation_20260803T072817Z_1c19c23bafb3/analysis_summary.json": "f84d71a978fbfd1afc836551a7d71c7496b62e18424bf1ccb6adda39b99bf82c"
+  },
+  "candidate_units": [
+    {
+      "unit_id": 1,
+      "environment_seed": 4100,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1026198243,
+      "diagnostic_probe_seed": 1032575013,
+      "selected_verification_seed": 2195764218
+    },
+    {
+      "unit_id": 2,
+      "environment_seed": 4101,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3901163711,
+      "diagnostic_probe_seed": 3459799958,
+      "selected_verification_seed": 2379772452
+    },
+    {
+      "unit_id": 3,
+      "environment_seed": 4102,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4144230605,
+      "diagnostic_probe_seed": 4038062295,
+      "selected_verification_seed": 2506969007
+    },
+    {
+      "unit_id": 4,
+      "environment_seed": 4103,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 930987779,
+      "diagnostic_probe_seed": 4012472631,
+      "selected_verification_seed": 1355127084
+    },
+    {
+      "unit_id": 5,
+      "environment_seed": 4104,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2310745870,
+      "diagnostic_probe_seed": 3085289231,
+      "selected_verification_seed": 1732144686
+    },
+    {
+      "unit_id": 6,
+      "environment_seed": 4105,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1693181805,
+      "diagnostic_probe_seed": 3465845463,
+      "selected_verification_seed": 3869968869
+    },
+    {
+      "unit_id": 7,
+      "environment_seed": 4106,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3653399159,
+      "diagnostic_probe_seed": 2226067657,
+      "selected_verification_seed": 2215689282
+    },
+    {
+      "unit_id": 8,
+      "environment_seed": 4107,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2788399165,
+      "diagnostic_probe_seed": 3508608292,
+      "selected_verification_seed": 4141372811
+    },
+    {
+      "unit_id": 9,
+      "environment_seed": 4108,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 343526742,
+      "diagnostic_probe_seed": 2146213168,
+      "selected_verification_seed": 3577897178
+    },
+    {
+      "unit_id": 10,
+      "environment_seed": 4109,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3946478670,
+      "diagnostic_probe_seed": 714304437,
+      "selected_verification_seed": 1482450511
+    },
+    {
+      "unit_id": 11,
+      "environment_seed": 4110,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4170042772,
+      "diagnostic_probe_seed": 1067698925,
+      "selected_verification_seed": 446923874
+    },
+    {
+      "unit_id": 12,
+      "environment_seed": 4111,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2729867739,
+      "diagnostic_probe_seed": 3090617944,
+      "selected_verification_seed": 2371217652
+    },
+    {
+      "unit_id": 13,
+      "environment_seed": 4112,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4062247551,
+      "diagnostic_probe_seed": 3764097854,
+      "selected_verification_seed": 793118853
+    },
+    {
+      "unit_id": 14,
+      "environment_seed": 4113,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1871221971,
+      "diagnostic_probe_seed": 2824504313,
+      "selected_verification_seed": 2524086970
+    },
+    {
+      "unit_id": 15,
+      "environment_seed": 4114,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2755657536,
+      "diagnostic_probe_seed": 1646591180,
+      "selected_verification_seed": 369162639
+    },
+    {
+      "unit_id": 16,
+      "environment_seed": 4115,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2734900042,
+      "diagnostic_probe_seed": 2866052122,
+      "selected_verification_seed": 4210566614
+    },
+    {
+      "unit_id": 17,
+      "environment_seed": 4116,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1736605144,
+      "diagnostic_probe_seed": 2904174046,
+      "selected_verification_seed": 2300078777
+    },
+    {
+      "unit_id": 18,
+      "environment_seed": 4117,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 700714147,
+      "diagnostic_probe_seed": 4140761962,
+      "selected_verification_seed": 3615122840
+    },
+    {
+      "unit_id": 19,
+      "environment_seed": 4118,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3323344758,
+      "diagnostic_probe_seed": 287125470,
+      "selected_verification_seed": 3899555280
+    },
+    {
+      "unit_id": 20,
+      "environment_seed": 4119,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 950608028,
+      "diagnostic_probe_seed": 2936066265,
+      "selected_verification_seed": 3301257664
+    },
+    {
+      "unit_id": 21,
+      "environment_seed": 4120,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1685033565,
+      "diagnostic_probe_seed": 2177711266,
+      "selected_verification_seed": 3116563525
+    },
+    {
+      "unit_id": 22,
+      "environment_seed": 4121,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2629997516,
+      "diagnostic_probe_seed": 3937061471,
+      "selected_verification_seed": 2119986781
+    },
+    {
+      "unit_id": 23,
+      "environment_seed": 4122,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3071919293,
+      "diagnostic_probe_seed": 816390272,
+      "selected_verification_seed": 3870410178
+    },
+    {
+      "unit_id": 24,
+      "environment_seed": 4123,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2272648664,
+      "diagnostic_probe_seed": 3689329635,
+      "selected_verification_seed": 2881194963
+    },
+    {
+      "unit_id": 25,
+      "environment_seed": 4124,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3988396193,
+      "diagnostic_probe_seed": 29576386,
+      "selected_verification_seed": 1627546712
+    },
+    {
+      "unit_id": 26,
+      "environment_seed": 4125,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2687403329,
+      "diagnostic_probe_seed": 3727880180,
+      "selected_verification_seed": 2391442582
+    },
+    {
+      "unit_id": 27,
+      "environment_seed": 4126,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1761430429,
+      "diagnostic_probe_seed": 1061724284,
+      "selected_verification_seed": 3304148281
+    },
+    {
+      "unit_id": 28,
+      "environment_seed": 4127,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2035193323,
+      "diagnostic_probe_seed": 108951087,
+      "selected_verification_seed": 3689191570
+    },
+    {
+      "unit_id": 29,
+      "environment_seed": 4128,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1106120238,
+      "diagnostic_probe_seed": 398176882,
+      "selected_verification_seed": 4221050934
+    },
+    {
+      "unit_id": 30,
+      "environment_seed": 4129,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1170619633,
+      "diagnostic_probe_seed": 3988327125,
+      "selected_verification_seed": 1149896822
+    },
+    {
+      "unit_id": 31,
+      "environment_seed": 4130,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2693739060,
+      "diagnostic_probe_seed": 5395306,
+      "selected_verification_seed": 1330593932
+    },
+    {
+      "unit_id": 32,
+      "environment_seed": 4131,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3606480998,
+      "diagnostic_probe_seed": 1894898979,
+      "selected_verification_seed": 447741301
+    },
+    {
+      "unit_id": 33,
+      "environment_seed": 4132,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2914611138,
+      "diagnostic_probe_seed": 1914278644,
+      "selected_verification_seed": 584562943
+    },
+    {
+      "unit_id": 34,
+      "environment_seed": 4133,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3424076797,
+      "diagnostic_probe_seed": 1832353869,
+      "selected_verification_seed": 1994521535
+    },
+    {
+      "unit_id": 35,
+      "environment_seed": 4134,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1580162917,
+      "diagnostic_probe_seed": 3568560616,
+      "selected_verification_seed": 3700982307
+    },
+    {
+      "unit_id": 36,
+      "environment_seed": 4135,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 319395118,
+      "diagnostic_probe_seed": 2450787070,
+      "selected_verification_seed": 3856813947
+    },
+    {
+      "unit_id": 37,
+      "environment_seed": 4136,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 253930518,
+      "diagnostic_probe_seed": 2276020573,
+      "selected_verification_seed": 763567581
+    },
+    {
+      "unit_id": 38,
+      "environment_seed": 4137,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1288878744,
+      "diagnostic_probe_seed": 61439865,
+      "selected_verification_seed": 4264349136
+    },
+    {
+      "unit_id": 39,
+      "environment_seed": 4138,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2990122724,
+      "diagnostic_probe_seed": 3801246986,
+      "selected_verification_seed": 715798757
+    },
+    {
+      "unit_id": 40,
+      "environment_seed": 4139,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2902252810,
+      "diagnostic_probe_seed": 1108860093,
+      "selected_verification_seed": 1608092050
+    },
+    {
+      "unit_id": 41,
+      "environment_seed": 4140,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 127863617,
+      "diagnostic_probe_seed": 1113367213,
+      "selected_verification_seed": 1677341577
+    },
+    {
+      "unit_id": 42,
+      "environment_seed": 4141,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 81952971,
+      "diagnostic_probe_seed": 234604146,
+      "selected_verification_seed": 1312042308
+    },
+    {
+      "unit_id": 43,
+      "environment_seed": 4142,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2533510460,
+      "diagnostic_probe_seed": 3950167205,
+      "selected_verification_seed": 1479504981
+    },
+    {
+      "unit_id": 44,
+      "environment_seed": 4143,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3160129754,
+      "diagnostic_probe_seed": 3599758034,
+      "selected_verification_seed": 24811913
+    },
+    {
+      "unit_id": 45,
+      "environment_seed": 4144,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3650966186,
+      "diagnostic_probe_seed": 2893395946,
+      "selected_verification_seed": 1484766778
+    },
+    {
+      "unit_id": 46,
+      "environment_seed": 4145,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3097476743,
+      "diagnostic_probe_seed": 4240300182,
+      "selected_verification_seed": 1864005219
+    },
+    {
+      "unit_id": 47,
+      "environment_seed": 4146,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3234481705,
+      "diagnostic_probe_seed": 1233842315,
+      "selected_verification_seed": 4165225361
+    },
+    {
+      "unit_id": 48,
+      "environment_seed": 4147,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2101430080,
+      "diagnostic_probe_seed": 1281705315,
+      "selected_verification_seed": 1740177962
+    },
+    {
+      "unit_id": 49,
+      "environment_seed": 4148,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2132115032,
+      "diagnostic_probe_seed": 3103263102,
+      "selected_verification_seed": 1839253085
+    },
+    {
+      "unit_id": 50,
+      "environment_seed": 4149,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3055642090,
+      "diagnostic_probe_seed": 2260962714,
+      "selected_verification_seed": 2237911280
+    },
+    {
+      "unit_id": 51,
+      "environment_seed": 4150,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4294749792,
+      "diagnostic_probe_seed": 229118967,
+      "selected_verification_seed": 2785789528
+    },
+    {
+      "unit_id": 52,
+      "environment_seed": 4151,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2527823974,
+      "diagnostic_probe_seed": 3999714924,
+      "selected_verification_seed": 507065833
+    },
+    {
+      "unit_id": 53,
+      "environment_seed": 4152,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1860659520,
+      "diagnostic_probe_seed": 1503453771,
+      "selected_verification_seed": 2076831068
+    },
+    {
+      "unit_id": 54,
+      "environment_seed": 4153,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 764525638,
+      "diagnostic_probe_seed": 1073464184,
+      "selected_verification_seed": 2307624268
+    },
+    {
+      "unit_id": 55,
+      "environment_seed": 4154,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3355981925,
+      "diagnostic_probe_seed": 185298718,
+      "selected_verification_seed": 4101762894
+    },
+    {
+      "unit_id": 56,
+      "environment_seed": 4155,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1401935784,
+      "diagnostic_probe_seed": 2484063508,
+      "selected_verification_seed": 2162530683
+    },
+    {
+      "unit_id": 57,
+      "environment_seed": 4156,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 566925679,
+      "diagnostic_probe_seed": 2491652064,
+      "selected_verification_seed": 2999676422
+    },
+    {
+      "unit_id": 58,
+      "environment_seed": 4157,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 793889926,
+      "diagnostic_probe_seed": 912928302,
+      "selected_verification_seed": 393296042
+    },
+    {
+      "unit_id": 59,
+      "environment_seed": 4158,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 485866637,
+      "diagnostic_probe_seed": 2749431438,
+      "selected_verification_seed": 1442154468
+    },
+    {
+      "unit_id": 60,
+      "environment_seed": 4159,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 709500586,
+      "diagnostic_probe_seed": 274779113,
+      "selected_verification_seed": 181343205
+    },
+    {
+      "unit_id": 61,
+      "environment_seed": 4160,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2303281800,
+      "diagnostic_probe_seed": 974239036,
+      "selected_verification_seed": 2856557676
+    },
+    {
+      "unit_id": 62,
+      "environment_seed": 4161,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 893566210,
+      "diagnostic_probe_seed": 69139101,
+      "selected_verification_seed": 1925788988
+    },
+    {
+      "unit_id": 63,
+      "environment_seed": 4162,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3381625924,
+      "diagnostic_probe_seed": 4198537585,
+      "selected_verification_seed": 1072413877
+    },
+    {
+      "unit_id": 64,
+      "environment_seed": 4163,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 222479490,
+      "diagnostic_probe_seed": 1232609006,
+      "selected_verification_seed": 2502509872
+    },
+    {
+      "unit_id": 65,
+      "environment_seed": 4164,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2592707732,
+      "diagnostic_probe_seed": 627171900,
+      "selected_verification_seed": 53699129
+    },
+    {
+      "unit_id": 66,
+      "environment_seed": 4165,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 4276488505,
+      "diagnostic_probe_seed": 2248087050,
+      "selected_verification_seed": 1455793036
+    },
+    {
+      "unit_id": 67,
+      "environment_seed": 4166,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 816174546,
+      "diagnostic_probe_seed": 138392178,
+      "selected_verification_seed": 1395201517
+    },
+    {
+      "unit_id": 68,
+      "environment_seed": 4167,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1370598984,
+      "diagnostic_probe_seed": 1706570827,
+      "selected_verification_seed": 2162637492
+    },
+    {
+      "unit_id": 69,
+      "environment_seed": 4168,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4137166548,
+      "diagnostic_probe_seed": 3399863361,
+      "selected_verification_seed": 2143573220
+    },
+    {
+      "unit_id": 70,
+      "environment_seed": 4169,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 105948980,
+      "diagnostic_probe_seed": 3689205502,
+      "selected_verification_seed": 2880308456
+    },
+    {
+      "unit_id": 71,
+      "environment_seed": 4170,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1495329459,
+      "diagnostic_probe_seed": 3818394751,
+      "selected_verification_seed": 3833544285
+    },
+    {
+      "unit_id": 72,
+      "environment_seed": 4171,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 4129557677,
+      "diagnostic_probe_seed": 3846114005,
+      "selected_verification_seed": 3060945543
+    },
+    {
+      "unit_id": 73,
+      "environment_seed": 4172,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1969338454,
+      "diagnostic_probe_seed": 1532040902,
+      "selected_verification_seed": 3095595368
+    },
+    {
+      "unit_id": 74,
+      "environment_seed": 4173,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2132923175,
+      "diagnostic_probe_seed": 3276120855,
+      "selected_verification_seed": 295169106
+    },
+    {
+      "unit_id": 75,
+      "environment_seed": 4174,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4018325753,
+      "diagnostic_probe_seed": 3499116897,
+      "selected_verification_seed": 2357896230
+    },
+    {
+      "unit_id": 76,
+      "environment_seed": 4175,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1871498525,
+      "diagnostic_probe_seed": 3830998551,
+      "selected_verification_seed": 1532616101
+    },
+    {
+      "unit_id": 77,
+      "environment_seed": 4176,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4280938947,
+      "diagnostic_probe_seed": 1485427732,
+      "selected_verification_seed": 1319304328
+    },
+    {
+      "unit_id": 78,
+      "environment_seed": 4177,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1308962873,
+      "diagnostic_probe_seed": 1288251269,
+      "selected_verification_seed": 2990026118
+    },
+    {
+      "unit_id": 79,
+      "environment_seed": 4178,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 852323654,
+      "diagnostic_probe_seed": 312870008,
+      "selected_verification_seed": 2709832600
+    },
+    {
+      "unit_id": 80,
+      "environment_seed": 4179,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2100455222,
+      "diagnostic_probe_seed": 3479734291,
+      "selected_verification_seed": 3198103508
+    },
+    {
+      "unit_id": 81,
+      "environment_seed": 4180,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1503786877,
+      "diagnostic_probe_seed": 3186118959,
+      "selected_verification_seed": 3146019463
+    },
+    {
+      "unit_id": 82,
+      "environment_seed": 4181,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 2967509995,
+      "diagnostic_probe_seed": 598890469,
+      "selected_verification_seed": 3875635240
+    },
+    {
+      "unit_id": 83,
+      "environment_seed": 4182,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 1250665097,
+      "diagnostic_probe_seed": 1503551407,
+      "selected_verification_seed": 1823530727
+    },
+    {
+      "unit_id": 84,
+      "environment_seed": 4183,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1672871543,
+      "diagnostic_probe_seed": 2871037320,
+      "selected_verification_seed": 4159332586
+    },
+    {
+      "unit_id": 85,
+      "environment_seed": 4184,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 324864628,
+      "diagnostic_probe_seed": 3776801476,
+      "selected_verification_seed": 1186970195
+    },
+    {
+      "unit_id": 86,
+      "environment_seed": 4185,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1341877745,
+      "diagnostic_probe_seed": 1684751318,
+      "selected_verification_seed": 1598610145
+    },
+    {
+      "unit_id": 87,
+      "environment_seed": 4186,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 2298102790,
+      "diagnostic_probe_seed": 2907383318,
+      "selected_verification_seed": 4146034040
+    },
+    {
+      "unit_id": 88,
+      "environment_seed": 4187,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 134501870,
+      "diagnostic_probe_seed": 4215511897,
+      "selected_verification_seed": 2983192555
+    },
+    {
+      "unit_id": 89,
+      "environment_seed": 4188,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 153949315,
+      "diagnostic_probe_seed": 3397313659,
+      "selected_verification_seed": 138386589
+    },
+    {
+      "unit_id": 90,
+      "environment_seed": 4189,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 1321626808,
+      "diagnostic_probe_seed": 2422954031,
+      "selected_verification_seed": 2037786537
+    },
+    {
+      "unit_id": 91,
+      "environment_seed": 4190,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3456731308,
+      "diagnostic_probe_seed": 917889652,
+      "selected_verification_seed": 646521087
+    },
+    {
+      "unit_id": 92,
+      "environment_seed": 4191,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3300918363,
+      "diagnostic_probe_seed": 3082973824,
+      "selected_verification_seed": 157041181
+    },
+    {
+      "unit_id": 93,
+      "environment_seed": 4192,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 3438196326,
+      "diagnostic_probe_seed": 2423147544,
+      "selected_verification_seed": 1827029670
+    },
+    {
+      "unit_id": 94,
+      "environment_seed": 4193,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 4156967884,
+      "diagnostic_probe_seed": 2141312366,
+      "selected_verification_seed": 2262736692
+    },
+    {
+      "unit_id": 95,
+      "environment_seed": 4194,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 4050562675,
+      "diagnostic_probe_seed": 1716833856,
+      "selected_verification_seed": 3318713624
+    },
+    {
+      "unit_id": 96,
+      "environment_seed": 4195,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 928106425,
+      "diagnostic_probe_seed": 2401386464,
+      "selected_verification_seed": 2656119225
+    },
+    {
+      "unit_id": 97,
+      "environment_seed": 4196,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 529245638,
+      "diagnostic_probe_seed": 23453813,
+      "selected_verification_seed": 3561549622
+    },
+    {
+      "unit_id": 98,
+      "environment_seed": 4197,
+      "condition_id_oracle": "fault_01",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 652292276,
+      "diagnostic_probe_seed": 2043759182,
+      "selected_verification_seed": 15917520
+    },
+    {
+      "unit_id": 99,
+      "environment_seed": 4198,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "initial_perturbation_seed": 584085296,
+      "diagnostic_probe_seed": 2176172701,
+      "selected_verification_seed": 3448737196
+    },
+    {
+      "unit_id": 100,
+      "environment_seed": 4199,
+      "condition_id_oracle": "fault_05",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "initial_perturbation_seed": 3819315832,
+      "diagnostic_probe_seed": 823054592,
+      "selected_verification_seed": 2046896752
+    }
+  ],
+  "assignment_hash": "06d6bfaebefc68f6c71e49fdc920c7fe94102bc35ad4e78a1f420c1dc83a0661",
+  "manifest_id": "6c221715cc560d05ee72795c5a7b6442a0f6447c394dfb52e4f7ce7879ddc47f"
+}
