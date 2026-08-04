@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_online_selective_override_20260804T064750Z_1107f99883b4",
+  "created_at_utc": "20260804T064750Z",
+  "source_git_commit": "1107f99883b408fd10ce548488e95241ee284ec3",
+  "config_path": "configs/probemem_online/selective_override_development_v1.json",
+  "config_sha256": "65067b511efb51eb5ae414c8292f92312b6a975de1dac54174535bf9d458f4b7",
+  "implementation_sha256": {
+    "scripts/generate_selective_override_manifest.py": "2d366ce1be22a92e30721e976f651e8c3cfc009d7f9eeb3d0688ad46967db5de",
+    "scripts/run_selective_override_development.py": "f025121c352f2218c9a6d43b88697430cb174ca72b447d3bfc94e7c2e581985b",
+    "scripts/analyze_selective_override_development.py": "64b6916bdf41b2e212a4a3f55166ecd9dad8d6049a916e8cd51de575174fa2ac",
+    "scripts/run_selective_override_development.ps1": "12d5716d7cf737cc8fa52975697ff639d30a4c332881622cb6077d38e16a66da",
+    "src/probemem/selective_override.py": "e6596cf262997f4d4729c26ac3cd0989dfcd55dff6f768129de36b5cc5dba6c9",
+    "src/probemem/online_memory_policy.py": "9e5fc2e277090961d44f50eae811d216d62e80e8d25bed818057bd6ca03c0615",
+    "src/probemem/regime_memory.py": "4758d526fffcbfad26a19ef5e3d742ca31a9a261dd5674159a6c8f1430ed5b6e",
+    "src/probemem/memory_tools.py": "5952f49c92d47c3ede745cd6a597f75ecc0deea58b80c2bb0f962c6656370a01",
+    "src/probemem/persistent_regime.py": "a7780802355e69f9453ddbc7559ab53bdd94af7e9ec31d80b5a61b58ec76628a",
+    "src/probe/directional.py": "909fe22e7c906bddd63d32678376d5f021b04dd4a6e668289204cd796110b988",
+    "src/perturbations.py": "7d8814e4ca20c69c42a0f596d71c51fef25038bbe4c320e8a7c63ad538c9cd77"
+  },
+  "input_sha256": {
+    "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/action_outcome_records.json": "d723325ac33ec56c5592071ae77abbc1a1e0f9576fcea3d2cc3a294d880a5811",
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "configs/probemem_online/seed_registry_v2.json": "6611141cc1f5dea7ee9b5054a376fc59533409d56e7ab8b6f4d99303d0b8ba69",
+    "docs/protocols/probemem_online_selective_override_development_v1.md": "b7632e12b0b13f232b2e0a9b59051e3462d05bbdcace1696ba97278e91262c8a"
+  },
+  "population_units": [
+    {
+      "unit_id": 1,
+      "environment_seed": 4500,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2997455293,
+      "diagnostic_probe_seed": 3978610563,
+      "paired_verification_seed": 3272415956
+    },
+    {
+      "unit_id": 2,
+      "environment_seed": 4501,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 4189986987,
+      "diagnostic_probe_seed": 3847206693,
+      "paired_verification_seed": 512530132
+    },
+    {
+      "unit_id": 3,
+      "environment_seed": 4502,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2469044695,
+      "diagnostic_probe_seed": 2287504400,
+      "paired_verification_seed": 2042908718
+    },
+    {
+      "unit_id": 4,
+      "environment_seed": 4503,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 749612549,
+      "diagnostic_probe_seed": 2799645643,
+      "paired_verification_seed": 1278862933
+    },
+    {
+      "unit_id": 5,
+      "environment_seed": 4504,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 117681658,
+      "diagnostic_probe_seed": 3098436962,
+      "paired_verification_seed": 3552704866
+    },
+    {
+      "unit_id": 6,
+      "environment_seed": 4505,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1141721255,
+      "diagnostic_probe_seed": 3940721123,
+      "paired_verification_seed": 1545539776
+    },
+    {
+      "unit_id": 7,
+      "environment_seed": 4506,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1298583448,
+      "diagnostic_probe_seed": 3031512918,
+      "paired_verification_seed": 2095254005
+    },
+    {
+      "unit_id": 8,
+      "environment_seed": 4507,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1419341349,
+      "diagnostic_probe_seed": 2720107019,
+      "paired_verification_seed": 3133235058
+    },
+    {
+      "unit_id": 9,
+      "environment_seed": 4508,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 840330363,
+      "diagnostic_probe_seed": 3419042239,
+      "paired_verification_seed": 3677152944
+    },
+    {
+      "unit_id": 10,
+      "environment_seed": 4509,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2196555531,
+      "diagnostic_probe_seed": 3033879074,
+      "paired_verification_seed": 312675610
+    },
+    {
+      "unit_id": 11,
+      "environment_seed": 4510,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2953501006,
+      "diagnostic_probe_seed": 267866831,
+      "paired_verification_seed": 2471846650
+    },
+    {
+      "unit_id": 12,
+      "environment_seed": 4511,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3312201651,
+      "diagnostic_probe_seed": 3610299207,
+      "paired_verification_seed": 4171902408
+    },
+    {
+      "unit_id": 13,
+      "environment_seed": 4512,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1012376588,
+      "diagnostic_probe_seed": 3529999956,
+      "paired_verification_seed": 4084542387
+    },
+    {
+      "unit_id": 14,
+      "environment_seed": 4513,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1268317819,
+      "diagnostic_probe_seed": 2233654009,
+      "paired_verification_seed": 387347349
+    },
+    {
+      "unit_id": 15,
+      "environment_seed": 4514,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3603472546,
+      "diagnostic_probe_seed": 1981450702,
+      "paired_verification_seed": 3189136221
+    },
+    {
+      "unit_id": 16,
+      "environment_seed": 4515,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 694167703,
+      "diagnostic_probe_seed": 2184160641,
+      "paired_verification_seed": 426319650
+    },
+    {
+      "unit_id": 17,
+      "environment_seed": 4516,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3515859287,
+      "diagnostic_probe_seed": 3131996466,
+      "paired_verification_seed": 3616432158
+    },
+    {
+      "unit_id": 18,
+      "environment_seed": 4517,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1349819385,
+      "diagnostic_probe_seed": 2619253887,
+      "paired_verification_seed": 3391986740
+    },
+    {
+      "unit_id": 19,
+      "environment_seed": 4518,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 786601270,
+      "diagnostic_probe_seed": 3747717225,
+      "paired_verification_seed": 7996495
+    },
+    {
+      "unit_id": 20,
+      "environment_seed": 4519,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 2403294433,
+      "diagnostic_probe_seed": 2094789986,
+      "paired_verification_seed": 1942861673
+    },
+    {
+      "unit_id": 21,
+      "environment_seed": 4520,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3905814768,
+      "diagnostic_probe_seed": 1608857924,
+      "paired_verification_seed": 3077101047
+    },
+    {
+      "unit_id": 22,
+      "environment_seed": 4521,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3985542492,
+      "diagnostic_probe_seed": 1615149949,
+      "paired_verification_seed": 785742898
+    },
+    {
+      "unit_id": 23,
+      "environment_seed": 4522,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2306123914,
+      "diagnostic_probe_seed": 1438630504,
+      "paired_verification_seed": 575377209
+    },
+    {
+      "unit_id": 24,
+      "environment_seed": 4523,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 204437261,
+      "diagnostic_probe_seed": 1846230245,
+      "paired_verification_seed": 1268392519
+    },
+    {
+      "unit_id": 25,
+      "environment_seed": 4524,
+      "segment_id_oracle": "bias_dominant",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3339331145,
+      "diagnostic_probe_seed": 1940831426,
+      "paired_verification_seed": 3464333069
+    },
+    {
+      "unit_id": 26,
+      "environment_seed": 4525,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2151654021,
+      "diagnostic_probe_seed": 2401560731,
+      "paired_verification_seed": 1362075896
+    },
+    {
+      "unit_id": 27,
+      "environment_seed": 4526,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3688629192,
+      "diagnostic_probe_seed": 2901379453,
+      "paired_verification_seed": 1556258505
+    },
+    {
+      "unit_id": 28,
+      "environment_seed": 4527,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 764272379,
+      "diagnostic_probe_seed": 1719523095,
+      "paired_verification_seed": 4215074337
+    },
+    {
+      "unit_id": 29,
+      "environment_seed": 4528,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1105170885,
+      "diagnostic_probe_seed": 4021485923,
+      "paired_verification_seed": 1957450255
+    },
+    {
+      "unit_id": 30,
+      "environment_seed": 4529,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1590812298,
+      "diagnostic_probe_seed": 2892801480,
+      "paired_verification_seed": 2078388076
+    },
+    {
+      "unit_id": 31,
+      "environment_seed": 4530,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 4151507225,
+      "diagnostic_probe_seed": 3340261139,
+      "paired_verification_seed": 1206530754
+    },
+    {
+      "unit_id": 32,
+      "environment_seed": 4531,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2221196724,
+      "diagnostic_probe_seed": 862941164,
+      "paired_verification_seed": 2155166240
+    },
+    {
+      "unit_id": 33,
+      "environment_seed": 4532,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 642900103,
+      "diagnostic_probe_seed": 1284825566,
+      "paired_verification_seed": 4110168921
+    },
+    {
+      "unit_id": 34,
+      "environment_seed": 4533,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3127655342,
+      "diagnostic_probe_seed": 1948984778,
+      "paired_verification_seed": 3649953054
+    },
+    {
+      "unit_id": 35,
+      "environment_seed": 4534,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1423356800,
+      "diagnostic_probe_seed": 308260615,
+      "paired_verification_seed": 3943927033
+    },
+    {
+      "unit_id": 36,
+      "environment_seed": 4535,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 497490549,
+      "diagnostic_probe_seed": 388856911,
+      "paired_verification_seed": 122429169
+    },
+    {
+      "unit_id": 37,
+      "environment_seed": 4536,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 327742903,
+      "diagnostic_probe_seed": 720449165,
+      "paired_verification_seed": 2251758018
+    },
+    {
+      "unit_id": 38,
+      "environment_seed": 4537,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1519782208,
+      "diagnostic_probe_seed": 3059110690,
+      "paired_verification_seed": 14059120
+    },
+    {
+      "unit_id": 39,
+      "environment_seed": 4538,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3863663033,
+      "diagnostic_probe_seed": 3233710213,
+      "paired_verification_seed": 229308590
+    },
+    {
+      "unit_id": 40,
+      "environment_seed": 4539,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 823758916,
+      "diagnostic_probe_seed": 1835086460,
+      "paired_verification_seed": 405204895
+    },
+    {
+      "unit_id": 41,
+      "environment_seed": 4540,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2673058044,
+      "diagnostic_probe_seed": 3494377564,
+      "paired_verification_seed": 3652736763
+    },
+    {
+      "unit_id": 42,
+      "environment_seed": 4541,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 401215250,
+      "diagnostic_probe_seed": 2000061055,
+      "paired_verification_seed": 3799301243
+    },
+    {
+      "unit_id": 43,
+      "environment_seed": 4542,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1894305942,
+      "diagnostic_probe_seed": 4125536934,
+      "paired_verification_seed": 3097370357
+    },
+    {
+      "unit_id": 44,
+      "environment_seed": 4543,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1882563465,
+      "diagnostic_probe_seed": 2282632841,
+      "paired_verification_seed": 2808177190
+    },
+    {
+      "unit_id": 45,
+      "environment_seed": 4544,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1775975061,
+      "diagnostic_probe_seed": 2530388001,
+      "paired_verification_seed": 2738821679
+    },
+    {
+      "unit_id": 46,
+      "environment_seed": 4545,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 368414836,
+      "diagnostic_probe_seed": 2518688382,
+      "paired_verification_seed": 2065732524
+    },
+    {
+      "unit_id": 47,
+      "environment_seed": 4546,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2145401974,
+      "diagnostic_probe_seed": 2408308289,
+      "paired_verification_seed": 1980731427
+    },
+    {
+      "unit_id": 48,
+      "environment_seed": 4547,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1160919572,
+      "diagnostic_probe_seed": 3939219397,
+      "paired_verification_seed": 3781990521
+    },
+    {
+      "unit_id": 49,
+      "environment_seed": 4548,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 314163629,
+      "diagnostic_probe_seed": 1171867458,
+      "paired_verification_seed": 580309632
+    },
+    {
+      "unit_id": 50,
+      "environment_seed": 4549,
+      "segment_id_oracle": "noise_dominant",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 198303487,
+      "diagnostic_probe_seed": 3619523909,
+      "paired_verification_seed": 4124628831
+    },
+    {
+      "unit_id": 51,
+      "environment_seed": 4550,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 4017796197,
+      "diagnostic_probe_seed": 747145748,
+      "paired_verification_seed": 2057295742
+    },
+    {
+      "unit_id": 52,
+      "environment_seed": 4551,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 722771938,
+      "diagnostic_probe_seed": 3039926373,
+      "paired_verification_seed": 3557196960
+    },
+    {
+      "unit_id": 53,
+      "environment_seed": 4552,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3433632044,
+      "diagnostic_probe_seed": 430926541,
+      "paired_verification_seed": 2065006344
+    },
+    {
+      "unit_id": 54,
+      "environment_seed": 4553,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3180915657,
+      "diagnostic_probe_seed": 229284314,
+      "paired_verification_seed": 2673658475
+    },
+    {
+      "unit_id": 55,
+      "environment_seed": 4554,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1357383809,
+      "diagnostic_probe_seed": 700330478,
+      "paired_verification_seed": 821033026
+    },
+    {
+      "unit_id": 56,
+      "environment_seed": 4555,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3837681755,
+      "diagnostic_probe_seed": 2711484068,
+      "paired_verification_seed": 3417069676
+    },
+    {
+      "unit_id": 57,
+      "environment_seed": 4556,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 94915834,
+      "diagnostic_probe_seed": 4274320596,
+      "paired_verification_seed": 534125045
+    },
+    {
+      "unit_id": 58,
+      "environment_seed": 4557,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2312206012,
+      "diagnostic_probe_seed": 3151804556,
+      "paired_verification_seed": 3610403941
+    },
+    {
+      "unit_id": 59,
+      "environment_seed": 4558,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1746615168,
+      "diagnostic_probe_seed": 1447794525,
+      "paired_verification_seed": 696740494
+    },
+    {
+      "unit_id": 60,
+      "environment_seed": 4559,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1654568385,
+      "diagnostic_probe_seed": 3226607185,
+      "paired_verification_seed": 1787764243
+    },
+    {
+      "unit_id": 61,
+      "environment_seed": 4560,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1635940850,
+      "diagnostic_probe_seed": 3683606274,
+      "paired_verification_seed": 1339557586
+    },
+    {
+      "unit_id": 62,
+      "environment_seed": 4561,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3648491913,
+      "diagnostic_probe_seed": 3441144674,
+      "paired_verification_seed": 1879749273
+    },
+    {
+      "unit_id": 63,
+      "environment_seed": 4562,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1463989136,
+      "diagnostic_probe_seed": 1611773923,
+      "paired_verification_seed": 4287349562
+    },
+    {
+      "unit_id": 64,
+      "environment_seed": 4563,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 4076586453,
+      "diagnostic_probe_seed": 3282123402,
+      "paired_verification_seed": 1190008686
+    },
+    {
+      "unit_id": 65,
+      "environment_seed": 4564,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 4079994029,
+      "diagnostic_probe_seed": 307018212,
+      "paired_verification_seed": 1777668420
+    },
+    {
+      "unit_id": 66,
+      "environment_seed": 4565,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 1042490033,
+      "diagnostic_probe_seed": 2914171662,
+      "paired_verification_seed": 4184150627
+    },
+    {
+      "unit_id": 67,
+      "environment_seed": 4566,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 377551993,
+      "diagnostic_probe_seed": 394413420,
+      "paired_verification_seed": 3605347813
+    },
+    {
+      "unit_id": 68,
+      "environment_seed": 4567,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2076128358,
+      "diagnostic_probe_seed": 3934855909,
+      "paired_verification_seed": 1726779669
+    },
+    {
+      "unit_id": 69,
+      "environment_seed": 4568,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 1189902952,
+      "diagnostic_probe_seed": 4154048713,
+      "paired_verification_seed": 3972319629
+    },
+    {
+      "unit_id": 70,
+      "environment_seed": 4569,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 2269790383,
+      "diagnostic_probe_seed": 1939287190,
+      "paired_verification_seed": 1176199915
+    },
+    {
+      "unit_id": 71,
+      "environment_seed": 4570,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2293746764,
+      "diagnostic_probe_seed": 1670283982,
+      "paired_verification_seed": 703744777
+    },
+    {
+      "unit_id": 72,
+      "environment_seed": 4571,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1225275386,
+      "diagnostic_probe_seed": 3328666600,
+      "paired_verification_seed": 3545864473
+    },
+    {
+      "unit_id": 73,
+      "environment_seed": 4572,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_perturbation_seed": 3810304427,
+      "diagnostic_probe_seed": 1133501595,
+      "paired_verification_seed": 3999234676
+    },
+    {
+      "unit_id": 74,
+      "environment_seed": 4573,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_perturbation_seed": 3896056376,
+      "diagnostic_probe_seed": 1683056387,
+      "paired_verification_seed": 2785881389
+    },
+    {
+      "unit_id": 75,
+      "environment_seed": 4574,
+      "segment_id_oracle": "mixed",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2508598026,
+      "diagnostic_probe_seed": 2436941457,
+      "paired_verification_seed": 899913946
+    },
+    {
+      "unit_id": 76,
+      "environment_seed": 4575,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2528249589,
+      "diagnostic_probe_seed": 456658639,
+      "paired_verification_seed": 2448300151
+    },
+    {
+      "unit_id": 77,
+      "environment_seed": 4576,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2074573458,
+      "diagnostic_probe_seed": 1264508941,
+      "paired_verification_seed": 447077106
+    },
+    {
+      "unit_id": 78,
+      "environment_seed": 4577,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3970897096,
+      "diagnostic_probe_seed": 3416057847,
+      "paired_verification_seed": 3918864311
+    },
+    {
+      "unit_id": 79,
+      "environment_seed": 4578,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2162128167,
+      "diagnostic_probe_seed": 3357106629,
+      "paired_verification_seed": 3702835615
+    },
+    {
+      "unit_id": 80,
+      "environment_seed": 4579,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2394272019,
+      "diagnostic_probe_seed": 1347188150,
+      "paired_verification_seed": 2313099599
+    },
+    {
+      "unit_id": 81,
+      "environment_seed": 4580,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 3398475609,
+      "diagnostic_probe_seed": 2224924211,
+      "paired_verification_seed": 586936951
+    },
+    {
+      "unit_id": 82,
+      "environment_seed": 4581,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1918761576,
+      "diagnostic_probe_seed": 1459598565,
+      "paired_verification_seed": 3520176736
+    },
+    {
+      "unit_id": 83,
+      "environment_seed": 4582,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2598120357,
+      "diagnostic_probe_seed": 645593700,
+      "paired_verification_seed": 826173902
+    },
+    {
+      "unit_id": 84,
+      "environment_seed": 4583,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2678604654,
+      "diagnostic_probe_seed": 2412185059,
+      "paired_verification_seed": 1599208518
+    },
+    {
+      "unit_id": 85,
+      "environment_seed": 4584,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1683202459,
+      "diagnostic_probe_seed": 804531869,
+      "paired_verification_seed": 1058469754
+    },
+    {
+      "unit_id": 86,
+      "environment_seed": 4585,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3120357851,
+      "diagnostic_probe_seed": 2376132463,
+      "paired_verification_seed": 3110966048
+    },
+    {
+      "unit_id": 87,
+      "environment_seed": 4586,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1569191953,
+      "diagnostic_probe_seed": 1816176885,
+      "paired_verification_seed": 1740145103
+    },
+    {
+      "unit_id": 88,
+      "environment_seed": 4587,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 3445165480,
+      "diagnostic_probe_seed": 2055933396,
+      "paired_verification_seed": 4056135520
+    },
+    {
+      "unit_id": 89,
+      "environment_seed": 4588,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 795920144,
+      "diagnostic_probe_seed": 4080781151,
+      "paired_verification_seed": 2779391748
+    },
+    {
+      "unit_id": 90,
+      "environment_seed": 4589,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1879656632,
+      "diagnostic_probe_seed": 1119037978,
+      "paired_verification_seed": 1661128975
+    },
+    {
+      "unit_id": 91,
+      "environment_seed": 4590,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 2261733039,
+      "diagnostic_probe_seed": 3987651075,
+      "paired_verification_seed": 3140066135
+    },
+    {
+      "unit_id": 92,
+      "environment_seed": 4591,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1260978283,
+      "diagnostic_probe_seed": 1501915090,
+      "paired_verification_seed": 422799453
+    },
+    {
+      "unit_id": 93,
+      "environment_seed": 4592,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 1958234824,
+      "diagnostic_probe_seed": 1121593845,
+      "paired_verification_seed": 3319664408
+    },
+    {
+      "unit_id": 94,
+      "environment_seed": 4593,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2234635702,
+      "diagnostic_probe_seed": 244598263,
+      "paired_verification_seed": 831166797
+    },
+    {
+      "unit_id": 95,
+      "environment_seed": 4594,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 274889352,
+      "diagnostic_probe_seed": 2493594566,
+      "paired_verification_seed": 2479292309
+    },
+    {
+      "unit_id": 96,
+      "environment_seed": 4595,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 2776360285,
+      "diagnostic_probe_seed": 4096107853,
+      "paired_verification_seed": 3598500796
+    },
+    {
+      "unit_id": 97,
+      "environment_seed": 4596,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 394787341,
+      "diagnostic_probe_seed": 212019504,
+      "paired_verification_seed": 342641420
+    },
+    {
+      "unit_id": 98,
+      "environment_seed": 4597,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 780004206,
+      "diagnostic_probe_seed": 3507186487,
+      "paired_verification_seed": 1004523870
+    },
+    {
+      "unit_id": 99,
+      "environment_seed": 4598,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_perturbation_seed": 920634966,
+      "diagnostic_probe_seed": 1695908795,
+      "paired_verification_seed": 2801416597
+    },
+    {
+      "unit_id": 100,
+      "environment_seed": 4599,
+      "segment_id_oracle": "recurrence",
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_perturbation_seed": 1179045153,
+      "diagnostic_probe_seed": 2275714114,
+      "paired_verification_seed": 2575905062
+    }
+  ],
+  "manifest_id": "2b1945a7bdf273d7ed76d44c330a851ad1f3c63c722126bd29fd7b79c4c6eb8f"
+}

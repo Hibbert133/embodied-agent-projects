@@ -1,0 +1,119 @@
+[
+  {
+    "valid": true,
+    "latency_ms": 31136.605199997575,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.08,\n      \"confidence\": 0.82\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.78,\n      \"confidence\": 0.75\n    }\n  },\n  \"memory_used\": false,\n  \"supporting_memory_ids\": [],\n  \"contradicting_memory_ids\": [],\n  \"memory_applicable\": false,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"dominant_axis_sign_agreement=0.5 indicates no stable drift direction, and relative_bias_std=0.899 indicates high response variance relative to the estimated bias. The very small drift magnitudes (~2.9e-4) combined with high variance do not support a persistent signed correction, so BOUNDED_PLANAR_COMPENSATION is rejected. INDEPENDENT_STOCHASTIC_RETRY is appropriate for highly variable probe responses with no stable signed correction. Sufficient budget (500) and 4 probe samples provide adequate evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 1257,
+      "output_tokens": 1097
+    },
+    "response_hash": "d80ee9b37f57665ce5ebaf63e57eb4a53d786b90cb5ae15f8d2c563e926e30ba",
+    "episode_id": 22,
+    "method": "AMBIGUITY_GATED_STATELESS_GLM",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 51772.455599999375,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.15,\n      \"confidence\": 0.82\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.72,\n      \"confidence\": 0.75\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode004_independent_stochastic_retry\",\n    \"bootstrap_episode013_independent_stochastic_retry\",\n    \"bootstrap_episode018_independent_stochastic_retry\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"Current probe evidence shows dominant_axis_sign_agreement=0.5 (no stable direction) and relative_bias_std=0.899 (high variance), which violates BOUNDED_PLANAR_COMPENSATION preconditions and matches INDEPENDENT_STOCHASTIC_RETRY purpose. Despite weaker historical memory support for ISR (3 supports vs 6 contradictions), the live physical evidence is the primary driver and clearly indicates high response variability with no stable signed correction. Sufficient budget (500) and valid probe data (4 samples, 64 steps) warrant skill execution over abstention.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2043,
+      "output_tokens": 2009
+    },
+    "response_hash": "0f49590d2fa60c7969e951fd6866d0f75d0f1ece541f6e0d039e8055973b8a98",
+    "episode_id": 22,
+    "method": "AMBIGUITY_GATED_MEMORY_FALLBACK",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 92172.49479999737,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.15,\n      \"confidence\": 0.85\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.45,\n      \"confidence\": 0.55\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"bootstrap_episode004_independent_stochastic_retry\",\n    \"bootstrap_episode013_independent_stochastic_retry\",\n    \"bootstrap_episode018_independent_stochastic_retry\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"Current physical evidence shows high response variance (relative_bias_std=0.899) and no stable directional drift (dominant_axis_sign_agreement=0.5), which directly matches INDEPENDENT_STOCHASTIC_RETRY semantics and violates BOUNDED_PLANAR_COMPENSATION's applicability condition. Despite strong historical contradictions (6/10) for stochastic retry, the current evidence is valid, budget is sufficient (500), and no stable signed correction exists to support bounded compensation. Selecting the only semantically supported skill.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2046,
+      "output_tokens": 3291
+    },
+    "response_hash": "be489f9e14b224450aa401da76e66ea939440c0a416d40398d637bb614caf0f6",
+    "episode_id": 22,
+    "method": "AMBIGUITY_GATED_MEMORY_ABSTAIN",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 35198.84610000008,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.15,\n      \"confidence\": 0.7\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.75,\n      \"confidence\": 0.7\n    }\n  },\n  \"memory_used\": false,\n  \"supporting_memory_ids\": [],\n  \"contradicting_memory_ids\": [],\n  \"memory_applicable\": false,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"relative_bias_std=2.18 indicates variance far exceeds the estimated drift magnitude (drift_xy ~1e-4 vs bias_std_norm=0.13), so no stable signed correction is supported. dominant_axis_sign_agreement=0.75 is moderate but insufficient given the high relative variance. BOUNDED_PLANAR_COMPENSATION requires a persistent low-variance drift, which is not evidenced. INDEPENDENT_STOCHASTIC_RETRY is appropriate for high-variability probe responses with no reliable directional correction. Budget=500 is sufficient.\"\n}\n```",
+    "usage": {
+      "input_tokens": 1256,
+      "output_tokens": 1191
+    },
+    "response_hash": "c5975eb886ba0d680aab6d3e8edb8b9d3a20e3557a4c67241080ae1ca5320a99",
+    "episode_id": 30,
+    "method": "AMBIGUITY_GATED_STATELESS_GLM",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 56984.44509999899,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.885,\n      \"confidence\": 0.72\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.334,\n      \"confidence\": 0.65\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"ambiguity_gated_memory_fallback_episode25\",\n    \"ambiguity_gated_memory_fallback_episode24\",\n    \"ambiguity_gated_memory_fallback_episode21\",\n    \"ambiguity_gated_memory_fallback_episode26\",\n    \"ambiguity_gated_memory_fallback_episode28\",\n    \"ambiguity_gated_memory_fallback_episode23\",\n    \"bootstrap_episode009_bounded_planar_compensation\",\n    \"ambiguity_gated_memory_fallback_episode22\",\n    \"bootstrap_episode006_bounded_planar_compensation\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"ambiguity_gated_memory_fallback_episode27\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Current probe shows moderate directional consistency (dominant_axis_sign_agreement=0.75) with very small estimation residual (3.2e-7), indicating a detectable signed drift despite elevated relative_bias_std. Memory strongly supports BOUNDED_PLANAR_COMPENSATION with 9 supporting records, accepted_probability~0.885, and positive mean_progress~0.157 across recent episodes 20-29. INDEPENDENT_STOCHASTIC_RETRY has poor memory support (6 contradictions, accepted_probability~0.334). Sufficient budget remains (500).\"\n}\n```",
+    "usage": {
+      "input_tokens": 2048,
+      "output_tokens": 2035
+    },
+    "response_hash": "5fb276f0919ea17c98fb962cadc5f62750c1d18cc9281b0753c43d8755976316",
+    "episode_id": 30,
+    "method": "AMBIGUITY_GATED_MEMORY_FALLBACK",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 137985.9359000002,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.885,\n      \"confidence\": 0.72\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.334,\n      \"confidence\": 0.65\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"ambiguity_gated_memory_abstain_episode25\",\n    \"ambiguity_gated_memory_abstain_episode24\",\n    \"ambiguity_gated_memory_abstain_episode21\",\n    \"ambiguity_gated_memory_abstain_episode26\",\n    \"ambiguity_gated_memory_abstain_episode28\",\n    \"ambiguity_gated_memory_abstain_episode23\",\n    \"bootstrap_episode009_bounded_planar_compensation\",\n    \"bootstrap_episode006_bounded_planar_compensation\",\n    \"ambiguity_gated_memory_abstain_episode29\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"ambiguity_gated_memory_abstain_episode27\",\n    \"bootstrap_episode005_independent_stochastic_retry\",\n    \"bootstrap_episode015_independent_stochastic_retry\",\n    \"bootstrap_episode003_independent_stochastic_retry\",\n    \"bootstrap_episode007_independent_stochastic_retry\",\n    \"bootstrap_episode001_independent_stochastic_retry\",\n    \"bootstrap_episode011_independent_stochastic_retry\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Dominant axis sign agreement of 0.75 and near-zero estimation residual (3.2e-07) indicate a persistent directional drift despite elevated relative bias std. Memory strongly supports BPC with 0.885 accepted probability across 9 supporting records and only 1 contradiction, while ISR has weak support (0.334) with 6 contradictions. The 0.75 sign agreement also disqualifies ISR per its not-appropriate condition. Sufficient budget remains (500).\"\n}\n```",
+    "usage": {
+      "input_tokens": 2068,
+      "output_tokens": 4861
+    },
+    "response_hash": "94e225ba4bfae27309cf3633b3646cfdd38af4b886a656d162abb5217f3fc3a1",
+    "episode_id": 30,
+    "method": "AMBIGUITY_GATED_MEMORY_ABSTAIN",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 54787.49660000176,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": false,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.15,\n      \"confidence\": 0.7\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.75,\n      \"confidence\": 0.7\n    }\n  },\n  \"memory_used\": false,\n  \"supporting_memory_ids\": [],\n  \"contradicting_memory_ids\": [],\n  \"memory_applicable\": false,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"INDEPENDENT_STOCHASTIC_RETRY\",\n  \"abstain\": false,\n  \"reason\": \"relative_bias_std=1.74 indicates response variance exceeds the bias signal, and the estimated drift magnitude (~0.00046) is negligible compared to bias_std_norm (0.233). dominant_axis_sign_agreement=0.75 is only moderate and insufficient to establish a stable signed drift. High variability with no strongly stable direction supports INDEPENDENT_STOCHASTIC_RETRY over BOUNDED_PLANAR_COMPENSATION. Sufficient budget (500) and 4 probe samples provide adequate evidence.\"\n}\n```",
+    "usage": {
+      "input_tokens": 1256,
+      "output_tokens": 2045
+    },
+    "response_hash": "9889347aa3315f1de5aeac2f69600b1b9963045fe5ae1be0dc9a9471c0c98e2b",
+    "episode_id": 36,
+    "method": "AMBIGUITY_GATED_STATELESS_GLM",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 75518.61330000247,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.65,\n      \"confidence\": 0.6\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"INCONCLUSIVE\",\n      \"accept_probability\": 0.45,\n      \"confidence\": 0.5\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"ambiguity_gated_memory_fallback_episode24\",\n    \"ambiguity_gated_memory_fallback_episode25\",\n    \"ambiguity_gated_memory_fallback_episode26\",\n    \"ambiguity_gated_memory_fallback_episode28\",\n    \"ambiguity_gated_memory_fallback_episode29\",\n    \"ambiguity_gated_memory_fallback_episode30\",\n    \"ambiguity_gated_memory_fallback_episode31\",\n    \"ambiguity_gated_memory_fallback_episode32\",\n    \"ambiguity_gated_memory_fallback_episode33\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"ambiguity_gated_memory_fallback_episode27\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": true,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Current evidence shows moderate directional consistency (dominant_axis_sign_agreement=0.75, very small mean_estimation_residual) despite high relative_bias_std=1.74, possibly inflated by small probe sample count (4). Memory strongly supports BOUNDED_PLANAR_COMPENSATION with recent accepted_probability=0.88, 9 support vs 1 contradiction, and higher mean_progress than INDEPENDENT_STOCHASTIC_RETRY. Sufficient budget (500) remains. Directional drift is present though magnitude stability is uncertain, favoring bounded compensation over stochastic retry.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2060,
+      "output_tokens": 2732
+    },
+    "response_hash": "1aea314e708dce39e04fe541cf52a7df6cd0e52b88a7071f200efded984e3b42",
+    "episode_id": 36,
+    "method": "AMBIGUITY_GATED_MEMORY_FALLBACK",
+    "repair": false
+  },
+  {
+    "valid": true,
+    "latency_ms": 99480.44139999911,
+    "raw_response": "```json\n{\n  \"evidence_interpretation\": {\n    \"persistent_directional_drift\": true,\n    \"high_response_variance\": true,\n    \"evidence_sufficient\": true\n  },\n  \"action_predictions\": {\n    \"BOUNDED_PLANAR_COMPENSATION\": {\n      \"predicted_status\": \"ACCEPTED\",\n      \"accept_probability\": 0.65,\n      \"confidence\": 0.6\n    },\n    \"INDEPENDENT_STOCHASTIC_RETRY\": {\n      \"predicted_status\": \"REJECTED\",\n      \"accept_probability\": 0.3,\n      \"confidence\": 0.4\n    }\n  },\n  \"memory_used\": true,\n  \"supporting_memory_ids\": [\n    \"ambiguity_gated_memory_abstain_episode24\",\n    \"ambiguity_gated_memory_abstain_episode25\",\n    \"ambiguity_gated_memory_abstain_episode26\",\n    \"ambiguity_gated_memory_abstain_episode28\",\n    \"ambiguity_gated_memory_abstain_episode29\",\n    \"ambiguity_gated_memory_abstain_episode30\",\n    \"ambiguity_gated_memory_abstain_episode31\",\n    \"ambiguity_gated_memory_abstain_episode32\",\n    \"ambiguity_gated_memory_abstain_episode33\"\n  ],\n  \"contradicting_memory_ids\": [\n    \"ambiguity_gated_memory_abstain_episode27\"\n  ],\n  \"memory_applicable\": true,\n  \"memory_conflict_detected\": false,\n  \"selected_skill\": \"BOUNDED_PLANAR_COMPENSATION\",\n  \"abstain\": false,\n  \"reason\": \"Dominant-axis sign agreement of 0.75 and near-zero estimation residual indicate a partially stable directional drift. Although relative_bias_std of 1.74 signals elevated variance, recent memory strongly supports BPC (accepted_probability 0.876, 9 supporting vs 1 contradicting) with a positive acceptance delta. ISR is contradicted by the directional stability evidence and has weaker memory support (0.503) with 4 recent contradictions. Sufficient budget (500) and valid evidence preclude abstention.\"\n}\n```",
+    "usage": {
+      "input_tokens": 2085,
+      "output_tokens": 3695
+    },
+    "response_hash": "e657e75a6873c4aef751181d75bf704a6ad10590f766d4f7dc8b170f11b02db2",
+    "episode_id": 36,
+    "method": "AMBIGUITY_GATED_MEMORY_ABSTAIN",
+    "repair": false
+  }
+]

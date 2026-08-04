@@ -488,3 +488,15 @@ back to the frozen deterministic rule or the separately reported abstention
 variant. Seeds 4600--4699 remain reserved. No validation, held-out execution,
 principle generation, prompt retuning, or outcome-fitted ambiguity threshold is
 authorized.
+
+Selective-override run
+`probemem_online_selective_override_20260804T064750Z_1107f99883b4` reached 40
+operational cases but only three ambiguous cases against the frozen minimum of
+ten. It is `INCOMPLETE_POPULATION`; the promotion gate was not evaluated. The
+primary Memory-fallback method tied the frozen variance rule at 34/40 accepted,
+made two outcome-tied action changes, and used nine API calls. Preserve the
+92.5% descriptive call reduction without claiming Memory benefit. Do not
+extend or replace seeds 4500--4599, widen the ambiguity definition, execute
+reserved seeds 4600--4699, or advance to validation, held-out execution, or
+principles. A successor requires explicit authorization and a new scientific
+question with fresh seeds.

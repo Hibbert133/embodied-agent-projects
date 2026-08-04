@@ -57,5 +57,13 @@ all-case GLM use. Protocol
 decisions stable under leave-one-probe-repeat-out analysis and invokes GLM plus
 Memory only for measurement-ambiguous cases. It uses fresh development seeds
 4500--4599 and must not derive a numeric ambiguity band from the 12 audited
-outcomes. It remains unexecuted; validation, held-out, and principles are still
-blocked.
+outcomes.
+
+The selective-override run later reached 40 operational cases but found only
+three leave-one-repeat-out ambiguous cases, below the frozen minimum of ten. It
+is immutably `INCOMPLETE_POPULATION`. The primary Memory-fallback method tied
+the frozen rule at 34/40 accepted while using nine API calls instead of the
+120-call all-case reference. Its two action changes were outcome ties. This is
+descriptive evidence for API-cost reduction, not Memory or GLM recovery
+benefit. Do not widen the ambiguity definition, extend seeds 4500--4599, or
+advance to validation, held-out execution, or principles.
