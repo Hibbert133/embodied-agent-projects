@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_verifier_demo_20260804T092718Z_a158d7e53fbd",
+  "operational_cases": 21,
+  "verifier_calls": 11,
+  "trigger_counts_nonexclusive": {
+    "GLOBAL_RECENT_MEMORY_CONFLICT": 1,
+    "RECENT_SIMILAR_CONTRADICTION": 7,
+    "WITHIN_AMBIGUITY_BAND": 5
+  },
+  "single_trigger_only_counts": {
+    "GLOBAL_RECENT_MEMORY_CONFLICT": 1,
+    "RECENT_SIMILAR_CONTRADICTION": 5,
+    "WITHIN_AMBIGUITY_BAND": 3
+  },
+  "descriptive_leave_one_trigger_out": {
+    "WITHIN_AMBIGUITY_BAND": {
+      "descriptive_calls_retained": 8,
+      "descriptive_call_rate": 0.38095238095238093
+    },
+    "GLOBAL_RECENT_MEMORY_CONFLICT": {
+      "descriptive_calls_retained": 10,
+      "descriptive_call_rate": 0.47619047619047616
+    },
+    "RECENT_SIMILAR_CONTRADICTION": {
+      "descriptive_calls_retained": 6,
+      "descriptive_call_rate": 0.2857142857142857
+    }
+  },
+  "guard_blocker_counts_nonexclusive": {
+    "ALTERNATIVE_CONTRADICTION_TOO_HIGH": 8,
+    "ALTERNATIVE_NOT_BETTER": 9,
+    "PROBABILITY_MARGIN_TOO_SMALL": 9,
+    "RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED": 9,
+    "VERIFIER_CONFIDENCE_TOO_LOW": 9
+  },
+  "authorized_override_effects": {
+    "HARMFUL": 1,
+    "TIE": 1
+  },
+  "blocked_alternative_effects": {
+    "HARMFUL": 4,
+    "TIE": 4,
+    "HELPFUL": 1
+  },
+  "admitted_cases": [
+    {
+      "episode_id": 21,
+      "seed": 4700,
+      "admission_reasons": [
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "ACCEPTED",
+      "alternative_status": "REJECTED",
+      "alternative_effect": "HARMFUL"
+    },
+    {
+      "episode_id": 23,
+      "seed": 4704,
+      "admission_reasons": [
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "ACCEPTED",
+      "alternative_status": "ACCEPTED",
+      "alternative_effect": "TIE"
+    },
+    {
+      "episode_id": 24,
+      "seed": 4706,
+      "admission_reasons": [
+        "WITHIN_AMBIGUITY_BAND",
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "INCONCLUSIVE",
+      "alternative_status": "ACCEPTED",
+      "alternative_effect": "HELPFUL"
+    },
+    {
+      "episode_id": 25,
+      "seed": 4707,
+      "admission_reasons": [
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "override_applied": true,
+      "guard_reason": "OVERRIDE_AUTHORIZED",
+      "default_status": "ACCEPTED",
+      "alternative_status": "INCONCLUSIVE",
+      "alternative_effect": "HARMFUL"
+    },
+    {
+      "episode_id": 26,
+      "seed": 4708,
+      "admission_reasons": [
+        "WITHIN_AMBIGUITY_BAND",
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "ACCEPTED",
+      "alternative_status": "REJECTED",
+      "alternative_effect": "HARMFUL"
+    },
+    {
+      "episode_id": 27,
+      "seed": 4712,
+      "admission_reasons": [
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "INCONCLUSIVE",
+      "alternative_status": "INCONCLUSIVE",
+      "alternative_effect": "TIE"
+    },
+    {
+      "episode_id": 29,
+      "seed": 4716,
+      "admission_reasons": [
+        "RECENT_SIMILAR_CONTRADICTION"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "ACCEPTED",
+      "alternative_status": "REJECTED",
+      "alternative_effect": "HARMFUL"
+    },
+    {
+      "episode_id": 34,
+      "seed": 4734,
+      "admission_reasons": [
+        "WITHIN_AMBIGUITY_BAND"
+      ],
+      "default_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "override_applied": true,
+      "guard_reason": "OVERRIDE_AUTHORIZED",
+      "default_status": "ACCEPTED",
+      "alternative_status": "ACCEPTED",
+      "alternative_effect": "TIE"
+    },
+    {
+      "episode_id": 37,
+      "seed": 4738,
+      "admission_reasons": [
+        "WITHIN_AMBIGUITY_BAND"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "REJECTED",
+      "alternative_status": "REJECTED",
+      "alternative_effect": "TIE"
+    },
+    {
+      "episode_id": 38,
+      "seed": 4739,
+      "admission_reasons": [
+        "GLOBAL_RECENT_MEMORY_CONFLICT"
+      ],
+      "default_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "ACCEPTED",
+      "alternative_status": "INCONCLUSIVE",
+      "alternative_effect": "HARMFUL"
+    },
+    {
+      "episode_id": 40,
+      "seed": 4742,
+      "admission_reasons": [
+        "WITHIN_AMBIGUITY_BAND"
+      ],
+      "default_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "override_applied": false,
+      "guard_reason": "ALTERNATIVE_NOT_BETTER|PROBABILITY_MARGIN_TOO_SMALL|ALTERNATIVE_CONTRADICTION_TOO_HIGH|RECENT_GLOBAL_PREFERENCE_NOT_ALIGNED|VERIFIER_CONFIDENCE_TOO_LOW",
+      "default_status": "ACCEPTED",
+      "alternative_status": "ACCEPTED",
+      "alternative_effect": "TIE"
+    }
+  ],
+  "interpretation": [
+    "This is a no-new-rollout attribution audit of frozen decisions and paired evaluator outcomes.",
+    "Leave-one-trigger-out counts are descriptive arithmetic, not a proposed gate or threshold.",
+    "The audit cannot authorize retuning, rerunning, GLM, validation, held-out execution, or reserved seeds."
+  ]
+}
