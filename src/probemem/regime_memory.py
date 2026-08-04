@@ -239,9 +239,23 @@ def _unique_episode_scales(records: Sequence[RegimeActionExperience]) -> np.ndar
     return scales
 
 
+def regime_distance_scales(records: Sequence[RegimeActionExperience]) -> np.ndarray:
+    """Expose the frozen v1 scale calculation for verifier successors."""
+
+    return _unique_episode_scales(records).copy()
+
+
 def _distance(left: ProbeRegimeSignature, right: ProbeRegimeSignature, scales: np.ndarray) -> float:
     difference = (np.asarray(left.values) - np.asarray(right.values)) / scales
     return float(np.sqrt(np.mean(np.square(difference))))
+
+
+def normalized_regime_distance(
+    left: ProbeRegimeSignature, right: ProbeRegimeSignature, scales: np.ndarray,
+) -> float:
+    """Expose the frozen v1 standardized RMS distance without changing it."""
+
+    return _distance(left, right, np.asarray(scales, dtype=float))
 
 
 def _summarize(
