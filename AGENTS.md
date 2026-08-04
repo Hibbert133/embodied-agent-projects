@@ -526,3 +526,14 @@ trigger occurrences, with overlaps. The two authorized overrides were one
 harmful and one tied; nine blocked alternatives were one helpful, four harmful,
 and four tied. This is descriptive mechanism evidence only. Do not remove a
 trigger, fit a new band, or revise posterior/guard parameters from this audit.
+
+The user subsequently authorized Calibrated Verifier v2 under
+`docs/protocols/probemem_calibrated_verifier_v2.md` on the existing
+`research/probemem-verifier-demo-v1` branch. Calibration may scan seeds
+4800--4899 only and must stop before prospective development if population or
+threshold-selection requirements fail. Prospective seeds 4900--5099 remain
+blocked until a successful calibration result, frozen thresholds, hashes, and
+clean committed implementation exist. Seeds 5100--5299 remain reserved. The v1
+Demo artifacts and negative results are immutable. Admission, features,
+distance, prior, top-k, skills, GLM prohibition, validation, held-out, and
+principle boundaries remain frozen.
