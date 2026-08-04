@@ -510,3 +510,12 @@ write only its selected fresh outcome to its own chronological memory. Seeds
 before execution and must not be tuned from Demo outcomes. The registered run
 must not call GLM, run validation or held-out seeds, generate principles, add a
 third skill, or support a statistical superiority claim.
+
+That Demo completed all 50 initial units with 21 operational cases and failed
+its gate. Budgeted recovered 15/21 versus 16/21 for the frozen rule, called the
+verifier on 11/21 cases (52.4%), and made zero helpful, one harmful, and one tied
+override. The guard blocked four harmful alternatives, but this did not produce
+net benefit. Preserve the negative result and do not tune the ambiguity band,
+posterior, coverage, contradiction, or confidence guards on seeds 4700--4749.
+Do not execute reserved seeds 4750--4799 or advance to GLM, validation,
+held-out execution, or principles from this result.

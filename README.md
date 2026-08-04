@@ -1,5 +1,24 @@
 # Active Evidence Acquisition for Self-Improving Embodied Agents
 
+> **Latest feasibility result — ProbeMem budgeted verifier:** the immutable
+> 50-unit fresh-development Demo completed with zero chronology, leakage,
+> counterfactual-write, budget, or invalid-Skill violations, but failed its
+> performance gate. Budgeted recovery was 15/21 versus 16/21 for the frozen
+> variance rule; its 11/21 verifier-call rate was 52.4%, and its two overrides
+> were zero helpful, one harmful, and one tied. The guard blocked four harmful
+> alternatives, but Memory applicability was not sufficiently calibrated to
+> improve recovery. See the [report](reports/probemem_verifier_demo_v1.md),
+> [protocol](docs/protocols/probemem_verifier_demo_v1.md), and immutable
+> [case page](outputs/probemem_verifier_demo/runs/probemem_verifier_demo_20260804T092718Z_a158d7e53fbd/case_page.md).
+
+Two-minute deterministic integration smoke:
+
+```powershell
+.\.venv\Scripts\python.exe scripts\run_probemem_verifier_demo.py `
+  --config configs\probemem_verifier\demo_v1.json `
+  --smoke --verifier deterministic
+```
+
 > **New development protocol:** [ProbeMem: Verification-Grounded Scientific
 > Memory for Online Embodied Agents](docs/research/online_llm_scientific_memory_v2.md)
 > studies whether a constrained online LLM Agent can reuse only freshly verified

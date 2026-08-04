@@ -41,6 +41,7 @@ def _canvas(title: str, subtitle: str = "") -> tuple[Image.Image, ImageDraw.Imag
 def _recovery_calls(summary: dict[str, Any], path: Path) -> Path:
     image, draw = _canvas("Recovery vs verifier-call rate", "Deterministic history-aware verifier Demo")
     methods = ["FROZEN_DETERMINISTIC", "ALWAYS_ON_VERIFIER", "BUDGETED_VERIFIER"]
+    display = {"FROZEN_DETERMINISTIC": "Frozen", "ALWAYS_ON_VERIFIER": "Always-on", "BUDGETED_VERIFIER": "Budgeted"}
     for index, method in enumerate(methods):
         row = summary["methods"][method]
         cases = max(1, row["cases"])
@@ -50,7 +51,9 @@ def _recovery_calls(summary: dict[str, Any], path: Path) -> Path:
         y = 620 - recovery * 450
         color = (COLORS["gray"], COLORS["red"], COLORS["green"])[index]
         draw.ellipse((x - 14, y - 14, x + 14, y + 14), fill=color, outline=COLORS["navy"])
-        draw.text((x + 20, y - 10), f"{method}: {row['accepted']}/{row['cases']}, calls={calls:.1%}", fill=COLORS["ink"], font=ImageFont.load_default(size=17))
+        label = f"{display[method]}: {row['accepted']}/{row['cases']}, calls={calls:.1%}"
+        label_x = x - 285 if calls > 0.80 else x + 20
+        draw.text((label_x, y - 10), label, fill=COLORS["ink"], font=ImageFont.load_default(size=17))
     draw.line((120, 620, 1050, 620), fill=COLORS["ink"], width=2)
     draw.line((120, 620, 120, 140), fill=COLORS["ink"], width=2)
     draw.text((470, 660), "Verifier call rate", fill=COLORS["ink"], font=ImageFont.load_default(size=18))
