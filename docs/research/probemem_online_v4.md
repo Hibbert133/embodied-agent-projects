@@ -21,3 +21,24 @@ including retry in 12/15 stochastic cases with zero stochastic abstentions,
 versus 22/30 correct and five stochastic abstentions for the historical full
 payload. This authorizes only Gate B infrastructure. It is not an online
 execution or memory-benefit result.
+
+## Gate C development result
+
+The immutable chronological Gate C run
+`probemem_online_gate_c_20260803T095434Z_f346d23912a9` completed all 60
+operational cases. The full resonance-aware Agent changed 12 of 60 stateless
+GLM decisions, but only four changes were helpful and three were harmful. It
+recovered 41/60 cases, compared with 40/60 for stateless GLM and 43/60 for the
+frozen variance rule. Its paired accepted-recovery difference from stateless
+GLM was +1/60, with a deterministic paired-bootstrap 95% interval spanning
+-4/60 to +6/60. Post-shift recovery was lower than stateless GLM (24/39 versus
+27/39).
+
+The preregistered Gate C promotion criteria therefore failed: net helpful
+memory changes were +1 rather than at least +3, harmful transfer decreased by
+10% rather than at least 30%, and recovery was two cases below the strongest
+non-Oracle deterministic baseline. This is evidence that action-conditioned
+memory crossed the reasoning-to-action boundary, but not that it reliably
+improved online recovery. Principle generation, validation, and held-out
+execution remain blocked. The complete claim-bounded analysis is recorded in
+`reports/probemem_online_gate_c_development.md`.

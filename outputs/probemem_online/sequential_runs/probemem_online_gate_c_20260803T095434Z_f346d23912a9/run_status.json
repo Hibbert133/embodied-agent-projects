@@ -1,11 +1,17 @@
 {
-  "status": "INCOMPLETE_PROVIDER_LATENCY",
+  "status": "COMPLETED",
+  "experiment_run_id": "probemem_online_gate_c_20260803T095434Z_f346d23912a9",
   "manifest_id": "08740c5415ad8a95e85fee9f2fe661a7bc791363fd0124ae8a8e1d0478af08ef",
-  "interrupted_at_utc": "2026-08-03T10:02:44.7008432Z",
-  "completed_operational_cases": 2,
-  "valid_online_decisions": 8,
-  "api_calls": 8,
-  "method_decision_rows": 18,
-  "reason": "Two operational checkpoints completed after more than seven minutes of aggregate API latency; extrapolating the frozen four-method protocol to 60 cases was not operationally feasible in this run.",
-  "promotion_gate_passed": false
+  "source_git_commit": "f346d23912a98411ce422709b181876060f5a7ed",
+  "operational_cases": 60,
+  "target_operational_cases": 60,
+  "api_calls": 242,
+  "chronology_violations": 0,
+  "oracle_leakage_events": 0,
+  "budget_violations": 0,
+  "random_namespace_violations": 0,
+  "future_memory_access": 0,
+  "counterfactual_memory_writes": 0,
+  "invalid_memory_ids": 0,
+  "invalid_skill_executions": 0
 }
