@@ -462,3 +462,29 @@ defined in `configs/probemem_online/bootstrap_memory_v1.json`. Gate B stores
 exactly one manifest-assigned selected action per episode; unselected paired
 outcomes are prohibited. Gate C, mixed-regime execution, validation, held-out,
 and principle generation remain blocked until Gate B integrity is recorded.
+
+Gate C run `probemem_online_gate_c_20260803T095434Z_f346d23912a9` completed 60
+operational cases and failed its promotion gate. Full online Memory recovered
+41/60 versus 40/60 for Stateless GLM and 43/60 for the frozen variance rule.
+Its 12 action changes contained four helpful, three harmful, and five tied
+changes; the paired recovery interval crossed zero and post-shift recovery was
+worse than Stateless GLM. Preserve this result. Do not advance to principles,
+validation, or held-out execution.
+
+The no-rollout causal audit in
+`reports/probemem_online_gate_c_action_change_audit.md` found that three of the
+four helpful changes merely restored the frozen deterministic action, whereas
+all three harmful changes overrode high-confidence retry decisions. Do not fit
+a numeric ambiguity band or modify the Gate C prompt from these 12 cases.
+
+The user authorized the separately registered development successor in
+`docs/protocols/probemem_online_selective_override_development_v1.md`. It may
+use fresh seeds 4500--4599 once, after implementation is committed and an
+immutable manifest is generated. High-confidence decisions are defined by
+leave-one-probe-repeat-out stability and must bypass the API. Only ambiguous
+cases may invoke the unchanged constrained GLM and action-conditioned Memory.
+An override requires global/recent action-preference agreement; conflict falls
+back to the frozen deterministic rule or the separately reported abstention
+variant. Seeds 4600--4699 remain reserved. No validation, held-out execution,
+principle generation, prompt retuning, or outcome-fitted ambiguity threshold is
+authorized.

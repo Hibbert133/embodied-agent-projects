@@ -42,3 +42,20 @@ memory crossed the reasoning-to-action boundary, but not that it reliably
 improved online recovery. Principle generation, validation, and held-out
 execution remain blocked. The complete claim-bounded analysis is recorded in
 `reports/probemem_online_gate_c_development.md`.
+
+The subsequent offline audit reconstructed the prior-only memory snapshots for
+all 12 action changes without new rollout or API calls. Three of four helpful
+changes merely restored the action already selected by the frozen variance
+rule. All three harmful changes overrode high-confidence retry decisions after
+both global and recent Memory summaries favored compensation. Thus Memory
+agreement alone is not a sufficient applicability test. The only helpful
+override beyond the deterministic rule occurred close to its frozen boundary.
+
+The separately registered successor is therefore selective rather than
+all-case GLM use. Protocol
+`docs/protocols/probemem_online_selective_override_development_v1.md` protects
+decisions stable under leave-one-probe-repeat-out analysis and invokes GLM plus
+Memory only for measurement-ambiguous cases. It uses fresh development seeds
+4500--4599 and must not derive a numeric ambiguity band from the 12 audited
+outcomes. It remains unexecuted; validation, held-out, and principles are still
+blocked.

@@ -1,0 +1,70 @@
+{
+  "protocol": "probemem_online_selective_override_development_v1",
+  "status": "PREREGISTERED_NOT_EXECUTED",
+  "seed_registry": "configs/probemem_online/seed_registry_v2.json",
+  "seed_range": [4500, 4599],
+  "target_operational_cases": 40,
+  "minimum_ambiguous_cases": 10,
+  "frozen_variance_threshold": 0.11560838098372882,
+  "ambiguity_definition": {
+    "method": "leave_one_probe_repeat_out_side_stability",
+    "registered_probe_repeats": 4,
+    "high_confidence": "full score and all four leave-one-repeat-out scores select the same frozen-rule action",
+    "ambiguous": "at least one leave-one-repeat-out score selects the opposite frozen-rule action",
+    "outcome_fitted_band": false
+  },
+  "candidate_skills": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
+  "primary_policy": {
+    "high_confidence_action": "FROZEN_VARIANCE_RULE",
+    "ambiguous_action": "CALL_GLM_WITH_ACTION_CONDITIONED_MEMORY",
+    "override_guard": "global_and_recent_action_preference_must_agree_with_glm_override",
+    "memory_conflict_action": "FALLBACK_TO_FROZEN_VARIANCE_RULE",
+    "invalid_or_timeout_action": "FALLBACK_TO_FROZEN_VARIANCE_RULE",
+    "continuous_parameters_host_owned": true
+  },
+  "registered_methods": [
+    "FROZEN_VARIANCE_RULE",
+    "AMBIGUITY_GATED_STATELESS_GLM",
+    "AMBIGUITY_GATED_MEMORY_FALLBACK",
+    "AMBIGUITY_GATED_MEMORY_ABSTAIN",
+    "EVALUATOR_ONLY_ORACLE"
+  ],
+  "population": {
+    "regimes": "unchanged Mixed Persistent Regime Benchmark v2",
+    "condition_assignment": "seed-ordered frozen cycle A,B,C,D",
+    "paired_candidates": "evaluator_only",
+    "memory_update": "selected action outcome only after fresh verification"
+  },
+  "budget": {
+    "initial_max_steps": 500,
+    "probe_max_steps": 64,
+    "verification_max_steps": 500,
+    "total_case_max_steps": 1064
+  },
+  "promotion_gate": {
+    "chronology_violations": 0,
+    "oracle_leakage_events": 0,
+    "budget_violations": 0,
+    "future_memory_access": 0,
+    "counterfactual_memory_writes": 0,
+    "operational_cases_minimum": 40,
+    "ambiguous_cases_minimum": 10,
+    "net_helpful_overrides_minimum": 3,
+    "accepted_recovery_not_below_frozen_rule": true,
+    "api_call_reduction_vs_all_case_two_glm_methods_minimum": 0.5,
+    "harmful_override_count_not_above_helpful_override_count": true
+  },
+  "claim_boundary": "fresh_development_only_no_validation_heldout_or_principle_claim",
+  "prohibitions": {
+    "reuse_gate_c_seeds": true,
+    "prompt_retuning_on_gate_c_changes": true,
+    "outcome_fitted_ambiguity_band": true,
+    "continuous_llm_action": true,
+    "validation": true,
+    "heldout": true,
+    "principle_generation": true
+  }
+}
