@@ -1,10 +1,23 @@
 {
   "protocol": "probemem_online_selective_override_development_v1",
-  "status": "PREREGISTERED_NOT_EXECUTED",
+  "status": "DEVELOPMENT_FROZEN_BEFORE_EXECUTION",
   "seed_registry": "configs/probemem_online/seed_registry_v2.json",
   "seed_range": [4500, 4599],
+  "first_online_episode_id": 21,
   "target_operational_cases": 40,
   "minimum_ambiguous_cases": 10,
+  "segments": [
+    {"segment_id": "bias_dominant", "seed_range": [4500, 4524], "regime_cycle": ["A_bias_low_noise", "C_bias_dominant_mixed"]},
+    {"segment_id": "noise_dominant", "seed_range": [4525, 4549], "regime_cycle": ["B_zero_mean_noise", "D_noise_dominant_mixed"]},
+    {"segment_id": "mixed", "seed_range": [4550, 4574], "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"]},
+    {"segment_id": "recurrence", "seed_range": [4575, 4599], "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise"]}
+  ],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
   "frozen_variance_threshold": 0.11560838098372882,
   "ambiguity_definition": {
     "method": "leave_one_probe_repeat_out_side_stability",
@@ -44,6 +57,28 @@
     "verification_max_steps": 500,
     "total_case_max_steps": 1064
   },
+  "random_namespaces": {
+    "initial_perturbation": 19601,
+    "registered_probe": 19602,
+    "paired_verification": 19603
+  },
+  "glm": {
+    "model": "glm-5.2",
+    "temperature": 0.0,
+    "max_tokens": 1100,
+    "timeout_seconds": 300,
+    "maximum_schema_repairs_per_decision": 1,
+    "unchanged_prompt_contract": "src/probemem/online_memory_policy.py"
+  },
+  "memory": {
+    "bootstrap_records": "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/action_outcome_records.json",
+    "bootstrap_records_sha256": "d723325ac33ec56c5592071ae77abbc1a1e0f9576fcea3d2cc3a294d880a5811",
+    "recent_count": 10,
+    "top_k": 10,
+    "write_after_fresh_verification_only": true,
+    "one_selected_action_per_episode": true
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
   "promotion_gate": {
     "chronology_violations": 0,
     "oracle_leakage_events": 0,
@@ -54,7 +89,7 @@
     "ambiguous_cases_minimum": 10,
     "net_helpful_overrides_minimum": 3,
     "accepted_recovery_not_below_frozen_rule": true,
-    "api_call_reduction_vs_all_case_two_glm_methods_minimum": 0.5,
+    "api_call_reduction_vs_all_case_three_glm_methods_minimum": 0.5,
     "harmful_override_count_not_above_helpful_override_count": true
   },
   "claim_boundary": "fresh_development_only_no_validation_heldout_or_principle_claim",

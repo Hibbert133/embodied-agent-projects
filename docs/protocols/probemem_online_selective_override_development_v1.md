@@ -1,6 +1,6 @@
 # ProbeMem-Online Selective Override Development v1
 
-Status: `PREREGISTERED_NOT_EXECUTED`
+Status: `DEVELOPMENT_FROZEN_BEFORE_EXECUTION`
 
 ## Motivation
 
@@ -94,8 +94,9 @@ Report accepted recovery, helpful/harmful/tied overrides, override precision,
 ambiguity rate, GLM call rate, API calls avoided, latency, tokens, abstention,
 environment steps, post-shift recovery, and paired bootstrap intervals.
 
-API efficiency is evaluated against calling both GLM methods on every
-operational case. Warm-up and schema repair calls are reported separately.
+API efficiency is evaluated against calling all three registered GLM variants
+(stateless, Memory fallback, and Memory abstention) on every operational case.
+Warm-up and schema repair calls are reported separately.
 
 ## Promotion gate
 
