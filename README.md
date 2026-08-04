@@ -11,6 +11,12 @@
 > [protocol](docs/protocols/probemem_verifier_demo_v1.md), and immutable
 > [case page](outputs/probemem_verifier_demo/runs/probemem_verifier_demo_20260804T092718Z_a158d7e53fbd/case_page.md).
 
+The subsequent no-new-rollout [failure-localization audit](reports/probemem_verifier_failure_localization_audit.md)
+found that excess admission was only part of the problem: the two authorized
+overrides were one harmful and one tied, while the guard blocked one helpful,
+four harmful, and four tied alternatives. It does not select a replacement
+gate or authorize fresh execution.
+
 Two-minute deterministic integration smoke:
 
 ```powershell

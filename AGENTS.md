@@ -519,3 +519,10 @@ net benefit. Preserve the negative result and do not tune the ambiguity band,
 posterior, coverage, contradiction, or confidence guards on seeds 4700--4749.
 Do not execute reserved seeds 4750--4799 or advance to GLM, validation,
 held-out execution, or principles from this result.
+
+A subsequent no-new-rollout failure-localization audit attributed the 11 calls
+to five ambiguity-band, seven recent-contradiction, and one memory-conflict
+trigger occurrences, with overlaps. The two authorized overrides were one
+harmful and one tied; nine blocked alternatives were one helpful, four harmful,
+and four tied. This is descriptive mechanism evidence only. Do not remove a
+trigger, fit a new band, or revise posterior/guard parameters from this audit.
