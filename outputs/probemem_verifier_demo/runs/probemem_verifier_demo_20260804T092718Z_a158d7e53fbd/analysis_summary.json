@@ -1,0 +1,122 @@
+{
+  "run_status": "COMPLETED",
+  "experiment_run_id": "probemem_verifier_demo_20260804T092718Z_a158d7e53fbd",
+  "manifest_id": "6288ba0c45d639fec3573b3bdd4763b31ed160a052aaa18ed50dc1e6b53a0b61",
+  "source_git_commit": "a158d7e53fbdb3e67d3ea44c34460ef625238690",
+  "initial_units": 50,
+  "operational_cases": 21,
+  "exclusive_recovery_cases": 10,
+  "methods": {
+    "ALWAYS_ON_VERIFIER": {
+      "cases": 21,
+      "accepted": 15,
+      "exclusive_case_selection_accuracy": 0.7,
+      "harmful_selections": 3,
+      "mean_final_distance": 0.10140007417841765,
+      "environment_steps": 16054,
+      "verifier_calls": 21,
+      "overrides": 7
+    },
+    "BUDGETED_VERIFIER": {
+      "cases": 21,
+      "accepted": 15,
+      "exclusive_case_selection_accuracy": 0.7,
+      "harmful_selections": 3,
+      "mean_final_distance": 0.0985136252216621,
+      "environment_steps": 16067,
+      "verifier_calls": 11,
+      "overrides": 2
+    },
+    "EVALUATOR_ONLY_ORACLE": {
+      "cases": 21,
+      "accepted": 18,
+      "exclusive_case_selection_accuracy": 1.0,
+      "harmful_selections": 0,
+      "mean_final_distance": 0.06788671010165297,
+      "environment_steps": 14917,
+      "verifier_calls": 0,
+      "overrides": 5
+    },
+    "FROZEN_DETERMINISTIC": {
+      "cases": 21,
+      "accepted": 16,
+      "exclusive_case_selection_accuracy": 0.8,
+      "harmful_selections": 2,
+      "mean_final_distance": 0.0870117466835321,
+      "environment_steps": 15653,
+      "verifier_calls": 0,
+      "overrides": 0
+    }
+  },
+  "overrides_vs_frozen": {
+    "ALWAYS_ON_VERIFIER": {
+      "changed": 7,
+      "helpful": 1,
+      "harmful": 2,
+      "tie": 4,
+      "override_precision": 0.3333333333333333
+    },
+    "BUDGETED_VERIFIER": {
+      "changed": 2,
+      "helpful": 0,
+      "harmful": 1,
+      "tie": 1,
+      "override_precision": 0.0
+    }
+  },
+  "blocked_budgeted_overrides": {
+    "blocked": 9,
+    "blocked_helpful": 1,
+    "blocked_harmful": 4,
+    "blocked_tie": 4
+  },
+  "verifier_budget": {
+    "budgeted_call_rate": 0.5238095238095238,
+    "call_reduction_vs_always_on": 0.47619047619047616,
+    "admission_scans": 21,
+    "budgeted_full_candidate_retrievals": 22,
+    "always_on_full_candidate_retrievals": 42,
+    "glm_api_calls": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "timeout_or_fail_closed_count": 0,
+    "deterministic_latency_ms": {
+      "p50": 0.09820000195759349,
+      "p90": 0.10420000035082921,
+      "maximum": 0.10680000195861794
+    }
+  },
+  "memory": {
+    "mean_coverage": 0.6325407055947546,
+    "conflict_rate": 0.047619047619047616,
+    "recent_contradiction_rate": 0.3333333333333333,
+    "growth_by_method": {
+      "FROZEN_DETERMINISTIC": 21,
+      "ALWAYS_ON_VERIFIER": 21,
+      "BUDGETED_VERIFIER": 21
+    }
+  },
+  "integrity": {
+    "chronology_violations": 0,
+    "oracle_leakage_events": 0,
+    "budget_violations": 0,
+    "random_namespace_violations": 0,
+    "future_memory_access": 0,
+    "counterfactual_memory_writes": 0,
+    "invalid_memory_ids": 0,
+    "invalid_skill_executions": 0
+  },
+  "demo_gate": {
+    "evaluated": true,
+    "passed": false,
+    "checks": {
+      "population_complete": true,
+      "integrity_zero": true,
+      "budgeted_call_rate_at_most_50_percent": false,
+      "route_a_or_b": false
+    },
+    "route_a": false,
+    "route_b": false
+  },
+  "claim_boundary": "engineering/research feasibility Demo; deterministic verifier only; no live GLM, validation, held-out, or statistical superiority claim"
+}
