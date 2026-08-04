@@ -537,3 +537,13 @@ clean committed implementation exist. Seeds 5100--5299 remain reserved. The v1
 Demo artifacts and negative results are immutable. Admission, features,
 distance, prior, top-k, skills, GLM prohibition, validation, held-out, and
 principle boundaries remain frozen.
+
+Calibrated Verifier v2 calibration completed all 100 seeds 4800--4899 with 37
+operational and 18 exclusive-recovery cases. All integrity counters were zero,
+but none of the 4,800 preregistered threshold combinations produced an override:
+the default and alternative 95% posterior intervals overlapped in every case.
+Weighted pooled Brier (0.167678) was also worse than unweighted v1 (0.166995).
+The calibration gate failed with no selected thresholds. Preserve this result;
+do not revise the interval level, prior, distance, top-k, grid, or guard on this
+stream. Do not execute prospective seeds 4900--5099 or reserved 5100--5299, and
+do not advance to GLM, validation, held-out, or principles.

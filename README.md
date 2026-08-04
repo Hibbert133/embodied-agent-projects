@@ -1,5 +1,14 @@
 # Active Evidence Acquisition for Self-Improving Embodied Agents
 
+> **Latest development result — Calibrated Verifier v2:** calibration scanned
+> 100 fresh units (seeds 4800--4899), yielding 37 operational and 18 exclusive-
+> recovery cases with zero integrity violations. None of the 4,800 frozen guard
+> combinations could override because every default/alternative 95% posterior
+> interval overlapped. Weighted pooled Brier was 0.167678 versus 0.166995 for
+> unweighted v1. Calibration failed, so seeds 4900--5099 were not executed. See
+> the [calibration report](reports/probemem_calibrated_verifier_calibration_v2.md)
+> and [protocol](docs/protocols/probemem_calibrated_verifier_v2.md).
+
 > **Latest feasibility result — ProbeMem budgeted verifier:** the immutable
 > 50-unit fresh-development Demo completed with zero chronology, leakage,
 > counterfactual-write, budget, or invalid-Skill violations, but failed its
