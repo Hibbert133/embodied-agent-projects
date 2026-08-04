@@ -1,0 +1,87 @@
+{
+  "protocol": "probemem_verifier_demo_v1",
+  "status": "DEMO_FROZEN_BEFORE_EXECUTION",
+  "seed_registry": "configs/probemem_verifier/seed_registry_v1.json",
+  "seed_range": [4700, 4749],
+  "maximum_initial_units": 50,
+  "target_operational_cases": 30,
+  "minimum_operational_cases": 20,
+  "descriptive_exclusive_recovery_target": 8,
+  "first_online_episode_id": 21,
+  "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "registered_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "frozen_variance_threshold": 0.11560838098372882,
+  "admission": {
+    "ambiguity_margin": 0.05,
+    "memory_conflict_requires_positive_coverage": true,
+    "recent_contradiction_requires_positive_coverage": true,
+    "recent_same_class_definition": "nearest action-conditioned record is in the recent window and is REJECTED",
+    "outcome_fitted": false
+  },
+  "deterministic_verifier": {
+    "prior_alpha": 1.0,
+    "prior_beta": 1.0,
+    "accepted_weight": 1.0,
+    "inconclusive_success_weight": 0.5,
+    "inconclusive_failure_weight": 0.5,
+    "rejected_weight": 1.0,
+    "accepted_status_threshold": 0.70,
+    "rejected_status_threshold": 0.30
+  },
+  "override_guard": {
+    "probability_margin_minimum": 0.15,
+    "alternative_coverage_minimum": 3,
+    "alternative_contradiction_rate_maximum": 0.30,
+    "recent_global_preference_must_agree": true,
+    "verifier_confidence_minimum": 0.70
+  },
+  "candidate_skills": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "registered_methods": ["FROZEN_DETERMINISTIC", "ALWAYS_ON_VERIFIER", "BUDGETED_VERIFIER", "EVALUATOR_ONLY_ORACLE"],
+  "verifier_mode": "deterministic",
+  "glm": {
+    "enabled_for_registered_run": false,
+    "model": "glm-5.2",
+    "temperature": 0.0,
+    "max_tokens": 1100,
+    "timeout_seconds": 300,
+    "maximum_schema_repairs_per_decision": 1
+  },
+  "memory": {
+    "bootstrap_records": "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/action_outcome_records.json",
+    "bootstrap_records_sha256": "d723325ac33ec56c5592071ae77abbc1a1e0f9576fcea3d2cc3a294d880a5811",
+    "recent_count": 10,
+    "top_k": 10,
+    "write_after_fresh_verification_only": true,
+    "one_selected_action_per_episode_per_method": true
+  },
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps": 500, "total_case_max_steps": 1064},
+  "random_namespaces": {"initial_perturbation": 19701, "registered_probe": 19702, "paired_verification": 19703},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "success_gate": {
+    "chronology_violations": 0,
+    "oracle_leakage_events": 0,
+    "counterfactual_memory_writes": 0,
+    "invalid_skill_executions": 0,
+    "budgeted_verifier_call_rate_maximum": 0.50,
+    "route_a": "budgeted recovery >= frozen and helpful overrides > harmful overrides",
+    "route_b": "budgeted recovery no more than one below always-on and verifier calls reduced by at least 50 percent"
+  },
+  "claim_boundary": "engineering_research_feasibility_demo_only_no_statistical_superiority_claim",
+  "prohibitions": {
+    "validation": true,
+    "heldout": true,
+    "principle_generation": true,
+    "vla_training": true,
+    "reinforcement_learning": true,
+    "third_skill": true,
+    "old_seed_retuning": true,
+    "counterfactual_memory_write": true,
+    "oracle_agent_access": true
+  }
+}

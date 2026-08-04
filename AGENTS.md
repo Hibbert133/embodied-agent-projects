@@ -500,3 +500,13 @@ extend or replace seeds 4500--4599, widen the ambiguity definition, execute
 reserved seeds 4600--4699, or advance to validation, held-out execution, or
 principles. A successor requires explicit authorization and a new scientific
 question with fresh seeds.
+
+The user explicitly authorized the engineering/research feasibility successor
+in `docs/protocols/probemem_verifier_demo_v1.md`. It may scan fresh development
+seeds 4700--4749 once and compare Frozen, Always-on, and Budgeted deterministic
+history-aware verification on a shared paired evaluator stream. Each method may
+write only its selected fresh outcome to its own chronological memory. Seeds
+4750--4799 remain reserved. The ambiguity band and override guard are fixed
+before execution and must not be tuned from Demo outcomes. The registered run
+must not call GLM, run validation or held-out seeds, generate principles, add a
+third skill, or support a statistical superiority claim.
