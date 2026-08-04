@@ -6,6 +6,12 @@
   "first_online_episode_id": 21,
   "target_operational_cases": 40,
   "minimum_ambiguous_cases": 10,
+  "registered_probe": {
+    "repeats": 4,
+    "magnitude": 0.2,
+    "steps_per_direction": 4,
+    "maximum_steps": 64
+  },
   "segments": [
     {"segment_id": "bias_dominant", "seed_range": [4500, 4524], "regime_cycle": ["A_bias_low_noise", "C_bias_dominant_mixed"]},
     {"segment_id": "noise_dominant", "seed_range": [4525, 4549], "regime_cycle": ["B_zero_mean_noise", "D_noise_dominant_mixed"]},

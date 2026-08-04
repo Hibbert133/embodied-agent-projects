@@ -37,6 +37,10 @@ class ProbeMemOnlineSelectiveOverrideProtocolTest(unittest.TestCase):
         self.assertEqual(definition["method"], "leave_one_probe_repeat_out_side_stability")
         self.assertFalse(definition["outcome_fitted_band"])
         self.assertEqual(self.config["frozen_variance_threshold"], 0.11560838098372882)
+        self.assertEqual(
+            self.config["registered_probe"],
+            {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+        )
 
     def test_high_confidence_bypasses_api_and_conflict_falls_back(self) -> None:
         policy = self.config["primary_policy"]
