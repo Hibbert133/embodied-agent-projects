@@ -52,8 +52,9 @@ def _recovery_calls(summary: dict[str, Any], path: Path) -> Path:
         color = (COLORS["gray"], COLORS["red"], COLORS["green"])[index]
         draw.ellipse((x - 14, y - 14, x + 14, y + 14), fill=color, outline=COLORS["navy"])
         label = f"{display[method]}: {row['accepted']}/{row['cases']}, calls={calls:.1%}"
-        label_x = x - 285 if calls > 0.80 else x + 20
-        draw.text((label_x, y - 10), label, fill=COLORS["ink"], font=ImageFont.load_default(size=17))
+        label_x = x - 200 if calls > 0.80 else x + 20
+        label_y = y + 24 if method == "ALWAYS_ON_VERIFIER" else y - 36 if method == "BUDGETED_VERIFIER" else y - 10
+        draw.text((label_x, label_y), label, fill=COLORS["ink"], font=ImageFont.load_default(size=17))
     draw.line((120, 620, 1050, 620), fill=COLORS["ink"], width=2)
     draw.line((120, 620, 120, 140), fill=COLORS["ink"], width=2)
     draw.text((470, 660), "Verifier call rate", fill=COLORS["ink"], font=ImageFont.load_default(size=18))
