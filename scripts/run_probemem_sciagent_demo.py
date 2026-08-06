@@ -314,7 +314,19 @@ def _flush(run_dir: Path, population: list, decisions: list, probes: list, outco
 def _validate(manifest_path: Path, config_path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     if _git("status", "--porcelain"): raise RuntimeError("SciAgent execution requires a clean worktree")
     manifest = json.loads(manifest_path.read_text(encoding="utf-8")); config = json.loads(config_path.read_text(encoding="utf-8"))
-    if manifest["source_git_commit"] != _git("rev-parse", "HEAD"): raise RuntimeError("manifest commit differs from HEAD")
+    source_commit = str(manifest["source_git_commit"])
+    head = _git("rev-parse", "HEAD")
+    ancestry = subprocess.run(
+        ["git", "-c", f"safe.directory={ROOT.as_posix()}", "merge-base", "--is-ancestor", source_commit, head],
+        cwd=ROOT, capture_output=True, text=True,
+    )
+    if ancestry.returncode != 0:
+        raise RuntimeError("manifest source commit is not an ancestor of HEAD")
+    if source_commit != head:
+        changed = set(_git("diff", "--name-only", source_commit, head).splitlines())
+        allowed = {manifest_path.relative_to(ROOT).as_posix()}
+        if changed - allowed:
+            raise RuntimeError(f"tracked files changed after manifest source commit: {sorted(changed - allowed)}")
     if manifest["config_sha256"] != hashlib.sha256(config_path.read_bytes()).hexdigest(): raise RuntimeError("config hash mismatch")
     if manifest["config_path"] != config_path.relative_to(ROOT).as_posix(): raise RuntimeError("config path mismatch")
     canonical = dict(manifest); recorded_id = canonical.pop("manifest_id")
