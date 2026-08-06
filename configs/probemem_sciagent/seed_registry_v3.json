@@ -1,0 +1,12 @@
+{
+  "schema_version": 3,
+  "registry_id": "probemem_sciagent_api_envelope_seed_registry_v3",
+  "inherits": "configs/probemem_sciagent/seed_registry_v2.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "api_envelope_shadow": [6000, 6049],
+    "api_envelope_future_reserved": [6050, 6149]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 5999]],
+  "notes": "Seeds 5850--5899 are immutable v1.1 failures and 5900--5999 remain reserved. Only shadow envelope evaluation is registered on 6000--6049."
+}

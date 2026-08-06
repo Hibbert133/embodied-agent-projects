@@ -20,6 +20,7 @@ from src.probemem.compact_evidence import build_compact_causal_evidence  # noqa:
 from src.probemem_sciagent.agent_orchestrator import SciAgentCallBudget  # noqa: E402
 from src.probemem_sciagent.agent_payload import build_decision_payload  # noqa: E402
 from src.probemem_sciagent.api_reliability import ApiReliabilityClient, build_health_check_payload, certify_payload  # noqa: E402
+from src.probemem_sciagent.api_envelope import EnvelopeTolerantApiReliabilityClient  # noqa: E402
 from src.probemem_sciagent.memory_retrieval import ScientificMemorySnapshot  # noqa: E402
 from src.reasoning import EvidenceSource, build_structured_evidence_state  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
@@ -39,7 +40,12 @@ def main() -> int:
             int(api["health_check_primary_calls"]) + int(api["case_primary_calls"]),
             int(api["maximum_schema_repairs"]), int(api["maximum_total_calls"]),
         )
-        client = ApiReliabilityClient(
+        client_type = (
+            EnvelopeTolerantApiReliabilityClient
+            if api.get("response_envelope_mode") == "UNIQUE_CERTIFIED_OBJECT"
+            else ApiReliabilityClient
+        )
+        client = client_type(
             model=str(api["model"]), timeout_seconds=float(api["timeout_seconds"]), max_tokens=int(api["max_tokens"]),
             call_budget=budget, maximum_consecutive_failures=int(api["maximum_consecutive_logical_failures"]),
         )
@@ -103,6 +109,8 @@ def main() -> int:
             "certified_valid_outputs": valid, "grounded_output_rate": 0.0 if not operational else valid / operational,
             "fail_closed_outputs": operational - valid, "repairs": repairs, "api_calls": budget.total_calls,
             "cache_hits": sum(bool(row.get("cache_hit")) for row in outputs), "circuit_open": client.circuit_open,
+            "bare_json_calls": sum(row.get("extraction_mode") == "BARE_JSON" for row in client.audit),
+            "wrapped_unique_json_calls": sum(row.get("extraction_mode") == "WRAPPED_UNIQUE_JSON" for row in client.audit),
             "action_execution_count": 0, "memory_write_count": 0, "principle_update_count": 0,
             "integrity_violations": 0,
             "claim_boundary": config["claim_boundary"],
