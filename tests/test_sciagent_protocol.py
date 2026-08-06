@@ -25,5 +25,16 @@ class SciAgentProtocolTest(unittest.TestCase):
             config = json.loads((ROOT / "configs/probemem_sciagent" / name).read_text())
             self.assertFalse(config["execution_authorized"])
 
+    def test_api_reliability_shadow_is_bounded_and_nonexecuting(self):
+        config = json.loads((ROOT / "configs/probemem_sciagent/api_reliability_v1_1.json").read_text())
+        self.assertEqual(config["seed_range"], [5850, 5899])
+        self.assertEqual(config["api"]["maximum_total_calls"], 10)
+        self.assertTrue(config["prohibitions"]["action_execution"])
+        self.assertTrue(config["prohibitions"]["memory_write"])
+        runner = (ROOT / "scripts/run_probemem_sciagent_api_reliability.py").read_text()
+        self.assertNotIn("_run_verification", runner)
+        self.assertNotIn("ExperienceMemory", runner)
+        self.assertNotIn("PrincipleMemory", runner)
+
 
 if __name__ == "__main__": unittest.main()

@@ -10,6 +10,18 @@ from src.probemem_sciagent.schemas import APPLICABILITY_CONDITION_CODES, PROBE_T
 from src.reasoning.evidence import validate_no_oracle_evidence
 
 
+DECISION_RESPONSE_SCHEMA = {
+    "evidence_summary": "string", "candidate_hypotheses": "list[str] covering both exact skill names",
+    "retrieved_principle_ids": "list of supplied IDs", "retrieved_experience_ids": "list of supplied IDs",
+    "decision_mode": "ACT_DIRECTLY | RUN_MICRO_PROBE | ABSTAIN",
+    "selected_probe_type": "registered probe or null", "selected_skill": "registered skill or null",
+    "expected_effect": "string", "uncertainty_reason": "string",
+    "predicted_success_probability": "number 0..1", "stop_reason": "string or null",
+    "retrieved_hypothesis_ids": "list of supplied IDs", "tested_hypothesis_ids": "subset of retrieved hypothesis IDs",
+    "probe_justification_codes": "registered codes; non-empty only for RUN_MICRO_PROBE",
+}
+
+
 def build_decision_payload(
     *, evidence: Mapping[str, Any], memory: ScientificMemorySnapshot,
     remaining_budget: Mapping[str, int], stage: str,
@@ -32,16 +44,7 @@ def build_decision_payload(
             "continuous_actions_forbidden": True,
             "post_probe_may_not_request_another_probe": True,
         },
-        "response_schema": {
-            "evidence_summary": "string", "candidate_hypotheses": "list[str] covering both exact skill names",
-            "retrieved_principle_ids": "list of supplied IDs", "retrieved_experience_ids": "list of supplied IDs",
-            "decision_mode": "ACT_DIRECTLY | RUN_MICRO_PROBE | ABSTAIN",
-            "selected_probe_type": "registered probe or null", "selected_skill": "registered skill or null",
-            "expected_effect": "string", "uncertainty_reason": "string",
-            "predicted_success_probability": "number 0..1", "stop_reason": "string or null",
-            "retrieved_hypothesis_ids": "list of supplied IDs", "tested_hypothesis_ids": "subset of retrieved hypothesis IDs",
-            "probe_justification_codes": "registered codes; non-empty only for RUN_MICRO_PROBE",
-        },
+        "response_schema": dict(DECISION_RESPONSE_SCHEMA),
     }
     validate_no_oracle_evidence(payload)
     return payload
