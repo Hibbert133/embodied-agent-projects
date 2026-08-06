@@ -547,3 +547,29 @@ The calibration gate failed with no selected thresholds. Preserve this result;
 do not revise the interval level, prior, distance, top-k, grid, or guard on this
 stream. Do not execute prospective seeds 4900--5099 or reserved 5100--5299, and
 do not advance to GLM, validation, held-out, or principles.
+
+The user subsequently authorized the ProbeMem-SciAgent v1 implementation on
+the same branch. Its synthetic pathway audit is metric-ineligible, and its
+first live preflight consumed zero seeds and made zero API calls. Do not report
+the synthetic audit as recovery evidence or overwrite earlier verifier results.
+
+The separately frozen API Reliability v1.1 shadow protocol in
+`docs/protocols/probemem_sciagent_api_reliability_v1_1.md` executed once on
+fresh seeds 5850--5899. It reached eight operational cases but produced zero
+certified-valid outputs. Three of four calls failed the strict bare-JSON
+transport parser; the circuit breaker prevented six later calls. No action
+executed and no memory or principle was written. Preserve this failed result
+and do not rerun or replace seeds 5850--5899. Seeds 5900--5999 remain reserved.
+
+The user then authorized the single-change API Envelope v1.2 shadow successor
+in `docs/protocols/probemem_sciagent_api_envelope_v1_2.md`. Its unique-object
+extractor made all four calls transport-valid, including three wrapped JSON
+responses, but zero of eight operational outputs passed the complete semantic
+certificate. The first localized failure was an unknown probe-justification
+code, after which the repair budget and circuit breaker stopped further calls.
+No action executed and no memory or principle was written. Preserve this
+failed result, do not rerun seeds 6000--6049, and do not execute reserved seeds
+6050--6149. A successor must use a separately frozen fresh-seed protocol and
+must test a complete capability-token/enum contract without weakening host
+certificate validation. Online action execution, recovery claims, validation,
+held-out execution, and principle promotion remain blocked.
