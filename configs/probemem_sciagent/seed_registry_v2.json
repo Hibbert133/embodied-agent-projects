@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "registry_id": "probemem_sciagent_api_reliability_seed_registry_v2",
+  "inherits": "configs/probemem_sciagent/seed_registry_v1.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "api_reliability_shadow": [5850, 5899],
+    "api_reliability_future_reserved": [5900, 5999]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 5849]],
+  "notes": "Only shadow interface collection on 5850--5899 is registered. Model decisions cannot execute or write memory."
+}
