@@ -573,3 +573,18 @@ failed result, do not rerun seeds 6000--6049, and do not execute reserved seeds
 must test a complete capability-token/enum contract without weakening host
 certificate validation. Online action execution, recovery claims, validation,
 held-out execution, and principle promotion remain blocked.
+
+The separately frozen Capability Contract v1.3 shadow successor in
+`docs/protocols/probemem_sciagent_capability_contract_v1_3.md` then executed
+once on fresh seeds 6150--6199 and passed its interface gate. All eight
+operational outputs were fully certified; all nine calls, including the health
+check, were transport-valid and capability-token-valid with zero repairs and
+zero integrity violations. No action executed and no memory or principle was
+written. All eight decisions requested a micro-probe, so this is evidence that
+the complete token contract fixes structured semantic validity, not evidence
+of budgeted probe allocation, action quality, or recovery. Preserve this run,
+do not rerun seeds 6150--6199, and do not execute reserved seeds 6200--6299.
+Under the current qualitative GLM boundary, an online successor requires a
+separately frozen protocol that evaluates probe novelty and utility under the
+case budget; interface-gate passage alone does not authorize model actions,
+validation, held-out execution, memory claims, or principle promotion.
