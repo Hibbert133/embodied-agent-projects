@@ -1,0 +1,12 @@
+{
+  "schema_version": 4,
+  "registry_id": "probemem_sciagent_capability_contract_seed_registry_v4",
+  "inherits": "configs/probemem_sciagent/seed_registry_v3.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "capability_contract_shadow": [6150, 6199],
+    "capability_contract_future_reserved": [6200, 6299]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 6149]],
+  "notes": "Seeds 5850--6049 are immutable API shadow streams and 5900--5999 plus 6050--6149 remain reserved. Only capability-contract shadow evaluation is registered on 6150--6199."
+}

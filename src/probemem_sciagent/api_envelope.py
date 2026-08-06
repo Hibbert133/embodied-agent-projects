@@ -8,6 +8,7 @@ from time import perf_counter
 from typing import Any, Mapping
 
 from src.probemem_sciagent.api_reliability import ApiReliabilityClient
+from src.probemem_sciagent.capability_contract import expand_capability_response
 
 
 CERTIFIED_TOP_LEVEL_KEYS = {"decision", "certificate"}
@@ -83,20 +84,46 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
                 if usage is not None and hasattr(usage, name)
             }
             mapping, extraction_mode = extract_unique_certified_object(raw)
+            contract = request_payload.get("capability_contract")
+            capability_applied = contract is not None
+            if capability_applied:
+                try:
+                    mapping = expand_capability_response(mapping, contract)
+                except Exception as exc:
+                    self.audit.append({
+                        "phase": phase, "repair": repair, "valid_transport": True,
+                        "extraction_mode": extraction_mode,
+                        "capability_contract_applied": True,
+                        "valid_capability_contract": False,
+                        "latency_ms": (perf_counter() - started) * 1000.0,
+                        "usage": usage_payload, "error": f"{type(exc).__name__}: {exc}",
+                        "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
+                    })
+                    raise _RecordedCapabilityError(str(exc)) from exc
             self.audit.append({
                 "phase": phase, "repair": repair, "valid_transport": True,
                 "extraction_mode": extraction_mode,
+                "capability_contract_applied": capability_applied,
+                "valid_capability_contract": True,
                 "latency_ms": (perf_counter() - started) * 1000.0,
                 "usage": usage_payload,
                 "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
             })
             return mapping
+        except _RecordedCapabilityError:
+            raise
         except Exception as exc:
             self.audit.append({
                 "phase": phase, "repair": repair, "valid_transport": False,
                 "extraction_mode": "REJECTED",
+                "capability_contract_applied": "capability_contract" in request_payload,
+                "valid_capability_contract": False,
                 "latency_ms": (perf_counter() - started) * 1000.0,
                 "usage": usage_payload, "error": f"{type(exc).__name__}: {exc}",
                 "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
             })
             raise
+
+
+class _RecordedCapabilityError(ValueError):
+    """Internal marker preventing duplicate audit rows after token rejection."""

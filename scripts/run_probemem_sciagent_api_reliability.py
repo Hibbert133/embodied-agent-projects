@@ -21,6 +21,7 @@ from src.probemem_sciagent.agent_orchestrator import SciAgentCallBudget  # noqa:
 from src.probemem_sciagent.agent_payload import build_decision_payload  # noqa: E402
 from src.probemem_sciagent.api_reliability import ApiReliabilityClient, build_health_check_payload, certify_payload  # noqa: E402
 from src.probemem_sciagent.api_envelope import EnvelopeTolerantApiReliabilityClient  # noqa: E402
+from src.probemem_sciagent.capability_contract import attach_capability_contract  # noqa: E402
 from src.probemem_sciagent.memory_retrieval import ScientificMemorySnapshot  # noqa: E402
 from src.reasoning import EvidenceSource, build_structured_evidence_state  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
@@ -50,8 +51,14 @@ def main() -> int:
             call_budget=budget, maximum_consecutive_failures=int(api["maximum_consecutive_logical_failures"]),
         )
         empty = ScientificMemorySnapshot(1, (), (), (), ())
+        health_payload = build_health_check_payload()
+        if api.get("capability_contract_mode") == "PER_REQUEST_TOKENS_V1":
+            health_payload = attach_capability_contract(
+                health_payload, snapshot=empty,
+                current_evidence_id="api_health_check_evidence",
+            )
         health = client.certified_decide(
-            build_health_check_payload(), snapshot=empty, current_evidence_id="api_health_check_evidence",
+            health_payload, snapshot=empty, current_evidence_id="api_health_check_evidence",
         )
         health_valid = bool(
             health.valid and health.certified_decision is not None
@@ -90,7 +97,13 @@ def main() -> int:
                 evidence=compact.to_dict(), memory=empty,
                 remaining_budget={"micro_probe_steps": 192, "verification_steps": 500}, stage="PRE_PROBE",
             )
-            result = client.certified_decide(certify_payload(base), snapshot=empty, current_evidence_id=compact.evidence_id)
+            request_payload = certify_payload(base)
+            if api.get("capability_contract_mode") == "PER_REQUEST_TOKENS_V1":
+                request_payload = attach_capability_contract(
+                    request_payload, snapshot=empty,
+                    current_evidence_id=compact.evidence_id,
+                )
+            result = client.certified_decide(request_payload, snapshot=empty, current_evidence_id=compact.evidence_id)
             outputs.append({"episode_id": episode_id, "seed": seed, **_result(result), "shadow_only": True, "action_executed": False, "memory_written": False})
             population.append(row); _flush(run, population, outputs, client)
         valid = sum(bool(row["valid"]) for row in outputs); repairs = budget.repair_calls
@@ -111,6 +124,8 @@ def main() -> int:
             "cache_hits": sum(bool(row.get("cache_hit")) for row in outputs), "circuit_open": client.circuit_open,
             "bare_json_calls": sum(row.get("extraction_mode") == "BARE_JSON" for row in client.audit),
             "wrapped_unique_json_calls": sum(row.get("extraction_mode") == "WRAPPED_UNIQUE_JSON" for row in client.audit),
+            "capability_valid_calls": sum(row.get("valid_capability_contract") is True for row in client.audit),
+            "capability_invalid_calls": sum(row.get("capability_contract_applied") and row.get("valid_capability_contract") is False for row in client.audit),
             "action_execution_count": 0, "memory_write_count": 0, "principle_update_count": 0,
             "integrity_violations": 0,
             "claim_boundary": config["claim_boundary"],
