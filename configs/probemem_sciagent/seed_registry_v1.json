@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "registry_id": "probemem_sciagent_seed_registry_v1",
+  "inherits": "configs/probemem_verifier/seed_registry_v2.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "demo": [5300, 5349],
+    "calibration": [5350, 5449],
+    "prospective_development": [5450, 5649],
+    "future_reserved": [5650, 5849]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 5299]],
+  "notes": "Only 5300--5349 is authorized for the v1 Demo. Later partitions remain blocked until their separately frozen gates are satisfied."
+}

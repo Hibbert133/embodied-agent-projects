@@ -1,0 +1,35 @@
+{
+  "protocol_id": "probemem_sciagent_demo_v1",
+  "protocol_version": 1,
+  "status": "DEMO_FROZEN_BEFORE_EXECUTION",
+  "split": "development_demo",
+  "seed_registry": "configs/probemem_sciagent/seed_registry_v1.json",
+  "seed_range": [5300, 5349],
+  "maximum_initial_units": 50,
+  "target_operational_cases": 15,
+  "minimum_operational_cases": 10,
+  "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "registered_skills": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "registered_probes": {
+    "COMPENSATION_RESPONSE_PROBE": {"trials": 1, "steps_per_trial": 64, "maximum_steps": 64},
+    "RETRY_REPEATABILITY_PROBE": {"trials": 3, "steps_per_trial": 64, "maximum_steps": 192}
+  },
+  "mandatory_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "probe_measurement": {"contact_distance": 0.08, "positive_progress_threshold": 0.0, "severe_failure_threshold": -0.02},
+  "budget": {"initial_max_steps": 500, "mandatory_probe_max_steps": 64, "micro_probe_max_steps": 192, "verification_max_steps": 500, "total_case_max_steps": 1256},
+  "principle_promotion": {"minimum_independent_seeds": 3, "minimum_support": 4, "maximum_contradictions": 1, "minimum_support_rate": 0.75, "minimum_targeted_verifications": 1, "most_recent_must_not_be_rejected": true},
+  "memory_retrieval": {"maximum_principles": 3, "maximum_support_experiences": 3, "maximum_counterexamples": 3, "maximum_hypotheses": 3},
+  "glm": {"model": "glm-5.2", "temperature": 0.0, "max_tokens": 1400, "timeout_seconds": 300, "maximum_primary_calls": 45, "maximum_schema_repairs": 15, "maximum_total_calls": 60, "transport_retries": 0},
+  "random_namespaces": {"initial": 25301, "mandatory_probe": 25302, "compensation_probe": 25303, "retry_probe_base": 25310, "paired_verification": 25320},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "output_root": "outputs/probemem_sciagent/demo/runs",
+  "synthetic_audit_root": "outputs/probemem_sciagent/demo/synthetic_pathway_audit",
+  "claim_boundary": "engineering_feasibility_demo_no_performance_or_online_learning_claim",
+  "prohibitions": {"validation": true, "heldout": true, "new_skill": true, "continuous_agent_actions": true, "counterfactual_memory_write": true, "oracle_agent_access": true, "old_seed_retuning": true}
+}
