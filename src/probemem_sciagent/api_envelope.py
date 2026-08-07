@@ -14,6 +14,10 @@ from src.probemem_sciagent.quantized_probe_value import (
     QUANTIZED_CONTRACT_VERSION,
     validate_quantized_probe_value_certificate,
 )
+from src.probemem_sciagent.robust_probe_value import (
+    ROBUST_CONTRACT_VERSION,
+    validate_robust_probe_value_certificate,
+)
 
 
 CERTIFIED_TOP_LEVEL_KEYS = {"decision", "certificate"}
@@ -76,7 +80,7 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
         raw = ""
         usage_payload: dict[str, int] = {}
         try:
-            response = self._get_client().messages.create(
+            response = self._create_message_response(
                 model=self.model, max_tokens=self.max_tokens, temperature=0.0,
                 system=system,
                 messages=[{"role": "user", "content": json.dumps(request_payload)}],
@@ -121,7 +125,12 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
                 try:
                     if not isinstance(contract, Mapping):
                         raise ValueError("probe value certificate requires capability contract")
-                    if probe_contract.get("contract_version") == QUANTIZED_CONTRACT_VERSION:
+                    if probe_contract.get("contract_version") == ROBUST_CONTRACT_VERSION:
+                        probe_assessment = validate_robust_probe_value_certificate(
+                            raw_probe_value, decision=mapping["decision"],
+                            capability_contract=contract, probe_value_contract=probe_contract,
+                        )
+                    elif probe_contract.get("contract_version") == QUANTIZED_CONTRACT_VERSION:
                         probe_assessment = validate_quantized_probe_value_certificate(
                             raw_probe_value, decision=mapping["decision"],
                             capability_contract=contract, probe_value_contract=probe_contract,
@@ -161,6 +170,7 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
             return mapping
         except (_RecordedCapabilityError, _RecordedProbeValueError):
             raise
+
         except Exception as exc:
             self.audit.append({
                 "phase": phase, "repair": repair, "valid_transport": False,
@@ -172,6 +182,9 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
                 "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
             })
             raise
+
+    def _create_message_response(self, **kwargs: Any) -> Any:
+        return self._get_client().messages.create(**kwargs)
 
 
 class _RecordedCapabilityError(ValueError):

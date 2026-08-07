@@ -1,0 +1,12 @@
+{
+  "schema_version": 7,
+  "registry_id": "probemem_sciagent_robust_probe_value_seed_registry_v7",
+  "inherits": "configs/probemem_sciagent/seed_registry_v6.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "robust_probe_value_shadow": [6600, 6649],
+    "robust_probe_value_future_reserved": [6650, 6749]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 6599]],
+  "notes": "Seeds 6450--6499 are an immutable incomplete quantized-value stream. All earlier reserves remain blocked. Only robust probe-value shadow evaluation is registered on 6600--6649."
+}

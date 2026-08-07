@@ -25,6 +25,8 @@ from src.probemem_sciagent.capability_contract import attach_capability_contract
 from src.probemem_sciagent.memory_retrieval import ScientificMemorySnapshot  # noqa: E402
 from src.probemem_sciagent.probe_value import attach_probe_value_contract  # noqa: E402
 from src.probemem_sciagent.quantized_probe_value import attach_quantized_probe_value_contract  # noqa: E402
+from src.probemem_sciagent.robust_probe_value import attach_robust_probe_value_contract  # noqa: E402
+from src.probemem_sciagent.hard_deadline_transport import HardDeadlineEnvelopeClient  # noqa: E402
 from src.reasoning import EvidenceSource, build_structured_evidence_state  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 
@@ -43,15 +45,19 @@ def main() -> int:
             int(api["health_check_primary_calls"]) + int(api["case_primary_calls"]),
             int(api["maximum_schema_repairs"]), int(api["maximum_total_calls"]),
         )
-        client_type = (
-            EnvelopeTolerantApiReliabilityClient
-            if api.get("response_envelope_mode") == "UNIQUE_CERTIFIED_OBJECT"
-            else ApiReliabilityClient
-        )
-        client = client_type(
+        if api.get("transport_deadline_mode") == "SUBPROCESS_HARD_DEADLINE_V1":
+            client_type = HardDeadlineEnvelopeClient
+        elif api.get("response_envelope_mode") == "UNIQUE_CERTIFIED_OBJECT":
+            client_type = EnvelopeTolerantApiReliabilityClient
+        else:
+            client_type = ApiReliabilityClient
+        client_kwargs = dict(
             model=str(api["model"]), timeout_seconds=float(api["timeout_seconds"]), max_tokens=int(api["max_tokens"]),
             call_budget=budget, maximum_consecutive_failures=int(api["maximum_consecutive_logical_failures"]),
         )
+        if client_type is HardDeadlineEnvelopeClient:
+            client_kwargs["hard_deadline_seconds"] = float(api["hard_deadline_seconds"])
+        client = client_type(**client_kwargs)
         empty = ScientificMemorySnapshot(1, (), (), (), ())
         health_payload = build_health_check_payload()
         if api.get("capability_contract_mode") == "PER_REQUEST_TOKENS_V1":
@@ -109,6 +115,8 @@ def main() -> int:
                 request_payload = attach_probe_value_contract(request_payload)
             if api.get("probe_value_contract_mode") == "QUANTIZED_EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1":
                 request_payload = attach_quantized_probe_value_contract(request_payload)
+            if api.get("probe_value_contract_mode") == "ROBUST_QUANTIZED_EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1":
+                request_payload = attach_robust_probe_value_contract(request_payload)
             result = client.certified_decide(request_payload, snapshot=empty, current_evidence_id=compact.evidence_id)
             assessment = next(
                 (row.get("probe_value_assessment") for row in reversed(client.audit)
