@@ -588,3 +588,19 @@ Under the current qualitative GLM boundary, an online successor requires a
 separately frozen protocol that evaluates probe novelty and utility under the
 case budget; interface-gate passage alone does not authorize model actions,
 validation, held-out execution, memory claims, or principle promotion.
+
+The separately frozen Probe Value v1.4 shadow successor in
+`docs/protocols/probemem_sciagent_probe_value_v1_4.md` then executed once on
+fresh seeds 6300--6349 and failed its gate. The health check passed and all four
+observed API calls were transport-valid and capability-token-valid, but none of
+the eight operational outputs passed the complete semantic certificate. Two
+responses lacked an object-valued probe-value certificate; the single repair
+produced one whose provisional skill contradicted its own probability argmax.
+The circuit breaker stopped later calls. No action executed and no memory or
+principle was written. Preserve this negative result, do not rerun seeds
+6300--6349, and do not execute reserved seeds 6200--6299 or 6350--6449. The zero
+admission rate is a fail-closed artifact, not evidence that probes lack value.
+A successor requires a separately frozen fresh-seed protocol and should test a
+smaller complete quantized value contract without weakening host arithmetic or
+semantic validation. Online action execution, recovery claims, validation,
+held-out execution, and principle promotion remain blocked.
