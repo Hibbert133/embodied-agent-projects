@@ -58,10 +58,16 @@ class ApiReliabilityClient(SciAgentGlmClient):
             failure = SciAgentDecision.fail_closed("API reliability circuit breaker is open")
             return CertifiedDecisionResult(None, failure, False, False, False, request_hash, "CIRCUIT_OPEN")
         previous_error: str | None = None
+        system_prompt = CERTIFIED_SYSTEM_PROMPT
+        if "probe_value_contract" in payload:
+            system_prompt += (
+                " For this request return exactly the three top-level keys decision, "
+                "certificate, and probe_value_certificate."
+            )
         for attempt in range(2):
             try:
                 mapping = self._request(
-                    payload, phase=stage, system=CERTIFIED_SYSTEM_PROMPT,
+                    payload, phase=stage, system=system_prompt,
                     repair=attempt == 1, previous_error=previous_error,
                 )
                 if self.audit: self.audit[-1]["request_hash"] = request_hash

@@ -36,6 +36,15 @@ class SciAgentApiEnvelopeTest(unittest.TestCase):
         parsed, _ = extract_unique_certified_object("prefix " + json.dumps(value) + " suffix")
         self.assertEqual(parsed, value)
 
+    def test_probe_value_envelope_requires_exact_three_keys(self):
+        value = {**certified(), "probe_value_certificate": {"claim": "shadow"}}
+        parsed, mode = extract_unique_certified_object(
+            "prefix " + json.dumps(value),
+            expected_keys={"decision", "certificate", "probe_value_certificate"},
+        )
+        self.assertEqual(parsed, value)
+        self.assertEqual(mode, "WRAPPED_UNIQUE_JSON")
+
     def test_wrapped_object_passes_certificate_without_repair(self):
         value = certified()
         messages = FakeMessages(["analysis\n```json\n" + json.dumps(value) + "\n```"])

@@ -23,6 +23,7 @@ from src.probemem_sciagent.api_reliability import ApiReliabilityClient, build_he
 from src.probemem_sciagent.api_envelope import EnvelopeTolerantApiReliabilityClient  # noqa: E402
 from src.probemem_sciagent.capability_contract import attach_capability_contract  # noqa: E402
 from src.probemem_sciagent.memory_retrieval import ScientificMemorySnapshot  # noqa: E402
+from src.probemem_sciagent.probe_value import attach_probe_value_contract  # noqa: E402
 from src.reasoning import EvidenceSource, build_structured_evidence_state  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 
@@ -103,17 +104,30 @@ def main() -> int:
                     request_payload, snapshot=empty,
                     current_evidence_id=compact.evidence_id,
                 )
+            if api.get("probe_value_contract_mode") == "EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1":
+                request_payload = attach_probe_value_contract(request_payload)
             result = client.certified_decide(request_payload, snapshot=empty, current_evidence_id=compact.evidence_id)
-            outputs.append({"episode_id": episode_id, "seed": seed, **_result(result), "shadow_only": True, "action_executed": False, "memory_written": False})
+            assessment = next(
+                (row.get("probe_value_assessment") for row in reversed(client.audit)
+                 if row.get("probe_value_contract_applied")), None,
+            )
+            outputs.append({"episode_id": episode_id, "seed": seed, **_result(result), "probe_value_assessment": assessment, "shadow_only": True, "action_executed": False, "memory_written": False})
             population.append(row); _flush(run, population, outputs, client)
         valid = sum(bool(row["valid"]) for row in outputs); repairs = budget.repair_calls
         gate = config["success_gate"]
+        value_assessments = [row["probe_value_assessment"] for row in outputs if row.get("probe_value_assessment") is not None]
+        probe_admitted = sum(bool(row["admitted"]) for row in value_assessments)
+        probe_rejected = len(value_assessments) - probe_admitted
+        probe_admission_rate = probe_admitted / operational if operational else 0.0
         passed = (
             operational >= int(config["minimum_operational_cases"])
             and valid >= int(gate["minimum_certified_valid_outputs"])
             and (valid / operational if operational else 0.0) >= float(gate["minimum_grounded_output_rate"])
             and operational - valid <= int(gate["maximum_fail_closed_outputs"])
             and repairs <= int(gate["maximum_repairs"])
+            and len(value_assessments) >= int(gate.get("minimum_probe_value_valid_outputs", 0))
+            and probe_admission_rate <= float(gate.get("maximum_probe_admission_rate", 1.0))
+            and probe_rejected >= int(gate.get("minimum_probe_rejections", 0))
         )
         summary = {
             "status": "COMPLETED_GATE_PASSED" if passed else "COMPLETED_GATE_FAILED",
@@ -126,6 +140,10 @@ def main() -> int:
             "wrapped_unique_json_calls": sum(row.get("extraction_mode") == "WRAPPED_UNIQUE_JSON" for row in client.audit),
             "capability_valid_calls": sum(row.get("valid_capability_contract") is True for row in client.audit),
             "capability_invalid_calls": sum(row.get("capability_contract_applied") and row.get("valid_capability_contract") is False for row in client.audit),
+            "probe_value_valid_outputs": len(value_assessments),
+            "probe_value_invalid_calls": sum(row.get("probe_value_contract_applied") and row.get("valid_probe_value_certificate") is False for row in client.audit),
+            "probe_admitted_count": probe_admitted, "probe_rejected_count": probe_rejected,
+            "probe_admission_rate": probe_admission_rate,
             "action_execution_count": 0, "memory_write_count": 0, "principle_update_count": 0,
             "integrity_violations": 0,
             "claim_boundary": config["claim_boundary"],

@@ -9,12 +9,15 @@ from typing import Any, Mapping
 
 from src.probemem_sciagent.api_reliability import ApiReliabilityClient
 from src.probemem_sciagent.capability_contract import expand_capability_response
+from src.probemem_sciagent.probe_value import validate_probe_value_certificate
 
 
 CERTIFIED_TOP_LEVEL_KEYS = {"decision", "certificate"}
 
 
-def extract_unique_certified_object(text: str) -> tuple[Mapping[str, Any], str]:
+def extract_unique_certified_object(
+    text: str, *, expected_keys: set[str] | frozenset[str] = CERTIFIED_TOP_LEVEL_KEYS,
+) -> tuple[Mapping[str, Any], str]:
     """Return one unambiguous certified object and its envelope class.
 
     Bare JSON remains preferred. Compatibility-model prose or Markdown is
@@ -28,7 +31,7 @@ def extract_unique_certified_object(text: str) -> tuple[Mapping[str, Any], str]:
         bare = json.loads(stripped)
     except json.JSONDecodeError:
         bare = None
-    if isinstance(bare, Mapping) and set(bare) == CERTIFIED_TOP_LEVEL_KEYS:
+    if isinstance(bare, Mapping) and set(bare) == set(expected_keys):
         return bare, "BARE_JSON"
 
     decoder = json.JSONDecoder()
@@ -40,7 +43,7 @@ def extract_unique_certified_object(text: str) -> tuple[Mapping[str, Any], str]:
             value, _ = decoder.raw_decode(text[index:])
         except json.JSONDecodeError:
             continue
-        if not isinstance(value, Mapping) or set(value) != CERTIFIED_TOP_LEVEL_KEYS:
+        if not isinstance(value, Mapping) or set(value) != set(expected_keys):
             continue
         canonical = json.dumps(value, sort_keys=True, separators=(",", ":"))
         candidates[canonical] = value
@@ -83,7 +86,16 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
                 name: int(getattr(usage, name)) for name in ("input_tokens", "output_tokens")
                 if usage is not None and hasattr(usage, name)
             }
-            mapping, extraction_mode = extract_unique_certified_object(raw)
+            probe_contract = request_payload.get("probe_value_contract")
+            expected_keys = (
+                CERTIFIED_TOP_LEVEL_KEYS | {"probe_value_certificate"}
+                if probe_contract is not None else CERTIFIED_TOP_LEVEL_KEYS
+            )
+            mapping, extraction_mode = extract_unique_certified_object(
+                raw, expected_keys=expected_keys,
+            )
+            mapping = dict(mapping)
+            raw_probe_value = mapping.pop("probe_value_certificate", None)
             contract = request_payload.get("capability_contract")
             capability_applied = contract is not None
             if capability_applied:
@@ -100,17 +112,44 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
                         "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
                     })
                     raise _RecordedCapabilityError(str(exc)) from exc
+            probe_assessment = None
+            if probe_contract is not None:
+                try:
+                    if not isinstance(raw_probe_value, Mapping):
+                        raise ValueError("probe value certificate must be an object")
+                    if not isinstance(contract, Mapping):
+                        raise ValueError("probe value certificate requires capability contract")
+                    probe_assessment = validate_probe_value_certificate(
+                        raw_probe_value, decision=mapping["decision"],
+                        capability_contract=contract, probe_value_contract=probe_contract,
+                    )
+                except Exception as exc:
+                    self.audit.append({
+                        "phase": phase, "repair": repair, "valid_transport": True,
+                        "extraction_mode": extraction_mode,
+                        "capability_contract_applied": capability_applied,
+                        "valid_capability_contract": True,
+                        "probe_value_contract_applied": True,
+                        "valid_probe_value_certificate": False,
+                        "latency_ms": (perf_counter() - started) * 1000.0,
+                        "usage": usage_payload, "error": f"{type(exc).__name__}: {exc}",
+                        "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
+                    })
+                    raise _RecordedProbeValueError(str(exc)) from exc
             self.audit.append({
                 "phase": phase, "repair": repair, "valid_transport": True,
                 "extraction_mode": extraction_mode,
                 "capability_contract_applied": capability_applied,
                 "valid_capability_contract": True,
+                "probe_value_contract_applied": probe_contract is not None,
+                "valid_probe_value_certificate": None if probe_contract is None else True,
+                "probe_value_assessment": None if probe_assessment is None else probe_assessment.to_dict(),
                 "latency_ms": (perf_counter() - started) * 1000.0,
                 "usage": usage_payload,
                 "response_hash": hashlib.sha256(raw.encode()).hexdigest(),
             })
             return mapping
-        except _RecordedCapabilityError:
+        except (_RecordedCapabilityError, _RecordedProbeValueError):
             raise
         except Exception as exc:
             self.audit.append({
@@ -127,3 +166,7 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
 
 class _RecordedCapabilityError(ValueError):
     """Internal marker preventing duplicate audit rows after token rejection."""
+
+
+class _RecordedProbeValueError(ValueError):
+    """Internal marker preventing duplicate audit rows after EVSI rejection."""
