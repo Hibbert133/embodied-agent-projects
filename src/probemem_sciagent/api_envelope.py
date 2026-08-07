@@ -177,6 +177,10 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
                 "extraction_mode": "REJECTED",
                 "capability_contract_applied": "capability_contract" in request_payload,
                 "valid_capability_contract": False,
+                "probe_value_contract_applied": "probe_value_contract" in request_payload,
+                "valid_probe_value_certificate": (
+                    False if "probe_value_contract" in request_payload else None
+                ),
                 "latency_ms": (perf_counter() - started) * 1000.0,
                 "usage": usage_payload, "error": f"{type(exc).__name__}: {exc}",
                 "response_hash": hashlib.sha256(raw.encode()).hexdigest(),

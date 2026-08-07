@@ -117,11 +117,9 @@ def main() -> int:
                 request_payload = attach_quantized_probe_value_contract(request_payload)
             if api.get("probe_value_contract_mode") == "ROBUST_QUANTIZED_EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1":
                 request_payload = attach_robust_probe_value_contract(request_payload)
+            audit_start = len(client.audit)
             result = client.certified_decide(request_payload, snapshot=empty, current_evidence_id=compact.evidence_id)
-            assessment = next(
-                (row.get("probe_value_assessment") for row in reversed(client.audit)
-                 if row.get("probe_value_contract_applied")), None,
-            )
+            assessment = _latest_probe_assessment(client.audit, audit_start)
             outputs.append({"episode_id": episode_id, "seed": seed, **_result(result), "probe_value_assessment": assessment, "shadow_only": True, "action_executed": False, "memory_written": False})
             population.append(row); _flush(run, population, outputs, client)
         valid = sum(bool(row["valid"]) for row in outputs); repairs = budget.repair_calls
@@ -150,9 +148,9 @@ def main() -> int:
             "bare_json_calls": sum(row.get("extraction_mode") == "BARE_JSON" for row in client.audit),
             "wrapped_unique_json_calls": sum(row.get("extraction_mode") == "WRAPPED_UNIQUE_JSON" for row in client.audit),
             "capability_valid_calls": sum(row.get("valid_capability_contract") is True for row in client.audit),
-            "capability_invalid_calls": sum(row.get("capability_contract_applied") and row.get("valid_capability_contract") is False for row in client.audit),
+            "capability_invalid_calls": sum(bool(row.get("capability_contract_applied")) and row.get("valid_capability_contract") is False for row in client.audit),
             "probe_value_valid_outputs": len(value_assessments),
-            "probe_value_invalid_calls": sum(row.get("probe_value_contract_applied") and row.get("valid_probe_value_certificate") is False for row in client.audit),
+            "probe_value_invalid_calls": sum(bool(row.get("probe_value_contract_applied")) and row.get("valid_probe_value_certificate") is False for row in client.audit),
             "probe_admitted_count": probe_admitted, "probe_rejected_count": probe_rejected,
             "probe_admission_rate": probe_admission_rate,
             "action_execution_count": 0, "memory_write_count": 0, "principle_update_count": 0,
@@ -176,6 +174,16 @@ def _result(result):
 
 def _flush(run: Path, population: list, outputs: list, client: ApiReliabilityClient):
     _write(run / "population.json", population); _write(run / "certified_shadow_outputs.json", outputs); _write(run / "api_audit.json", client.audit)
+
+
+def _latest_probe_assessment(audit: list[dict[str, Any]], start: int) -> dict[str, Any] | None:
+    if start < 0 or start > len(audit):
+        raise ValueError("audit start is outside current audit")
+    for row in reversed(audit[start:]):
+        assessment = row.get("probe_value_assessment")
+        if row.get("valid_probe_value_certificate") is True and isinstance(assessment, dict):
+            return assessment
+    return None
 
 
 def _validate(path: Path):

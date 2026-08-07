@@ -621,3 +621,21 @@ No action executed and no memory or principle was written. Preserve this
 enforced wall-clock deadline outside the compatibility SDK, and a scientific
 change beyond another response-format repair. Online action execution, recovery
 claims, validation, held-out execution, and principle promotion remain blocked.
+
+The separately frozen Robust Probe Value v1.6 shadow successor in
+`docs/protocols/probemem_sciagent_robust_probe_value_v1_6.md` completed eight
+operational cases and all ten allowed calls on fresh seeds 6600--6649. Its
+child-process deadline correctly terminated two 210-second calls. Deterministic
+post-run reconstruction found 7/8 fully certified outputs, two admitted probes,
+five valid rejections, a 25% admission rate, and one probe request blocked by
+the robust lower-bound guard. However, the runner summary crashed on a nullable
+audit boolean and the timeout output incorrectly carried the prior case's value
+assessment. No action consumed that stale field, but it is an audit association
+integrity violation, so the formal status is `COMPLETED_GATE_FAILED_INTEGRITY`,
+not passage. Preserve the original failed status and corrected no-new-call
+analysis; do not rerun seeds 6600--6649 or execute reserved 6650--6749. The code
+now binds assessments to current-call audit slices and safely aggregates
+optional booleans. This run supports bounded transport and selective-value
+mechanism observations only. Online action execution, recovery claims, memory,
+principles, validation, and held-out execution remain blocked pending a new
+protocol that evaluates actual probe utility.
