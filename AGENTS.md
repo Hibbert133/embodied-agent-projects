@@ -604,3 +604,20 @@ A successor requires a separately frozen fresh-seed protocol and should test a
 smaller complete quantized value contract without weakening host arithmetic or
 semantic validation. Online action execution, recovery claims, validation,
 held-out execution, and principle promotion remain blocked.
+
+The separately frozen Quantized Probe Value v1.5 shadow successor in
+`docs/protocols/probemem_sciagent_quantized_probe_value_v1_5.md` was stopped
+incomplete on fresh seeds 6450--6499 because an operational API request remained
+in flight beyond the frozen 300-second SDK timeout. Seven initial trajectories
+were created, four operational calls were started, and three operational outputs
+were recorded. Two were fully certified. Quantization improved the narrow value
+interface: three of four returned operational responses had valid value
+certificates, compared with zero in v1.4. However, all three valid partial
+assessments still admitted a probe, and the population gate was not evaluated.
+No action executed and no memory or principle was written. Preserve this
+`INCOMPLETE_TRANSPORT_TIMEOUT_ENFORCEMENT` result; do not rerun or complete seeds
+6450--6499, and do not execute reserved seeds 6200--6299, 6350--6449, or
+6500--6599. A successor requires a separately frozen protocol, an independently
+enforced wall-clock deadline outside the compatibility SDK, and a scientific
+change beyond another response-format repair. Online action execution, recovery
+claims, validation, held-out execution, and principle promotion remain blocked.
