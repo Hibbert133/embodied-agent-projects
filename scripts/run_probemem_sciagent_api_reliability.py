@@ -24,6 +24,7 @@ from src.probemem_sciagent.api_envelope import EnvelopeTolerantApiReliabilityCli
 from src.probemem_sciagent.capability_contract import attach_capability_contract  # noqa: E402
 from src.probemem_sciagent.memory_retrieval import ScientificMemorySnapshot  # noqa: E402
 from src.probemem_sciagent.probe_value import attach_probe_value_contract  # noqa: E402
+from src.probemem_sciagent.quantized_probe_value import attach_quantized_probe_value_contract  # noqa: E402
 from src.reasoning import EvidenceSource, build_structured_evidence_state  # noqa: E402
 from src.rollout import create_push_environment, create_push_policy, run_episode  # noqa: E402
 
@@ -106,6 +107,8 @@ def main() -> int:
                 )
             if api.get("probe_value_contract_mode") == "EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1":
                 request_payload = attach_probe_value_contract(request_payload)
+            if api.get("probe_value_contract_mode") == "QUANTIZED_EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1":
+                request_payload = attach_quantized_probe_value_contract(request_payload)
             result = client.certified_decide(request_payload, snapshot=empty, current_evidence_id=compact.evidence_id)
             assessment = next(
                 (row.get("probe_value_assessment") for row in reversed(client.audit)

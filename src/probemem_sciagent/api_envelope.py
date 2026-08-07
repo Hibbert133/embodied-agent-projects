@@ -10,6 +10,10 @@ from typing import Any, Mapping
 from src.probemem_sciagent.api_reliability import ApiReliabilityClient
 from src.probemem_sciagent.capability_contract import expand_capability_response
 from src.probemem_sciagent.probe_value import validate_probe_value_certificate
+from src.probemem_sciagent.quantized_probe_value import (
+    QUANTIZED_CONTRACT_VERSION,
+    validate_quantized_probe_value_certificate,
+)
 
 
 CERTIFIED_TOP_LEVEL_KEYS = {"decision", "certificate"}
@@ -115,14 +119,20 @@ class EnvelopeTolerantApiReliabilityClient(ApiReliabilityClient):
             probe_assessment = None
             if probe_contract is not None:
                 try:
-                    if not isinstance(raw_probe_value, Mapping):
-                        raise ValueError("probe value certificate must be an object")
                     if not isinstance(contract, Mapping):
                         raise ValueError("probe value certificate requires capability contract")
-                    probe_assessment = validate_probe_value_certificate(
-                        raw_probe_value, decision=mapping["decision"],
-                        capability_contract=contract, probe_value_contract=probe_contract,
-                    )
+                    if probe_contract.get("contract_version") == QUANTIZED_CONTRACT_VERSION:
+                        probe_assessment = validate_quantized_probe_value_certificate(
+                            raw_probe_value, decision=mapping["decision"],
+                            capability_contract=contract, probe_value_contract=probe_contract,
+                        )
+                    else:
+                        if not isinstance(raw_probe_value, Mapping):
+                            raise ValueError("probe value certificate must be an object")
+                        probe_assessment = validate_probe_value_certificate(
+                            raw_probe_value, decision=mapping["decision"],
+                            capability_contract=contract, probe_value_contract=probe_contract,
+                        )
                 except Exception as exc:
                     self.audit.append({
                         "phase": phase, "repair": repair, "valid_transport": True,

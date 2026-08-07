@@ -1,0 +1,12 @@
+{
+  "schema_version": 6,
+  "registry_id": "probemem_sciagent_quantized_probe_value_seed_registry_v6",
+  "inherits": "configs/probemem_sciagent/seed_registry_v5.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "quantized_probe_value_shadow": [6450, 6499],
+    "quantized_probe_value_future_reserved": [6500, 6599]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 6449]],
+  "notes": "Seeds 6300--6349 are an immutable failed Probe Value stream; 6200--6299 and 6350--6449 remain reserved. Only quantized probe-value shadow evaluation is registered on 6450--6499."
+}
