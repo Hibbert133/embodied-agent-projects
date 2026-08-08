@@ -639,3 +639,18 @@ optional booleans. This run supports bounded transport and selective-value
 mechanism observations only. Online action execution, recovery claims, memory,
 principles, validation, and held-out execution remain blocked pending a new
 protocol that evaluates actual probe utility.
+
+The user subsequently authorized the separately frozen Micro-Probe Utility
+v1.7 development protocol in
+`docs/protocols/probemem_sciagent_micro_probe_utility_v1_7.md`. It may scan
+fresh seeds 6750--6849 once and execute only Host-admitted registered
+micro-probes. Both pre-probe and post-probe decisions must be persisted before
+reset-matched paired recovery candidates are collected for evaluator-only
+status comparison. The unchanged robust value and capability contracts remain
+frozen. Seeds 6650--6749 and all earlier reserves remain blocked; seeds
+6850--6949 are newly reserved. This stage must not execute an online recovery,
+write memory, update hypotheses or principles, run validation or held-out
+seeds, add skills, or claim recovery improvement. Promotion requires at least
+one strictly helpful probe, more helpful than harmful probes, and zero audit,
+chronology, leakage, budget, or counterfactual-write violations. Failure or
+incomplete population is preserved without prompt, gate, probe, or seed tuning.
