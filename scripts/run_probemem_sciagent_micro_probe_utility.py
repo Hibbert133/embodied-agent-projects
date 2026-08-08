@@ -352,7 +352,7 @@ def _summarize(
         "harmful_probes": harmful, "no_decision_benefit_probes": no_benefit,
         "not_evaluable_probes": not_evaluable, "fail_closed_outputs": fail_closed,
         "api_calls": budget.total_calls, "repairs": budget.repair_calls,
-        "hard_deadline_timeouts": sum(row.get("error_type") == "TimeoutExpired" for row in client.audit),
+        "hard_deadline_timeouts": _count_hard_deadline_timeouts(client.audit),
         "integrity_violations": integrity, "integrity_violation_reasons": integrity_reasons,
         "memory_write_count": 0,
         "principle_update_count": 0, "online_recovery_execution_count": 0,
@@ -367,6 +367,14 @@ def _is_valid_post_action(row: Mapping[str, Any]) -> bool:
         and isinstance(certified, Mapping)
         and isinstance(certified.get("decision"), Mapping)
         and certified["decision"].get("decision_mode") == "ACT_DIRECTLY"
+    )
+
+
+def _count_hard_deadline_timeouts(audit: list[Mapping[str, Any]]) -> int:
+    return sum(
+        row.get("valid_transport") is False
+        and "hard deadline exceeded" in str(row.get("error", "")).lower()
+        for row in audit
     )
 
 

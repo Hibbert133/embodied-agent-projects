@@ -4,7 +4,8 @@ import unittest
 
 from scripts.generate_probemem_sciagent_micro_probe_utility_manifest import build_units
 from scripts.run_probemem_sciagent_micro_probe_utility import (
-    _integrity_violations, _is_valid_post_action, _latest_probe_assessment,
+    _count_hard_deadline_timeouts, _integrity_violations,
+    _is_valid_post_action, _latest_probe_assessment,
 )
 
 
@@ -71,6 +72,14 @@ class MicroProbeUtilityProtocolTest(unittest.TestCase):
             decisions=[], probes=[], utilities=[{"episode_id": "e1", "label": "NOT_EVALUABLE"}], audit=[],
         )
         self.assertIn("OUTCOME_BEFORE_POST_DECISION:e1", reasons)
+
+    def test_hard_deadline_count_uses_transport_audit_error(self):
+        audit = [
+            {"valid_transport": False, "error": "TimeoutError: API hard deadline exceeded: 210.000s"},
+            {"valid_transport": True, "error": None},
+            {"valid_transport": False, "error": "ValueError: invalid JSON"},
+        ]
+        self.assertEqual(_count_hard_deadline_timeouts(audit), 1)
 
 
 if __name__ == "__main__":

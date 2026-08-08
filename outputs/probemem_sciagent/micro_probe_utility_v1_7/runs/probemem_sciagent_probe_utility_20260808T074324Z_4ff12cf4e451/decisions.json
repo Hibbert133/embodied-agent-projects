@@ -1,0 +1,891 @@
+[
+  {
+    "audit_slice_end": 2,
+    "audit_slice_start": 1,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "bound_decision_mode": "ACT_DIRECTLY",
+        "bound_selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "counterevidence_summary": "The estimated drift magnitude is very small (xy components ~0.0003 and ~0.0002) and task progress is only marginally negative (-0.0095), so the expected benefit of any corrective skill over continued execution remains uncertain.",
+        "current_evidence_id": "probe_utility_episode_001_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "RESPONSE_VARIABILITY_SUPPORTS_RETRY",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_001_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "ACT_DIRECTLY",
+        "evidence_summary": "Probe responses exhibit high variability (relative_bias_std=0.901) with no stable directional sign (dominant_axis_sign_agreement=0.5), indicating stochastic rather than systematic drift. Task progress is slightly negative (-0.0095) with goal distance 0.2766 and very small estimated drift magnitude.",
+        "expected_effect": "Executing the fixed policy under an independent stochastic realization should yield positive task progress when the current failure stems from response variability rather than a correctable signed drift.",
+        "predicted_success_probability": 0.55,
+        "probe_justification_codes": [],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": null,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Only 4 probe samples have been collected; while variability metrics strongly favor retry over compensation, the small drift magnitude and near-zero task progress leave residual uncertainty about whether corrective action will improve outcomes versus continued execution."
+      }
+    },
+    "episode_id": "probe_utility_episode_001",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ACT_DIRECTLY",
+      "evidence_summary": "Probe responses exhibit high variability (relative_bias_std=0.901) with no stable directional sign (dominant_axis_sign_agreement=0.5), indicating stochastic rather than systematic drift. Task progress is slightly negative (-0.0095) with goal distance 0.2766 and very small estimated drift magnitude.",
+      "expected_effect": "Executing the fixed policy under an independent stochastic realization should yield positive task progress when the current failure stems from response variability rather than a correctable signed drift.",
+      "predicted_success_probability": 0.55,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Only 4 probe samples have been collected; while variability metrics strongly favor retry over compensation, the small drift magnitude and near-zero task progress leave residual uncertainty about whether corrective action will improve outcomes versus continued execution."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": false,
+      "current_best_skill": null,
+      "current_probability_gap": 0.0,
+      "decision_change_probability": 0.0,
+      "normalized_probe_cost": 0.0,
+      "outcome_discriminative": false,
+      "rejection_reasons": [
+        "AGENT_DID_NOT_REQUEST_PROBE"
+      ],
+      "robust_expected_value_gain": 0.0,
+      "selected_probe_type": null
+    },
+    "repaired": false,
+    "request_hash": "465ef9943be74f356a2ad788acb0711001d860d039cc10e9d4eb610c731a665c",
+    "seed": 6752,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 3,
+    "audit_slice_start": 2,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "bound_decision_mode": "ACT_DIRECTLY",
+        "bound_selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "counterevidence_summary": "The estimated drift xy is very small in magnitude (order 1e-4), and only 4 probe samples have been collected, limiting reliability of the variability assessment. The mean estimation residual is extremely small (3.89e-07), which could suggest some underlying deterministic structure that compensation might address with more data.",
+        "current_evidence_id": "probe_utility_episode_002_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "RESPONSE_VARIABILITY_SUPPORTS_RETRY",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_002_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "ACT_DIRECTLY",
+        "evidence_summary": "Probe responses show low directional consistency (dominant axis sign agreement 0.25) and high relative bias variability (3.347), with only 4 samples collected. Drift magnitude is very small. Evidence favors retry over compensation.",
+        "expected_effect": "Executing the fixed policy under an independent realization should yield progress despite high response variability, as no stable signed correction is supported by the probe data.",
+        "predicted_success_probability": 0.6,
+        "probe_justification_codes": [],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": null,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Only 4 probe samples have been collected; while variability indicators clearly favor retry, the small sample size limits confidence in the variability estimate."
+      }
+    },
+    "episode_id": "probe_utility_episode_002",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ACT_DIRECTLY",
+      "evidence_summary": "Probe responses show low directional consistency (dominant axis sign agreement 0.25) and high relative bias variability (3.347), with only 4 samples collected. Drift magnitude is very small. Evidence favors retry over compensation.",
+      "expected_effect": "Executing the fixed policy under an independent realization should yield progress despite high response variability, as no stable signed correction is supported by the probe data.",
+      "predicted_success_probability": 0.6,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Only 4 probe samples have been collected; while variability indicators clearly favor retry, the small sample size limits confidence in the variability estimate."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": false,
+      "current_best_skill": null,
+      "current_probability_gap": 0.0,
+      "decision_change_probability": 0.0,
+      "normalized_probe_cost": 0.0,
+      "outcome_discriminative": false,
+      "rejection_reasons": [
+        "AGENT_DID_NOT_REQUEST_PROBE"
+      ],
+      "robust_expected_value_gain": 0.0,
+      "selected_probe_type": null
+    },
+    "repaired": false,
+    "request_hash": "bbfe16878e908d82d3bc4b58eebcf753af1fe865210a58607f06a22213480f28",
+    "seed": 6753,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 4,
+    "audit_slice_start": 3,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "bound_decision_mode": "RUN_MICRO_PROBE",
+        "bound_selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "counterevidence_summary": "The relative bias std of 0.1893 indicates moderate variability in probe responses, which could undermine the stability assumption needed for BOUNDED_PLANAR_COMPENSATION. The very small drift magnitude relative to the bias std norm suggests the drift estimate may be unreliable, potentially favoring INDEPENDENT_STOCHASTIC_RETRY.",
+        "current_evidence_id": "probe_utility_episode_003_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "ACTION_UTILITY_UNCERTAIN",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_003_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "RUN_MICRO_PROBE",
+        "evidence_summary": "Current evidence shows very small estimated drift [0.000327, -0.000348] with moderate directional stability (75% dominant axis sign agreement) but moderate variability (relative bias std 0.1893). Goal distance is 0.2213 with task progress at 0.058. No prior principles or experiences available.",
+        "expected_effect": "Probe will test whether the observed directional drift is stable enough to support bounded planar compensation. If aligned, compensation should reduce the small but consistent drift; if not aligned, retry is the fallback.",
+        "predicted_success_probability": 0.5,
+        "probe_justification_codes": [
+          "MISSING_ACTION_CONDITIONED_EVIDENCE",
+          "SMALL_PREDICTED_GAP"
+        ],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": "COMPENSATION_RESPONSE_PROBE",
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "The 75% sign agreement suggests some directional stability, but the relative bias std of 0.1893 indicates moderate variability. With only 4 probe samples and no prior principles, the evidence is insufficient to confidently select either skill without further probing."
+      }
+    },
+    "episode_id": "probe_utility_episode_003",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "RUN_MICRO_PROBE",
+      "evidence_summary": "Current evidence shows very small estimated drift [0.000327, -0.000348] with moderate directional stability (75% dominant axis sign agreement) but moderate variability (relative bias std 0.1893). Goal distance is 0.2213 with task progress at 0.058. No prior principles or experiences available.",
+      "expected_effect": "Probe will test whether the observed directional drift is stable enough to support bounded planar compensation. If aligned, compensation should reduce the small but consistent drift; if not aligned, retry is the fallback.",
+      "predicted_success_probability": 0.5,
+      "probe_justification_codes": [
+        "MISSING_ACTION_CONDITIONED_EVIDENCE",
+        "SMALL_PREDICTED_GAP"
+      ],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": "COMPENSATION_RESPONSE_PROBE",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "The 75% sign agreement suggests some directional stability, but the relative bias std of 0.1893 indicates moderate variability. With only 4 probe samples and no prior principles, the evidence is insufficient to confidently select either skill without further probing."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": true,
+      "current_best_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "current_probability_gap": 0.04999999999999999,
+      "decision_change_probability": 0.4,
+      "normalized_probe_cost": 0.050955414012738856,
+      "outcome_discriminative": true,
+      "rejection_reasons": [],
+      "robust_expected_value_gain": 0.14,
+      "selected_probe_type": "COMPENSATION_RESPONSE_PROBE"
+    },
+    "repaired": false,
+    "request_hash": "aa21c312b98bfa8c611666efe08cc03ed9cc0878e3f1d31a40ebd98d81383d3f",
+    "seed": 6754,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 5,
+    "audit_slice_start": 4,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "bound_decision_mode": "ACT_DIRECTLY",
+        "bound_selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "counterevidence_summary": "The relative bias std of 0.1893 and response consistency of 0.7442 indicate residual variability in probe responses. Only 4 probe samples were collected, and the probe outcome was marked as unavailable at write time, introducing some uncertainty about the full recovery trajectory.",
+        "current_evidence_id": "probe_utility_episode_003_evidence",
+        "decision_basis": "MICRO_PROBE_EVIDENCE",
+        "grounding_claim": "REPEATED_RESPONSE_SUPPORTS_COMPENSATION",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_003_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": [
+          "probe_utility_episode_003_micro_probe"
+        ]
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "ACT_DIRECTLY",
+        "evidence_summary": "Post-probe evidence shows very high expected direction alignment (0.9932) with moderate response consistency (0.7442). Temporary progress improved significantly from 0.0578 to 0.1773, and contact was preserved. The probe strongly supports stable directional drift suitable for bounded planar compensation.",
+        "expected_effect": "Applying bounded planar compensation with the estimated drift direction should reduce the persistent signed drift and improve task progress, as demonstrated by the probe's temporary progress improvement to 0.1773.",
+        "predicted_success_probability": 0.75,
+        "probe_justification_codes": [],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": null,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "While the probe shows strong direction alignment (0.9932) and significant progress improvement, the response consistency (0.7442) is not perfect, and only 4 probe samples were used. The actual recovery outcome may differ from the probe's temporary results."
+      }
+    },
+    "episode_id": "probe_utility_episode_003",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ACT_DIRECTLY",
+      "evidence_summary": "Post-probe evidence shows very high expected direction alignment (0.9932) with moderate response consistency (0.7442). Temporary progress improved significantly from 0.0578 to 0.1773, and contact was preserved. The probe strongly supports stable directional drift suitable for bounded planar compensation.",
+      "expected_effect": "Applying bounded planar compensation with the estimated drift direction should reduce the persistent signed drift and improve task progress, as demonstrated by the probe's temporary progress improvement to 0.1773.",
+      "predicted_success_probability": 0.75,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "While the probe shows strong direction alignment (0.9932) and significant progress improvement, the response consistency (0.7442) is not perfect, and only 4 probe samples were used. The actual recovery outcome may differ from the probe's temporary results."
+    },
+    "persisted_before_candidate_outcomes": true,
+    "repaired": false,
+    "request_hash": "327653b1b9fa9fda7719b9489c8b860203ae84417380e71baeb6123e57107fb6",
+    "seed": 6754,
+    "stage": "POST_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 7,
+    "audit_slice_start": 5,
+    "cache_hit": false,
+    "certified_decision": null,
+    "episode_id": "probe_utility_episode_004",
+    "error": "_RecordedProbeValueError: provisional skill probability is below alternative",
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "Insufficient validated evidence for BOUNDED_PLANAR_COMPENSATION",
+        "Insufficient validated evidence for INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "Decision unavailable; host failed closed.",
+      "expected_effect": "Avoid an unsupported recovery execution.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "_RecordedProbeValueError: provisional skill probability is below alternative",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "_RecordedProbeValueError: provisional skill probability is below alternative"
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": null,
+    "repaired": true,
+    "request_hash": "37fee042af6e6f3a59476a10437b67ac78553ff6f7fd4e0b41713664dd833e7d",
+    "seed": 6756,
+    "stage": "PRE_PROBE",
+    "valid": false
+  },
+  {
+    "audit_slice_end": 8,
+    "audit_slice_start": 7,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "bound_decision_mode": "ACT_DIRECTLY",
+        "bound_selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "counterevidence_summary": "The non-zero estimated drift [0.0008, -0.0007] and very small mean estimation residual (3.8e-05) could indicate a weak stable directional component suitable for bounded compensation; however, the high relative_bias_std (1.127) and poor dominant_axis_sign_agreement (0.5) indicate variance overwhelms any stable signal, making compensation unreliable.",
+        "current_evidence_id": "probe_utility_episode_005_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "RESPONSE_VARIABILITY_SUPPORTS_RETRY",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_005_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "ACT_DIRECTLY",
+        "evidence_summary": "Probe responses exhibit high variability (relative_bias_std=1.127, bias_std_norm=0.513) with poor directional stability (dominant_axis_sign_agreement=0.5) across 4 samples; estimated drift is very small ([0.0008, -0.0007]) with tiny mean estimation residual (3.8e-05), but variance dominates bias magnitude.",
+        "expected_effect": "Executing the fixed policy under an independent realization should provide a fresh attempt uncorrelated with prior high-variance probe responses, offering a chance at progress that bounded compensation cannot reliably provide given unstable direction.",
+        "predicted_success_probability": 0.45,
+        "probe_justification_codes": [],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": null,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Only 4 probe samples collected; while variability metrics clearly favor retry, the small but non-zero drift and tiny estimation residual leave residual uncertainty about a weak stable component."
+      }
+    },
+    "episode_id": "probe_utility_episode_005",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ACT_DIRECTLY",
+      "evidence_summary": "Probe responses exhibit high variability (relative_bias_std=1.127, bias_std_norm=0.513) with poor directional stability (dominant_axis_sign_agreement=0.5) across 4 samples; estimated drift is very small ([0.0008, -0.0007]) with tiny mean estimation residual (3.8e-05), but variance dominates bias magnitude.",
+      "expected_effect": "Executing the fixed policy under an independent realization should provide a fresh attempt uncorrelated with prior high-variance probe responses, offering a chance at progress that bounded compensation cannot reliably provide given unstable direction.",
+      "predicted_success_probability": 0.45,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Only 4 probe samples collected; while variability metrics clearly favor retry, the small but non-zero drift and tiny estimation residual leave residual uncertainty about a weak stable component."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": false,
+      "current_best_skill": null,
+      "current_probability_gap": 0.0,
+      "decision_change_probability": 0.0,
+      "normalized_probe_cost": 0.0,
+      "outcome_discriminative": false,
+      "rejection_reasons": [
+        "AGENT_DID_NOT_REQUEST_PROBE"
+      ],
+      "robust_expected_value_gain": 0.0,
+      "selected_probe_type": null
+    },
+    "repaired": false,
+    "request_hash": "65f28015da83608b25c164a24a6d45562bfdd5cb9f7d6344726aece12ff98ef0",
+    "seed": 6759,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 9,
+    "audit_slice_start": 8,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "bound_decision_mode": "RUN_MICRO_PROBE",
+        "bound_selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "counterevidence_summary": "Estimated drift magnitude is very small (0.0002 per axis) and only 4 probe samples have been collected, so the high-variability assessment may not be statistically reliable. Negative task progress (-0.19) suggests neither skill may be effective without further verification of retry repeatability.",
+        "current_evidence_id": "probe_utility_episode_006_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "RESPONSE_VARIABILITY_SUPPORTS_RETRY",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_006_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "RUN_MICRO_PROBE",
+        "evidence_summary": "Episode 6 shows negative task progress (-0.19) with goal distance 0.43. Probe responses exhibit high variability (relative_bias_std=1.07, sign_agreement=0.50) across 4 samples, indicating no stable directional drift suitable for bounded compensation.",
+        "expected_effect": "A retry repeatability probe will verify whether independent stochastic retry produces repeatable progress under the observed high-response-variability regime, confirming or refuting the variability-based skill selection before committing to direct action.",
+        "predicted_success_probability": 0.45,
+        "probe_justification_codes": [
+          "MISSING_ACTION_CONDITIONED_EVIDENCE"
+        ],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": "RETRY_REPEATABILITY_PROBE",
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Only 4 probe samples collected; high relative_bias_std (1.07) and 0.50 sign agreement suggest variability but insufficient statistical confidence to act directly without verifying retry repeatability."
+      }
+    },
+    "episode_id": "probe_utility_episode_006",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "RUN_MICRO_PROBE",
+      "evidence_summary": "Episode 6 shows negative task progress (-0.19) with goal distance 0.43. Probe responses exhibit high variability (relative_bias_std=1.07, sign_agreement=0.50) across 4 samples, indicating no stable directional drift suitable for bounded compensation.",
+      "expected_effect": "A retry repeatability probe will verify whether independent stochastic retry produces repeatable progress under the observed high-response-variability regime, confirming or refuting the variability-based skill selection before committing to direct action.",
+      "predicted_success_probability": 0.45,
+      "probe_justification_codes": [
+        "MISSING_ACTION_CONDITIONED_EVIDENCE"
+      ],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": "RETRY_REPEATABILITY_PROBE",
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Only 4 probe samples collected; high relative_bias_std (1.07) and 0.50 sign agreement suggest variability but insufficient statistical confidence to act directly without verifying retry repeatability."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": false,
+      "current_best_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "current_probability_gap": 0.10000000000000003,
+      "decision_change_probability": 0.4,
+      "normalized_probe_cost": 0.15286624203821655,
+      "outcome_discriminative": true,
+      "rejection_reasons": [
+        "ROBUST_VALUE_NOT_ABOVE_NORMALIZED_COST"
+      ],
+      "robust_expected_value_gain": 0.08999999999999997,
+      "selected_probe_type": "RETRY_REPEATABILITY_PROBE"
+    },
+    "repaired": false,
+    "request_hash": "de34963fb8b3f0817b7fa70bb47cffd020f7d712aa753103a0d49d54f191fae1",
+    "seed": 6764,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 11,
+    "audit_slice_start": 9,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "bound_decision_mode": "RUN_MICRO_PROBE",
+        "bound_selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "counterevidence_summary": "The relative_bias_std of 0.20 indicates non-trivial variability in probe responses, partially countering the stable-direction assumption required for BOUNDED_PLANAR_COMPENSATION. The dominant_axis_sign_agreement of 0.75 is moderate rather than strongly stable, and no prior principles or experiences corroborate either skill's appropriateness, leaving action utility genuinely uncertain.",
+        "current_evidence_id": "probe_utility_episode_007_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "ACTION_UTILITY_UNCERTAIN",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_007_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "RUN_MICRO_PROBE",
+        "evidence_summary": "Task progress is 4.5% with goal distance 0.162. Estimated drift is very small ([0.000322, -0.000347]) with moderate dominant-axis sign agreement (0.75) and moderate relative bias std (0.20). No active principles or past experiences exist to ground direct action selection.",
+        "expected_effect": "A COMPENSATION_RESPONSE_PROBE will test whether repeated probe responses align with the estimated drift direction, disambiguating between bounded planar compensation and independent stochastic retry before committing action budget.",
+        "predicted_success_probability": 0.45,
+        "probe_justification_codes": [
+          "SMALL_PREDICTED_GAP",
+          "MISSING_ACTION_CONDITIONED_EVIDENCE"
+        ],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": "COMPENSATION_RESPONSE_PROBE",
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Sign agreement of 0.75 is moderate\u2014not strongly stable nor highly variable\u2014and relative_bias_std of 0.20 indicates non-trivial response variability. No action-conditioned evidence exists to confirm whether compensation will be effective or whether retry is needed."
+      }
+    },
+    "episode_id": "probe_utility_episode_007",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "RUN_MICRO_PROBE",
+      "evidence_summary": "Task progress is 4.5% with goal distance 0.162. Estimated drift is very small ([0.000322, -0.000347]) with moderate dominant-axis sign agreement (0.75) and moderate relative bias std (0.20). No active principles or past experiences exist to ground direct action selection.",
+      "expected_effect": "A COMPENSATION_RESPONSE_PROBE will test whether repeated probe responses align with the estimated drift direction, disambiguating between bounded planar compensation and independent stochastic retry before committing action budget.",
+      "predicted_success_probability": 0.45,
+      "probe_justification_codes": [
+        "SMALL_PREDICTED_GAP",
+        "MISSING_ACTION_CONDITIONED_EVIDENCE"
+      ],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": "COMPENSATION_RESPONSE_PROBE",
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Sign agreement of 0.75 is moderate\u2014not strongly stable nor highly variable\u2014and relative_bias_std of 0.20 indicates non-trivial response variability. No action-conditioned evidence exists to confirm whether compensation will be effective or whether retry is needed."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": true,
+      "current_best_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "current_probability_gap": 0.10000000000000003,
+      "decision_change_probability": 0.4,
+      "normalized_probe_cost": 0.050955414012738856,
+      "outcome_discriminative": true,
+      "rejection_reasons": [],
+      "robust_expected_value_gain": 0.1499999999999999,
+      "selected_probe_type": "COMPENSATION_RESPONSE_PROBE"
+    },
+    "repaired": true,
+    "request_hash": "344edacd260af7d7b8c5426be7f7ed4dc1844d2914a05e076a15dabc9ff017be",
+    "seed": 6766,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 12,
+    "audit_slice_start": 11,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "bound_decision_mode": "ACT_DIRECTLY",
+        "bound_selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "counterevidence_summary": "Initial probe responses showed moderate relative_bias_std (0.20) and dominant_axis_sign_agreement of 0.75 rather than near-1.0, with only 4 probe samples collected. The micro probe was conducted in a temporary reset environment with outcome_unavailable_at_write true, so formal recovery success is not yet confirmed. These factors keep INDEPENDENT_STOCHASTIC_RETRY viable if compensation proves unstable during formal execution.",
+        "current_evidence_id": "probe_utility_episode_007_evidence",
+        "decision_basis": "MICRO_PROBE_EVIDENCE",
+        "grounding_claim": "REPEATED_RESPONSE_SUPPORTS_COMPENSATION",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_007_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": [
+          "probe_utility_episode_007_micro_probe"
+        ]
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "ACT_DIRECTLY",
+        "evidence_summary": "Post-probe: COMPENSATION_RESPONSE_PROBE yielded direction alignment 0.999, response consistency 0.8, contact preserved, and temporary progress 0.160. Goal distance is 0.162 with 500 verification steps remaining. Probe evidence strongly supports bounded planar compensation over stochastic retry.",
+        "expected_effect": "Applying BOUNDED_PLANAR_COMPENSATION should counteract the persistent signed drift and reduce the remaining goal distance of 0.162, as the probe confirmed compensation direction alignment of 0.999 with consistent, contact-preserving progress.",
+        "predicted_success_probability": 0.68,
+        "probe_justification_codes": [],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": null,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Probe alignment and consistency are strong, but initial relative_bias_std was 0.20 with sign agreement 0.75 and only 4 samples collected. The probe outcome_unavailable_at_write is true and was conducted in a reset environment, so formal recovery effectiveness is not yet fully confirmed."
+      }
+    },
+    "episode_id": "probe_utility_episode_007",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ACT_DIRECTLY",
+      "evidence_summary": "Post-probe: COMPENSATION_RESPONSE_PROBE yielded direction alignment 0.999, response consistency 0.8, contact preserved, and temporary progress 0.160. Goal distance is 0.162 with 500 verification steps remaining. Probe evidence strongly supports bounded planar compensation over stochastic retry.",
+      "expected_effect": "Applying BOUNDED_PLANAR_COMPENSATION should counteract the persistent signed drift and reduce the remaining goal distance of 0.162, as the probe confirmed compensation direction alignment of 0.999 with consistent, contact-preserving progress.",
+      "predicted_success_probability": 0.68,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Probe alignment and consistency are strong, but initial relative_bias_std was 0.20 with sign agreement 0.75 and only 4 samples collected. The probe outcome_unavailable_at_write is true and was conducted in a reset environment, so formal recovery effectiveness is not yet fully confirmed."
+    },
+    "persisted_before_candidate_outcomes": true,
+    "repaired": false,
+    "request_hash": "a41da47632ce872d3103776fe651ed2ea358681993d398708c2b5a341f5f2af6",
+    "seed": 6766,
+    "stage": "POST_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 13,
+    "audit_slice_start": 12,
+    "cache_hit": false,
+    "certified_decision": null,
+    "episode_id": "probe_utility_episode_008",
+    "error": "RuntimeError: SciAgent schema-repair budget exhausted",
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "Insufficient validated evidence for BOUNDED_PLANAR_COMPENSATION",
+        "Insufficient validated evidence for INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "Decision unavailable; host failed closed.",
+      "expected_effect": "Avoid an unsupported recovery execution.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "RuntimeError: SciAgent schema-repair budget exhausted",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "RuntimeError: SciAgent schema-repair budget exhausted"
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": null,
+    "repaired": true,
+    "request_hash": "705c35b5faf694fe8ccf75791283796d8aee9bf64555c9cdaff0e7d13e142e9b",
+    "seed": 6769,
+    "stage": "PRE_PROBE",
+    "valid": false
+  },
+  {
+    "audit_slice_end": 14,
+    "audit_slice_start": 13,
+    "cache_hit": false,
+    "certified_decision": {
+      "certificate": {
+        "alternative_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "bound_decision_mode": "ACT_DIRECTLY",
+        "bound_selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "counterevidence_summary": "dominant_axis_sign_agreement of 0.75 exceeds chance level (0.5), providing partial support for a stable directional drift and thus for BOUNDED_PLANAR_COMPENSATION; however, with only 4 samples and relative_bias_std at 1.817, this agreement is insufficient to establish the consistent direction and magnitude required by the compensation skill's applicability condition.",
+        "current_evidence_id": "probe_utility_episode_009_evidence",
+        "decision_basis": "CURRENT_DIRECT_EVIDENCE",
+        "grounding_claim": "RESPONSE_VARIABILITY_SUPPORTS_RETRY",
+        "supporting_evidence_ids": [
+          "probe_utility_episode_009_evidence"
+        ],
+        "supporting_experience_ids": [],
+        "supporting_principle_ids": [],
+        "supporting_probe_record_ids": []
+      },
+      "decision": {
+        "candidate_hypotheses": [
+          "BOUNDED_PLANAR_COMPENSATION",
+          "INDEPENDENT_STOCHASTIC_RETRY"
+        ],
+        "decision_mode": "ACT_DIRECTLY",
+        "evidence_summary": "Over 4 probe samples, relative_bias_std is 1.817 (variability exceeds mean bias magnitude), drift is negligible (~2.5e-4) compared to bias_std_norm (0.134), and dominant_axis_sign_agreement is 0.75\u2014moderate but insufficient to establish a stable signed correction. High response variability with no reliable directional drift supports retry over compensation.",
+        "expected_effect": "Re-executing the fixed policy under an independent realization should yield a fresh sample path that can overcome the high response variability, since no bounded directional correction is reliably supported by the current evidence.",
+        "predicted_success_probability": 0.6,
+        "probe_justification_codes": [],
+        "retrieved_experience_ids": [],
+        "retrieved_hypothesis_ids": [],
+        "retrieved_principle_ids": [],
+        "selected_probe_type": null,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "stop_reason": null,
+        "tested_hypothesis_ids": [],
+        "uncertainty_reason": "Only 4 probe samples have been collected; the 0.75 sign agreement is above chance but the relative_bias_std of 1.817 indicates the bias estimate is dominated by noise, leaving moderate residual uncertainty about whether a weak stable direction exists."
+      }
+    },
+    "episode_id": "probe_utility_episode_009",
+    "error": null,
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ACT_DIRECTLY",
+      "evidence_summary": "Over 4 probe samples, relative_bias_std is 1.817 (variability exceeds mean bias magnitude), drift is negligible (~2.5e-4) compared to bias_std_norm (0.134), and dominant_axis_sign_agreement is 0.75\u2014moderate but insufficient to establish a stable signed correction. High response variability with no reliable directional drift supports retry over compensation.",
+      "expected_effect": "Re-executing the fixed policy under an independent realization should yield a fresh sample path that can overcome the high response variability, since no bounded directional correction is reliably supported by the current evidence.",
+      "predicted_success_probability": 0.6,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stop_reason": null,
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Only 4 probe samples have been collected; the 0.75 sign agreement is above chance but the relative_bias_std of 1.817 indicates the bias estimate is dominated by noise, leaving moderate residual uncertainty about whether a weak stable direction exists."
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": {
+      "admitted": false,
+      "current_best_skill": null,
+      "current_probability_gap": 0.0,
+      "decision_change_probability": 0.0,
+      "normalized_probe_cost": 0.0,
+      "outcome_discriminative": false,
+      "rejection_reasons": [
+        "AGENT_DID_NOT_REQUEST_PROBE"
+      ],
+      "robust_expected_value_gain": 0.0,
+      "selected_probe_type": null
+    },
+    "repaired": false,
+    "request_hash": "3a8d6dfb88915d521a224ac17fe5d054301d403af4d86bcd4d86778c13e9aaa0",
+    "seed": 6772,
+    "stage": "PRE_PROBE",
+    "valid": true
+  },
+  {
+    "audit_slice_end": 15,
+    "audit_slice_start": 14,
+    "cache_hit": false,
+    "certified_decision": null,
+    "episode_id": "probe_utility_episode_010",
+    "error": "RuntimeError: SciAgent schema-repair budget exhausted",
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "Insufficient validated evidence for BOUNDED_PLANAR_COMPENSATION",
+        "Insufficient validated evidence for INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "Decision unavailable; host failed closed.",
+      "expected_effect": "Avoid an unsupported recovery execution.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "RuntimeError: SciAgent schema-repair budget exhausted",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "RuntimeError: SciAgent schema-repair budget exhausted"
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": null,
+    "repaired": true,
+    "request_hash": "456250d87f14cf2866198bf775f1d6e597507599d702899e1b9010484885a083",
+    "seed": 6773,
+    "stage": "PRE_PROBE",
+    "valid": false
+  },
+  {
+    "audit_slice_end": 16,
+    "audit_slice_start": 15,
+    "cache_hit": false,
+    "certified_decision": null,
+    "episode_id": "probe_utility_episode_011",
+    "error": "RuntimeError: SciAgent schema-repair budget exhausted",
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "Insufficient validated evidence for BOUNDED_PLANAR_COMPENSATION",
+        "Insufficient validated evidence for INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "Decision unavailable; host failed closed.",
+      "expected_effect": "Avoid an unsupported recovery execution.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "RuntimeError: SciAgent schema-repair budget exhausted",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "RuntimeError: SciAgent schema-repair budget exhausted"
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": null,
+    "repaired": true,
+    "request_hash": "0ff214cbe38e4887176fc410a718db66c10546fc7316293cd5e3148a516a757e",
+    "seed": 6776,
+    "stage": "PRE_PROBE",
+    "valid": false
+  },
+  {
+    "audit_slice_end": 16,
+    "audit_slice_start": 16,
+    "cache_hit": false,
+    "certified_decision": null,
+    "episode_id": "probe_utility_episode_012",
+    "error": "CIRCUIT_OPEN",
+    "fail_closed_decision": {
+      "candidate_hypotheses": [
+        "Insufficient validated evidence for BOUNDED_PLANAR_COMPENSATION",
+        "Insufficient validated evidence for INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "Decision unavailable; host failed closed.",
+      "expected_effect": "Avoid an unsupported recovery execution.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "API reliability circuit breaker is open",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "API reliability circuit breaker is open"
+    },
+    "persisted_before_probe": true,
+    "probe_value_assessment": null,
+    "repaired": false,
+    "request_hash": "b630b0f54bc659a35285bfa59db52f35ac617e41afff03c9364312527badd8f5",
+    "seed": 6778,
+    "stage": "PRE_PROBE",
+    "valid": false
+  }
+]

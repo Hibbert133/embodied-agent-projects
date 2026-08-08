@@ -654,3 +654,21 @@ seeds, add skills, or claim recovery improvement. Promotion requires at least
 one strictly helpful probe, more helpful than harmful probes, and zero audit,
 chronology, leakage, budget, or counterfactual-write violations. Failure or
 incomplete population is preserved without prompt, gate, probe, or seed tuning.
+
+The frozen v1.7 run completed 12 operational cases from 29 fresh initial
+units and failed its gate. Only 7/12 pre-probe outputs were valid; five failed
+closed after four audited 210-second hard timeouts, two exhausted repairs, two
+value-certificate ordering errors, and the final circuit-open fallback. Two
+Host-admitted compensation-response probes both left the action unchanged at
+compensation, producing zero helpful, zero harmful, and two
+no-decision-benefit probes. Causal-execution integrity counters were zero, and
+no online recovery, memory, hypothesis, or principle update occurred. Preserve
+this negative result; do not rerun or extend seeds 6750--6849 or execute
+reserved 6850--6949. The immutable summary undercounted hard timeouts as zero
+because it matched the wrong normalized exception field; corrected no-new-call
+analysis records four and the future summarizer has a regression fix. This
+reporting defect does not change the already-failed gate. Do not advance to
+memory, principles, validation, held-out execution, or another API-format or
+calibration revision from this result. A successor requires a new causal
+question about decision-changing probe information on separately frozen fresh
+seeds.
