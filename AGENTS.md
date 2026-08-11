@@ -672,3 +672,17 @@ memory, principles, validation, held-out execution, or another API-format or
 calibration revision from this result. A successor requires a new causal
 question about decision-changing probe information on separately frozen fresh
 seeds.
+
+The user subsequently authorized the separately frozen evaluator-only
+Distributional Probe Identifiability v1.8 protocol in
+`docs/protocols/probemem_sciagent_distributional_probe_identifiability_v1_8.md`.
+It may scan fresh seeds 6950--7099 once until 30 operational failures, collect
+both registered micro-probes, and collect four independent paired recovery
+realizations per skill. Stopping cannot inspect probe measurements or outcomes.
+The fixed probe contrast and distributional decisive margin must not be fitted
+or revised. Seeds 6850--6949 remain reserved and seeds 7100--7199 are newly
+reserved. This is a prerequisite evidence-identifiability audit only: it must
+not call an API, request an Agent decision, execute an online recovery, write
+memory, update hypotheses or principles, run validation or held-out seeds, or
+claim performance. Failure or incomplete population must be preserved without
+score, label, realization-count, gate, or seed tuning.
