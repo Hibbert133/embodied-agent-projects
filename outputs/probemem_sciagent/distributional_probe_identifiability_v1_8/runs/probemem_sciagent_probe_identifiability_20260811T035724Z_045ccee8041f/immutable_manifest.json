@@ -1,0 +1,2875 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_sciagent_probe_identifiability_20260811T035724Z_045ccee8041f",
+  "created_at_utc": "20260811T035724Z",
+  "source_git_commit": "045ccee8041f2da66ed2d1e7e056ab2ca1a8f2ab",
+  "config_path": "configs/probemem_sciagent/distributional_probe_identifiability_v1_8.json",
+  "config_sha256": "0c8888a68d250b45c0b0bc02bafac660de2ab556692b02585c6794d1b99721cc",
+  "implementation_sha256": {
+    "src/probemem_sciagent/probe_identifiability.py": "eee7c38afd3b2b1a41bdd071e18ee6b6840651c956a3cc003b3c771ec3f3ac30",
+    "src/probemem_sciagent/compensation_probe.py": "0588ef7d4f2fa48ea114a8fe50533fbb7708532c4b027837f28fa4120f74a5cf",
+    "src/probemem_sciagent/retry_probe.py": "0cfa7f1d3e37d259da2ffb6bfbae3187bdf14a59c9fdec944b46d0e892d573fe",
+    "src/probemem_sciagent/probe_registry.py": "b437f9bc083695692fba6e58cdfd8fecc11bb6c6bf5673156ee35f78fe0caa32",
+    "scripts/generate_probemem_sciagent_distributional_probe_manifest.py": "949474e039deae9855a48272b80b19060a215c8b61662d8ca657b66251823bb5",
+    "scripts/run_probemem_sciagent_distributional_probe_identifiability.py": "b9a84e5671b34446a159eb0599f0d7ab76656f231db6e1364dfa06275f945eb8"
+  },
+  "input_sha256": {
+    "configs/probemem_sciagent/distributional_probe_identifiability_v1_8.json": "0c8888a68d250b45c0b0bc02bafac660de2ab556692b02585c6794d1b99721cc",
+    "configs/probemem_sciagent/seed_registry_v9.json": "42462ca1ae94453854d034bcaace9a0246a8080b41cbbdf4f0febf26c9a768dc",
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "docs/protocols/probemem_sciagent_distributional_probe_identifiability_v1_8.md": "f945ba2ac5178c6e3071c6609fc111658ca3ac77359c0545d06dc53f48e0e830"
+  },
+  "population_units": [
+    {
+      "unit_id": 1,
+      "environment_seed": 6950,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 167982908,
+      "mandatory_probe_seed": 1190308291,
+      "compensation_probe_seed": 3343957662,
+      "retry_probe_seeds": [
+        3940510039,
+        4175944124,
+        541513366
+      ],
+      "verification_seeds": [
+        902470720,
+        1220884913,
+        1203528997,
+        3890658535
+      ]
+    },
+    {
+      "unit_id": 2,
+      "environment_seed": 6951,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3162939248,
+      "mandatory_probe_seed": 928904051,
+      "compensation_probe_seed": 1582696617,
+      "retry_probe_seeds": [
+        1030431159,
+        2720887681,
+        2320935072
+      ],
+      "verification_seeds": [
+        871468417,
+        3413770623,
+        3103932631,
+        3269001178
+      ]
+    },
+    {
+      "unit_id": 3,
+      "environment_seed": 6952,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2565582880,
+      "mandatory_probe_seed": 1414626242,
+      "compensation_probe_seed": 3350633702,
+      "retry_probe_seeds": [
+        912710172,
+        1514138192,
+        3704853204
+      ],
+      "verification_seeds": [
+        3252462115,
+        3526882652,
+        2754272740,
+        3318477008
+      ]
+    },
+    {
+      "unit_id": 4,
+      "environment_seed": 6953,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3020283011,
+      "mandatory_probe_seed": 1107335421,
+      "compensation_probe_seed": 1562532621,
+      "retry_probe_seeds": [
+        1359410634,
+        2401754441,
+        1183380261
+      ],
+      "verification_seeds": [
+        219622960,
+        382268876,
+        1725835953,
+        2451084039
+      ]
+    },
+    {
+      "unit_id": 5,
+      "environment_seed": 6954,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 83406769,
+      "mandatory_probe_seed": 3684188200,
+      "compensation_probe_seed": 265025687,
+      "retry_probe_seeds": [
+        1143367509,
+        2152497951,
+        762571715
+      ],
+      "verification_seeds": [
+        698238479,
+        858057484,
+        3667300667,
+        3993965612
+      ]
+    },
+    {
+      "unit_id": 6,
+      "environment_seed": 6955,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2985602729,
+      "mandatory_probe_seed": 2552230685,
+      "compensation_probe_seed": 839805491,
+      "retry_probe_seeds": [
+        506416891,
+        3312127108,
+        2180811586
+      ],
+      "verification_seeds": [
+        847384844,
+        2310746382,
+        2535371236,
+        2801500805
+      ]
+    },
+    {
+      "unit_id": 7,
+      "environment_seed": 6956,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1992050757,
+      "mandatory_probe_seed": 3517417792,
+      "compensation_probe_seed": 2319348161,
+      "retry_probe_seeds": [
+        4260895323,
+        2728381167,
+        2521473423
+      ],
+      "verification_seeds": [
+        1710461281,
+        2827220683,
+        2801917664,
+        3606915510
+      ]
+    },
+    {
+      "unit_id": 8,
+      "environment_seed": 6957,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 315001481,
+      "mandatory_probe_seed": 1272735151,
+      "compensation_probe_seed": 600841892,
+      "retry_probe_seeds": [
+        3420066000,
+        1921064797,
+        910909716
+      ],
+      "verification_seeds": [
+        1853791207,
+        1204257491,
+        2258143871,
+        2304346907
+      ]
+    },
+    {
+      "unit_id": 9,
+      "environment_seed": 6958,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1716964474,
+      "mandatory_probe_seed": 2434577959,
+      "compensation_probe_seed": 3473852463,
+      "retry_probe_seeds": [
+        3799817653,
+        3545218686,
+        3965241526
+      ],
+      "verification_seeds": [
+        3061169841,
+        1201983438,
+        2322269617,
+        2102994725
+      ]
+    },
+    {
+      "unit_id": 10,
+      "environment_seed": 6959,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 844481269,
+      "mandatory_probe_seed": 1596182861,
+      "compensation_probe_seed": 2914349906,
+      "retry_probe_seeds": [
+        1744125248,
+        3974451479,
+        2525854606
+      ],
+      "verification_seeds": [
+        920581668,
+        320648022,
+        2457944309,
+        1026175398
+      ]
+    },
+    {
+      "unit_id": 11,
+      "environment_seed": 6960,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 4020474105,
+      "mandatory_probe_seed": 3543422407,
+      "compensation_probe_seed": 597594079,
+      "retry_probe_seeds": [
+        1170820710,
+        3204648687,
+        2687474284
+      ],
+      "verification_seeds": [
+        3215664137,
+        2081529412,
+        1589800138,
+        552461088
+      ]
+    },
+    {
+      "unit_id": 12,
+      "environment_seed": 6961,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 4063392325,
+      "mandatory_probe_seed": 2531732120,
+      "compensation_probe_seed": 3077680783,
+      "retry_probe_seeds": [
+        981530758,
+        957643222,
+        3856089439
+      ],
+      "verification_seeds": [
+        143278458,
+        2013184464,
+        1617633898,
+        39726898
+      ]
+    },
+    {
+      "unit_id": 13,
+      "environment_seed": 6962,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1173508166,
+      "mandatory_probe_seed": 769087048,
+      "compensation_probe_seed": 18348915,
+      "retry_probe_seeds": [
+        2557986566,
+        3244565190,
+        2347690424
+      ],
+      "verification_seeds": [
+        2673209334,
+        2765854074,
+        2547145866,
+        2547159683
+      ]
+    },
+    {
+      "unit_id": 14,
+      "environment_seed": 6963,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1180128296,
+      "mandatory_probe_seed": 3784471348,
+      "compensation_probe_seed": 4089227529,
+      "retry_probe_seeds": [
+        2556730022,
+        3276195108,
+        1865720780
+      ],
+      "verification_seeds": [
+        1822873944,
+        573573299,
+        558053389,
+        3385805305
+      ]
+    },
+    {
+      "unit_id": 15,
+      "environment_seed": 6964,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3481123594,
+      "mandatory_probe_seed": 3597850680,
+      "compensation_probe_seed": 1761298294,
+      "retry_probe_seeds": [
+        1702559596,
+        2504471378,
+        4186034022
+      ],
+      "verification_seeds": [
+        1975306274,
+        517586203,
+        354971069,
+        693267962
+      ]
+    },
+    {
+      "unit_id": 16,
+      "environment_seed": 6965,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2441446784,
+      "mandatory_probe_seed": 2763814912,
+      "compensation_probe_seed": 776396005,
+      "retry_probe_seeds": [
+        4133503127,
+        623132481,
+        2510418068
+      ],
+      "verification_seeds": [
+        4104730205,
+        1061052476,
+        3039533457,
+        2582490099
+      ]
+    },
+    {
+      "unit_id": 17,
+      "environment_seed": 6966,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 105690708,
+      "mandatory_probe_seed": 1737617260,
+      "compensation_probe_seed": 3554577532,
+      "retry_probe_seeds": [
+        909009805,
+        3084912352,
+        1810332188
+      ],
+      "verification_seeds": [
+        3407446157,
+        1174003302,
+        3217092541,
+        2587199048
+      ]
+    },
+    {
+      "unit_id": 18,
+      "environment_seed": 6967,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2690004212,
+      "mandatory_probe_seed": 1339905872,
+      "compensation_probe_seed": 2473433419,
+      "retry_probe_seeds": [
+        2633478056,
+        4023539834,
+        3268616182
+      ],
+      "verification_seeds": [
+        1432477228,
+        2430033651,
+        439933710,
+        2038207595
+      ]
+    },
+    {
+      "unit_id": 19,
+      "environment_seed": 6968,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2335514472,
+      "mandatory_probe_seed": 1892927925,
+      "compensation_probe_seed": 4033344590,
+      "retry_probe_seeds": [
+        976095694,
+        1568994725,
+        303916895
+      ],
+      "verification_seeds": [
+        2966499775,
+        189283979,
+        715169553,
+        3161594143
+      ]
+    },
+    {
+      "unit_id": 20,
+      "environment_seed": 6969,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 4128626973,
+      "mandatory_probe_seed": 863375456,
+      "compensation_probe_seed": 1032300063,
+      "retry_probe_seeds": [
+        1601872921,
+        2924055284,
+        4281604495
+      ],
+      "verification_seeds": [
+        3219500563,
+        1110822352,
+        1490534909,
+        2559584812
+      ]
+    },
+    {
+      "unit_id": 21,
+      "environment_seed": 6970,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 2287388002,
+      "mandatory_probe_seed": 1266271880,
+      "compensation_probe_seed": 520071868,
+      "retry_probe_seeds": [
+        3796580363,
+        3010339684,
+        4136344814
+      ],
+      "verification_seeds": [
+        1411261961,
+        1936103738,
+        2235467850,
+        2421495241
+      ]
+    },
+    {
+      "unit_id": 22,
+      "environment_seed": 6971,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1644173584,
+      "mandatory_probe_seed": 1503853663,
+      "compensation_probe_seed": 3184074481,
+      "retry_probe_seeds": [
+        3309479425,
+        3022106155,
+        2473420928
+      ],
+      "verification_seeds": [
+        702914586,
+        2664579414,
+        2835936537,
+        3811974324
+      ]
+    },
+    {
+      "unit_id": 23,
+      "environment_seed": 6972,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 60365034,
+      "mandatory_probe_seed": 2582249092,
+      "compensation_probe_seed": 3182178995,
+      "retry_probe_seeds": [
+        918465473,
+        2246546826,
+        1090238751
+      ],
+      "verification_seeds": [
+        936779576,
+        339445905,
+        3432032284,
+        2654018434
+      ]
+    },
+    {
+      "unit_id": 24,
+      "environment_seed": 6973,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2656783764,
+      "mandatory_probe_seed": 3369130740,
+      "compensation_probe_seed": 3469292262,
+      "retry_probe_seeds": [
+        3381808640,
+        1563719088,
+        3626695754
+      ],
+      "verification_seeds": [
+        2335767227,
+        474391503,
+        3754165706,
+        4076736800
+      ]
+    },
+    {
+      "unit_id": 25,
+      "environment_seed": 6974,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1861897518,
+      "mandatory_probe_seed": 3450154648,
+      "compensation_probe_seed": 412781776,
+      "retry_probe_seeds": [
+        1058695592,
+        1230472968,
+        2135983610
+      ],
+      "verification_seeds": [
+        4042521848,
+        3184536163,
+        2950151879,
+        2099933524
+      ]
+    },
+    {
+      "unit_id": 26,
+      "environment_seed": 6975,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3428327076,
+      "mandatory_probe_seed": 151835340,
+      "compensation_probe_seed": 1829797881,
+      "retry_probe_seeds": [
+        1429133765,
+        3433298605,
+        1976430840
+      ],
+      "verification_seeds": [
+        2778662236,
+        702865321,
+        440611325,
+        2851747467
+      ]
+    },
+    {
+      "unit_id": 27,
+      "environment_seed": 6976,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2420974444,
+      "mandatory_probe_seed": 3408651449,
+      "compensation_probe_seed": 3952542470,
+      "retry_probe_seeds": [
+        2571200139,
+        469448108,
+        866601599
+      ],
+      "verification_seeds": [
+        648431848,
+        3856848301,
+        133613403,
+        1524853613
+      ]
+    },
+    {
+      "unit_id": 28,
+      "environment_seed": 6977,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1842253583,
+      "mandatory_probe_seed": 2025016420,
+      "compensation_probe_seed": 3892197426,
+      "retry_probe_seeds": [
+        3774204709,
+        4071182486,
+        2240556489
+      ],
+      "verification_seeds": [
+        4012685965,
+        3913656072,
+        709617605,
+        1918564540
+      ]
+    },
+    {
+      "unit_id": 29,
+      "environment_seed": 6978,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 3855159988,
+      "mandatory_probe_seed": 1406995377,
+      "compensation_probe_seed": 1058297937,
+      "retry_probe_seeds": [
+        4032229399,
+        2423894589,
+        372419611
+      ],
+      "verification_seeds": [
+        1080624194,
+        3630089270,
+        1649026981,
+        3816848317
+      ]
+    },
+    {
+      "unit_id": 30,
+      "environment_seed": 6979,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2862764792,
+      "mandatory_probe_seed": 4139509183,
+      "compensation_probe_seed": 2808636766,
+      "retry_probe_seeds": [
+        1417332626,
+        4001422258,
+        3551550075
+      ],
+      "verification_seeds": [
+        3837464523,
+        3019546619,
+        2552094798,
+        2812862713
+      ]
+    },
+    {
+      "unit_id": 31,
+      "environment_seed": 6980,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2623688881,
+      "mandatory_probe_seed": 3999238331,
+      "compensation_probe_seed": 230650999,
+      "retry_probe_seeds": [
+        3276895262,
+        2836332092,
+        3718543819
+      ],
+      "verification_seeds": [
+        955062435,
+        1654644322,
+        15621738,
+        1142530019
+      ]
+    },
+    {
+      "unit_id": 32,
+      "environment_seed": 6981,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2276794072,
+      "mandatory_probe_seed": 2124755765,
+      "compensation_probe_seed": 3439153166,
+      "retry_probe_seeds": [
+        1182946461,
+        2684393345,
+        1135132097
+      ],
+      "verification_seeds": [
+        2637435280,
+        4294613221,
+        2223847716,
+        3314843860
+      ]
+    },
+    {
+      "unit_id": 33,
+      "environment_seed": 6982,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 13996186,
+      "mandatory_probe_seed": 2890537539,
+      "compensation_probe_seed": 3155664403,
+      "retry_probe_seeds": [
+        66459597,
+        2089780718,
+        737012443
+      ],
+      "verification_seeds": [
+        1760643948,
+        1111038907,
+        4148953713,
+        517936238
+      ]
+    },
+    {
+      "unit_id": 34,
+      "environment_seed": 6983,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3758598072,
+      "mandatory_probe_seed": 2752864828,
+      "compensation_probe_seed": 1435643618,
+      "retry_probe_seeds": [
+        222770893,
+        3890543640,
+        1595848580
+      ],
+      "verification_seeds": [
+        3062022589,
+        1275873567,
+        946631201,
+        4030510891
+      ]
+    },
+    {
+      "unit_id": 35,
+      "environment_seed": 6984,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 71012969,
+      "mandatory_probe_seed": 4201132331,
+      "compensation_probe_seed": 3332619493,
+      "retry_probe_seeds": [
+        2435145146,
+        3932945802,
+        2775490610
+      ],
+      "verification_seeds": [
+        789929576,
+        2534808338,
+        29429502,
+        2139631279
+      ]
+    },
+    {
+      "unit_id": 36,
+      "environment_seed": 6985,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1443986951,
+      "mandatory_probe_seed": 1719480836,
+      "compensation_probe_seed": 2731369193,
+      "retry_probe_seeds": [
+        449257337,
+        313524419,
+        516525393
+      ],
+      "verification_seeds": [
+        3734749754,
+        2178778422,
+        3007447606,
+        3926628409
+      ]
+    },
+    {
+      "unit_id": 37,
+      "environment_seed": 6986,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 501577839,
+      "mandatory_probe_seed": 543112797,
+      "compensation_probe_seed": 998434193,
+      "retry_probe_seeds": [
+        2343147696,
+        4227706301,
+        74630462
+      ],
+      "verification_seeds": [
+        3387465337,
+        488744999,
+        1276436051,
+        2359497137
+      ]
+    },
+    {
+      "unit_id": 38,
+      "environment_seed": 6987,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 290048312,
+      "mandatory_probe_seed": 2225960167,
+      "compensation_probe_seed": 4005649002,
+      "retry_probe_seeds": [
+        1513383474,
+        2533271792,
+        1659872046
+      ],
+      "verification_seeds": [
+        1147335641,
+        4120077588,
+        3562464632,
+        2620929354
+      ]
+    },
+    {
+      "unit_id": 39,
+      "environment_seed": 6988,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2833220356,
+      "mandatory_probe_seed": 3370427409,
+      "compensation_probe_seed": 664965744,
+      "retry_probe_seeds": [
+        3260554297,
+        3794377388,
+        3722352008
+      ],
+      "verification_seeds": [
+        3822446300,
+        3692808557,
+        1460560516,
+        2491822729
+      ]
+    },
+    {
+      "unit_id": 40,
+      "environment_seed": 6989,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 635112336,
+      "mandatory_probe_seed": 1684556017,
+      "compensation_probe_seed": 416139796,
+      "retry_probe_seeds": [
+        2683758882,
+        1668421875,
+        2652363257
+      ],
+      "verification_seeds": [
+        2813789860,
+        3118097379,
+        1190356640,
+        1191258185
+      ]
+    },
+    {
+      "unit_id": 41,
+      "environment_seed": 6990,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1441900384,
+      "mandatory_probe_seed": 1351998811,
+      "compensation_probe_seed": 2001015885,
+      "retry_probe_seeds": [
+        2392902944,
+        2836022863,
+        724730160
+      ],
+      "verification_seeds": [
+        642351213,
+        676724803,
+        3257594125,
+        2732788254
+      ]
+    },
+    {
+      "unit_id": 42,
+      "environment_seed": 6991,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1732732295,
+      "mandatory_probe_seed": 2939144936,
+      "compensation_probe_seed": 2320696146,
+      "retry_probe_seeds": [
+        316288859,
+        4227080393,
+        2088130245
+      ],
+      "verification_seeds": [
+        2307433045,
+        1740459838,
+        1013643845,
+        1808638901
+      ]
+    },
+    {
+      "unit_id": 43,
+      "environment_seed": 6992,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3184404195,
+      "mandatory_probe_seed": 581688204,
+      "compensation_probe_seed": 592060082,
+      "retry_probe_seeds": [
+        313841865,
+        4034087902,
+        3794737791
+      ],
+      "verification_seeds": [
+        916857786,
+        408803326,
+        3565677777,
+        504637668
+      ]
+    },
+    {
+      "unit_id": 44,
+      "environment_seed": 6993,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2108561212,
+      "mandatory_probe_seed": 3263156625,
+      "compensation_probe_seed": 1505297780,
+      "retry_probe_seeds": [
+        2463601431,
+        4269430147,
+        1000548484
+      ],
+      "verification_seeds": [
+        4239200976,
+        2100157097,
+        3111247042,
+        153925370
+      ]
+    },
+    {
+      "unit_id": 45,
+      "environment_seed": 6994,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 2978624443,
+      "mandatory_probe_seed": 2484334280,
+      "compensation_probe_seed": 1117489606,
+      "retry_probe_seeds": [
+        1456881979,
+        67380803,
+        1115705563
+      ],
+      "verification_seeds": [
+        668979377,
+        433182934,
+        4111407621,
+        1440792490
+      ]
+    },
+    {
+      "unit_id": 46,
+      "environment_seed": 6995,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1553307043,
+      "mandatory_probe_seed": 3851102956,
+      "compensation_probe_seed": 2535686033,
+      "retry_probe_seeds": [
+        2135536064,
+        2146212756,
+        4142769878
+      ],
+      "verification_seeds": [
+        328728811,
+        1188536560,
+        1894933333,
+        2080027075
+      ]
+    },
+    {
+      "unit_id": 47,
+      "environment_seed": 6996,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3945444476,
+      "mandatory_probe_seed": 507917170,
+      "compensation_probe_seed": 4289503441,
+      "retry_probe_seeds": [
+        4031292435,
+        3702145198,
+        221087315
+      ],
+      "verification_seeds": [
+        54957883,
+        3847614833,
+        1529267678,
+        2124733796
+      ]
+    },
+    {
+      "unit_id": 48,
+      "environment_seed": 6997,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 206415281,
+      "mandatory_probe_seed": 3184887178,
+      "compensation_probe_seed": 231448962,
+      "retry_probe_seeds": [
+        2943006731,
+        2860975682,
+        331549290
+      ],
+      "verification_seeds": [
+        1039187733,
+        559960798,
+        748870136,
+        2266511835
+      ]
+    },
+    {
+      "unit_id": 49,
+      "environment_seed": 6998,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 2493283487,
+      "mandatory_probe_seed": 1572742512,
+      "compensation_probe_seed": 4219652523,
+      "retry_probe_seeds": [
+        3063355135,
+        3971540273,
+        2805945588
+      ],
+      "verification_seeds": [
+        4175953646,
+        1485048935,
+        2270180081,
+        3602822469
+      ]
+    },
+    {
+      "unit_id": 50,
+      "environment_seed": 6999,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1161758555,
+      "mandatory_probe_seed": 3693795796,
+      "compensation_probe_seed": 3514596177,
+      "retry_probe_seeds": [
+        3337738690,
+        4233078071,
+        3441130576
+      ],
+      "verification_seeds": [
+        3983472873,
+        3160999003,
+        473015280,
+        3017379394
+      ]
+    },
+    {
+      "unit_id": 51,
+      "environment_seed": 7000,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1356816097,
+      "mandatory_probe_seed": 1163806811,
+      "compensation_probe_seed": 303869525,
+      "retry_probe_seeds": [
+        4219271856,
+        3874614799,
+        840049191
+      ],
+      "verification_seeds": [
+        3661833774,
+        3163325537,
+        203226770,
+        3783299079
+      ]
+    },
+    {
+      "unit_id": 52,
+      "environment_seed": 7001,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 198882381,
+      "mandatory_probe_seed": 2664035752,
+      "compensation_probe_seed": 3602065253,
+      "retry_probe_seeds": [
+        3891538546,
+        3318339960,
+        1883134520
+      ],
+      "verification_seeds": [
+        3517777198,
+        2116857391,
+        836714757,
+        2386312990
+      ]
+    },
+    {
+      "unit_id": 53,
+      "environment_seed": 7002,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 4225808412,
+      "mandatory_probe_seed": 2218948021,
+      "compensation_probe_seed": 3844369248,
+      "retry_probe_seeds": [
+        1758055945,
+        120943074,
+        2207773246
+      ],
+      "verification_seeds": [
+        806245790,
+        2374258752,
+        2217759731,
+        2272912592
+      ]
+    },
+    {
+      "unit_id": 54,
+      "environment_seed": 7003,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3854162089,
+      "mandatory_probe_seed": 4159193119,
+      "compensation_probe_seed": 3309346210,
+      "retry_probe_seeds": [
+        3262341603,
+        3137981775,
+        237217646
+      ],
+      "verification_seeds": [
+        3984144442,
+        4137678282,
+        3450149105,
+        1070499550
+      ]
+    },
+    {
+      "unit_id": 55,
+      "environment_seed": 7004,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3467103040,
+      "mandatory_probe_seed": 1878230038,
+      "compensation_probe_seed": 454489665,
+      "retry_probe_seeds": [
+        1318921449,
+        2161919187,
+        390786040
+      ],
+      "verification_seeds": [
+        4106616472,
+        1637128582,
+        3673850459,
+        2589149956
+      ]
+    },
+    {
+      "unit_id": 56,
+      "environment_seed": 7005,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2718054263,
+      "mandatory_probe_seed": 515953636,
+      "compensation_probe_seed": 2345154297,
+      "retry_probe_seeds": [
+        4161811347,
+        3863259386,
+        1960119602
+      ],
+      "verification_seeds": [
+        2421020141,
+        3189474568,
+        2950621183,
+        2037076160
+      ]
+    },
+    {
+      "unit_id": 57,
+      "environment_seed": 7006,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 2720872008,
+      "mandatory_probe_seed": 1342967946,
+      "compensation_probe_seed": 1937778829,
+      "retry_probe_seeds": [
+        3368382089,
+        3336045304,
+        3672368382
+      ],
+      "verification_seeds": [
+        1632131034,
+        2444353908,
+        1724820649,
+        1371731717
+      ]
+    },
+    {
+      "unit_id": 58,
+      "environment_seed": 7007,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 4177443393,
+      "mandatory_probe_seed": 2232366105,
+      "compensation_probe_seed": 3032795754,
+      "retry_probe_seeds": [
+        671642021,
+        890168141,
+        1114391088
+      ],
+      "verification_seeds": [
+        3842545471,
+        3707829278,
+        1483369741,
+        3562388139
+      ]
+    },
+    {
+      "unit_id": 59,
+      "environment_seed": 7008,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3280414365,
+      "mandatory_probe_seed": 1924963001,
+      "compensation_probe_seed": 2151032472,
+      "retry_probe_seeds": [
+        2835584157,
+        3136936398,
+        501139122
+      ],
+      "verification_seeds": [
+        2728152644,
+        3177271303,
+        3786258342,
+        205424864
+      ]
+    },
+    {
+      "unit_id": 60,
+      "environment_seed": 7009,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3883099803,
+      "mandatory_probe_seed": 721212189,
+      "compensation_probe_seed": 1919713607,
+      "retry_probe_seeds": [
+        1785545189,
+        181644890,
+        827566839
+      ],
+      "verification_seeds": [
+        1972437501,
+        3004907501,
+        3362265462,
+        1578910151
+      ]
+    },
+    {
+      "unit_id": 61,
+      "environment_seed": 7010,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 3942260439,
+      "mandatory_probe_seed": 1788010736,
+      "compensation_probe_seed": 3035002626,
+      "retry_probe_seeds": [
+        126827687,
+        2181907781,
+        1905173706
+      ],
+      "verification_seeds": [
+        2882577942,
+        3225654849,
+        1000611641,
+        371707084
+      ]
+    },
+    {
+      "unit_id": 62,
+      "environment_seed": 7011,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2489828052,
+      "mandatory_probe_seed": 328042083,
+      "compensation_probe_seed": 266322343,
+      "retry_probe_seeds": [
+        925219107,
+        3933961369,
+        683063520
+      ],
+      "verification_seeds": [
+        1367419689,
+        3089694020,
+        1205462678,
+        1189566341
+      ]
+    },
+    {
+      "unit_id": 63,
+      "environment_seed": 7012,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1844451853,
+      "mandatory_probe_seed": 1330365870,
+      "compensation_probe_seed": 470961614,
+      "retry_probe_seeds": [
+        3424026592,
+        2892525767,
+        4270619945
+      ],
+      "verification_seeds": [
+        2373282176,
+        1148660799,
+        1742888661,
+        3937341711
+      ]
+    },
+    {
+      "unit_id": 64,
+      "environment_seed": 7013,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3536240509,
+      "mandatory_probe_seed": 412447836,
+      "compensation_probe_seed": 1932529642,
+      "retry_probe_seeds": [
+        2085879422,
+        4102493096,
+        1842876667
+      ],
+      "verification_seeds": [
+        2331611687,
+        1807889923,
+        3380321370,
+        153970679
+      ]
+    },
+    {
+      "unit_id": 65,
+      "environment_seed": 7014,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 19530659,
+      "mandatory_probe_seed": 3766282554,
+      "compensation_probe_seed": 3444816680,
+      "retry_probe_seeds": [
+        482044455,
+        3460285066,
+        1754861581
+      ],
+      "verification_seeds": [
+        1646637573,
+        3397911809,
+        3050300710,
+        2610356692
+      ]
+    },
+    {
+      "unit_id": 66,
+      "environment_seed": 7015,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1832886721,
+      "mandatory_probe_seed": 3951989932,
+      "compensation_probe_seed": 2130492556,
+      "retry_probe_seeds": [
+        2971835018,
+        589015372,
+        2718813747
+      ],
+      "verification_seeds": [
+        2554013968,
+        2638560321,
+        1362881849,
+        3104409747
+      ]
+    },
+    {
+      "unit_id": 67,
+      "environment_seed": 7016,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3888250854,
+      "mandatory_probe_seed": 792711189,
+      "compensation_probe_seed": 2061301301,
+      "retry_probe_seeds": [
+        3995821162,
+        1979949541,
+        648547521
+      ],
+      "verification_seeds": [
+        879925695,
+        841109959,
+        1238228711,
+        3197344788
+      ]
+    },
+    {
+      "unit_id": 68,
+      "environment_seed": 7017,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 456412652,
+      "mandatory_probe_seed": 49595499,
+      "compensation_probe_seed": 1472295701,
+      "retry_probe_seeds": [
+        2166911317,
+        3929473250,
+        782557582
+      ],
+      "verification_seeds": [
+        914123716,
+        1677070891,
+        1767619042,
+        1592444076
+      ]
+    },
+    {
+      "unit_id": 69,
+      "environment_seed": 7018,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1930571642,
+      "mandatory_probe_seed": 2185502002,
+      "compensation_probe_seed": 3008077507,
+      "retry_probe_seeds": [
+        3231278690,
+        3048910500,
+        2492448314
+      ],
+      "verification_seeds": [
+        1073831240,
+        4236147908,
+        567072951,
+        4065595642
+      ]
+    },
+    {
+      "unit_id": 70,
+      "environment_seed": 7019,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1193097310,
+      "mandatory_probe_seed": 1713348218,
+      "compensation_probe_seed": 1305716203,
+      "retry_probe_seeds": [
+        543993150,
+        1765516934,
+        1207257405
+      ],
+      "verification_seeds": [
+        3414970693,
+        4238831539,
+        1124636146,
+        2847125915
+      ]
+    },
+    {
+      "unit_id": 71,
+      "environment_seed": 7020,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2529507297,
+      "mandatory_probe_seed": 707204259,
+      "compensation_probe_seed": 2422932037,
+      "retry_probe_seeds": [
+        1334114639,
+        3264983017,
+        101301265
+      ],
+      "verification_seeds": [
+        3439684230,
+        1859775833,
+        38828557,
+        28890681
+      ]
+    },
+    {
+      "unit_id": 72,
+      "environment_seed": 7021,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2070747312,
+      "mandatory_probe_seed": 642313796,
+      "compensation_probe_seed": 4027708723,
+      "retry_probe_seeds": [
+        2311249881,
+        2515122331,
+        261918417
+      ],
+      "verification_seeds": [
+        2110035857,
+        3962421239,
+        3406551361,
+        2894591533
+      ]
+    },
+    {
+      "unit_id": 73,
+      "environment_seed": 7022,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 3897856286,
+      "mandatory_probe_seed": 3733619146,
+      "compensation_probe_seed": 2453925906,
+      "retry_probe_seeds": [
+        1246382224,
+        2438876866,
+        3870114076
+      ],
+      "verification_seeds": [
+        3419676388,
+        546132834,
+        3180357348,
+        586747127
+      ]
+    },
+    {
+      "unit_id": 74,
+      "environment_seed": 7023,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3932517198,
+      "mandatory_probe_seed": 4112661483,
+      "compensation_probe_seed": 2217810643,
+      "retry_probe_seeds": [
+        3757832725,
+        3973532685,
+        272169412
+      ],
+      "verification_seeds": [
+        518365107,
+        4109088666,
+        2918358591,
+        2304270444
+      ]
+    },
+    {
+      "unit_id": 75,
+      "environment_seed": 7024,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 4145191275,
+      "mandatory_probe_seed": 485646119,
+      "compensation_probe_seed": 1950251296,
+      "retry_probe_seeds": [
+        3725190787,
+        2181864674,
+        855207828
+      ],
+      "verification_seeds": [
+        932653891,
+        3187055923,
+        2419844494,
+        492403357
+      ]
+    },
+    {
+      "unit_id": 76,
+      "environment_seed": 7025,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1054038452,
+      "mandatory_probe_seed": 1536946358,
+      "compensation_probe_seed": 1423213694,
+      "retry_probe_seeds": [
+        162837336,
+        3853974691,
+        3297227031
+      ],
+      "verification_seeds": [
+        2923883982,
+        2762263625,
+        4210725761,
+        1146309698
+      ]
+    },
+    {
+      "unit_id": 77,
+      "environment_seed": 7026,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1868358890,
+      "mandatory_probe_seed": 307726788,
+      "compensation_probe_seed": 2318019497,
+      "retry_probe_seeds": [
+        2656593010,
+        3729925983,
+        3054001001
+      ],
+      "verification_seeds": [
+        75967178,
+        3983113208,
+        1972810494,
+        1510520280
+      ]
+    },
+    {
+      "unit_id": 78,
+      "environment_seed": 7027,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3743395521,
+      "mandatory_probe_seed": 4084811882,
+      "compensation_probe_seed": 2955190600,
+      "retry_probe_seeds": [
+        3950294437,
+        1327657220,
+        1663013745
+      ],
+      "verification_seeds": [
+        3844981733,
+        2384630875,
+        672716486,
+        3997167699
+      ]
+    },
+    {
+      "unit_id": 79,
+      "environment_seed": 7028,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 192626992,
+      "mandatory_probe_seed": 13063647,
+      "compensation_probe_seed": 3903541617,
+      "retry_probe_seeds": [
+        2699387215,
+        38682564,
+        1441356665
+      ],
+      "verification_seeds": [
+        2208250452,
+        812130219,
+        164711718,
+        1949349925
+      ]
+    },
+    {
+      "unit_id": 80,
+      "environment_seed": 7029,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2548680639,
+      "mandatory_probe_seed": 917049255,
+      "compensation_probe_seed": 1108201426,
+      "retry_probe_seeds": [
+        4078136255,
+        736844119,
+        1955549422
+      ],
+      "verification_seeds": [
+        3762400567,
+        3573450000,
+        2486632928,
+        3064655272
+      ]
+    },
+    {
+      "unit_id": 81,
+      "environment_seed": 7030,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1830597049,
+      "mandatory_probe_seed": 574256121,
+      "compensation_probe_seed": 697546223,
+      "retry_probe_seeds": [
+        2080438086,
+        845306422,
+        2520966958
+      ],
+      "verification_seeds": [
+        318839184,
+        1340033687,
+        2401847352,
+        1145197096
+      ]
+    },
+    {
+      "unit_id": 82,
+      "environment_seed": 7031,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2075177699,
+      "mandatory_probe_seed": 63532067,
+      "compensation_probe_seed": 4085676538,
+      "retry_probe_seeds": [
+        3076680550,
+        2101908978,
+        3652585192
+      ],
+      "verification_seeds": [
+        380813395,
+        3811883594,
+        3309224529,
+        2733589522
+      ]
+    },
+    {
+      "unit_id": 83,
+      "environment_seed": 7032,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2329847646,
+      "mandatory_probe_seed": 3481908173,
+      "compensation_probe_seed": 4035427202,
+      "retry_probe_seeds": [
+        2850589566,
+        3162474096,
+        2180425213
+      ],
+      "verification_seeds": [
+        397875630,
+        1311223441,
+        392237649,
+        1700402191
+      ]
+    },
+    {
+      "unit_id": 84,
+      "environment_seed": 7033,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 333597936,
+      "mandatory_probe_seed": 2976453606,
+      "compensation_probe_seed": 1891117845,
+      "retry_probe_seeds": [
+        1215846155,
+        4247234235,
+        3723411439
+      ],
+      "verification_seeds": [
+        3431995261,
+        2440577034,
+        776765788,
+        194110462
+      ]
+    },
+    {
+      "unit_id": 85,
+      "environment_seed": 7034,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 98263399,
+      "mandatory_probe_seed": 274675696,
+      "compensation_probe_seed": 1210086955,
+      "retry_probe_seeds": [
+        2306461292,
+        2085014555,
+        637296747
+      ],
+      "verification_seeds": [
+        3082752614,
+        1178739879,
+        1443300644,
+        1245561244
+      ]
+    },
+    {
+      "unit_id": 86,
+      "environment_seed": 7035,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 238323343,
+      "mandatory_probe_seed": 1304258627,
+      "compensation_probe_seed": 2178590401,
+      "retry_probe_seeds": [
+        1696096915,
+        4279672244,
+        3940420949
+      ],
+      "verification_seeds": [
+        2303589192,
+        3156149601,
+        655602183,
+        1402398614
+      ]
+    },
+    {
+      "unit_id": 87,
+      "environment_seed": 7036,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1850061669,
+      "mandatory_probe_seed": 4024088032,
+      "compensation_probe_seed": 2234883120,
+      "retry_probe_seeds": [
+        2090127833,
+        902521411,
+        2945726420
+      ],
+      "verification_seeds": [
+        3269544593,
+        450548766,
+        3225264712,
+        338527160
+      ]
+    },
+    {
+      "unit_id": 88,
+      "environment_seed": 7037,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2638567132,
+      "mandatory_probe_seed": 1787471200,
+      "compensation_probe_seed": 1590550746,
+      "retry_probe_seeds": [
+        1419441815,
+        3403297346,
+        3464803195
+      ],
+      "verification_seeds": [
+        1839388317,
+        3436574275,
+        3652446368,
+        1180002713
+      ]
+    },
+    {
+      "unit_id": 89,
+      "environment_seed": 7038,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 116666533,
+      "mandatory_probe_seed": 4070647961,
+      "compensation_probe_seed": 121486625,
+      "retry_probe_seeds": [
+        1200511932,
+        3598286685,
+        3735209589
+      ],
+      "verification_seeds": [
+        4141814019,
+        2088229911,
+        2522918065,
+        3626310677
+      ]
+    },
+    {
+      "unit_id": 90,
+      "environment_seed": 7039,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 409301772,
+      "mandatory_probe_seed": 2133583020,
+      "compensation_probe_seed": 1157151641,
+      "retry_probe_seeds": [
+        4140216515,
+        4055950214,
+        1363016673
+      ],
+      "verification_seeds": [
+        2966416169,
+        2009309988,
+        1153140544,
+        2375728333
+      ]
+    },
+    {
+      "unit_id": 91,
+      "environment_seed": 7040,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 347041503,
+      "mandatory_probe_seed": 76519829,
+      "compensation_probe_seed": 1966008712,
+      "retry_probe_seeds": [
+        3963045917,
+        3190688020,
+        2395256847
+      ],
+      "verification_seeds": [
+        1277696808,
+        450287745,
+        3289959415,
+        73971180
+      ]
+    },
+    {
+      "unit_id": 92,
+      "environment_seed": 7041,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1906342451,
+      "mandatory_probe_seed": 497523862,
+      "compensation_probe_seed": 3091012005,
+      "retry_probe_seeds": [
+        1953372262,
+        164516067,
+        1076817329
+      ],
+      "verification_seeds": [
+        2013094735,
+        607726976,
+        867586118,
+        2930089433
+      ]
+    },
+    {
+      "unit_id": 93,
+      "environment_seed": 7042,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 3130736754,
+      "mandatory_probe_seed": 241467346,
+      "compensation_probe_seed": 861474764,
+      "retry_probe_seeds": [
+        784478376,
+        127710730,
+        434124866
+      ],
+      "verification_seeds": [
+        932806204,
+        2514344434,
+        2794494838,
+        2468669510
+      ]
+    },
+    {
+      "unit_id": 94,
+      "environment_seed": 7043,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2081959747,
+      "mandatory_probe_seed": 2548455391,
+      "compensation_probe_seed": 103659318,
+      "retry_probe_seeds": [
+        1312953107,
+        2675880230,
+        1897789882
+      ],
+      "verification_seeds": [
+        1112154683,
+        2779457104,
+        3732806834,
+        2449038100
+      ]
+    },
+    {
+      "unit_id": 95,
+      "environment_seed": 7044,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 4023675855,
+      "mandatory_probe_seed": 1268514199,
+      "compensation_probe_seed": 1031977611,
+      "retry_probe_seeds": [
+        2069595206,
+        445407666,
+        840133244
+      ],
+      "verification_seeds": [
+        357683124,
+        370950309,
+        4104360426,
+        858197736
+      ]
+    },
+    {
+      "unit_id": 96,
+      "environment_seed": 7045,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 4007530440,
+      "mandatory_probe_seed": 4015115872,
+      "compensation_probe_seed": 1505078479,
+      "retry_probe_seeds": [
+        3824115229,
+        114023942,
+        2087374470
+      ],
+      "verification_seeds": [
+        2097669529,
+        2646294920,
+        2550510197,
+        1381321960
+      ]
+    },
+    {
+      "unit_id": 97,
+      "environment_seed": 7046,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 173675911,
+      "mandatory_probe_seed": 1672345950,
+      "compensation_probe_seed": 969653430,
+      "retry_probe_seeds": [
+        3040645810,
+        3587975440,
+        110096972
+      ],
+      "verification_seeds": [
+        3826277345,
+        4249376135,
+        2750308405,
+        2287626302
+      ]
+    },
+    {
+      "unit_id": 98,
+      "environment_seed": 7047,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1229916778,
+      "mandatory_probe_seed": 3684801218,
+      "compensation_probe_seed": 1707687671,
+      "retry_probe_seeds": [
+        3333639265,
+        3341392860,
+        736705151
+      ],
+      "verification_seeds": [
+        267488942,
+        671666982,
+        430261436,
+        2587385709
+      ]
+    },
+    {
+      "unit_id": 99,
+      "environment_seed": 7048,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3452763459,
+      "mandatory_probe_seed": 3518410793,
+      "compensation_probe_seed": 2391353609,
+      "retry_probe_seeds": [
+        1893318448,
+        1001762724,
+        4162745930
+      ],
+      "verification_seeds": [
+        1034809054,
+        3870224327,
+        4051179379,
+        182889584
+      ]
+    },
+    {
+      "unit_id": 100,
+      "environment_seed": 7049,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 527963697,
+      "mandatory_probe_seed": 4092739049,
+      "compensation_probe_seed": 1526617624,
+      "retry_probe_seeds": [
+        3153757656,
+        262043933,
+        2200335923
+      ],
+      "verification_seeds": [
+        1250934564,
+        3881272149,
+        1430677408,
+        1971658869
+      ]
+    },
+    {
+      "unit_id": 101,
+      "environment_seed": 7050,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1567256895,
+      "mandatory_probe_seed": 636476006,
+      "compensation_probe_seed": 4214151594,
+      "retry_probe_seeds": [
+        36408750,
+        710016870,
+        3811182760
+      ],
+      "verification_seeds": [
+        2003299302,
+        1905511722,
+        3295962481,
+        2317709810
+      ]
+    },
+    {
+      "unit_id": 102,
+      "environment_seed": 7051,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2434486630,
+      "mandatory_probe_seed": 729347977,
+      "compensation_probe_seed": 134261537,
+      "retry_probe_seeds": [
+        2810627379,
+        1604487588,
+        2615309456
+      ],
+      "verification_seeds": [
+        2437340329,
+        4248859529,
+        1502465339,
+        334220326
+      ]
+    },
+    {
+      "unit_id": 103,
+      "environment_seed": 7052,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1503936429,
+      "mandatory_probe_seed": 2686221529,
+      "compensation_probe_seed": 2947766508,
+      "retry_probe_seeds": [
+        3863954539,
+        1484923751,
+        4108561893
+      ],
+      "verification_seeds": [
+        3767254326,
+        3524595038,
+        3809353080,
+        3009635627
+      ]
+    },
+    {
+      "unit_id": 104,
+      "environment_seed": 7053,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1985537221,
+      "mandatory_probe_seed": 1256759287,
+      "compensation_probe_seed": 120382912,
+      "retry_probe_seeds": [
+        3359294607,
+        1130852513,
+        969584348
+      ],
+      "verification_seeds": [
+        937921883,
+        1295878169,
+        15497367,
+        1398696237
+      ]
+    },
+    {
+      "unit_id": 105,
+      "environment_seed": 7054,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 2805174848,
+      "mandatory_probe_seed": 3522742611,
+      "compensation_probe_seed": 917867767,
+      "retry_probe_seeds": [
+        2133806635,
+        1511061718,
+        60138213
+      ],
+      "verification_seeds": [
+        1013765864,
+        2835317075,
+        3736368072,
+        1380495166
+      ]
+    },
+    {
+      "unit_id": 106,
+      "environment_seed": 7055,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2505855059,
+      "mandatory_probe_seed": 902013486,
+      "compensation_probe_seed": 1586827367,
+      "retry_probe_seeds": [
+        769408749,
+        579308802,
+        414424554
+      ],
+      "verification_seeds": [
+        717273357,
+        1213010190,
+        2769229660,
+        393535596
+      ]
+    },
+    {
+      "unit_id": 107,
+      "environment_seed": 7056,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3546567419,
+      "mandatory_probe_seed": 4038337515,
+      "compensation_probe_seed": 276230213,
+      "retry_probe_seeds": [
+        4036806890,
+        3038453953,
+        239886574
+      ],
+      "verification_seeds": [
+        405183631,
+        2978075459,
+        2475968798,
+        3308666724
+      ]
+    },
+    {
+      "unit_id": 108,
+      "environment_seed": 7057,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1827209694,
+      "mandatory_probe_seed": 3904899238,
+      "compensation_probe_seed": 1598969025,
+      "retry_probe_seeds": [
+        1366957757,
+        3675168191,
+        1512808726
+      ],
+      "verification_seeds": [
+        3378113040,
+        4133549788,
+        3279789829,
+        2754893140
+      ]
+    },
+    {
+      "unit_id": 109,
+      "environment_seed": 7058,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1554897117,
+      "mandatory_probe_seed": 2695300297,
+      "compensation_probe_seed": 1575822038,
+      "retry_probe_seeds": [
+        2287712926,
+        3443457198,
+        2475142362
+      ],
+      "verification_seeds": [
+        1623293894,
+        3281344316,
+        1481490906,
+        3238248827
+      ]
+    },
+    {
+      "unit_id": 110,
+      "environment_seed": 7059,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2375594026,
+      "mandatory_probe_seed": 1601377235,
+      "compensation_probe_seed": 2188076651,
+      "retry_probe_seeds": [
+        4000892031,
+        1281197220,
+        3106669531
+      ],
+      "verification_seeds": [
+        674882352,
+        222328714,
+        1621786395,
+        4055245841
+      ]
+    },
+    {
+      "unit_id": 111,
+      "environment_seed": 7060,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1338146059,
+      "mandatory_probe_seed": 2040542059,
+      "compensation_probe_seed": 2482697218,
+      "retry_probe_seeds": [
+        916805215,
+        2686356713,
+        454430717
+      ],
+      "verification_seeds": [
+        1809943465,
+        1603385313,
+        1004434929,
+        2986174879
+      ]
+    },
+    {
+      "unit_id": 112,
+      "environment_seed": 7061,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2246976793,
+      "mandatory_probe_seed": 1698664504,
+      "compensation_probe_seed": 3377251745,
+      "retry_probe_seeds": [
+        2474190937,
+        1593117445,
+        3005421791
+      ],
+      "verification_seeds": [
+        1666265621,
+        545416412,
+        3130828483,
+        2388964563
+      ]
+    },
+    {
+      "unit_id": 113,
+      "environment_seed": 7062,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 536296433,
+      "mandatory_probe_seed": 525191008,
+      "compensation_probe_seed": 2821948578,
+      "retry_probe_seeds": [
+        2410882835,
+        3164518854,
+        2512118499
+      ],
+      "verification_seeds": [
+        4271340822,
+        2744397125,
+        5097623,
+        1489744225
+      ]
+    },
+    {
+      "unit_id": 114,
+      "environment_seed": 7063,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1826555915,
+      "mandatory_probe_seed": 277992708,
+      "compensation_probe_seed": 925154555,
+      "retry_probe_seeds": [
+        9730815,
+        526937383,
+        308408731
+      ],
+      "verification_seeds": [
+        3249053121,
+        4242299786,
+        2432629777,
+        3259006502
+      ]
+    },
+    {
+      "unit_id": 115,
+      "environment_seed": 7064,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2953993383,
+      "mandatory_probe_seed": 2775627501,
+      "compensation_probe_seed": 4135804300,
+      "retry_probe_seeds": [
+        3605309179,
+        1801568860,
+        1766230802
+      ],
+      "verification_seeds": [
+        3766643907,
+        293102116,
+        2294032438,
+        2363904680
+      ]
+    },
+    {
+      "unit_id": 116,
+      "environment_seed": 7065,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3847437325,
+      "mandatory_probe_seed": 3164884503,
+      "compensation_probe_seed": 4112547613,
+      "retry_probe_seeds": [
+        3947961013,
+        1747197937,
+        2259351318
+      ],
+      "verification_seeds": [
+        3224193748,
+        2141918070,
+        3242223126,
+        2196939214
+      ]
+    },
+    {
+      "unit_id": 117,
+      "environment_seed": 7066,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 565070847,
+      "mandatory_probe_seed": 1338608951,
+      "compensation_probe_seed": 2358071760,
+      "retry_probe_seeds": [
+        169102894,
+        3128222513,
+        3058100887
+      ],
+      "verification_seeds": [
+        3456229020,
+        3331199449,
+        3972338077,
+        3021053337
+      ]
+    },
+    {
+      "unit_id": 118,
+      "environment_seed": 7067,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 906601806,
+      "mandatory_probe_seed": 1022451893,
+      "compensation_probe_seed": 31745266,
+      "retry_probe_seeds": [
+        2326035205,
+        2507738574,
+        2139013355
+      ],
+      "verification_seeds": [
+        1024488358,
+        2112087820,
+        2164797747,
+        436912539
+      ]
+    },
+    {
+      "unit_id": 119,
+      "environment_seed": 7068,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3201042521,
+      "mandatory_probe_seed": 4280666011,
+      "compensation_probe_seed": 3141028411,
+      "retry_probe_seeds": [
+        3297942011,
+        1575128687,
+        3065971588
+      ],
+      "verification_seeds": [
+        1771546930,
+        2071715520,
+        3436377897,
+        334567802
+      ]
+    },
+    {
+      "unit_id": 120,
+      "environment_seed": 7069,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3085634103,
+      "mandatory_probe_seed": 914855370,
+      "compensation_probe_seed": 2219566345,
+      "retry_probe_seeds": [
+        272261021,
+        222977990,
+        1982508858
+      ],
+      "verification_seeds": [
+        3780932627,
+        4094671022,
+        234170151,
+        3394846105
+      ]
+    },
+    {
+      "unit_id": 121,
+      "environment_seed": 7070,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 4281851281,
+      "mandatory_probe_seed": 1533455441,
+      "compensation_probe_seed": 491519630,
+      "retry_probe_seeds": [
+        2777278890,
+        2409638842,
+        3475726620
+      ],
+      "verification_seeds": [
+        4201625002,
+        542336518,
+        3259320977,
+        1451264554
+      ]
+    },
+    {
+      "unit_id": 122,
+      "environment_seed": 7071,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2977056909,
+      "mandatory_probe_seed": 794481937,
+      "compensation_probe_seed": 1633946447,
+      "retry_probe_seeds": [
+        3360614281,
+        2667785181,
+        3066241621
+      ],
+      "verification_seeds": [
+        820805118,
+        3213339804,
+        3553259900,
+        1313165530
+      ]
+    },
+    {
+      "unit_id": 123,
+      "environment_seed": 7072,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2350529244,
+      "mandatory_probe_seed": 2273836239,
+      "compensation_probe_seed": 1792035389,
+      "retry_probe_seeds": [
+        4211217565,
+        1170741935,
+        861371944
+      ],
+      "verification_seeds": [
+        2346802736,
+        2009092295,
+        2928053655,
+        3839129128
+      ]
+    },
+    {
+      "unit_id": 124,
+      "environment_seed": 7073,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 891576476,
+      "mandatory_probe_seed": 1067365558,
+      "compensation_probe_seed": 201380438,
+      "retry_probe_seeds": [
+        1571242106,
+        3653000443,
+        1815791887
+      ],
+      "verification_seeds": [
+        299498919,
+        4209854521,
+        1764871844,
+        328445097
+      ]
+    },
+    {
+      "unit_id": 125,
+      "environment_seed": 7074,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 2209239613,
+      "mandatory_probe_seed": 101887114,
+      "compensation_probe_seed": 3705385949,
+      "retry_probe_seeds": [
+        446792980,
+        2068042013,
+        4109296417
+      ],
+      "verification_seeds": [
+        4270622667,
+        231165772,
+        2192758902,
+        1691300220
+      ]
+    },
+    {
+      "unit_id": 126,
+      "environment_seed": 7075,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 529736589,
+      "mandatory_probe_seed": 4216328847,
+      "compensation_probe_seed": 1988264835,
+      "retry_probe_seeds": [
+        3707172344,
+        1201447413,
+        144118749
+      ],
+      "verification_seeds": [
+        1000855174,
+        1600389559,
+        692694574,
+        1061093782
+      ]
+    },
+    {
+      "unit_id": 127,
+      "environment_seed": 7076,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 1857772103,
+      "mandatory_probe_seed": 4138783638,
+      "compensation_probe_seed": 2130600198,
+      "retry_probe_seeds": [
+        675350830,
+        2696683836,
+        1770399236
+      ],
+      "verification_seeds": [
+        1717242203,
+        1451587568,
+        192469909,
+        3748111426
+      ]
+    },
+    {
+      "unit_id": 128,
+      "environment_seed": 7077,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2584936004,
+      "mandatory_probe_seed": 2696276477,
+      "compensation_probe_seed": 1304526988,
+      "retry_probe_seeds": [
+        3572463258,
+        1075141473,
+        4265388247
+      ],
+      "verification_seeds": [
+        2352872696,
+        3138068649,
+        1101761074,
+        2176219684
+      ]
+    },
+    {
+      "unit_id": 129,
+      "environment_seed": 7078,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 4261274386,
+      "mandatory_probe_seed": 3672071914,
+      "compensation_probe_seed": 2718260155,
+      "retry_probe_seeds": [
+        1427957228,
+        1385246325,
+        3573172290
+      ],
+      "verification_seeds": [
+        3281177709,
+        4285484654,
+        1957490021,
+        994438537
+      ]
+    },
+    {
+      "unit_id": 130,
+      "environment_seed": 7079,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 1963591297,
+      "mandatory_probe_seed": 1212354943,
+      "compensation_probe_seed": 3910258252,
+      "retry_probe_seeds": [
+        2966971640,
+        2384909707,
+        3759058614
+      ],
+      "verification_seeds": [
+        2514093906,
+        2655119742,
+        2934204225,
+        2949639345
+      ]
+    },
+    {
+      "unit_id": 131,
+      "environment_seed": 7080,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 2111175729,
+      "mandatory_probe_seed": 3932280368,
+      "compensation_probe_seed": 3500114144,
+      "retry_probe_seeds": [
+        3200838028,
+        1121287895,
+        1203585506
+      ],
+      "verification_seeds": [
+        615222073,
+        363245013,
+        3081460458,
+        1407630923
+      ]
+    },
+    {
+      "unit_id": 132,
+      "environment_seed": 7081,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 2829819560,
+      "mandatory_probe_seed": 926538254,
+      "compensation_probe_seed": 1041824985,
+      "retry_probe_seeds": [
+        940670507,
+        819526425,
+        177180584
+      ],
+      "verification_seeds": [
+        1642258673,
+        1256302895,
+        1987346189,
+        4154899084
+      ]
+    },
+    {
+      "unit_id": 133,
+      "environment_seed": 7082,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1757157020,
+      "mandatory_probe_seed": 1521360411,
+      "compensation_probe_seed": 796245396,
+      "retry_probe_seeds": [
+        961750980,
+        177894112,
+        1751461452
+      ],
+      "verification_seeds": [
+        4129284467,
+        4086673571,
+        1610430382,
+        1387642260
+      ]
+    },
+    {
+      "unit_id": 134,
+      "environment_seed": 7083,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 611830199,
+      "mandatory_probe_seed": 3760395026,
+      "compensation_probe_seed": 2306613142,
+      "retry_probe_seeds": [
+        3377442556,
+        2453984602,
+        1770670256
+      ],
+      "verification_seeds": [
+        1474447885,
+        3750026986,
+        4291262036,
+        1782405388
+      ]
+    },
+    {
+      "unit_id": 135,
+      "environment_seed": 7084,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 865818497,
+      "mandatory_probe_seed": 44007394,
+      "compensation_probe_seed": 970600708,
+      "retry_probe_seeds": [
+        3739310080,
+        728732918,
+        2682239014
+      ],
+      "verification_seeds": [
+        775925997,
+        931064250,
+        1356585189,
+        1677699896
+      ]
+    },
+    {
+      "unit_id": 136,
+      "environment_seed": 7085,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 49692744,
+      "mandatory_probe_seed": 1837261330,
+      "compensation_probe_seed": 743659974,
+      "retry_probe_seeds": [
+        3763961078,
+        30674881,
+        3956737960
+      ],
+      "verification_seeds": [
+        1894284118,
+        365280680,
+        2043017904,
+        1133500152
+      ]
+    },
+    {
+      "unit_id": 137,
+      "environment_seed": 7086,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 1965721299,
+      "mandatory_probe_seed": 2210908490,
+      "compensation_probe_seed": 1177794742,
+      "retry_probe_seeds": [
+        1192840780,
+        3428448383,
+        3338126341
+      ],
+      "verification_seeds": [
+        2276033910,
+        852623094,
+        212629339,
+        4247542922
+      ]
+    },
+    {
+      "unit_id": 138,
+      "environment_seed": 7087,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 832568737,
+      "mandatory_probe_seed": 1456020110,
+      "compensation_probe_seed": 1855506256,
+      "retry_probe_seeds": [
+        2234402901,
+        3545005847,
+        3393290463
+      ],
+      "verification_seeds": [
+        2788917916,
+        4033055449,
+        3951345212,
+        308280701
+      ]
+    },
+    {
+      "unit_id": 139,
+      "environment_seed": 7088,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 158150441,
+      "mandatory_probe_seed": 1587367931,
+      "compensation_probe_seed": 2951232940,
+      "retry_probe_seeds": [
+        4195223692,
+        3728294505,
+        2355405997
+      ],
+      "verification_seeds": [
+        3079390491,
+        2762102717,
+        3308680804,
+        2146328376
+      ]
+    },
+    {
+      "unit_id": 140,
+      "environment_seed": 7089,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3247612018,
+      "mandatory_probe_seed": 3221323128,
+      "compensation_probe_seed": 2529733083,
+      "retry_probe_seeds": [
+        2979702820,
+        1835907440,
+        2172339936
+      ],
+      "verification_seeds": [
+        3217975486,
+        1177960812,
+        14948235,
+        2185434282
+      ]
+    },
+    {
+      "unit_id": 141,
+      "environment_seed": 7090,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 4267972281,
+      "mandatory_probe_seed": 2546773114,
+      "compensation_probe_seed": 409820781,
+      "retry_probe_seeds": [
+        2953600143,
+        1214508648,
+        3290385381
+      ],
+      "verification_seeds": [
+        3560900385,
+        1897233543,
+        3051060129,
+        2952358004
+      ]
+    },
+    {
+      "unit_id": 142,
+      "environment_seed": 7091,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2004689511,
+      "mandatory_probe_seed": 271342558,
+      "compensation_probe_seed": 2318220940,
+      "retry_probe_seeds": [
+        582787177,
+        1077005980,
+        1917127723
+      ],
+      "verification_seeds": [
+        3505039402,
+        1971286893,
+        2898170496,
+        1949902874
+      ]
+    },
+    {
+      "unit_id": 143,
+      "environment_seed": 7092,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 190534501,
+      "mandatory_probe_seed": 2661206666,
+      "compensation_probe_seed": 2505620799,
+      "retry_probe_seeds": [
+        2491434068,
+        1836354366,
+        3661025313
+      ],
+      "verification_seeds": [
+        491628418,
+        1631991216,
+        2477947957,
+        1781193700
+      ]
+    },
+    {
+      "unit_id": 144,
+      "environment_seed": 7093,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 1836364172,
+      "mandatory_probe_seed": 2482970450,
+      "compensation_probe_seed": 1205053273,
+      "retry_probe_seeds": [
+        418695355,
+        3997304559,
+        601007655
+      ],
+      "verification_seeds": [
+        3672541668,
+        190462450,
+        4059172082,
+        153108630
+      ]
+    },
+    {
+      "unit_id": 145,
+      "environment_seed": 7094,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 4091902999,
+      "mandatory_probe_seed": 2547107424,
+      "compensation_probe_seed": 807718130,
+      "retry_probe_seeds": [
+        3166382154,
+        3317620441,
+        951007711
+      ],
+      "verification_seeds": [
+        2425548936,
+        2436535820,
+        936746858,
+        3677072554
+      ]
+    },
+    {
+      "unit_id": 146,
+      "environment_seed": 7095,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 2852276955,
+      "mandatory_probe_seed": 436743838,
+      "compensation_probe_seed": 2589916850,
+      "retry_probe_seeds": [
+        2951508769,
+        2240273878,
+        2342882366
+      ],
+      "verification_seeds": [
+        727741544,
+        581244187,
+        2380258231,
+        2013469814
+      ]
+    },
+    {
+      "unit_id": 147,
+      "environment_seed": 7096,
+      "regime_id_oracle": "C_bias_dominant_mixed",
+      "initial_seed": 3889057746,
+      "mandatory_probe_seed": 1383924310,
+      "compensation_probe_seed": 2671406063,
+      "retry_probe_seeds": [
+        2518668298,
+        1919725463,
+        1756299613
+      ],
+      "verification_seeds": [
+        1007226102,
+        805112604,
+        3862570337,
+        918719986
+      ]
+    },
+    {
+      "unit_id": 148,
+      "environment_seed": 7097,
+      "regime_id_oracle": "D_noise_dominant_mixed",
+      "initial_seed": 3985201060,
+      "mandatory_probe_seed": 856261265,
+      "compensation_probe_seed": 2004940730,
+      "retry_probe_seeds": [
+        1275922663,
+        1055435553,
+        3466839755
+      ],
+      "verification_seeds": [
+        3441055400,
+        4038470198,
+        3657993908,
+        1215729302
+      ]
+    },
+    {
+      "unit_id": 149,
+      "environment_seed": 7098,
+      "regime_id_oracle": "A_bias_low_noise",
+      "initial_seed": 3052151512,
+      "mandatory_probe_seed": 2967876890,
+      "compensation_probe_seed": 4144561957,
+      "retry_probe_seeds": [
+        128533265,
+        1582924609,
+        2484918163
+      ],
+      "verification_seeds": [
+        2359959196,
+        1100635071,
+        598872269,
+        3994970416
+      ]
+    },
+    {
+      "unit_id": 150,
+      "environment_seed": 7099,
+      "regime_id_oracle": "B_zero_mean_noise",
+      "initial_seed": 3776393634,
+      "mandatory_probe_seed": 837103973,
+      "compensation_probe_seed": 3554382179,
+      "retry_probe_seeds": [
+        1166909431,
+        4267023400,
+        4186121704
+      ],
+      "verification_seeds": [
+        680977524,
+        4236934678,
+        405853821,
+        320245781
+      ]
+    }
+  ],
+  "manifest_id": "465022fe198bb6b669cbb3d29ad06016f5bd25e1384be13ab2dca8259aa2992f"
+}
