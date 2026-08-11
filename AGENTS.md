@@ -686,3 +686,17 @@ not call an API, request an Agent decision, execute an online recovery, write
 memory, update hypotheses or principles, run validation or held-out seeds, or
 claim performance. Failure or incomplete population must be preserved without
 score, label, realization-count, gate, or seed tuning.
+
+That v1.8 audit completed 30 operational states from 73 fresh initial units and
+failed its gate. Only 9/30 states were distributionally decisive across four
+paired realizations per skill (six compensation-superior and three retry-
+superior), below both population requirements. The fixed probe contrast had ROC
+AUC 0.778 on those nine states, but its stratified bootstrap interval was
+[0.389, 1.000] and its full-population Spearman correlation with the acceptance-
+rate margin was 0.170. Ten of 30 states exhibited candidate-winner reversals.
+All integrity counters were zero; API, Agent, online recovery, memory,
+hypothesis, and principle counts remained zero. Preserve this negative result.
+Do not rerun, extend, or fit another score on seeds 6950--7099, and do not
+execute reserved seeds 7100--7199. Do not restore API calls or advance to
+memory, principles, validation, or held-out execution. A successor requires a
+new persistent causal evidence design under a separately frozen protocol.
