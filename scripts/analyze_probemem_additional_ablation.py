@@ -195,23 +195,35 @@ def _historical_acquisition(config: dict[str, Any], output: Path) -> list[dict[s
     return result
 
 
-def _select_cases(rows_by_method: dict[str, dict[int, dict[str, str]]],
-                  memory: dict[str, Any], verifier: dict[str, Any]) -> list[dict[str, Any]]:
+def _select_cases(rows_by_method: dict[str, dict[int, dict[str, str]]]) -> list[dict[str, Any]]:
+    """Select the first sequential operational case per perturbation, without outcomes."""
     selected: list[dict[str, Any]] = []
-    used: set[int] = set()
-    def add(kind: str, predicate: Any) -> None:
+    conditions = sorted({row["condition_id_oracle"] for row in rows_by_method[BASELINE].values()})
+    for condition in conditions:
         for episode in sorted(rows_by_method[BASELINE]):
-            if episode in used or not predicate(episode):
+            full = rows_by_method[FULL][episode]
+            if full["condition_id_oracle"] != condition:
                 continue
-            row = rows_by_method[FULL][episode]
-            selected.append({"case_type": kind, "episode_id": episode, "seed": int(row["seed"])})
-            used.add(episode)
-            return
-    add("DIAGNOSIS_FAILURE", lambda e: rows_by_method[EVIDENCE][e]["mechanism_prediction"] != rows_by_method[EVIDENCE][e]["mechanism_oracle"])
-    add("DIAGNOSIS_CORRECT_RECOVERY_FAILED", lambda e: rows_by_method[EVIDENCE][e]["mechanism_prediction"] == rows_by_method[EVIDENCE][e]["mechanism_oracle"] and rows_by_method[EVIDENCE][e]["verification_status"] != "ACCEPTED")
-    add("MEMORY_HARMFUL_TRANSFER", lambda e: int(rows_by_method[BRIDGE][e]["retrieval_count"]) > 0 and STATUS_RANK[rows_by_method[BRIDGE][e]["verification_status"]] < STATUS_RANK[rows_by_method[EVIDENCE][e]["verification_status"]])
-    add("VERIFIER_FALSE_ACCEPTANCE", lambda e: rows_by_method[FULL][e]["verifier_invoked"].lower() == "true" and rows_by_method[FULL][e]["verification_status"] != "ACCEPTED")
-    add("SUCCESS_CONTROL", lambda e: rows_by_method[FULL][e]["verification_status"] == "ACCEPTED")
+            evidence = rows_by_method[EVIDENCE][episode]
+            bridge = rows_by_method[BRIDGE][episode]
+            tags: list[str] = []
+            if evidence["mechanism_prediction"] != evidence["mechanism_oracle"]:
+                tags.append("DIAGNOSIS_FAILURE")
+            elif evidence["verification_status"] != "ACCEPTED":
+                tags.append("DIAGNOSIS_CORRECT_RECOVERY_FAILED")
+            if int(bridge["retrieval_count"]) > 0 and STATUS_RANK[bridge["verification_status"]] < STATUS_RANK[evidence["verification_status"]]:
+                tags.append("MEMORY_HARMFUL_TRANSFER")
+            if _bool(full["verifier_invoked"]) and full["verification_status"] != "ACCEPTED":
+                tags.append("VERIFIER_FAILED_TO_PREVENT_UNRELIABLE_ACTION")
+            if not tags:
+                tags.append("SUCCESS_OR_NO_REGISTERED_FAILURE_TAG")
+            selected.append({
+                "selection_basis": f"FIRST_SEQUENTIAL_OPERATIONAL_{condition}",
+                "observed_case_types": ";".join(tags),
+                "episode_id": episode,
+                "seed": int(full["seed"]),
+            })
+            break
     return selected
 
 
@@ -248,7 +260,7 @@ def analyze(run_dir: Path) -> dict[str, Any]:
         )
     memory_utility = _memory_utility(rows_by_method)
     verifier = _verifier(rows_by_method, outcomes)
-    cases = _select_cases(rows_by_method, memory_utility, verifier)
+    cases = _select_cases(rows_by_method)
     _write_csv(run_dir / "selected_failure_cases.csv", cases)
     leakage = {
         "retrieval_items": len(retrievals),
@@ -266,7 +278,69 @@ def analyze(run_dir: Path) -> dict[str, Any]:
     rq2_delta = comparisons["PROBE_MEMORY_MINUS_EVIDENCE_ACQUISITION"]["difference"]
     rq2 = "Supported" if rq2_delta > 0 and memory_counts["USEFUL_TRANSFER"] > memory_counts["HARMFUL_TRANSFER"] else "Not supported" if rq2_delta < 0 or memory_counts["HARMFUL_TRANSFER"] > memory_counts["USEFUL_TRANSFER"] else "Inconclusive"
     rq3_delta = comparisons["FULL_MINUS_PROBE_MEMORY"]["difference"]
-    rq3 = "Supported" if rq3_delta > 0 and verifier["prevented_unsafe_actions"] > verifier["unnecessary_rejections"] else "Not supported" if rq3_delta < 0 or verifier["unnecessary_rejections"] > verifier["prevented_unsafe_actions"] else "Inconclusive"
+    rq3 = (
+        "Supported"
+        if rq3_delta > 0 and verifier["prevented_unsafe_actions"] > verifier["unnecessary_rejections"]
+        else "Not supported"
+        if (
+            rq3_delta < 0
+            or verifier["unnecessary_rejections"] > verifier["prevented_unsafe_actions"]
+            or (
+                rq3_delta == 0
+                and verifier["prevented_unsafe_actions"] == 0
+                and verifier["intervention_outcomes"].get("CORRECT_REJECTION", 0) == 0
+            )
+        )
+        else "Inconclusive"
+    )
+    adaptive = next(row for row in historical if row["policy"] == "ADAPTIVE_ACQUISITION")
+    fixed = next(row for row in historical if row["policy"].startswith("ALWAYS"))
+    adaptive_reduction = 1.0 - adaptive["mean_evidence_steps"] / fixed["mean_evidence_steps"]
+    bridge_utility = memory_utility["PROBE_MEMORY_VS_EVIDENCE_ACQUISITION"]
+    failure_taxonomy = {
+        "DIAGNOSIS_FAILURE": sum(
+            row["mechanism_prediction"] != row["mechanism_oracle"]
+            for row in rows_by_method[EVIDENCE].values()
+        ),
+        "DIAGNOSIS_CORRECT_RECOVERY_FAILED": sum(
+            row["mechanism_prediction"] == row["mechanism_oracle"]
+            and row["verification_status"] != "ACCEPTED"
+            for row in rows_by_method[EVIDENCE].values()
+        ),
+        "MEMORY_HARMFUL_TRANSFER": bridge_utility["counts"]["HARMFUL_TRANSFER"],
+        "VERIFIER_FAILED_TO_PREVENT_UNRELIABLE_ACTION": sum(
+            _bool(row["verifier_invoked"])
+            and row["mechanism_prediction"] == row["mechanism_oracle"]
+            and row["verification_status"] != "ACCEPTED"
+            for row in rows_by_method[FULL].values()
+        ),
+    }
+    rq_observations = {
+        "RQ1": (
+            f"On {adaptive['cases']} comparable historical cases, adaptive acquisition and fixed 64-step "
+            f"acquisition both diagnosed {adaptive['correct_diagnoses']}/{adaptive['cases']} cases "
+            f"({adaptive['diagnosis_accuracy']:.1%}); adaptive acquisition used {adaptive['mean_evidence_steps']:.2f} "
+            f"mean evidence steps versus {fixed['mean_evidence_steps']:.2f}, a {adaptive_reduction:.1%} reduction."
+        ),
+        "RQ2": (
+            f"Adding method-isolated accepted-only memory on top of evidence acquisition changed recovery "
+            f"from {summary_by_method[EVIDENCE]['successful_recoveries']}/{denominator} to "
+            f"{summary_by_method[BRIDGE]['successful_recoveries']}/{denominator} "
+            f"(paired difference {rq2_delta:+.1%}); transfer labels were "
+            f"{bridge_utility['counts']['USEFUL_TRANSFER']} useful, "
+            f"{bridge_utility['counts']['HARMFUL_TRANSFER']} harmful, "
+            f"{bridge_utility['counts']['NEUTRAL_TRANSFER']} neutral, and "
+            f"{bridge_utility['counts']['NO_RETRIEVAL']} no-retrieval."
+        ),
+        "RQ3": (
+            f"Adding verifier on top of Probe+Memory changed recovery by {rq3_delta:+.1%} "
+            f"({summary_by_method[BRIDGE]['successful_recoveries']}/{denominator} versus "
+            f"{summary_by_method[FULL]['successful_recoveries']}/{denominator}). Proposal coverage was "
+            f"{verifier['valid_proposals']}/{verifier['eligible_cases']}, invocation coverage was "
+            f"{verifier['invocations']}/{verifier['eligible_cases']}, and no unsafe proposal was converted "
+            f"from a non-ACCEPTED evaluator outcome to an ACCEPTED selected outcome."
+        ),
+    }
     result = {
         "run_status": status["status"], "experiment_run_id": status["experiment_run_id"],
         "manifest_id": status["manifest_id"], "source_git_commit": status["source_git_commit"],
@@ -276,10 +350,11 @@ def analyze(run_dir: Path) -> dict[str, Any]:
         "verifier": verifier, "population_by_condition": status["population_by_condition"],
         "population_by_mechanism": status["population_by_mechanism"],
         "descriptive_population_imbalance": status["descriptive_population_imbalance"],
+        "failure_taxonomy_counts": failure_taxonomy,
         "research_findings": {
-            "RQ1": {"question": "Does adaptive evidence acquisition reduce diagnosis cost?", "conclusion": "Supported" if rq1_supported else "Not supported"},
-            "RQ2": {"question": "Does memory improve evidence utilization?", "conclusion": rq2},
-            "RQ3": {"question": "Can verification bridge diagnosis and recovery?", "conclusion": rq3},
+            "RQ1": {"question": "Does adaptive evidence acquisition reduce diagnosis cost?", "observed_evidence": rq_observations["RQ1"], "conclusion": "Supported" if rq1_supported else "Not supported"},
+            "RQ2": {"question": "Does memory improve evidence utilization?", "observed_evidence": rq_observations["RQ2"], "conclusion": rq2},
+            "RQ3": {"question": "Can verification bridge diagnosis and recovery?", "observed_evidence": rq_observations["RQ3"], "conclusion": rq3},
         },
         "selected_cases": cases,
         "claim_boundary": "configuration-level marginal effects, not fully independent component causal effects",
@@ -304,14 +379,50 @@ def _write_report(path: Path, result: dict[str, Any], historical: list[dict[str,
     lines += ["", "## Evidence Acquisition Policy Comparison", "", "| Policy | Diagnosis | Mean evidence steps |", "|---|---:|---:|"]
     for row in historical:
         lines.append(f"| {row['policy']} | {row['correct_diagnoses']}/{row['cases']} ({row['diagnosis_accuracy']:.1%}) | {row['mean_evidence_steps']:.2f} |")
+    comparisons = result["paired_recovery_differences"]
+    memory_utility = result["memory_retrieval_utility"]
+    leakage = result["memory_leakage_audit"]
+    lines += [
+        "", "## Configuration-level Marginal Contributions", "",
+        "These contrasts are marginal system contributions, not fully independent component causal effects.", "",
+        f"- Memory contribution (`MEMORY_ONLY - BASELINE`): {comparisons['MEMORY_ONLY_MINUS_BASELINE']['difference']:+.1%} recovery rate.",
+        f"- Evidence Acquisition contribution (`EVIDENCE_ACQUISITION_ENABLED - BASELINE`): {comparisons['EVIDENCE_ACQUISITION_MINUS_BASELINE']['difference']:+.1%} recovery rate. This is not an isolated probe-selector effect.",
+        f"- Memory after acquisition (`PROBE_MEMORY - EVIDENCE_ACQUISITION_ENABLED`): {comparisons['PROBE_MEMORY_MINUS_EVIDENCE_ACQUISITION']['difference']:+.1%} recovery rate.",
+        f"- Verifier addition (`FULL_PROBEMEM - PROBE_MEMORY`): {comparisons['FULL_MINUS_PROBE_MEMORY']['difference']:+.1%} recovery rate.",
+        "", "## Memory Retrieval Utility and Leakage Audit", "",
+    ]
+    for label, utility in memory_utility.items():
+        counts = utility["counts"]
+        lines.append(
+            f"- `{label}`: no retrieval {counts['NO_RETRIEVAL']}/{utility['eligible_cases']}; "
+            f"useful {counts['USEFUL_TRANSFER']}/{utility['eligible_cases']}; harmful "
+            f"{counts['HARMFUL_TRANSFER']}/{utility['eligible_cases']}; neutral "
+            f"{counts['NEUTRAL_TRANSFER']}/{utility['eligible_cases']}."
+        )
+    lines += [
+        f"- Retrieved items audited: {leakage['retrieval_items']}; owner mismatches: {leakage['owner_mismatches']}; non-ACCEPTED items: {leakage['non_accepted_items']}; non-prior items: {leakage['not_strictly_prior']}.",
+        "- Retrieval similarity, source availability time, failure-mechanism consistency, and method ownership are recorded in `memory_retrieval_audit.csv`.",
+    ]
     verifier = result["verifier"]
     lines += [
         "", "## Verifier Coverage and Calibration", "",
         f"- Proposal coverage: {verifier['valid_proposals']}/{verifier['eligible_cases']} ({verifier['proposal_coverage']:.1%})",
         f"- Invocation coverage: {verifier['invocations']}/{verifier['eligible_cases']} ({verifier['invocation_coverage']:.1%})",
         f"- Brier score: {verifier['brier_score']}",
-        f"- Intervention outcomes: `{verifier['intervention_outcomes']}`", "",
+        f"- Confidence/outcome consistency: `{verifier['calibration_counts']}`",
+        f"- Intervention outcomes: `{verifier['intervention_outcomes']}`",
+        f"- Prevented unsafe actions: {verifier['prevented_unsafe_actions']}; unnecessary rejections: {verifier['unnecessary_rejections']}.", "",
         verifier["coverage_caveat"], "",
+        "## Population Coverage", "",
+        f"- Perturbation categories: `{result['population_by_condition']}`",
+        f"- Failure mechanisms: `{result['population_by_mechanism']}`",
+        f"- Descriptive population imbalance: `{result['descriptive_population_imbalance']}`. Coverage targets did not alter stopping, resampling, or seed selection.", "",
+        "## Full-population Failure Taxonomy", "",
+        f"- Diagnosis failure: {result['failure_taxonomy_counts']['DIAGNOSIS_FAILURE']}/{result['common_initial_failure_denominator']}.",
+        f"- Diagnosis correct but recovery failed: {result['failure_taxonomy_counts']['DIAGNOSIS_CORRECT_RECOVERY_FAILED']}/{result['common_initial_failure_denominator']}.",
+        f"- Harmful Memory transfer: {result['failure_taxonomy_counts']['MEMORY_HARMFUL_TRANSFER']}/{result['common_initial_failure_denominator']}.",
+        f"- Correct diagnosis but verifier failed to prevent an unreliable action: {result['failure_taxonomy_counts']['VERIFIER_FAILED_TO_PREVENT_UNRELIABLE_ACTION']}/{result['common_initial_failure_denominator']}.",
+        "- These are full-population counts, not result-selected examples. The separate five-case report uses outcome-blind first-sequential-per-condition selection.", "",
         "The five-row ablation identifies configuration-level marginal effects, not fully independent component causal effects.", "",
         "## Research Findings", "",
     ]
@@ -322,8 +433,8 @@ def _write_report(path: Path, result: dict[str, Any], historical: list[dict[str,
         verb = {"Supported": "support", "Not supported": "reject", "Inconclusive": "suggest"}[finding["conclusion"]]
         lines += [
             f"### {rq}", "", f"Question: {finding['question']}", "",
-            f"Observed evidence: See the registered tables and paired intervals above.", "",
-            f"Conclusion: {finding['conclusion']}. The results {verb} that {mechanism} affects {metric} under this development evaluation setting.", "",
+            f"Observed evidence: {finding['observed_evidence']}", "",
+            f"Conclusion: {finding['conclusion']}. The results {verb} that {mechanism} affects {metric}{' beneficially' if rq == 'RQ2' else ''} under this development evaluation setting.", "",
             "Limitation: Fixed evidence action space, development-only population, and configuration-level marginal effects.", "",
         ]
     path.write_text("\n".join(lines), encoding="utf-8")

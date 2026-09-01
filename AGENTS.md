@@ -714,3 +714,21 @@ coverage targets as stopping rules. Only accepted, strictly prior, method-owned
 records may influence actionable retrieval. The common recovery denominator is
 all retained initial failed episodes. This study estimates configuration-level
 marginal effects, not independent component causal effects.
+
+The immutable additional-experiments run
+`probemem_additional_ablation_20260901T031926Z_4f9fd0b4556c` completed 60
+operational failures from 94 sequential initial units. Its formal status is
+`COMPLETED_WITH_POPULATION_IMBALANCE`: 52 stable-bias and eight stochastic-
+noise cases were observed without resampling. Adaptive acquisition matched
+fixed 64-step evidence diagnosis on the 33 registered comparable historical
+cases while using 13.58 rather than 64.00 mean evidence steps. Evidence
+Acquisition Enabled recovered 55/60 versus 51/60 for Baseline. Adding
+accepted-only chronological Memory on top of evidence acquisition recovered
+52/60, with two useful and four harmful transfers. Full ProbeMem also recovered
+52/60; adding the verifier on top of Probe+Memory changed no actions and
+prevented zero unsafe proposals. All isolation, chronology, leakage, budget,
+and invalid-skill counters were zero. Preserve this mixed/negative result. Do
+not extend or replace seeds 7200--7293, execute the unused 7294--7399 stream
+under this stopped protocol, resample for population balance, tune from this
+stream, execute reserved seeds 7400--7499, or describe the five-row contrasts
+as independent component causal effects.

@@ -114,6 +114,7 @@ class AdditionalExperimentContractsTest(unittest.TestCase):
                     full = method == "FULL_PROBEMEM"
                     decisions.append({
                         "episode_id": episode, "seed": 7200 + episode, "method": method,
+                        "condition_id_oracle": "fault_01" if episode == 1 else "fault_05",
                         "mechanism_oracle": "stable_bias" if episode == 1 else "stochastic_noise",
                         "mechanism_prediction": "stable_bias" if episode == 1 else "stochastic_noise",
                         "evidence_steps": 64 if method in {"EVIDENCE_ACQUISITION_ENABLED", "PROBE_MEMORY", "FULL_PROBEMEM"} else 0,
@@ -146,10 +147,18 @@ class AdditionalExperimentContractsTest(unittest.TestCase):
             self.assertEqual(result["common_initial_failure_denominator"], 2)
             self.assertEqual(result["verifier"]["proposal_coverage"], 1.0)
             self.assertEqual(result["verifier"]["invocation_coverage"], 0.5)
+            self.assertEqual(result["research_findings"]["RQ3"]["conclusion"], "Not supported")
+            self.assertEqual(result["failure_taxonomy_counts"]["DIAGNOSIS_CORRECT_RECOVERY_FAILED"], 1)
+            self.assertEqual(
+                [case["selection_basis"] for case in result["selected_cases"]],
+                ["FIRST_SEQUENTIAL_OPERATIONAL_fault_01", "FIRST_SEQUENTIAL_OPERATIONAL_fault_05"],
+            )
             report = (root / "additional_experiments_report.md").read_text(encoding="utf-8")
             self.assertIn("### RQ3", report)
             self.assertIn("Question:", report)
             self.assertIn("Observed evidence:", report)
+            self.assertNotIn("See the registered tables", report)
+            self.assertIn("configuration-level marginal effects", report)
 
     @staticmethod
     def _csv(path: Path, rows: list[dict]) -> None:

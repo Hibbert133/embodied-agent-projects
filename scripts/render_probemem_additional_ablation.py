@@ -39,7 +39,11 @@ def _acquisition(run_dir: Path, path: Path) -> Path:
         y = 650 - float(row["diagnosis_accuracy"]) * 500
         color = (COLORS["gray"], COLORS["red"], COLORS["green"])[index]
         draw.ellipse((x - 13, y - 13, x + 13, y + 13), fill=color, outline=COLORS["navy"])
-        draw.text((x + 18, y - 10), row["policy"].replace("_", " "), fill=COLORS["ink"], font=ImageFont.load_default(size=14))
+        label = row["policy"].replace("_", " ")
+        font = ImageFont.load_default(size=14)
+        width = draw.textbbox((0, 0), label, font=font)[2]
+        label_x = x - width - 18 if x > 900 else x + 18
+        draw.text((label_x, y - 10), label, fill=COLORS["ink"], font=font)
     draw.line((120, 650, 1100, 650), fill=COLORS["ink"], width=2)
     draw.line((120, 650, 120, 130), fill=COLORS["ink"], width=2)
     draw.text((490, 700), "Mean evidence steps", fill=COLORS["ink"], font=ImageFont.load_default(size=18))
@@ -58,8 +62,22 @@ def _ablation(run_dir: Path, path: Path) -> Path:
         height = 430 * recovery / maximum
         draw.rectangle((x, 620 - height, x + 145, 620), fill=COLORS["blue"] if index < 4 else COLORS["green"])
         draw.text((x + 45, 585 - height), f"{recovery}/{maximum}", fill=COLORS["ink"], font=ImageFont.load_default(size=18))
-        draw.text((x, 645), row["method"].replace("_", " ")[:22], fill=COLORS["ink"], font=ImageFont.load_default(size=13))
-        draw.text((x, 670), f"evidence={row['total_evidence_steps']}", fill=COLORS["ink"], font=ImageFont.load_default(size=12))
+        labels = {
+            "BASELINE": ("BASELINE", ""),
+            "MEMORY_ONLY": ("MEMORY ONLY", ""),
+            "EVIDENCE_ACQUISITION_ENABLED": ("EVIDENCE ACQUISITION", "ENABLED"),
+            "PROBE_MEMORY": ("PROBE + MEMORY", ""),
+            "FULL_PROBEMEM": ("FULL PROBEMEM", ""),
+        }[row["method"]]
+        label_font = ImageFont.load_default(size=12)
+        for line_index, label in enumerate(labels):
+            if not label:
+                continue
+            width = draw.textbbox((0, 0), label, font=label_font)[2]
+            draw.text((x + 72 - width / 2, 642 + line_index * 17), label, fill=COLORS["ink"], font=label_font)
+        evidence_label = f"evidence={row['total_evidence_steps']}"
+        width = draw.textbbox((0, 0), evidence_label, font=label_font)[2]
+        draw.text((x + 72 - width / 2, 680), evidence_label, fill=COLORS["ink"], font=label_font)
     path.parent.mkdir(parents=True, exist_ok=True)
     image.save(path)
     return path
@@ -108,17 +126,54 @@ def _cases(run_dir: Path, path: Path) -> Path:
     by_episode: dict[int, list[dict[str, str]]] = {}
     for row in decisions:
         by_episode.setdefault(int(row["episode_id"]), []).append(row)
-    lines = ["# Representative Failure Cases", ""]
+    lines = [
+        "# Outcome-Blind Representative Case Report", "",
+        "Cases are the first sequential operational episode for each registered perturbation category. "
+        "Selection does not use diagnosis, recovery, Memory, or Verifier outcomes; failure labels are assigned only after selection.", "",
+    ]
     for case in selected:
         episode = int(case["episode_id"])
         rows = by_episode[episode]
-        lines += [f"## {case['case_type']}", "", f"- Episode: `{episode}`; seed: `{case['seed']}`"]
-        for row in rows:
-            lines.append(
-                f"- `{row['method']}`: diagnosis `{row['mechanism_prediction']}`, "
-                f"evidence steps `{row['evidence_steps']}`, action `{row['selected_skill']}`, "
-                f"outcome `{row['verification_status']}`"
+        row = next(item for item in rows if item["method"] == "FULL_PROBEMEM")
+        baseline = next(item for item in rows if item["method"] == "BASELINE")
+        trace_path = next((run_dir / "initial_trajectories").glob(f"unit*_seed{case['seed']}.jsonl"))
+        trace_lines = trace_path.read_text(encoding="utf-8").splitlines()
+        final_initial = json.loads(trace_lines[-1])
+        metrics = final_initial["task_progress_metrics"]
+        evidence_steps = int(row["evidence_steps"])
+        if evidence_steps:
+            relation = "changed" if baseline["mechanism_prediction"] != row["mechanism_prediction"] else "retained"
+            evidence = (
+                f"The registered {evidence_steps}-step diagnostic evidence {relation} the passive hypothesis "
+                f"`{baseline['mechanism_prediction']}` as `{row['mechanism_prediction']}`."
             )
+            probe = f"One registered fixed diagnostic evidence rollout ({evidence_steps} environment steps)."
+        else:
+            evidence = "No post-failure evidence was acquired; the decision used only pre-action observable rollout features."
+            probe = "None."
+        verifier_note = ""
+        if row["method"] == "FULL_PROBEMEM":
+            verifier_note = (
+                f" Verifier invoked=`{row['verifier_invoked']}`, proposal=`{row['proposal_skill']}`, "
+                f"selected=`{row['selected_skill']}`, reason=`{row['verifier_reason']}`."
+            )
+        lines += [
+            f"## {case['selection_basis']}", "",
+            f"- Observed case type(s): `{case['observed_case_types']}`",
+            f"- Episode / seed: `{episode}` / `{case['seed']}`",
+            "- Initial task description: MetaWorld `push-v3`; use the frozen SawyerPushV3Policy to push the object to the observable goal.",
+            f"- Failure observation: initial rollout ended after `{len(trace_lines)}` steps without success; final object-goal distance was `{metrics['object_goal_distance']:.4f}`, progress-to-goal `{metrics['progress_to_goal']:.4f}`, lateral drift `{metrics['lateral_drift']:.4f}`.",
+            f"- Agent hypothesis ({row['method']}): `{row['mechanism_prediction']}`; evaluator mechanism: `{row['mechanism_oracle']}`.",
+            f"- Selected probe(s): {probe}",
+            f"- Evidence obtained: {evidence}",
+            f"- Final decision: execute `{row['selected_skill']}`.{verifier_note}",
+            f"- Outcome: `{row['verification_status']}` after `{row['verification_steps']}` verification steps; final object-goal distance `{float(row['final_object_goal_distance']):.4f}`.",
+            "", "Configuration comparison:", "",
+            "| Method | Hypothesis | Evidence steps | Recovery action | Outcome |",
+            "|---|---|---:|---|---|",
+        ]
+        for row in rows:
+            lines.append(f"| `{row['method']}` | `{row['mechanism_prediction']}` | {row['evidence_steps']} | `{row['selected_skill']}` | `{row['verification_status']}` |")
         lines += ["", "Interpretation is restricted to this registered development case.", ""]
     if not selected:
         lines += ["No eligible representative cases were observed under the frozen selection rules.", ""]
