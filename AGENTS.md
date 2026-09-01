@@ -700,3 +700,17 @@ Do not rerun, extend, or fit another score on seeds 6950--7099, and do not
 execute reserved seeds 7100--7199. Do not restore API calls or advance to
 memory, principles, validation, or held-out execution. A successor requires a
 new persistent causal evidence design under a separately frozen protocol.
+
+The user subsequently authorized the development-only additional-experiments
+protocol in `docs/protocols/probemem_additional_experiments_v1.md`. It may scan
+fresh seeds 7200--7399 once in ascending order until 60 operational initial
+failures and must keep seeds 7400--7499 reserved. It compares five frozen,
+deterministic configurations and may reuse the immutable held-out allocation
+artifacts for an evidence-acquisition-policy table. It must not call a GLM,
+modify thresholds, expose Oracle fields to a method, share runtime or memory
+state across methods, access future or cross-method memory, select cases from
+outcomes, resample for category balance, or treat descriptive population
+coverage targets as stopping rules. Only accepted, strictly prior, method-owned
+records may influence actionable retrieval. The common recovery denominator is
+all retained initial failed episodes. This study estimates configuration-level
+marginal effects, not independent component causal effects.

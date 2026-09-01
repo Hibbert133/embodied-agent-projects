@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "registry_id": "probemem_additional_ablation_seed_registry_v1",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "additional_ablation_development": [7200, 7399],
+    "additional_ablation_future_reserved": [7400, 7499]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 7199]],
+  "notes": "Sequential development scan only; descriptive category targets never alter stopping or seed selection."
+}
