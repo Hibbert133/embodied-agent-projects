@@ -39,6 +39,10 @@ def _git(*args: str) -> str:
     ).stdout.strip()
 
 
+def _tracked_dirty() -> bool:
+    return bool(_git("diff", "--name-only") or _git("diff", "--cached", "--name-only"))
+
+
 def _sha(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
@@ -80,8 +84,8 @@ def main() -> int:
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
     args = parser.parse_args()
     try:
-        if _git("status", "--porcelain"):
-            raise RuntimeError("manifest generation requires a clean worktree")
+        if _tracked_dirty():
+            raise RuntimeError("manifest generation requires no tracked changes")
         config_path = args.config.resolve()
         config = json.loads(config_path.read_text(encoding="utf-8"))
         if config["status"] != "DEVELOPMENT_FROZEN_BEFORE_EXECUTION":

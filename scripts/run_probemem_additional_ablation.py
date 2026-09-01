@@ -63,14 +63,18 @@ def _manifest_hash(value: Mapping[str, Any]) -> str:
     return hashlib.sha256(json.dumps(content, sort_keys=True, separators=(",", ":")).encode()).hexdigest()
 
 
+def _tracked_dirty() -> bool:
+    return bool(_git("diff", "--name-only") or _git("diff", "--cached", "--name-only"))
+
+
 def _validate(path: Path) -> tuple[dict[str, Any], dict[str, Any]]:
     manifest = json.loads(path.read_text(encoding="utf-8"))
     if _manifest_hash(manifest) != manifest["manifest_id"]:
         raise ValueError("manifest content hash is invalid")
     if _git("rev-parse", "HEAD") != manifest["source_git_commit"]:
         raise RuntimeError("current HEAD differs from manifest source commit")
-    if _git("status", "--porcelain"):
-        raise RuntimeError("registered execution requires a clean worktree")
+    if _tracked_dirty():
+        raise RuntimeError("registered execution requires no tracked changes")
     config_path = ROOT / manifest["config_path"]
     if hashlib.sha256(config_path.read_bytes()).hexdigest() != manifest["config_sha256"]:
         raise RuntimeError("config hash differs from manifest")

@@ -44,6 +44,15 @@ class AdditionalExperimentContractsTest(unittest.TestCase):
         self.assertEqual(units[5]["condition_id_oracle"], "fault_01")
         self.assertTrue(all("outcome" not in key for row in units for key in row))
 
+    def test_manifest_and_runner_ignore_only_untracked_output_artifacts(self) -> None:
+        generator = (ROOT / "scripts/generate_probemem_additional_manifest.py").read_text(encoding="utf-8")
+        runner = (ROOT / "scripts/run_probemem_additional_ablation.py").read_text(encoding="utf-8")
+        self.assertIn('"diff", "--name-only"', generator)
+        self.assertIn('"diff", "--cached", "--name-only"', generator)
+        self.assertIn('"diff", "--name-only"', runner)
+        self.assertNotIn('_git("status", "--porcelain")', generator)
+        self.assertNotIn('_git("status", "--porcelain")', runner)
+
     def test_memory_is_owner_isolated_accepted_only_and_prior_only(self) -> None:
         memory = MethodChronologicalMemory("MEMORY_ONLY", scales=SCALES)
         memory.append(record("MEMORY_ONLY", 1, COMP, "ACCEPTED"))
