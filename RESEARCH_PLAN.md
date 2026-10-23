@@ -978,3 +978,22 @@ Proceed by establishing a real distinction from matched DR and task-information
 methods, then freeze an independent own-history study; do not solve this issue
 by weakening controls, switching regressors alone, another toy census or
 reviving failed ARX/SS/timer-reset. The CCF A objective remains unachieved.
+
+The zero-interaction passive-continuation semantic audit now checks whether
+the closed VALIDATE8 fixed-controller branch is ordinary task continuation
+with different labels. Register all630 immutable old executions, replay all72
+RAW references, preserve missing/short windows, never feed recorded futures
+after a different command, and require independent literal arithmetic. This
+targets the passive-history interpretation of an already registered control, not a new learned mechanism or
+independent task benefit; no old population tuning or new collection is allowed.
+
+On freeze41161eb this complete post-hoc audit passed: all630 registered,
+72 RAW references,8921 real source commands,216 fixed-controller replays;
+59 complete/5 short/8 unavailable windows and all36 panels retained. Literal
+independent audit with main actor/replay/PI disabled checked914944 scalar fields.
+The registered VALIDATE_FULL already supplies the delayed passive-history
+adaptation reference; do not add its DEFER8 alias as another control or sample.
+Only unchanged0.5-gain replays share verified full outcomes here; changed-gain
+outcomes were not imputed. 13 new/2009 source-reused checks, zero new physical
+activity/fits/policy re-evaluation/API. Next work still needs a learned mechanism
+with a genuine physical/evidence distinction and independent own-history gains.

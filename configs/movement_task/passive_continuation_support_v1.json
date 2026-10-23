@@ -1,0 +1,28 @@
+{
+  "protocol": "PASSIVE_CONTINUATION_SUPPORT_V1",
+  "classification": "POST_HOC_DESCRIPTIVE_SEMANTIC_REPLAY",
+  "source_run": "outputs/memory_reset/qualification_v1/memory_reset_20261022T224151Z_814c7dbd2ce7",
+  "full_source_executions": 630,
+  "reference_program": "RAW_CONTINUE",
+  "reference_executions": 72,
+  "replays": [
+    "RAW",
+    "VALIDATE_NO_UPDATE",
+    "TAIL_VALIDATE8_1"
+  ],
+  "maximum_saved_policy_action_reads": 108000,
+  "maximum_independent_PI_reconstructions": 36000,
+  "source_scope": "all630 registered; all72 RAW_CONTINUE canonical traces, no favorable subset",
+  "windows": "first0..8 actual task steps after live16/32/64 boundary; early/short retained",
+  "strict": "exact float32 command equality before disclosing next saved observation; stop on first divergence",
+  "counterfactual_task_outcomes_imputed": 0,
+  "environment_creations": 0,
+  "resets": 0,
+  "simulation_steps": 0,
+  "model_fits": 0,
+  "new_fixed_policy_queries": 0,
+  "online_LLM_API_calls": 0,
+  "new_episode_seeds": 0,
+  "task_benefit_established": false,
+  "publication_goal_complete": false
+}

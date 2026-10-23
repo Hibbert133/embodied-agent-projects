@@ -1,0 +1,10 @@
+{
+  "integrity": "FAILED_BEFORE_TESTS_OR_ANALYSIS",
+  "reason": "Python tuple in config replays differed from its JSON list representation during exact config comparison",
+  "source_config_sha256": "4226d8e65fddb81d252892bc6e59c85cf72afbff9d80afd59dd54ad505c60ba5",
+  "failed_script_sha256": "1e776359a46559eec8f154d88aa168b54d1b52044fcd83c605ac9fc7b01b74fa",
+  "new_physical_activity": 0,
+  "model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "repair": "Use explicit JSON list in config; add roundtrip test; preserve this failed directory and validate separately as v2"
+}

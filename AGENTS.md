@@ -2045,3 +2045,28 @@ experiment or a proof against all post-return release designs. A successor
 needs a falsifiable distinction over same-privilege standard DR, VoSI/task
 acquisition and applicability methods before a fresh independent protocol;
 changing ridge to a network or numerical tie behavior alone is insufficient.
+
+## Passive continuation versus validation support audit
+
+On codex/passive-continuation-support-v1, follow
+docs/protocols/passive_continuation_support_v1_zh.md. This is post-hoc semantic
+replay of immutable memory-reset records: register all630, use all72 RAW_CONTINUE
+canonical traces, retain early/short windows and all36 cohort/task/condition/
+boundary cells. RAW, fixed0.5 validation and full-release fixed0.5 must consume
+only identical saved float32 commands before a next observation is disclosed.
+No new physics, resets, fits, policy re-evaluation, episode seeds or online LLM.
+Independent literal PI/readers run with main actor/replay/PI numbers disabled.
+Do not impute changed-gain outcomes or treat this as active-learning task gains.
+Require a same-history passive-adaptation strong control in any successor;
+phase names or withholding ordinary task feedback alone do not establish a
+new physical evidence action. This prerequisite does not complete CCF A.
+
+This audit completed on41161eb: all630 cases registered,72 canonical RAW,
+8921 real command steps,216 exact fixed-controller replays,59 full/5 short/
+8 unavailable windows. Independent literal reconstruction checked914944
+scalar fields with main actor/replay/PI disabled. No new physics/fits/API or
+original-policy calls; 13 new/2009 source-reused checks. VALIDATE_FULL already
+exists in the closed20-program design and is the delayed passive-history
+reference; do not invent a missing control, duplicate it under DEFER8, or
+claim unchanged-gain replay proves learned-gain task benefit. Preserve all
+source costs/failures, window missingness and the complete Chinese report.
