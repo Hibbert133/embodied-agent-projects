@@ -1,0 +1,60 @@
+{
+  "experiment_run_id": "task_passive_20261022T032948Z_67fefc4da922",
+  "manifest_id": "e11e6d48c8be94514293467826352123c2b512c1fbf34d9441ad3413be1cd0c3",
+  "source_git_commit": "67fefc4da9224e0c62b8373d0d4e8cb5b3d1bade",
+  "cohort": "QUAL",
+  "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+  "allocated_executions": 432,
+  "executions": 432,
+  "control_steps": 55513,
+  "control_step_attempts": 55513,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 22032,
+      "simulation_attempts": 2258713,
+      "simulation_frames_attempted": 11293565,
+      "simulation_completed": 2258713,
+      "simulation_frames_completed": 11293565,
+      "reset_completed": 22032
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 21600,
+        "simulation_attempts": 2160000,
+        "simulation_frames_attempted": 10800000,
+        "simulation_completed": 2160000,
+        "simulation_frames_completed": 10800000,
+        "reset_completed": 21600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 432,
+        "simulation_attempts": 43200,
+        "simulation_frames_attempted": 216000,
+        "simulation_completed": 43200,
+        "simulation_frames_completed": 216000,
+        "reset_completed": 432
+      },
+      "CONTROL": {
+        "simulation_attempts": 55513,
+        "simulation_frames_attempted": 277565,
+        "simulation_completed": 55513,
+        "simulation_frames_completed": 277565
+      }
+    }
+  },
+  "events": 309668,
+  "private_records": 1824,
+  "failure": null,
+  "wall_ns": 2178120889800,
+  "online_c4_c8_fit_attempts": 648,
+  "new_response_predictor_training": 0,
+  "new_policy_training": 0,
+  "new_api_calls": 0,
+  "network_guard": {
+    "attempted_network_calls": 0
+  },
+  "execution_git_head": "67fefc4da9224e0c62b8373d0d4e8cb5b3d1bade",
+  "selection_sha256": "62a78458eff2ac33395168f90c60365297ac9fe2a9d31420e52cdfb331ddcffd",
+  "safety_guarantee": false,
+  "novel_algorithm": false
+}

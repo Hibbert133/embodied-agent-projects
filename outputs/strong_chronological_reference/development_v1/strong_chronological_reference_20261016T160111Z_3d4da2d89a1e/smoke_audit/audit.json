@@ -1,0 +1,62 @@
+{
+  "experiment_run_id": "strong_chronological_reference_20261016T160111Z_3d4da2d89a1e",
+  "manifest_id": "bfa575c8ec6049a90fb21f9be41433c9ccbcfb8ab65105b01a611a9599104c08",
+  "source_git_commit": "3d4da2d89a1e2b3e28ffc605151e5c206200040f",
+  "phase": "SMOKE",
+  "integrity": "PASSED",
+  "executions": 108,
+  "events_checked": 45864,
+  "coverage": {
+    "passive_rejection_continued": true,
+    "passive_valid_update_applied": true,
+    "passive_actual_cache_written": true,
+    "passive_actual_cache_reused": true,
+    "history_nonempty_measure_used": true
+  },
+  "required_integrity_coverage": true,
+  "matched_initial_comparisons": 96,
+  "matched_physical_prefix_steps": 2161,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 5508,
+      "simulation_attempts": 562858,
+      "simulation_frames_attempted": 2814290,
+      "simulation_completed": 562858,
+      "simulation_frames_completed": 2814290,
+      "reset_completed": 5508
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 5400,
+        "simulation_attempts": 540000,
+        "simulation_frames_attempted": 2700000,
+        "simulation_completed": 540000,
+        "simulation_frames_completed": 2700000,
+        "reset_completed": 5400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 108,
+        "simulation_attempts": 10800,
+        "simulation_frames_attempted": 54000,
+        "simulation_completed": 10800,
+        "simulation_frames_completed": 54000,
+        "reset_completed": 108
+      },
+      "CONTROL": {
+        "simulation_attempts": 12058,
+        "simulation_frames_attempted": 60290,
+        "simulation_completed": 12058,
+        "simulation_frames_completed": 60290
+      }
+    }
+  },
+  "summary_sha256": "9d8c368a0d9df80df06c0351637ffc0cfa561363c63b32caf431617e1116450f",
+  "audit_policy_queries": 11551,
+  "audit_shared_fitter_attempts": 125,
+  "audit_shared_optimizer_nfev": 672,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "script_sha256": "cba1202217f81e7fc5bedfd4a527eb4575f0149d82a6abe60781af3b8d6b5154",
+  "complete_hidden_state_qualified": false,
+  "scope": "Independent physical/noise/journal and saved-control replay; shared legacy actor/fit math, passive numerical fitter, cache/encoder and query provenance store. Independent Woodbury/normal-CDF task-IVR moments. Separate statistics audit required."
+}

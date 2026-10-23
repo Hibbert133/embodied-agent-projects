@@ -1,0 +1,48 @@
+{
+  "time_utc": "2026-10-22T13:44:16.598361+00:00",
+  "scope": "POST_FREEZE_PRIOR_ART_READING_ONLY_NO_FROZEN_CONTROL_OR_GATE_CHANGE",
+  "sources": [
+    {
+      "url": "https://arxiv.org/html/2404.12308",
+      "version": "2404.12308v2",
+      "read_sections": [
+        "3 assumptions and learning protocol",
+        "4.1 Fisher information",
+        "4.2 identification",
+        "4.3 task optimization",
+        "6 discussion"
+      ],
+      "not_done": "No full proof audit or experimental reproduction. HTML appendix and entire experiments not systematically read."
+    },
+    {
+      "url": "https://weirdlabuw.github.io/asid/",
+      "read_sections": [
+        "abstract",
+        "pipeline",
+        "Fisher information explanation"
+      ]
+    },
+    {
+      "url": "https://proceedings.mlr.press/v305/sobanbabu25a.html",
+      "read_sections": [
+        "official abstract only"
+      ],
+      "full_PDF": "Web tool returned unsupported octet-stream; not read."
+    }
+  ],
+  "failed_accesses": [
+    {
+      "url": "https://openreview.net/pdf?id=jNR6s6OSBT",
+      "result": "Browser challenge. No bypass; used separately public arXiv paper linked by author instead."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/mlresearch/v305/main/assets/sobanbabu25a/sobanbabu25a.pdf",
+      "result": "Unsupported content-type from web reader; no PDF content claimed."
+    }
+  ],
+  "synthesis_zh": "ASID在已知参数族与可调用仿真下，学信息探索并辨识仿真，再优化任务策略。不能把其信息目标当本项目完整截止损失收益或物理安全保证；固定底层策略、真实中途状态和采用/拒绝后继是待具体化区别，不构成已证新颖性。SPI-Active仅核对摘要，其主动辨识方向仍需作为近邻。",
+  "web_HTTP_reading_is_not_an_experimental_LLM_API_call": true,
+  "experimental_online_LLM_API_calls": 0,
+  "full_source_HTML_not_archived_in_this_receipt": true,
+  "publication_goal_complete": false
+}

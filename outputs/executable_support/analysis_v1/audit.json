@@ -1,0 +1,1167 @@
+{
+  "experiment_run_id": "executable_support_20261015T082955Z_48a3e433af85",
+  "manifest_id": "89e843c795d56e06577fa29504366d7023821180f850f0ecc608e84aaf349b78",
+  "source_git_commit": "48a3e433af851fb8d477086bf508d072c02cdecd",
+  "integrity": "PASSED",
+  "status": "COMPLETED_NO_DEVELOPMENT_SIGNAL",
+  "episodes": 864,
+  "controlled_steps": 103114,
+  "controlled_resets": 864,
+  "statistics": {
+    "methods": {
+      "GAUSS8": {
+        "cases": 96,
+        "successes": 96,
+        "stops": 0,
+        "total_steps": 8269,
+        "mean_steps": 86.13541666666667,
+        "mean_deadline_loss": 86.13541666666667,
+        "mean_probe_steps": 8.0,
+        "point_fit_failures": 2,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 304.9895833333333,
+        "selected_program_sequences": {}
+      },
+      "POINT16_CYCLE": {
+        "cases": 96,
+        "successes": 96,
+        "stops": 0,
+        "total_steps": 8482,
+        "mean_steps": 88.35416666666667,
+        "mean_deadline_loss": 88.35416666666667,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 307.2083333333333,
+        "selected_program_sequences": {}
+      },
+      "POINT16_WIDE": {
+        "cases": 96,
+        "successes": 96,
+        "stops": 0,
+        "total_steps": 8622,
+        "mean_steps": 89.8125,
+        "mean_deadline_loss": 89.8125,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 308.6666666666667,
+        "selected_program_sequences": {}
+      },
+      "GAUSS16_CYCLE": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "total_steps": 8865,
+        "mean_steps": 92.34375,
+        "mean_deadline_loss": 92.34375,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 311.1979166666667,
+        "selected_program_sequences": {}
+      },
+      "IVR_GLOBAL16": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "total_steps": 8865,
+        "mean_steps": 92.34375,
+        "mean_deadline_loss": 92.34375,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 2,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 311.1979166666667,
+        "selected_program_sequences": {
+          "X4/Y4": 96
+        }
+      },
+      "IVR_TASK16": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "total_steps": 8741,
+        "mean_steps": 91.05208333333333,
+        "mean_deadline_loss": 91.05208333333333,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 3,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 309.90625,
+        "selected_program_sequences": {
+          "Y4/X4": 22,
+          "Y4/Y4": 32,
+          "X4/X4": 24,
+          "X4/Y4": 18
+        }
+      },
+      "IVR_EXEC16": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "total_steps": 8723,
+        "mean_steps": 90.86458333333333,
+        "mean_deadline_loss": 90.86458333333333,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 2,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 309.71875,
+        "selected_program_sequences": {
+          "X4/Y4": 60,
+          "X4/X4": 19,
+          "Y4/X4": 14,
+          "Y4/Y4": 3
+        }
+      },
+      "IVR_EXEC_FIXED16": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "total_steps": 8741,
+        "mean_steps": 91.05208333333333,
+        "mean_deadline_loss": 91.05208333333333,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 2,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 309.90625,
+        "selected_program_sequences": {
+          "X4/Y4": 59,
+          "X4/X4": 20,
+          "Y4/X4": 13,
+          "Y4/Y4": 4
+        }
+      },
+      "NO_PROBE": {
+        "cases": 96,
+        "successes": 35,
+        "stops": 0,
+        "total_steps": 33806,
+        "mean_steps": 352.1458333333333,
+        "mean_deadline_loss": 352.1458333333333,
+        "mean_probe_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 352.1458333333333,
+        "selected_program_sequences": {}
+      }
+    },
+    "candidate_contrasts": {
+      "GAUSS8": {
+        "candidate": "IVR_EXEC16",
+        "reference": "GAUSS8",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            4.666666666666667,
+            4.666666666666667
+          ],
+          [
+            0.0,
+            6.833333333333333,
+            6.833333333333333
+          ],
+          [
+            0.0,
+            11.5,
+            11.5
+          ],
+          [
+            0.0,
+            11.833333333333334,
+            11.833333333333334
+          ],
+          [
+            0.0,
+            17.0,
+            17.0
+          ],
+          [
+            0.0,
+            6.0,
+            6.0
+          ],
+          [
+            0.0,
+            -10.166666666666666,
+            -10.166666666666666
+          ],
+          [
+            0.0,
+            5.333333333333333,
+            5.333333333333333
+          ],
+          [
+            0.0,
+            -7.5,
+            -7.5
+          ],
+          [
+            0.0,
+            -6.833333333333333,
+            -6.833333333333333
+          ],
+          [
+            0.0,
+            -45.666666666666664,
+            -45.666666666666664
+          ],
+          [
+            -0.16666666666666666,
+            76.5,
+            76.5
+          ],
+          [
+            0.0,
+            8.166666666666666,
+            8.166666666666666
+          ],
+          [
+            0.0,
+            3.3333333333333335,
+            3.3333333333333335
+          ],
+          [
+            0.0,
+            -11.666666666666666,
+            -11.666666666666666
+          ],
+          [
+            0.0,
+            6.333333333333333,
+            6.333333333333333
+          ]
+        ],
+        "success_rate": {
+          "difference": -0.010416666666666666,
+          "paired_cluster_percentile_95": [
+            -0.03125,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": 4.729166666666666,
+          "paired_cluster_percentile_95": [
+            -5.104166666666667,
+            15.876562499999979
+          ]
+        },
+        "actual_steps": {
+          "difference": 4.729166666666666,
+          "paired_cluster_percentile_95": [
+            -5.104166666666667,
+            15.876562499999979
+          ]
+        }
+      },
+      "POINT16_CYCLE": {
+        "candidate": "IVR_EXEC16",
+        "reference": "POINT16_CYCLE",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          [
+            0.0,
+            1.8333333333333333,
+            1.8333333333333333
+          ],
+          [
+            0.0,
+            4.5,
+            4.5
+          ],
+          [
+            0.0,
+            -2.1666666666666665,
+            -2.1666666666666665
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            1.8333333333333333,
+            1.8333333333333333
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            -10.333333333333334,
+            -10.333333333333334
+          ],
+          [
+            0.0,
+            -1.6666666666666667,
+            -1.6666666666666667
+          ],
+          [
+            -0.16666666666666666,
+            63.833333333333336,
+            63.833333333333336
+          ],
+          [
+            0.0,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          [
+            0.0,
+            -0.3333333333333333,
+            -0.3333333333333333
+          ],
+          [
+            0.0,
+            -18.5,
+            -18.5
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ]
+        ],
+        "success_rate": {
+          "difference": -0.010416666666666666,
+          "paired_cluster_percentile_95": [
+            -0.03125,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": 2.5104166666666665,
+          "paired_cluster_percentile_95": [
+            -3.666666666666667,
+            11.697916666666666
+          ]
+        },
+        "actual_steps": {
+          "difference": 2.5104166666666665,
+          "paired_cluster_percentile_95": [
+            -3.666666666666667,
+            11.697916666666666
+          ]
+        }
+      },
+      "POINT16_WIDE": {
+        "candidate": "IVR_EXEC16",
+        "reference": "POINT16_WIDE",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            -4.833333333333333,
+            -4.833333333333333
+          ],
+          [
+            0.0,
+            -2.8333333333333335,
+            -2.8333333333333335
+          ],
+          [
+            0.0,
+            -4.666666666666667,
+            -4.666666666666667
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            4.666666666666667,
+            4.666666666666667
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -13.333333333333334,
+            -13.333333333333334
+          ],
+          [
+            0.0,
+            -3.1666666666666665,
+            -3.1666666666666665
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            0.0,
+            -10.333333333333334,
+            -10.333333333333334
+          ],
+          [
+            0.0,
+            -5.333333333333333,
+            -5.333333333333333
+          ],
+          [
+            -0.16666666666666666,
+            68.16666666666667,
+            68.16666666666667
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -5.166666666666667,
+            -5.166666666666667
+          ],
+          [
+            0.0,
+            -1.1666666666666667,
+            -1.1666666666666667
+          ],
+          [
+            0.0,
+            -3.3333333333333335,
+            -3.3333333333333335
+          ]
+        ],
+        "success_rate": {
+          "difference": -0.010416666666666666,
+          "paired_cluster_percentile_95": [
+            -0.03125,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": 1.0520833333333333,
+          "paired_cluster_percentile_95": [
+            -4.979427083333333,
+            10.770833333333334
+          ]
+        },
+        "actual_steps": {
+          "difference": 1.0520833333333333,
+          "paired_cluster_percentile_95": [
+            -4.979427083333333,
+            10.770833333333334
+          ]
+        }
+      },
+      "GAUSS16_CYCLE": {
+        "candidate": "IVR_EXEC16",
+        "reference": "GAUSS16_CYCLE",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.3333333333333333,
+            -0.3333333333333333
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            0.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            0.0,
+            -5.666666666666667,
+            -5.666666666666667
+          ],
+          [
+            0.0,
+            -1.6666666666666667,
+            -1.6666666666666667
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -11.333333333333334,
+            -11.333333333333334
+          ],
+          [
+            0.0,
+            -1.1666666666666667,
+            -1.1666666666666667
+          ],
+          [
+            0.0,
+            1.8333333333333333,
+            1.8333333333333333
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            0.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "success_rate": {
+          "difference": 0.0,
+          "paired_cluster_percentile_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": -1.4791666666666667,
+          "paired_cluster_percentile_95": [
+            -3.114583333333334,
+            -0.2604166666666667
+          ]
+        },
+        "actual_steps": {
+          "difference": -1.4791666666666667,
+          "paired_cluster_percentile_95": [
+            -3.114583333333334,
+            -0.2604166666666667
+          ]
+        }
+      },
+      "IVR_GLOBAL16": {
+        "candidate": "IVR_EXEC16",
+        "reference": "IVR_GLOBAL16",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.3333333333333333,
+            -0.3333333333333333
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            0.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            0.0,
+            -5.666666666666667,
+            -5.666666666666667
+          ],
+          [
+            0.0,
+            -1.6666666666666667,
+            -1.6666666666666667
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -11.333333333333334,
+            -11.333333333333334
+          ],
+          [
+            0.0,
+            -1.1666666666666667,
+            -1.1666666666666667
+          ],
+          [
+            0.0,
+            1.8333333333333333,
+            1.8333333333333333
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            0.0,
+            -2.0,
+            -2.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "success_rate": {
+          "difference": 0.0,
+          "paired_cluster_percentile_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": -1.4791666666666667,
+          "paired_cluster_percentile_95": [
+            -3.114583333333334,
+            -0.2604166666666667
+          ]
+        },
+        "actual_steps": {
+          "difference": -1.4791666666666667,
+          "paired_cluster_percentile_95": [
+            -3.114583333333334,
+            -0.2604166666666667
+          ]
+        }
+      },
+      "IVR_TASK16": {
+        "candidate": "IVR_EXEC16",
+        "reference": "IVR_TASK16",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          [
+            0.0,
+            2.1666666666666665,
+            2.1666666666666665
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            0.8333333333333334,
+            0.8333333333333334
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            -2.3333333333333335,
+            -2.3333333333333335
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -2.3333333333333335,
+            -2.3333333333333335
+          ],
+          [
+            0.0,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          [
+            0.0,
+            1.6666666666666667,
+            1.6666666666666667
+          ],
+          [
+            0.0,
+            -1.8333333333333333,
+            -1.8333333333333333
+          ],
+          [
+            0.0,
+            -1.6666666666666667,
+            -1.6666666666666667
+          ],
+          [
+            0.0,
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        ],
+        "success_rate": {
+          "difference": 0.0,
+          "paired_cluster_percentile_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": -0.18750000000000003,
+          "paired_cluster_percentile_95": [
+            -0.8125000000000001,
+            0.4166666666666667
+          ]
+        },
+        "actual_steps": {
+          "difference": -0.18750000000000003,
+          "paired_cluster_percentile_95": [
+            -0.8125000000000001,
+            0.4166666666666667
+          ]
+        }
+      },
+      "IVR_EXEC_FIXED16": {
+        "candidate": "IVR_EXEC16",
+        "reference": "IVR_EXEC_FIXED16",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -3.1666666666666665,
+            -3.1666666666666665
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -0.5,
+            -0.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "success_rate": {
+          "difference": 0.0,
+          "paired_cluster_percentile_95": [
+            0.0,
+            0.0
+          ]
+        },
+        "deadline_loss": {
+          "difference": -0.1875,
+          "paired_cluster_percentile_95": [
+            -0.6145833333333333,
+            0.08333333333333333
+          ]
+        },
+        "actual_steps": {
+          "difference": -0.1875,
+          "paired_cluster_percentile_95": [
+            -0.6145833333333333,
+            0.08333333333333333
+          ]
+        }
+      },
+      "NO_PROBE": {
+        "candidate": "IVR_EXEC16",
+        "reference": "NO_PROBE",
+        "operator_streams": 16,
+        "strata_streams": [
+          8,
+          8
+        ],
+        "stream_values": [
+          [
+            0.0,
+            -1.8333333333333333,
+            -1.8333333333333333
+          ],
+          [
+            1.0,
+            -420.8333333333333,
+            -420.8333333333333
+          ],
+          [
+            0.0,
+            -49.0,
+            -49.0
+          ],
+          [
+            1.0,
+            -404.6666666666667,
+            -404.6666666666667
+          ],
+          [
+            0.6666666666666666,
+            -269.6666666666667,
+            -269.6666666666667
+          ],
+          [
+            1.0,
+            -387.8333333333333,
+            -387.8333333333333
+          ],
+          [
+            0.0,
+            9.166666666666666,
+            9.166666666666666
+          ],
+          [
+            1.0,
+            -418.3333333333333,
+            -418.3333333333333
+          ],
+          [
+            0.6666666666666666,
+            -275.0,
+            -275.0
+          ],
+          [
+            1.0,
+            -413.0,
+            -413.0
+          ],
+          [
+            0.5,
+            -212.66666666666666,
+            -212.66666666666666
+          ],
+          [
+            0.8333333333333334,
+            -350.6666666666667,
+            -350.6666666666667
+          ],
+          [
+            0.0,
+            -13.0,
+            -13.0
+          ],
+          [
+            1.0,
+            -417.5,
+            -417.5
+          ],
+          [
+            0.3333333333333333,
+            -138.0,
+            -138.0
+          ],
+          [
+            1.0,
+            -417.6666666666667,
+            -417.6666666666667
+          ]
+        ],
+        "success_rate": {
+          "difference": 0.625,
+          "paired_cluster_percentile_95": [
+            0.53125,
+            0.7291666666666666
+          ]
+        },
+        "deadline_loss": {
+          "difference": -261.28125,
+          "paired_cluster_percentile_95": [
+            -302.17005208333336,
+            -222.54088541666667
+          ]
+        },
+        "actual_steps": {
+          "difference": -261.28125,
+          "paired_cluster_percentile_95": [
+            -302.17005208333336,
+            -222.54088541666667
+          ]
+        }
+      }
+    },
+    "development_signal": {
+      "matched_initial_eight": 96,
+      "required_pairs": 96,
+      "primary_loss_interval_upper": 0.4166666666666667,
+      "dominated_by": [
+        "GAUSS8",
+        "POINT16_CYCLE",
+        "POINT16_WIDE"
+      ],
+      "candidate_success_no_lower": true,
+      "selected_sequence_differences": 57,
+      "passed": false
+    }
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 44064,
+      "simulation_attempts": 4509514,
+      "simulation_frames_attempted": 22547570,
+      "simulation_completed": 4509514,
+      "simulation_frames_completed": 22547570,
+      "reset_completed": 44064
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 43200,
+        "simulation_attempts": 4320000,
+        "simulation_frames_attempted": 21600000,
+        "simulation_completed": 4320000,
+        "simulation_frames_completed": 21600000,
+        "reset_completed": 43200
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 864,
+        "simulation_attempts": 86400,
+        "simulation_frames_attempted": 432000,
+        "simulation_completed": 86400,
+        "simulation_frames_completed": 432000,
+        "reset_completed": 864
+      },
+      "CONTROL": {
+        "simulation_attempts": 103114,
+        "simulation_frames_attempted": 515570,
+        "simulation_completed": 103114,
+        "simulation_frames_completed": 515570
+      }
+    }
+  },
+  "events_checked": 300308,
+  "clock_units": {
+    "push-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_push_v3.xml",
+      "model_xml_sha256": "8c4bf7169be4f3c666811930aa13682e755b43a8e6e8186265a0a8e9815ae502",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "reach-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_reach_v3.xml",
+      "model_xml_sha256": "bc0427293317164af71c82e9fd41a5fa568c3185a97d92da8e57e4e39254361c",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "door-open-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_door_pull.xml",
+      "model_xml_sha256": "f14cdb95f214dc13959351585b8a41b77f8876b112405d05f3e927ecac74513a",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    }
+  },
+  "frozen_git_inputs_checked": 644,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "artifact_sha256": {
+    "episodes_00.jsonl.gz": "f919ccfc5e3abb395fbf5082d07cb3689ec450160f2425ce23280c498d3d83a2",
+    "episodes_01.jsonl.gz": "02df7e3074bb33720ccfb19cd1950fa067b851d1b5f6eb506d88f7e034400704",
+    "episodes_02.jsonl.gz": "5c11e34d65bde2717b9a6f76e8d72166ee12859e04cc87a01b7da6dfdc77c714",
+    "episodes_03.jsonl.gz": "e284e073799dddef019397f3ad642b15c6bd56071bf49e3b20b4514449e7c677",
+    "episodes_04.jsonl.gz": "da5c513ac04a4846cfbd6fa4d6ac8fd287b997dc42fc85a2e258b58ce99262a9",
+    "episodes_05.jsonl.gz": "84727fe7f5d704c906b1a43040fcb6ad3d963ab711f571b334635093f0e51769",
+    "episodes_06.jsonl.gz": "ebbe1ed78241760b27b7414ac1e2396132c00a7733a9ddfe78e2dc5b27970be3",
+    "episodes_07.jsonl.gz": "63bcd5ba30ef598bd599bfc71ed9c3ee5eb605ad5d0c076c827fd56ba4707af8",
+    "episodes_08.jsonl.gz": "cc496109bba4c0fd7cbdf1936fec8008090560c75fbe3c3057bd800fbeda1081",
+    "episodes_09.jsonl.gz": "315ebd5ff1187a4076e43abd450f59c94e40c2c881b3cf9f1924ef5776700138",
+    "episodes_10.jsonl.gz": "1e294db58eaf1f4c254a6d4e70e43fbabe9c3d761936aa61dee3d490ce8050ea",
+    "episodes_11.jsonl.gz": "d07e2c6dbefb800d2b20c0ee15f43fbc3779b73ff3faf24abf0a54f8b2657721",
+    "episodes_12.jsonl.gz": "ea6612404958f2138e1a2a8c0916d0c64a598ecaa009eeecd8e64f3228367728",
+    "episodes_13.jsonl.gz": "a65935b2c06d13ee9b4c6f3deedbf5e83692230c447227ffd74c78224da9d40e",
+    "episodes_14.jsonl.gz": "4b31e377de9e9a0a4d09e8418dc8029d573605c7329e5cf83ea66a8998ef486f",
+    "episodes_15.jsonl.gz": "927fde1902339661ad672ea6d17edef2c44575971921fb839fb8915c530d1a1c",
+    "events_00.jsonl.gz": "e50876a1eccc51f2453aa07fc78a3dd31445c1bd24062593d6f257e75ef4e760",
+    "events_01.jsonl.gz": "3248884989748b460177ccf006181227811aea08731bd91e3443eb445f99f9cf",
+    "events_02.jsonl.gz": "94cac8d1d729ed8df7c79bc10c45e99c37321eeac50d9cee6d6f4de786db582b",
+    "events_03.jsonl.gz": "e5aa46cd5270f39d18cfad62346dd2fe241f8fa0a6d390a6dbcdb26d424c9114",
+    "events_04.jsonl.gz": "353a1bf09362e7705f916d71dbde58b0b4a387d32a4381ac94fadd2807c86874",
+    "events_05.jsonl.gz": "6dbd9911b510aa61255f1f9c4cba459feb02c4d7d46dc6f9d4eb31e85b2aca7c",
+    "events_06.jsonl.gz": "d9a3c82f980255943b324e747d7ae486603e9011704776fe407977914f309135",
+    "events_07.jsonl.gz": "218baeca3321a5fdbfebe0d8f5814076e311ae60deede082e14cfad49fc4ef1f",
+    "events_08.jsonl.gz": "5407a1caa886c36cfc091bb4631f66481587394fec64e8ae03fa0209ece46b1d",
+    "events_09.jsonl.gz": "92cdbf7ad0875bc5f8567b857e69fc83a151e6c082d79e5e9c63fe815738f746",
+    "events_10.jsonl.gz": "54f27d87bdd3ec9a04e4d3f4434e732999bb0ff1760af0730b34d65c5e65ff4c",
+    "events_11.jsonl.gz": "42c00a4145b9baae0181a795ef11e55ea17fc083b67af01c63ea6eb9eaff0cbc",
+    "events_12.jsonl.gz": "13c663781e3f0af75191baa36270b7a328ebf12ebb5de7c9a6b300f1a86a3fc6",
+    "events_13.jsonl.gz": "f17a6568500410a9dd9385385e4ec7fa6f287bf6faa11ca3d71e21414f4c5e69",
+    "events_14.jsonl.gz": "17a4beadfdb4f1d5ca8748855b5356d218e89ae39169322d7f331620b44ea56b",
+    "events_15.jsonl.gz": "7bc7c33c2b198e60e6e495ea138f7fc09be1fe276a19b81491f82b8d4987097b",
+    "manifest.json": "846f6a60ff812d414fb6ad9f06842603b85dea6b422cc1e84f289067f9ae093d",
+    "status.json": "bc320cd9813c8a1ebd762b1eef3798b0464de114896dec7553780848f9301100",
+    "summary.json": "b89d8a0512ad7a61262e28265d8d221d7e40696f8d7b25a7feb228f1d75ce0b3"
+  },
+  "scope": "Recorded-action/RNG/program/choice and full lifecycle replay; Gaussian/point/support-map mathematical helpers, state pairing and contrast formulas explicitly reused. No robot resimulation, complete hidden-state or physical/probability qualification."
+}

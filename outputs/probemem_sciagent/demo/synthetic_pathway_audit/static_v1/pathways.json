@@ -1,0 +1,144 @@
+{
+  "label": "SYNTHETIC_INTEGRATION_AUDIT",
+  "research_metric_eligible": false,
+  "direct_action": {
+    "evidence_summary": "Stable direct evidence.",
+    "candidate_hypotheses": [
+      "Stable response favors BOUNDED_PLANAR_COMPENSATION",
+      "Alternative is INDEPENDENT_STOCHASTIC_RETRY"
+    ],
+    "retrieved_principle_ids": [],
+    "retrieved_experience_ids": [],
+    "decision_mode": "ACT_DIRECTLY",
+    "selected_probe_type": null,
+    "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+    "expected_effect": "Counteract stable drift.",
+    "uncertainty_reason": "",
+    "predicted_success_probability": 0.8,
+    "stop_reason": null,
+    "retrieved_hypothesis_ids": [],
+    "tested_hypothesis_ids": [],
+    "probe_justification_codes": []
+  },
+  "probe_admission": {
+    "evidence_summary": "Action utility remains ambiguous.",
+    "candidate_hypotheses": [
+      "Hypothesis A favors BOUNDED_PLANAR_COMPENSATION",
+      "Hypothesis B favors INDEPENDENT_STOCHASTIC_RETRY"
+    ],
+    "retrieved_principle_ids": [],
+    "retrieved_experience_ids": [],
+    "decision_mode": "RUN_MICRO_PROBE",
+    "selected_probe_type": "RETRY_REPEATABILITY_PROBE",
+    "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+    "expected_effect": "Measure retry repeatability.",
+    "uncertainty_reason": "Missing action-conditioned evidence.",
+    "predicted_success_probability": 0.5,
+    "stop_reason": null,
+    "retrieved_hypothesis_ids": [],
+    "tested_hypothesis_ids": [],
+    "probe_justification_codes": [
+      "MISSING_ACTION_CONDITIONED_EVIDENCE"
+    ]
+  },
+  "probe_record": {
+    "probe_record_id": "synthetic_probe",
+    "episode_id": "synthetic_episode",
+    "seed": 0,
+    "probe_type": "RETRY_REPEATABILITY_PROBE",
+    "requested_by_decision_id": "synthetic_pre",
+    "evidence": {
+      "num_trials": 3,
+      "positive_progress_rate": 1.0,
+      "mean_progress": 0.02,
+      "progress_variance": 0.0,
+      "severe_failure_rate": 0.0
+    },
+    "environment_steps": 192,
+    "random_seed_ids": [
+      1,
+      2,
+      3
+    ],
+    "created_at_step": 2,
+    "reset_before_formal_recovery": true
+  },
+  "probe_induced_action_change": {
+    "evidence_summary": "Retry trials produced repeatable progress.",
+    "candidate_hypotheses": [
+      "Probe weakens BOUNDED_PLANAR_COMPENSATION",
+      "Probe supports INDEPENDENT_STOCHASTIC_RETRY"
+    ],
+    "retrieved_principle_ids": [],
+    "retrieved_experience_ids": [],
+    "decision_mode": "ACT_DIRECTLY",
+    "selected_probe_type": null,
+    "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+    "expected_effect": "Use an independent realization.",
+    "uncertainty_reason": "",
+    "predicted_success_probability": 0.75,
+    "stop_reason": null,
+    "retrieved_hypothesis_ids": [],
+    "tested_hypothesis_ids": [],
+    "probe_justification_codes": []
+  },
+  "principle_before_counterexample": {
+    "principle_id": "principle_d447e9c37abab2de",
+    "statement": "Stable response supports bounded compensation.",
+    "applicability_conditions": [
+      "STABLE_DIRECTIONAL_RESPONSE"
+    ],
+    "recommended_skill": "BOUNDED_PLANAR_COMPENSATION",
+    "support_count": 4,
+    "contradiction_count": 0,
+    "independent_seed_count": 3,
+    "estimated_success_rate": 1.0,
+    "scope_description": "Applies only when all registered applicability conditions hold.",
+    "known_failure_modes": [],
+    "source_hypothesis_ids": [
+      "synthetic_hypothesis"
+    ],
+    "source_experience_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4"
+    ],
+    "confidence_level": "DEMO_ENGINEERING",
+    "status": "ACTIVE",
+    "created_at_step": 11,
+    "updated_at_step": 11,
+    "most_recent_verification_status": "ACCEPTED"
+  },
+  "principle_after_counterexample": {
+    "principle_id": "principle_d447e9c37abab2de",
+    "statement": "Stable response supports bounded compensation.",
+    "applicability_conditions": [
+      "STABLE_DIRECTIONAL_RESPONSE"
+    ],
+    "recommended_skill": "BOUNDED_PLANAR_COMPENSATION",
+    "support_count": 4,
+    "contradiction_count": 1,
+    "independent_seed_count": 3,
+    "estimated_success_rate": 0.8,
+    "scope_description": "Applies only when all registered applicability conditions hold.",
+    "known_failure_modes": [
+      "counterexample:synthetic_counterexample"
+    ],
+    "source_hypothesis_ids": [
+      "synthetic_hypothesis"
+    ],
+    "source_experience_ids": [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "synthetic_counterexample"
+    ],
+    "confidence_level": "DEMO_ENGINEERING",
+    "status": "RESTRICTED",
+    "created_at_step": 11,
+    "updated_at_step": 21,
+    "most_recent_verification_status": "REJECTED"
+  }
+}

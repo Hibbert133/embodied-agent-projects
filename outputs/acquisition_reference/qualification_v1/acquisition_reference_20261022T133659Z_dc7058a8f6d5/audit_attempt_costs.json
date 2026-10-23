@@ -1,0 +1,52 @@
+{
+  "original_failed_QUAL_audit": {
+    "status": "FAILED",
+    "failure": {
+      "type": "MemoryError",
+      "message": ""
+    },
+    "cohort": "QUAL",
+    "costs": {
+      "initial_C4_C8_refits_attempted": 0,
+      "initial_C4_C8_refits_returned": 0,
+      "optimizer_nfev": 0
+    },
+    "frozen_audit_script_sha256": "afb6d434041bce915cc4eff7c75a4600a52faac0db0fec3a031d42992879f8fa",
+    "wrapper_sha256": "017dc0ab73514415af58374e1c71321a8c873fb89a3e563411d41dc8acc4773b",
+    "trace_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "only_counting_original_calls_and_preserving_original_return_values": true,
+    "wall_ns": 34812614200,
+    "new_response_training": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "successful_streaming_QUAL_audit": {
+    "status": "PASSED",
+    "failure": null,
+    "cohort": "QUAL",
+    "costs": {
+      "initial_C4_C8_refits_attempted": 216,
+      "initial_C4_C8_refits_returned": 216,
+      "optimizer_nfev": 216
+    },
+    "script_sha256": "f56be6b9b242baa866dfef72e90523ab5360a73e440944b930f32189f0540a3c",
+    "repair_manifest_id": "c2332d42361adfa5cece1749241beee127c99f704296d89198b7b2b7aa872ec2",
+    "trace_sha256": "882303979c61c34c9997eb0d46893eb03725f668277daf2229d2faed769af501",
+    "guard_counters": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "wall_ns": 381843031900,
+    "new_response_training": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "repair_development_regression_wall_ns": 120809776100,
+  "repair_final_regression_wall_ns": 117138774700,
+  "repair_total_cached_fit_returns": 96,
+  "repair_total_extra_policy_queries": 35836,
+  "repair_actual_new_fits": 0,
+  "all_original_data_controls_models_and_gates_unchanged": true
+}

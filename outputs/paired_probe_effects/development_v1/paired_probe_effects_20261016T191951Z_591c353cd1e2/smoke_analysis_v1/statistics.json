@@ -1,0 +1,492 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "phase": "SMOKE",
+  "summary_sha256": "bc7a4f613880765b50d229938a8b1393a74cb538bd18fa98ef4672e8b04c8d33",
+  "statistics": {
+    "source_units": 9,
+    "dispositions": {
+      "COLD_SOURCE": 1,
+      "WARM_PREFIX_ENDED": 0,
+      "WARM_ELIGIBLE": 8
+    },
+    "contexts": 8,
+    "fresh_futures_per_context": 2,
+    "contrast_order": [
+      "total_keep",
+      "motion_budget",
+      "update_keep",
+      "total_strict",
+      "fallback"
+    ],
+    "methods": {
+      "REUSE_OLD": {
+        "cases": 16,
+        "successes": 14,
+        "stops": 0,
+        "mean_deadline_loss": 124.375,
+        "mean_logical_steps": 124.375,
+        "mean_physical_suffix_steps": 120.375,
+        "mean_probe_suffix_steps": 0.0,
+        "mean_policy_suffix_steps": 120.375
+      },
+      "PROBE_KEEP": {
+        "cases": 16,
+        "successes": 14,
+        "stops": 0,
+        "mean_deadline_loss": 130.5,
+        "mean_logical_steps": 130.5,
+        "mean_physical_suffix_steps": 126.5,
+        "mean_probe_suffix_steps": 4.0,
+        "mean_policy_suffix_steps": 122.5
+      },
+      "PROBE_UPDATE": {
+        "cases": 16,
+        "successes": 16,
+        "stops": 0,
+        "mean_deadline_loss": 76.0625,
+        "mean_logical_steps": 76.0625,
+        "mean_physical_suffix_steps": 72.0625,
+        "mean_probe_suffix_steps": 4.0,
+        "mean_policy_suffix_steps": 68.0625
+      },
+      "PROBE_UPDATE_KEEP": {
+        "cases": 16,
+        "successes": 16,
+        "stops": 0,
+        "mean_deadline_loss": 76.0625,
+        "mean_logical_steps": 76.0625,
+        "mean_physical_suffix_steps": 72.0625,
+        "mean_probe_suffix_steps": 4.0,
+        "mean_policy_suffix_steps": 68.0625
+      }
+    },
+    "nested": {
+      "contexts": 8,
+      "fresh_futures_per_context": 2,
+      "contrast_order": [
+        "total_keep",
+        "motion_budget",
+        "update_keep",
+        "total_strict",
+        "fallback"
+      ],
+      "mean_contrast": [
+        48.3125,
+        -6.125,
+        54.4375,
+        48.3125,
+        0.0
+      ],
+      "context_mean_contrasts": [
+        [
+          -13.5,
+          -25.0,
+          11.5,
+          -13.5,
+          0.0
+        ],
+        [
+          -4.0,
+          -4.5,
+          0.5,
+          -4.0,
+          0.0
+        ],
+        [
+          -9.0,
+          -4.5,
+          -4.5,
+          -9.0,
+          0.0
+        ],
+        [
+          0.5,
+          -6.5,
+          7.0,
+          0.5,
+          0.0
+        ],
+        [
+          429.0,
+          0.0,
+          429.0,
+          429.0,
+          0.0
+        ],
+        [
+          -7.5,
+          -3.5,
+          -4.0,
+          -7.5,
+          0.0
+        ],
+        [
+          -6.5,
+          -4.0,
+          -2.5,
+          -6.5,
+          0.0
+        ],
+        [
+          -2.5,
+          -1.0,
+          -1.5,
+          -2.5,
+          0.0
+        ]
+      ],
+      "within_future_covariance_mean": [
+        [
+          45.5625,
+          -6.75,
+          52.3125,
+          45.5625,
+          0.0
+        ],
+        [
+          -6.75,
+          38.75,
+          -45.5,
+          -6.75,
+          0.0
+        ],
+        [
+          52.3125,
+          -45.5,
+          97.8125,
+          52.3125,
+          0.0
+        ],
+        [
+          45.5625,
+          -6.75,
+          52.3125,
+          45.5625,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "observed_context_mean_covariance": [
+        [
+          23678.924107142855,
+          402.1160714285714,
+          23276.808035714286,
+          23678.924107142855,
+          0.0
+        ],
+        [
+          402.1160714285714,
+          62.410714285714285,
+          339.7053571428571,
+          402.1160714285714,
+          0.0
+        ],
+        [
+          23276.808035714286,
+          339.7053571428571,
+          22937.102678571428,
+          23276.808035714286,
+          0.0
+        ],
+        [
+          23678.924107142855,
+          402.1160714285714,
+          23276.808035714286,
+          23678.924107142855,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "mc_mean_noise_covariance": [
+        [
+          22.78125,
+          -3.375,
+          26.15625,
+          22.78125,
+          0.0
+        ],
+        [
+          -3.375,
+          19.375,
+          -22.75,
+          -3.375,
+          0.0
+        ],
+        [
+          26.15625,
+          -22.75,
+          48.90625,
+          26.15625,
+          0.0
+        ],
+        [
+          22.78125,
+          -3.375,
+          26.15625,
+          22.78125,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "noise_corrected_finite_source_covariance": [
+        [
+          23656.142857142855,
+          405.4910714285714,
+          23250.651785714286,
+          23656.142857142855,
+          0.0
+        ],
+        [
+          405.4910714285714,
+          43.035714285714285,
+          362.4553571428571,
+          405.4910714285714,
+          0.0
+        ],
+        [
+          23250.651785714286,
+          362.4553571428571,
+          22888.196428571428,
+          23250.651785714286,
+          0.0
+        ],
+        [
+          23656.142857142855,
+          405.4910714285714,
+          23250.651785714286,
+          23656.142857142855,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "per_context_mc_standard_error": [
+        [
+          10.5,
+          8.0,
+          18.5,
+          10.5,
+          0.0
+        ],
+        [
+          1.0,
+          0.5,
+          0.5,
+          1.0,
+          0.0
+        ],
+        [
+          4.0,
+          0.5,
+          3.5,
+          4.0,
+          0.0
+        ],
+        [
+          5.5,
+          9.5,
+          4.0,
+          5.5,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          4.5,
+          0.5,
+          4.0,
+          4.5,
+          0.0
+        ],
+        [
+          1.5,
+          0.0,
+          1.5,
+          1.5,
+          0.0
+        ],
+        [
+          1.5,
+          0.0,
+          1.5,
+          1.5,
+          0.0
+        ]
+      ],
+      "per_context_both_strict_signs_observed": [
+        [
+          false,
+          false,
+          true,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          true,
+          true,
+          false,
+          true,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ],
+        [
+          false,
+          false,
+          false,
+          false,
+          false
+        ]
+      ],
+      "scope": "Conditional on fixed realized source contexts, fresh evaluator futures independent of source behavior. Noise correction is a standard finite-source identity, not visible-evidence calibration, sign certification or an online method."
+    },
+    "groups": [
+      {
+        "field": "task",
+        "value": "door-open-v3",
+        "contexts": 3,
+        "mean_contrast": [
+          -6.5,
+          -11.833333333333334,
+          5.333333333333333,
+          -6.5,
+          0.0
+        ]
+      },
+      {
+        "field": "task",
+        "value": "push-v3",
+        "contexts": 3,
+        "mean_contrast": [
+          140.83333333333334,
+          -1.8333333333333333,
+          142.66666666666666,
+          140.83333333333334,
+          0.0
+        ]
+      },
+      {
+        "field": "task",
+        "value": "reach-v3",
+        "contexts": 2,
+        "mean_contrast": [
+          -8.25,
+          -4.0,
+          -4.25,
+          -8.25,
+          0.0
+        ]
+      },
+      {
+        "field": "family_oracle",
+        "value": "BIAS",
+        "contexts": 8,
+        "mean_contrast": [
+          48.3125,
+          -6.125,
+          54.4375,
+          48.3125,
+          0.0
+        ]
+      },
+      {
+        "field": "schedule_oracle",
+        "value": "SMOKE_ABRUPT",
+        "contexts": 8,
+        "mean_contrast": [
+          48.3125,
+          -6.125,
+          54.4375,
+          48.3125,
+          0.0
+        ]
+      }
+    ],
+    "saved_recommendations": {
+      "UNCERTAINTY4": {
+        "contexts": 8,
+        "actions": {
+          "RUN_CACHED": 7,
+          "REFRESH8": 1
+        },
+        "mean_current_state_deadline_loss": 70.75,
+        "scope": "Current-state recommendation evaluated on the fixed UNCERTAINTY4 source history; not its independent deployment policy."
+      },
+      "TASK_IVR4": {
+        "contexts": 8,
+        "actions": {
+          "REFRESH8": 7,
+          "RUN_CACHED": 1
+        },
+        "mean_current_state_deadline_loss": 75.5625,
+        "scope": "Current-state recommendation evaluated on the fixed UNCERTAINTY4 source history; not its independent deployment policy."
+      }
+    },
+    "stream_bootstrap": null,
+    "universal_complete_hidden_state_qualification": false,
+    "scope": "Evaluator mechanism measurement, warm-source-state population only. Four programs are not four independently deployed chronological policies; no new method or pure information-value claim."
+  }
+}

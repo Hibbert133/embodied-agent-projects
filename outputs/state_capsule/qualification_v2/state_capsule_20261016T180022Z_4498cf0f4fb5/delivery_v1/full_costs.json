@@ -1,0 +1,64 @@
+{
+  "experiment_run_id": "state_capsule_20261016T180022Z_4498cf0f4fb5",
+  "manifest_id": "8544306837220c1501dbf52ff27b3ea7bcd5406240b90844a21bd2cb2d5e5020",
+  "source_git_commit": "4498cf0f4fb5451e879a0e7aab43eed1a7f0abf0",
+  "scope": "Actual v2 scientific qualification plus separately preserved failed-v1 costs; no algorithm performance claim. Function timings are subsets of process timings, not additive.",
+  "v2": {
+    "controlled_steps": 4032,
+    "controlled_resets": 12,
+    "all_resets": 612,
+    "requested_frames": 326160,
+    "prefix_steps": 2976,
+    "all_branch_steps": 1056,
+    "captures": 12,
+    "restores": 36,
+    "policy_queries": 3744,
+    "capture_function_seconds": 1.8874288,
+    "restore_function_seconds": 9.5007203,
+    "stage_process_wall_seconds": {
+      "collector": 39.8119999999908,
+      "record_audit": 2.937000000005355,
+      "chinese_report": 1.3439999999973224
+    },
+    "python_payload_bytes": 292002,
+    "python_array_buffer_bytes": 136688
+  },
+  "failed_v1": {
+    "summary_path": "outputs/state_capsule/qualification_v1/state_capsule_20261016T174414Z_70e34299bef0/collection/summary.json",
+    "summary_sha256": "ac78ac7348eebab03af7a098f24d994392858a1f73d2997f3ae820d920004ed6",
+    "controlled_steps": 0,
+    "controlled_resets": 1,
+    "all_resets": 51,
+    "requested_frames": 25500,
+    "actual_attempted_seeds": [
+      18800
+    ]
+  },
+  "combined_actual": {
+    "controlled_steps": 4032,
+    "controlled_resets": 13,
+    "all_resets": 663,
+    "requested_frames": 351660
+  },
+  "audit_recomputation": {
+    "policy_queries": 3744,
+    "new_environment_steps": 0
+  },
+  "software_validation": {
+    "full_unit_tests": 994,
+    "test_seconds": 152.561,
+    "test_log_path": "outputs/state_capsule/preflight_v2/unittest.log",
+    "test_log_sha256": "2e5ea5f05653da5944646003b491dd6049fc94d53e32b150e81c4c2feb13ca40",
+    "extra_contact_fixture_path": "outputs/state_capsule/preflight_v2/contact_native_copy_software_v1.json",
+    "extra_contact_callback_steps": 51,
+    "extra_contact_native_frames": 255,
+    "all_software_native_frames": "NOT_FULLY_INVENTORIED_NOT_ZERO"
+  },
+  "api_calls": 0,
+  "new_nominal_fits": 0,
+  "selector_fits": 0,
+  "policy_updates": 0,
+  "registered_restore_contract_passed": true,
+  "universal_complete_hidden_state_qualification": false,
+  "publication_goal_complete": false
+}

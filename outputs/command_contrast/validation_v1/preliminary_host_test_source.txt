@@ -1,0 +1,140 @@
+"""Array-only session contract tests; no native simulator is imported or created by the host."""
+from collections import defaultdict
+from copy import deepcopy
+from dataclasses import asdict
+from time import perf_counter_ns
+from types import SimpleNamespace
+import unittest
+from unittest.mock import patch
+import numpy as np
+from src.analysis import command_contrast_io_v1 as allocation
+from src.analysis import command_contrast_host_v1 as host
+from src.analysis.capsule_record_json_v2 import normalize
+from src.probe.continuous import StepObservation
+from src.probe import observable_history_behavior_v1 as behavior
+from src.rollout.chronological_faults import deterministic_action
+from tests.test_command_contrast_v1 import models
+
+
+class ArrayJournal:
+    def __init__(self): self.rows=[]
+    def emit(self,event,payload):
+        row=normalize({'event':event,'sequence':len(self.rows),'saved_ns':perf_counter_ns(),**payload})
+        self.rows.append(row); return deepcopy(row)
+
+
+class ArraySession:
+    """Deliberately small numeric plant and counter ledger, not an Env implementation."""
+    def __init__(self,spec,journal,budget=None,success_at=None):
+        self.emit=journal.emit; self._local=0; self._map={}; self._pending=None
+        self.branch={'role':'ARRAY_SOFTWARE_ONLY','future':0,'program':spec['measurement_program']}
+        self.ledger=SimpleNamespace(counts=defaultdict(int)); self.run_budget=budget if budget is not None else {'completed':0,'maximum':10000}
+        self.env=SimpleNamespace(); self.env.unwrapped=SimpleNamespace(model=SimpleNamespace(_address=1),data=SimpleNamespace(_address=2,time=0.))
+        initial=np.zeros(39); initial[:3]=[0.,.65,.25]; initial[4:7]=[.15,.65,.02]; initial[-3:]=[.3,.75,.1]
+        self.ctx={'calls':0,'initial_observation':initial.copy(),'observation':initial.copy(),'noise_rows':allocation.noise(spec['seed']),
+                  'commands':[],'observations':[],'success':False}
+        self.fault=allocation.fault(spec); self.success_at=success_at
+        self.attempts=self.completed=self.policy_queries=self.captures=self.restores=0; self._snapshots={}; self.last_rows=[]
+    def public(self): return StepObservation(self.ctx['observation'],False,False,self.ctx['success'])
+    def alive(self): return not self.ctx['success']
+    def policy_query(self,observation):
+        self.policy_queries+=1; return np.array([.2,-.1,0.,-1.],np.float32)
+    def witness(self):
+        state=allocation.io.digest([self.ctx['observation'].tolist(),self.ctx['calls']])
+        return {'native_sha256':state,'python_semantic_sha256':state,'noise_past_sha256':allocation.io.digest(self.ctx['noise_rows'][:self.ctx['calls']].tolist()),
+                'simulation_time':self.env.unwrapped.data.time}
+    def _agent_emit(self,event,payload):
+        local=normalize({'sequence':self._local,'saved_ns':perf_counter_ns(),**payload}); self._local+=1
+        outer=self.emit('AGENT_EVENT',{'agent_event':event,'public_payload':local}); self._map[local['sequence']]=outer['sequence']
+        if event=='COMMAND': self._pending=deepcopy(local)
+        return local
+    def _agent_step(self,saved):
+        if saved!=self._pending or saved['at_calls']!=self.ctx['calls'] or saved['decision_sequence'] not in self._map:
+            raise ValueError('array session rejected unsaved/stale command')
+        n=self.ctx['calls']; sent=np.asarray(saved['command'],np.float32); action=deterministic_action(sent,self.fault)
+        action[:3]+=self.ctx['noise_rows'][n]; action=np.clip(action,-1,1)
+        intent=self.emit('STEP_INTENT',{'logical_step':n,'command':sent.tolist(),'phase':saved['phase']})
+        self.attempts+=1; clock=self.env.unwrapped.data.time
+        self.ctx['observation']=self.ctx['observation'].copy(); self.ctx['observation'][:3]+=.002*action[:3]
+        self.ctx['observation'][3]=float(action[3]); self.ctx['calls']+=1; self.completed+=1; self.run_budget['completed']+=1
+        self.ledger.counts['simulation_frames_completed']+=5; self.env.unwrapped.data.time+=.0125
+        self.ctx['success']=self.success_at is not None and self.ctx['calls']>=self.success_at
+        if self.ctx['calls']<=8: self.ctx['commands'].append(sent.copy()); self.ctx['observations'].append(self.ctx['observation'].copy())
+        row=normalize({'logical_step':n,'phase':saved['phase'],'command':sent,'executed_action_oracle':action,'raw_policy':saved['raw_policy'],
+            'after':asdict(self.public()),'simulation_time_before':clock,'simulation_time_after':self.env.unwrapped.data.time,
+            'noise_cursor_after':self.ctx['calls'],'intent_sequence':intent['sequence'],'execution_started_ns':perf_counter_ns()})
+        self.last_rows.append(row); self.emit('STEP_COMPLETE',row); self._pending=None; return self.public()
+
+
+def selected(group=0,action='BASELINE',program='FEEDBACK8'):
+    return next(s for s in allocation.population() if s['group']==group and s['task']=='push-v3' and s['context']=='NOMINAL'
+                and s['measurement_program']==program and s['action_id']==action)
+
+
+def live(spec,journal,reference=None,success_at=None,budget=None):
+    session=ArraySession(spec,journal,budget,success_at)
+    def witness(label):
+        w=session.witness(); journal.emit('ARRAY_WITNESS',{'label':label,'at_calls':session.ctx['calls']})
+        return (w['native_sha256'],w['python_semantic_sha256'],w['noise_past_sha256'],w['simulation_time'])
+    fit={'valid':True,'matrix_xy':[[1.,0.],[0.,1.]],'bias_xy':[0.,0.],'nfev':0}
+    with patch.object(behavior,'validate_model'),patch.object(behavior,'infer_four',return_value=fit),patch.object(behavior,'infer_operator',return_value=fit):
+        result,ref=host.run_live_prefix(spec,{'task':'push-v3'},models(),session,witness,lambda:None,reference)
+    return result,ref,session
+
+
+class LivePrefixTests(unittest.TestCase):
+    def test_saved_plans_drive_two_distinct_actual_array_commands(self):
+        journal=ArrayJournal(); base,reference,_=live(selected(),journal)
+        plus,_,sp=live(selected(action='X_PLUS'),journal,reference)
+        minus,_,sm=live(selected(action='X_MINUS'),journal,reference)
+        self.assertEqual(sp.last_rows[-1]['command'],dict(reference.plan.query.candidates)['X_PLUS'])
+        self.assertEqual(sm.last_rows[-1]['command'],dict(reference.plan.query.candidates)['X_MINUS'])
+        self.assertNotEqual(sp.public().observation[0],sm.public().observation[0]); self.assertEqual(base['total_steps'],3)
+        self.assertEqual(plus['plan_sha256'],minus['plan_sha256'])
+
+    def test_only_one_plan_is_saved_before_all_query_outcomes(self):
+        journal=ArrayJournal(); _,reference,_=live(selected(),journal)
+        live(selected(action='Y_PLUS'),journal,reference)
+        plans=[r for r in journal.rows if r['event']=='UNIT_PLAN_COMMITTED']
+        queries=[r for r in journal.rows if r['event']=='STEP_COMPLETE' and r['phase']=='CONTRAST_QUERY']
+        self.assertEqual(len(plans),1); self.assertEqual(len(queries),2)
+        self.assertTrue(all(plans[0]['saved_ns']<r['execution_started_ns'] for r in queries))
+
+    def test_all_three_stages_stop_after_one_query_and_keep_real_history(self):
+        for group,phase in ((0,'FIXED_PROBE'),(3,'MEASURE_FEEDBACK'),(6,'TASK_AFTER_MEASUREMENT')):
+            result,ref,s=live(selected(group),ArrayJournal())
+            self.assertTrue(result['query_available']); self.assertEqual(result['source_phase'],phase)
+            self.assertEqual(s.ctx['calls'],ref.plan.query.decision_step+1)
+            state=[s.ctx['initial_observation'].tolist(),*[r['after']['observation'] for r in s.last_rows]]
+            np.testing.assert_array_equal(ref.plan.query.observations,state[-4:-1])
+            self.assertLessEqual(result['total_steps'],selected(group)['maximum_steps'])
+            self.assertEqual(result['c4_c8_fit_attempts'],0 if group==0 else 2)
+
+    def test_balanced_query_needs_no_extra_policy_call(self):
+        result,ref,s=live(selected(3,program='BALANCED8'),ArrayJournal())
+        self.assertEqual(result['source_phase'],'MEASURE_BALANCED')
+        before=s.policy_queries
+        _,_,other=live(selected(3,'X_PLUS','BALANCED8'),ArrayJournal(),ref)
+        self.assertEqual(other.policy_queries,before)
+        self.assertIsNone(other.last_rows[-1]['raw_policy'])
+
+    def test_early_success_remains_unavailable_for_all_real_branches(self):
+        journal=ArrayJournal(); result,ref,s=live(selected(),journal,success_at=1)
+        self.assertFalse(result['query_available']); self.assertEqual(result['missing_reason'],'EARLY_SUCCESS'); self.assertEqual(s.completed,1)
+        result,_,s=live(selected(action='X_PLUS'),journal,ref,success_at=1)
+        self.assertFalse(result['query_available']); self.assertEqual(s.completed,1)
+
+    def test_no_query_cannot_be_replaced_by_a_late_baseline_plan(self):
+        journal=ArrayJournal(); _,ref,_=live(selected(),journal,success_at=1)
+        with self.assertRaisesRegex(ValueError,'no late plan'): live(selected(action='X_PLUS'),journal,ref)
+
+    def test_current_prefix_mismatch_rejected_before_selected_step(self):
+        journal=ArrayJournal(); _,ref,_=live(selected(),journal)
+        changed=deepcopy(ref); object.__setattr__(changed,'prefix_digest','changed')
+        with self.assertRaisesRegex(ValueError,'common physical prefix'): live(selected(action='X_PLUS'),journal,changed)
+
+    def test_whole_study_budget_failure_executes_no_unbudgeted_query(self):
+        with self.assertRaises(ValueError): live(selected(),ArrayJournal(),budget={'completed':0,'maximum':2})
+
+
+if __name__=='__main__': unittest.main()

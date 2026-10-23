@@ -1,0 +1,59 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "created_utc": "2026-10-18T06:29:03.759484+00:00",
+  "status": "DRAFT_PLANNING_CHECKED_NOT_EXECUTABLE_NOT_FROZEN",
+  "draft_sha256": {
+    "configs/short_probe_reference/planning_v1.json": "819876db79a0ede705295bf9ddede91b919518551a48292e50a614e6355eb0d1",
+    "docs/research/short_probe_task_comparison_draft_20261018_zh.md": "37e90d0a7121b7230bc54c89bf5c53c77c52e3d8e16b9d385dc7291c400ef46b"
+  },
+  "new_environment_steps": 0,
+  "new_reset_calls": 0,
+  "new_api_calls": 0,
+  "new_model_or_selector_fits": 0,
+  "new_task_seeds_executed": [],
+  "nominal_task_programs_selected": 0,
+  "normal_proxy_required_streams": {
+    "twenty_step_target": 52,
+    "four_step_target": 1287
+  },
+  "calculated_resource_maxima": {
+    "smoke": {
+      "units": 9,
+      "method_executions": 63,
+      "max_control_steps": 31500,
+      "reset_and_control_frame_budget_calculation": 1764000
+    },
+    "main": {
+      "units": 648,
+      "method_executions": 4536,
+      "max_control_steps": 2268000,
+      "reset_and_control_frame_budget_calculation": 127008000
+    }
+  },
+  "linked_existing_paths_checked": [
+    "short_probe_design_reference_20261018_zh.md",
+    "../../configs/short_probe_reference/planning_v1.json",
+    "../protocols/strong_chronological_reference_development_v1.md",
+    "../../configs/cold_start_task_bridge/planning_v1.json",
+    "../../src/probe/short_probe_execution_reference_v1.py",
+    "../../src/analysis/short_probe_reference_host_v1.py",
+    "../../src/analysis/short_probe_public_audit_v1.py",
+    "publication_path_v1.md"
+  ],
+  "historical_power_source_path": "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/summary.json",
+  "historical_power_source_sha256": "d786f4e16f5d1baf99435abcebca1fe483c2e567b33e9ce373e3e899454f479e",
+  "nominal_model_source_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+  "frozen_inputs_checked": 778,
+  "changed_frozen_inputs": [],
+  "supplemental_utf8_utf16_secret_findings": [],
+  "current_main_outcomes_used": false,
+  "scope": "Prospective standard-baseline planning only. Proposed seeds are not executable allocations. Existing test evidence covers software components only; a new host, scientific protocol, frozen executable config, checks and manifests remain required after current study delivery.",
+  "previous_review_sha256": "ea28fd73345767ce6d3b85c22fac2de638ce5bccac876e01823463bfe347acf5",
+  "previous_note_snapshot": "short_probe_task_planning_v3_snapshot.md",
+  "revision": "Public transcript audit component now reconstructs saved program, actual visible prefix, fits, controller consumption and deadline accounting. Numerical helper reuse is explicit. It does not establish real physics/journal authenticity, official policy calls, full population or statistics. All population/seed/budget plans unchanged.",
+  "public_component_review_sha256": "8f0bf41d6c2ffd47ec015723839da7a8c2b6ce624b3b14bc2d2baa0a9d5ad945",
+  "host_native_component_review_sha256": "257eaeb99969bc5e3564f4aab1c78d3ccdac5d5417b63c2473510ac0fd21783b",
+  "public_audit_component_review_sha256": "a4724b6eea1df1cb9dc58e3778e4f428ae6597d861b7c03be3232e7ce6f8b6cf"
+}

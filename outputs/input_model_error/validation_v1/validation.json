@@ -1,0 +1,64 @@
+{
+  "experiment_run_id": "forward_operator_20261014T081128Z_37eee13f9943",
+  "manifest_id": "ecb45ac298f8ad6608fef95413a8e1d191791827e694207ba0527701d4b9ecc4",
+  "source_git_commit": "37eee13f9943e26e2d15a81b9d3e6dd86e73f015",
+  "analysis_protocol_id": "input_model_error_audit_v1",
+  "analysis_source_git_commit": "b196090565926a8d24bcc0870e4440caa4c245b0",
+  "analysis_source_sha256": "869d9bb93f4d555a32106c75b20b78b27dfd8c6761b6833943fc479edb12a5b7",
+  "validated_at_utc": "2026-10-14T09:36:09.413744+00:00",
+  "unit_tests": {
+    "unittest_freeze.log": {
+      "tests": 693,
+      "seconds": 113.243,
+      "status": "PASSED"
+    },
+    "unittest_results.log": {
+      "tests": 693,
+      "seconds": 109.341,
+      "status": "PASSED"
+    }
+  },
+  "checks": {
+    "compileall": "PASSED",
+    "pip_check": "PASSED",
+    "secret_scan": "PASSED",
+    "diff_check": "PASSED",
+    "visual_figure_review": "PASSED"
+  },
+  "independent_verification": {
+    "diagnostic_sha256": "dcbfe22073dd284e67e19e7a3d9bf7b96f3c016cac55ec1e8ae41581ac738e14",
+    "verifier_sha256": "c52a055110c38b11b46e2d43a179c00997ffd04c1ea5f6b693681767d286994b",
+    "verification_parent_git_commit": "b196090565926a8d24bcc0870e4440caa4c245b0",
+    "integrity": "PASSED",
+    "episodes": 1152,
+    "exact_injected_inputs": 235479,
+    "independent_sampled_predictions": 27648,
+    "saved_phase_count_and_squared_identities": 4608,
+    "new_environment_steps": 0,
+    "new_api_calls": 0,
+    "model_refits": 0,
+    "scope": "All reconstructed injections checked against original executor class; six evenly spaced past-history queries per episode use original feature/design functions; saved phase counts and squared-error identities checked. Not full independent aggregate reconstruction or dynamics simulation."
+  },
+  "analysis_source_git_bytes": "PASSED",
+  "new_environment_steps": 0,
+  "new_environment_resets": 0,
+  "new_api_calls": 0,
+  "model_refits": 0,
+  "algorithm_novelty_established": false,
+  "physical_response_qualified": false,
+  "publication_goal_complete": false,
+  "report_sha256": "73d5f97e7da5ccdf0702ce0a963e3c49499ecc5447e2935ee5599a7eb2b7bdcb",
+  "result_artifact_sha256": {
+    "development_v1/input_model_error_20261014T091921Z_b19609056592/diagnostics.json": "dcbfe22073dd284e67e19e7a3d9bf7b96f3c016cac55ec1e8ae41581ac738e14",
+    "development_v1/input_model_error_20261014T091921Z_b19609056592/report.md": "d110ae3e79760fd425b4f3b751274dc73c33a6f1811173f1f41567e1cf161002",
+    "figure_v1/figure.json": "ef0996a2f3c89cbaba7f9ae822b72d5d0bd19c6839648fcf9edac871ec3b47b5",
+    "figure_v1/figure.png": "3eab8e273d97e15d29182e188207c1778b1c1273eb74b61ec812931cd4186008",
+    "figure_v1/figure.svg": "d29385f3782a0f66a105f2b8584cd5954fc637422893d72a4a8cf23442fca57c",
+    "validation_v1/analysis_stdout.log.gz": "516ef292fa7883fb185f421b1b2d11cf4168294d8fcb90e6592257e26152a09b",
+    "validation_v1/unittest_freeze.log": "8ec421ca03790c99815c050d960f8f9f85d0f13913da4272f912f8f8897061b6",
+    "validation_v1/unittest_results.log": "d9a79ee7d9331d085b3152947b058f1ab84f36c9be36fed85d31f9d4e1771c77",
+    "verification_v1/verification.json": "7724011938a80fb755d230bb2b4640af5b8365b46f22f9ba92c04daffa10507f"
+  },
+  "scope": "Postanalysis validation; raw identities apply to all referenced files through this content-hashed result index. Input replay is full; independent prediction verification is sampled and does not certify physical confidence.",
+  "analysis_stdout_uncompressed_sha256": "80414f03923c8f62e53437f1504a53565a87e7109ae2b2599456015fd9e73853"
+}

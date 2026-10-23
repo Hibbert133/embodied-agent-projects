@@ -1,0 +1,59 @@
+{
+  "protocol_id": "delayed_switch_effects_development_v1",
+  "purpose": "ACTUAL_FIXED_BOUNDARY_EFFECTS_NOT_LEARNED_POLICY",
+  "methods": [
+    "CONTINUE_CURRENT",
+    "SWITCH_SAVED",
+    "RUN_UNCORRECTED"
+  ],
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "families": [
+    "BIAS",
+    "COLUMN_Y",
+    "DEADZONE"
+  ],
+  "replicates_per_family": 12,
+  "endpoints_per_generator": 2,
+  "generator_seed_start": 71001,
+  "task_seed_start": 21800,
+  "task_seed_end": 22015,
+  "reserved_task_seeds": [
+    22016,
+    22399
+  ],
+  "independent_generator_groups": 36,
+  "units": 216,
+  "executions": 648,
+  "boundary_step": 16,
+  "logical_total_steps": 500,
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "maximum_environment_steps": 324000,
+  "maximum_controlled_resets": 648,
+  "maximum_simulation_frames": 18144000,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261023,
+  "source_manifest": "outputs/delayed_intervention/qualification_v2/delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55/manifest.json",
+  "source_manifest_id": "ae549ee2e9cfdcac76a8f565db1f04321c22f6ebaac93d18694eec783aee6b6a",
+  "source_audit": "outputs/delayed_intervention/qualification_v2/delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55/audit/record_audit.json",
+  "source_audit_sha256": "b5d30f1e8976cef0d88d5429948990128cc52fd7a684ffacd81606749603a78f",
+  "historical_nominal_cost": {
+    "environment_steps": 3840,
+    "controlled_resets": 480,
+    "all_reset_calls": 24480,
+    "simulation_frames": 12259200
+  },
+  "historical_design_preparation": {
+    "enumerations": 3,
+    "candidate_rows": 432
+  },
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "policy_updates": 0,
+  "output_root": "outputs/delayed_switch_effects/development_v1"
+}

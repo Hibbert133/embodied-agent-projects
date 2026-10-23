@@ -1,0 +1,222 @@
+{
+  "scope": "POSTHOC_DESCRIPTIVE_ONLY; supplementary arithmetic, not a new gate or model",
+  "source_completion_sha256": "739f9d5e99bcfbabb01324121993d24cb457589c1f09806152fd6c12b4aa8837",
+  "original_qualification": "NOT_QUALIFIED",
+  "population": "SOURCE_MATCHED_TRAIN_POST_TASK_ALL_SIX_CELLS",
+  "rows": [
+    {
+      "task": "push-v3",
+      "source": "FEEDBACK8",
+      "target_scale_m": [
+        0.002457175733600222,
+        0.0022442278155007994
+      ],
+      "gru_x_to_y_squared_error_weight": 0.8341832136425428,
+      "metrics": {
+        "HISTORY_LINEAR10": {
+          "available_trajectories": 31,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.00022371542861892508,
+          "mean_trajectory_mse_m2": 5.7907522158381805e-08,
+          "standardized_mse": 0.010388514398015818
+        },
+        "STATE_LINEAR20": {
+          "available_trajectories": 31,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0002225843069212931,
+          "mean_trajectory_mse_m2": 5.6762716028609946e-08,
+          "standardized_mse": 0.0101901965240364
+        },
+        "GRU_WINDOW16": {
+          "available_trajectories": 31,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.00022749827099065228,
+          "mean_trajectory_mse_m2": 5.571827742128218e-08,
+          "standardized_mse": 0.010014394653645328
+        }
+      }
+    },
+    {
+      "task": "push-v3",
+      "source": "BALANCED8",
+      "target_scale_m": [
+        0.0022592659602012188,
+        0.0020258623948726765
+      ],
+      "gru_x_to_y_squared_error_weight": 0.8040539094563764,
+      "metrics": {
+        "HISTORY_LINEAR10": {
+          "available_trajectories": 31,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.00017389081441698416,
+          "mean_trajectory_mse_m2": 3.776306174374705e-08,
+          "standardized_mse": 0.008123213422840744
+        },
+        "STATE_LINEAR20": {
+          "available_trajectories": 31,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0001715621886128822,
+          "mean_trajectory_mse_m2": 3.6768376715994683e-08,
+          "standardized_mse": 0.007908777535063024
+        },
+        "GRU_WINDOW16": {
+          "available_trajectories": 31,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.00020314934451800458,
+          "mean_trajectory_mse_m2": 4.556806843808831e-08,
+          "standardized_mse": 0.009816750978268049
+        }
+      }
+    },
+    {
+      "task": "reach-v3",
+      "source": "FEEDBACK8",
+      "target_scale_m": [
+        0.0013147603858192393,
+        0.002950734963261177
+      ],
+      "gru_x_to_y_squared_error_weight": 5.036944725362894,
+      "metrics": {
+        "HISTORY_LINEAR10": {
+          "available_trajectories": 28,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.00010483785707448114,
+          "mean_trajectory_mse_m2": 1.72734759535789e-08,
+          "standardized_mse": 0.007706967893209325
+        },
+        "STATE_LINEAR20": {
+          "available_trajectories": 28,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 9.990641704371246e-05,
+          "mean_trajectory_mse_m2": 1.5867375908625947e-08,
+          "standardized_mse": 0.007109290706374783
+        },
+        "GRU_WINDOW16": {
+          "available_trajectories": 28,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0001655528292447885,
+          "mean_trajectory_mse_m2": 3.472037145663267e-08,
+          "standardized_mse": 0.0100731751053131
+        }
+      }
+    },
+    {
+      "task": "reach-v3",
+      "source": "BALANCED8",
+      "target_scale_m": [
+        0.001282938768993538,
+        0.0030017030121849684
+      ],
+      "gru_x_to_y_squared_error_weight": 5.47423684755543,
+      "metrics": {
+        "HISTORY_LINEAR10": {
+          "available_trajectories": 29,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0001093110691831418,
+          "mean_trajectory_mse_m2": 1.4760358744020395e-08,
+          "standardized_mse": 0.006525377858898207
+        },
+        "STATE_LINEAR20": {
+          "available_trajectories": 29,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0001043070111557697,
+          "mean_trajectory_mse_m2": 1.3537469376529329e-08,
+          "standardized_mse": 0.006071768468705086
+        },
+        "GRU_WINDOW16": {
+          "available_trajectories": 29,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.00015491325467581027,
+          "mean_trajectory_mse_m2": 2.7667944460048414e-08,
+          "standardized_mse": 0.0077236081177405455
+        }
+      }
+    },
+    {
+      "task": "door-open-v3",
+      "source": "FEEDBACK8",
+      "target_scale_m": [
+        0.005210833860287614,
+        0.0038921498764613793
+      ],
+      "gru_x_to_y_squared_error_weight": 0.5579106577594157,
+      "metrics": {
+        "HISTORY_LINEAR10": {
+          "available_trajectories": 36,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0007238125894776955,
+          "mean_trajectory_mse_m2": 6.901191220956746e-07,
+          "standardized_mse": 0.038022917061913256
+        },
+        "STATE_LINEAR20": {
+          "available_trajectories": 36,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0007128047099667152,
+          "mean_trajectory_mse_m2": 6.773202650589602e-07,
+          "standardized_mse": 0.037374372191635946
+        },
+        "GRU_WINDOW16": {
+          "available_trajectories": 36,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0007278749090468794,
+          "mean_trajectory_mse_m2": 5.946181570057457e-07,
+          "standardized_mse": 0.029728237493218703
+        }
+      }
+    },
+    {
+      "task": "door-open-v3",
+      "source": "BALANCED8",
+      "target_scale_m": [
+        0.00492528785607178,
+        0.003628848238981327
+      ],
+      "gru_x_to_y_squared_error_weight": 0.5428431684882109,
+      "metrics": {
+        "HISTORY_LINEAR10": {
+          "available_trajectories": 36,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0006104278638149334,
+          "mean_trajectory_mse_m2": 5.464032953123238e-07,
+          "standardized_mse": 0.03531008643961782
+        },
+        "STATE_LINEAR20": {
+          "available_trajectories": 36,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.0006065177184336347,
+          "mean_trajectory_mse_m2": 5.414733151761801e-07,
+          "standardized_mse": 0.035000503772558034
+        },
+        "GRU_WINDOW16": {
+          "available_trajectories": 36,
+          "allocated_trajectories": 36,
+          "mean_trajectory_rmse_m": 0.000660521286799124,
+          "mean_trajectory_mse_m2": 4.836312040228261e-07,
+          "standardized_mse": 0.028816774619843222
+        }
+      }
+    }
+  ],
+  "contrasts": {
+    "mean_trajectory_rmse_m": {
+      "gru16_below_both_linears": 0,
+      "gru16_above_both_linears": 6,
+      "allocated_cells": 6
+    },
+    "mean_trajectory_mse_m2": {
+      "gru16_below_both_linears": 3,
+      "gru16_above_both_linears": 3,
+      "allocated_cells": 6
+    },
+    "standardized_mse": {
+      "gru16_below_both_linears": 3,
+      "gru16_above_both_linears": 3,
+      "allocated_cells": 6
+    }
+  },
+  "interpretation": "Mean trajectory RMSE, mean trajectory MSE, and axis-standardized MSE are different objectives. Their rankings alone do not identify an axis-weight or optimization cause.",
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "source_sha256": "5b4673aa4d8b07bc5d73961c995174e6abbaab5166e4d5a2565a7ddc0426815f"
+}

@@ -1,0 +1,64 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "created_utc": "2026-10-18T04:08:17.309741+00:00",
+  "tests_run": 9,
+  "integrity": "SOFTWARE_TESTS_PASSED",
+  "prototype_status": "DRAFT_NOT_COMMITTED_NOT_IN_RUNNING_MANIFEST",
+  "current_main_integration": false,
+  "code_sha256": {
+    "src/probe/short_joint_reference_v1.py": "a331922b7673ce9c617264805fb033c88fa70a977e3531c591edb5a2cf759bf3",
+    "tests/test_short_joint_reference_v1.py": "7f3a315920a3a49d87f52b5127d30afe0d7fcaa2c8877a46d2f8d1ac6cdf880b"
+  },
+  "test_log_sha256": "f65eb483514a759ab0efdd830017264416cd9f7afe4a92dd8ac17a75a391f77c",
+  "real_synthetic_optimizer_calls": {
+    "short": [
+      {
+        "nfev": 7,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      }
+    ],
+    "old_eight": [
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      }
+    ]
+  },
+  "real_synthetic_optimizer_nfev": {
+    "short": 12,
+    "old_eight": 1
+  },
+  "previous_review_sha256": "f3789ade0ff7ce9170fc612856cec49b947113d54454ecbed04b5d4235fbf788",
+  "revision": "Separate observed prefix length from rows actually used; rejected eight-step input reports zero fitted response rows.",
+  "frozen_inputs_checked": 778,
+  "changed_frozen_inputs": [],
+  "new_environment_steps": 0,
+  "new_reset_calls": 0,
+  "new_api_calls": 0,
+  "new_nominal_calibration_fits": 0,
+  "new_selector_fits": 0,
+  "new_task_seed_execution": 0,
+  "scope": "Artificial deterministic response matrices only. Context source_git_commit identifies the running study; this separate uncommitted draft is identified by explicit file hashes. No physical identification or task utility qualification."
+}

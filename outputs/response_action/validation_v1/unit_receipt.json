@@ -1,0 +1,34 @@
+{
+  "integrity": "PASSED",
+  "tests": 35,
+  "output": "test_all_commands_float32_before_prediction_and_keep_z_grip (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_budget_staleness_reuse_and_ended_rejected (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_clipped_duplicate_labels_are_preserved (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_current_query_rejects_unknown_nested_private_future_fields (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_f20_input_is_actual_sent_command_not_inverse_or_forward_fault_map (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_immutable_snapshot_not_alias (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_independent_raw_coefficient_audit_and_command_override (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_known_scores_have_metre_squared_units (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_model_predictions_change_actual_saved_choice (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_real_history_and_no_future_timestamps (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_regularization_changes_selection_without_changing_policy (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_same_candidate_interface_and_exact_tie_keep_baseline (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_saved_payload_is_recomputed_and_rejects_tampering (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_wrong_model_kind_task_scale_and_descriptor_rejected (tests.test_response_action_rank_v1.RankKernelTests) ... ok\ntest_changed_acknowledgement_rejected_before_task_execution (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_different_legal_model_choices_change_executed_task_commands (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_early_success_does_not_force_fit_or_rank (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_invalid_fit_kept_at_loss500_without_substitution (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_old_direct_program_has_no_response_predictor_or_rank (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_old_pi_parameters_are_locked_and_rank_weight_not_time_constant (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_saved_plan_drives_each_actual_command_and_once_policy (tests.test_response_action_program_v1.RankProgramTests) ... ok\ntest_all_twelve_programs_use_registered_continuous_contract (tests.test_response_action_pipeline_v1.CompleteArrayJournalTests) ... ok\ntest_early_success_and_no_rank_history_are_not_fabricated (tests.test_response_action_pipeline_v1.CompleteArrayJournalTests) ... ok\ntest_future_plan_and_noise_cursor_corruption_rejected (tests.test_response_action_pipeline_v1.CompleteArrayJournalTests) ... ok\ntest_rank_host_and_full_independent_journal_audit_no_environment (tests.test_response_action_pipeline_v1.CompleteArrayJournalTests) ... ok\ntest_distinct_phase_seeds_reserved_ranges_and_noise_domains (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_four_primary_contrasts_and_whole_group_unit (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_full_cohorts_and_all_old_strong_references (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_illegal_spec_extra_or_reserved_seed_rejected (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_independent_matrix_statistics_match_all_fields (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_independent_statistics_detects_wrong_loss_or_omitted_group (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_no_missing_failures_or_success_loss_substitution (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_one_global_weight_ties_largest_no_task_selection (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_original_sources_and_models_load_without_refit (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\ntest_strong_raw_pi_and_kinematic_each_can_block_development (tests.test_response_action_pipeline_v1.RankAllocationTests) ... ok\n\n----------------------------------------------------------------------\nRan 35 tests in 4.562s\n\nOK\n",
+  "blocked_calls": {
+    "environment_creations": 0,
+    "resets": 0,
+    "simulation": 0,
+    "fits": 0
+  },
+  "network": {
+    "attempted_network_calls": 0
+  },
+  "python_source_sha256": {
+    "src/probe/response_action_rank_v1.py": "effd1e66031102f77af953f9393526be58a96ca79e2f40c5cf4ffe2b35b7d7f9",
+    "src/probe/response_action_program_v1.py": "422c94f0358d23f2c4b0b0316f736a96a07c069530af13c8804afb71a13549d4",
+    "src/analysis/response_action_io_v1.py": "ae4c3b2a0c65cdfe4c93946a8facd1930f6f5fb9a63ad38ae82b223ca2e6084b",
+    "src/analysis/response_action_host_v1.py": "3f5791969b5f92180adcb2e4cb73e1a84ce14b747d2c606d5ff3c1e76ab2fdad",
+    "src/analysis/response_action_collect_v1.py": "8b4c79e631a1a50a9f22114becb5e0be39deed60c7fdae0bf47a0f5910b94fc4",
+    "src/analysis/response_action_audit_v1.py": "006f3f44ad1c54e43fc918acde9ffdf0f32a47c315f7bc4a17765c0dcbdcdae6",
+    "src/analysis/response_action_rank_audit_v1.py": "159e2bbba5feaccf8e68d718a934c08844e64ea76826a08d1b3e605a60f33ece",
+    "src/analysis/response_action_statistics_v1.py": "6801bf26354e6093c73a8719b8041d2cf6c04bcab450c347250a2a964488b276",
+    "src/analysis/response_action_statistics_audit_v1.py": "9e62f66cbf64b3f372c7ea9dff497e64829029a6eabf6daa9620524823065b70",
+    "scripts/run_response_action_v1.py": "e8590351ba0f6b2e1c35876e2250435f6d449d076cb142dc5aa57ec253a0bea2",
+    "scripts/audit_response_action_v1.py": "b1e4272293c6cd0a59e3baf1a03d5c8b787d89470e38fde87a0da01c95dff7ad",
+    "scripts/audit_response_action_statistics_v1.py": "c35d9863ce78e33f893cb7e45e4e60a49df2acbea598ee440d097a2420b7d52a",
+    "tests/test_response_action_rank_v1.py": "09e308a1da16b050ef3270b7062701f5e6370a96b022e39a5fa17557284c5782",
+    "tests/test_response_action_program_v1.py": "1e57760f429d22de3f7011f47ff230f88f60cacc63b623932ddc90594b2c09cd",
+    "tests/test_response_action_pipeline_v1.py": "26e142a46c095af1481997e8bf08b4697b20d4e030e359921ad62469348cdd74",
+    "tests/response_action_array_fixtures_v1.py": "b1596a3afcbf050f5b9ac64aeb598fb5cc88c1f72ce69fef876aa5199a41f015",
+    "outputs\\response_action\\validation_v1\\validate_freeze.py": "9381528e9b544b7612feb20acf6799779ee5654f20567bd8199890db15ff25fe"
+  },
+  "wall_ns": 4573723800
+}

@@ -1,0 +1,204 @@
+{
+  "protocol_id": "stale_reprobe_execution_qualification_v1",
+  "purpose": "MATCHED_REACQUISITION_AFTER_STALE_CORRECTION_NOT_MODEL_OR_TASK_UTILITY",
+  "cases": [
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 22600,
+      "variant": "UNCHANGED",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 22600,
+      "variant": "CHANGED",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 22601,
+      "variant": "UNCHANGED",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 22601,
+      "variant": "CHANGED",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 22602,
+      "variant": "UNCHANGED",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 22602,
+      "variant": "CHANGED",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 3,
+      "task": "push-v3",
+      "seed": 22603,
+      "variant": "UNCHANGED",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 3,
+      "task": "push-v3",
+      "seed": 22603,
+      "variant": "CHANGED",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 4,
+      "task": "reach-v3",
+      "seed": 22604,
+      "variant": "UNCHANGED",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 4,
+      "task": "reach-v3",
+      "seed": 22604,
+      "variant": "CHANGED",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 5,
+      "task": "door-open-v3",
+      "seed": 22605,
+      "variant": "UNCHANGED",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 5,
+      "task": "door-open-v3",
+      "seed": 22605,
+      "variant": "CHANGED",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 6,
+      "task": "push-v3",
+      "seed": 22606,
+      "variant": "UNCHANGED",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 6,
+      "task": "push-v3",
+      "seed": 22606,
+      "variant": "CHANGED",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 7,
+      "task": "reach-v3",
+      "seed": 22607,
+      "variant": "UNCHANGED",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 7,
+      "task": "reach-v3",
+      "seed": 22607,
+      "variant": "CHANGED",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 8,
+      "task": "door-open-v3",
+      "seed": 22608,
+      "variant": "UNCHANGED",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 8,
+      "task": "door-open-v3",
+      "seed": 22608,
+      "variant": "CHANGED",
+      "planned_boundary": 64
+    }
+  ],
+  "reserved_seeds": [
+    22609,
+    22799
+  ],
+  "executions": 18,
+  "paired_units": 9,
+  "logical_total_steps": 500,
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "fault_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "changed_fault_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      -0.12,
+      0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "maximum_environment_steps": 9000,
+  "scheduled_maximum_control_steps": 1968,
+  "maximum_controlled_resets": 18,
+  "maximum_simulation_frames": 504000,
+  "minimum_complete_windows_per_task_per_arm": 1,
+  "witnesses_per_execution": 3,
+  "source_manifest": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/manifest.json",
+  "source_manifest_id": "612f593437f5e8f6ecd00a0d1d14e009daba92b661297d89ac642ed9c3ddbf61",
+  "source_audit": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit/record_audit.json",
+  "source_audit_sha256": "53c359cb43c8c14154d22780b72bb6ec8b51f451390175707bc45c022ea8f417",
+  "component_review": "outputs/warm_response_reference/validation_v1/delivery_review_v1.json",
+  "component_review_sha256": "b82ca2b07bc6cc281b42cc03de968d9d427d4cf6d4b71f820476e610319b57ea",
+  "historical_nominal_cost": {
+    "environment_steps": 3840,
+    "controlled_resets": 480,
+    "all_reset_calls": 24480,
+    "simulation_frames": 12259200
+  },
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "policy_updates": 0,
+  "output_root": "outputs/stale_reprobe/qualification_v1"
+}

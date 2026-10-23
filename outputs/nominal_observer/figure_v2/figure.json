@@ -1,0 +1,172 @@
+{
+  "experiment_run_id": "nominal_observer_20261014T055743Z_9e6c6e63cc35",
+  "manifest_id": "e56e9442c5c01a081262d156158106b5946f0b52c855edf22fb34785bb72df23",
+  "source_git_commit": "9e6c6e63cc35ca4510e0021821f5a45fb9ad4f58",
+  "audit_sha256": "5e6c73a9e8893b32cc9e609102768701d1830def4c6a9ea0209016131e506e37",
+  "render_tool_sha256": "e5992563d4ed56d1e41b97441cdaab85a88c8004a3797be73f14db40fd3233fa",
+  "artifact_sha256": {
+    "figure.png": "635104e01c34fd6d1eae9306f38fb0f5f2031f61c0dc9f678ad9a5faa0211e25",
+    "figure.svg": "ddb1e1936962725f88425f08fb28201b0cbaf66ec9d83a7796f0c099d142756c"
+  },
+  "strata": {
+    "push-v3|POLICY_ONLY": {
+      "episodes": 16,
+      "scored_episodes": 16,
+      "p90_episode_max_error": 0.5432733889900603,
+      "maximum_episode_error": 0.5742662428229041,
+      "mean_episode_max_error": 0.46641532996725354,
+      "known_nominal_successes": 16,
+      "physical_steps": 1006,
+      "phase_block_descriptives": {
+        "PROBE": {
+          "blocks": 0,
+          "mean_error": null,
+          "p90_error": null
+        },
+        "MIXED": {
+          "blocks": 0,
+          "mean_error": null,
+          "p90_error": null
+        },
+        "POLICY": {
+          "blocks": 240,
+          "mean_error": 0.21322046932140376,
+          "p90_error": 0.45778829029991985
+        }
+      }
+    },
+    "push-v3|PROBE_THEN_POLICY": {
+      "episodes": 16,
+      "scored_episodes": 16,
+      "p90_episode_max_error": 0.5704819467649377,
+      "maximum_episode_error": 0.5901287537741309,
+      "mean_episode_max_error": 0.4730095460447705,
+      "known_nominal_successes": 16,
+      "physical_steps": 1247,
+      "phase_block_descriptives": {
+        "PROBE": {
+          "blocks": 48,
+          "mean_error": 0.08988201550270551,
+          "p90_error": 0.14367158295863475
+        },
+        "MIXED": {
+          "blocks": 16,
+          "mean_error": 0.1332028288129768,
+          "p90_error": 0.18757678350702178
+        },
+        "POLICY": {
+          "blocks": 235,
+          "mean_error": 0.21546832906157906,
+          "p90_error": 0.4578343738747233
+        }
+      }
+    },
+    "reach-v3|POLICY_ONLY": {
+      "episodes": 16,
+      "scored_episodes": 16,
+      "p90_episode_max_error": 0.4301470746300452,
+      "maximum_episode_error": 0.4735491789740409,
+      "mean_episode_max_error": 0.3626655353106041,
+      "known_nominal_successes": 16,
+      "physical_steps": 757,
+      "phase_block_descriptives": {
+        "PROBE": {
+          "blocks": 0,
+          "mean_error": null,
+          "p90_error": null
+        },
+        "MIXED": {
+          "blocks": 0,
+          "mean_error": null,
+          "p90_error": null
+        },
+        "POLICY": {
+          "blocks": 180,
+          "mean_error": 0.2168258867577681,
+          "p90_error": 0.3395091689048403
+        }
+      }
+    },
+    "reach-v3|PROBE_THEN_POLICY": {
+      "episodes": 16,
+      "scored_episodes": 16,
+      "p90_episode_max_error": 0.46265383982448555,
+      "maximum_episode_error": 0.4662150077435689,
+      "mean_episode_max_error": 0.37552244672477386,
+      "known_nominal_successes": 16,
+      "physical_steps": 1014,
+      "phase_block_descriptives": {
+        "PROBE": {
+          "blocks": 48,
+          "mean_error": 0.08670024800041232,
+          "p90_error": 0.12241157095211823
+        },
+        "MIXED": {
+          "blocks": 16,
+          "mean_error": 0.24129882409860343,
+          "p90_error": 0.2773590627424309
+        },
+        "POLICY": {
+          "blocks": 178,
+          "mean_error": 0.22828432305573026,
+          "p90_error": 0.3650219062568807
+        }
+      }
+    },
+    "door-open-v3|POLICY_ONLY": {
+      "episodes": 16,
+      "scored_episodes": 16,
+      "p90_episode_max_error": 2.8665255725525993,
+      "maximum_episode_error": 4.182190845383182,
+      "mean_episode_max_error": 1.6097152634005436,
+      "known_nominal_successes": 16,
+      "physical_steps": 1336,
+      "phase_block_descriptives": {
+        "PROBE": {
+          "blocks": 0,
+          "mean_error": null,
+          "p90_error": null
+        },
+        "MIXED": {
+          "blocks": 0,
+          "mean_error": null,
+          "p90_error": null
+        },
+        "POLICY": {
+          "blocks": 323,
+          "mean_error": 0.5153452540380025,
+          "p90_error": 0.9999314001581846
+        }
+      }
+    },
+    "door-open-v3|PROBE_THEN_POLICY": {
+      "episodes": 16,
+      "scored_episodes": 16,
+      "p90_episode_max_error": 2.6213535086058215,
+      "maximum_episode_error": 3.0010933862581437,
+      "mean_episode_max_error": 1.5075540176615605,
+      "known_nominal_successes": 16,
+      "physical_steps": 1573,
+      "phase_block_descriptives": {
+        "PROBE": {
+          "blocks": 48,
+          "mean_error": 0.09527453371657708,
+          "p90_error": 0.13935084946724316
+        },
+        "MIXED": {
+          "blocks": 16,
+          "mean_error": 0.16526006243467112,
+          "p90_error": 0.2063898983941437
+        },
+        "POLICY": {
+          "blocks": 319,
+          "mean_error": 0.5032520287039256,
+          "p90_error": 0.941903828830243
+        }
+      }
+    }
+  },
+  "physical_collection_rerun": false,
+  "api_calls_added": 0,
+  "svg_trailing_whitespace_removed": true
+}

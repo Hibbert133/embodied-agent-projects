@@ -1,0 +1,120 @@
+{
+  "protocol_id": "physical_reprobe_execution_qualification_v1",
+  "purpose": "CONTINUOUS_MEASUREMENT_EXECUTION_NOT_IDENTIFICATION_OR_TASK_BENEFIT",
+  "cases": [
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 22400,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 22401,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 22402,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 16
+    },
+    {
+      "unit": 3,
+      "task": "push-v3",
+      "seed": 22403,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 4,
+      "task": "reach-v3",
+      "seed": 22404,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 5,
+      "task": "door-open-v3",
+      "seed": 22405,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 32
+    },
+    {
+      "unit": 6,
+      "task": "push-v3",
+      "seed": 22406,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 7,
+      "task": "reach-v3",
+      "seed": 22407,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 64
+    },
+    {
+      "unit": 8,
+      "task": "door-open-v3",
+      "seed": 22408,
+      "variant": "PHYSICAL_REPROBE",
+      "planned_boundary": 64
+    }
+  ],
+  "reserved_seeds": [
+    22409,
+    22599
+  ],
+  "executions": 9,
+  "logical_total_steps": 500,
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "fault_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "maximum_environment_steps": 4500,
+  "scheduled_maximum_control_steps": 984,
+  "maximum_controlled_resets": 9,
+  "maximum_simulation_frames": 252000,
+  "minimum_complete_windows_per_task": 1,
+  "witnesses_per_execution": 3,
+  "source_manifest": "outputs/delayed_intervention/qualification_v2/delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55/manifest.json",
+  "source_manifest_id": "ae549ee2e9cfdcac76a8f565db1f04321c22f6ebaac93d18694eec783aee6b6a",
+  "source_audit": "outputs/delayed_intervention/qualification_v2/delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55/audit/record_audit.json",
+  "source_audit_sha256": "b5d30f1e8976cef0d88d5429948990128cc52fd7a684ffacd81606749603a78f",
+  "component_review": "outputs/physical_reprobe/validation_v1/delivery_review_v1.json",
+  "component_review_sha256": "4ce929687e477d13c65386b0f94c324d8f7fae8e5696812541ac75a23008cf03",
+  "historical_nominal_cost": {
+    "environment_steps": 3840,
+    "controlled_resets": 480,
+    "all_reset_calls": 24480,
+    "simulation_frames": 12259200
+  },
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "policy_updates": 0,
+  "output_root": "outputs/physical_reprobe/qualification_v1"
+}

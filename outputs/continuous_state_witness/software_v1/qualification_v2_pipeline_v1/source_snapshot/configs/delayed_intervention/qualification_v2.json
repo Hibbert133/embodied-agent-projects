@@ -1,0 +1,91 @@
+{
+  "protocol_id": "delayed_intervention_qualification_v2",
+  "purpose": "CONTINUOUS_EXECUTION_WITH_INSPECTABLE_TIMING_PROJECTION_NOT_TASK_BENEFIT",
+  "tasks_and_seeds": [
+    {
+      "task": "push-v3",
+      "seed": 21600
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602
+    }
+  ],
+  "reserved_seeds": [
+    21603,
+    21799
+  ],
+  "variants": [
+    "CONTINUE_CURRENT",
+    "SWITCH_SAVED",
+    "RUN_UNCORRECTED",
+    "STOP",
+    "DIRECT_CURRENT"
+  ],
+  "boundary_step": 16,
+  "logical_total_steps": 500,
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "fault_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "maximum_environment_steps": 7500,
+  "maximum_controlled_resets": 15,
+  "maximum_simulation_frames": 420000,
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "policy_updates": 0,
+  "required_ready_boundaries": 15,
+  "required_direct_comparison_tasks": 3,
+  "minimum_tasks_with_three_distinct_first_commands": 1,
+  "source_manifest": "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/manifest.json",
+  "source_completion": "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/main_pipeline_completion.json",
+  "nominal_models": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/models.json",
+  "nominal_models_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+  "historical_nominal_cost": {
+    "environment_steps": 3840,
+    "controlled_resets": 480,
+    "all_reset_calls": 24480,
+    "simulation_frames": 12259200
+  },
+  "historical_design_preparation": {
+    "enumerations": 3,
+    "candidate_rows": 432
+  },
+  "source_amortization_units_per_variant": 3,
+  "output_root": "outputs/delayed_intervention/qualification_v2",
+  "prior_qualification_manifest": "outputs/delayed_intervention/qualification_v1/delayed_intervention_20261019T081007Z_72cd966d73d9/manifest.json",
+  "prior_qualification_manifest_id": "764fa8ef1c65e0bef7d40b085641c0d5cf6c4318aa6fcd3a4278a545d6c4f8ab",
+  "prior_record_audit": "outputs/delayed_intervention/qualification_v1/delayed_intervention_20261019T081007Z_72cd966d73d9/audit/record_audit.json",
+  "prior_record_audit_sha256": "9f55468b17f6414d936d2348603c79da934c1234c72413c49b5566ca4ee5f6b0",
+  "witness_schema": "continuous_state_witness_v1",
+  "witnesses_per_execution": 3,
+  "historical_qualification_v1_cost": {
+    "environment_steps": 1377,
+    "controlled_resets": 15,
+    "all_reset_calls": 765,
+    "simulation_frames": 389385
+  }
+}

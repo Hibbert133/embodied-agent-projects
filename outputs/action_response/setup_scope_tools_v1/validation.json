@@ -1,0 +1,43 @@
+{
+  "experiment_run_id": "action_response_20261014T104928Z_1c3798544481",
+  "manifest_id": "579864fc921cbd15bb5222c8f7b127a49fc7c1c92fd2bdde6f38d62bb165e060",
+  "source_git_commit": "1c37985444816ad9cca434d2fe38825678fc82dd",
+  "phase": "INITIALIZATION_COST_SCOPE_TOOLS_V1",
+  "recorded_at_utc": "2026-10-14T12:42:50.336969+00:00",
+  "source_sha256": {
+    "scripts/audit_metaworld_setup_cost.py": "9b96eece20fc93a40c6275e69b7592d02fa98238f5472f1543c5224e0990ea7c",
+    "scripts/report_action_response.py": "753ce12c4b8c3937589d01ed6429c8a06c4fd2b233bb9691f60ac4322a7caaa7",
+    "scripts/render_action_response.py": "090a61f1b001764af71a87d46cae9183974aead849bcca2c1851b3245edbafed",
+    "tests/test_metaworld_setup_cost.py": "a1d17311a28d369d4af26a38f9e3893528d12635f56288daae55cd9310cce254",
+    "tests/test_action_response_report.py": "d2e0ff0558d34088569f0ee57a0196d09e56b3366bf88d6e5cff03e79492e007",
+    "docs/research/metaworld_initialization_cost_scope_v1.md": "d8d20bf67e595e8c84293b765350498e6b4dc7a461546782dc31f9a39a174c2a",
+    "papers/action_response_development_draft_zh.md": "1ba616edca360c411ff33eb1ad6f6412450bbf6105345484cf9bc02c8b79f2e1"
+  },
+  "checks": {
+    "full_unit_suite": "PASSED",
+    "test_count": 729,
+    "elapsed_seconds": 115.72,
+    "compileall": "PASSED",
+    "pip_check": "PASSED",
+    "tracked_secret_scan": "PASSED",
+    "git_diff_check": "PASSED",
+    "git_cached_diff_check": "PASSED",
+    "frozen_input_hashes_unchanged": 600
+  },
+  "archived_logs": {
+    "full_suite.log.gz": {
+      "uncompressed_sha256": "9b82da3374ad3b81b03bd0fd3c8566be5d6acc65b744b2aac05be21279b27919",
+      "gzip_sha256": "2c1ffaa95895fa42a68647d2c4bded923077f9cf37f934c206da1de0294cc46d"
+    },
+    "secret_scan.log.gz": {
+      "uncompressed_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "gzip_sha256": "cbe17bd7513ac1fc9cc6d1e9201af3fe041d8b7e0919d01106bf6fcd11e3f2ed"
+    }
+  },
+  "primary_collection_status": "COMPLETED_COMPETITIVE_FAILED",
+  "primary_replay_audit_status": "RUNNING",
+  "new_robot_env_steps": 0,
+  "new_api_calls": 0,
+  "physical_response_qualified": false,
+  "scope": "Separate initialization-cost source audit and report-scope correction. Factory spy uses no MuJoCo environment; historical whole-process reset/physics activity was not instrumented. Registered source, controller decisions, budget gate and outcomes unchanged."
+}

@@ -1,0 +1,63 @@
+{
+  "status": "PASSED_DIAGNOSTIC_DELIVERY_CLOSURE",
+  "legacy_1402_test_source_files_unchanged": 842,
+  "legacy_tests_rerun": false,
+  "new_code_sources": {
+    "src/analysis/movement_diagnostic_guard_v1.py": "29adaa15bbd957d8109a4af4acf91b9b44fec3de2afc47c532b4a18a281b8393",
+    "src/analysis/movement_failure_diagnostic_v1.py": "ef34ba779b3ba10fc3155e29d3503faed5fb86648158e02970aed9d9bb13a399",
+    "scripts/audit_movement_diagnostic_reporting_v1.py": "6dbea8745ddfa8f09d9cfa921a6425eb54789402d8a89d8d15f40327c576106c",
+    "scripts/audit_movement_diagnostic_supplement_v1.py": "5b31c7c338a0ca57b8d14f0f688558b0b02d17f4bab9408738be86c0e2374756",
+    "scripts/audit_movement_failure_diagnostic_v1.py": "2efd71a6819639f35989c2b31ab65a0e236e115e2b23b060797290f4255c0751",
+    "scripts/diagnose_movement_failure_v1.py": "6e088f2bba653a85298ef89f15d9ccea26fa8aa894f0720aa3f144e9569d1e90",
+    "scripts/report_movement_failure_diagnostic_v1.py": "0f5437ee5f094a7112062a35e884f72049f9bbf4b9f2d5e3ff6c687e23f16e47",
+    "scripts/supplement_movement_failure_diagnostic_v1.py": "b9726787bd2f9f8876de6028e448dbe6df41665a81f8b75f8c30fb48e8c5b3ce",
+    "tests/test_movement_failure_diagnostic_v1.py": "302a7603de30cfb855d5208c3606d4786c44053ebc3ce39084d4b2623421bde0"
+  },
+  "validation": {
+    "pure_tests_v2": {
+      "receipt_sha256": "920adddfe7fdb79a55dc6dd642edba7d355011ce1a7f90627d90984892764471",
+      "inputs": 851,
+      "tests_run": 26
+    },
+    "compileall": {
+      "receipt_sha256": "c457fb68613b86b32fd5ad45646fa9346749d67875aa74011d857bb10a3ba607",
+      "inputs": 851,
+      "tests_run": null
+    },
+    "pip_check": {
+      "receipt_sha256": "b83cb36dcc9971f2037e75b0e453bbb52a00e28dbc4926d8e39128eaf169da5c",
+      "inputs": 851,
+      "tests_run": null
+    }
+  },
+  "frozen_old_inputs_unchanged": 1201,
+  "raw_sources_and_six_contrasts_unchanged": true,
+  "authoritative_audit_sha256": "e0186fd902c9990946e4d535d9813a3306faee1b235de8ec16dbfb01e2cf7be3",
+  "report_sha256": "cc3fd11979e0f2e84607d03eb7a0abe461095d41145ccfc9deaaf8ca338a8801",
+  "design_freeze_sha256": "d3d700b50d7624797663117f0490ee1a4965903cca88b886fcb5de1ddb0fc40c",
+  "recorded_process_wall_ns": {
+    "outputs/movement_task/diagnostic_v1/completion.json": 227536784800,
+    "outputs/movement_task/diagnostic_audit_v1/check.json": 237602136400,
+    "outputs/movement_task/diagnostic_audit_v1/check_v2.json": 237360092200,
+    "outputs/movement_task/diagnostic_supplement_v1/completion.json": 25178705400,
+    "outputs/movement_task/diagnostic_supplement_v1/independent_audit.json": 30137136600,
+    "outputs/movement_task/diagnostic_reporting_v1/receipt.json": 7580957000,
+    "outputs/movement_task/diagnostic_reporting_v1/independent_export_audit.json": 71098592500,
+    "outputs/movement_task/diagnostic_validation_v1/pure_tests_receipt.json": 5638308900,
+    "outputs/movement_task/diagnostic_validation_v1/pure_tests_v2_receipt.json": 5292401000,
+    "outputs/movement_task/diagnostic_validation_v1/compileall_receipt.json": 1859124000,
+    "outputs/movement_task/diagnostic_validation_v1/pip_check_receipt.json": 1542375700
+  },
+  "recorded_process_wall_ns_sum": 850826614500,
+  "cost_scope": "Sum of recorded process wall durations, including the superseded audit and failed guarded test run; processes overlap. Preliminary console tests and one early scalar-audit failure have separate notes, not exhaustive timing.",
+  "new_environment_creations": 0,
+  "new_environment_steps": 0,
+  "new_all_resets": 0,
+  "new_simulation_frames": 0,
+  "new_policy_queries": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "new_training_executions": 0,
+  "checker_sha256": "408b2dac0e3c379704f1fdce0004bf5d4da87624ea7f0f57fac2bd23a6374d3d",
+  "wall_ns": 4422223500
+}

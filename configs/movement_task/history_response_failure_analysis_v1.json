@@ -1,0 +1,56 @@
+{
+  "version": "history_response_failure_analysis_v1",
+  "scope": "POSTHOC_DESCRIPTIVE_ONLY",
+  "source": "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753",
+  "source_manifest_id": "210833e32b9ae18d9ad6f08eab55a4a2db9adebb00fc000686ea3e20a776ae5e",
+  "source_result_commit": "ab3f7a85b285b4bc8c07044a0d3b727613509c27",
+  "models_sha256": "b168a7b11e53ae20d014361fdf132f52fda1b57e8ed3eb23277946cb271411d3",
+  "statistics_sha256": "6dbafa7e75bf0ab806d15e568ea90e27bd34d5bf2a02a5be037d8b57c400119c",
+  "populations": {
+    "TRAIN": 216,
+    "CAL": 108,
+    "TEST": 432
+  },
+  "models": [
+    "HISTORY_LINEAR10",
+    "STATE_LINEAR20",
+    "QUADRATIC_STATE20",
+    "GRU_WINDOW1",
+    "GRU_WINDOW16",
+    "ZERO_DISPLACEMENT",
+    "LAST_DISPLACEMENT"
+  ],
+  "stages": [
+    "ALL_RESPONSE",
+    "FIXED_PROBE",
+    "PRE_BOUNDARY",
+    "MOVEMENT_ALL",
+    "LIFT",
+    "POST_LIFT",
+    "MEASUREMENT",
+    "POST_TASK"
+  ],
+  "correlation_lags": [
+    0,
+    1,
+    2
+  ],
+  "range_scope": "SOURCE_MATCHED_TRAIN_CURRENT_INPUTS_T_GE_2; PREFIX_FRAMES0_1_NOT_TRAIN_RANGE_REFERENCES",
+  "z_descriptors": [
+    3,
+    5,
+    10
+  ],
+  "gate_descriptors": [
+    0.01,
+    0.99
+  ],
+  "feature_quantile": 0.95,
+  "aggregation": "WITHIN_TRAJECTORY_THEN_EQUAL_GROUP; SOURCES_NOT_REPLICATES; EMPTY_PREDICTION_NULL; EMPTY_ADDITIVE_OBJECTIVE_MASS_ZERO",
+  "target_population": "UNCHANGED_REAL_T_GE_2",
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "new_parameter_variants": 0,
+  "online_thresholds_fitted": false
+}

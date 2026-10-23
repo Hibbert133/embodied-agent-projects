@@ -1,0 +1,297 @@
+{
+  "status": "PASSED_SOFTWARE_BEFORE_INTEGRAL_COLLECTION",
+  "created_utc": "2026-10-19T13:23:34.921002+00:00",
+  "parent_commit": "bd8e9fd5c06b4c1416661c9e7092cbcb4047b8bf",
+  "previous_goal_turn": {
+    "classification": "progress",
+    "evidence": "bd8e9fd committed 18 actual stale-correction executions and a negative independently audited result"
+  },
+  "tests_passed": 1244,
+  "new_tests": 29,
+  "checks": {
+    "unittest": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 350416735400,
+      "output_sha256": "4d78fee2be698c0862ca7e6df62cbef7ce66ef47346ba637d9795e85cd9ef572",
+      "created_utc": "2026-10-19T13:22:41.468520+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    },
+    "targeted_01": {
+      "check": "targeted_01",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_integral_reprobe_v1",
+        "tests.test_integral_reprobe_qualification_v1",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 55186454700,
+      "output_sha256": "349a0a5d636684e6c6fc4903678e7acae6b7fccfd8266fef7ef00b089c7681c7",
+      "created_utc": "2026-10-19T13:15:40.718358+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    },
+    "compileall": {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 2785258800,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T13:16:53.821131+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    },
+    "pip_check": {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 724913000,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T13:16:51.774966+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    },
+    "tracked_secret_scan": {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 58677929500,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T13:17:49.735405+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    },
+    "diff_check": {
+      "check": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 111712900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T13:23:32.930121+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    },
+    "docs_secret_scan": {
+      "check": "docs_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 58646664300,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    },
+    "report_compile": {
+      "check": "report_compile",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "docs/paper/report_integral_reprobe_qualification_20261019.py"
+      ],
+      "returncode": 0,
+      "wall_ns": 89494000,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "files": [
+    {
+      "path": "configs/integral_reprobe/qualification_v1.json",
+      "sha256": "03f519f222e0afa894d61e45ac1ec340a7a56742c33df73cab3ceb7889244cae",
+      "bytes": 7058
+    },
+    {
+      "path": "docs/paper/report_integral_reprobe_qualification_20261019.py",
+      "sha256": "c88df9efb585f1345ff47d7a23f35d0a0c02cfb2d3315c5361a9151ff1a528ec",
+      "bytes": 8883
+    },
+    {
+      "path": "docs/protocols/integral_reprobe_execution_qualification_v1.md",
+      "sha256": "806d86d7dff850825f280f91defb3e72a2d2d8ece27158517fafe128c08be3a2",
+      "bytes": 5357
+    },
+    {
+      "path": "docs/research/relocation_information_reference_v1_zh.md",
+      "sha256": "da99155eac36685301c52642c31988cb163ff6d9190e295549f05b96a383679c",
+      "bytes": 3196
+    },
+    {
+      "path": "outputs/integral_reprobe/qualification_v1/.gitattributes",
+      "sha256": "33f019d733cb609c6f7aa7333ed57a7fb608a68b7f2cbdd45f180612915495e6",
+      "bytes": 76
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/.gitattributes",
+      "sha256": "0ccf672399ac091ce1068f620210f11afa2987a167b6c33268d842e425c9ab6d",
+      "bytes": 65
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/compileall.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/compileall_receipt.json",
+      "sha256": "756b18e713a5f5f69c8760a13f502f02c34ca8a34a2dcbe466688d52dfc47622",
+      "bytes": 486
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/diff_check_receipt.json",
+      "sha256": "9fe9b7d53e4f530bcb170bc31e325590d295815b9dd0192a9d156fe121857a14",
+      "bytes": 352
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/docs_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/docs_secret_scan_receipt.json",
+      "sha256": "ca2b681a97b9c54372bb3b31aecbfb8549f0cc23d362512608a76697d99c21e5",
+      "bytes": 332
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/pip_check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/pip_check_receipt.json",
+      "sha256": "5758130d97e72abf38db3047212bed2df73041487779301a0a34b20865b7104f",
+      "bytes": 441
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/report_compile.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/report_compile_receipt.json",
+      "sha256": "6ff447f7cb9678fa82305d58d6f5db5c211ee5b2b48858e43db37181039fa82b",
+      "bytes": 367
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/run_checks.py",
+      "sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736",
+      "bytes": 3458
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/targeted_01.txt",
+      "sha256": "349a0a5d636684e6c6fc4903678e7acae6b7fccfd8266fef7ef00b089c7681c7",
+      "bytes": 3997
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/targeted_01_native_costs.json",
+      "sha256": "f453852679ebb66c0e7d0a7e163786e7527acfdba52517d5eef5bc39b4a5e13c",
+      "bytes": 97760
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/targeted_01_receipt.json",
+      "sha256": "2ab8fd00064a8ecb3ca4b8675eee820ea4eeb057637b90c06fc306523d03b7ae",
+      "bytes": 537
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/tracked_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/tracked_secret_scan_receipt.json",
+      "sha256": "f236fa7fe3cd97702e9e473a7f5af60dfeefe2d07b7508684bef4966266f162f",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/unittest.txt",
+      "sha256": "4d78fee2be698c0862ca7e6df62cbef7ce66ef47346ba637d9795e85cd9ef572",
+      "bytes": 149224
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/unittest_native_costs.json",
+      "sha256": "4147db6b2066ea4bbe595df796a6e344bbacc23d729cd10e2f399d08d82552ef",
+      "bytes": 242857
+    },
+    {
+      "path": "outputs/integral_reprobe/validation_v1/unittest_receipt.json",
+      "sha256": "6df36923cd0136bfbd612c59e3b71292466f2153615c4304564cadd63a5809d3",
+      "bytes": 484
+    },
+    {
+      "path": "scripts/audit_integral_reprobe_v1.py",
+      "sha256": "6fe78234df7aaa28644eea79b684bd890f348606d72b6101240929ec7695bfe7",
+      "bytes": 42301
+    },
+    {
+      "path": "scripts/qualify_integral_reprobe_v1.py",
+      "sha256": "84227c3ccd29a2410f3f4a60c49b61433cf21a5b54d72339ccf6d0ccefa8b68d",
+      "bytes": 13951
+    },
+    {
+      "path": "src/analysis/integral_reprobe_host_v1.py",
+      "sha256": "5ef2053c13d44fa60ffadc953a5a6f9797c97fafa184bf1a27f698830b421ea9",
+      "bytes": 12947
+    },
+    {
+      "path": "src/analysis/integral_reprobe_io_v1.py",
+      "sha256": "7c8879181619b191f9a22a92a176bfbe2677a8f11df15d506eb68b5273880f81",
+      "bytes": 5758
+    },
+    {
+      "path": "src/probe/integral_reprobe_v1.py",
+      "sha256": "63838a71d9f2aea6b7bffb55c34b5cb6cb9f7e30747cb4e8ffb44c720c684236",
+      "bytes": 8116
+    },
+    {
+      "path": "tests/test_integral_reprobe_qualification_v1.py",
+      "sha256": "f3b86e0f5ef377ebeab5611257d74fa3c7ad97debf2ff97966b15b9f4a28c78c",
+      "bytes": 17983
+    },
+    {
+      "path": "tests/test_integral_reprobe_v1.py",
+      "sha256": "76e31a3998a452a14ccfaf3c0e59015cdf8f4d7fc24046b369cbf1389b6a0b6f",
+      "bytes": 4360
+    }
+  ],
+  "previous_bindings_unchanged": 1071,
+  "new_module_fullsuite_native_frames": [
+    514660,
+    25660,
+    25580,
+    25600,
+    25580
+  ],
+  "scope": "Software only, including idealized counterexample; no new scientific cohort or API yet; all publication requirements remain open"
+}

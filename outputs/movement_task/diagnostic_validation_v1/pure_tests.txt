@@ -1,0 +1,262 @@
+test_constant_and_short_correlation (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_early_clip_is_detected (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_early_success_case_preserved (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_equal_group_aggregation_not_time_pooling (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_exact_float32_chain (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_feedback_reverse_lag_uses_past_noise (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_frozen_followup_budget_and_partition_separation (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_future_request_rejected (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_future_saved_parameter_clock_rejected (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_future_saved_parameter_step_rejected (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_guard_blocks_simulator_network_optimizer (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_independent_predictor_preserves_float64_standardization (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_inverse_is_not_forward_mapping (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_known_model_expected_residual_and_mismatch (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_missing_two_real_displacements (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_no_zero_padding_predict (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_noise_cursor_mismatch (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_noise_input_identity_independent (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_noise_row_offset_mismatch (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_nonzero_deadzone (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_policy_and_controller_clipping_distinct (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ERROR
+test_rank_deficient_input_and_null_condition (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_unrequested_and_repeated_response_rejected (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_zero_length_segment_missing_not_zero (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests) ... ok
+test_four_saved_methods_without_environment (tests.test_movement_failure_diagnostic_v1.SavedRecordTests) ... ok
+test_saved_invalid_fit_and_early_end_retained (tests.test_movement_failure_diagnostic_v1.SavedRecordTests) ... ok
+
+======================================================================
+ERROR: test_independent_predictor_preserves_float64_standardization (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 137, in test_independent_predictor_preserves_float64_standardization
+    np.testing.assert_allclose(predict(m, h[0], h[1], u), d.prediction(m, h, u), atol=1e-15, rtol=0)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+======================================================================
+ERROR: test_inverse_is_not_forward_mapping (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 71, in test_inverse_is_not_forward_mapping
+    np.testing.assert_allclose(np.asarray(FAULT["matrix_xy"]) @ pre[:2]+FAULT["bias_xy"], raw[:2], atol=2e-8)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+======================================================================
+ERROR: test_known_model_expected_residual_and_mismatch (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 121, in test_known_model_expected_residual_and_mismatch
+    np.testing.assert_allclose(predicted, [.0063, -.0114], atol=1e-15)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+======================================================================
+ERROR: test_missing_two_real_displacements (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 87, in test_missing_two_real_displacements
+    np.testing.assert_array_equal(last, [2.]*3)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+======================================================================
+ERROR: test_noise_input_identity_independent (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 131, in test_noise_input_identity_independent
+    np.testing.assert_allclose(y-t, (y-a)+(a-z)+(z-t), atol=1e-15)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+======================================================================
+ERROR: test_nonzero_deadzone (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 45, in test_nonzero_deadzone
+    np.testing.assert_allclose(pre[:2], [0., -.5], atol=1e-7)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+======================================================================
+ERROR: test_policy_and_controller_clipping_distinct (tests.test_movement_failure_diagnostic_v1.ArrayDiagnosticTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_movement_failure_diagnostic_v1.py", line 78, in test_policy_and_controller_clipping_distinct
+    np.testing.assert_array_equal(desired, [1., np.float32(.1), 1., -1.])
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 17, in guarded
+    return original(name, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\movement_diagnostic_guard_v1.py", line 21, in audit
+    raise RuntimeError("diagnostic forbids network / child process: "+event)
+RuntimeError: diagnostic forbids network / child process: socket.gethostname
+
+----------------------------------------------------------------------
+Ran 26 tests in 4.920s
+
+FAILED (errors=7)

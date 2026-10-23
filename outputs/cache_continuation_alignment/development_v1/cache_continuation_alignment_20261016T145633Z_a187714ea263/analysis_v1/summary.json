@@ -1,0 +1,79 @@
+{
+  "experiment_run_id": "cache_continuation_alignment_20261016T145633Z_a187714ea263",
+  "manifest_id": "35aac72ea04470b3f5a610bbbf3a71e458ab8650394259a9775625410d5275b3",
+  "source_git_commit": "a187714ea26333a13083db354b569cf9848cb87d",
+  "status": "COMPLETED_CONDITIONAL_DESCRIPTION",
+  "source_case_dispositions": 4752,
+  "disposition_counts": {
+    "EXCLUDED_METHOD": 2643,
+    "EXCLUDED_NO_WARM_CHECK": 199,
+    "CONDITIONAL_REALIZED_REUSE_PAIR": 1067,
+    "FACTUAL_REFRESH_NEGATIVE_CONTROL": 462,
+    "EXCLUDED_BALANCED_PROGRAM": 381
+  },
+  "behavior_reuse_sites": 1067,
+  "unique_same_unit_decisions": 538,
+  "duplicate_reuse_sites": 529,
+  "by_behavior": {
+    "CUSUM4": {
+      "cases": 369,
+      "fresh_lower_realized_loss": 76,
+      "reuse_lower_realized_loss": 277,
+      "equal_realized_loss": 16,
+      "mean_realized_reuse_minus_fresh_loss": 4.699186991869919,
+      "sum_realized_loss_difference": 1734,
+      "lost_success_with_reuse": 10,
+      "rescued_success_with_reuse": 4
+    },
+    "PLUGIN4": {
+      "cases": 313,
+      "fresh_lower_realized_loss": 64,
+      "reuse_lower_realized_loss": 234,
+      "equal_realized_loss": 15,
+      "mean_realized_reuse_minus_fresh_loss": 0.5878594249201278,
+      "sum_realized_loss_difference": 184,
+      "lost_success_with_reuse": 4,
+      "rescued_success_with_reuse": 2
+    },
+    "UNCERTAINTY4": {
+      "cases": 353,
+      "fresh_lower_realized_loss": 72,
+      "reuse_lower_realized_loss": 265,
+      "equal_realized_loss": 16,
+      "mean_realized_reuse_minus_fresh_loss": 4.1671388101983,
+      "sum_realized_loss_difference": 1471,
+      "lost_success_with_reuse": 9,
+      "rescued_success_with_reuse": 4
+    },
+    "TASK_IVR4": {
+      "cases": 32,
+      "fresh_lower_realized_loss": 1,
+      "reuse_lower_realized_loss": 30,
+      "equal_realized_loss": 1,
+      "mean_realized_reuse_minus_fresh_loss": 9.53125,
+      "sum_realized_loss_difference": 305,
+      "lost_success_with_reuse": 1,
+      "rescued_success_with_reuse": 0
+    }
+  },
+  "unique_decisions": {
+    "cases": 538,
+    "fresh_lower_realized_loss": 118,
+    "reuse_lower_realized_loss": 396,
+    "equal_realized_loss": 24,
+    "mean_realized_reuse_minus_fresh_loss": 3.912639405204461,
+    "sum_realized_loss_difference": 2105,
+    "lost_success_with_reuse": 15,
+    "rescued_success_with_reuse": 7
+  },
+  "factual_refresh_controls": 462,
+  "factual_refresh_control_loss_difference_max_abs": 0,
+  "factual_refresh_continuation_steps_checked": 42348,
+  "source_policy_queries": 3058,
+  "complete_hidden_state_qualified": false,
+  "conditional_expectation_identified": false,
+  "unconditional_causal_transport_qualified": false,
+  "whole_stream_counterfactual_identified": false,
+  "new_algorithm_established": false,
+  "scope": "CONDITIONAL_EXISTING_TRACE_ALIGNMENT_AND_REALIZED_CURRENT_TASK_DESCRIPTION"
+}

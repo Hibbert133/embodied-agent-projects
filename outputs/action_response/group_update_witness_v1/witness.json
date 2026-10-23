@@ -1,0 +1,81 @@
+{
+  "analysis_id": "GROUPED_MEAN_UPDATE_WITNESS_V1",
+  "bound_source_git_commit": "1c37985444816ad9cca434d2fe38825678fc82dd",
+  "core_source_sha256": "0c5f1729850101bb95da28c5e680d603704d544a286cdb11196995de803d634e",
+  "analytic_reference_rms_m": 0.0001,
+  "old_labels_mm": [
+    0.0
+  ],
+  "added_realized_analytic_labels_mm": [
+    0.2,
+    0.2,
+    0.2,
+    0.2
+  ],
+  "added_predicted_analytic_labels_mm": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "constant_mean_witness_mm": 0.1,
+  "query_sent_xy": [
+    0.0,
+    0.0
+  ],
+  "intervals": {
+    "original": {
+      "status": "FINITE",
+      "intervals_mm": [
+        {
+          "lower": [
+            -0.2,
+            -0.2
+          ],
+          "upper": [
+            0.2,
+            0.2
+          ]
+        }
+      ]
+    },
+    "predicted": {
+      "status": "FINITE",
+      "intervals_mm": [
+        {
+          "lower": [
+            -0.08944271909999159,
+            -0.08944271909999159
+          ],
+          "upper": [
+            0.08944271909999159,
+            0.08944271909999159
+          ]
+        }
+      ]
+    },
+    "observed": {
+      "status": "FINITE",
+      "intervals_mm": [
+        {
+          "lower": [
+            0.07055728090000842,
+            -0.08944271909999159
+          ],
+          "upper": [
+            0.2494427190999916,
+            0.08944271909999159
+          ]
+        }
+      ]
+    }
+  },
+  "updated_set_nested_in_original": false,
+  "actual_worst_absolute_upper_bound_decreased": false,
+  "both_group_bounds_hold_for_constant_mean_witness": true,
+  "original_frozen_inputs_unchanged": 600,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "physical_response_qualified": false,
+  "scope": "Analytic prescribed scalar residual example, not a robot task incidence, protocol violation or new physical guarantee."
+}

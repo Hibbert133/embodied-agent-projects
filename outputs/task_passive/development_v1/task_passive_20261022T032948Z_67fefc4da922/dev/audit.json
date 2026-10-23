@@ -1,0 +1,84 @@
+{
+  "experiment_run_id": "task_passive_20261022T032948Z_67fefc4da922",
+  "manifest_id": "e11e6d48c8be94514293467826352123c2b512c1fbf34d9441ad3413be1cd0c3",
+  "source_git_commit": "67fefc4da9224e0c62b8373d0d4e8cb5b3d1bade",
+  "cohort": "DEV",
+  "integrity": "PASSED",
+  "native_software_contract": "NOT_APPLICABLE",
+  "executions": 720,
+  "costs": {
+    "policy_queries": 76636,
+    "control_steps": 90626,
+    "successes": 675,
+    "independent_c4_c8_refits": 1080,
+    "independent_c4_c8_nfev": 1080,
+    "pi_plans": 48702,
+    "pi_changed_command_steps": 47892,
+    "pi_send_limit_steps": 17377,
+    "pi_integral_limit_steps": 0
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 36720,
+      "simulation_attempts": 3762626,
+      "simulation_completed": 3762626,
+      "simulation_frames_attempted": 18813130,
+      "simulation_frames_completed": 18813130,
+      "reset_completed": 36720
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 36000,
+        "simulation_attempts": 3600000,
+        "simulation_completed": 3600000,
+        "simulation_frames_attempted": 18000000,
+        "simulation_frames_completed": 18000000,
+        "reset_completed": 36000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 720,
+        "simulation_attempts": 72000,
+        "simulation_completed": 72000,
+        "simulation_frames_attempted": 360000,
+        "simulation_frames_completed": 360000,
+        "reset_completed": 720
+      },
+      "CONTROL": {
+        "simulation_attempts": 90626,
+        "simulation_completed": 90626,
+        "simulation_frames_attempted": 453130,
+        "simulation_frames_completed": 453130
+      }
+    }
+  },
+  "common_prefix_checks": {
+    "initial_pairs": 684,
+    "c8_prefix_pairs": 504,
+    "movement_pairs": 324
+  },
+  "pi_actual_effect_coverage": {
+    "RAW_TASK_PI_T0.125": 36,
+    "RAW_TASK_PI_T0.5": 36,
+    "RAW_TASK_PI_T2.0": 36,
+    "RAW_TASK_PI_T8.0": 36,
+    "DIRECT_TASK_PI_T0.125": 36,
+    "DIRECT_TASK_PI_T0.5": 36,
+    "DIRECT_TASK_PI_T2.0": 36,
+    "DIRECT_TASK_PI_T8.0": 36,
+    "MOVE_KEEP_TASK_PI_T0.125": 30,
+    "MOVE_KEEP_TASK_PI_T0.5": 30,
+    "MOVE_KEEP_TASK_PI_T2.0": 30,
+    "MOVE_KEEP_TASK_PI_T8.0": 30,
+    "MOVE_INTEGRAL_TASK_PI_T0.125": 30,
+    "MOVE_INTEGRAL_TASK_PI_T0.5": 30,
+    "MOVE_INTEGRAL_TASK_PI_T2.0": 30,
+    "MOVE_INTEGRAL_TASK_PI_T8.0": 30
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_predictor_training": 0,
+  "completion_sha256": "ed707bc109efec7e5d089bd2b05a5160ff2b6f879af2b839d444acc85df3495c",
+  "auditor_sha256": "71bcf806a559e255153579cafee39b8743e4345ef8040a6f24e90313633fc1ac",
+  "wall_ns": 458696343000,
+  "scope": "Read-only program replay and independent PI/actuator/cost reconstruction; source-generated state witnesses, not physics reproduction or safety proof"
+}

@@ -1,0 +1,66 @@
+{
+  "protocol_id": "short_probe_reference_development_v1",
+  "methods": [
+    "NO_PROBE",
+    "ORIGINAL8_UPDATE",
+    "BALANCED4_UPDATE",
+    "DOPT4_UPDATE",
+    "DOPT8_UPDATE",
+    "DOPT4_KEEP_AT8",
+    "DOPT4_FALLBACK8"
+  ],
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "logical_total_steps": 500,
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261022,
+  "source_manifest": "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/manifest.json",
+  "source_completion": "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_pipeline_completion.json",
+  "source_completion_sha256": "e91aa1035a6fe6a05e9b78a98818a90afb8836160bfd558f7b81e9487d8cde3d",
+  "source_record_audit": "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_audit.json",
+  "source_record_audit_sha256": "a39d3e7564dd551c70cd9362db458708a55f9652e6e2f4b99219ac4674a437e4",
+  "source_numeric_audit": "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_statistics_audit.json",
+  "source_numeric_audit_sha256": "136d37065f74f9ad55e4bb2995ef0d12c5bc025ba1e18fb052c1488d2a4e28b5",
+  "nominal_designs": "outputs/short_probe_reference/design_preparation_v1/nominal_designs_v1.json",
+  "nominal_designs_sha256": "5d706153dae9939ded3824ef616ea976cd0b967996895e785cd95b1f6a14bfc4",
+  "nominal_models": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/models.json",
+  "nominal_models_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+  "smoke": {
+    "streams": 1,
+    "units": 9,
+    "executions": 63,
+    "seed_start": 21200,
+    "seed_end": 21208,
+    "reserved": [
+      21209,
+      21399
+    ],
+    "maximum_environment_steps": 31500,
+    "maximum_controlled_resets": 63,
+    "maximum_simulation_frames": 1800000
+  },
+  "main": {
+    "streams": 54,
+    "units": 648,
+    "executions": 4536,
+    "seed_start": 20200,
+    "seed_end": 20847,
+    "reserved": [
+      20848,
+      21199
+    ],
+    "maximum_environment_steps": 2268000,
+    "maximum_controlled_resets": 4536,
+    "maximum_simulation_frames": 128000000
+  },
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "policy_updates": 0,
+  "output_root": "outputs/short_probe_reference/development_v1"
+}

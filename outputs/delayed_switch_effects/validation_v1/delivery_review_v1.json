@@ -1,0 +1,155 @@
+{
+  "experiment_run_id": "delayed_switch_effects_20261019T093447Z_5193855b2123",
+  "manifest_id": "13e29ef1bf5f09dd8ea39f1f61f04293c091ed0d038293a7ea8475e13a806c3f",
+  "source_git_commit": "5193855b2123a17277c63c817529d3fe653422d0",
+  "status": "PASSED_FIXED_OPERATION_STUDY_DELIVERY",
+  "reviewed_utc": "2026-10-19T10:36:21.943140+00:00",
+  "frozen_inputs_verified": 973,
+  "collection_and_audit_processes": {
+    "collect": {
+      "receipt_sha256": "699b2b20bec591083282b77cb84d295b709a669d5c998c17ee91db82dd13dd35",
+      "wall_ns": 2661053764000
+    },
+    "audit": {
+      "receipt_sha256": "e9bda07d1b38a94625a364088cc59ee05af771a7af83fd3b4f1f7e587c8ed339",
+      "wall_ns": 321931099200
+    }
+  },
+  "record_audit_sha256": "66221f94169b85784285206dc47519e9affce1b72dfb1908b69039406a4ede7c",
+  "records": {
+    "executions": 648,
+    "events": 382756,
+    "private_witnesses": 1944,
+    "matched_branch_pairs": 432,
+    "state_pair_comparisons": 864,
+    "failure_executions": 51
+  },
+  "costs": {
+    "new_control_steps": 75925,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 33048,
+        "simulation_attempts": 3380725,
+        "simulation_completed": 3380725,
+        "simulation_frames_attempted": 16903625,
+        "simulation_frames_completed": 16903625,
+        "reset_completed": 33048
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 32400,
+          "simulation_attempts": 3240000,
+          "simulation_completed": 3240000,
+          "simulation_frames_attempted": 16200000,
+          "simulation_frames_completed": 16200000,
+          "reset_completed": 32400
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 648,
+          "simulation_attempts": 64800,
+          "simulation_completed": 64800,
+          "simulation_frames_attempted": 324000,
+          "simulation_frames_completed": 324000,
+          "reset_completed": 648
+        },
+        "CONTROL": {
+          "simulation_attempts": 75925,
+          "simulation_completed": 75925,
+          "simulation_frames_attempted": 379625,
+          "simulation_frames_completed": 379625
+        }
+      }
+    },
+    "collection_wall_ns": 2648012150900,
+    "host_attempts": 75925,
+    "host_returned": 75925,
+    "policy_queries": 70741,
+    "parameter_fit_attempts": 1296,
+    "parameter_fit_results": 1296,
+    "optimizer_nfev": 1296,
+    "historical_nominal_cost_paid_once": {
+      "environment_steps": 3840,
+      "controlled_resets": 480,
+      "all_reset_calls": 24480,
+      "simulation_frames": 12259200
+    },
+    "historical_design_preparation": {
+      "enumerations": 3,
+      "candidate_rows": 432
+    },
+    "new_api_calls": 0,
+    "new_nominal_training": 0,
+    "new_selector_fits": 0,
+    "policy_updates": 0
+  },
+  "audit_recomputation": {
+    "recomputed_policy_queries": 70741,
+    "recomputed_parameter_fits": 1296,
+    "recomputed_optimizer_nfev": 1296
+  },
+  "statistics_audit": {
+    "integrity": "PASSED",
+    "contrasts_checked": 2,
+    "numeric_fields_checked": 6,
+    "maximum_absolute_difference": 1.9095836023552692e-14,
+    "scope": "Independent whole-group sums and contrast bootstrap; shared NumPy RNG and quantile definition."
+  },
+  "checks": {
+    "delivery_compileall": {
+      "receipt_sha256": "238201bbe7fe1117d4b7b8ae7ae7bf0504b90a1ab2ad9040c1601c7916008823",
+      "returncode": 0,
+      "wall_ns": 1011685800
+    },
+    "delivery_pip_check": {
+      "receipt_sha256": "89c7759d27365c4a3914ab915340160fae3d32aa7bcfb617d233587a251c98e0",
+      "returncode": 0,
+      "wall_ns": 889140800
+    },
+    "delivery_tracked_secret_scan": {
+      "receipt_sha256": "6736b764dfe5b1a72091e47647eb1ac7a3121cc7e5b01c6068f25ffdbc56e324",
+      "returncode": 0,
+      "wall_ns": 54147871400
+    }
+  },
+  "frozen_root_tests": {
+    "passed": 1146,
+    "rerun_for_result_delivery": false,
+    "receipt_sha256": "2c5ac36fd170bddcfbd3ba84c2a77fc883d81a569cb2e0ef9c09ac1cc8397b33",
+    "log_sha256": "9b99ee9bbf60adff561950064ac84a12472d5bdfdfdcfaa8908bcc59b78be4c4",
+    "reason": "Frozen src/scripts/tests and all manifest inputs unchanged; delivery adds data, figures, documentation and standalone helpers. New helpers compiled and rendering/scanning actually executed."
+  },
+  "software_cost_scope": {
+    "recorded_native_frames_in_frozen_full_suite": 1154495,
+    "new_study_readonly_policy_queries": 2218,
+    "new_study_readonly_fits": 58,
+    "new_study_test_environment_steps": 0,
+    "not_all_repository_software_costs": true
+  },
+  "artifacts": {
+    "main_report_sha256": "0a810f7b4b5a6b44f43ca4e4ce15a004c6ba88615fb8b24640b3599f7424a412",
+    "figure_receipt_sha256": "3f736947c99f49eb4fec47e5b9c181546bfc09d911a92abe272b293a01d101a1",
+    "visual_review_sha256": "8ce9ff8d61a21ffc9f9bf3d30e34a7ffcc732688866972342976286530194870",
+    "math_receipt_sha256": "bb41a785b1c190a2ab6a557075ec4134d4189d017433cf12621b6e13c4382c72"
+  },
+  "staged_scan": {
+    "files": 42,
+    "inspection_counts": {
+      "gzip_text": 3,
+      "utf8_text": 37,
+      "png_metadata": 2
+    },
+    "receipt_sha256": "c27236a207587d658cc28519503e760f0648e88d31fab980e24f9d8f1e5ceee6",
+    "scope": "Exact index/working bytes; repository credential patterns over strict UTF-8, each parsed gzip JSONL record, and PNG textual metadata; PNG container verification. No secret detection inside image pixels or for every possible credential format."
+  },
+  "preserved_format_failure": {
+    "first_scan_sha256": "e8cf93ebe5dded8ca10859bed54a4110af18e08f77d184c8b54bcd059b2b20cf",
+    "diagnosis_sha256": "52473700e7a0e9eab8f8ed6bdc18da239b02e5b34c77f7b2d5691456517e8077",
+    "remedy": "Directory-local *.svg -diff, as used by the existing plot artifacts. Generated bytes unchanged; SVG text still secret-scanned."
+  },
+  "local_report_links_checked": 7,
+  "all_new_api_calls": 0,
+  "learner_evaluated": false,
+  "publication_objective_complete": false,
+  "scope": "Completed fixed-operation measurement and delivery verification, not a new learned method, independent selector utility, or submission-ready paper.",
+  "wall_ns": 1620144300
+}

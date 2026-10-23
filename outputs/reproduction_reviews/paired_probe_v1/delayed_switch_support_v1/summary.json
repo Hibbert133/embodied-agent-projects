@@ -1,0 +1,154 @@
+{
+  "scope": "Retrospective support audit; no delayed-switch outcome has been executed or imputed.",
+  "programs": 2048,
+  "pairs": 1024,
+  "all_integer_boundaries": [
+    8,
+    499
+  ],
+  "illustrative_checkpoint": 100,
+  "checkpoint_counts": {
+    "completed_steps": 100,
+    "P_ENDED_K_ENDED": 880,
+    "P_LIVE_K_ENDED": 98,
+    "P_LIVE_K_LIVE": 36,
+    "P_ENDED_K_LIVE": 10,
+    "harmed_with_P_ended_K_live": 8,
+    "harmed_with_both_live": 6,
+    "rescued_with_P_live_K_ended": 46,
+    "rescued_with_both_live": 7
+  },
+  "choice_at_calls_counts": {
+    "4": 2048,
+    "8": 2048
+  },
+  "policy_commands_checked": 187296,
+  "recorded_choices_after_step8": 0,
+  "live_checkpoint_observations": 180,
+  "both_live_same_public_observation": 0,
+  "both_live_different_public_observation": 36,
+  "both_live_max_abs_observation_difference_min_max": [
+    0.024133776642135247,
+    1.6630213574151353
+  ],
+  "abstract_counterexample": {
+    "worlds": {
+      "A": {
+        "constant_old": {
+          "trace": [
+            {
+              "before": "START",
+              "action": "OLD",
+              "after": "OLD_PATH",
+              "cost": 1
+            },
+            {
+              "before": "OLD_PATH",
+              "action": "OLD",
+              "after": "END",
+              "cost": 1
+            }
+          ],
+          "loss": 2
+        },
+        "constant_new": {
+          "trace": [
+            {
+              "before": "START",
+              "action": "NEW",
+              "after": "NEW_PATH",
+              "cost": 1
+            },
+            {
+              "before": "NEW_PATH",
+              "action": "NEW",
+              "after": "END",
+              "cost": 3
+            }
+          ],
+          "loss": 4
+        },
+        "new_then_old": {
+          "trace": [
+            {
+              "before": "START",
+              "action": "NEW",
+              "after": "NEW_PATH",
+              "cost": 1
+            },
+            {
+              "before": "NEW_PATH",
+              "action": "OLD",
+              "after": "END",
+              "cost": 1
+            }
+          ],
+          "loss": 2
+        }
+      },
+      "B": {
+        "constant_old": {
+          "trace": [
+            {
+              "before": "START",
+              "action": "OLD",
+              "after": "OLD_PATH",
+              "cost": 1
+            },
+            {
+              "before": "OLD_PATH",
+              "action": "OLD",
+              "after": "END",
+              "cost": 1
+            }
+          ],
+          "loss": 2
+        },
+        "constant_new": {
+          "trace": [
+            {
+              "before": "START",
+              "action": "NEW",
+              "after": "NEW_PATH",
+              "cost": 1
+            },
+            {
+              "before": "NEW_PATH",
+              "action": "NEW",
+              "after": "END",
+              "cost": 3
+            }
+          ],
+          "loss": 4
+        },
+        "new_then_old": {
+          "trace": [
+            {
+              "before": "START",
+              "action": "NEW",
+              "after": "NEW_PATH",
+              "cost": 1
+            },
+            {
+              "before": "NEW_PATH",
+              "action": "OLD",
+              "after": "END",
+              "cost": 5
+            }
+          ],
+          "loss": 6
+        }
+      }
+    },
+    "keep_minus_switch_loss": {
+      "A": 2,
+      "B": -2
+    },
+    "unobserved_state_action": [
+      "NEW_PATH",
+      "OLD"
+    ],
+    "abstract_transitions_computed": 12,
+    "scope": "Elementary support counterexample, not a new theorem, identified robot model or empirical switching result."
+  }
+}

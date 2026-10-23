@@ -1,0 +1,40 @@
+test_absolute_pose_changes_response_without_relabeling_relative_coordinates (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_all_four_response_matrices_reject_future_inputs (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_analytic_jacobian_including_clipping_matches_finite_difference (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_conditional_support_rejects_exact_and_uniformly_near_confounded_inputs (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_constant_pose_cannot_identify_pose_interactions (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_fresh_pose_and_history_recover_known_parameters (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_incomplete_nonfinite_and_unregistered_training_rejected (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_missing_learned_response_stops_before_optimization (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_old_estimator_rejects_new_model_and_new_window (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_outside_training_pose_rejected_before_optimizer (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_private_fields_and_wrong_split_rejected (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_read_only_json_roundtrip_and_all_eight_observations_used (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_repeated_fixed_probes_cannot_train_any_method (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_same_data_ablations_and_pose_effect_are_real (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_saved_model_flags_ablations_and_covariance_are_checked (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_training_old_warm_and_cold_windows_cannot_substitute (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_unstable_inverse_not_accepted (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_visible_history_changes_result_without_fabricated_zero_state (tests.test_selected_response_reference_v1.SelectedResponseReferenceTests) ... ok
+test_budget_terminal_unreachable_and_scope_failures_keep_no_sample (tests.test_selected_nominal_acquisition_v1.SelectedNominalActorTests) ... ok
+test_changed_saved_program_rejected_before_movement (tests.test_selected_nominal_acquisition_v1.SelectedNominalActorTests) ... ok
+test_only_training_type_is_returned_and_old_input_type_rejects_it (tests.test_selected_nominal_acquisition_v1.SelectedNominalActorTests) ... ok
+test_original_fixed_program_preserves_all_actual_commands (tests.test_selected_nominal_acquisition_v1.SelectedNominalActorTests) ... ok
+test_preassigned_program_changes_actual_probe_without_changing_relocation (tests.test_selected_nominal_acquisition_v1.SelectedNominalActorTests) ... ok
+test_unknown_private_invalid_and_nonplanar_programs_rejected (tests.test_selected_nominal_acquisition_v1.SelectedNominalActorTests) ... ok
+test_actor_cannot_substitute_different_program_in_saved_choice (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_context_change_during_operation_is_detected_with_spent_step_counted (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_extra_controlled_reset_is_detected (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_false_source_fit_rejected (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_native_commands_continuity_single_reset_and_complete_costs (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_noise_tape_replacement_is_rejected_even_with_equal_values (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_non_nominal_current_context_rejected_before_action (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_old_non_nominal_physical_history_cannot_be_relabelled_train (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_prior_context_installation_cannot_be_hidden_by_current_identity (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_repeat_and_wrong_source_do_not_execute_more_physics (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+test_study_budget_reserves_full_operation_before_action (tests.test_selected_nominal_acquisition_v1.SelectedNominalHostTests) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 1.998s
+
+OK

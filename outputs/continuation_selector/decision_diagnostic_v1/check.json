@@ -1,0 +1,965 @@
+{
+  "experiment_run_id": "causal_continuation_20261015T104523Z_68da2c7ef160",
+  "manifest_id": "9fce66fe76b9201a7bf9573c50c4a7fb5a259e26373fb581d48b2c1d864e1a5c",
+  "source_git_commit": "68da2c7ef16051da6c34c047b7ba404118a21036",
+  "audit_sha256": "76cb42e04eb7b4a44099abf487f1abbc90bf776c7b03f6947d9fe567e6dbb705",
+  "source_sha256": "3d593f5229f4c4a36fa27e94b8398d0242d1ae1bb8420d40e35ec988806e2f31",
+  "full_selected_program_reexecution_pairs": 480,
+  "listed_steps_matched": 46086,
+  "listed_fields": [
+    "command",
+    "raw_policy",
+    "before",
+    "after",
+    "noise_before_hash",
+    "noise_after_hash",
+    "target_xy",
+    "executed_action_oracle",
+    "phase",
+    "simulation_time_before_oracle",
+    "simulation_time_after_oracle"
+  ],
+  "main_vs_other_selector_choices": [
+    {
+      "baseline": "MEAN_COST_NEAREST",
+      "different_choices": 66,
+      "same_choices": 30,
+      "changed_loss_improved": 24,
+      "changed_loss_worsened": 35,
+      "changed_loss_tied": 7,
+      "changed_success_gained": 0,
+      "changed_success_lost": 0,
+      "changed_cases": [
+        {
+          "stream": 1,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 1,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 1,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 8,
+          "success_difference": 0
+        },
+        {
+          "stream": 1,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 2,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 2,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 2,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 2,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -9,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 4,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 5,
+          "success_difference": 0
+        },
+        {
+          "stream": 4,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": -2,
+          "success_difference": 0
+        },
+        {
+          "stream": 4,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 5,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -3,
+          "success_difference": 0
+        },
+        {
+          "stream": 5,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -3,
+          "success_difference": 0
+        },
+        {
+          "stream": 5,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 8,
+          "success_difference": 0
+        },
+        {
+          "stream": 5,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 11,
+          "success_difference": 0
+        },
+        {
+          "stream": 6,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 6,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 6,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": -5,
+          "success_difference": 0
+        },
+        {
+          "stream": 6,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": -5,
+          "success_difference": 0
+        },
+        {
+          "stream": 6,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 2,
+          "success_difference": 0
+        },
+        {
+          "stream": 6,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "UPDATE_G16",
+          "loss_difference": -13,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "UPDATE_G16",
+          "loss_difference": -6,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 12,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 12,
+          "success_difference": 0
+        },
+        {
+          "stream": 9,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 9,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 9,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 10,
+          "success_difference": 0
+        },
+        {
+          "stream": 9,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 8,
+          "success_difference": 0
+        },
+        {
+          "stream": 9,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "UPDATE_G16",
+          "loss_difference": -16,
+          "success_difference": 0
+        },
+        {
+          "stream": 9,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "UPDATE_G16",
+          "loss_difference": -11,
+          "success_difference": 0
+        },
+        {
+          "stream": 10,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 9,
+          "success_difference": 0
+        },
+        {
+          "stream": 10,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 4,
+          "success_difference": 0
+        },
+        {
+          "stream": 10,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "UPDATE_G16",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 10,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "UPDATE_G16",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 11,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 11,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 11,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 39,
+          "success_difference": 0
+        },
+        {
+          "stream": 11,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 43,
+          "success_difference": 0
+        },
+        {
+          "stream": 12,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 12,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 12,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 12,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 12,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 12,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 2,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 15,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 10,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 28,
+          "success_difference": 0
+        },
+        {
+          "stream": 14,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": -4,
+          "success_difference": 0
+        },
+        {
+          "stream": 14,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": -3,
+          "success_difference": 0
+        },
+        {
+          "stream": 14,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 5,
+          "success_difference": 0
+        },
+        {
+          "stream": 14,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "DIRECT_G8",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "push-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -2,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "push-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -4,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "PASSIVE_G16",
+          "loss_difference": 9,
+          "success_difference": 0
+        }
+      ]
+    },
+    {
+      "baseline": "TASK_MEAN",
+      "different_choices": 10,
+      "same_choices": 86,
+      "changed_loss_improved": 2,
+      "changed_loss_worsened": 7,
+      "changed_loss_tied": 1,
+      "changed_success_gained": 0,
+      "changed_success_lost": 0,
+      "changed_cases": [
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 5,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 2,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 28,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -3,
+          "success_difference": 0
+        }
+      ]
+    },
+    {
+      "baseline": "SINGLE_FUTURE_RBF",
+      "different_choices": 10,
+      "same_choices": 86,
+      "changed_loss_improved": 2,
+      "changed_loss_worsened": 7,
+      "changed_loss_tied": 1,
+      "changed_success_gained": 0,
+      "changed_success_lost": 0,
+      "changed_cases": [
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 5,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 2,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 28,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -3,
+          "success_difference": 0
+        }
+      ]
+    },
+    {
+      "baseline": "TASK_FULL_PORTFOLIO",
+      "different_choices": 10,
+      "same_choices": 86,
+      "changed_loss_improved": 2,
+      "changed_loss_worsened": 7,
+      "changed_loss_tied": 1,
+      "changed_success_gained": 0,
+      "changed_success_lost": 0,
+      "changed_cases": [
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 3,
+          "success_difference": 0
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 5,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 1,
+          "success_difference": 0
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 2,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 6,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 0,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 0,
+          "success_difference": 0
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "future": 1,
+          "main_branch": "PASSIVE_G16",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": 28,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 0,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -1,
+          "success_difference": 0
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "future": 1,
+          "main_branch": "POINT16_CYCLE",
+          "baseline_branch": "DIRECT_G8",
+          "loss_difference": -3,
+          "success_difference": 0
+        }
+      ]
+    }
+  ],
+  "branch_counts": {
+    "MEAN_COST_RBF": {
+      "PASSIVE_G16": 38,
+      "DIRECT_G8": 54,
+      "POINT16_CYCLE": 4
+    },
+    "MEAN_COST_NEAREST": {
+      "PASSIVE_G16": 48,
+      "DIRECT_G8": 42,
+      "UPDATE_G16": 6
+    },
+    "TASK_MEAN": {
+      "PASSIVE_G16": 32,
+      "DIRECT_G8": 64
+    },
+    "SINGLE_FUTURE_RBF": {
+      "PASSIVE_G16": 32,
+      "DIRECT_G8": 64
+    },
+    "TASK_FULL_PORTFOLIO": {
+      "PASSIVE_G16": 32,
+      "DIRECT_G8": 64
+    }
+  },
+  "new_environment_steps": 0,
+  "api_calls": 0,
+  "fits": 0,
+  "thresholds_fitted": 0,
+  "scope": "Post-result descriptive contrasts and listed full-trace equality to already separately executed selected fixed programs; no new promotion gate, resimulation, model changes or complete hidden-state proof."
+}

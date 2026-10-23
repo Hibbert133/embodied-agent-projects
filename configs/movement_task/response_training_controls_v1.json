@@ -1,0 +1,83 @@
+{
+  "version": "response_training_controls_v1",
+  "scope": "TRAIN_ONLY_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+  "public_source": "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753/training/public_train_bundle.json",
+  "public_source_sha256": "79bf2819261976b7e62faba8ad6c12d39d0552dc2acebc81949e2da8a4631e75",
+  "fit_groups": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "dev_groups": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17
+  ],
+  "source_trajectories": 216,
+  "fit_trajectories": 144,
+  "dev_trajectories": 72,
+  "features": [
+    "F20",
+    "F43"
+  ],
+  "losses": [
+    "ISO",
+    "AXIS"
+  ],
+  "windows": [
+    1,
+    16
+  ],
+  "replicates": 3,
+  "updates": 5000,
+  "batch": 32,
+  "hidden_size": 32,
+  "padded_input_size": 43,
+  "scale_floor": 1e-06,
+  "scale_floor_replacement": 1.0,
+  "ridge": 0.001,
+  "optimizer": {
+    "name": "Adam",
+    "lr": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0,
+    "gradient_clip": null
+  },
+  "initial_seed_base": 202610310,
+  "sampling_seed_base": 202610340,
+  "linear_models": 18,
+  "neural_models": 144,
+  "optimizer_updates": 720000,
+  "common_history_start": 2,
+  "candidate_selection": "NONE; report every variant and every initialization",
+  "primary": "F20_ISO_W16_MINUS_F43_AXIS_W16_DEV_POST_TASK_MEAN_TRAJECTORY_RMSE",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 202610350,
+    "unit": "SIX_WHOLE_DEV_GROUPS_STRATIFIED_BY_BOUNDARY"
+  },
+  "early_stopping": false,
+  "retry": false,
+  "training_timeout_seconds": 14400,
+  "new_environment_steps": 0,
+  "new_all_resets": 0,
+  "new_physical_frames": 0,
+  "new_api_calls": 0,
+  "disk_free_floor_bytes": 629145600
+}

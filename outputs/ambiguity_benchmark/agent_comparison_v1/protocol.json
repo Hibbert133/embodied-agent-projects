@@ -1,0 +1,16 @@
+{
+  "threshold": 0.8445836201499942,
+  "selection_rule": "maximize leave-one-out tuning accuracy, then minimize probe requests; higher threshold tie-break",
+  "tuning_cases": 8,
+  "tuning_correct": 8,
+  "tuning_accuracy": 1.0,
+  "tuning_probe_requests": 3,
+  "tuning_probe_request_rate": 0.375,
+  "heldout_retuning": false,
+  "passive_model": "tuning-fitted standardized nearest class centroid",
+  "passive_uncertainty": "one minus normalized two-centroid distance margin",
+  "random_seed": 20260730,
+  "random_probe_probability": 0.375,
+  "probe_prediction_source": "frozen repeated-probe threshold outputs",
+  "claim_boundary": "four held-out matched cases; report exact counts"
+}

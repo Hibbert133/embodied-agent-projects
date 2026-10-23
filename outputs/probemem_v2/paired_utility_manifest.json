@@ -1,0 +1,49 @@
+{
+  "manifest_schema_version": 1,
+  "protocol": "probemem_paired_intervention_utility_development_v1",
+  "stage": "pre_phase_d_action_discrimination",
+  "source_git_commit": "44bc5d206ddf31b59ec4256b614be30fdecdd1a2",
+  "config_path": "configs/probemem_v2/paired_intervention_utility_development_v1.json",
+  "config_sha256": "0f7e24c1652cd180cef5731b2ae7af0e7405ee5920e23c5e6e9f17779bbf1ddd",
+  "implementation_sha256": {
+    "src/probemem/intervention_utility.py": "b5c806e54a5214c0ab3de299f2d24de2beb99f643beee0277fccce238f416245",
+    "src/evaluation/intervention_utility.py": "2a09f6e54442e98d13416a5526fbd70e8785898345a393058a7d3a6d1a42e4cf",
+    "scripts/run_probemem_paired_utility.py": "387a43ba40cfccd555ef1456d61be73ab8f7939dc589465e31813a1ca2190c4a",
+    "scripts/run_probemem_v2_smoke.py": "855e0811fc5e5e36a4656e33b9aa0156f481d0e51b9f213358e4ade55ee742ec"
+  },
+  "input_sha256": {
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "outputs/autoresearch/noise_calibration/selected.json": "748b6ab6e143ec0939b68cb4bca73e96dcdf934f3f153aa4936f7607923a5e2c"
+  },
+  "seed_range": [
+    740,
+    759
+  ],
+  "condition_cycle": [
+    "fault_01",
+    "fault_02",
+    "fault_03",
+    "fault_04",
+    "fault_05"
+  ],
+  "candidates": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "online_single_candidate_max_steps": 1064,
+    "evaluator_paired_collection_max_steps": 1564
+  },
+  "execution_timestamp_utc": "2026-07-31T17:22:44+00:00",
+  "dependencies": {
+    "python": "3.10.11",
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "numpy": "2.2.6"
+  },
+  "manifest_id": "92bfd43b97157a2dee3fb8da7c1e02fc0ac1dc3772fc53f50d3b12214335e501",
+  "experiment_run_id": "probemem_paired_utility_20260731T172244Z_44bc5d206ddf"
+}

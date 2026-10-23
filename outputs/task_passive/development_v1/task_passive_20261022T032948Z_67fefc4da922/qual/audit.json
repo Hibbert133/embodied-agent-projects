@@ -1,0 +1,72 @@
+{
+  "experiment_run_id": "task_passive_20261022T032948Z_67fefc4da922",
+  "manifest_id": "e11e6d48c8be94514293467826352123c2b512c1fbf34d9441ad3413be1cd0c3",
+  "source_git_commit": "67fefc4da9224e0c62b8373d0d4e8cb5b3d1bade",
+  "cohort": "QUAL",
+  "integrity": "PASSED",
+  "native_software_contract": "NOT_APPLICABLE",
+  "executions": 432,
+  "costs": {
+    "policy_queries": 47281,
+    "control_steps": 55513,
+    "successes": 401,
+    "independent_c4_c8_refits": 648,
+    "independent_c4_c8_nfev": 648,
+    "pi_plans": 15020,
+    "pi_changed_command_steps": 14419,
+    "pi_send_limit_steps": 6176,
+    "pi_integral_limit_steps": 0
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 22032,
+      "simulation_attempts": 2258713,
+      "simulation_completed": 2258713,
+      "simulation_frames_attempted": 11293565,
+      "simulation_frames_completed": 11293565,
+      "reset_completed": 22032
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 21600,
+        "simulation_attempts": 2160000,
+        "simulation_completed": 2160000,
+        "simulation_frames_attempted": 10800000,
+        "simulation_frames_completed": 10800000,
+        "reset_completed": 21600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 432,
+        "simulation_attempts": 43200,
+        "simulation_completed": 43200,
+        "simulation_frames_attempted": 216000,
+        "simulation_frames_completed": 216000,
+        "reset_completed": 432
+      },
+      "CONTROL": {
+        "simulation_attempts": 55513,
+        "simulation_completed": 55513,
+        "simulation_frames_attempted": 277565,
+        "simulation_frames_completed": 277565
+      }
+    }
+  },
+  "common_prefix_checks": {
+    "initial_pairs": 378,
+    "c8_prefix_pairs": 270,
+    "movement_pairs": 162
+  },
+  "pi_actual_effect_coverage": {
+    "RAW_TASK_PI_T0.5": 54,
+    "DIRECT_TASK_PI_T0.5": 54,
+    "MOVE_KEEP_TASK_PI_T0.5": 44,
+    "MOVE_INTEGRAL_TASK_PI_T2.0": 44
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_predictor_training": 0,
+  "completion_sha256": "bf9d5c5a0292e146206620003a30ebd9668d4221392adac42093a68b57f22963",
+  "auditor_sha256": "71bcf806a559e255153579cafee39b8743e4345ef8040a6f24e90313633fc1ac",
+  "wall_ns": 236985717900,
+  "scope": "Read-only program replay and independent PI/actuator/cost reconstruction; source-generated state witnesses, not physics reproduction or safety proof"
+}

@@ -1,0 +1,183 @@
+{
+  "experiment_run_id": "micro_20260731T064558Z_2fa7f211eb53",
+  "source_git_commit": "2fa7f211eb53777affec4a0e3633b6a3bd122d80",
+  "config_path": "configs/autoresearch/candidate_micro_evidence_development_v1.json",
+  "config_sha256": "30164ca99f6923aedd4bc869e7532e276b8df1d1d6cb6f6969af0280b8dc04a3",
+  "source_run_id": "development_20260731T035004Z_ed696b94484e",
+  "execution_timestamp_utc": "2026-07-31T06:45:58.387163+00:00",
+  "split": "development",
+  "source_population_cases": 20,
+  "fixed_recovery_rate": 0.4,
+  "oracle_candidate_recovery_rate": 0.65,
+  "horizons": [
+    {
+      "horizon": 16,
+      "cases": 20,
+      "utility_agreement_count": 10,
+      "utility_agreement_rate": 0.5,
+      "utility_agreement_wilson95": [
+        0.2992980081982123,
+        0.7007019918017877
+      ],
+      "selected_recovery_count": 8,
+      "selected_recovery_rate": 0.4,
+      "selected_recovery_wilson95": [
+        0.21880653237281705,
+        0.6134184992377469
+      ],
+      "versus_fixed_compensation": {
+        "win": 3,
+        "tie": 14,
+        "loss": 3
+      },
+      "versus_fixed_retry": {
+        "win": 2,
+        "tie": 16,
+        "loss": 2
+      },
+      "recovery_difference_vs_compensation": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.0,
+        "ci95_lower": -0.25,
+        "ci95_upper": 0.25
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.0,
+        "ci95_lower": -0.2,
+        "ci95_upper": 0.2
+      },
+      "mean_prefix_environment_steps": 32.0,
+      "mean_total_additional_steps": 406.7
+    },
+    {
+      "horizon": 32,
+      "cases": 20,
+      "utility_agreement_count": 9,
+      "utility_agreement_rate": 0.45,
+      "utility_agreement_wilson95": [
+        0.2581978582556243,
+        0.6579146575496577
+      ],
+      "selected_recovery_count": 9,
+      "selected_recovery_rate": 0.45,
+      "selected_recovery_wilson95": [
+        0.2581978582556243,
+        0.6579146575496577
+      ],
+      "versus_fixed_compensation": {
+        "win": 3,
+        "tie": 15,
+        "loss": 2
+      },
+      "versus_fixed_retry": {
+        "win": 3,
+        "tie": 15,
+        "loss": 2
+      },
+      "recovery_difference_vs_compensation": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.05,
+        "ci95_lower": -0.15,
+        "ci95_upper": 0.25
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.05,
+        "ci95_lower": -0.15,
+        "ci95_upper": 0.25
+      },
+      "mean_prefix_environment_steps": 64.0,
+      "mean_total_additional_steps": 422.25
+    },
+    {
+      "horizon": 64,
+      "cases": 20,
+      "utility_agreement_count": 11,
+      "utility_agreement_rate": 0.55,
+      "utility_agreement_wilson95": [
+        0.34208534245034233,
+        0.7418021417443759
+      ],
+      "selected_recovery_count": 9,
+      "selected_recovery_rate": 0.45,
+      "selected_recovery_wilson95": [
+        0.2581978582556243,
+        0.6579146575496577
+      ],
+      "versus_fixed_compensation": {
+        "win": 3,
+        "tie": 15,
+        "loss": 2
+      },
+      "versus_fixed_retry": {
+        "win": 3,
+        "tie": 15,
+        "loss": 2
+      },
+      "recovery_difference_vs_compensation": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.05,
+        "ci95_lower": -0.15,
+        "ci95_upper": 0.25
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.05,
+        "ci95_lower": -0.15,
+        "ci95_upper": 0.25
+      },
+      "mean_prefix_environment_steps": 128.0,
+      "mean_total_additional_steps": 486.15
+    },
+    {
+      "horizon": 128,
+      "cases": 20,
+      "utility_agreement_count": 8,
+      "utility_agreement_rate": 0.4,
+      "utility_agreement_wilson95": [
+        0.21880653237281705,
+        0.6134184992377469
+      ],
+      "selected_recovery_count": 9,
+      "selected_recovery_rate": 0.45,
+      "selected_recovery_wilson95": [
+        0.2581978582556243,
+        0.6579146575496577
+      ],
+      "versus_fixed_compensation": {
+        "win": 3,
+        "tie": 15,
+        "loss": 2
+      },
+      "versus_fixed_retry": {
+        "win": 3,
+        "tie": 15,
+        "loss": 2
+      },
+      "recovery_difference_vs_compensation": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.05,
+        "ci95_lower": -0.15,
+        "ci95_upper": 0.25
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": 0.05,
+        "ci95_lower": -0.15,
+        "ci95_upper": 0.25
+      },
+      "mean_prefix_environment_steps": 238.7,
+      "mean_total_additional_steps": 587.85
+    }
+  ],
+  "claim_status": "NO_STABLE_COST_JUSTIFIED_IMPROVEMENT"
+}

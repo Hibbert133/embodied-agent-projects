@@ -1,0 +1,52 @@
+{
+  "experiment_run_id": "observable_history_20261021T154956Z_d256a0cf6753",
+  "manifest_id": "210833e32b9ae18d9ad6f08eab55a4a2db9adebb00fc000686ea3e20a776ae5e",
+  "source_git_commit": "d256a0cf675377e1895e323648276a5309c0416b",
+  "split": "TRAIN",
+  "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+  "allocated_executions": 216,
+  "executions": 216,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 11016,
+      "simulation_attempts": 1121795,
+      "simulation_frames_attempted": 5608975,
+      "simulation_completed": 1121795,
+      "simulation_frames_completed": 5608975,
+      "reset_completed": 11016
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 10800,
+        "simulation_attempts": 1080000,
+        "simulation_frames_attempted": 5400000,
+        "simulation_completed": 1080000,
+        "simulation_frames_completed": 5400000,
+        "reset_completed": 10800
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 216,
+        "simulation_attempts": 21600,
+        "simulation_frames_attempted": 108000,
+        "simulation_completed": 21600,
+        "simulation_frames_completed": 108000,
+        "reset_completed": 216
+      },
+      "CONTROL": {
+        "simulation_attempts": 20195,
+        "simulation_frames_attempted": 100975,
+        "simulation_completed": 20195,
+        "simulation_frames_completed": 100975
+      }
+    }
+  },
+  "control_steps": 20195,
+  "control_step_attempts": 20195,
+  "events": 112296,
+  "witness_records": 1080,
+  "failure": null,
+  "wall_ns": 1079495264900,
+  "new_api_calls": 0,
+  "new_response_model_fits": 0,
+  "new_policy_training": 0
+}

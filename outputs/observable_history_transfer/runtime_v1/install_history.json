@@ -1,0 +1,13 @@
+{
+  "scope": "Dependency setup only; no scientific collection or LLM API calls",
+  "attempts": [
+    {"runtime": ".venv-history-training", "torch": "2.8.0+cpu", "wheel_download_bytes_approx": 619400000, "result": "FAILED_ERRNO_28_DISK_FULL", "partial_files_retained": true},
+    {"runtime": ".venv-history-training-cpu22", "torch": "2.2.2+cpu", "wheel_download_bytes_approx": 200700000, "result": "FIRST_INSTALL_FAILED_ERRNO_28_DISK_FULL", "partial_files_retained": true},
+    {"runtime": ".venv-history-training-cpu22", "torch": "2.2.2+cpu", "result": "INSTALL_COMPLETED_AFTER_NTFS_COMPRESSION", "verified_import": true, "numpy": "1.26.4", "pip_check": "No broken requirements found."}
+  ],
+  "cleanup_attempt": {"action": "Recursive removal of newly created failed training environment", "result": "AUTOMATIC_APPROVAL_REVIEW_REJECTED", "reason_returned": "blocked by policy", "executed": false, "alternative": "Retain environment and use NTFS lossless compression; no deletion workaround"},
+  "compression": {"logical_file_bytes_preserved": true, "scope": ["New failed runtime", "New CPU22 runtime", "Repository outputs"], "old_raw_records_and_restore_copies_retained": true, "old_source_hash_closure_reverified_before_freeze": "freeze_validation_v1/preflight.json"},
+  "new_scientific_executions": 0,
+  "new_environment_steps": 0,
+  "new_api_calls": 0
+}

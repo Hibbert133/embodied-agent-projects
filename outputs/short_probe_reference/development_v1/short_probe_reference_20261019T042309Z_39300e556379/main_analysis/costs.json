@@ -1,0 +1,211 @@
+{
+  "experiment_run_id": "short_probe_reference_20261019T042309Z_39300e556379",
+  "manifest_id": "470c763b64db660ba5f0f075508f625bda894cbadd597aab8ae7cc84cb84576f",
+  "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "phase": "MAIN",
+  "actual_lifecycle": {
+    "counts": {
+      "reset_attempts": 231336,
+      "simulation_attempts": 23566980,
+      "simulation_frames_attempted": 117834900,
+      "simulation_completed": 23566980,
+      "simulation_frames_completed": 117834900,
+      "reset_completed": 231336
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 226800,
+        "simulation_attempts": 22680000,
+        "simulation_frames_attempted": 113400000,
+        "simulation_completed": 22680000,
+        "simulation_frames_completed": 113400000,
+        "reset_completed": 226800
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 4536,
+        "simulation_attempts": 453600,
+        "simulation_frames_attempted": 2268000,
+        "simulation_completed": 453600,
+        "simulation_frames_completed": 2268000,
+        "reset_completed": 4536
+      },
+      "CONTROL": {
+        "simulation_attempts": 433380,
+        "simulation_frames_attempted": 2166900,
+        "simulation_completed": 433380,
+        "simulation_frames_completed": 2166900
+      }
+    }
+  },
+  "methods": {
+    "NO_PROBE": {
+      "executions": 648,
+      "online_environment_steps": 94075,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16994375,
+      "full_prior_nominal_source": {
+        "environment_steps": 0,
+        "controlled_resets": 0,
+        "all_reset_calls": 0,
+        "simulation_frames": 0
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 0.0,
+      "total_steps": 94075,
+      "fixed_probe_steps": 0,
+      "policy_steps": 94075,
+      "online_parameter_fits": 0,
+      "optimizer_nfev": 0,
+      "policy_queries": 94075,
+      "design_verification_candidates": 0
+    },
+    "ORIGINAL8_UPDATE": {
+      "executions": 648,
+      "online_environment_steps": 56801,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16808005,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 5.925925925925926,
+      "total_steps": 56801,
+      "fixed_probe_steps": 5184,
+      "policy_steps": 51617,
+      "online_parameter_fits": 648,
+      "optimizer_nfev": 648,
+      "policy_queries": 51617,
+      "design_verification_candidates": 0
+    },
+    "BALANCED4_UPDATE": {
+      "executions": 648,
+      "online_environment_steps": 56526,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16806630,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 5.925925925925926,
+      "total_steps": 56526,
+      "fixed_probe_steps": 2592,
+      "policy_steps": 53934,
+      "online_parameter_fits": 648,
+      "optimizer_nfev": 648,
+      "policy_queries": 53934,
+      "design_verification_candidates": 0
+    },
+    "DOPT4_UPDATE": {
+      "executions": 648,
+      "online_environment_steps": 55614,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16802070,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 5.925925925925926,
+      "total_steps": 55614,
+      "fixed_probe_steps": 2592,
+      "policy_steps": 53022,
+      "online_parameter_fits": 648,
+      "optimizer_nfev": 648,
+      "policy_queries": 53022,
+      "design_verification_candidates": 93312
+    },
+    "DOPT8_UPDATE": {
+      "executions": 648,
+      "online_environment_steps": 57560,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16811800,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 5.925925925925926,
+      "total_steps": 57560,
+      "fixed_probe_steps": 5184,
+      "policy_steps": 52376,
+      "online_parameter_fits": 648,
+      "optimizer_nfev": 648,
+      "policy_queries": 52376,
+      "design_verification_candidates": 93312
+    },
+    "DOPT4_KEEP_AT8": {
+      "executions": 648,
+      "online_environment_steps": 57126,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16809630,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 5.925925925925926,
+      "total_steps": 57126,
+      "fixed_probe_steps": 5184,
+      "policy_steps": 51942,
+      "online_parameter_fits": 648,
+      "optimizer_nfev": 648,
+      "policy_queries": 51942,
+      "design_verification_candidates": 93312
+    },
+    "DOPT4_FALLBACK8": {
+      "executions": 648,
+      "online_environment_steps": 55678,
+      "online_controlled_resets": 648,
+      "online_all_reset_calls": 33048,
+      "online_simulation_frames": 16802390,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 648,
+      "prior_source_steps_per_unit": 5.925925925925926,
+      "total_steps": 55678,
+      "fixed_probe_steps": 2596,
+      "policy_steps": 53082,
+      "online_parameter_fits": 649,
+      "optimizer_nfev": 649,
+      "policy_queries": 53082,
+      "design_verification_candidates": 93312
+    }
+  },
+  "shared_historical_nominal_source_paid_once": {
+    "environment_steps": 3840,
+    "controlled_resets": 480,
+    "all_reset_calls": 24480,
+    "simulation_frames": 12259200
+  },
+  "prior_nominal_design_preparation": {
+    "enumerations": 3,
+    "candidate_rows": 432
+  },
+  "collection_wall_ns": 8583702729400,
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "source_fees_are_historical_not_new_collection": true
+}

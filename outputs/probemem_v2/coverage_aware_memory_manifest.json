@@ -1,0 +1,56 @@
+{
+  "manifest_schema_version": 1,
+  "protocol": "probemem_coverage_aware_memory_development_v1",
+  "stage": "phase_c_verified_memory_applicability_extension",
+  "source_git_commit": "cca94dad8cbe002647ae50920ea5c557731ec33d",
+  "config_path": "configs/probemem_v2/coverage_aware_memory_development_v1.json",
+  "config_sha256": "a6ec84f0bd74fcb46cd7544e2131eaa03be0bb734d92227ce308e1e69b4ae65f",
+  "implementation_sha256": {
+    "src/probemem/intervention_utility.py": "b5c806e54a5214c0ab3de299f2d24de2beb99f643beee0277fccce238f416245",
+    "src/probemem/intervention_selector.py": "125f44c5c64eea416b449380153acd6eec04a439f634a3ef41e4063329d40171",
+    "src/probemem/intervention_memory.py": "aa88e0d734becfc2d073adbf7b48db47da49af81020daa2957a617d001dd2f8d",
+    "src/probemem/intervention_memory_gate.py": "2dfa344b7b635f2325c83af17e19238e25575d53a674b918f4bb4ee34084e586",
+    "src/evaluation/intervention_utility.py": "2a09f6e54442e98d13416a5526fbd70e8785898345a393058a7d3a6d1a42e4cf",
+    "scripts/run_probemem_paired_utility.py": "c31fb191e61dd005cefed90a2b2846cde1076a03770079a155ee0131befa047a",
+    "scripts/run_probemem_v2_smoke.py": "855e0811fc5e5e36a4656e33b9aa0156f481d0e51b9f213358e4ade55ee742ec"
+  },
+  "input_sha256": {
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "outputs/autoresearch/noise_calibration/selected.json": "748b6ab6e143ec0939b68cb4bca73e96dcdf934f3f153aa4936f7607923a5e2c",
+    "outputs/probemem_v2/verified_selected_intervention_episodes.jsonl": "ae0cd1227358014c746a657e548167b2c2bd7f735b55fd3e3bcc59f00321f0f3"
+  },
+  "seed_range": [
+    980,
+    1059
+  ],
+  "condition_cycle": [
+    "fault_05"
+  ],
+  "candidates": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "online_single_candidate_max_steps": 1064,
+    "evaluator_paired_collection_max_steps": 1564
+  },
+  "stopping_rule": {
+    "target_paired_operational_units": 20,
+    "maximum_initial_units": 80,
+    "may_read_candidate_outcome": false,
+    "may_read_winner_label": false,
+    "stop_signal": "paired candidate executability only"
+  },
+  "execution_timestamp_utc": "2026-07-31T18:43:53+00:00",
+  "dependencies": {
+    "python": "3.10.11",
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0",
+    "numpy": "2.2.6"
+  },
+  "manifest_id": "12a47860c1b8f6b95858be5cf3d5b9e0b50ccdef017fd41102b445b40a63f9e9",
+  "experiment_run_id": "probemem_paired_utility_20260731T184353Z_cca94dad8cbe"
+}

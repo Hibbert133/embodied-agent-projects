@@ -1,0 +1,49 @@
+{
+  "status": "PASSED_BEFORE_FIRST_SCIENTIFIC_INTERACTION",
+  "design_sha256": "1934b0e6c0382478e10825365b0cc2dcb5940359b4aca2f48bb907472e6e52d7",
+  "design_doc_sha256": "84cd9e937b55b40bd6ac46a10affe8dac5bd9178183d89a165771d315cd54e7a",
+  "implementation_sha256": {
+    "src/probe/response_qualification_behavior_v1.py": "c5465a3bb11076ea7a38e7a8af0123024da8b0cb8d846e425268f213abbb7623",
+    "src/probe/response_qualification_model_v1.py": "348824196b209b912c3f3213f440c56039c8d843a319504a09818be1bfbb511a",
+    "src/analysis/response_qualification_io_v1.py": "035a31658a2420286acfa47b01365dc623f820eab6d57badc3e54da44ba06e17",
+    "src/analysis/response_qualification_collect_v1.py": "0020fd984fb7eddc32d7a074710b984fe6e0518bb5e3ec5c2210e520f5bd813d",
+    "src/analysis/response_qualification_evaluation_v1.py": "8c09a1fd27080186c0ee0d934a95d3bec6649ba1a4a107e98e6ecd387fa87136",
+    "src/analysis/response_qualification_audit_v1.py": "fa3155e178288b589eb7bec6bd42a778e90b2b0107f724bb01e9c4377f88683b",
+    "scripts/run_response_model_qualification_v1.py": "d8e677eefca758ca17f8004d309f2b0cd4da5105e5193efa6674cbac6b577785",
+    "scripts/audit_response_model_qualification_v1.py": "f8965543b09b128ac62ff5088d559a8a8511ca5f65f01404caabecd34502aafe",
+    "scripts/report_response_model_qualification_v1.py": "66461cb19129b1534b30c95bca7c3111770e6cc24d701d39418dfc7f0e0c355a",
+    "tests/test_response_qualification_v1.py": "166ed303be01b40d94cbaa56a50968f985c65a0b84542a14678832f8b9f922ec",
+    "docs/protocols/movement_response_model_qualification_execution_v1.md": "ba0ce91cec3641bcdb2583c355c08efc2ee123712c737dc65b1fd642225a8a25"
+  },
+  "checks": {
+    "unittest": {
+      "source_files": 861,
+      "receipt_sha256": "24de0d4e59c96c751acffbbda307fd56f6f7cdf296c84e8309065002218a2185"
+    },
+    "compileall": {
+      "source_files": 861,
+      "receipt_sha256": "e62aab0538e26ef092447a72a0d26463ef0e1dbb3b47e3ee5431de316faacb96"
+    },
+    "pip_check": {
+      "source_files": 861,
+      "receipt_sha256": "5120a27c9b9b86d81b6cdd27d1e41f85f82bbc1d2a3d5654e39fb9ed6feff6b1"
+    },
+    "tracked_secret_scan": {
+      "source_files": 861,
+      "receipt_sha256": "8e9a4b3ae671a4602568bc290f40ea991b1f95f1b951904375cb13122d80eba2"
+    },
+    "diff_check": {
+      "source_files": 861,
+      "receipt_sha256": "6897977e7b34dc61d086dd3c4f232a2c56cc746241c2ec8c0c72596e6d8e415b"
+    }
+  },
+  "old_runtime_source_files_unchanged": 1201,
+  "new_scientific_executions": 0,
+  "new_scientific_steps": 0,
+  "new_scientific_resets": 0,
+  "new_scientific_fits": 0,
+  "new_api_calls": 0,
+  "software_fixture_scope": "Full unittest native fixtures have separate recorded receipts; preliminary targeted software attempts are not included in that invocation's costs.",
+  "reserved_seed_scope_sha256": "c9065e0ef4c7a5c9b8529ef0f6cc722b54a536f057e5b750eef6f12cb77d14e6",
+  "wall_ns": 4661686400
+}

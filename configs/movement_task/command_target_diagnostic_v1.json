@@ -1,0 +1,69 @@
+{
+  "protocol": "COMMAND_TARGET_SOURCE_DIAGNOSTIC_V1",
+  "classification": "POST_HOC_DESCRIPTIVE_ONLY",
+  "source_executions": 1752,
+  "source_steps": 152128,
+  "cohorts": [
+    {
+      "name": "OLD_NOMINAL_TRAIN",
+      "executions": 1152,
+      "steps": 75641
+    },
+    {
+      "name": "RECENT_SOFTWARE_NATIVE",
+      "executions": 60,
+      "steps": 10633
+    },
+    {
+      "name": "RECENT_QUAL",
+      "executions": 540,
+      "steps": 65854
+    }
+  ],
+  "public_reference": "Declared installed reset/box/scale prior plus past sent commands, identity input,zero noise; not actual state or a distribution mean",
+  "oracle_replays": "Saved applied action and true-parameter zero-noise action; evaluation only, fixed recorded commands, no new hand trajectory",
+  "reset_prior": [
+    0.0,
+    0.6,
+    0.2
+  ],
+  "workspace_lower": [
+    -0.5,
+    0.4,
+    0.05
+  ],
+  "workspace_upper": [
+    0.5,
+    1.0,
+    0.5
+  ],
+  "action_scale": 0.01,
+  "measurement_canonical_program": "LOCAL_PID_KEEP",
+  "step_bins": [
+    [
+      1,
+      8
+    ],
+    [
+      9,
+      16
+    ],
+    [
+      17,
+      32
+    ],
+    [
+      33,
+      64
+    ]
+  ],
+  "new_environment_creations": 0,
+  "new_resets": 0,
+  "new_environment_steps": 0,
+  "new_physical_frames": 0,
+  "new_fits": 0,
+  "new_online_LLM_API_calls": 0,
+  "no_threshold_model_or_old_comparison_changes": true,
+  "no_safety_prediction_or_task_qualification": true,
+  "publication_goal_complete": false
+}

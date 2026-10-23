@@ -1,0 +1,48 @@
+{
+  "experiment_run_id": "action_response_20261014T104928Z_1c3798544481",
+  "manifest_id": "579864fc921cbd15bb5222c8f7b127a49fc7c1c92fd2bdde6f38d62bb165e060",
+  "source_git_commit": "1c37985444816ad9cca434d2fe38825678fc82dd",
+  "phase": "readonly_postprocessing_tools_v1",
+  "recorded_at_utc": "2026-10-14T11:11:39.485694+00:00",
+  "source_sha256": {
+    "scripts/analyze_action_response_scope.py": "934009d801ef4f581d19ae7f226e9bfe0e9804c226c5b7a69be655ee0c88d261",
+    "scripts/render_action_response.py": "f14f52a1fd641b1104c1eb1e75578cf0003883f46cc619617e934b6f0caef5e8",
+    "scripts/render_action_query_counterexample.py": "08447804e21791b0a660d9fe81ed60c086ff7035e25bf3ac3fda31528d2f5eda",
+    "tests/test_action_response_scope.py": "0d00bf851409d653f81b0eb52a7a666906df0d0b9a2aa06099b691df3598b87b",
+    "docs/research/action_response_scope_diagnosis_v1.md": "b937d7e213985fcb5babfd55ab05fad0204bce57e863d2596539e183af1bbee7"
+  },
+  "checks": {
+    "full_unit_suite": "PASSED",
+    "test_count": 714,
+    "elapsed_seconds": 116.482,
+    "compileall": "PASSED",
+    "pip_check": "PASSED",
+    "tracked_secret_scan": "PASSED",
+    "git_diff_check": "PASSED",
+    "git_cached_diff_check": "PASSED",
+    "frozen_input_hashes_unchanged": 600,
+    "witness_versions_hash_verified": 2,
+    "witness_v2_visual_qa": "PASSED"
+  },
+  "archived_logs": {
+    "final_full_suite.log.gz": {
+      "uncompressed_sha256": "d585e382df519320bddf0cb17367ff3f89a0db3314128cf285f15cfdade808bc",
+      "gzip_sha256": "84fd424482cd7af7018e7252a2db007baa7c50f84afd19180c9aac0f737a3799"
+    },
+    "prior_full_suite_713.log.gz": {
+      "uncompressed_sha256": "958d5c1836a22278abd8ee17113eab94c86d4416a55a7aa545e45ef80d7bf248",
+      "gzip_sha256": "dd4f1f8ee61f34f56566e0bcab4dc398726ec57e6acfa0d3ec1b45de45d21e84"
+    },
+    "secret_scan.log.gz": {
+      "uncompressed_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "gzip_sha256": "cbe17bd7513ac1fc9cc6d1e9201af3fe041d8b7e0919d01106bf6fcd11e3f2ed"
+    }
+  },
+  "primary_collection_status_at_tool_validation": "RUNNING",
+  "primary_collection_inputs_changed": false,
+  "completed_task_results_read_by_postprocessors": false,
+  "new_environment_steps_in_this_phase": 0,
+  "new_api_calls_in_this_phase": 0,
+  "physical_response_qualified": false,
+  "scope": "Postcollection tools and analytic image example only; current raw collection is excluded from this commit."
+}

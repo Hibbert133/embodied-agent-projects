@@ -1,0 +1,49 @@
+{
+  "required_checks": [
+    {
+      "name": "secrets",
+      "returncode": 0
+    },
+    {
+      "name": "diff",
+      "returncode": 0
+    },
+    {
+      "name": "staged_diff",
+      "returncode": 0
+    }
+  ],
+  "staged_sha256": {
+    "configs/short_probe_reference/development_v1.json": "f4be506c18c3b86d8016555558ac206fa7a60d6e9bdd834f0a5978c2472c0c2a",
+    "docs/protocols/short_probe_reference_development_v1.md": "e6a29ce1f768d5cb97f6aebfe4624efacb44be1b8cc7c9f4d3947b2b671e9504",
+    "outputs/short_probe_reference/pipeline_software_v1/allocation_review_v1.json": "13291b5adfe5a77d783d3677e392d74455056681a0b19498223d2ed95bf06b59",
+    "outputs/short_probe_reference/pipeline_software_v1/compile_dependencies_v1.json": "bb25f97c3c2b591e34c6b376177e140e30a820dcb406257dd92e79b8d71de151",
+    "outputs/short_probe_reference/pipeline_software_v1/compile_v1.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/short_probe_reference/pipeline_software_v1/dependencies_v1.txt": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "outputs/short_probe_reference/pipeline_software_v1/full_v1.txt": "a35c9f0cd10b0b319858353875c130e154c042e2c86973a842fd0cf68625c626",
+    "outputs/short_probe_reference/pipeline_software_v1/full_v1_receipt.json": "41410ea95bda906fe3d9aba81dbbc10d926ea0da70ad0098667bb1d33ebfb7d7",
+    "outputs/short_probe_reference/pipeline_software_v1/source_dependencies_v1.json": "dda11f41e439e2080e60df466c0acc8f13703aa8c739bc4d0a7dcee38c80d147",
+    "outputs/short_probe_reference/pipeline_software_v1/target_v1.txt": "133109dfb76a5548a1364bc75fe20dab25a7b8448944862b4b4a5e41115083f2",
+    "outputs/short_probe_reference/pipeline_software_v1/target_v2.txt": "ca31019e56bc4f6a6666e9c7d86b472fc6f911c3c8407d3cf8bfb815e51c97b6",
+    "outputs/short_probe_reference/pipeline_software_v1/target_v2_receipt.json": "89ecf0363a4480b53d0e5e025ccd551ba2b552bca0942a26335273122238352e",
+    "reports/short_probe_reference/.gitattributes": "308a40fa1d89ae5ea4390b4c9b46a0108b09f171f07898f25d451fa0c69c4e9f",
+    "scripts/audit_short_probe_reference_v1.py": "8d8f8ef737fb37e123d7605edbba2c8f49b3fe16fc6996946af685f45c9cb207",
+    "scripts/run_short_probe_reference_v1.py": "5a67130fc7d332e65c4ce4706851299d96a73b025be3453a4d972e86e16216d4",
+    "scripts/short_probe_reference_pipeline_v1.py": "1b7d13cc9e58db661338dd317dc5fc40b92823ee1b8830b784c7095d15531de0",
+    "src/analysis/short_probe_numeric_audit_v1.py": "2fad6987b81bcb2fa883bf6fceac03b39e6f3508227c9fdbefdf936217ef37fd",
+    "src/analysis/short_probe_study_audit_v1.py": "daccb4a4616c99c39ed09aec7e863f455bd65da6c6858dd469b84d3fe0bf7267",
+    "src/analysis/short_probe_study_io_v1.py": "1c833840022ff8b4ce662da1340ec288201d07241041800b40fd6c2c3aa1192b",
+    "src/analysis/short_probe_study_v1.py": "903cae689729317906b05d46ccd5d84382d78bf9fad7e07640da21764f753513",
+    "tests/test_short_probe_study_v1.py": "c4c5e97879e312f4c089049dbf8db9bd9924e22c316e34465562416ff9f1f4ea"
+  },
+  "supplemental_secret_findings": [],
+  "validated_source_unchanged": true,
+  "full_tests_passed": true,
+  "full_test_count": 1105,
+  "new_scientific_population_executed": false,
+  "first_target_failure": "Only overstrict arbitrary minimum field-count assertion failed; numerical reconstructions agreed. Original target_v1.txt retained.",
+  "current_target": "17 passed; all 1105 repository tests passed",
+  "current_target_native_frames": 1661345,
+  "legacy_suite_physical_costs": "not exhaustively aggregated; not zero",
+  "seed_interval_review": "83 explicit config seed/reservation intervals inspected; no overlap with new study ranges; separate posterior RNG 19804 is not a task seed."
+}

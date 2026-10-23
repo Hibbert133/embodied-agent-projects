@@ -1,0 +1,12 @@
+{
+  "schema_version": 8,
+  "registry_id": "probemem_sciagent_micro_probe_utility_seed_registry_v8",
+  "inherits": "configs/probemem_sciagent/seed_registry_v7.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "micro_probe_utility_development": [6750, 6849],
+    "micro_probe_utility_future_reserved": [6850, 6949]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 6749]],
+  "notes": "The v1.6 stream remains audit-failed and immutable. Seeds 6650--6749 remain reserved. Only v1.7 micro-probe utility development may execute on 6750--6849."
+}

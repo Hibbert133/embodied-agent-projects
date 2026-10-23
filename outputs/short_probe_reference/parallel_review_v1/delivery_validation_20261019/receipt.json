@@ -1,0 +1,76 @@
+{
+  "schema": "short_probe_delivery_precommit_checks_v1",
+  "created_utc": "2026-10-19T06:50:52.111008+00:00",
+  "checks": [
+    {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 190758223100,
+      "output_sha256": "c2b932c604cdc0c74a0c4b1cff42bd17197e0302adc41a1a5006347fd4c823ba"
+    },
+    {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 685008700,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 2202883000,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 71188214500,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    },
+    {
+      "check": "tracked_diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 54856500,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "status": "PASSED",
+  "frozen_inputs_unchanged": true,
+  "frozen_input_count": 810,
+  "frozen_source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "head": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "scope": "Required repository checks before delivery. The secret script scans tracked working-tree text despite its --staged argument; new files and staged exact bytes require a separate final scan. Tests are software validation and are not scientific task outcomes."
+}

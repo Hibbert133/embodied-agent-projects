@@ -1,0 +1,13 @@
+{
+  "schema_version": 2,
+  "registry_id": "probemem_calibrated_verifier_seed_registry_v2",
+  "inherits": "configs/probemem_verifier/seed_registry_v1.json",
+  "historical_partitions_immutable": true,
+  "new_partitions": {
+    "calibrated_verifier_calibration": [4800, 4899],
+    "calibrated_verifier_prospective_development": [4900, 5099],
+    "calibrated_verifier_future_reserved": [5100, 5299]
+  },
+  "blocked_historical": [[3100, 3199], [3950, 3999], [4600, 4799]],
+  "notes": "Calibration may execute 4800--4899 only. Prospective development 4900--5099 is blocked until calibration passes and a frozen development config is committed. Seeds 5100--5299 remain unexecuted and reserved."
+}

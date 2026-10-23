@@ -1,0 +1,8 @@
+{
+  "status": "SUPERSEDED_PRE_EXECUTION_PROTOCOL_DEFECT",
+  "fresh_seed_consumed": false,
+  "initial_units": 0,
+  "operational_cases": 0,
+  "defect": "The initial runner required HEAD to equal the pre-manifest source commit, making a committed immutable manifest impossible to execute.",
+  "resolution": "Preserve this unexecuted manifest and generate a new manifest after correcting the ancestry and manifest-only commit validation."
+}

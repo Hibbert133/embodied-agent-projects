@@ -1,0 +1,3180 @@
+[
+  {
+    "role": "DELAYED_INTERVENTION",
+    "future": 0,
+    "program": "CONTINUE_CURRENT",
+    "start_sequence": 37,
+    "actor": {
+      "status": "COMPLETED",
+      "failure": null,
+      "initial_completed_steps": 10,
+      "completed_steps": 12,
+      "charged_steps": 12,
+      "remaining_budget": 488,
+      "step_attempts": 2,
+      "accepted_step_receipts": 2,
+      "unconfirmed_step_attempts": 0,
+      "policy_queries_attempted": 2,
+      "policy_queries_completed": 2,
+      "last_confirmed_observation": {
+        "observation": [
+          0.007297744803130628,
+          0.0962413407862187,
+          0.12,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": true
+      },
+      "choice": {
+        "action_id": "CONTINUE_CURRENT",
+        "at_calls": 10,
+        "boundary_observation": {
+          "observation": [
+            0.005064943376928569,
+            0.08140777423977852,
+            0.1,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminated": false,
+          "truncated": false,
+          "success": false
+        },
+        "task": "push-v3",
+        "remaining_budget": 490,
+        "candidate_map": {
+          "CONTINUE_CURRENT": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.12,
+              -0.08,
+              0.0,
+              0.0
+            ]
+          },
+          "SWITCH_SAVED": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              -0.2,
+              0.1,
+              0.0,
+              0.0
+            ]
+          },
+          "RUN_UNCORRECTED": {
+            "source": "UNCORRECTED",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "STOP": null
+        },
+        "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+        "sequence": 0,
+        "saved_ns": 344470795415700
+      },
+      "success": true,
+      "deadline_loss": 12,
+      "events": [
+        {
+          "kind": "CHOICE",
+          "payload": {
+            "action_id": "CONTINUE_CURRENT",
+            "at_calls": 10,
+            "boundary_observation": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "task": "push-v3",
+            "remaining_budget": 490,
+            "candidate_map": {
+              "CONTINUE_CURRENT": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.12,
+                  -0.08,
+                  0.0,
+                  0.0
+                ]
+              },
+              "SWITCH_SAVED": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  -0.2,
+                  0.1,
+                  0.0,
+                  0.0
+                ]
+              },
+              "RUN_UNCORRECTED": {
+                "source": "UNCORRECTED",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "STOP": null
+            },
+            "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+            "sequence": 0,
+            "saved_ns": 344470795415700
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 10,
+            "decision_sequence": 0,
+            "command": [
+              0.5199999809265137,
+              0.2200000137090683,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 1,
+            "saved_ns": 344470796464200
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 1,
+            "at_calls": 11,
+            "after": {
+              "observation": [
+                0.006134353747591377,
+                0.08831619992852213,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 2,
+            "saved_ns": 344470797825700
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 11,
+            "decision_sequence": 0,
+            "command": [
+              0.5199999809265137,
+              0.2200000137090683,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.006134353747591377,
+                0.08831619992852213,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 3,
+            "saved_ns": 344470798651900
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 3,
+            "at_calls": 12,
+            "after": {
+              "observation": [
+                0.007297744803130628,
+                0.0962413407862187,
+                0.12,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": true
+            },
+            "sequence": 4,
+            "saved_ns": 344470800105700
+          }
+        }
+      ]
+    },
+    "ledger_before": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "ledger_after": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 12,
+        "simulation_frames_attempted": 60,
+        "simulation_completed": 12,
+        "simulation_frames_completed": 60
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 12,
+          "simulation_frames_attempted": 60,
+          "simulation_completed": 12,
+          "simulation_frames_completed": 60
+        }
+      }
+    },
+    "host_completed_suffix_steps": 2,
+    "host_policy_queries": 2,
+    "end_witness": {
+      "native_sha256": "13a7b286cb09cac1624fb6f493bd34387263daa5b0b51b38a4b6d1f2294ebaf1",
+      "python_semantic_sha256": "8dc928a94f10330b75c5351bd7f4385dde60f7f7aa675876eb361972a20d7ad4",
+      "noise_past_sha256": "6082f86f6cafe91c644162f92434a2893c71c2681933a32036e7c5961a1d9b87",
+      "simulation_time": 0.15000000000000008
+    },
+    "current_provenance": {
+      "source_global_sequence": 4,
+      "source_public_sequence": 1,
+      "available_at_calls": 0,
+      "source_choice_sha256": "723ffb5c550d5ad041d937d9e2ab8f8063f7f1ce2ce265869f159a49f87d6b46"
+    },
+    "saved_provenance": {
+      "source_global_sequence": 3,
+      "source_public_sequence": 0,
+      "available_at_calls": 0,
+      "source_choice_sha256": "10532bb722ed2234745813dd4a40bb549d5904648740eb3a624d5b8d936d0224"
+    },
+    "end_sequence": 47
+  },
+  {
+    "role": "DELAYED_INTERVENTION",
+    "future": 0,
+    "program": "CONTINUE_CURRENT",
+    "start_sequence": 37,
+    "actor": {
+      "status": "COMPLETED",
+      "failure": null,
+      "initial_completed_steps": 10,
+      "completed_steps": 12,
+      "charged_steps": 12,
+      "remaining_budget": 488,
+      "step_attempts": 2,
+      "accepted_step_receipts": 2,
+      "unconfirmed_step_attempts": 0,
+      "policy_queries_attempted": 2,
+      "policy_queries_completed": 2,
+      "last_confirmed_observation": {
+        "observation": [
+          0.007297744803130628,
+          0.0962413407862187,
+          0.12,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": true
+      },
+      "choice": {
+        "action_id": "CONTINUE_CURRENT",
+        "at_calls": 10,
+        "boundary_observation": {
+          "observation": [
+            0.005064943376928569,
+            0.08140777423977852,
+            0.1,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminated": false,
+          "truncated": false,
+          "success": false
+        },
+        "task": "push-v3",
+        "remaining_budget": 490,
+        "candidate_map": {
+          "CONTINUE_CURRENT": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.12,
+              -0.08,
+              0.0,
+              0.0
+            ]
+          },
+          "SWITCH_SAVED": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              -0.2,
+              0.1,
+              0.0,
+              0.0
+            ]
+          },
+          "RUN_UNCORRECTED": {
+            "source": "UNCORRECTED",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "STOP": null
+        },
+        "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+        "sequence": 0,
+        "saved_ns": 344470907385600
+      },
+      "success": true,
+      "deadline_loss": 12,
+      "events": [
+        {
+          "kind": "CHOICE",
+          "payload": {
+            "action_id": "CONTINUE_CURRENT",
+            "at_calls": 10,
+            "boundary_observation": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "task": "push-v3",
+            "remaining_budget": 490,
+            "candidate_map": {
+              "CONTINUE_CURRENT": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.12,
+                  -0.08,
+                  0.0,
+                  0.0
+                ]
+              },
+              "SWITCH_SAVED": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  -0.2,
+                  0.1,
+                  0.0,
+                  0.0
+                ]
+              },
+              "RUN_UNCORRECTED": {
+                "source": "UNCORRECTED",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "STOP": null
+            },
+            "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+            "sequence": 0,
+            "saved_ns": 344470907385600
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 10,
+            "decision_sequence": 0,
+            "command": [
+              0.5199999809265137,
+              0.2200000137090683,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 1,
+            "saved_ns": 344470908432700
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 1,
+            "at_calls": 11,
+            "after": {
+              "observation": [
+                0.006134353747591377,
+                0.08831619992852213,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 2,
+            "saved_ns": 344470909790800
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 11,
+            "decision_sequence": 0,
+            "command": [
+              0.5199999809265137,
+              0.2200000137090683,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.006134353747591377,
+                0.08831619992852213,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 3,
+            "saved_ns": 344470910592700
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 3,
+            "at_calls": 12,
+            "after": {
+              "observation": [
+                0.007297744803130628,
+                0.0962413407862187,
+                0.12,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": true
+            },
+            "sequence": 4,
+            "saved_ns": 344470911998100
+          }
+        }
+      ]
+    },
+    "ledger_before": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "ledger_after": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 12,
+        "simulation_frames_attempted": 60,
+        "simulation_completed": 12,
+        "simulation_frames_completed": 60
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 12,
+          "simulation_frames_attempted": 60,
+          "simulation_completed": 12,
+          "simulation_frames_completed": 60
+        }
+      }
+    },
+    "host_completed_suffix_steps": 2,
+    "host_policy_queries": 2,
+    "end_witness": {
+      "native_sha256": "13a7b286cb09cac1624fb6f493bd34387263daa5b0b51b38a4b6d1f2294ebaf1",
+      "python_semantic_sha256": "8dc928a94f10330b75c5351bd7f4385dde60f7f7aa675876eb361972a20d7ad4",
+      "noise_past_sha256": "6082f86f6cafe91c644162f92434a2893c71c2681933a32036e7c5961a1d9b87",
+      "simulation_time": 0.15000000000000008
+    },
+    "current_provenance": {
+      "source_global_sequence": 4,
+      "source_public_sequence": 1,
+      "available_at_calls": 0,
+      "source_choice_sha256": "974bcd33bccb64d47423f2bac523a004ebbbbb60187fe97d3015f639707bb89f"
+    },
+    "saved_provenance": {
+      "source_global_sequence": 3,
+      "source_public_sequence": 0,
+      "available_at_calls": 0,
+      "source_choice_sha256": "359bab4ae2af926a52b8f1c192c7ad8d418444d97ef7861b8a3780451a2036ec"
+    },
+    "end_sequence": 47
+  },
+  {
+    "role": "DELAYED_INTERVENTION",
+    "future": 0,
+    "program": "SWITCH_SAVED",
+    "start_sequence": 37,
+    "actor": {
+      "status": "COMPLETED",
+      "failure": null,
+      "initial_completed_steps": 10,
+      "completed_steps": 12,
+      "charged_steps": 12,
+      "remaining_budget": 488,
+      "step_attempts": 2,
+      "accepted_step_receipts": 2,
+      "unconfirmed_step_attempts": 0,
+      "policy_queries_attempted": 2,
+      "policy_queries_completed": 2,
+      "last_confirmed_observation": {
+        "observation": [
+          0.0071877448055893195,
+          0.08824134096503258,
+          0.12,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": true
+      },
+      "choice": {
+        "action_id": "SWITCH_SAVED",
+        "at_calls": 10,
+        "boundary_observation": {
+          "observation": [
+            0.005064943376928569,
+            0.08140777423977852,
+            0.1,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminated": false,
+          "truncated": false,
+          "success": false
+        },
+        "task": "push-v3",
+        "remaining_budget": 490,
+        "candidate_map": {
+          "CONTINUE_CURRENT": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.12,
+              -0.08,
+              0.0,
+              0.0
+            ]
+          },
+          "SWITCH_SAVED": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              -0.2,
+              0.1,
+              0.0,
+              0.0
+            ]
+          },
+          "RUN_UNCORRECTED": {
+            "source": "UNCORRECTED",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "STOP": null
+        },
+        "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+        "sequence": 0,
+        "saved_ns": 344470962544400
+      },
+      "success": true,
+      "deadline_loss": 12,
+      "events": [
+        {
+          "kind": "CHOICE",
+          "payload": {
+            "action_id": "SWITCH_SAVED",
+            "at_calls": 10,
+            "boundary_observation": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "task": "push-v3",
+            "remaining_budget": 490,
+            "candidate_map": {
+              "CONTINUE_CURRENT": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.12,
+                  -0.08,
+                  0.0,
+                  0.0
+                ]
+              },
+              "SWITCH_SAVED": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  -0.2,
+                  0.1,
+                  0.0,
+                  0.0
+                ]
+              },
+              "RUN_UNCORRECTED": {
+                "source": "UNCORRECTED",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "STOP": null
+            },
+            "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+            "sequence": 0,
+            "saved_ns": 344470962544400
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 10,
+            "decision_sequence": 0,
+            "command": [
+              0.20000000298023224,
+              0.4000000059604645,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 1,
+            "saved_ns": 344470963600600
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 1,
+            "at_calls": 11,
+            "after": {
+              "observation": [
+                0.00610435374826193,
+                0.08431620001792911,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 2,
+            "saved_ns": 344470964953500
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 11,
+            "decision_sequence": 0,
+            "command": [
+              0.20000000298023224,
+              0.4000000059604645,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.00610435374826193,
+                0.08431620001792911,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 3,
+            "saved_ns": 344470965705300
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 3,
+            "at_calls": 12,
+            "after": {
+              "observation": [
+                0.0071877448055893195,
+                0.08824134096503258,
+                0.12,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": true
+            },
+            "sequence": 4,
+            "saved_ns": 344470967038600
+          }
+        }
+      ]
+    },
+    "ledger_before": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "ledger_after": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 12,
+        "simulation_frames_attempted": 60,
+        "simulation_completed": 12,
+        "simulation_frames_completed": 60
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 12,
+          "simulation_frames_attempted": 60,
+          "simulation_completed": 12,
+          "simulation_frames_completed": 60
+        }
+      }
+    },
+    "host_completed_suffix_steps": 2,
+    "host_policy_queries": 2,
+    "end_witness": {
+      "native_sha256": "0a9f95a71c810181d9bd8c397633eec10f2253f5c1822d9e15f08bd6d03a1c07",
+      "python_semantic_sha256": "5ca3350344fe0cd054482b46f6829ff89bfb022a34564fd44ba6de5d9337f783",
+      "noise_past_sha256": "6082f86f6cafe91c644162f92434a2893c71c2681933a32036e7c5961a1d9b87",
+      "simulation_time": 0.15000000000000008
+    },
+    "current_provenance": {
+      "source_global_sequence": 4,
+      "source_public_sequence": 1,
+      "available_at_calls": 0,
+      "source_choice_sha256": "8b3992fbd2a496369edb5eec63e3d4af22643706cdc4235cbeab4acdc98fa07c"
+    },
+    "saved_provenance": {
+      "source_global_sequence": 3,
+      "source_public_sequence": 0,
+      "available_at_calls": 0,
+      "source_choice_sha256": "b69cc0af23aef7cb7552ebd7fcfb10cda8ef3f866c92fb42743d89951ff64992"
+    },
+    "end_sequence": 47
+  },
+  {
+    "role": "DELAYED_INTERVENTION",
+    "future": 0,
+    "program": "RUN_UNCORRECTED",
+    "start_sequence": 37,
+    "actor": {
+      "status": "COMPLETED",
+      "failure": null,
+      "initial_completed_steps": 10,
+      "completed_steps": 12,
+      "charged_steps": 12,
+      "remaining_budget": 488,
+      "step_attempts": 2,
+      "accepted_step_receipts": 2,
+      "unconfirmed_step_attempts": 0,
+      "policy_queries_attempted": 2,
+      "policy_queries_completed": 2,
+      "last_confirmed_observation": {
+        "observation": [
+          0.0072564948014915,
+          0.09324134066700938,
+          0.12,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": true
+      },
+      "choice": {
+        "action_id": "RUN_UNCORRECTED",
+        "at_calls": 10,
+        "boundary_observation": {
+          "observation": [
+            0.005064943376928569,
+            0.08140777423977852,
+            0.1,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminated": false,
+          "truncated": false,
+          "success": false
+        },
+        "task": "push-v3",
+        "remaining_budget": 490,
+        "candidate_map": {
+          "CONTINUE_CURRENT": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.12,
+              -0.08,
+              0.0,
+              0.0
+            ]
+          },
+          "SWITCH_SAVED": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              -0.2,
+              0.1,
+              0.0,
+              0.0
+            ]
+          },
+          "RUN_UNCORRECTED": {
+            "source": "UNCORRECTED",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "STOP": null
+        },
+        "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+        "sequence": 0,
+        "saved_ns": 344470999150800
+      },
+      "success": true,
+      "deadline_loss": 12,
+      "events": [
+        {
+          "kind": "CHOICE",
+          "payload": {
+            "action_id": "RUN_UNCORRECTED",
+            "at_calls": 10,
+            "boundary_observation": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "task": "push-v3",
+            "remaining_budget": 490,
+            "candidate_map": {
+              "CONTINUE_CURRENT": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.12,
+                  -0.08,
+                  0.0,
+                  0.0
+                ]
+              },
+              "SWITCH_SAVED": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  -0.2,
+                  0.1,
+                  0.0,
+                  0.0
+                ]
+              },
+              "RUN_UNCORRECTED": {
+                "source": "UNCORRECTED",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "STOP": null
+            },
+            "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+            "sequence": 0,
+            "saved_ns": 344470999150800
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 10,
+            "decision_sequence": 0,
+            "command": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 1,
+            "saved_ns": 344471000227200
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 1,
+            "at_calls": 11,
+            "after": {
+              "observation": [
+                0.0061231037471443425,
+                0.08681619986891748,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 2,
+            "saved_ns": 344471001589900
+          }
+        },
+        {
+          "kind": "COMMAND",
+          "payload": {
+            "at_calls": 11,
+            "decision_sequence": 0,
+            "command": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "raw_policy": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.0,
+              0.0
+            ],
+            "before": {
+              "observation": [
+                0.0061231037471443425,
+                0.08681619986891748,
+                0.11,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "sequence": 3,
+            "saved_ns": 344471002348000
+          }
+        },
+        {
+          "kind": "STEP_RESULT",
+          "payload": {
+            "command_sequence": 3,
+            "at_calls": 12,
+            "after": {
+              "observation": [
+                0.0072564948014915,
+                0.09324134066700938,
+                0.12,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": true
+            },
+            "sequence": 4,
+            "saved_ns": 344471003649200
+          }
+        }
+      ]
+    },
+    "ledger_before": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "ledger_after": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 12,
+        "simulation_frames_attempted": 60,
+        "simulation_completed": 12,
+        "simulation_frames_completed": 60
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 12,
+          "simulation_frames_attempted": 60,
+          "simulation_completed": 12,
+          "simulation_frames_completed": 60
+        }
+      }
+    },
+    "host_completed_suffix_steps": 2,
+    "host_policy_queries": 2,
+    "end_witness": {
+      "native_sha256": "72baacb60cb2e6e7d9992c854f94e71df0b6d94675e5f63dadb7814f58606efe",
+      "python_semantic_sha256": "7e55ff1a023761f96098149dcee4d73e5d824343b41f6f4b18bc490fb9a27d37",
+      "noise_past_sha256": "6082f86f6cafe91c644162f92434a2893c71c2681933a32036e7c5961a1d9b87",
+      "simulation_time": 0.15000000000000008
+    },
+    "current_provenance": {
+      "source_global_sequence": 4,
+      "source_public_sequence": 1,
+      "available_at_calls": 0,
+      "source_choice_sha256": "a17c16eb5cbedce2438784328f01684fd97efb835d18640b796548dac5c23d9d"
+    },
+    "saved_provenance": {
+      "source_global_sequence": 3,
+      "source_public_sequence": 0,
+      "available_at_calls": 0,
+      "source_choice_sha256": "3d9b53913d05af49609f6c0f57ff647d6c4df912eff68db00ea6f596a7f8b900"
+    },
+    "end_sequence": 47
+  },
+  {
+    "role": "DELAYED_INTERVENTION",
+    "future": 0,
+    "program": "STOP",
+    "start_sequence": 37,
+    "actor": {
+      "status": "STOPPED",
+      "failure": null,
+      "initial_completed_steps": 10,
+      "completed_steps": 10,
+      "charged_steps": 10,
+      "remaining_budget": 490,
+      "step_attempts": 0,
+      "accepted_step_receipts": 0,
+      "unconfirmed_step_attempts": 0,
+      "policy_queries_attempted": 0,
+      "policy_queries_completed": 0,
+      "last_confirmed_observation": {
+        "observation": [
+          0.005064943376928569,
+          0.08140777423977852,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": false
+      },
+      "choice": {
+        "action_id": "STOP",
+        "at_calls": 10,
+        "boundary_observation": {
+          "observation": [
+            0.005064943376928569,
+            0.08140777423977852,
+            0.1,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminated": false,
+          "truncated": false,
+          "success": false
+        },
+        "task": "push-v3",
+        "remaining_budget": 490,
+        "candidate_map": {
+          "CONTINUE_CURRENT": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.12,
+              -0.08,
+              0.0,
+              0.0
+            ]
+          },
+          "SWITCH_SAVED": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              -0.2,
+              0.1,
+              0.0,
+              0.0
+            ]
+          },
+          "RUN_UNCORRECTED": {
+            "source": "UNCORRECTED",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "STOP": null
+        },
+        "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+        "sequence": 0,
+        "saved_ns": 344471036404800
+      },
+      "success": false,
+      "deadline_loss": 500,
+      "events": [
+        {
+          "kind": "CHOICE",
+          "payload": {
+            "action_id": "STOP",
+            "at_calls": 10,
+            "boundary_observation": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "task": "push-v3",
+            "remaining_budget": 490,
+            "candidate_map": {
+              "CONTINUE_CURRENT": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.12,
+                  -0.08,
+                  0.0,
+                  0.0
+                ]
+              },
+              "SWITCH_SAVED": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  -0.2,
+                  0.1,
+                  0.0,
+                  0.0
+                ]
+              },
+              "RUN_UNCORRECTED": {
+                "source": "UNCORRECTED",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "STOP": null
+            },
+            "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+            "sequence": 0,
+            "saved_ns": 344471036404800
+          }
+        }
+      ]
+    },
+    "ledger_before": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "ledger_after": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "host_completed_suffix_steps": 0,
+    "host_policy_queries": 0,
+    "end_witness": {
+      "native_sha256": "2697d422b69339ca1781c4be1e3545428e80246d0bb6b8b7e1d92dab32a4b867",
+      "python_semantic_sha256": "1c2f86b2bcd4f576f56d42ce97680b8037a79ebf1b14657d61d6e74bd2319b23",
+      "noise_past_sha256": "b0735e8a9fda66651d7e7902bedac98361e66a931903905ca9ddf4345d237f7d",
+      "simulation_time": 0.12500000000000006
+    },
+    "current_provenance": {
+      "source_global_sequence": 4,
+      "source_public_sequence": 1,
+      "available_at_calls": 0,
+      "source_choice_sha256": "e13c983570b06821cf89140fea2fc02b2df4f7f474597165ec1d2773adc30f0e"
+    },
+    "saved_provenance": {
+      "source_global_sequence": 3,
+      "source_public_sequence": 0,
+      "available_at_calls": 0,
+      "source_choice_sha256": "467192cdbf96be0e0b4d9d6046167326d81bfa20bd56fc8eb29cb5d68986138c"
+    },
+    "end_sequence": 39
+  },
+  {
+    "role": "DELAYED_INTERVENTION",
+    "future": 0,
+    "program": "STOP",
+    "start_sequence": 37,
+    "actor": {
+      "status": "STOPPED",
+      "failure": null,
+      "initial_completed_steps": 10,
+      "completed_steps": 10,
+      "charged_steps": 10,
+      "remaining_budget": 490,
+      "step_attempts": 0,
+      "accepted_step_receipts": 0,
+      "unconfirmed_step_attempts": 0,
+      "policy_queries_attempted": 0,
+      "policy_queries_completed": 0,
+      "last_confirmed_observation": {
+        "observation": [
+          0.005064943376928569,
+          0.08140777423977852,
+          0.1,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": false
+      },
+      "choice": {
+        "action_id": "STOP",
+        "at_calls": 10,
+        "boundary_observation": {
+          "observation": [
+            0.005064943376928569,
+            0.08140777423977852,
+            0.1,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "terminated": false,
+          "truncated": false,
+          "success": false
+        },
+        "task": "push-v3",
+        "remaining_budget": 490,
+        "candidate_map": {
+          "CONTINUE_CURRENT": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.12,
+              -0.08,
+              0.0,
+              0.0
+            ]
+          },
+          "SWITCH_SAVED": {
+            "source": "ESTIMATED_AFFINE",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              -0.2,
+              0.1,
+              0.0,
+              0.0
+            ]
+          },
+          "RUN_UNCORRECTED": {
+            "source": "UNCORRECTED",
+            "matrix_xy": [
+              [
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0
+              ]
+            ],
+            "offset": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ]
+          },
+          "STOP": null
+        },
+        "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+        "sequence": 0,
+        "saved_ns": 344471208311200
+      },
+      "success": false,
+      "deadline_loss": 500,
+      "events": [
+        {
+          "kind": "CHOICE",
+          "payload": {
+            "action_id": "STOP",
+            "at_calls": 10,
+            "boundary_observation": {
+              "observation": [
+                0.005064943376928569,
+                0.08140777423977852,
+                0.1,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ],
+              "terminated": false,
+              "truncated": false,
+              "success": false
+            },
+            "task": "push-v3",
+            "remaining_budget": 490,
+            "candidate_map": {
+              "CONTINUE_CURRENT": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.12,
+                  -0.08,
+                  0.0,
+                  0.0
+                ]
+              },
+              "SWITCH_SAVED": {
+                "source": "ESTIMATED_AFFINE",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  -0.2,
+                  0.1,
+                  0.0,
+                  0.0
+                ]
+              },
+              "RUN_UNCORRECTED": {
+                "source": "UNCORRECTED",
+                "matrix_xy": [
+                  [
+                    1.0,
+                    0.0
+                  ],
+                  [
+                    0.0,
+                    1.0
+                  ]
+                ],
+                "offset": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "STOP": null
+            },
+            "candidate_map_sha256": "d3cc05ac4e89b97d833b754ebe1f29afacbf7300f70625a34c0db999245f0c49",
+            "sequence": 0,
+            "saved_ns": 344471208311200
+          }
+        }
+      ]
+    },
+    "ledger_before": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "ledger_after": {
+      "counts": {
+        "reset_attempts": 1,
+        "reset_completed": 1,
+        "simulation_attempts": 10,
+        "simulation_frames_attempted": 50,
+        "simulation_completed": 10,
+        "simulation_frames_completed": 50
+      },
+      "by_phase": {
+        "CONTROLLED_RESET": {
+          "reset_attempts": 1,
+          "reset_completed": 1
+        },
+        "CONTROL": {
+          "simulation_attempts": 10,
+          "simulation_frames_attempted": 50,
+          "simulation_completed": 10,
+          "simulation_frames_completed": 50
+        }
+      }
+    },
+    "host_completed_suffix_steps": 0,
+    "host_policy_queries": 0,
+    "end_witness": {
+      "native_sha256": "2697d422b69339ca1781c4be1e3545428e80246d0bb6b8b7e1d92dab32a4b867",
+      "python_semantic_sha256": "1c2f86b2bcd4f576f56d42ce97680b8037a79ebf1b14657d61d6e74bd2319b23",
+      "noise_past_sha256": "b0735e8a9fda66651d7e7902bedac98361e66a931903905ca9ddf4345d237f7d",
+      "simulation_time": 0.12500000000000006
+    },
+    "current_provenance": {
+      "source_global_sequence": 4,
+      "source_public_sequence": 1,
+      "available_at_calls": 0,
+      "source_choice_sha256": "815a246a2a4867463b364d5e1df238e0d34ba9a41bcf72837bfcb6c0e88d14f5"
+    },
+    "saved_provenance": {
+      "source_global_sequence": 3,
+      "source_public_sequence": 0,
+      "available_at_calls": 0,
+      "source_choice_sha256": "47d5832a638c00a75b75f12a99dc990839084914f687037a842c4ef513b04722"
+    },
+    "end_sequence": 39
+  }
+]

@@ -1,0 +1,45 @@
+{
+  "schema": "delayed_boundary_composition_software_v1",
+  "status": "PASSED",
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "docs/prototypes/delayed_intervention_v1/boundary_prefix.py": "99ed9c1674b8102ddac8f1ffc8f6f99588450e56001d62a2b269110b4f60ed17",
+    "docs/prototypes/delayed_intervention_v1/boundary_host.py": "82b24687acd20fe125fbd7b09a8d0999eff74e82f05f9ac6bb4fe9066843c9bc",
+    "docs/prototypes/delayed_intervention_v1/test_boundary_prefix.py": "2a8666ce831d932d4157af9fe2767357f16148e2d3c64140e6b912acbbcc05be",
+    "docs/prototypes/delayed_intervention_v1/test_boundary_host.py": "73a996f80df67d572adb95b335f93a6a477dba84a6889eb302b4bfd8ee7bdd92",
+    "docs/prototypes/delayed_intervention_v1/qualify_boundary.py": "ef19ac6cd80b1a3de3989ee6ec8a083824292eccfd2c4673022a3e9ee6c7dc8e",
+    "docs/prototypes/delayed_intervention_v1/controller.py": "5c107ac655f20355d864297dcc94351ea4e10f85bfe6454f4852209c87398097",
+    "docs/prototypes/delayed_intervention_v1/session_adapter.py": "7496604bbb866f278cd80481c0042eb7f72447f011ec15eee564dc93492cd5db"
+  },
+  "source_git_commit": "b91a932b80c18d12fd20db96a032d3cd1c8ccc63",
+  "source_was_uncommitted_development": true,
+  "native_fixture_instances": 9,
+  "native_software_costs": {
+    "native_successful_requested_frames": 665,
+    "host_step_attempts": 132,
+    "host_returned_steps": 132,
+    "actual_tiny_policy_calls": 74,
+    "captures": 0,
+    "restores": 0,
+    "reset_completed": 9
+  },
+  "prior_development_invocation": {
+    "pure_callback_tests_passed": 7,
+    "native_environment_steps": 0,
+    "physical_costs": 0
+  },
+  "artifact_sha256": {
+    "native_cost_receipts.json": "03eb936a1e8437c64a17bf47645d5ce197c475ca8aea2ff2aaf73b5322aa948d",
+    "native_journals.jsonl.gz": "ceb62785ccc980c632a2ed0cb94f2d4ee7c78a1f46b9e3f9468da321f73f983a",
+    "tests.txt": "bec4c63e9e1b2e85685b7fbaa0a68eae63491fb3bfe0b1e1937e609f22f3c4c4"
+  },
+  "wall_ns": 1048606100,
+  "new_metaworld_task_steps": 0,
+  "new_scientific_task_seeds": 0,
+  "new_api_calls": 0,
+  "metaworld_qualification": false,
+  "task_benefit_tested": false,
+  "scope": "Artificial callback and tiny native-engine tests; mocked fits and a synthetic completion rule. Physical work deliberately injected by a policy is counted."
+}

@@ -1,0 +1,10 @@
+{
+  "status": "DIFF_CHECK_REJECTED_CR_AT_EOL",
+  "returncode": 2,
+  "paths": [
+    "pip_check.txt",
+    "tracked_secret_scan.txt"
+  ],
+  "reason": "Preserving raw subprocess output exposes CRLF to default whitespace checking.",
+  "resolution": "Directory-local whitespace attributes retain standard trailing-space and space-before-tab checks and recognize CR as a line terminator; exact bytes and secret scans remain required."
+}

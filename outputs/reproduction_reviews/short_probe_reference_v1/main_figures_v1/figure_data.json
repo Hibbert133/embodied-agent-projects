@@ -1,0 +1,217 @@
+{
+  "units": 648,
+  "executions": 4536,
+  "streams": 54,
+  "methods": {
+    "NO_PROBE": {
+      "cases": 648,
+      "successes": 551,
+      "failures": 97,
+      "stops": 0,
+      "mean_deadline_loss": 145.17746913580248,
+      "mean_total_steps": 145.17746913580248,
+      "mean_fixed_probe_steps": 0.0,
+      "mean_policy_steps": 145.17746913580248,
+      "mean_online_parameter_fits": 0.0,
+      "mean_optimizer_nfev": 0.0,
+      "mean_policy_queries": 145.17746913580248,
+      "mean_design_verification_candidates": 0.0
+    },
+    "ORIGINAL8_UPDATE": {
+      "cases": 648,
+      "successes": 633,
+      "failures": 15,
+      "stops": 0,
+      "mean_deadline_loss": 87.65586419753086,
+      "mean_total_steps": 87.65586419753086,
+      "mean_fixed_probe_steps": 8.0,
+      "mean_policy_steps": 79.65586419753086,
+      "mean_online_parameter_fits": 1.0,
+      "mean_optimizer_nfev": 1.0,
+      "mean_policy_queries": 79.65586419753086,
+      "mean_design_verification_candidates": 0.0
+    },
+    "BALANCED4_UPDATE": {
+      "cases": 648,
+      "successes": 629,
+      "failures": 19,
+      "stops": 1,
+      "mean_deadline_loss": 87.99691358024691,
+      "mean_total_steps": 87.23148148148148,
+      "mean_fixed_probe_steps": 4.0,
+      "mean_policy_steps": 83.23148148148148,
+      "mean_online_parameter_fits": 1.0,
+      "mean_optimizer_nfev": 1.0,
+      "mean_policy_queries": 83.23148148148148,
+      "mean_design_verification_candidates": 0.0
+    },
+    "DOPT4_UPDATE": {
+      "cases": 648,
+      "successes": 632,
+      "failures": 16,
+      "stops": 1,
+      "mean_deadline_loss": 86.5895061728395,
+      "mean_total_steps": 85.82407407407408,
+      "mean_fixed_probe_steps": 4.0,
+      "mean_policy_steps": 81.82407407407408,
+      "mean_online_parameter_fits": 1.0,
+      "mean_optimizer_nfev": 1.0,
+      "mean_policy_queries": 81.82407407407408,
+      "mean_design_verification_candidates": 144.0
+    },
+    "DOPT8_UPDATE": {
+      "cases": 648,
+      "successes": 632,
+      "failures": 16,
+      "stops": 0,
+      "mean_deadline_loss": 88.82716049382717,
+      "mean_total_steps": 88.82716049382717,
+      "mean_fixed_probe_steps": 8.0,
+      "mean_policy_steps": 80.82716049382717,
+      "mean_online_parameter_fits": 1.0,
+      "mean_optimizer_nfev": 1.0,
+      "mean_policy_queries": 80.82716049382717,
+      "mean_design_verification_candidates": 144.0
+    },
+    "DOPT4_KEEP_AT8": {
+      "cases": 648,
+      "successes": 635,
+      "failures": 13,
+      "stops": 1,
+      "mean_deadline_loss": 88.91666666666667,
+      "mean_total_steps": 88.1574074074074,
+      "mean_fixed_probe_steps": 8.0,
+      "mean_policy_steps": 80.1574074074074,
+      "mean_online_parameter_fits": 1.0,
+      "mean_optimizer_nfev": 1.0,
+      "mean_policy_queries": 80.1574074074074,
+      "mean_design_verification_candidates": 144.0
+    },
+    "DOPT4_FALLBACK8": {
+      "cases": 648,
+      "successes": 633,
+      "failures": 15,
+      "stops": 0,
+      "mean_deadline_loss": 85.92283950617283,
+      "mean_total_steps": 85.92283950617283,
+      "mean_fixed_probe_steps": 4.006172839506172,
+      "mean_policy_steps": 81.91666666666667,
+      "mean_online_parameter_fits": 1.001543209876543,
+      "mean_optimizer_nfev": 1.001543209876543,
+      "mean_policy_queries": 81.91666666666667,
+      "mean_design_verification_candidates": 144.0
+    }
+  },
+  "contrasts": [
+    {
+      "left": "DOPT4_FALLBACK8",
+      "right": "ORIGINAL8_UPDATE",
+      "mean_loss_difference": -1.7330246913580252,
+      "ci95": [
+        -7.512538580246909,
+        4.199421296296308
+      ],
+      "primary": true,
+      "multiplicity": "PRIMARY"
+    },
+    {
+      "left": "BALANCED4_UPDATE",
+      "right": "ORIGINAL8_UPDATE",
+      "mean_loss_difference": 0.34104938271604923,
+      "ci95": [
+        -5.282716049382741,
+        6.103472222222218
+      ],
+      "primary": false,
+      "multiplicity": "UNADJUSTED_SECONDARY"
+    },
+    {
+      "left": "DOPT4_UPDATE",
+      "right": "BALANCED4_UPDATE",
+      "mean_loss_difference": -1.4074074074074077,
+      "ci95": [
+        -7.511111111111119,
+        4.961496913580244
+      ],
+      "primary": false,
+      "multiplicity": "UNADJUSTED_SECONDARY"
+    },
+    {
+      "left": "DOPT8_UPDATE",
+      "right": "DOPT4_KEEP_AT8",
+      "mean_loss_difference": -0.08950617283950582,
+      "ci95": [
+        -3.9521990740740502,
+        3.77006172839505
+      ],
+      "primary": false,
+      "multiplicity": "UNADJUSTED_SECONDARY"
+    },
+    {
+      "left": "DOPT4_KEEP_AT8",
+      "right": "DOPT4_UPDATE",
+      "mean_loss_difference": 2.32716049382716,
+      "ci95": [
+        -0.9908179012345751,
+        5.578819444444448
+      ],
+      "primary": false,
+      "multiplicity": "UNADJUSTED_SECONDARY"
+    },
+    {
+      "left": "DOPT4_FALLBACK8",
+      "right": "DOPT4_UPDATE",
+      "mean_loss_difference": -0.6666666666666666,
+      "ci95": [
+        -2.0,
+        0.0
+      ],
+      "primary": false,
+      "multiplicity": "UNADJUSTED_SECONDARY"
+    },
+    {
+      "left": "DOPT8_UPDATE",
+      "right": "ORIGINAL8_UPDATE",
+      "mean_loss_difference": 1.171296296296296,
+      "ci95": [
+        -2.895138888888904,
+        5.038580246913568
+      ],
+      "primary": false,
+      "multiplicity": "UNADJUSTED_SECONDARY"
+    }
+  ],
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261022,
+  "scope": "Display of saved registered results. No extra intervals, tuning, or task execution.",
+  "method_labels": {
+    "NO_PROBE": [
+      "不探测",
+      "No probe"
+    ],
+    "ORIGINAL8_UPDATE": [
+      "原版8步更新",
+      "Original 8 + update"
+    ],
+    "BALANCED4_UPDATE": [
+      "均衡4步更新",
+      "Balanced 4 + update"
+    ],
+    "DOPT4_UPDATE": [
+      "DOPT 4步更新",
+      "DOPT 4 + update"
+    ],
+    "DOPT8_UPDATE": [
+      "DOPT 8步更新",
+      "DOPT 8 + update"
+    ],
+    "DOPT4_KEEP_AT8": [
+      "DOPT 8步保留4步参数",
+      "DOPT 8, keep 4-step fit"
+    ],
+    "DOPT4_FALLBACK8": [
+      "DOPT 4步优先、无效补8步",
+      "DOPT 4, extend if invalid"
+    ]
+  }
+}

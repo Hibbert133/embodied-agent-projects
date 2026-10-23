@@ -1,0 +1,53 @@
+{
+  "review_date": "2026-10-19",
+  "scope": "Targeted primary-source review for progression monitoring and recovery after the saved push-case analysis; not an exhaustive novelty review or algorithm reproduction.",
+  "sources": [
+    {
+      "id": "sentinel_agia_2025",
+      "title": "Unpacking Failure Modes of Generative Policies: Runtime Monitoring of Consistency and Progress",
+      "lead_author": "Christopher Agia",
+      "publication": "Proceedings of the 8th Conference on Robot Learning, PMLR 270:689-723, 2025",
+      "url": "https://proceedings.mlr.press/v270/agia25a.html",
+      "read_scope": "Official publication metadata and abstract. The attempted publisher PDF fetch returned a tool error; no claim of reading its full method.",
+      "established_mechanism": "Complementary temporal-action-consistency and VLM task-progression monitors."
+    },
+    {
+      "id": "rewind_il_zheng_2026_v2",
+      "title": "Rewind-IL: Online Failure Detection and State Respawning for Imitation Learning",
+      "authors": ["Gehan Zheng", "Sanjay Seenivasan", "Matthew Johnson-Roberson", "Weiming Zhi"],
+      "version": "arXiv:2604.16683v2",
+      "version_submitted_utc": "2026-09-30T23:08:57Z",
+      "url": "https://arxiv.org/html/2604.16683v2",
+      "metadata_url": "https://arxiv.org/abs/2604.16683v2",
+      "read_scope": "Sections III, IV-A, IV-B calibration, IV-D and V-A evaluation design; abstract metadata and submission history.",
+      "established_mechanism": "Action-chunk consistency detection, successful-episode calibration, checkpoint features and physical return before clearing stale policy state.",
+      "metadata_note": "The arXiv metadata lists IEEE RA-L 2026 Early Access and DOI 10.1109/LRA.2026.3734897. This review uses the versioned arXiv text, not an independently inspected publisher record."
+    },
+    {
+      "id": "foresight_zhang_2026_v1",
+      "title": "Foresight: Failure Detection for Long-Horizon Robotic Manipulation with Action-Conditioned World Model Latents",
+      "lead_author": "Haoran Zhang",
+      "version": "arXiv:2606.23085v1",
+      "version_submitted_utc": "2026-06-22T09:32:28Z",
+      "url": "https://arxiv.org/html/2606.23085v1",
+      "metadata_url": "https://arxiv.org/abs/2606.23085",
+      "read_scope": "Sections 4.3-4.4, cross-policy discussion, conclusion and limitations; appendix calibration-split description and abstract metadata.",
+      "established_mechanism": "Action-conditioned representations, causal sequence failure scoring and functional conformal thresholding from rollout-level labels."
+    },
+    {
+      "id": "back_on_track_crosby_2026_v1",
+      "title": "Back on Track: Deployment-time Policy Improvement via World Model Planning",
+      "authors": ["Colton Crosby", "Hao Wang", "Mac Schwager", "Somil Bansal"],
+      "version": "arXiv:2610.19579v1",
+      "version_date": "2026-10-14",
+      "url": "https://arxiv.org/html/2610.19579v1",
+      "metadata_url": "https://arxiv.org/abs/2610.19579",
+      "read_scope": "Sections III-IV, V-A, V-B, V-F and VI, plus abstract metadata.",
+      "established_mechanism": "Policy-conditioned liveness monitoring and short corrective world-model planning with a shared value objective under black-box nominal-policy access."
+    }
+  ],
+  "new_simulation_steps": 0,
+  "new_api_decision_calls": 0,
+  "new_model_fits": 0,
+  "current_main_partial_performance_read": false
+}

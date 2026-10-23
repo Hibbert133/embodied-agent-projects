@@ -1,0 +1,19 @@
+{
+  "protocol_id": "passive_supported_reference_qualification_v1",
+  "artifact_type": "SOFTWARE_TEST_FIXTURES_NOT_METAWORLD",
+  "budget": 500,
+  "cases": [
+    {"id": "valid_fit_changes_commands", "mode": "PASSIVE8_KEEP", "end": 26, "varied": 16, "success": true, "old_cache": false, "episode": 1},
+    {"id": "invalid_fit_keeps_owned_cache", "mode": "PASSIVE8_KEEP", "end": 26, "varied": 0, "success": true, "old_cache": true, "episode": 4},
+    {"id": "later_invalid_keeps_current_update", "mode": "PASSIVE64_PERIODIC16_KEEP", "end": 100, "varied": 16, "success": true, "old_cache": false, "episode": 1},
+    {"id": "budget_cap", "mode": "PASSIVE64_PERIODIC16_KEEP", "end": 999, "varied": 0, "success": false, "old_cache": false, "episode": 1},
+    {"id": "failure_clears_cache", "mode": "PASSIVE8_KEEP", "end": 12, "varied": 0, "success": false, "old_cache": true, "episode": 1}
+  ],
+  "new_scientific_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_nominal_model_fits": 0,
+  "policy_weight_updates": 0,
+  "robotic_task_result": false,
+  "new_algorithm_established": false,
+  "output_root": "outputs/passive_supported_reference/engineering_qualification_v1"
+}

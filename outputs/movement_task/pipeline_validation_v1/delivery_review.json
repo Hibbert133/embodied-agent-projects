@@ -1,0 +1,320 @@
+{
+  "status": "PASSED_PIPELINE_SOFTWARE_AND_PROSPECTIVE_FREEZE_CHECKS_ONLY",
+  "parent_commit": "0d09662f2967eaf31ebd1c7ddb4ee72595a9ef94",
+  "branch": "codex/movement-task-bridge-v1",
+  "checks": {
+    "unittest": {
+      "receipt_sha256": "b829c144df63f72cbdf4476d5f5f68cbb8ff0b64d4877431dff55c16b6ac2f36",
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "unittest_inputs.json",
+      "code_inputs_sha256": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+      "wall_ns": 575691319100,
+      "output_sha256": "df8f9b10c12ebf247f0c47965b9c76a1dca254a198e627a982c7bba3405637fe",
+      "created_utc": "2026-10-19T19:14:13.298694+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "compileall": {
+      "receipt_sha256": "4c4f865d20251d0aee254709cc0a24ee4156443e88a0917e48ae000e94e31557",
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "compileall_inputs.json",
+      "code_inputs_sha256": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+      "wall_ns": 694048200,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T18:59:25.239222+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "pip_check": {
+      "receipt_sha256": "9249b04070fbb02cbd0430457daeefdac261202ddaf637d0a04bedb633190ba3",
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "pip_check_inputs.json",
+      "code_inputs_sha256": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+      "wall_ns": 856131100,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T18:59:25.398374+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "tracked_secret_scan": {
+      "receipt_sha256": "32492255f0a456b0480e47a7c9e2e9d7d93953299fa3cb0e3ac13cb40cd334ff",
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "tracked_secret_scan_inputs.json",
+      "code_inputs_sha256": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+      "wall_ns": 59239305300,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T19:01:46.886236+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "diff_check": {
+      "receipt_sha256": "84ebacc68f1053882dbe4c8e0888435e96bd2305f7b881a0671bc7f10a8c0c14",
+      "check": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "diff_check_inputs.json",
+      "code_inputs_sha256": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+      "wall_ns": 141690500,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T19:02:29.775090+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    }
+  },
+  "preliminary_checks": {
+    "targeted_v1": {
+      "receipt_sha256": "e71f6cbc11f2b4fad1b0079540a7229715f24ff667bc9a5c68be0c1357729008",
+      "check": "targeted_v1",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_movement_task_design_v1",
+        "tests.test_movement_task_numerical_v1",
+        "tests.test_movement_task_pipeline_v1",
+        "tests.test_movement_task_statistics_v1",
+        "-v"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "targeted_v1_inputs.json",
+      "code_inputs_sha256": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+      "wall_ns": 84259590500,
+      "output_sha256": "e4776af8438c5b8da1ed869e150c81fd8e1af3661cc2090c58bc008864347864",
+      "created_utc": "2026-10-19T18:52:40.759786+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "pre_whitespace/unittest": {
+      "receipt_sha256": "5fb961d101f112e339cb186e2d52051ea7a2e655f0002d71e0365ce93aea87a5",
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "unittest_inputs.json",
+      "code_inputs_sha256": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+      "wall_ns": 582565337300,
+      "output_sha256": "28141d052617c2ec31fdecfc651b75194ff7a97876fc0dc889995e2798dfa9e5",
+      "created_utc": "2026-10-19T19:04:10.930373+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "pre_whitespace/compileall": {
+      "receipt_sha256": "c73874b900cc6f519cf1a4b56a9223adad06166f277f3602f714053f3aec787b",
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "compileall_inputs.json",
+      "code_inputs_sha256": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+      "wall_ns": 1188159000,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T18:52:33.121825+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    },
+    "pre_whitespace/pip_check": {
+      "receipt_sha256": "0c4e3be50d401ea8fb3f1040e2988f94129fd1a632c13eacb868df204d666d2a",
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "code_inputs_file": "pip_check_inputs.json",
+      "code_inputs_sha256": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+      "wall_ns": 991438400,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T18:52:32.926577+00:00",
+      "source_sha256": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df"
+    }
+  },
+  "eof_only_bridge": {
+    "path": "scripts/audit_movement_task_v1.py",
+    "before_sha256": "222755a390dac1175c94c767cbe7a2e5dc6c599602baae2ea5793c96212ad62b",
+    "after_sha256": "a904e99153224bf0801ce7193e2623d95abee8e9cba5dc129828fcb46ac4208b",
+    "change": "Removed exactly two redundant LF bytes at EOF; Python AST unchanged.",
+    "ast_unchanged": true,
+    "validation": "The already-running full suite records the previous source bytes; preserve it and run the final freeze checks against the new bytes."
+  },
+  "staged_file_sha256": {
+    "configs/movement_task/development_v1.json": "254724ac640b8c3f4b473a6063a073d6bf095bd69c853f43b4edb2a45d47f75e",
+    "configs/movement_task/planning_v1.json": "89240acea080016836a39e8cbce7db64f3aac45efadfee454cfcf384dc6b8f21",
+    "docs/protocols/movement_task_development_v1.md": "146f19f6e10b77cca894e2ca2cfc4d7ce792aabf34b8113ea6891fc4de4fa9b2",
+    "docs/research/movement_task_pipeline_v1_zh.md": "3d384d882d3a9f9e5b21ee03612e4bf7c8331227675aeff31057a123515e8c4f",
+    "docs/research/publication_path_v1.md": "d674504a9539b38bbf1207ac4ed05c6d443e638c439b09d7561825462a7247c6",
+    "outputs/movement_task/pipeline_validation_v1/compileall.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/movement_task/pipeline_validation_v1/compileall_inputs.json": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+    "outputs/movement_task/pipeline_validation_v1/compileall_receipt.json": "4c4f865d20251d0aee254709cc0a24ee4156443e88a0917e48ae000e94e31557",
+    "outputs/movement_task/pipeline_validation_v1/diff_check.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/movement_task/pipeline_validation_v1/diff_check_inputs.json": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+    "outputs/movement_task/pipeline_validation_v1/diff_check_receipt.json": "84ebacc68f1053882dbe4c8e0888435e96bd2305f7b881a0671bc7f10a8c0c14",
+    "outputs/movement_task/pipeline_validation_v1/pip_check.txt": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "outputs/movement_task/pipeline_validation_v1/pip_check_inputs.json": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+    "outputs/movement_task/pipeline_validation_v1/pip_check_receipt.json": "9249b04070fbb02cbd0430457daeefdac261202ddaf637d0a04bedb633190ba3",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/compileall.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/compileall_inputs.json": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/compileall_receipt.json": "c73874b900cc6f519cf1a4b56a9223adad06166f277f3602f714053f3aec787b",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/pip_check.txt": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/pip_check_inputs.json": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/pip_check_receipt.json": "0c4e3be50d401ea8fb3f1040e2988f94129fd1a632c13eacb868df204d666d2a",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/unittest.txt": "28141d052617c2ec31fdecfc651b75194ff7a97876fc0dc889995e2798dfa9e5",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/unittest_inputs.json": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/unittest_native_costs.json": "970b4ce6a281ebd17ec685eebc6f508bec2ec5c689c51ef973db8e32492ef0e1",
+    "outputs/movement_task/pipeline_validation_v1/pre_whitespace/unittest_receipt.json": "5fb961d101f112e339cb186e2d52051ea7a2e655f0002d71e0365ce93aea87a5",
+    "outputs/movement_task/pipeline_validation_v1/review_freeze.py": "aa49213e4450d648eb38dc99425bfe58a53bea568cd4ff3a94a44457d5f4d833",
+    "outputs/movement_task/pipeline_validation_v1/run_checks.py": "95f1c3cf6a122a42af1a07cef1dac5a36274a1fc203bc94f981f18975aed62df",
+    "outputs/movement_task/pipeline_validation_v1/targeted_v1.txt": "e4776af8438c5b8da1ed869e150c81fd8e1af3661cc2090c58bc008864347864",
+    "outputs/movement_task/pipeline_validation_v1/targeted_v1_inputs.json": "f71302052d09863da1f6a5a7c4e7ef64b0e482ae07def6e99bc58757a71b3330",
+    "outputs/movement_task/pipeline_validation_v1/targeted_v1_native_costs.json": "4514ceec3153958da2599d121ac4ddf11753e7f57db5e3ae1d9118c7b848c8cb",
+    "outputs/movement_task/pipeline_validation_v1/targeted_v1_receipt.json": "e71f6cbc11f2b4fad1b0079540a7229715f24ff667bc9a5c68be0c1357729008",
+    "outputs/movement_task/pipeline_validation_v1/tracked_secret_scan.txt": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+    "outputs/movement_task/pipeline_validation_v1/tracked_secret_scan_inputs.json": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+    "outputs/movement_task/pipeline_validation_v1/tracked_secret_scan_receipt.json": "32492255f0a456b0480e47a7c9e2e9d7d93953299fa3cb0e3ac13cb40cd334ff",
+    "outputs/movement_task/pipeline_validation_v1/unittest.txt": "df8f9b10c12ebf247f0c47965b9c76a1dca254a198e627a982c7bba3405637fe",
+    "outputs/movement_task/pipeline_validation_v1/unittest_inputs.json": "eacee33b1cd3f973bcecd7e113277d011ad190d9d2d79b77053fdf2e97a39513",
+    "outputs/movement_task/pipeline_validation_v1/unittest_native_costs.json": "cdfd6641e9c0cc97549c2c26cb79b35c5b72dfdd0d1609834c462a7d2af77c86",
+    "outputs/movement_task/pipeline_validation_v1/unittest_receipt.json": "b829c144df63f72cbdf4476d5f5f68cbb8ff0b64d4877431dff55c16b6ac2f36",
+    "outputs/movement_task/pipeline_validation_v1/whitespace_bridge.json": "3bbab22b404d2f94723da19901bf307c2af219eb8d1c3152741ec0fa5321f412",
+    "scripts/audit_movement_task_statistics_v1.py": "f1551337e6301edef7cc7e4c7e7443cfe8ea4f01b22751f7b9973efa4596f67e",
+    "scripts/audit_movement_task_v1.py": "a904e99153224bf0801ce7193e2623d95abee8e9cba5dc129828fcb46ac4208b",
+    "scripts/collect_movement_task_v1.py": "7375be65be09cb35d0d7293fe27f28265b6c24aaa30b31519caec31fc8019d16",
+    "scripts/evaluate_movement_task_v1.py": "d93aefc1c6664b2860655760d9770dd1840e24519368b1330dada823e49b58e3",
+    "src/analysis/movement_task_design_v1.py": "130b287326f36c03533138a4d18dbe12562f452feb2831160479aa7171bac848",
+    "src/analysis/movement_task_io_v1.py": "54df6191ea788364a8efaf91cb3359e3e9eb34e37119bb009908d9d5e1327118",
+    "src/analysis/movement_task_numerical_v1.py": "579483f0fbeeec5a6f9716b29513ae1f1f6552a62f79aa947cc6d2ecc07cc4ba",
+    "src/analysis/movement_task_statistics_v1.py": "5eaad169bb5552baa1530c63dffa56e8063150b4bdabbd3df0b94b7fc1a7e212",
+    "tests/test_movement_task_design_v1.py": "d70ea094489445b548069c2252762d38f4aa77ef6103abf7eec8150b047a5961",
+    "tests/test_movement_task_numerical_v1.py": "195766d7a3691e5ab5c05b2047160fa8a3eadf1ef41f53d1b8233fb13090d38e",
+    "tests/test_movement_task_pipeline_v1.py": "9692e963e9fbb899bbb545223ea461eaa52c64c42f4bc0c9f2d9d3b8b9be4c24",
+    "tests/test_movement_task_statistics_v1.py": "c6519967b2a35545bd4a5a3c499b913ec4d72df062990e234c618d917800053c"
+  },
+  "index_bytes_equal_disk": true,
+  "staged_secret_scan": "PASSED",
+  "staged_diff_check": "PASSED",
+  "instrumented_test_costs": {
+    "targeted_v1": {
+      "source_sha256": "4514ceec3153958da2599d121ac4ddf11753e7f57db5e3ae1d9118c7b848c8cb",
+      "scope": "Instrumented native fixtures in this invocation only; preliminary console test attempts and uninstrumented fixtures are not covered.",
+      "new_pipeline_module_only": {
+        "native_frames": 847680,
+        "all_reset_calls": 1683,
+        "actual_policy_queries": 574,
+        "constructed_tiny_envs": 33
+      },
+      "all_instrumented_modules": [
+        "tests.test_movement_task_pipeline_v1"
+      ]
+    },
+    "pre_whitespace/unittest": {
+      "source_sha256": "970b4ce6a281ebd17ec685eebc6f508bec2ec5c689c51ef973db8e32492ef0e1",
+      "scope": "Instrumented native fixtures in this invocation only; preliminary console test attempts and uninstrumented fixtures are not covered.",
+      "new_pipeline_module_only": {
+        "native_frames": 847680,
+        "all_reset_calls": 1683,
+        "actual_policy_queries": 574,
+        "constructed_tiny_envs": 33
+      },
+      "all_instrumented_modules": [
+        "test_continuous_state_witness_v1",
+        "test_delayed_intervention_qualification_v1",
+        "test_delayed_intervention_qualification_v2",
+        "test_delayed_switch_effects_v1",
+        "test_integral_reprobe_qualification_v1",
+        "test_local_reprobe_qualification_v1",
+        "test_movement_task_host_v1",
+        "test_movement_task_pipeline_v1",
+        "test_physical_reprobe_host_v1",
+        "test_physical_reprobe_qualification_v1",
+        "test_selected_nominal_acquisition_v1",
+        "test_selected_response_pipeline_v1",
+        "test_short_probe_journal_audit_v1",
+        "test_short_probe_study_v1",
+        "test_stale_reprobe_qualification_v1",
+        "tests.test_local_reprobe_qualification_v1",
+        "tests.test_physical_reprobe_host_v1"
+      ]
+    },
+    "unittest": {
+      "source_sha256": "cdfd6641e9c0cc97549c2c26cb79b35c5b72dfdd0d1609834c462a7d2af77c86",
+      "scope": "Instrumented native fixtures in this invocation only; preliminary console test attempts and uninstrumented fixtures are not covered.",
+      "new_pipeline_module_only": {
+        "native_frames": 847680,
+        "all_reset_calls": 1683,
+        "actual_policy_queries": 574,
+        "constructed_tiny_envs": 33
+      },
+      "all_instrumented_modules": [
+        "test_continuous_state_witness_v1",
+        "test_delayed_intervention_qualification_v1",
+        "test_delayed_intervention_qualification_v2",
+        "test_delayed_switch_effects_v1",
+        "test_integral_reprobe_qualification_v1",
+        "test_local_reprobe_qualification_v1",
+        "test_movement_task_host_v1",
+        "test_movement_task_pipeline_v1",
+        "test_physical_reprobe_host_v1",
+        "test_physical_reprobe_qualification_v1",
+        "test_selected_nominal_acquisition_v1",
+        "test_selected_response_pipeline_v1",
+        "test_short_probe_journal_audit_v1",
+        "test_short_probe_study_v1",
+        "test_stale_reprobe_qualification_v1",
+        "tests.test_local_reprobe_qualification_v1",
+        "tests.test_physical_reprobe_host_v1"
+      ]
+    }
+  },
+  "earlier_unrecorded_console_test_costs": "Unknown; not zero and not included in recorded check receipts.",
+  "new_scientific_runs": 0,
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_reserved_seeds_used": 0,
+  "task_benefit_evaluated": false,
+  "algorithm_novelty_demonstrated": false,
+  "publication_goal_complete": false
+}

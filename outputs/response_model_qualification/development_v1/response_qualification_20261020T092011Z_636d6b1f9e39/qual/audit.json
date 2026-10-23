@@ -1,0 +1,57 @@
+{
+  "experiment_run_id": "response_qualification_20261020T092011Z_636d6b1f9e39",
+  "manifest_id": "b3bd767f35c0720e8fa148097ba8f1b909da5c3d61c8a3c4398f58ae76a536e6",
+  "source_git_commit": "636d6b1f9e395af41a415786561e39a23e16c8c5",
+  "integrity": "PASSED",
+  "split": "QUAL",
+  "executions": 108,
+  "events_checked": 55190,
+  "witness_records_checked": 432,
+  "qual_paired_prefixes_checked": 54,
+  "costs": {
+    "steps": 9762,
+    "policy_queries": 5892,
+    "independent_cold_fit_recomputations": 216,
+    "independent_cold_fit_nfev": 216
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 5508,
+      "simulation_attempts": 560562,
+      "simulation_completed": 560562,
+      "simulation_frames_attempted": 2802810,
+      "simulation_frames_completed": 2802810,
+      "reset_completed": 5508
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 5400,
+        "simulation_attempts": 540000,
+        "simulation_completed": 540000,
+        "simulation_frames_attempted": 2700000,
+        "simulation_frames_completed": 2700000,
+        "reset_completed": 5400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 108,
+        "simulation_attempts": 10800,
+        "simulation_completed": 10800,
+        "simulation_frames_attempted": 54000,
+        "simulation_frames_completed": 54000,
+        "reset_completed": 108
+      },
+      "CONTROL": {
+        "simulation_attempts": 9762,
+        "simulation_completed": 9762,
+        "simulation_frames_attempted": 48810,
+        "simulation_frames_completed": 48810
+      }
+    }
+  },
+  "completion_sha256": "24d74d1e31abe4ff8bf3709e8042f3914e0fc298688f759d30e38de2f0473139",
+  "source_sha256": "fa3155e178288b589eb7bec6bd42a778e90b2b0107f724bb01e9c4377f88683b",
+  "wall_ns": 40087397600,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_model_fits": 0
+}

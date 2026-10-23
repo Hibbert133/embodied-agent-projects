@@ -1,0 +1,1675 @@
+{
+  "experiment_run_id": "point8_baseline_20261015T153211Z_b9506ff0e3ae",
+  "manifest_id": "15226f9f43e1dbbb11d9e5354b975663038557e501b43c42ad79c5caa293cdce",
+  "source_git_commit": "b9506ff0e3aeeb209e18cd2b1b7a6bb0514d11b2",
+  "analysis_role": "POST_RESULT_EXPLORATORY_EVALUATOR_ONLY",
+  "not_registered_hypothesis_test": true,
+  "scope": "Optimistic finite-bank choice after observing every outcome; not deployable, a population upper bound, natural experience, training or prospective method performance.",
+  "contexts": 48,
+  "futures_per_context": 2,
+  "portfolios": {
+    "POINT8_OR_POINT16": {
+      "fixed_best": "POINT16_CYCLE",
+      "fixed_best_mean_loss": 94.60416666666667,
+      "empirical_all_outcome_context_minimum": 88.05208333333333,
+      "descriptive_gap": 6.552083333333343,
+      "selected_successes": 94,
+      "contexts": [
+        {
+          "stream": 0,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 61.5,
+            "POINT16_CYCLE": 70.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 0,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 47.5,
+            "POINT16_CYCLE": 61.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 0,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 92.0,
+            "POINT16_CYCLE": 94.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 1,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "POINT16_CYCLE": 80.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 1,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 54.0,
+            "POINT16_CYCLE": 59.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 1,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 89.5,
+            "POINT16_CYCLE": 100.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 2,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "POINT16_CYCLE": 80.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 2,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 117.0,
+            "POINT16_CYCLE": 91.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 2,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 80.0,
+            "POINT16_CYCLE": 88.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 75.5,
+            "POINT16_CYCLE": 86.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 91.5,
+            "POINT16_CYCLE": 104.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 100.5,
+            "POINT16_CYCLE": 105.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 4,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 77.5,
+            "POINT16_CYCLE": 82.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 4,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.5,
+            "POINT16_CYCLE": 67.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 4,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 296.0,
+            "POINT16_CYCLE": 128.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 5,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 73.0,
+            "POINT16_CYCLE": 81.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 5,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 60.0,
+            "POINT16_CYCLE": 69.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 5,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 87.0,
+            "POINT16_CYCLE": 99.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 6,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "POINT16_CYCLE": 77.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 6,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 45.5,
+            "POINT16_CYCLE": 54.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 6,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 99.0,
+            "POINT16_CYCLE": 103.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 80.5,
+            "POINT16_CYCLE": 89.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 63.5,
+            "POINT16_CYCLE": 71.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 90.5,
+            "POINT16_CYCLE": 110.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 8,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 72.0,
+            "POINT16_CYCLE": 80.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 181.5,
+            "POINT16_CYCLE": 83.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 8,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 100.5,
+            "POINT16_CYCLE": 113.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 9,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "POINT16_CYCLE": 68.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 9,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.0,
+            "POINT16_CYCLE": 71.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 9,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "POINT16_CYCLE": 92.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 68.0,
+            "POINT16_CYCLE": 76.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 57.5,
+            "POINT16_CYCLE": 67.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 172.5,
+            "POINT16_CYCLE": 138.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 11,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 78.0,
+            "POINT16_CYCLE": 79.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 11,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 62.5,
+            "POINT16_CYCLE": 63.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 11,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 92.0,
+            "POINT16_CYCLE": 105.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 68.0,
+            "POINT16_CYCLE": 79.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 60.0,
+            "POINT16_CYCLE": 66.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 148.5,
+            "POINT16_CYCLE": 125.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 13,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 91.0,
+            "POINT16_CYCLE": 89.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 13,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 52.0,
+            "POINT16_CYCLE": 61.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 96.0,
+            "POINT16_CYCLE": 97.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 62.0,
+            "POINT16_CYCLE": 72.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 58.5,
+            "POINT16_CYCLE": 67.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "POINT16_CYCLE": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.0,
+            "POINT16_CYCLE": 76.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 65.0,
+            "POINT16_CYCLE": 72.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 120.0,
+            "POINT16_CYCLE": 139.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        }
+      ]
+    },
+    "FIVE_CORRECTED": {
+      "fixed_best": "POINT16_CYCLE",
+      "fixed_best_mean_loss": 94.60416666666667,
+      "empirical_all_outcome_context_minimum": 86.92708333333333,
+      "descriptive_gap": 7.677083333333343,
+      "selected_successes": 94,
+      "contexts": [
+        {
+          "stream": 0,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 61.5,
+            "KEEP_POINT8_AFTER16": 69.0,
+            "POINT16_CYCLE": 70.5,
+            "DIRECT_G8": 61.0,
+            "UPDATE_G16": 70.5
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 0,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 47.5,
+            "KEEP_POINT8_AFTER16": 54.5,
+            "POINT16_CYCLE": 61.0,
+            "DIRECT_G8": 48.5,
+            "UPDATE_G16": 61.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 0,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 92.0,
+            "KEEP_POINT8_AFTER16": 98.5,
+            "POINT16_CYCLE": 94.5,
+            "DIRECT_G8": 90.0,
+            "UPDATE_G16": 94.5
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 1,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "KEEP_POINT8_AFTER16": 91.5,
+            "POINT16_CYCLE": 80.5,
+            "DIRECT_G8": 82.5,
+            "UPDATE_G16": 81.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 1,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 54.0,
+            "KEEP_POINT8_AFTER16": 61.5,
+            "POINT16_CYCLE": 59.5,
+            "DIRECT_G8": 55.0,
+            "UPDATE_G16": 60.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 1,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 89.5,
+            "KEEP_POINT8_AFTER16": 98.0,
+            "POINT16_CYCLE": 100.5,
+            "DIRECT_G8": 93.0,
+            "UPDATE_G16": 101.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 2,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "KEEP_POINT8_AFTER16": 500.0,
+            "POINT16_CYCLE": 80.5,
+            "DIRECT_G8": 500.0,
+            "UPDATE_G16": 81.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 2,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 117.0,
+            "KEEP_POINT8_AFTER16": 117.5,
+            "POINT16_CYCLE": 91.5,
+            "DIRECT_G8": 94.0,
+            "UPDATE_G16": 91.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 2,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 80.0,
+            "KEEP_POINT8_AFTER16": 89.0,
+            "POINT16_CYCLE": 88.0,
+            "DIRECT_G8": 81.0,
+            "UPDATE_G16": 89.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 75.5,
+            "KEEP_POINT8_AFTER16": 87.0,
+            "POINT16_CYCLE": 86.0,
+            "DIRECT_G8": 75.5,
+            "UPDATE_G16": 86.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 91.5,
+            "KEEP_POINT8_AFTER16": 96.0,
+            "POINT16_CYCLE": 104.5,
+            "DIRECT_G8": 92.0,
+            "UPDATE_G16": 105.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 100.5,
+            "KEEP_POINT8_AFTER16": 123.5,
+            "POINT16_CYCLE": 105.0,
+            "DIRECT_G8": 102.0,
+            "UPDATE_G16": 129.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 4,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 77.5,
+            "KEEP_POINT8_AFTER16": 87.0,
+            "POINT16_CYCLE": 82.0,
+            "DIRECT_G8": 74.5,
+            "UPDATE_G16": 81.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 4,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.5,
+            "KEEP_POINT8_AFTER16": 77.0,
+            "POINT16_CYCLE": 67.0,
+            "DIRECT_G8": 67.5,
+            "UPDATE_G16": 68.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 4,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 296.0,
+            "KEEP_POINT8_AFTER16": 248.0,
+            "POINT16_CYCLE": 128.5,
+            "DIRECT_G8": 114.5,
+            "UPDATE_G16": 124.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 5,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 73.0,
+            "KEEP_POINT8_AFTER16": 79.0,
+            "POINT16_CYCLE": 81.0,
+            "DIRECT_G8": 73.5,
+            "UPDATE_G16": 80.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 5,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 60.0,
+            "KEEP_POINT8_AFTER16": 66.0,
+            "POINT16_CYCLE": 69.5,
+            "DIRECT_G8": 61.0,
+            "UPDATE_G16": 69.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 5,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 87.0,
+            "KEEP_POINT8_AFTER16": 95.0,
+            "POINT16_CYCLE": 99.0,
+            "DIRECT_G8": 88.5,
+            "UPDATE_G16": 100.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 6,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "KEEP_POINT8_AFTER16": 289.5,
+            "POINT16_CYCLE": 77.5,
+            "DIRECT_G8": 71.5,
+            "UPDATE_G16": 77.5
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 6,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 45.5,
+            "KEEP_POINT8_AFTER16": 52.0,
+            "POINT16_CYCLE": 54.5,
+            "DIRECT_G8": 46.5,
+            "UPDATE_G16": 55.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 6,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 99.0,
+            "KEEP_POINT8_AFTER16": 109.0,
+            "POINT16_CYCLE": 103.0,
+            "DIRECT_G8": 98.5,
+            "UPDATE_G16": 104.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 7,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 80.5,
+            "KEEP_POINT8_AFTER16": 89.0,
+            "POINT16_CYCLE": 89.5,
+            "DIRECT_G8": 81.0,
+            "UPDATE_G16": 90.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 63.5,
+            "KEEP_POINT8_AFTER16": 74.0,
+            "POINT16_CYCLE": 71.5,
+            "DIRECT_G8": 63.5,
+            "UPDATE_G16": 71.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 90.5,
+            "KEEP_POINT8_AFTER16": 99.0,
+            "POINT16_CYCLE": 110.0,
+            "DIRECT_G8": 121.5,
+            "UPDATE_G16": 127.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 8,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 72.0,
+            "KEEP_POINT8_AFTER16": 81.5,
+            "POINT16_CYCLE": 80.5,
+            "DIRECT_G8": 71.5,
+            "UPDATE_G16": 80.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 181.5,
+            "KEEP_POINT8_AFTER16": 184.5,
+            "POINT16_CYCLE": 83.5,
+            "DIRECT_G8": 149.0,
+            "UPDATE_G16": 84.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 8,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 100.5,
+            "KEEP_POINT8_AFTER16": 108.5,
+            "POINT16_CYCLE": 113.5,
+            "DIRECT_G8": 103.0,
+            "UPDATE_G16": 113.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 9,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "KEEP_POINT8_AFTER16": 71.0,
+            "POINT16_CYCLE": 68.0,
+            "DIRECT_G8": 64.5,
+            "UPDATE_G16": 68.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 9,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.0,
+            "KEEP_POINT8_AFTER16": 74.0,
+            "POINT16_CYCLE": 71.5,
+            "DIRECT_G8": 67.5,
+            "UPDATE_G16": 71.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 9,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "KEEP_POINT8_AFTER16": 90.5,
+            "POINT16_CYCLE": 92.5,
+            "DIRECT_G8": 82.5,
+            "UPDATE_G16": 91.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 68.0,
+            "KEEP_POINT8_AFTER16": 75.0,
+            "POINT16_CYCLE": 76.5,
+            "DIRECT_G8": 68.0,
+            "UPDATE_G16": 76.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 57.5,
+            "KEEP_POINT8_AFTER16": 64.5,
+            "POINT16_CYCLE": 67.0,
+            "DIRECT_G8": 59.0,
+            "UPDATE_G16": 67.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 172.5,
+            "KEEP_POINT8_AFTER16": 197.0,
+            "POINT16_CYCLE": 138.0,
+            "DIRECT_G8": 141.0,
+            "UPDATE_G16": 134.5
+          },
+          "evaluator_only_choice": "UPDATE_G16"
+        },
+        {
+          "stream": 11,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 78.0,
+            "KEEP_POINT8_AFTER16": 85.5,
+            "POINT16_CYCLE": 79.5,
+            "DIRECT_G8": 81.5,
+            "UPDATE_G16": 80.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 11,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 62.5,
+            "KEEP_POINT8_AFTER16": 70.5,
+            "POINT16_CYCLE": 63.5,
+            "DIRECT_G8": 65.0,
+            "UPDATE_G16": 64.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 11,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 92.0,
+            "KEEP_POINT8_AFTER16": 102.0,
+            "POINT16_CYCLE": 105.5,
+            "DIRECT_G8": 98.5,
+            "UPDATE_G16": 108.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 68.0,
+            "KEEP_POINT8_AFTER16": 77.5,
+            "POINT16_CYCLE": 79.5,
+            "DIRECT_G8": 69.5,
+            "UPDATE_G16": 79.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 60.0,
+            "KEEP_POINT8_AFTER16": 68.5,
+            "POINT16_CYCLE": 66.0,
+            "DIRECT_G8": 62.0,
+            "UPDATE_G16": 67.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 148.5,
+            "KEEP_POINT8_AFTER16": 124.5,
+            "POINT16_CYCLE": 125.0,
+            "DIRECT_G8": 313.5,
+            "UPDATE_G16": 111.0
+          },
+          "evaluator_only_choice": "UPDATE_G16"
+        },
+        {
+          "stream": 13,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 91.0,
+            "KEEP_POINT8_AFTER16": 97.5,
+            "POINT16_CYCLE": 89.5,
+            "DIRECT_G8": 89.0,
+            "UPDATE_G16": 90.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 13,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 52.0,
+            "KEEP_POINT8_AFTER16": 60.0,
+            "POINT16_CYCLE": 61.5,
+            "DIRECT_G8": 53.5,
+            "UPDATE_G16": 62.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 96.0,
+            "KEEP_POINT8_AFTER16": 98.5,
+            "POINT16_CYCLE": 97.0,
+            "DIRECT_G8": 90.0,
+            "UPDATE_G16": 100.5
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 14,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 62.0,
+            "KEEP_POINT8_AFTER16": 71.0,
+            "POINT16_CYCLE": 72.5,
+            "DIRECT_G8": 62.0,
+            "UPDATE_G16": 72.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 58.5,
+            "KEEP_POINT8_AFTER16": 66.5,
+            "POINT16_CYCLE": 67.5,
+            "DIRECT_G8": 59.0,
+            "UPDATE_G16": 67.5
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "KEEP_POINT8_AFTER16": 500.0,
+            "POINT16_CYCLE": 500.0,
+            "DIRECT_G8": 500.0,
+            "UPDATE_G16": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.0,
+            "KEEP_POINT8_AFTER16": 75.0,
+            "POINT16_CYCLE": 76.5,
+            "DIRECT_G8": 68.0,
+            "UPDATE_G16": 76.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 65.0,
+            "KEEP_POINT8_AFTER16": 74.5,
+            "POINT16_CYCLE": 72.0,
+            "DIRECT_G8": 66.5,
+            "UPDATE_G16": 71.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 120.0,
+            "KEEP_POINT8_AFTER16": 131.5,
+            "POINT16_CYCLE": 139.5,
+            "DIRECT_G8": 125.5,
+            "UPDATE_G16": 138.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        }
+      ]
+    },
+    "SIX_POST_EIGHT": {
+      "fixed_best": "POINT16_CYCLE",
+      "fixed_best_mean_loss": 94.60416666666667,
+      "empirical_all_outcome_context_minimum": 86.42708333333333,
+      "descriptive_gap": 8.177083333333343,
+      "selected_successes": 94,
+      "contexts": [
+        {
+          "stream": 0,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 61.5,
+            "KEEP_POINT8_AFTER16": 69.0,
+            "POINT16_CYCLE": 70.5,
+            "DIRECT_G8": 61.0,
+            "UPDATE_G16": 70.5,
+            "IDENTITY_AFTER8": 58.5
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 0,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 47.5,
+            "KEEP_POINT8_AFTER16": 54.5,
+            "POINT16_CYCLE": 61.0,
+            "DIRECT_G8": 48.5,
+            "UPDATE_G16": 61.5,
+            "IDENTITY_AFTER8": 46.5
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 0,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 92.0,
+            "KEEP_POINT8_AFTER16": 98.5,
+            "POINT16_CYCLE": 94.5,
+            "DIRECT_G8": 90.0,
+            "UPDATE_G16": 94.5,
+            "IDENTITY_AFTER8": 88.0
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 1,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "KEEP_POINT8_AFTER16": 91.5,
+            "POINT16_CYCLE": 80.5,
+            "DIRECT_G8": 82.5,
+            "UPDATE_G16": 81.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 1,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 54.0,
+            "KEEP_POINT8_AFTER16": 61.5,
+            "POINT16_CYCLE": 59.5,
+            "DIRECT_G8": 55.0,
+            "UPDATE_G16": 60.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 1,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 89.5,
+            "KEEP_POINT8_AFTER16": 98.0,
+            "POINT16_CYCLE": 100.5,
+            "DIRECT_G8": 93.0,
+            "UPDATE_G16": 101.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 2,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "KEEP_POINT8_AFTER16": 500.0,
+            "POINT16_CYCLE": 80.5,
+            "DIRECT_G8": 500.0,
+            "UPDATE_G16": 81.0,
+            "IDENTITY_AFTER8": 73.0
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 2,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 117.0,
+            "KEEP_POINT8_AFTER16": 117.5,
+            "POINT16_CYCLE": 91.5,
+            "DIRECT_G8": 94.0,
+            "UPDATE_G16": 91.5,
+            "IDENTITY_AFTER8": 287.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 2,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 80.0,
+            "KEEP_POINT8_AFTER16": 89.0,
+            "POINT16_CYCLE": 88.0,
+            "DIRECT_G8": 81.0,
+            "UPDATE_G16": 89.0,
+            "IDENTITY_AFTER8": 77.5
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 3,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 75.5,
+            "KEEP_POINT8_AFTER16": 87.0,
+            "POINT16_CYCLE": 86.0,
+            "DIRECT_G8": 75.5,
+            "UPDATE_G16": 86.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 91.5,
+            "KEEP_POINT8_AFTER16": 96.0,
+            "POINT16_CYCLE": 104.5,
+            "DIRECT_G8": 92.0,
+            "UPDATE_G16": 105.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 3,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 100.5,
+            "KEEP_POINT8_AFTER16": 123.5,
+            "POINT16_CYCLE": 105.0,
+            "DIRECT_G8": 102.0,
+            "UPDATE_G16": 129.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 4,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 77.5,
+            "KEEP_POINT8_AFTER16": 87.0,
+            "POINT16_CYCLE": 82.0,
+            "DIRECT_G8": 74.5,
+            "UPDATE_G16": 81.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 4,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.5,
+            "KEEP_POINT8_AFTER16": 77.0,
+            "POINT16_CYCLE": 67.0,
+            "DIRECT_G8": 67.5,
+            "UPDATE_G16": 68.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 4,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 296.0,
+            "KEEP_POINT8_AFTER16": 248.0,
+            "POINT16_CYCLE": 128.5,
+            "DIRECT_G8": 114.5,
+            "UPDATE_G16": 124.0,
+            "IDENTITY_AFTER8": 110.5
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 5,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 73.0,
+            "KEEP_POINT8_AFTER16": 79.0,
+            "POINT16_CYCLE": 81.0,
+            "DIRECT_G8": 73.5,
+            "UPDATE_G16": 80.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 5,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 60.0,
+            "KEEP_POINT8_AFTER16": 66.0,
+            "POINT16_CYCLE": 69.5,
+            "DIRECT_G8": 61.0,
+            "UPDATE_G16": 69.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 5,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 87.0,
+            "KEEP_POINT8_AFTER16": 95.0,
+            "POINT16_CYCLE": 99.0,
+            "DIRECT_G8": 88.5,
+            "UPDATE_G16": 100.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 6,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "KEEP_POINT8_AFTER16": 289.5,
+            "POINT16_CYCLE": 77.5,
+            "DIRECT_G8": 71.5,
+            "UPDATE_G16": 77.5,
+            "IDENTITY_AFTER8": 105.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 6,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 45.5,
+            "KEEP_POINT8_AFTER16": 52.0,
+            "POINT16_CYCLE": 54.5,
+            "DIRECT_G8": 46.5,
+            "UPDATE_G16": 55.0,
+            "IDENTITY_AFTER8": 413.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 6,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 99.0,
+            "KEEP_POINT8_AFTER16": 109.0,
+            "POINT16_CYCLE": 103.0,
+            "DIRECT_G8": 98.5,
+            "UPDATE_G16": 104.0,
+            "IDENTITY_AFTER8": 111.5
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 7,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 80.5,
+            "KEEP_POINT8_AFTER16": 89.0,
+            "POINT16_CYCLE": 89.5,
+            "DIRECT_G8": 81.0,
+            "UPDATE_G16": 90.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 63.5,
+            "KEEP_POINT8_AFTER16": 74.0,
+            "POINT16_CYCLE": 71.5,
+            "DIRECT_G8": 63.5,
+            "UPDATE_G16": 71.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 7,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 90.5,
+            "KEEP_POINT8_AFTER16": 99.0,
+            "POINT16_CYCLE": 110.0,
+            "DIRECT_G8": 121.5,
+            "UPDATE_G16": 127.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 8,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 72.0,
+            "KEEP_POINT8_AFTER16": 81.5,
+            "POINT16_CYCLE": 80.5,
+            "DIRECT_G8": 71.5,
+            "UPDATE_G16": 80.0,
+            "IDENTITY_AFTER8": 82.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 8,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 181.5,
+            "KEEP_POINT8_AFTER16": 184.5,
+            "POINT16_CYCLE": 83.5,
+            "DIRECT_G8": 149.0,
+            "UPDATE_G16": 84.5,
+            "IDENTITY_AFTER8": 95.5
+          },
+          "evaluator_only_choice": "POINT16_CYCLE"
+        },
+        {
+          "stream": 8,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 100.5,
+            "KEEP_POINT8_AFTER16": 108.5,
+            "POINT16_CYCLE": 113.5,
+            "DIRECT_G8": 103.0,
+            "UPDATE_G16": 113.5,
+            "IDENTITY_AFTER8": 111.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 9,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "KEEP_POINT8_AFTER16": 71.0,
+            "POINT16_CYCLE": 68.0,
+            "DIRECT_G8": 64.5,
+            "UPDATE_G16": 68.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 9,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.0,
+            "KEEP_POINT8_AFTER16": 74.0,
+            "POINT16_CYCLE": 71.5,
+            "DIRECT_G8": 67.5,
+            "UPDATE_G16": 71.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 9,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 82.5,
+            "KEEP_POINT8_AFTER16": 90.5,
+            "POINT16_CYCLE": 92.5,
+            "DIRECT_G8": 82.5,
+            "UPDATE_G16": 91.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 68.0,
+            "KEEP_POINT8_AFTER16": 75.0,
+            "POINT16_CYCLE": 76.5,
+            "DIRECT_G8": 68.0,
+            "UPDATE_G16": 76.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 10,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 57.5,
+            "KEEP_POINT8_AFTER16": 64.5,
+            "POINT16_CYCLE": 67.0,
+            "DIRECT_G8": 59.0,
+            "UPDATE_G16": 67.5,
+            "IDENTITY_AFTER8": 53.0
+          },
+          "evaluator_only_choice": "IDENTITY_AFTER8"
+        },
+        {
+          "stream": 10,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 172.5,
+            "KEEP_POINT8_AFTER16": 197.0,
+            "POINT16_CYCLE": 138.0,
+            "DIRECT_G8": 141.0,
+            "UPDATE_G16": 134.5,
+            "IDENTITY_AFTER8": 135.5
+          },
+          "evaluator_only_choice": "UPDATE_G16"
+        },
+        {
+          "stream": 11,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 78.0,
+            "KEEP_POINT8_AFTER16": 85.5,
+            "POINT16_CYCLE": 79.5,
+            "DIRECT_G8": 81.5,
+            "UPDATE_G16": 80.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 11,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 62.5,
+            "KEEP_POINT8_AFTER16": 70.5,
+            "POINT16_CYCLE": 63.5,
+            "DIRECT_G8": 65.0,
+            "UPDATE_G16": 64.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 11,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 92.0,
+            "KEEP_POINT8_AFTER16": 102.0,
+            "POINT16_CYCLE": 105.5,
+            "DIRECT_G8": 98.5,
+            "UPDATE_G16": 108.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 68.0,
+            "KEEP_POINT8_AFTER16": 77.5,
+            "POINT16_CYCLE": 79.5,
+            "DIRECT_G8": 69.5,
+            "UPDATE_G16": 79.5,
+            "IDENTITY_AFTER8": 74.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 60.0,
+            "KEEP_POINT8_AFTER16": 68.5,
+            "POINT16_CYCLE": 66.0,
+            "DIRECT_G8": 62.0,
+            "UPDATE_G16": 67.0,
+            "IDENTITY_AFTER8": 60.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 12,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 148.5,
+            "KEEP_POINT8_AFTER16": 124.5,
+            "POINT16_CYCLE": 125.0,
+            "DIRECT_G8": 313.5,
+            "UPDATE_G16": 111.0,
+            "IDENTITY_AFTER8": 139.0
+          },
+          "evaluator_only_choice": "UPDATE_G16"
+        },
+        {
+          "stream": 13,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 91.0,
+            "KEEP_POINT8_AFTER16": 97.5,
+            "POINT16_CYCLE": 89.5,
+            "DIRECT_G8": 89.0,
+            "UPDATE_G16": 90.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 13,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 52.0,
+            "KEEP_POINT8_AFTER16": 60.0,
+            "POINT16_CYCLE": 61.5,
+            "DIRECT_G8": 53.5,
+            "UPDATE_G16": 62.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 13,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 96.0,
+            "KEEP_POINT8_AFTER16": 98.5,
+            "POINT16_CYCLE": 97.0,
+            "DIRECT_G8": 90.0,
+            "UPDATE_G16": 100.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_G8"
+        },
+        {
+          "stream": 14,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 62.0,
+            "KEEP_POINT8_AFTER16": 71.0,
+            "POINT16_CYCLE": 72.5,
+            "DIRECT_G8": 62.0,
+            "UPDATE_G16": 72.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 58.5,
+            "KEEP_POINT8_AFTER16": 66.5,
+            "POINT16_CYCLE": 67.5,
+            "DIRECT_G8": 59.0,
+            "UPDATE_G16": 67.5,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 14,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 500.0,
+            "KEEP_POINT8_AFTER16": 500.0,
+            "POINT16_CYCLE": 500.0,
+            "DIRECT_G8": 500.0,
+            "UPDATE_G16": 500.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "push-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 67.0,
+            "KEEP_POINT8_AFTER16": 75.0,
+            "POINT16_CYCLE": 76.5,
+            "DIRECT_G8": 68.0,
+            "UPDATE_G16": 76.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "reach-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 65.0,
+            "KEEP_POINT8_AFTER16": 74.5,
+            "POINT16_CYCLE": 72.0,
+            "DIRECT_G8": 66.5,
+            "UPDATE_G16": 71.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        },
+        {
+          "stream": 15,
+          "task": "door-open-v3",
+          "two_observed_future_means": {
+            "DIRECT_POINT8": 120.0,
+            "KEEP_POINT8_AFTER16": 131.5,
+            "POINT16_CYCLE": 139.5,
+            "DIRECT_G8": 125.5,
+            "UPDATE_G16": 138.0,
+            "IDENTITY_AFTER8": 500.0
+          },
+          "evaluator_only_choice": "DIRECT_POINT8"
+        }
+      ]
+    }
+  },
+  "no_probe_excluded": "Initial NO_PROBE does not share the eight-probe state.",
+  "new_environment_steps": 0,
+  "api_calls": 0,
+  "model_fits": 0
+}

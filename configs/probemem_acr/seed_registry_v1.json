@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "registry_id": "probemem_acr_seed_registry_v1",
+  "base_commit": "2736bdf8137c0534954934b51275e258f7f80583",
+  "episode_seed_partitions": {
+    "development": [1100, 1199],
+    "validation_reserved": [1200, 1249],
+    "heldout_reserved": [1300, 1399]
+  },
+  "development_random_seed_namespaces": {
+    "initial_perturbation": 8301,
+    "diagnostic_probe": 8302,
+    "paired_verification": 8303,
+    "paired_bootstrap": 9301
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "protocol": "linear_command_preflight_v1",
+  "scope": "POSTHOC_TRAIN_ONLY_ALGEBRA_AND_DESIGN_GEOMETRY",
+  "source_result_commit": "97efaf6e2d9876b2725bd5ca5cd0145d26b4eff7",
+  "fit_public_sha256": "151ee1cbc809294eb29b17c1a4effafef25c741bf5ee1e55db60e19bdc462640",
+  "models_index_sha256": "b76a5e0260b6f0de174697a99c739501c4baed20255f89c533fdd82f538bcf78",
+  "features": [
+    "H10",
+    "F20",
+    "F43"
+  ],
+  "sources": [
+    "FEEDBACK8",
+    "BALANCED8"
+  ],
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "whole_groups": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source_trajectories": 144,
+  "models": 18,
+  "query_xy_offset": 0.25,
+  "query_positions": 13402,
+  "model_query_pairs": 40206,
+  "candidate_model_pairs": 160824,
+  "model_trajectory_pairs": 432,
+  "candidate_ids": [
+    "X_PLUS",
+    "X_MINUS",
+    "Y_PLUS",
+    "Y_MINUS"
+  ],
+  "history_observations": 3,
+  "first_decision_step": 2,
+  "weighting": "One total weight per source trajectory; no output refitting",
+  "rank_tolerance": "max(weighted_design.shape)*float64_epsilon*largest_singular_value",
+  "conditional_columns": "XY commands; Z/grip and every other feature are nuisance columns",
+  "box_tolerance": 1e-12,
+  "new_environment_steps": 0,
+  "new_all_resets": 0,
+  "new_physical_frames": 0,
+  "new_online_llm_api_calls": 0,
+  "new_model_fits": 0,
+  "candidate_selection": "NONE; all fixed hypothetical queries preserved",
+  "physical_qualification": false,
+  "task_benefit": false,
+  "reserved_seed_execution": false
+}

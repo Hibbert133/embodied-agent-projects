@@ -1,0 +1,30 @@
+{
+  "protocol": "probemem_acr_glm_shadow_smoke_v1",
+  "run_id": "acr_glm_shadow_20260803T042234Z_cab016100670",
+  "source_git_commit": "cab01610067029708d0d00cb9ca467fa78cc3e00",
+  "model": "glm-5.2",
+  "cases": 3,
+  "api_calls": 3,
+  "valid_cases": 3,
+  "fail_closed_cases": 0,
+  "environment_steps": 0,
+  "model_actions_executed": 0,
+  "performance_claim_authorized": false,
+  "structured_output_rate": 1.0,
+  "schema_repair_cases": 0,
+  "latency_ms": {
+    "median": 22588.44650001265,
+    "minimum": 21286.77560001961,
+    "maximum": 25420.484299975215
+  },
+  "tokens": {
+    "input": 1271,
+    "output": 2290
+  },
+  "decision_counts": {
+    "REPEAT_STOCHASTIC_RETRY": 0,
+    "SWITCH_TO_BOUNDED_COMPENSATION": 3,
+    "ABSTAIN": 0
+  },
+  "qualitative_only": true
+}

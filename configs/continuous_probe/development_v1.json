@@ -1,0 +1,18 @@
+{
+  "protocol_id": "continuous_probe_development_v1",
+  "seed_start": 8700,
+  "num_seeds": 8,
+  "reserved_seeds": [8708, 8899],
+  "conditions": ["fault_01", "fault_02", "fault_03", "fault_04"],
+  "methods": ["NO_PROBE", "CONT_NO_CORRECTION", "CONT_STATIC", "CONT_DYNAMIC", "RESET_REFERENCE"],
+  "noise_std": 0.05,
+  "total_steps": 500,
+  "probe_steps": 16,
+  "post_probe_reserve": 484,
+  "maximum_physical_steps": 80000,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261013,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "output_root": "outputs/continuous_probe/development_v1"
+}

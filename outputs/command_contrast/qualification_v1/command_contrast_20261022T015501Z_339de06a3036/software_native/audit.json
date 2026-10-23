@@ -1,0 +1,59 @@
+{
+  "experiment_run_id": "command_contrast_20261022T015501Z_339de06a3036",
+  "manifest_id": "964c6a089d16019307df4241e140b953f3384489ba1d1a791fac482fa30756aa",
+  "source_git_commit": "339de06a303618837e98a63ecd9ab4b391844cfe",
+  "cohort": "SOFTWARE_NATIVE",
+  "integrity": "PASSED",
+  "native_software_contract": "PASSED",
+  "executions": 15,
+  "units": 3,
+  "paired_branch_checks": 12,
+  "costs": {
+    "policy_queries": 0,
+    "independent_c4_c8_refits": 0,
+    "independent_c4_c8_nfev": 0,
+    "control_steps": 45,
+    "query_available": 15
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 765,
+      "simulation_attempts": 76545,
+      "simulation_completed": 76545,
+      "simulation_frames_attempted": 382725,
+      "simulation_frames_completed": 382725,
+      "reset_completed": 765
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 750,
+        "simulation_attempts": 75000,
+        "simulation_completed": 75000,
+        "simulation_frames_attempted": 375000,
+        "simulation_frames_completed": 375000,
+        "reset_completed": 750
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 15,
+        "simulation_attempts": 1500,
+        "simulation_completed": 1500,
+        "simulation_frames_attempted": 7500,
+        "simulation_frames_completed": 7500,
+        "reset_completed": 15
+      },
+      "CONTROL": {
+        "simulation_attempts": 45,
+        "simulation_completed": 45,
+        "simulation_frames_attempted": 225,
+        "simulation_frames_completed": 225
+      }
+    }
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_predictor_training": 0,
+  "completion_sha256": "cb35f244305e3f417081790b379d8ea63c7c53c1fa11b4de8614279386eef406",
+  "auditor_sha256": "80ce1b5a88f5d2700cdcde8cb2a9bd0f59e3535c1bfa3e014750314405a19766",
+  "wall_ns": 2853663600,
+  "scope": "Saved-record and source-generated-state audit, not independent reproduction of physical dynamics or task utility"
+}

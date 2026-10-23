@@ -1,0 +1,65 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "created_utc": "2026-10-18T04:06:14.448557+00:00",
+  "tests_run": 9,
+  "integrity": "SOFTWARE_TESTS_PASSED",
+  "code_sha256": {
+    "src/probe/short_joint_reference_v1.py": "c0e0e8ee831819fbb59fd239f4256a807d7fa86f8a373c2cbd57ef9b16845be2",
+    "tests/test_short_joint_reference_v1.py": "08bf04345db4192c531e9113576aecd1f69e3bbfc305ad9b996cfabe3cb71452"
+  },
+  "test_log_sha256": "f65eb483514a759ab0efdd830017264416cd9f7afe4a92dd8ac17a75a391f77c",
+  "real_synthetic_optimizer_calls": {
+    "short": [
+      {
+        "nfev": 7,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      },
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      }
+    ],
+    "old_eight": [
+      {
+        "nfev": 1,
+        "optimizer_success": true
+      }
+    ]
+  },
+  "real_synthetic_optimizer_nfev": {
+    "short": 12,
+    "old_eight": 1
+  },
+  "prior_uninstrumented_target_run": {
+    "tests_run": 8,
+    "real_optimizer_counts": "NOT_SEPARATELY_INSTRUMENTED_NOT_ZERO"
+  },
+  "frozen_inputs_checked": 778,
+  "changed_frozen_inputs": [],
+  "new_environment_steps": 0,
+  "new_reset_calls": 0,
+  "new_api_calls": 0,
+  "new_nominal_calibration_fits": 0,
+  "new_selector_fits": 0,
+  "new_task_seed_execution": 0,
+  "current_main_integration": false,
+  "scope": "Artificial deterministic valid-schema response matrices only, no fitted physical calibration data or MetaWorld task construction. Mocked failure optimizer is separate from measured real optimizer calls. This does not qualify four-step physical identification or task utility."
+}

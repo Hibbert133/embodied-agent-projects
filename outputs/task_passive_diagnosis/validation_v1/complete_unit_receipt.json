@@ -1,0 +1,36 @@
+{
+  "integrity": "PASSED",
+  "tests": 24,
+  "output": "test_batch_matches_original_single_feature_and_prediction_interfaces (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_first_displacement_is_actual_not_fabricated_zero (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_future_observation_and_command_changes_cannot_change_earlier_forecast (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_known_constant_bias_error_is_removed_without_fitting (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_query_is_immutable_snapshot_of_visible_arrays (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_strict_query_real_history_and_unknown_future_fields (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_target_normalization_is_not_applied_twice (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_varying_unmodeled_bias_leaves_corresponding_increment_error (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_z_grip_increments_are_distinct_from_qualified_xy_contrasts (tests.test_passive_response_diagnostic_v1.IncrementDiagnosticTests) ... ok\ntest_compensating_pi_can_reduce_input_discrepancy (tests.test_passive_response_diagnostic_v1.InputDiagnosticTests) ... ok\ntest_float32_transform_then_noise_then_final_clip (tests.test_passive_response_diagnostic_v1.InputDiagnosticTests) ... ok\ntest_forward_map_is_not_the_inverse_parameter_map (tests.test_passive_response_diagnostic_v1.InputDiagnosticTests) ... ok\ntest_movement_buckets_and_fixed_policy_geometry (tests.test_passive_response_diagnostic_v1.InputDiagnosticTests) ... ok\ntest_pi_can_increase_input_discrepancy_without_identifying_task_cause (tests.test_passive_response_diagnostic_v1.InputDiagnosticTests) ... ok\ntest_zero_noise_map_and_same_saved_noise_are_not_equivalent (tests.test_passive_response_diagnostic_v1.InputDiagnosticTests) ... ok\ntest_early_success_has_missing_prediction_not_a_zero_error (tests.test_passive_response_diagnostic_v1.ReplayDiagnosticTests) ... ok\ntest_full_array_record_counts_noise_cursor_and_pi_are_reconstructable (tests.test_passive_response_diagnostic_v1.ReplayDiagnosticTests) ... ok\ntest_group_weighting_is_not_time_step_weighting (tests.test_passive_response_diagnostic_v1.ReplayDiagnosticTests) ... ok\ntest_raw_program_has_no_c8_parameter_and_no_fabricated_fit (tests.test_passive_response_diagnostic_v1.ReplayDiagnosticTests) ... ok\ntest_wrong_noise_cursor_and_execution_order_are_detected (tests.test_passive_response_diagnostic_v1.ReplayDiagnosticTests) ... ok\ntest_zero_length_window_and_missing_pi_remain_null (tests.test_passive_response_diagnostic_v1.ReplayDiagnosticTests) ... ok\ntest_changed_future_does_not_rewrite_prior_prediction_errors (tests.test_passive_response_diagnosis_audit_v1.IndependentResponseAuditTests) ... ok\ntest_full_four_channel_increment_and_constant_bias_arithmetic (tests.test_passive_response_diagnosis_audit_v1.IndependentResponseAuditTests) ... ok\ntest_variable_bias_is_not_mistaken_for_a_correct_model (tests.test_passive_response_diagnosis_audit_v1.IndependentResponseAuditTests) ... ok\n\n----------------------------------------------------------------------\nRan 24 tests in 0.475s\n\nOK\n",
+  "arguments": [
+    "tests.test_passive_response_diagnostic_v1",
+    "tests.test_passive_response_diagnosis_audit_v1"
+  ],
+  "counts": {
+    "environment_creations": 0,
+    "resets": 0,
+    "simulation": 0,
+    "fits": 0
+  },
+  "network": {
+    "attempted_network_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/passive_response_diagnostic_v1.py": "8995ab119ae263637f54a7d54bd0fe8d017002eec857e3790f32d714ae80e625",
+    "src/analysis/task_passive_diagnosis_v1.py": "c9a9b07108b466314fd025f6151d21a2cddd0cbeea7d86c53823545dde37f5d8",
+    "src/analysis/task_passive_diagnosis_audit_v1.py": "e446a5ccd928a726debcfe78fca44a9bed610dc4928a02e872f977e0a9e9d5d1",
+    "scripts/analyze_task_passive_diagnosis_v1.py": "0d594167db831651012829795d1ea36c773df6925faca5a1e54eae85549aeadf",
+    "scripts/audit_task_passive_diagnosis_v1.py": "f95e83fa8a7335c48eaaba3bbf8a0c071ea322b800dbad56d374091e9db3fe44",
+    "tests/test_passive_response_diagnostic_v1.py": "c8612fa7f0f6f40e43efc163e4d2ec3937332a14e7436cc6f9dbeac1029fce17",
+    "tests/test_passive_response_diagnosis_audit_v1.py": "688fe3a2fea66fa34d7ed5ef053a43923a2c5ac32512af89506561773f0fbdea",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/result_delivery/audit_exports.py": "ae8e08a64f7fd502fd01885cf4776d41ba946bdd8bb22d8cda652c3ecd57c1db",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/result_delivery/audit_figure_data.py": "d17453b2aa1de4747210419f8982d6eb0f4fe52a978d7bb468010927174eaa6a",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/result_delivery/export_tables.py": "e4f2323acecca968c405617f226e0b773ba8912e1abf4c0abb91e365b55b4ff3",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/result_delivery/make_figures.py": "b539f9c1da215b3b6c163649b77beccbae7ac5abdcda53508fd0b4995c467b2b",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/result_delivery/seal_results.py": "f5f33338de235879f1c64df1aed747f4c79f360995ebc522ab33613daeb650d7",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/result_delivery/write_report.py": "cda47bf0ea125d88941777e007d11f551de383bc58a779dbedf29de08d686010",
+    "outputs/task_passive_diagnosis/validation_v1/validate_software.py": "53adba004b6771c18f9d10b968418635e23a6c68a3c360aa12e0fd54a4de0b0d",
+    "outputs/task_passive_diagnosis/validation_v1/validate_software_pytest_attempt_v1.py": "8630e67eab9f2d1e594e109e3a4faaacf5f9908f926500b4753965fb94efa074"
+  },
+  "wall_ns": 505066700
+}

@@ -1,0 +1,167 @@
+{
+  "experiment_run_id": "executable_support_20261015T082955Z_48a3e433af85",
+  "manifest_id": "89e843c795d56e06577fa29504366d7023821180f850f0ecc608e84aaf349b78",
+  "source_git_commit": "48a3e433af851fb8d477086bf508d072c02cdecd",
+  "status": "PASSED",
+  "audit_sha256": "58cc1f9610e8b6226236a247758be25bb547b8f5df92a7746ee316ede2aca7ae",
+  "check_source_sha256": "56350f96261637add240a8c2ce92fde37ab9f860904b77890837d839ca222575",
+  "raw_stream_sha256": "d07e2c6dbefb800d2b20c0ee15f43fbc3779b73ff3faf24abf0a54f8b2657721",
+  "selection": "POST_RESULT_COMMON_FAILURE_CONTEXT",
+  "stream": 11,
+  "task": "push-v3",
+  "replicate": 0,
+  "seed": 11833,
+  "matched_initial_sixteen_listed_trace_fields": true,
+  "trace_fields": [
+    "host_calls",
+    "command",
+    "raw_policy",
+    "before",
+    "after",
+    "rng_before",
+    "rng_after",
+    "executed_action_oracle"
+  ],
+  "same_saved_point_fit": true,
+  "same_first_policy_observation": true,
+  "same_first_raw_policy": true,
+  "first_point_command": [
+    -0.637336790561676,
+    0.08596474677324295,
+    0.2244516760110855,
+    0.0
+  ],
+  "first_gaussian_command": [
+    -0.5989931225776672,
+    0.0842922031879425,
+    0.2244516760110855,
+    0.0
+  ],
+  "different_first_sent_command": true,
+  "outcomes": {
+    "GAUSS8": {
+      "success": true,
+      "stopped": false,
+      "total_steps": 78,
+      "environment_resets": 1,
+      "fixed_probe_steps": 8,
+      "ivr_probe_steps": 0,
+      "policy_steps": 70,
+      "selected_ivr_programs": [],
+      "point_fit_failures": 0,
+      "deadline_loss": 78
+    },
+    "POINT16_CYCLE": {
+      "success": true,
+      "stopped": false,
+      "total_steps": 132,
+      "environment_resets": 1,
+      "fixed_probe_steps": 16,
+      "ivr_probe_steps": 0,
+      "policy_steps": 116,
+      "selected_ivr_programs": [],
+      "point_fit_failures": 0,
+      "deadline_loss": 132
+    },
+    "POINT16_WIDE": {
+      "success": true,
+      "stopped": false,
+      "total_steps": 84,
+      "environment_resets": 1,
+      "fixed_probe_steps": 16,
+      "ivr_probe_steps": 0,
+      "policy_steps": 68,
+      "selected_ivr_programs": [],
+      "point_fit_failures": 0,
+      "deadline_loss": 84
+    },
+    "GAUSS16_CYCLE": {
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "environment_resets": 1,
+      "fixed_probe_steps": 16,
+      "ivr_probe_steps": 0,
+      "policy_steps": 484,
+      "selected_ivr_programs": [],
+      "point_fit_failures": 0,
+      "deadline_loss": 500
+    },
+    "IVR_GLOBAL16": {
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "environment_resets": 1,
+      "fixed_probe_steps": 8,
+      "ivr_probe_steps": 8,
+      "policy_steps": 484,
+      "selected_ivr_programs": [
+        "X4",
+        "Y4"
+      ],
+      "point_fit_failures": 0,
+      "deadline_loss": 500
+    },
+    "IVR_TASK16": {
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "environment_resets": 1,
+      "fixed_probe_steps": 8,
+      "ivr_probe_steps": 8,
+      "policy_steps": 484,
+      "selected_ivr_programs": [
+        "X4",
+        "Y4"
+      ],
+      "point_fit_failures": 0,
+      "deadline_loss": 500
+    },
+    "IVR_EXEC16": {
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "environment_resets": 1,
+      "fixed_probe_steps": 8,
+      "ivr_probe_steps": 8,
+      "policy_steps": 484,
+      "selected_ivr_programs": [
+        "X4",
+        "Y4"
+      ],
+      "point_fit_failures": 0,
+      "deadline_loss": 500
+    },
+    "IVR_EXEC_FIXED16": {
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "environment_resets": 1,
+      "fixed_probe_steps": 8,
+      "ivr_probe_steps": 8,
+      "policy_steps": 484,
+      "selected_ivr_programs": [
+        "X4",
+        "Y4"
+      ],
+      "point_fit_failures": 0,
+      "deadline_loss": 500
+    },
+    "NO_PROBE": {
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "environment_resets": 1,
+      "fixed_probe_steps": 0,
+      "ivr_probe_steps": 0,
+      "policy_steps": 500,
+      "selected_ivr_programs": [],
+      "point_fit_failures": 0,
+      "deadline_loss": 500
+    }
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "refits": 0,
+  "scope": "Descriptive matched listed-visible/action/RNG prefix with identical saved point fit, followed by different controller forms. No complete-hidden-state proof or isolated causal attribution to covariance, regularization, bounds or probe motion; no tuning."
+}

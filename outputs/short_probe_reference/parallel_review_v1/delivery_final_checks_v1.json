@@ -1,0 +1,46 @@
+{
+  "review": "short_probe_poststage_required_checks_v1",
+  "status": "PASSED",
+  "created_utc": "2026-10-19T07:21:54.165390+00:00",
+  "checks": [
+    {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 86790409100,
+      "stdout": "tracked-secret scan: passed\r\n",
+      "stderr": ""
+    },
+    {
+      "check": "staged_diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 183748400,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "check": "working_diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 35322200,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "full_repository_test_receipt_sha256": "9b1b8af0fa5fe54fefa1a9a3042bf8fb399836efa2ddbab36ec8348e24d3ffca",
+  "scope": "Post-stage tracked working-tree secret scan and staged/working diff checks. Exact staged blobs and decompressed new content are covered by the separate integrity receipt. Existing successful full tests and dependency check remain bound; no core or dependency source changes occurred."
+}

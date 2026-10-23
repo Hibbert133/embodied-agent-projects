@@ -1,0 +1,10 @@
+study_phase,stream,episode,task,seed,method,family_oracle,schedule_oracle,success,stopped,end_reason,deadline_loss,applied_fitted_controller,total_steps,fixed_probe_steps,policy_steps,online_parameter_fits,optimizer_nfev,policy_queries,design_verification_candidates
+SMOKE,0,1,door-open-v3,21201,NO_PROBE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,False,500,0,500,0,0,500,0
+SMOKE,0,1,door-open-v3,21201,ORIGINAL8_UPDATE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,True,500,8,492,1,1,492,0
+SMOKE,0,1,door-open-v3,21201,BALANCED4_UPDATE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,True,500,4,496,1,1,496,0
+SMOKE,0,1,door-open-v3,21201,DOPT4_UPDATE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,True,500,4,496,1,1,496,144
+SMOKE,0,1,door-open-v3,21201,DOPT8_UPDATE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,True,500,8,492,1,1,492,144
+SMOKE,0,1,door-open-v3,21201,DOPT4_KEEP_AT8,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,True,500,8,492,1,1,492,144
+SMOKE,0,1,door-open-v3,21201,DOPT4_FALLBACK8,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,True,500,4,496,1,1,496,144
+SMOKE,0,3,reach-v3,21203,NO_PROBE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,False,500,0,500,0,0,500,0
+SMOKE,0,6,reach-v3,21206,NO_PROBE,BIAS,SMOKE_ABRUPT,False,False,TRUNCATED,500,False,500,0,500,0,0,500,0

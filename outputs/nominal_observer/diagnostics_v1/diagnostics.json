@@ -1,0 +1,4713 @@
+{
+  "experiment_run_id": "nominal_observer_20261014T055743Z_9e6c6e63cc35",
+  "manifest_id": "e56e9442c5c01a081262d156158106b5946f0b52c855edf22fb34785bb72df23",
+  "source_git_commit": "9e6c6e63cc35ca4510e0021821f5a45fb9ad4f58",
+  "audit_sha256": "5e6c73a9e8893b32cc9e609102768701d1830def4c6a9ea0209016131e506e37",
+  "analysis_tool_sha256": "5ca30ab3064b0f41d17f693f7894fef9cae80cffa34cb0d4057176b6ed3bd83a",
+  "frozen_error_threshold": 0.1,
+  "precision_exceeded_cases": 96,
+  "cases": [
+    {
+      "episode_index": 1,
+      "seed": 10000,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5279778045473701,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.5970367044210434,
+          0.004895650170510635
+        ],
+        "inverse_response_mean": [
+          -0.7308750264344863,
+          -0.06442553173465754
+        ],
+        "nominal_mean_error_inf": 0.13383832201344292
+      },
+      "total_steps": 72,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 11.341132460969487,
+          "identity_matrix_error_inf": 1.75071973099377
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.051800058390831,
+          "identity_matrix_error_inf": 2.5051006601968058
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.6287396888312093,
+          "identity_matrix_error_inf": 0.6301644506582271
+        }
+      ]
+    },
+    {
+      "episode_index": 2,
+      "seed": 10000,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5658123849756902,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          -0.15357069671154022,
+          -0.15450774691998959
+        ],
+        "inverse_response_mean": [
+          -0.09271204005806721,
+          -0.2856424442544856
+        ],
+        "nominal_mean_error_inf": 0.131134697334496
+      },
+      "total_steps": 88,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.1307192205074641
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.1032138722631495,
+          "identity_matrix_error_inf": 0.06774906484423893
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.782415578152955,
+          "identity_matrix_error_inf": 0.2080716013190046
+        }
+      ]
+    },
+    {
+      "episode_index": 3,
+      "seed": 10000,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.45327964886051475,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.322865329682827,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.5548810023948757,
+          1.276877573687266
+        ],
+        "nominal_mean_error_inf": 0.27687757368726595
+      },
+      "total_steps": 48,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 126.22197311643762,
+          "identity_matrix_error_inf": 6.020222058260533
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 26.618799758312726,
+          "identity_matrix_error_inf": 5.9587322697997465
+        }
+      ]
+    },
+    {
+      "episode_index": 4,
+      "seed": 10000,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4644129639593751,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.10668877937802229,
+          0.270932364904065
+        ],
+        "nominal_mean_error_inf": 0.1709323634139489
+      },
+      "total_steps": 62,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2876406969352393
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.794384604441036,
+          "identity_matrix_error_inf": 0.38256385267328996
+        }
+      ]
+    },
+    {
+      "episode_index": 5,
+      "seed": 10000,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 3.0083098175720084,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4401597607121654,
+          1.3532011964676012
+        ],
+        "nominal_mean_error_inf": 0.44015976071216545
+      },
+      "total_steps": 95,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.3896267141932164,
+          "identity_matrix_error_inf": 0.6831659799264085
+        }
+      ]
+    },
+    {
+      "episode_index": 6,
+      "seed": 10000,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 2.63855721499523,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.26016839772120953,
+          0.009291418775126029
+        ],
+        "nominal_mean_error_inf": 0.11016839548603535
+      },
+      "total_steps": 107,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.14268844133089129
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.719071155312622,
+          "identity_matrix_error_inf": 0.3888072004459481
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.490014196257139,
+          "identity_matrix_error_inf": 0.6809546621837426
+        }
+      ]
+    },
+    {
+      "episode_index": 7,
+      "seed": 10001,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5742662428229041,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.13834748044610023,
+          0.7975864559412003
+        ],
+        "inverse_response_mean": [
+          0.018540485208586956,
+          1.0106266182702213
+        ],
+        "nominal_mean_error_inf": 0.213040162329021
+      },
+      "total_steps": 68,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 73.57242098640504,
+          "identity_matrix_error_inf": 17.963950440322343
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 6.644497658436992,
+          "identity_matrix_error_inf": 3.3818104316260498
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.3054101274361996,
+          "identity_matrix_error_inf": 0.42522188758288326
+        }
+      ]
+    },
+    {
+      "episode_index": 8,
+      "seed": 10001,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5751515085541852,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.29735154393954183,
+          0.014546883471476764
+        ],
+        "nominal_mean_error_inf": 0.14735154170436765
+      },
+      "total_steps": 83,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.27284824476717073
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.3157571405911357,
+          "identity_matrix_error_inf": 0.2751690016144963
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.784525555515262,
+          "identity_matrix_error_inf": 0.15773542047956993
+        }
+      ]
+    },
+    {
+      "episode_index": 9,
+      "seed": 10001,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4059827054374595,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.15779483318328857,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.36421298848777994,
+          1.2285311528576708
+        ],
+        "nominal_mean_error_inf": 0.22853115285767078
+      },
+      "total_steps": 50,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 636.5875428264048,
+          "identity_matrix_error_inf": 15.070861453827797
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 29.249844639398844,
+          "identity_matrix_error_inf": 8.819666059116486
+        }
+      ]
+    },
+    {
+      "episode_index": 10,
+      "seed": 10001,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4092402308036803,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          0.04691176861524582,
+          0.09999999776482582
+        ],
+        "inverse_response_mean": [
+          0.002317521570760776,
+          -0.15445328692791926
+        ],
+        "nominal_mean_error_inf": 0.2544532846927451
+      },
+      "total_steps": 68,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.21666259302211366
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.5081263015565733,
+          "identity_matrix_error_inf": 0.2343509162212689
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.062498395269031,
+          "identity_matrix_error_inf": 0.667058424689392
+        }
+      ]
+    },
+    {
+      "episode_index": 11,
+      "seed": 10001,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 4.182190845383182,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.3885390995919884,
+          1.354721438237898
+        ],
+        "nominal_mean_error_inf": 0.3885390995919884
+      },
+      "total_steps": 101,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.3939329887500733,
+          "identity_matrix_error_inf": 0.6697740478418428
+        }
+      ]
+    },
+    {
+      "episode_index": 12,
+      "seed": 10001,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 3.0010933862581437,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.29196032095352925,
+          0.001076472189915946
+        ],
+        "nominal_mean_error_inf": 0.14196031871835507
+      },
+      "total_steps": 107,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2880415377693636
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 8.197904140142374,
+          "identity_matrix_error_inf": 0.09327002536731699
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.953321844715804,
+          "identity_matrix_error_inf": 0.741178032263185
+        }
+      ]
+    },
+    {
+      "episode_index": 13,
+      "seed": 10002,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4592361803327561,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.047550748102366924,
+          0.7291462868452072
+        ],
+        "inverse_response_mean": [
+          0.2302892598004368,
+          0.9794737267141342
+        ],
+        "nominal_mean_error_inf": 0.250327439868927
+      },
+      "total_steps": 67,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 37.657990020935436,
+          "identity_matrix_error_inf": 34.769616582978074
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 7.285524641596235,
+          "identity_matrix_error_inf": 5.740983098427599
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.9295154292824424,
+          "identity_matrix_error_inf": 0.2725434491573754
+        }
+      ]
+    },
+    {
+      "episode_index": 14,
+      "seed": 10002,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.46950670069377215,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.29649130574770166,
+          -0.0021591649118656436
+        ],
+        "nominal_mean_error_inf": 0.14649130351252748
+      },
+      "total_steps": 83,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2472551544666517
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.589267257820246,
+          "identity_matrix_error_inf": 0.26871576217791016
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.049782192934979,
+          "identity_matrix_error_inf": 0.12097237039966517
+        }
+      ]
+    },
+    {
+      "episode_index": 15,
+      "seed": 10002,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3038808103968548,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.46057962626218796,
+          1.0
+        ],
+        "inverse_response_mean": [
+          -0.3578626090739135,
+          1.195929457600399
+        ],
+        "nominal_mean_error_inf": 0.19592945760039893
+      },
+      "total_steps": 56,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 171.3769149481918,
+          "identity_matrix_error_inf": 2.9770732001482023
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 15.191904994920977,
+          "identity_matrix_error_inf": 1.9879292531395372
+        }
+      ]
+    },
+    {
+      "episode_index": 16,
+      "seed": 10002,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.32184129707239395,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.06037903695389325,
+          0.21152757683354492
+        ],
+        "nominal_mean_error_inf": 0.1115275753434288
+      },
+      "total_steps": 75,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.06664274494953193
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.303051619653724,
+          "identity_matrix_error_inf": 0.23075413495008448
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 5.925820072789064,
+          "identity_matrix_error_inf": 0.5323758099091104
+        }
+      ]
+    },
+    {
+      "episode_index": 17,
+      "seed": 10002,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.0145346284223722,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4518323878827648,
+          1.3924858033418483
+        ],
+        "nominal_mean_error_inf": 0.4518323878827648
+      },
+      "total_steps": 77,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.8012072993408554,
+          "identity_matrix_error_inf": 0.2389515167366027
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.067186874941457,
+          "identity_matrix_error_inf": 0.26813512678399654
+        }
+      ]
+    },
+    {
+      "episode_index": 18,
+      "seed": 10002,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.9382583992153393,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.02765668885926683,
+          0.22116139167143947
+        ],
+        "nominal_mean_error_inf": 0.12116139018132335
+      },
+      "total_steps": 94,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2139579824171538
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.92648853831618,
+          "identity_matrix_error_inf": 0.7670218398144389
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.9596122632890096,
+          "identity_matrix_error_inf": 0.2930067761370031
+        }
+      ]
+    },
+    {
+      "episode_index": 19,
+      "seed": 10003,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4467380448805469,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.46317725628614426,
+          0.8022329360246658
+        ],
+        "inverse_response_mean": [
+          0.7337825890048405,
+          1.071164820369392
+        ],
+        "nominal_mean_error_inf": 0.27060533271869625
+      },
+      "total_steps": 62,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 153.8435898309883,
+          "identity_matrix_error_inf": 12.732522221947477
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 69.12415258590913,
+          "identity_matrix_error_inf": 6.73877780607149
+        }
+      ]
+    },
+    {
+      "episode_index": 20,
+      "seed": 10003,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.39901833211683035,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2767721829790569,
+          -0.041403714733957264
+        ],
+        "nominal_mean_error_inf": 0.12677218074388275
+      },
+      "total_steps": 76,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.10347857655892811
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.552693353967357,
+          "identity_matrix_error_inf": 0.35299447493012326
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.212696837118832,
+          "identity_matrix_error_inf": 0.1417637075384755
+        }
+      ]
+    },
+    {
+      "episode_index": 21,
+      "seed": 10003,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3480231935908775,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.29536042362451553,
+          1.0
+        ],
+        "inverse_response_mean": [
+          -0.11514787052517883,
+          1.2328579020947743
+        ],
+        "nominal_mean_error_inf": 0.2328579020947743
+      },
+      "total_steps": 59,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 49.908360185329215,
+          "identity_matrix_error_inf": 6.918645437168816
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 18.55158973316652,
+          "identity_matrix_error_inf": 5.131816730040234
+        }
+      ]
+    },
+    {
+      "episode_index": 22,
+      "seed": 10003,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.28449720854042215,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          -0.07345692813396454,
+          0.09999999776482582
+        ],
+        "inverse_response_mean": [
+          -0.02800577155223994,
+          -0.13764231684747874
+        ],
+        "nominal_mean_error_inf": 0.23764231461230456
+      },
+      "total_steps": 80,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.15303287548390898
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.010352234639769,
+          "identity_matrix_error_inf": 0.21747987242986141
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.518344399837263,
+          "identity_matrix_error_inf": 0.33581663411984625
+        }
+      ]
+    },
+    {
+      "episode_index": 23,
+      "seed": 10003,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 2.7247413275331906,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4097870397808827,
+          1.3809924995275393
+        ],
+        "nominal_mean_error_inf": 0.4097870397808827
+      },
+      "total_steps": 90,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 19195.35183813108,
+          "identity_matrix_error_inf": 1222.1301447591707
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.9513154970626396,
+          "identity_matrix_error_inf": 0.7174442558801171
+        }
+      ]
+    },
+    {
+      "episode_index": 24,
+      "seed": 10003,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 2.6041498022164133,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.26231808071008045,
+          0.01879563713756742
+        ],
+        "nominal_mean_error_inf": 0.11231807847490627
+      },
+      "total_steps": 105,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.13013612739747882
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.379844099446636,
+          "identity_matrix_error_inf": 0.4210620136381221
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.679830030016173,
+          "identity_matrix_error_inf": 0.6383680887821925
+        }
+      ]
+    },
+    {
+      "episode_index": 25,
+      "seed": 10004,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4312492378088581,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.12601508386433125,
+          0.19286661967635155
+        ],
+        "inverse_response_mean": [
+          0.04096083833810843,
+          0.07367139079114338
+        ],
+        "nominal_mean_error_inf": 0.11919522888520817
+      },
+      "total_steps": 57,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 43.57260513951161,
+          "identity_matrix_error_inf": 23.33946169752617
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 8.35773508050252,
+          "identity_matrix_error_inf": 1.4661321339126383
+        }
+      ]
+    },
+    {
+      "episode_index": 26,
+      "seed": 10004,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.39055138825021335,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.08326220579139088,
+          0.21380205242977096
+        ],
+        "nominal_mean_error_inf": 0.11380205093965484
+      },
+      "total_steps": 72,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.20629502521295295
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.245004410688221,
+          "identity_matrix_error_inf": 0.19191131487620083
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.914519867179808,
+          "identity_matrix_error_inf": 0.22692681092018518
+        }
+      ]
+    },
+    {
+      "episode_index": 27,
+      "seed": 10004,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.27423764300693754,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.15488099306821823,
+          1.0
+        ],
+        "inverse_response_mean": [
+          -0.024261534833869877,
+          1.2261564868284232
+        ],
+        "nominal_mean_error_inf": 0.22615648682842315
+      },
+      "total_steps": 53,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 41.93196451804237,
+          "identity_matrix_error_inf": 7.4410131264069745
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 11.354608128880093,
+          "identity_matrix_error_inf": 5.781018368338448
+        }
+      ]
+    },
+    {
+      "episode_index": 28,
+      "seed": 10004,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.35125305643858434,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.03950361385296006,
+          0.22263245481255178
+        ],
+        "nominal_mean_error_inf": 0.12263245332243566
+      },
+      "total_steps": 65,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.10368335333605558
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.794016665555935,
+          "identity_matrix_error_inf": 0.1403728389637116
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.1169153398953853,
+          "identity_matrix_error_inf": 0.12387902947476759
+        }
+      ]
+    },
+    {
+      "episode_index": 29,
+      "seed": 10004,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 2.177441439919421,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4312372435843237,
+          1.3755233972623397
+        ],
+        "nominal_mean_error_inf": 0.4312372435843237
+      },
+      "total_steps": 93,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.669186045698998,
+          "identity_matrix_error_inf": 0.713719297134794
+        }
+      ]
+    },
+    {
+      "episode_index": 30,
+      "seed": 10004,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.9427993567277717,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.02048884012924367,
+          0.2075746099527414
+        ],
+        "nominal_mean_error_inf": 0.10757460846262529
+      },
+      "total_steps": 109,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.14166966281085214
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 8.80576664817596,
+          "identity_matrix_error_inf": 0.11741495111261535
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.6658386136712595,
+          "identity_matrix_error_inf": 0.7935278307092873
+        }
+      ]
+    },
+    {
+      "episode_index": 31,
+      "seed": 10005,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.42435279563623796,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.024912841618061066,
+          0.7444971799850464
+        ],
+        "inverse_response_mean": [
+          0.20895551268305607,
+          0.9746670266067615
+        ],
+        "nominal_mean_error_inf": 0.23016984662171514
+      },
+      "total_steps": 61,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 36.25843779104378,
+          "identity_matrix_error_inf": 14.71174164459868
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.0852422270119884,
+          "identity_matrix_error_inf": 3.9619951489684273
+        }
+      ]
+    },
+    {
+      "episode_index": 32,
+      "seed": 10005,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.36724958215932535,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2789546407515032,
+          0.03646074072576063
+        ],
+        "nominal_mean_error_inf": 0.12895463851632905
+      },
+      "total_steps": 76,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.26551542826482877
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.376422537416625,
+          "identity_matrix_error_inf": 0.18595098734410187
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.4881247233845882,
+          "identity_matrix_error_inf": 0.14297364753726777
+        }
+      ]
+    },
+    {
+      "episode_index": 33,
+      "seed": 10005,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.40444073235662337,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.13993099704384804,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.025984217856290844,
+          1.2132280383917884
+        ],
+        "nominal_mean_error_inf": 0.2132280383917884
+      },
+      "total_steps": 41,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 33.7741771765839,
+          "identity_matrix_error_inf": 4.175461473867613
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 8.519033408030454,
+          "identity_matrix_error_inf": 4.667160072766849
+        }
+      ]
+    },
+    {
+      "episode_index": 34,
+      "seed": 10005,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4229877680710425,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.08278299690045778,
+          0.267246351191386
+        ],
+        "nominal_mean_error_inf": 0.1672463497012699
+      },
+      "total_steps": 56,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.1637149485957945
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.8333543739361335,
+          "identity_matrix_error_inf": 0.21311198006063603
+        }
+      ]
+    },
+    {
+      "episode_index": 35,
+      "seed": 10005,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.0175851355372845,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4362660559852374,
+          1.3823778333084462
+        ],
+        "nominal_mean_error_inf": 0.4362660559852374
+      },
+      "total_steps": 84,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 37.76435487290867,
+          "identity_matrix_error_inf": 0.5428799628129812
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.639924247855051,
+          "identity_matrix_error_inf": 0.36177832098712365
+        }
+      ]
+    },
+    {
+      "episode_index": 36,
+      "seed": 10005,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.0319987288759953,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.10000000149011612,
+          0.0
+        ],
+        "inverse_response_mean": [
+          0.20193258163414915,
+          0.06549285837068719
+        ],
+        "nominal_mean_error_inf": 0.10193258014403303
+      },
+      "total_steps": 100,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.22518940678467847
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.6362617768035985,
+          "identity_matrix_error_inf": 0.595403166285671
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.653457018085185,
+          "identity_matrix_error_inf": 0.46024369474850213
+        }
+      ]
+    },
+    {
+      "episode_index": 37,
+      "seed": 10006,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3483716591242142,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.47317737340927124,
+          0.8019887655973434
+        ],
+        "inverse_response_mean": [
+          0.7737157445162353,
+          1.0930630864484618
+        ],
+        "nominal_mean_error_inf": 0.300538371106964
+      },
+      "total_steps": 55,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 109.93887920434328,
+          "identity_matrix_error_inf": 11.099507289090344
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 60.503190320228555,
+          "identity_matrix_error_inf": 8.81081399555368
+        }
+      ]
+    },
+    {
+      "episode_index": 38,
+      "seed": 10006,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.43920992284065913,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.28952921163977213,
+          -0.017806374664579128
+        ],
+        "nominal_mean_error_inf": 0.13952920940459795
+      },
+      "total_steps": 71,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2782806339308648
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.33005315949867,
+          "identity_matrix_error_inf": 0.5632536405107302
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.1726478580723785,
+          "identity_matrix_error_inf": 0.15263865170603338
+        }
+      ]
+    },
+    {
+      "episode_index": 39,
+      "seed": 10006,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.34525662271642366,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.22124922648072243,
+          1.0
+        ],
+        "inverse_response_mean": [
+          -0.12228238499224478,
+          1.1798022422739478
+        ],
+        "nominal_mean_error_inf": 0.1798022422739478
+      },
+      "total_steps": 34,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 43.73790964909345,
+          "identity_matrix_error_inf": 5.227708789958047
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 15.627849203809955,
+          "identity_matrix_error_inf": 4.900474096777941
+        }
+      ]
+    },
+    {
+      "episode_index": 40,
+      "seed": 10006,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.35103077523371723,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.25550069025206074,
+          0.04810601845645833
+        ],
+        "nominal_mean_error_inf": 0.10550068801688656
+      },
+      "total_steps": 51,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.19433474987861277
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.2439977871235204,
+          "identity_matrix_error_inf": 0.16820655302654192
+        }
+      ]
+    },
+    {
+      "episode_index": 41,
+      "seed": 10006,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.2604088461349747,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4341462463334549,
+          1.3727044406138778
+        ],
+        "nominal_mean_error_inf": 0.4341462463334549
+      },
+      "total_steps": 76,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.101626078924909,
+          "identity_matrix_error_inf": 0.38817218316705726
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 5.122151788850633,
+          "identity_matrix_error_inf": 0.3422184390587851
+        }
+      ]
+    },
+    {
+      "episode_index": 42,
+      "seed": 10006,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.265909464741081,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2692150978153356,
+          0.011161387072299047
+        ],
+        "nominal_mean_error_inf": 0.11921509558016141
+      },
+      "total_steps": 92,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.19730378352230746
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 11.919436304720215,
+          "identity_matrix_error_inf": 0.16993025260002942
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.156177825126772,
+          "identity_matrix_error_inf": 0.36502948156976256
+        }
+      ]
+    },
+    {
+      "episode_index": 43,
+      "seed": 10007,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.543654119875348,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.2932673469185829,
+          0.6036382764577866
+        ],
+        "inverse_response_mean": [
+          -0.26456285148926667,
+          0.7521473283957
+        ],
+        "nominal_mean_error_inf": 0.14850905193791342
+      },
+      "total_steps": 55,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 89.0953533978113,
+          "identity_matrix_error_inf": 13.577947192930408
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 8.01371413674478,
+          "identity_matrix_error_inf": 0.9241179365196863
+        }
+      ]
+    },
+    {
+      "episode_index": 44,
+      "seed": 10007,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5606614102653186,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          -0.06441111862659454,
+          0.001791778951883316
+        ],
+        "inverse_response_mean": [
+          0.06945554530708972,
+          -0.1460132428434124
+        ],
+        "nominal_mean_error_inf": 0.14780502179529573
+      },
+      "total_steps": 71,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.3205459138351416
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.055695819220437,
+          "identity_matrix_error_inf": 0.3579637795282391
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.3973672871652636,
+          "identity_matrix_error_inf": 0.14162527221970672
+        }
+      ]
+    },
+    {
+      "episode_index": 45,
+      "seed": 10007,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.314907927693471,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.4538583382964134,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.7431235099149897,
+          1.314907927693471
+        ],
+        "nominal_mean_error_inf": 0.314907927693471
+      },
+      "total_steps": 41,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 111.31603142003236,
+          "identity_matrix_error_inf": 12.041079520379343
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 101.39673102262937,
+          "identity_matrix_error_inf": 15.904800653856613
+        }
+      ]
+    },
+    {
+      "episode_index": 46,
+      "seed": 10007,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.41847311501975687,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2905709482968091,
+          -0.009499447246827292
+        ],
+        "nominal_mean_error_inf": 0.1405709460616349
+      },
+      "total_steps": 60,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.04771355754971296
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 6.481305154844861,
+          "identity_matrix_error_inf": 0.30696453022865544
+        }
+      ]
+    },
+    {
+      "episode_index": 47,
+      "seed": 10007,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.036404485900709,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.445712572001741,
+          1.3809239385943686
+        ],
+        "nominal_mean_error_inf": 0.44571257200174097
+      },
+      "total_steps": 77,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.706730358426625,
+          "identity_matrix_error_inf": 0.4424948846495126
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.2261923851674,
+          "identity_matrix_error_inf": 0.4521780146559806
+        }
+      ]
+    },
+    {
+      "episode_index": 48,
+      "seed": 10007,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.1227106431616214,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.10000000149011612,
+          0.0
+        ],
+        "inverse_response_mean": [
+          0.2292899968218139,
+          0.0668592147928415
+        ],
+        "nominal_mean_error_inf": 0.12928999533169777
+      },
+      "total_steps": 93,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.24225011907531002
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.4836442166210877,
+          "identity_matrix_error_inf": 0.8087058937664824
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.9370133595066816,
+          "identity_matrix_error_inf": 0.38319838297211406
+        }
+      ]
+    },
+    {
+      "episode_index": 49,
+      "seed": 10008,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5082558184468579,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.8006615936756134,
+          0.307116337120533
+        ],
+        "inverse_response_mean": [
+          0.9976152136202868,
+          0.4351557503832753
+        ],
+        "nominal_mean_error_inf": 0.19695361994467342
+      },
+      "total_steps": 74,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 48.329016977476066,
+          "identity_matrix_error_inf": 6.700231796532537
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 35.21660017164445,
+          "identity_matrix_error_inf": 5.633868749260383
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.9042321057131835,
+          "identity_matrix_error_inf": 0.21614707137390632
+        }
+      ]
+    },
+    {
+      "episode_index": 50,
+      "seed": 10008,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5237440597663516,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.31181270491452134,
+          -0.0031947356965326672
+        ],
+        "nominal_mean_error_inf": 0.16181270267934716
+      },
+      "total_steps": 88,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.27952724021062186
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.6822567502929116,
+          "identity_matrix_error_inf": 0.2806137992647955
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 1.9802673222526221,
+          "identity_matrix_error_inf": 0.09422305360971207
+        }
+      ]
+    },
+    {
+      "episode_index": 51,
+      "seed": 10008,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.40701450039957565,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.39040787518024445,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.6723873399737118,
+          1.2467459460119426
+        ],
+        "nominal_mean_error_inf": 0.28197946479346736
+      },
+      "total_steps": 56,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 215.7077763313634,
+          "identity_matrix_error_inf": 5.14068797886191
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 22.623503242883785,
+          "identity_matrix_error_inf": 4.087817369746208
+        }
+      ]
+    },
+    {
+      "episode_index": 52,
+      "seed": 10008,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4259759350623111,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.25023387244922546,
+          -0.009302383058552428
+        ],
+        "nominal_mean_error_inf": 0.10023387021405128
+      },
+      "total_steps": 69,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.17904534643434933
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.360663996802657,
+          "identity_matrix_error_inf": 0.5973365231825551
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 5.689180559433583,
+          "identity_matrix_error_inf": 1.062016671107474
+        }
+      ]
+    },
+    {
+      "episode_index": 53,
+      "seed": 10008,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.5775635925024398,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4368494437692207,
+          1.3580226122801156
+        ],
+        "nominal_mean_error_inf": 0.43684944376922075
+      },
+      "total_steps": 84,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 28.645470240710605,
+          "identity_matrix_error_inf": 6.509585539006969
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.5476736764564847,
+          "identity_matrix_error_inf": 0.7347437243156285
+        }
+      ]
+    },
+    {
+      "episode_index": 54,
+      "seed": 10008,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.736363019083663,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.06520824501846181,
+          0.24559542833429512
+        ],
+        "nominal_mean_error_inf": 0.145595426844179
+      },
+      "total_steps": 96,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.1266600824011439
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.7394466413201997,
+          "identity_matrix_error_inf": 0.6516767848636501
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.948241849808924,
+          "identity_matrix_error_inf": 0.7643062149208814
+        }
+      ]
+    },
+    {
+      "episode_index": 55,
+      "seed": 10009,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.2882438145302731,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.0569018954411149,
+          0.4512563943862915
+        ],
+        "inverse_response_mean": [
+          0.029631349314781653,
+          0.6330792845469725
+        ],
+        "nominal_mean_error_inf": 0.18182289016068098
+      },
+      "total_steps": 52,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 20.084796637793165,
+          "identity_matrix_error_inf": 14.390292327025135
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.7509480414037397,
+          "identity_matrix_error_inf": 1.0564930753489112
+        }
+      ]
+    },
+    {
+      "episode_index": 56,
+      "seed": 10009,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3151237066367576,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.26273531854311005,
+          0.04106712144614866
+        ],
+        "nominal_mean_error_inf": 0.11273531630793587
+      },
+      "total_steps": 68,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.24219619686754879
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.0568810932051464,
+          "identity_matrix_error_inf": 0.16213236637819262
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.1127365441428703,
+          "identity_matrix_error_inf": 0.19065631060554944
+        }
+      ]
+    },
+    {
+      "episode_index": 57,
+      "seed": 10009,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.35134804471880426,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.17820040881633759,
+          0.9961204379796982
+        ],
+        "inverse_response_mean": [
+          -0.017761554152264054,
+          1.2256954268299278
+        ],
+        "nominal_mean_error_inf": 0.22957498885022964
+      },
+      "total_steps": 31,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 43.93231651841149,
+          "identity_matrix_error_inf": 7.585771187636563
+        }
+      ]
+    },
+    {
+      "episode_index": 58,
+      "seed": 10009,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.27664942414171656,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.25418111677847105,
+          0.02465983526051721
+        ],
+        "nominal_mean_error_inf": 0.10418111454329687
+      },
+      "total_steps": 48,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.23529629739391944
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.857557195259255,
+          "identity_matrix_error_inf": 0.17183530063927788
+        }
+      ]
+    },
+    {
+      "episode_index": 59,
+      "seed": 10009,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.8689983289039549,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4279563355660287,
+          1.361735437775771
+        ],
+        "nominal_mean_error_inf": 0.42795633556602874
+      },
+      "total_steps": 80,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 12.575184491184253,
+          "identity_matrix_error_inf": 0.6923810414929636
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.7766872568657734,
+          "identity_matrix_error_inf": 0.29881396536183014
+        }
+      ]
+    },
+    {
+      "episode_index": 60,
+      "seed": 10009,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.93995590699155,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.3095640246870058,
+          0.006681362892943835
+        ],
+        "nominal_mean_error_inf": 0.1595640224518316
+      },
+      "total_steps": 97,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2432736884106646
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 6.955232985643936,
+          "identity_matrix_error_inf": 0.7436549228123496
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.9468335883860317,
+          "identity_matrix_error_inf": 0.30780739395482715
+        }
+      ]
+    },
+    {
+      "episode_index": 61,
+      "seed": 10010,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5428926581047726,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.5395822152495384,
+          0.36058366298675537
+        ],
+        "inverse_response_mean": [
+          -0.569248661474907,
+          0.2510549242774486
+        ],
+        "nominal_mean_error_inf": 0.1095287387093068
+      },
+      "total_steps": 60,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 173.12506575166404,
+          "identity_matrix_error_inf": 9.630073663906485
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 14.782112138395274,
+          "identity_matrix_error_inf": 1.4272114543602281
+        }
+      ]
+    },
+    {
+      "episode_index": 62,
+      "seed": 10010,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5901287537741309,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.26305722073927074,
+          -0.005350395217531917
+        ],
+        "nominal_mean_error_inf": 0.11305721850409656
+      },
+      "total_steps": 76,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.1065541514826498
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.752487750176013,
+          "identity_matrix_error_inf": 0.09879100307457753
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.5435553615975466,
+          "identity_matrix_error_inf": 0.10132035247055816
+        }
+      ]
+    },
+    {
+      "episode_index": 63,
+      "seed": 10010,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.39447741973470307,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.4311714544892311,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.7300910022767023,
+          1.2633916082347991
+        ],
+        "nominal_mean_error_inf": 0.2989195477874712
+      },
+      "total_steps": 37,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 82.30635015144753,
+          "identity_matrix_error_inf": 15.778938055420518
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 61.00900884575315,
+          "identity_matrix_error_inf": 12.243554391641002
+        }
+      ]
+    },
+    {
+      "episode_index": 64,
+      "seed": 10010,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4356202568123953,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.26090463532948116,
+          0.09139013736500803
+        ],
+        "nominal_mean_error_inf": 0.11090463309430698
+      },
+      "total_steps": 54,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2253646738936236
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 6.117585900848675,
+          "identity_matrix_error_inf": 0.34980593753747313
+        }
+      ]
+    },
+    {
+      "episode_index": 65,
+      "seed": 10010,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.207361297319347,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4433940190167138,
+          1.37515234002959
+        ],
+        "nominal_mean_error_inf": 0.4433940190167138
+      },
+      "total_steps": 75,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.7457639173698185,
+          "identity_matrix_error_inf": 0.49709435888855086
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.3358457221866935,
+          "identity_matrix_error_inf": 0.46748878051921566
+        }
+      ]
+    },
+    {
+      "episode_index": 66,
+      "seed": 10010,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.1789573254954477,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.09778323500356374,
+          0.23197127221060504
+        ],
+        "nominal_mean_error_inf": 0.13197127072048892
+      },
+      "total_steps": 90,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.14495585921867424
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.0742298745758996,
+          "identity_matrix_error_inf": 0.8322149407104827
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.893753067153835,
+          "identity_matrix_error_inf": 0.40469779095812647
+        }
+      ]
+    },
+    {
+      "episode_index": 67,
+      "seed": 10011,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5359252636780532,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.15601234510540962,
+          0.27460361272096634
+        ],
+        "inverse_response_mean": [
+          0.2353248624108205,
+          0.3901802150678374
+        ],
+        "nominal_mean_error_inf": 0.11557660234687106
+      },
+      "total_steps": 66,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 51.575171844605286,
+          "identity_matrix_error_inf": 23.458792442735636
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 7.50702924816416,
+          "identity_matrix_error_inf": 1.0003586188607225
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.2383246441304347,
+          "identity_matrix_error_inf": 1.767962198872904
+        }
+      ]
+    },
+    {
+      "episode_index": 68,
+      "seed": 10011,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5081651034594685,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          0.054232675582170486,
+          -0.08520427718758583
+        ],
+        "inverse_response_mean": [
+          0.029112722486748982,
+          -0.19681058431384602
+        ],
+        "nominal_mean_error_inf": 0.11160630712626018
+      },
+      "total_steps": 82,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.12114654739334461
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.3877518397530944,
+          "identity_matrix_error_inf": 0.14268908088243726
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.465026878864441,
+          "identity_matrix_error_inf": 0.17521542088865527
+        }
+      ]
+    },
+    {
+      "episode_index": 69,
+      "seed": 10011,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4735491789740409,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.18099160119891167,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.42377402569384204,
+          1.2229162945304806
+        ],
+        "nominal_mean_error_inf": 0.24278242449493037
+      },
+      "total_steps": 47,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 171.784968867463,
+          "identity_matrix_error_inf": 12.226273358384592
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 29.766242211357834,
+          "identity_matrix_error_inf": 9.937646830996993
+        }
+      ]
+    },
+    {
+      "episode_index": 70,
+      "seed": 10011,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.460894715689596,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.255097405944002,
+          0.0066787738900189325
+        ],
+        "nominal_mean_error_inf": 0.10509740370882781
+      },
+      "total_steps": 62,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2499161463200851
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.70664706555408,
+          "identity_matrix_error_inf": 0.32463805701025966
+        }
+      ]
+    },
+    {
+      "episode_index": 71,
+      "seed": 10011,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.0798692334205426,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4261100073704722,
+          1.3452316599164746
+        ],
+        "nominal_mean_error_inf": 0.4261100073704722
+      },
+      "total_steps": 83,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 19.39365770405349,
+          "identity_matrix_error_inf": 0.30635766768848455
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.759755703500873,
+          "identity_matrix_error_inf": 0.3273817502541153
+        }
+      ]
+    },
+    {
+      "episode_index": 72,
+      "seed": 10011,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.1786519236988484,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.07482727672769465,
+          0.21380056061235497
+        ],
+        "nominal_mean_error_inf": 0.11380055912223885
+      },
+      "total_steps": 98,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.14208499528638216
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.380961253482485,
+          "identity_matrix_error_inf": 0.67636839018245
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.836827061578945,
+          "identity_matrix_error_inf": 0.346430919731332
+        }
+      ]
+    },
+    {
+      "episode_index": 73,
+      "seed": 10012,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3557274300176397,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.5685961842536926,
+          0.7458741664886475
+        ],
+        "inverse_response_mean": [
+          0.8639102749701274,
+          1.0557991757040537
+        ],
+        "nominal_mean_error_inf": 0.3099250092154062
+      },
+      "total_steps": 56,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 108.43590478021271,
+          "identity_matrix_error_inf": 7.501231715823481
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 49.0974588760266,
+          "identity_matrix_error_inf": 6.247954251680755
+        }
+      ]
+    },
+    {
+      "episode_index": 74,
+      "seed": 10012,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3877914884410378,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          0.1632082760334015,
+          0.03716746345162392
+        ],
+        "inverse_response_mean": [
+          0.04810035062822009,
+          -0.2757461406115509
+        ],
+        "nominal_mean_error_inf": 0.3129136040631748
+      },
+      "total_steps": 70,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.2710867302661306
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.7773195381392926,
+          "identity_matrix_error_inf": 0.2418528996963729
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.075464289349977,
+          "identity_matrix_error_inf": 0.15227769199960703
+        }
+      ]
+    },
+    {
+      "episode_index": 75,
+      "seed": 10012,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3026227040320375,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.022062319796532393,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.21092633639536218,
+          1.2622064554493093
+        ],
+        "nominal_mean_error_inf": 0.2622064554493093
+      },
+      "total_steps": 40,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 30.37054373077995,
+          "identity_matrix_error_inf": 16.598542711973277
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 6.8224069790199975,
+          "identity_matrix_error_inf": 12.257663090489896
+        }
+      ]
+    },
+    {
+      "episode_index": 76,
+      "seed": 10012,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.31536607930079424,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 14,
+        "end_step": 17,
+        "phase": "MIXED",
+        "known_nominal_command_mean": [
+          0.013358291238546371,
+          0.09999999776482582
+        ],
+        "inverse_response_mean": [
+          0.007889407236203516,
+          -0.09811726659255036
+        ],
+        "nominal_mean_error_inf": 0.1981172643573762
+      },
+      "total_steps": 56,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.09587580610298241
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.6122011803680865,
+          "identity_matrix_error_inf": 0.1905201815165734
+        }
+      ]
+    },
+    {
+      "episode_index": 77,
+      "seed": 10012,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.1881173527678257,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4475021128754444,
+          1.384356195767989
+        ],
+        "nominal_mean_error_inf": 0.4475021128754444
+      },
+      "total_steps": 75,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.8782375445980395,
+          "identity_matrix_error_inf": 0.4598496192926885
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.280127341221724,
+          "identity_matrix_error_inf": 0.43235911354830786
+        }
+      ]
+    },
+    {
+      "episode_index": 78,
+      "seed": 10012,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.1923108100564601,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.10000000149011612,
+          0.0
+        ],
+        "inverse_response_mean": [
+          0.2089094284062184,
+          0.06695233991928061
+        ],
+        "nominal_mean_error_inf": 0.10890942691610228
+      },
+      "total_steps": 90,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.28426034571849146
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.257956018340785,
+          "identity_matrix_error_inf": 0.7941551961508146
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.0438782267176143,
+          "identity_matrix_error_inf": 0.4004816144792982
+        }
+      ]
+    },
+    {
+      "episode_index": 79,
+      "seed": 10013,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5384477984602212,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.019672980532050133,
+          0.20095223933458328
+        ],
+        "inverse_response_mean": [
+          -0.13446329529006423,
+          0.06760106440796876
+        ],
+        "nominal_mean_error_inf": 0.15413627582211437
+      },
+      "total_steps": 59,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 25.02896655825876,
+          "identity_matrix_error_inf": 19.542785386040066
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.49259896506704,
+          "identity_matrix_error_inf": 0.2733429082146736
+        }
+      ]
+    },
+    {
+      "episode_index": 80,
+      "seed": 10013,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.5486246915001588,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 18,
+        "end_step": 21,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.05122742895036936,
+          0.21476542949676514
+        ],
+        "inverse_response_mean": [
+          0.21920770655778013,
+          0.3134348055634698
+        ],
+        "nominal_mean_error_inf": 0.16798027760741077
+      },
+      "total_steps": 72,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.3481918589773981
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 1.9061796814557432,
+          "identity_matrix_error_inf": 0.3562961355179639
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.6143859919313623,
+          "identity_matrix_error_inf": 0.590749438684216
+        }
+      ]
+    },
+    {
+      "episode_index": 81,
+      "seed": 10013,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.3481544196423033,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.46789131313562393,
+          1.0
+        ],
+        "inverse_response_mean": [
+          0.7823205517544533,
+          1.306190065442756
+        ],
+        "nominal_mean_error_inf": 0.3144292386188293
+      },
+      "total_steps": 49,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 68.17615403094875,
+          "identity_matrix_error_inf": 6.203803289335459
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 28.218959252656695,
+          "identity_matrix_error_inf": 5.46589965324807
+        }
+      ]
+    },
+    {
+      "episode_index": 82,
+      "seed": 10013,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4662150077435689,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.25511351935960414,
+          0.005443598902339038
+        ],
+        "nominal_mean_error_inf": 0.10511351712442996
+      },
+      "total_steps": 64,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.0935082821401173
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 6.032479224117793,
+          "identity_matrix_error_inf": 0.617117690845763
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 6.418309625076042,
+          "identity_matrix_error_inf": 0.9422309199876038
+        }
+      ]
+    },
+    {
+      "episode_index": 83,
+      "seed": 10013,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.1401788618527302,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4218219169690594,
+          1.3805761864662367
+        ],
+        "nominal_mean_error_inf": 0.42182191696905935
+      },
+      "total_steps": 79,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.883718095955086,
+          "identity_matrix_error_inf": 0.33811204946409096
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 5.389123765476023,
+          "identity_matrix_error_inf": 0.35674839475828635
+        }
+      ]
+    },
+    {
+      "episode_index": 84,
+      "seed": 10013,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.161517787022463,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2717784441519846,
+          0.015200684837211192
+        ],
+        "nominal_mean_error_inf": 0.12177844191681042
+      },
+      "total_steps": 95,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.14392037728415885
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 11.919436304720215,
+          "identity_matrix_error_inf": 0.11851156607289892
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.524735420521845,
+          "identity_matrix_error_inf": 0.45525674310883824
+        }
+      ]
+    },
+    {
+      "episode_index": 85,
+      "seed": 10014,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.4501338873235282,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.722440630197525,
+          0.011956675443798304
+        ],
+        "inverse_response_mean": [
+          0.8952716894731909,
+          0.08370526733322456
+        ],
+        "nominal_mean_error_inf": 0.1728310592756659
+      },
+      "total_steps": 71,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 7.7042327775920825,
+          "identity_matrix_error_inf": 6.638523800036105
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.955371510187006,
+          "identity_matrix_error_inf": 6.97201380609274
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.8513392998352667,
+          "identity_matrix_error_inf": 0.27791031854493065
+        }
+      ]
+    },
+    {
+      "episode_index": 86,
+      "seed": 10014,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.42844209168099673,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2603583207411497,
+          0.04462286431470816
+        ],
+        "nominal_mean_error_inf": 0.1103583185059755
+      },
+      "total_steps": 85,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.19049039445299143
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 2.0344331010982457,
+          "identity_matrix_error_inf": 0.22462687412167393
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 4.119572438677153,
+          "identity_matrix_error_inf": 0.19081883443431438
+        }
+      ]
+    },
+    {
+      "episode_index": 87,
+      "seed": 10014,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.31596331625942187,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.3435094654560089,
+          1.0
+        ],
+        "inverse_response_mean": [
+          -0.22440047076781622,
+          1.2477961815116805
+        ],
+        "nominal_mean_error_inf": 0.24779618151168048
+      },
+      "total_steps": 62,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 56.70606197550123,
+          "identity_matrix_error_inf": 4.610576903316207
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 14.099246192253633,
+          "identity_matrix_error_inf": 2.9980499009089088
+        }
+      ]
+    },
+    {
+      "episode_index": 88,
+      "seed": 10014,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.27827839527803067,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          -0.0017905620802869532,
+          0.2025526702559219
+        ],
+        "nominal_mean_error_inf": 0.1025526687658058
+      },
+      "total_steps": 77,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.20020993513926172
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 4.39681081928126,
+          "identity_matrix_error_inf": 0.26830734929766376
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 5.016908851216657,
+          "identity_matrix_error_inf": 0.3511084898803397
+        }
+      ]
+    },
+    {
+      "episode_index": 89,
+      "seed": 10014,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.2299991243603765,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.3842025576610286,
+          1.3375312779223283
+        ],
+        "nominal_mean_error_inf": 0.3842025576610286
+      },
+      "total_steps": 84,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 18.133206993997565,
+          "identity_matrix_error_inf": 0.3617055372010234
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.868092650730897,
+          "identity_matrix_error_inf": 0.28327778919537394
+        }
+      ]
+    },
+    {
+      "episode_index": 90,
+      "seed": 10014,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.2645173538175134,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 10,
+        "end_step": 13,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          0.0,
+          0.10000000149011612
+        ],
+        "inverse_response_mean": [
+          0.09794906240552026,
+          0.2737920451675917
+        ],
+        "nominal_mean_error_inf": 0.17379204367747558
+      },
+      "total_steps": 100,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.20681351072480814
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 11.919436304720215,
+          "identity_matrix_error_inf": 0.20871387405476133
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.390642214971584,
+          "identity_matrix_error_inf": 0.3000545742727023
+        }
+      ]
+    },
+    {
+      "episode_index": 91,
+      "seed": 10015,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.48717252388647536,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          0.3546607047319412,
+          0.35147427022457123
+        ],
+        "inverse_response_mean": [
+          0.5388220444931441,
+          0.5386965161743836
+        ],
+        "nominal_mean_error_inf": 0.1872222459498124
+      },
+      "total_steps": 71,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 94.95536125365135,
+          "identity_matrix_error_inf": 4.176261002826946
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 18.62777597711503,
+          "identity_matrix_error_inf": 1.3536045881944019
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.9161276386129913,
+          "identity_matrix_error_inf": 0.3394147309464832
+        }
+      ]
+    },
+    {
+      "episode_index": 92,
+      "seed": 10015,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.49897161160143183,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.2666198019252865,
+          0.002470550335921303
+        ],
+        "nominal_mean_error_inf": 0.11661979969011232
+      },
+      "total_steps": 86,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.07286549047271049
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.235206553676031,
+          "identity_matrix_error_inf": 0.3732594641973801
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.596422676360674,
+          "identity_matrix_error_inf": 0.19334461470721445
+        }
+      ]
+    },
+    {
+      "episode_index": 93,
+      "seed": 10015,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.35950969714961656,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          -0.44039779901504517,
+          1.0
+        ],
+        "inverse_response_mean": [
+          -0.3577867282661153,
+          1.1706293071352527
+        ],
+        "nominal_mean_error_inf": 0.1706293071352527
+      },
+      "total_steps": 53,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 360.7620303272796,
+          "identity_matrix_error_inf": 5.790702793261683
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 15.256103620097825,
+          "identity_matrix_error_inf": 1.86693370302432
+        }
+      ]
+    },
+    {
+      "episode_index": 94,
+      "seed": 10015,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.32562291842899604,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.26352421112032876,
+          0.0125442672130414
+        ],
+        "nominal_mean_error_inf": 0.11352420888515458
+      },
+      "total_steps": 67,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.10077985812804453
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 5.004764077560904,
+          "identity_matrix_error_inf": 0.3451804902187847
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 5.594685162970644,
+          "identity_matrix_error_inf": 0.6915078312366448
+        }
+      ]
+    },
+    {
+      "episode_index": 95,
+      "seed": 10015,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "nominal_task_success": true,
+      "maximum_block_error": 1.0417398968783367,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 2,
+        "end_step": 5,
+        "phase": "POLICY",
+        "known_nominal_command_mean": [
+          1.0,
+          1.0
+        ],
+        "inverse_response_mean": [
+          1.4157300203597663,
+          1.3566689167907384
+        ],
+        "nominal_mean_error_inf": 0.41573002035976625
+      },
+      "total_steps": 83,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 20.08413463157379,
+          "identity_matrix_error_inf": 0.3735698899958505
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 3.660352311618444,
+          "identity_matrix_error_inf": 0.3592230308847246
+        }
+      ]
+    },
+    {
+      "episode_index": 96,
+      "seed": 10015,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "nominal_task_success": true,
+      "maximum_block_error": 0.9231131602274275,
+      "precision_exceeded": true,
+      "first_exceeded_block": {
+        "start_step": 6,
+        "end_step": 9,
+        "phase": "PROBE",
+        "known_nominal_command_mean": [
+          -0.15000000223517418,
+          0.05000000074505806
+        ],
+        "inverse_response_mean": [
+          -0.25833233656216387,
+          0.041728480036000146
+        ],
+        "nominal_mean_error_inf": 0.10833233432698969
+      },
+      "total_steps": 100,
+      "passive_snapshots": [
+        {
+          "step": 8,
+          "valid": false,
+          "scaled_condition": null,
+          "identity_matrix_error_inf": null
+        },
+        {
+          "step": 16,
+          "valid": true,
+          "scaled_condition": 1.1028542581547176,
+          "identity_matrix_error_inf": 0.08194349413638286
+        },
+        {
+          "step": 32,
+          "valid": true,
+          "scaled_condition": 3.7832064674405603,
+          "identity_matrix_error_inf": 0.6812253616776224
+        },
+        {
+          "step": 64,
+          "valid": true,
+          "scaled_condition": 2.694965646391056,
+          "identity_matrix_error_inf": 0.3858648593423297
+        }
+      ]
+    }
+  ],
+  "largest_numeric_only_errors": [
+    {
+      "episode_index": 23,
+      "seed": 10003,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "step": 32,
+      "valid": true,
+      "scaled_condition": 19195.35183813108,
+      "identity_matrix_error_inf": 1222.1301447591707
+    },
+    {
+      "episode_index": 13,
+      "seed": 10002,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 37.657990020935436,
+      "identity_matrix_error_inf": 34.769616582978074
+    },
+    {
+      "episode_index": 67,
+      "seed": 10011,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 51.575171844605286,
+      "identity_matrix_error_inf": 23.458792442735636
+    },
+    {
+      "episode_index": 25,
+      "seed": 10004,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 43.57260513951161,
+      "identity_matrix_error_inf": 23.33946169752617
+    },
+    {
+      "episode_index": 79,
+      "seed": 10013,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 25.02896655825876,
+      "identity_matrix_error_inf": 19.542785386040066
+    },
+    {
+      "episode_index": 7,
+      "seed": 10001,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 73.57242098640504,
+      "identity_matrix_error_inf": 17.963950440322343
+    },
+    {
+      "episode_index": 75,
+      "seed": 10012,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 30.37054373077995,
+      "identity_matrix_error_inf": 16.598542711973277
+    },
+    {
+      "episode_index": 45,
+      "seed": 10007,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "step": 32,
+      "valid": true,
+      "scaled_condition": 101.39673102262937,
+      "identity_matrix_error_inf": 15.904800653856613
+    },
+    {
+      "episode_index": 63,
+      "seed": 10010,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 82.30635015144753,
+      "identity_matrix_error_inf": 15.778938055420518
+    },
+    {
+      "episode_index": 9,
+      "seed": 10001,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "step": 16,
+      "valid": true,
+      "scaled_condition": 636.5875428264048,
+      "identity_matrix_error_inf": 15.070861453827797
+    }
+  ],
+  "new_physical_steps": 0,
+  "new_api_calls": 0,
+  "observer_or_threshold_refits": 0,
+  "scope": "Same immutable nominal trajectories. Precision failure and task success are separate; no new causal task-gain estimate."
+}

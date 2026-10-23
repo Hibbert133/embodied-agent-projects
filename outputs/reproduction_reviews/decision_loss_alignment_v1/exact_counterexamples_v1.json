@@ -1,0 +1,416 @@
+{
+  "status": "PASSED",
+  "atoms": [
+    {
+      "context": "A",
+      "probability": {
+        "numerator": 9,
+        "denominator": 20,
+        "decimal": 0.45
+      },
+      "losses": [
+        {
+          "numerator": 100,
+          "denominator": 1,
+          "decimal": 100.0
+        },
+        {
+          "numerator": 99,
+          "denominator": 1,
+          "decimal": 99.0
+        },
+        {
+          "numerator": 100,
+          "denominator": 1,
+          "decimal": 100.0
+        }
+      ]
+    },
+    {
+      "context": "A",
+      "probability": {
+        "numerator": 1,
+        "denominator": 20,
+        "decimal": 0.05
+      },
+      "losses": [
+        {
+          "numerator": 100,
+          "denominator": 1,
+          "decimal": 100.0
+        },
+        {
+          "numerator": 200,
+          "denominator": 1,
+          "decimal": 200.0
+        },
+        {
+          "numerator": 200,
+          "denominator": 1,
+          "decimal": 200.0
+        }
+      ]
+    },
+    {
+      "context": "B",
+      "probability": {
+        "numerator": 1,
+        "denominator": 2,
+        "decimal": 0.5
+      },
+      "losses": [
+        {
+          "numerator": 100,
+          "denominator": 1,
+          "decimal": 100.0
+        },
+        {
+          "numerator": 96,
+          "denominator": 1,
+          "decimal": 96.0
+        },
+        {
+          "numerator": 100,
+          "denominator": 1,
+          "decimal": 100.0
+        }
+      ]
+    }
+  ],
+  "conditional_mean_costs": {
+    "A": [
+      {
+        "numerator": 100,
+        "denominator": 1,
+        "decimal": 100.0
+      },
+      {
+        "numerator": 1091,
+        "denominator": 10,
+        "decimal": 109.1
+      },
+      {
+        "numerator": 110,
+        "denominator": 1,
+        "decimal": 110.0
+      }
+    ],
+    "B": [
+      {
+        "numerator": 100,
+        "denominator": 1,
+        "decimal": 100.0
+      },
+      {
+        "numerator": 96,
+        "denominator": 1,
+        "decimal": 96.0
+      },
+      {
+        "numerator": 100,
+        "denominator": 1,
+        "decimal": 100.0
+      }
+    ]
+  },
+  "context_optimal_actions": {
+    "A": "CURRENT",
+    "B": "ALTERNATIVE"
+  },
+  "context_optimal_value": {
+    "numerator": 98,
+    "denominator": 1,
+    "decimal": 98.0
+  },
+  "predictors": {
+    "ZERO": {
+      "predicted_difference": {
+        "A": {
+          "numerator": 0,
+          "denominator": 1,
+          "decimal": 0.0
+        },
+        "B": {
+          "numerator": 0,
+          "denominator": 1,
+          "decimal": 0.0
+        }
+      },
+      "selected_action": {
+        "A": "CURRENT",
+        "B": "CURRENT"
+      },
+      "paired_difference_mae": {
+        "numerator": 149,
+        "denominator": 20,
+        "decimal": 7.45
+      },
+      "expected_task_loss": {
+        "numerator": 100,
+        "denominator": 1,
+        "decimal": 100.0
+      },
+      "observed_winner_accuracy": {
+        "numerator": 1,
+        "denominator": 20,
+        "decimal": 0.05
+      },
+      "excess_over_context_optimal": {
+        "numerator": 2,
+        "denominator": 1,
+        "decimal": 2.0
+      },
+      "future_clairvoyant_minimum": {
+        "numerator": 1951,
+        "denominator": 20,
+        "decimal": 97.55
+      },
+      "weighted_mistake_cost": {
+        "numerator": 49,
+        "denominator": 20,
+        "decimal": 2.45
+      }
+    },
+    "CONDITIONAL_MEDIAN": {
+      "predicted_difference": {
+        "A": {
+          "numerator": -1,
+          "denominator": 1,
+          "decimal": -1.0
+        },
+        "B": {
+          "numerator": -4,
+          "denominator": 1,
+          "decimal": -4.0
+        }
+      },
+      "selected_action": {
+        "A": "ALTERNATIVE",
+        "B": "ALTERNATIVE"
+      },
+      "paired_difference_mae": {
+        "numerator": 101,
+        "denominator": 20,
+        "decimal": 5.05
+      },
+      "expected_task_loss": {
+        "numerator": 2051,
+        "denominator": 20,
+        "decimal": 102.55
+      },
+      "observed_winner_accuracy": {
+        "numerator": 19,
+        "denominator": 20,
+        "decimal": 0.95
+      },
+      "excess_over_context_optimal": {
+        "numerator": 91,
+        "denominator": 20,
+        "decimal": 4.55
+      },
+      "future_clairvoyant_minimum": {
+        "numerator": 1951,
+        "denominator": 20,
+        "decimal": 97.55
+      },
+      "weighted_mistake_cost": {
+        "numerator": 5,
+        "denominator": 1,
+        "decimal": 5.0
+      }
+    },
+    "CONDITIONAL_MEAN": {
+      "predicted_difference": {
+        "A": {
+          "numerator": 91,
+          "denominator": 10,
+          "decimal": 9.1
+        },
+        "B": {
+          "numerator": -4,
+          "denominator": 1,
+          "decimal": -4.0
+        }
+      },
+      "selected_action": {
+        "A": "CURRENT",
+        "B": "ALTERNATIVE"
+      },
+      "paired_difference_mae": {
+        "numerator": 909,
+        "denominator": 100,
+        "decimal": 9.09
+      },
+      "expected_task_loss": {
+        "numerator": 98,
+        "denominator": 1,
+        "decimal": 98.0
+      },
+      "observed_winner_accuracy": {
+        "numerator": 11,
+        "denominator": 20,
+        "decimal": 0.55
+      },
+      "excess_over_context_optimal": {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      },
+      "future_clairvoyant_minimum": {
+        "numerator": 1951,
+        "denominator": 20,
+        "decimal": 97.55
+      },
+      "weighted_mistake_cost": {
+        "numerator": 9,
+        "denominator": 20,
+        "decimal": 0.45
+      }
+    }
+  },
+  "multiclass_unnormalized_weights": [
+    [
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      },
+      {
+        "numerator": 1,
+        "denominator": 1,
+        "decimal": 1.0
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ],
+    [
+      {
+        "numerator": 100,
+        "denominator": 1,
+        "decimal": 100.0
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ],
+    [
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      },
+      {
+        "numerator": 4,
+        "denominator": 1,
+        "decimal": 4.0
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ]
+  ],
+  "conditional_expected_weights": {
+    "A": [
+      {
+        "numerator": 10,
+        "denominator": 1,
+        "decimal": 10.0
+      },
+      {
+        "numerator": 9,
+        "denominator": 10,
+        "decimal": 0.9
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ],
+    "B": [
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      },
+      {
+        "numerator": 4,
+        "denominator": 1,
+        "decimal": 4.0
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ]
+  },
+  "conditional_expected_normalized_weights": {
+    "A": [
+      {
+        "numerator": 1,
+        "denominator": 10,
+        "decimal": 0.1
+      },
+      {
+        "numerator": 9,
+        "denominator": 10,
+        "decimal": 0.9
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ],
+    "B": [
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      },
+      {
+        "numerator": 1,
+        "denominator": 1,
+        "decimal": 1.0
+      },
+      {
+        "numerator": 0,
+        "denominator": 1,
+        "decimal": 0.0
+      }
+    ]
+  },
+  "weighted_policy_value": {
+    "numerator": 98,
+    "denominator": 1,
+    "decimal": 98.0
+  },
+  "per_row_normalized_policy_value": {
+    "numerator": 2051,
+    "denominator": 20,
+    "decimal": 102.55
+  },
+  "binary_identity_checks": 72,
+  "enumerated_context_policies": 9,
+  "new_environment_steps": 0,
+  "new_resets": 0,
+  "new_api_calls": 0,
+  "model_fits": 0,
+  "random_draws": 0,
+  "scope": "Constructed exact finite distributions, no current or historical robot outcomes read; not algorithm novelty or empirical utility.",
+  "source_sha256": "5092bb69c44c2ca37933c2c4ed0174b40c4d79b04cb3aa104c2ab65edee5fe2f",
+  "wall_ns": 1205700
+}

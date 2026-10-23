@@ -1,0 +1,78 @@
+{
+  "protocol": "probemem_acr_resonance_validation_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "single-run independent validation of frozen attempt-level status-conditioned adaptation",
+  "development_source_commit": "af2acb3b380b498fbf1f2853b5ec42f53035e95f",
+  "development_result_commit": "ed03e1d1ccec56c7546fe3474561f3d0360e89b7",
+  "environment": "MetaWorld push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "registered_condition": "fault_05",
+  "validation_seed_blocks": [[3050, 3099], [3200, 3299]],
+  "heldout_reserved_not_executed": [3100, 3199],
+  "population": {
+    "expected_initial_units": 150,
+    "run_all_units_without_early_stopping": true,
+    "eligible_first_attempts_minimum": 60,
+    "second_decision_cases_minimum": 25,
+    "eligibility": "initial failure and bounded compensation constructible from Agent-visible registered-probe evidence before any verification outcome"
+  },
+  "random_namespaces": {
+    "initial_perturbation": 13851,
+    "registered_probe": 13852,
+    "first_verification": 13853,
+    "paired_second_verification": 13854,
+    "paired_bootstrap": 13855
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "first_verification_max_steps": 500,
+    "second_verification_max_steps": 500,
+    "online_max_steps_per_case": 1564,
+    "evaluator_paired_collection_max_steps_per_case": 2064,
+    "maximum_verification_attempts": 2
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "verification_status_definition": {
+    "ACCEPTED": "task success",
+    "INCONCLUSIVE": "task failure with final object-goal distance lower than initial distance",
+    "REJECTED": "task failure without lower final object-goal distance"
+  },
+  "frozen_status_rule": {
+    "ACCEPTED": "STOP_SUCCESS",
+    "INCONCLUSIVE": "INDEPENDENT_STOCHASTIC_RETRY",
+    "REJECTED": "BOUNDED_PLANAR_COMPENSATION"
+  },
+  "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+  "second_candidate_interventions": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "methods": ["single_retry", "repeat_retry", "switch_compensation", "status_conditioned", "rejection_abstain", "oracle_second"],
+  "strongest_fixed_baseline_order": [
+    "highest_final_accepted_cases",
+    "lowest_harmful_second_selections",
+    "lowest_total_online_environment_steps",
+    "lexicographically_lower_method_name"
+  ],
+  "promotion_gate": {
+    "integrity_violations_maximum": 0,
+    "status_conditioned_recovery_not_below_strongest_fixed": true,
+    "status_conditioned_harmful_selections_not_above_strongest_fixed": true,
+    "if_recovery_tied_require_strict_improvement_in": ["total_online_environment_steps", "second_attempts", "harmful_second_selections"]
+  },
+  "bootstrap": {"resamples": 10000, "unit": "eligible_initial_failure"},
+  "prohibitions": {
+    "rerun_or_replace_validation": true,
+    "retune_status_rule": true,
+    "call_llm": true,
+    "write_online_memory": true,
+    "promote_principle": true,
+    "run_heldout": true,
+    "claim_statistical_significance_without_interval_support": true
+  }
+}

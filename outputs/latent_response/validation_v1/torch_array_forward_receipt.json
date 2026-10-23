@@ -1,0 +1,37 @@
+{
+  "integrity": "PASSED",
+  "synthetic_tensor_check_groups": 6,
+  "models": [
+    {
+      "method": "SS_SENT",
+      "parameter_count": 24130,
+      "maximum_forward_error_m": 3.469446951953614e-18,
+      "encoder_initial_sha256": "667a3fe3b4edab3680945d1274c698a7814493a11f7613ede0dcaa61305b0568"
+    },
+    {
+      "method": "SS_NO_SENT",
+      "parameter_count": 24130,
+      "maximum_forward_error_m": 8.673617379884035e-18,
+      "encoder_initial_sha256": "667a3fe3b4edab3680945d1274c698a7814493a11f7613ede0dcaa61305b0568"
+    },
+    {
+      "method": "SS_CURRENT_SENT",
+      "parameter_count": 24130,
+      "maximum_forward_error_m": 1.0408340855860843e-17,
+      "encoder_initial_sha256": "667a3fe3b4edab3680945d1274c698a7814493a11f7613ede0dcaa61305b0568"
+    },
+    {
+      "method": "DIRECT_MLP_H8",
+      "parameter_count": 25272,
+      "maximum_forward_error_m": 8.673617379884035e-19,
+      "encoder_initial_sha256": "667a3fe3b4edab3680945d1274c698a7814493a11f7613ede0dcaa61305b0568"
+    }
+  ],
+  "network_guard": {
+    "attempted_network_calls": 0
+  },
+  "optimizer_updates": 0,
+  "new_model_fits": 0,
+  "new_environment_steps": 0,
+  "online_LLM_API_calls": 0
+}

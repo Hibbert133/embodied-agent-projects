@@ -1,0 +1,45 @@
+{
+  "schema": "short_probe_saved_artifact_replay_v1",
+  "mode": "records",
+  "phase": "SMOKE",
+  "experiment_run_id": "short_probe_reference_20261019T042309Z_39300e556379",
+  "manifest_id": "470c763b64db660ba5f0f075508f625bda894cbadd597aab8ae7cc84cb84576f",
+  "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "helper_sha256": "a25e332730cd3df29fda1a9b763658ebfe4c07cca23a1fd44ac38f11fd460210",
+  "anchor_file_sha256": "3d2a7c3c75ebb3c2d148f8d2a4b41513f2746e13f96cf0dfb6b65ce7c29477bd",
+  "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "python_executable": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+  "verified_frozen_inputs": 810,
+  "verified_bound_files": 833,
+  "numeric_replay": {
+    "fields_checked": 731,
+    "maximum_absolute_difference": 0.0,
+    "absolute_tolerance": 1e-09,
+    "csv_rows_checked": 72
+  },
+  "record_replay": {
+    "comparison": {
+      "fields_checked": 565,
+      "maximum_absolute_difference": 0.0,
+      "absolute_tolerance": 1e-09
+    },
+    "integrity": "PASSED",
+    "events_checked": 31827,
+    "executions_checked": 63,
+    "audit_recomputation": {
+      "policy_queries": 7891,
+      "parameter_fits": 54,
+      "optimizer_nfev": 54,
+      "design_candidates": 5184
+    }
+  },
+  "new_environment_steps": 0,
+  "new_reset_calls": 0,
+  "new_api_calls": 0,
+  "scope": "Consistency with versioned delivery anchors; trust requires the delivered code and anchors. Reuses frozen auditors. No fresh physical replication or independent audit implementation. Hash mode does not check installed native libraries or recompute statistics.",
+  "numpy_version": "2.2.6",
+  "bound_inputs_unchanged": true,
+  "replay_body_wall_ns": 32714858800,
+  "integrity": "PASSED",
+  "checked_utc": "2026-10-19T06:58:12.170188+00:00"
+}

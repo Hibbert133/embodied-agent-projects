@@ -1,0 +1,211 @@
+test_audit_does_not_execute_actor_environment_or_capsule (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ERROR
+test_execution_before_saved_intent_and_discontinuous_native_time_are_rejected (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_factory_fees_cannot_be_omitted_relabelled_or_rewound (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ERROR
+test_fixed_policy_raw_output_is_verified_independently (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_identity_prior_ledger_and_reserved_clock_cannot_be_forged (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_physical_boundary_and_global_record_order_are_mandatory (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_prefix_comparison_uses_real_rows_and_reports_incomplete_prefix (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ERROR
+test_private_noise_and_saved_action_consumption_cannot_be_substituted (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_public_trace_host_receipts_and_endings_must_match_outer_journal (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... ok
+test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) ... 
+======================================================================
+ERROR: test_audit_does_not_execute_actor_environment_or_capsule (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 127, in test_audit_does_not_execute_actor_environment_or_capsule
+    self.assertEqual(self.check(self.packets['NO_PROBE'])['controlled_steps'], 12)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT4_FALLBACK8', steps=12)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 118, in test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators
+    result = self.check(value);self.assertEqual(result['controlled_steps'], expected_steps)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT4_KEEP_AT8', steps=8)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 118, in test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators
+    result = self.check(value);self.assertEqual(result['controlled_steps'], expected_steps)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT4_UPDATE', steps=2)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 118, in test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators
+    result = self.check(value);self.assertEqual(result['controlled_steps'], expected_steps)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='NO_PROBE', steps=500)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 118, in test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators
+    result = self.check(value);self.assertEqual(result['controlled_steps'], expected_steps)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 122, in test_fallback_stopping_early_ending_and_failure_keep_actual_costs_and_denominators
+    self.assertEqual(self.check(self.fallback)['public_audit']['fits_recomputed'], 2)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_prefix_comparison_uses_real_rows_and_reports_incomplete_prefix (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 181, in test_prefix_comparison_uses_real_rows_and_reports_incomplete_prefix
+    a = self.check(self.packets['DOPT8_UPDATE']);b = self.check(self.packets['DOPT4_KEEP_AT8']);c = self.check(self.packets['DOPT4_UPDATE'])
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='NO_PROBE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='ORIGINAL8_UPDATE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='BALANCED4_UPDATE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT4_UPDATE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT8_UPDATE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT4_KEEP_AT8')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+======================================================================
+ERROR: test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees (tests.test_short_probe_journal_audit_v1.ShortProbeJournalAuditTest) (method='DOPT4_FALLBACK8')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 105, in test_seven_complete_programs_reconstruct_all_factory_control_and_query_fees
+    result = self.check(value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_journal_audit_v1.py", line 95, in check
+    return audit.audit_journal(value['events'], value['public'], value['host'], value['spec'],
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_journal_audit_v1.py", line 149, in audit_journal
+    same(event[key], value)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\short_probe_public_audit_v1.py", line 30, in same
+    raise ValueError('public record differs from registered program or observed history')
+ValueError: public record differs from registered program or observed history
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.745s
+
+FAILED (errors=14)

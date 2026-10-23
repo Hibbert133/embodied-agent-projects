@@ -1,0 +1,155 @@
+{
+  "experiment_run_id": "probemem_acr_20260802T103454Z_dedbf7f07ec8",
+  "manifest_id": "d2cb1281b5b1cad4804e36c519507a2e745d1c460ff76d574da99e040437b825",
+  "source_git_commit": "dedbf7f07ec814b9a96605920182007178d182ea",
+  "claim_scope": "development paired counterfactual feasibility only",
+  "initial_units": 100,
+  "operational_cases": 66,
+  "exclusive_recovery_cases": 51,
+  "decisive_status_cases": 61,
+  "outcome_partitions": {
+    "COMPENSATION_ONLY_RECOVERY": 47,
+    "NEITHER_RECOVERS": 13,
+    "RETRY_ONLY_RECOVERY": 4,
+    "BOTH_RECOVER": 2
+  },
+  "method_results": {
+    "always_compensation": {
+      "operational_cases": 66,
+      "selection_count": 66,
+      "coverage": 1.0,
+      "accepted_count": 49,
+      "accepted_rate": 0.7424242424242424,
+      "harmful_transfer_count": 4,
+      "decisive_cases": 61,
+      "decisive_correct_count": 57,
+      "full_decisive_accuracy": 0.9344262295081968,
+      "conditional_decisive_accuracy": 0.9344262295081968,
+      "decisive_selection_coverage": 1.0,
+      "mean_selected_final_distance": 0.08690746534715948
+    },
+    "always_retry": {
+      "operational_cases": 66,
+      "selection_count": 66,
+      "coverage": 1.0,
+      "accepted_count": 6,
+      "accepted_rate": 0.09090909090909091,
+      "harmful_transfer_count": 47,
+      "decisive_cases": 61,
+      "decisive_correct_count": 4,
+      "full_decisive_accuracy": 0.06557377049180328,
+      "conditional_decisive_accuracy": 0.06557377049180328,
+      "decisive_selection_coverage": 1.0,
+      "mean_selected_final_distance": 0.22306522026523853
+    },
+    "state_only_nearest_accepted": {
+      "operational_cases": 66,
+      "selection_count": 65,
+      "coverage": 0.9848484848484849,
+      "accepted_count": 48,
+      "accepted_rate": 0.7272727272727273,
+      "harmful_transfer_count": 4,
+      "decisive_cases": 61,
+      "decisive_correct_count": 56,
+      "full_decisive_accuracy": 0.9180327868852459,
+      "conditional_decisive_accuracy": 0.9333333333333333,
+      "decisive_selection_coverage": 0.9836065573770492,
+      "mean_selected_final_distance": 0.08845805467008518
+    },
+    "v2_fixed_coverage_aware": {
+      "operational_cases": 66,
+      "selection_count": 0,
+      "coverage": 0.0,
+      "accepted_count": 0,
+      "accepted_rate": 0.0,
+      "harmful_transfer_count": 0,
+      "decisive_cases": 61,
+      "decisive_correct_count": 0,
+      "full_decisive_accuracy": 0.0,
+      "conditional_decisive_accuracy": null,
+      "decisive_selection_coverage": 0.0,
+      "mean_selected_final_distance": null
+    },
+    "frozen_single_feature_selector": {
+      "operational_cases": 66,
+      "selection_count": 66,
+      "coverage": 1.0,
+      "accepted_count": 5,
+      "accepted_rate": 0.07575757575757576,
+      "harmful_transfer_count": 48,
+      "decisive_cases": 61,
+      "decisive_correct_count": 3,
+      "full_decisive_accuracy": 0.04918032786885246,
+      "conditional_decisive_accuracy": 0.04918032786885246,
+      "decisive_selection_coverage": 1.0,
+      "mean_selected_final_distance": 0.22525559868946876
+    },
+    "deterministic_action_conditional": {
+      "operational_cases": 66,
+      "selection_count": 63,
+      "coverage": 0.9545454545454546,
+      "accepted_count": 46,
+      "accepted_rate": 0.696969696969697,
+      "harmful_transfer_count": 4,
+      "decisive_cases": 61,
+      "decisive_correct_count": 54,
+      "full_decisive_accuracy": 0.8852459016393442,
+      "conditional_decisive_accuracy": 0.9310344827586207,
+      "decisive_selection_coverage": 0.9508196721311475,
+      "mean_selected_final_distance": 0.0887346370473178
+    }
+  },
+  "strongest_memory_baseline": "state_only_nearest_accepted",
+  "strongest_fixed_baseline": "always_compensation",
+  "acr_accuracy_gain_percentage_points": -3.2786885245901676,
+  "acr_net_decisive_correct_gain": -2,
+  "acr_harmful_transfer_absolute_reduction": 0,
+  "acr_harmful_transfer_relative_reduction": 0.0,
+  "prediction_quality": {
+    "status_accuracy": 0.803030303030303,
+    "acceptance_brier_score": 0.19394835582143402,
+    "progress_mae": 0.06967634790047708,
+    "resonance_counts": {
+      "UNRESOLVED": 17,
+      "SUPPORTED": 106,
+      "CONTRADICTED": 9
+    }
+  },
+  "integrity_checks": {
+    "operational_cases": true,
+    "exclusive_recovery_cases": true,
+    "zero_chronology_violations": true,
+    "zero_oracle_leakage": true,
+    "zero_budget_violations": true
+  },
+  "accuracy_promotion_path": false,
+  "harmful_transfer_promotion_path": false,
+  "recovery_noninferiority_check": false,
+  "promotion_gate_passed": false,
+  "validation_authorized": false,
+  "confidence_intervals": {
+    "decisive_accuracy_difference_acr_minus_state_only": {
+      "estimate": -0.03278688524590164,
+      "ci95_low": -0.09836065573770492,
+      "ci95_high": 0.03278688524590164,
+      "resamples": 10000,
+      "unit_count": 61
+    },
+    "harmful_transfer_difference_acr_minus_strongest_memory": {
+      "estimate": 0.0,
+      "ci95_low": -0.045454545454545456,
+      "ci95_high": 0.045454545454545456,
+      "resamples": 10000,
+      "unit_count": 66
+    },
+    "accepted_difference_acr_minus_strongest_fixed": {
+      "estimate": -0.045454545454545456,
+      "ci95_low": -0.10606060606060606,
+      "ci95_high": 0.0,
+      "resamples": 10000,
+      "unit_count": 66
+    }
+  },
+  "api_calls": 0,
+  "heldout_claim_eligible": false
+}

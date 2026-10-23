@@ -1,0 +1,112 @@
+{
+  "classification": "PRIOR_FULL_SOURCE_FEES_SEPARATE_FROM_NEW_ONLINE_LOSS",
+  "source_sha256": {
+    "outputs/task_passive/development_v1/task_passive_20261022T032948Z_67fefc4da922/result_delivery/costs_and_provenance.json": "d0e5caa2cc63f31ba817ffe38c9869376b7900f163eaeb1871b0bebf960fbfb8",
+    "outputs/local_reprobe/qualification_v1/local_reprobe_20261019T140639Z_7bf2aa94b5ab/manifest.json": "e7facbc606cbefe685d32f266c42733b7a631841544829fac2453660a1d1f64c",
+    "outputs/local_reprobe/qualification_v1/local_reprobe_20261019T140639Z_7bf2aa94b5ab/collection/summary.json": "f3708083a7a4411bdfe0801aec6119e57f0916b8572ac4643362eb25eb7ab9b8",
+    "outputs/local_reprobe/qualification_v1/local_reprobe_20261019T140639Z_7bf2aa94b5ab/audit/record_audit.json": "0f914e3851e075dd0a424fdf1b082d8074b34c3ba680d42e04f59b113023b170",
+    "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/manifest.json": "c0734dd84e99e136ae645d382bec7f1ac5a5b4d2f1d99f81d443df7c9eb2de64",
+    "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/summary.json": "8c5f1961d2984bad4952d2ecbf205d255b80d8d122d3338ba4e5e9c0af397c24",
+    "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/models.json": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad"
+  },
+  "prior_RAW_PI_parameter_selection_DEV": {
+    "cohort": "DEV",
+    "executions": 720,
+    "control_steps": 90626,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 36720,
+        "simulation_attempts": 3762626,
+        "simulation_frames_attempted": 18813130,
+        "simulation_completed": 3762626,
+        "simulation_frames_completed": 18813130,
+        "reset_completed": 36720
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 36000,
+          "simulation_attempts": 3600000,
+          "simulation_frames_attempted": 18000000,
+          "simulation_completed": 3600000,
+          "simulation_frames_completed": 18000000,
+          "reset_completed": 36000
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 720,
+          "simulation_attempts": 72000,
+          "simulation_frames_attempted": 360000,
+          "simulation_completed": 72000,
+          "simulation_frames_completed": 360000,
+          "reset_completed": 720
+        },
+        "CONTROL": {
+          "simulation_attempts": 90626,
+          "simulation_frames_attempted": 453130,
+          "simulation_completed": 90626,
+          "simulation_frames_completed": 453130
+        }
+      }
+    },
+    "online_c4_c8_fit_attempts": 1080,
+    "independent_audit_c4_c8_refits": 1080,
+    "collection_wall_ns": 3567177151000,
+    "audit_wall_ns": 458696343000,
+    "summary_sha256": "b0f7c6ca0b6d36518147061fe723112742ba00032e8a9d1ea5d25e24f251da27",
+    "completion_sha256": "ed707bc109efec7e5d089bd2b05a5160ff2b6f879af2b839d444acc85df3495c",
+    "audit_sha256": "f1f0819f459a7453eefbfbcb7ea333eceb41577e577f14d954e4a934d2a1642f"
+  },
+  "prior_full_PI_study_including_that_DEV": {
+    "executions": 1188,
+    "control_steps": 153045,
+    "all_resets": 60588,
+    "physical_frames": 31059225
+  },
+  "prior_C8_nominal": {
+    "executions": 480,
+    "control_steps": 3840,
+    "all_resets": 24480,
+    "physical_frames": 12259200,
+    "model_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad"
+  },
+  "prior_local_acquisition": {
+    "completed_executions": 72,
+    "controlled_steps": 5939,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 3672,
+        "simulation_attempts": 373139,
+        "simulation_frames_attempted": 1865695,
+        "simulation_completed": 373139,
+        "simulation_frames_completed": 1865695,
+        "reset_completed": 3672
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 3600,
+          "simulation_attempts": 360000,
+          "simulation_frames_attempted": 1800000,
+          "simulation_completed": 360000,
+          "simulation_frames_completed": 1800000,
+          "reset_completed": 3600
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 72,
+          "simulation_attempts": 7200,
+          "simulation_frames_attempted": 36000,
+          "simulation_completed": 7200,
+          "simulation_frames_completed": 36000,
+          "reset_completed": 72
+        },
+        "CONTROL": {
+          "simulation_attempts": 5939,
+          "simulation_frames_attempted": 29695,
+          "simulation_completed": 5939,
+          "simulation_frames_completed": 29695
+        }
+      }
+    },
+    "wall_ns": 324671817700
+  },
+  "do_not_add_overlapping_PI_DEV_or_C8_sources_once_per_program": true,
+  "new_interactions_from_reading_sources": 0
+}

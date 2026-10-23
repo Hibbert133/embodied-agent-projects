@@ -1,0 +1,114 @@
+{
+  "review": "short_probe_delivery_results_review_v1",
+  "status": "PASSED",
+  "created_utc": "2026-10-19T07:17:48.397826+00:00",
+  "checks": [
+    {
+      "claim": "method table NO_PROBE",
+      "fields": 4
+    },
+    {
+      "claim": "method table ORIGINAL8_UPDATE",
+      "fields": 4
+    },
+    {
+      "claim": "method table BALANCED4_UPDATE",
+      "fields": 4
+    },
+    {
+      "claim": "method table DOPT4_UPDATE",
+      "fields": 4
+    },
+    {
+      "claim": "method table DOPT8_UPDATE",
+      "fields": 4
+    },
+    {
+      "claim": "method table DOPT4_KEEP_AT8",
+      "fields": 4
+    },
+    {
+      "claim": "method table DOPT4_FALLBACK8",
+      "fields": 4
+    },
+    {
+      "claim": "task subgroup push-v3",
+      "fields": 6
+    },
+    {
+      "claim": "task subgroup reach-v3",
+      "fields": 6
+    },
+    {
+      "claim": "task subgroup door-open-v3",
+      "fields": 6
+    },
+    {
+      "claim": "all failures and all stops",
+      "failed_rows": 191,
+      "stop_rows": 3
+    },
+    {
+      "claim": "single fallback difference",
+      "differing_units": [
+        [
+          "49",
+          "6"
+        ]
+      ],
+      "other_identical_units": 647,
+      "compared_fields": [
+        "success",
+        "stopped",
+        "end_reason",
+        "deadline_loss",
+        "total_steps",
+        "fixed_probe_steps",
+        "policy_steps"
+      ]
+    },
+    {
+      "claim": "primary interval, chain counts and combined MAIN/SMOKE costs",
+      "status": "PASSED"
+    }
+  ],
+  "source_identity": {
+    "experiment_run_id": "short_probe_reference_20261019T042309Z_39300e556379",
+    "manifest_id": "470c763b64db660ba5f0f075508f625bda894cbadd597aab8ae7cc84cb84576f",
+    "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3"
+  },
+  "verified_bound_files": 886,
+  "local_document_links_checked": 13,
+  "visual_review": {
+    "zh_png": "PASS: labels, uncertainty intervals, zero line, full denominators and limitations readable; no clipping observed",
+    "en_png": "PASS: same plotted data, labels and caveats readable",
+    "original_image_size": [
+      3060,
+      1224
+    ],
+    "review_display_size": [
+      2048,
+      819
+    ]
+  },
+  "source_and_artifact_sha256": {
+    "docs/paper/short_probe_results_interpretation_20261019_zh.md": "70edb5fe57a432e2858bee1d951fa715401b345129218ad97e0223528450f363",
+    "docs/paper/short_probe_reproduction_20261019_zh.md": "20572414851eefc3bf7cc0a8534d51f5a986a8eaadb09baadc1721cb8c380baa",
+    "docs/paper/replay_short_probe_results_20261019.py": "a25e332730cd3df29fda1a9b763658ebfe4c07cca23a1fd44ac38f11fd460210",
+    "docs/paper/plot_short_probe_reference_20261019.py": "d0e36edd6b15f9a66149619124604d4420b0a6063944c5de1ce89c9ee06b7f71",
+    "docs/paper/short_probe_main_anchors_20261019.json": "3caeff96cf8bd21ac6acacee0255d6b6adfd84f20b84ad4879df0050d807b3e0",
+    "docs/paper/short_probe_smoke_anchors_20261019.json": "3d2a7c3c75ebb3c2d148f8d2a4b41513f2746e13f96cf0dfb6b65ce7c29477bd",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_numeric_v1.json": "b2bea25e3b2ec74ec6ba00d09c1d0eb02e546e257e8d777f908c099e03d343ef",
+    "outputs/reproduction_reviews/short_probe_reference_v1/smoke_records_v1.json": "746cc7c5d622d679d2c8a364a552628f2c577b605e38635371337d6561c29538",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_figures_v1/figure_data.json": "70fa627fc4e9c5c6f198a1e82cb0c24aeb923b31a356d612b7506ff60693b2e2",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_figures_v1/receipt.json": "2893187fb161e46c68926a61db94f165d7ea2c0659e40bac37a0fc3bead166be",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_figures_v1/short_probe_reference_en.png": "85ec9f6c82bea3f6ca5b3a36008235e933da555f0fca86cdfac459840da378bf",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_figures_v1/short_probe_reference_en.svg": "91f4e41c1da854b2def47ff65f770d79063da24b30f392bc2c4a446d7d95630b",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_figures_v1/short_probe_reference_zh.png": "215930ca63615e5ec87b5cf381d1fe57f7ba86e94ecce0bf9f820ed7020330bb",
+    "outputs/reproduction_reviews/short_probe_reference_v1/main_figures_v1/short_probe_reference_zh.svg": "ca35c60e3aae5d53c0b8bc311f29a2fd5f8bada9197f2e959b07ee6273f34cdd"
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_method_benefit_demonstrated": false,
+  "scope": "Checks new explanatory prose and plots against audited complete outcomes, including all stops. Reuses existing saved-hash verification; not a third independent physical audit."
+}

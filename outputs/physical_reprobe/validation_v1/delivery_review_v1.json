@@ -1,0 +1,169 @@
+{
+  "status": "PASSED_SOFTWARE_COMPONENT_ONLY",
+  "created_utc": "2026-10-19T11:41:23.335783+00:00",
+  "parent_commit": "5f9e40e0e73a56d1ba942805c643862cdcc5fe80",
+  "previous_goal_turn": {
+    "classification": "progress",
+    "evidence": "5f9e40e committed observed switch outcome decomposition"
+  },
+  "files": [
+    {
+      "path": "docs/research/physical_reprobe_design_v1_zh.md",
+      "sha256": "adbcaf64608207b09dd5e87fedb0c0b1af5d81df0388c11cbf823f02b9955764",
+      "bytes": 7509
+    },
+    {
+      "path": "outputs/physical_reprobe/.gitattributes",
+      "sha256": "6a3346ccd0abf8dd1f8d6d302cc1d441e9dc83b66c29886fdce99bb911e46b4a",
+      "bytes": 160
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/compileall.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/compileall_receipt.json",
+      "sha256": "8c114d0756807ae54fe75a2480739cb6061163f469c1021fb621dcb6a658c66c",
+      "bytes": 486
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/diff_check_receipt.json",
+      "sha256": "c7346aacc8b6624ad9edb9fbc949ec597d9d65df4c8efdc4ac70d8be84ead490",
+      "bytes": 351
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/diff_format_diagnosis_v1.json",
+      "sha256": "3fbb75917b374d0d0fab56081414cec62ab230d69ce31219be60b6604e365afd",
+      "bytes": 430
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/index_normalization_diagnosis_v1.json",
+      "sha256": "0f5a80a976d899911669e1bc0320760be1923d1c65d95a0bd66bd3b14a17ec4f",
+      "bytes": 840
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/pip_check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/pip_check_receipt.json",
+      "sha256": "9641d6cb1344cf5547710247ae2927cebbd9b596f8289805d9a0761770f6be24",
+      "bytes": 442
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/run_checks.py",
+      "sha256": "29479b168daad5d2c5108812e1784bebeb4d287a091e4ca5630f55755cf4b03d",
+      "bytes": 3024
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/tracked_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/tracked_secret_scan_receipt.json",
+      "sha256": "b478af6359353d391b9b8be8d051093613dcedc4a3390e6c375e1c1dcffa1fc1",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/unittest.txt",
+      "sha256": "33bdbd78b54ca7e72d0fc9cccb16a8ba9e3d1256216236b4f0d1452668887184",
+      "bytes": 140163
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/unittest_native_costs.json",
+      "sha256": "0a50a9f0e7fc0e49c7d9b771a372ad0988604d67a4b3f6b26872cc328376615c",
+      "bytes": 83697
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/unittest_receipt.json",
+      "sha256": "74ed382262d1d7c256e8242665c81dbbc50a179a0af2ca7a706027ced6f71b49",
+      "bytes": 484
+    },
+    {
+      "path": "src/analysis/physical_reprobe_host_v1.py",
+      "sha256": "58dea52001bcac0e4e4a82b22fce5c00ee651e0a48204faa6ab4d70b53c67ee1",
+      "bytes": 10559
+    },
+    {
+      "path": "src/probe/physical_reprobe_v1.py",
+      "sha256": "edcf36c4ff58614fde00cfed07bdb9c1fd7a259e032c144b08e421f3ff78dac8",
+      "bytes": 10784
+    },
+    {
+      "path": "tests/test_physical_reprobe_host_v1.py",
+      "sha256": "4e750bde49371f753f5883ebf6ec17df8ba34c61cc2a09a8e8d0dd95b7ded0f0",
+      "bytes": 9959
+    },
+    {
+      "path": "tests/test_physical_reprobe_v1.py",
+      "sha256": "22c35f44b68ae6b2b617c5187c8f762212fdf3817b915bb26b75c780590f88c8",
+      "bytes": 10239
+    }
+  ],
+  "checks": {
+    "unittest": {
+      "returncode": 0,
+      "receipt_sha256": "74ed382262d1d7c256e8242665c81dbbc50a179a0af2ca7a706027ced6f71b49",
+      "wall_ns": 255917450500
+    },
+    "compileall": {
+      "returncode": 0,
+      "receipt_sha256": "8c114d0756807ae54fe75a2480739cb6061163f469c1021fb621dcb6a658c66c",
+      "wall_ns": 3419645900
+    },
+    "pip_check": {
+      "returncode": 0,
+      "receipt_sha256": "9641d6cb1344cf5547710247ae2927cebbd9b596f8289805d9a0761770f6be24",
+      "wall_ns": 2588583500
+    },
+    "tracked_secret_scan": {
+      "returncode": 0,
+      "receipt_sha256": "b478af6359353d391b9b8be8d051093613dcedc4a3390e6c375e1c1dcffa1fc1",
+      "wall_ns": 59650870900
+    },
+    "diff_check": {
+      "returncode": 0,
+      "receipt_sha256": "c7346aacc8b6624ad9edb9fbc949ec597d9d65df4c8efdc4ac70d8be84ead490",
+      "wall_ns": 43432600
+    }
+  },
+  "tests_passed": 1176,
+  "public_component_tests": 18,
+  "native_host_tests": 12,
+  "native_host_costs": {
+    "native_frames": 670,
+    "native_resets": 13,
+    "host_control_steps": 133,
+    "host_policy_queries": 12
+  },
+  "cost_scope": "Full-suite instrumented host fixtures only; excludes two earlier unsaved targeted native cost lists and uninstrumented repository fixture costs.",
+  "unchanged_historical_frozen_inputs": 973,
+  "historical_manifest_sha256": "2a1ac6ba1bc4f2b969c9496d8dbaa9b8a2e72860d40b0f9b992bf5bc174a4285",
+  "local_document_links_checked": 8,
+  "new_metaworld_steps": 0,
+  "new_scientific_seeds": 0,
+  "new_api_calls": 0,
+  "real_task_execution_qualified": false,
+  "measurement_model_qualified": false,
+  "task_utility_demonstrated": false,
+  "algorithm_novelty_established": false,
+  "publication_objective_complete": false,
+  "remaining": [
+    "Independent public/physical record auditor",
+    "Frozen three-task execution qualification",
+    "Independent warm-state calibration and qualification",
+    "Matched full-cost task comparison and causal triggering method"
+  ],
+  "index_normalization_resolution": "Two exact-index checks rejected automatic CRLF normalization; local -text attributes plus explicit renormalization restaging preserve original hashed logs; local CR-at-EOL recognition resolves the subsequent diff-check rejection.",
+  "index_normalization_diagnosis_sha256": "0f5a80a976d899911669e1bc0320760be1923d1c65d95a0bd66bd3b14a17ec4f",
+  "diff_format_diagnosis_sha256": "3fbb75917b374d0d0fab56081414cec62ab230d69ce31219be60b6604e365afd",
+  "secret_scan_scope": "Repository credential patterns over every exact staged/working UTF-8 file; not all possible credential formats."
+}

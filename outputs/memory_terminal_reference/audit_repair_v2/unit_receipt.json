@@ -1,0 +1,30 @@
+{
+  "integrity": "PASSED",
+  "tests": 3,
+  "stdout": "test_frozen_reader_shadowing_failure_remains_reproducible (tests.test_memory_terminal_audit_repair_v2.AuditRepairTests) ... ok\ntest_repair_only_renames_reader_and_two_references (tests.test_memory_terminal_audit_repair_v2.AuditRepairTests) ... ok\ntest_repaired_audit_checks_all_saved_output_with_main_functions_disabled (tests.test_memory_terminal_audit_repair_v2.AuditRepairTests) ... ok\n\n----------------------------------------------------------------------\nRan 3 tests in 0.818s\n\nOK\n",
+  "guard": {
+    "integrity": "PASSED",
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "fits": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "wall_ns": 1505619400,
+  "main_estimator_calls": 0,
+  "full_saved_output_audit_replays": 1,
+  "original_failure_reproductions": 1,
+  "not_unseen_data": true,
+  "source_sha256": {
+    "src/analysis/memory_terminal_audit_v2.py": "c34a5b736d94bd663707602e2a8a16362173b45a544442f6a323ac66df8aa1d5",
+    "scripts/audit_memory_terminal_reference_v2.py": "7a88af0c9923664c6220aa3902fd63149368df1ba8bbbc850123232cc4fc7a60",
+    "tests/test_memory_terminal_audit_repair_v2.py": "d0441697d1e9241514a34700bc2b8005eca8c088d7afdb280a804ca91f9d3108"
+  }
+}

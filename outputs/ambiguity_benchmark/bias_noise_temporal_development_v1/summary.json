@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "bias_noise_temporal_development_v1",
+  "split": "development",
+  "source_oracle_audit": "outputs/ambiguity_benchmark/temporal_development_rollouts/oracle_audit.jsonl",
+  "source_oracle_audit_sha256": "e334eae2a9353d8d9718d18181a4ae1fdab4efa90044debc88f0da6b1f9dea05",
+  "source_probe_results": "outputs/ambiguity_benchmark/probe_consistency_temporal_development/results.csv",
+  "source_probe_results_sha256": "c534489d93090665739921ed9ebdf373334b853e805be28bbe7eef31d5e43f6b",
+  "source_threshold": "outputs/autoresearch/probe_consistency_tuning/threshold_selection.json",
+  "source_threshold_sha256": "8f7218aaea49d0d695926f55f2a7c2543c8a96af91b26f9f21e91bd75b09e866",
+  "selection_rule": "global one-to-one minimum standardized Euclidean distance; probe evidence excluded from matching",
+  "selection_features": [
+    "episode_return",
+    "final_object_goal_distance",
+    "progress_to_goal"
+  ],
+  "candidate_bias_failures": 25,
+  "candidate_noise_failures": 5,
+  "matched_pairs": 5,
+  "matched_cases": 10,
+  "frozen_probe_threshold": 0.11560838098372882,
+  "post_selection_probe_accuracy": 1.0,
+  "post_selection_probe_balanced_accuracy": 1.0,
+  "mean_standardized_passive_distance": 1.085393710058685,
+  "claim_boundary": "development cases for candidate selection; not a held-out claim"
+}

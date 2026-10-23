@@ -1,0 +1,57 @@
+{
+  "review": "paper_reproduction_entry_v1",
+  "created_utc": "2026-10-19T05:01:19.016970+00:00",
+  "integrity": "PASSED",
+  "artifact_sha256": {
+    "docs/paper/replay_paired_probe_results_v1.py": "483f5895ad5189cc52ed71b50dc40aa0c6e6458789604acff9ae08718cb3c6da",
+    "docs/paper/paired_probe_reproduction_20261019_zh.md": "67d6940ab1c3f125e4f0819783e6697935d67970ac39079af800bf6f91ee4ee8",
+    "outputs/reproduction_reviews/paired_probe_v1/main_numeric_v1.json": "41921b9ac3862a051ce93b8a7b76688afcf021b190dd97677c36e2a58d48584f",
+    "outputs/reproduction_reviews/paired_probe_v1/smoke_record_v1.json": "ee3c2c25e90f697cb9d179063057270aecfe02e58ea2650f6d9c61c941606830",
+    "outputs/reproduction_reviews/paired_probe_v1/main_hashes_py314_v1.json": "60083937d9bc1446106596a53df9113f6b8d45487c2d663b7851dfbfda3e478d"
+  },
+  "verified_git_anchors_each": 8,
+  "historical_frozen_inputs_each": 778,
+  "main_numeric_fields": 4161,
+  "main_numeric_max_difference": 9.094947017729282e-13,
+  "smoke_event_replay_events": 22477,
+  "smoke_numeric_fields": 335,
+  "software_rejection_checks": [
+    {
+      "case": "existing_receipt",
+      "exit_code": 2,
+      "target_sha256_unchanged": "41921b9ac3862a051ce93b8a7b76688afcf021b190dd97677c36e2a58d48584f",
+      "expected_rejection": "replay_paired_probe_results_v1.py: error: receipt already exists; it will not be overwritten"
+    },
+    {
+      "case": "historical_manifest",
+      "exit_code": 2,
+      "target_sha256_unchanged": "652d58c039af7b6e4e26904ba87157c50327de8be5037b69ce051d1eefbf7add",
+      "expected_rejection": "replay_paired_probe_results_v1.py: error: output must be a new .json inside outputs\\reproduction_reviews\\paired_probe_v1"
+    }
+  ],
+  "installed_versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "metaworld": "3.1.1",
+    "mujoco": "3.3.0"
+  },
+  "local_links_checked": [
+    "replay_paired_probe_results_v1.py",
+    "paired_probe_measurement_methods_draft_zh.md",
+    "paired_probe_measurement_results_20261019_zh.md",
+    "paired_probe_related_work_20261019_zh.md"
+  ],
+  "scope": "New helper reuses existing auditors. MAIN numeric and SMOKE complete record replay exercised; no fresh MAIN event replay or physical simulation. Refusal tests deliberately exit 2.",
+  "replay_costs": {
+    "body_wall_ns_sum": 27374201200,
+    "new_environment_steps": 0,
+    "new_api_calls": 0,
+    "record_audit_policy_queries": 6736,
+    "record_audit_shared_fitter_attempts": 34,
+    "record_audit_shared_optimizer_nfev": 34
+  },
+  "ongoing_frozen_inputs_verified": 810,
+  "ongoing_frozen_head": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "ongoing_MAIN_method_scores_read": false,
+  "commit_deferred_until_MAIN_completion": true
+}

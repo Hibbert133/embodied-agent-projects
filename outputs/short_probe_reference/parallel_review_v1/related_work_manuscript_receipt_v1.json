@@ -1,0 +1,137 @@
+{
+  "review": "paired_probe_related_work_and_bibliography_v1",
+  "created_utc": "2026-10-19T04:53:54.492212+00:00",
+  "integrity": "PASSED",
+  "source_count": 7,
+  "sources": [
+    {
+      "key": "wagenmaker2021task",
+      "metadata_url": "https://proceedings.mlr.press/v139/wagenmaker21a.html",
+      "title": "Task-Optimal Exploration in Linear Dynamical Systems",
+      "year": "2021",
+      "volume": "139",
+      "pages": "10641--10652",
+      "reading_scope": "Official publication metadata and abstract; task-dependent linear-system experiment design."
+    },
+    {
+      "key": "mutny2023active",
+      "metadata_url": "https://proceedings.mlr.press/v206/mutny23a.html",
+      "title": "Active Exploration via Experiment Design in Markov Chains",
+      "year": "2023",
+      "volume": "206",
+      "pages": "7349--7374",
+      "reading_scope": "Official publication metadata and abstract; controlled state transitions and sequential measurement allocation."
+    },
+    {
+      "key": "dass2025look",
+      "metadata_url": "https://proceedings.mlr.press/v270/dass25a.html",
+      "title": "Learning to Look: Seeking Information for Decision Making via Policy Factorization",
+      "year": "2025",
+      "volume": "270",
+      "pages": "4425--4445",
+      "reading_scope": "Official publication metadata and abstract; dual-policy training and uncertainty switching. Year is PMLR publication year."
+    },
+    {
+      "key": "aoyama2025poke",
+      "metadata_url": "https://proceedings.mlr.press/v305/aoyama25a.html",
+      "title": "Poke and Strike: Learning Task-Informed Exploration Policies",
+      "year": "2025",
+      "volume": "305",
+      "pages": "3008--3034",
+      "method_url": "https://arxiv.org/html/2509.00178v1",
+      "reading_scope": "Publication metadata and abstract; selected arXiv method/appendix passages on privileged policy, estimator and switching."
+    },
+    {
+      "key": "zang2026gauge",
+      "metadata_url": "https://arxiv.org/abs/2609.32154v1",
+      "title": "GAUGE: Planner-Conditioned Active Calibration of Opaque Quadruped Velocity Interfaces",
+      "year": "2026",
+      "eprint": "2609.32154",
+      "method_url": "https://arxiv.org/html/2609.32154v1",
+      "reading_scope": "Version 1 metadata, abstract, Sections III and IV-C. No upstream code read or execution."
+    },
+    {
+      "key": "schlor2022parameter",
+      "metadata_url": "https://arxiv.org/abs/2204.02059v1",
+      "title": "Parameter Filter-based Event-triggered Learning",
+      "year": "2022",
+      "eprint": "2204.02059",
+      "method_url": "https://arxiv.org/html/2204.02059v1",
+      "reading_scope": "Version 1 metadata, abstract and previously reviewed selected Sections II-V. Citation is to inspected preprint."
+    },
+    {
+      "key": "arcari2020dual",
+      "metadata_url": "https://proceedings.mlr.press/v120/arcari20a.html",
+      "title": "Dual Stochastic MPC for Systems with Parametric and Structural Uncertainty",
+      "year": "2020",
+      "volume": "120",
+      "pages": "894--903",
+      "reading_scope": "Official publication metadata and abstract; scenario-tree learning followed by scenario-dependent control sequences."
+    }
+  ],
+  "bibliography_fields_checked": [
+    "wagenmaker2021task:title",
+    "wagenmaker2021task:year",
+    "wagenmaker2021task:volume",
+    "wagenmaker2021task:pages",
+    "wagenmaker2021task:url",
+    "mutny2023active:title",
+    "mutny2023active:year",
+    "mutny2023active:volume",
+    "mutny2023active:pages",
+    "mutny2023active:url",
+    "dass2025look:title",
+    "dass2025look:year",
+    "dass2025look:volume",
+    "dass2025look:pages",
+    "dass2025look:url",
+    "aoyama2025poke:title",
+    "aoyama2025poke:year",
+    "aoyama2025poke:volume",
+    "aoyama2025poke:pages",
+    "aoyama2025poke:url",
+    "zang2026gauge:title",
+    "zang2026gauge:year",
+    "zang2026gauge:eprint",
+    "zang2026gauge:url",
+    "schlor2022parameter:title",
+    "schlor2022parameter:year",
+    "schlor2022parameter:eprint",
+    "schlor2022parameter:url",
+    "arcari2020dual:title",
+    "arcari2020dual:year",
+    "arcari2020dual:volume",
+    "arcari2020dual:pages",
+    "arcari2020dual:url"
+  ],
+  "local_links_verified": [
+    "paired_probe_measurement_methods_draft_zh.md",
+    "paired_probe_measurement_results_20261019_zh.md",
+    "probe_evidence_references_20261019.bib"
+  ],
+  "artifact_sha256": {
+    "docs/paper/paired_probe_related_work_20261019_zh.md": "ef844c3618749556fabe1c7f40ec1bb9a079ec0541d49b02161394c62024d4cd",
+    "docs/paper/probe_evidence_references_20261019.bib": "31361ff6932c70bf1e6c12dac8f5540f85879f9727841b47c62b4675d3fcda6c",
+    "outputs/short_probe_reference/parallel_review_v1/baseline_upstream_access_20261019.json": "7db095e5b2d542dc912e8011a5f11197bdbc2ccfcdcf404d8a05d4116a3bc77b"
+  },
+  "review_scope": "Primary-source-supported prose and bibliography metadata; not exhaustive novelty search or algorithm reproduction. Structural BibTeX checks only; no TeX compilation.",
+  "transcription_check_recovery": [
+    {
+      "attempt": 1,
+      "issue": "Verifier required the extra arXiv method URL in prose although Aoyama citation correctly linked the official PMLR page.",
+      "resolution": "Accept the verified metadata or method source URL; no bibliography/manuscript claims changed."
+    },
+    {
+      "attempt": 2,
+      "issue": "Diagnostic read omitted UTF-8 on Windows and failed with UnicodeDecodeError.",
+      "resolution": "All reads use explicit UTF-8; no artifacts were written by either failed attempt."
+    }
+  ],
+  "new_environment_steps": 0,
+  "new_api_decision_calls": 0,
+  "new_fits": 0,
+  "ongoing_MAIN_method_scores_read": false,
+  "frozen_inputs_verified": 810,
+  "frozen_head": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "commit_deferred_until_MAIN_pipeline_completion": true
+}

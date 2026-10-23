@@ -1,0 +1,54 @@
+{
+  "experiment_run_id": "probemem_acr_20260802T103454Z_dedbf7f07ec8",
+  "manifest_id": "d2cb1281b5b1cad4804e36c519507a2e745d1c460ff76d574da99e040437b825",
+  "source_git_commit": "dedbf7f07ec814b9a96605920182007178d182ea",
+  "claim_scope": "post-hoc evaluator-only failure localization; no fitted selector",
+  "new_rollouts": 0,
+  "api_calls": 0,
+  "exclusive_recovery_cases": 51,
+  "compensation_only_cases": 47,
+  "retry_only_cases": 4,
+  "acr_correct_on_retry_only": 0,
+  "retry_only_condition_counts_evaluator_only": {
+    "fault_05": 4
+  },
+  "all_retry_only_share_one_condition": true,
+  "dominant_retry_condition_evaluator_only": "fault_05",
+  "same_condition_compensation_only_cases": 1,
+  "condition_confounding_detected": true,
+  "top_posthoc_feature_contrasts": [
+    {
+      "feature": "phase_inconsistency",
+      "rank_separation": 1.0,
+      "retry_only_direction": "HIGHER",
+      "range_overlap": false
+    },
+    {
+      "feature": "probe_mean_estimation_residual",
+      "rank_separation": 1.0,
+      "retry_only_direction": "HIGHER",
+      "range_overlap": false
+    },
+    {
+      "feature": "probe_dominant_axis_sign_agreement",
+      "rank_separation": 0.9867021276595744,
+      "retry_only_direction": "LOWER",
+      "range_overlap": true
+    },
+    {
+      "feature": "probe_relative_bias_std",
+      "rank_separation": 0.9840425531914894,
+      "retry_only_direction": "HIGHER",
+      "range_overlap": true
+    },
+    {
+      "feature": "normalized_residual_norm",
+      "rank_separation": 0.9787234042553191,
+      "retry_only_direction": "HIGHER",
+      "range_overlap": true
+    }
+  ],
+  "threshold_fitted": false,
+  "selector_created": false,
+  "validation_authorized": false
+}

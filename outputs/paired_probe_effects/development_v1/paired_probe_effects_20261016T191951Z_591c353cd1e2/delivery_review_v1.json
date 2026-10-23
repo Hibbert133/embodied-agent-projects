@@ -1,0 +1,96 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "created_utc": "2026-10-18T08:15:56.769191+00:00",
+  "status": "MAIN_COMPLETED_REVIEWED_PENDING_FINAL_INDEX_AND_SECRET_CHECKS",
+  "pipeline_exec_session_id": 18939,
+  "pipeline_exec_exit_code": 0,
+  "pipeline_completion_sha256": "e91aa1035a6fe6a05e9b78a98818a90afb8836160bfd558f7b81e9487d8cde3d",
+  "pipeline_status_snapshot_is_not_terminal_authority": true,
+  "record_audit_sha256": "a39d3e7564dd551c70cd9362db458708a55f9652e6e2f4b99219ac4674a437e4",
+  "numeric_audit_sha256": "136d37065f74f9ad55e4bb2995ef0d12c5bc025ba1e18fb052c1488d2a4e28b5",
+  "bound_artifacts_rehashed": 57,
+  "manual_and_figure_sha256": {
+    "reports/paired_probe_effects_interpretation_v1.md": "debf55e35a3d567df57c52851608854e86f21b056d094d27bd99ac271233f331",
+    "reports/paired_probe_effects_main_v1.md": "e6330e51970abfbbfca07e37992a81bde31f90f2c76d567404eb7ee8c0b051a2",
+    "reports/paired_probe_effects_smoke_v1.md": "85ee03bf27a333d03fa664bc98edbd557326ff3690c3c98540a6eeec866282f6",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/figures/effects.png": "e05518218866849313d3414f55c0fe8c8dfbd3a12b238367b20446cae4bd036e",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/figures/effects.svg": "5ece085f213ce7d6a5600e1119d1674736270deede5cffa7e21a8da4641e5faf"
+  },
+  "visual_qa": {
+    "image": "main_analysis_v1/figures/effects.png",
+    "viewed_at_original_resolution": [
+      3300,
+      1320
+    ],
+    "chinese_legible": true,
+    "four_bars_counts_match": true,
+    "three_effect_points_and_intervals_match": true,
+    "cropped_or_overlapping_labels": false,
+    "left_bars_are_deadline_loss_not_average_physical_steps": true
+  },
+  "csv_recomputed_method_counts": {
+    "REUSE_OLD": {
+      "cases": 3064,
+      "successes": 2935,
+      "failures": 129,
+      "stops": 0
+    },
+    "PROBE_KEEP": {
+      "cases": 3064,
+      "successes": 2917,
+      "failures": 147,
+      "stops": 0
+    },
+    "PROBE_UPDATE": {
+      "cases": 3064,
+      "successes": 2985,
+      "failures": 79,
+      "stops": 7
+    },
+    "PROBE_UPDATE_KEEP": {
+      "cases": 3064,
+      "successes": 2992,
+      "failures": 72,
+      "stops": 0
+    }
+  },
+  "posthoc_observed_state_mean_sign_counts": {
+    "positive": 104,
+    "negative": 276,
+    "zero": 3
+  },
+  "failure_rows_including_source": 442,
+  "manual_existing_links_checked": [
+    "../outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/figures/effects.png",
+    "../outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/failures.csv",
+    "../outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/stops.csv",
+    "../docs/research/publication_path_v1.md",
+    "online_calibrated_agent_development_v1.md",
+    "paired_probe_effects_main_v1.md",
+    "../outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/statistics.json",
+    "../outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/costs.json"
+  ],
+  "required_working_tree_tests": {
+    "tests_run": 1074,
+    "wall_seconds": 153.52,
+    "exit_code": 0,
+    "log": "delivery_tests_20261018.txt",
+    "log_sha256": "464f2a62f36c4734e6ac9c7ebd6bccb44d6fb484ac89d845dfd5d1d29bcaaae7",
+    "scope": "Contains all 1022 frozen-study tests plus 52 independent uncommitted draft tests. This does not place prototype code in the frozen run or the results-only commit."
+  },
+  "other_validation_exit_codes": {
+    "compileall": 0,
+    "pip_check": 0,
+    "tracked_secrets_staged": 0,
+    "working_diff_check": 0
+  },
+  "other_validation_session": 54791,
+  "frozen_repository_inputs_checked": 778,
+  "changed_frozen_inputs": [],
+  "new_api_calls": 0,
+  "new_metaworld_population_execution_after_collection": 0,
+  "synthetic_numerical_and_native_toy_regression_costs": "NOT_EXHAUSTIVELY_INVENTORIED_NOT_ZERO",
+  "science_scope": "Finite-source same-state mechanism measurement. Program means and observed state signs are not a deployed selector, per-evidence value certificate, innovation claim or completion of the publication objective."
+}

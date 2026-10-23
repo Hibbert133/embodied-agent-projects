@@ -1,0 +1,104 @@
+{
+  "experiment_run_id": "continuous_probe_20261013T103104Z_1092996bcf4f",
+  "manifest_id": "b123aaad2cd583d1e7c4212c7f80676344652a40bccc336111f804e5b5729d60",
+  "source_git_commit": "1092996bcf4f497526924306f64b0c0581e953da",
+  "status": "COMPLETED_FEASIBILITY_FAILED",
+  "complete_units": 32,
+  "physical_steps": 49309,
+  "environment_resets": 288,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "statistics": {
+    "methods": {
+      "NO_PROBE": {
+        "successful": 12,
+        "success_equal_484_task_steps": 12,
+        "mean_total_steps": 364.875,
+        "environment_resets": 32,
+        "valid_fits": 0,
+        "mean_offset_error_oracle": null,
+        "mean_probe_object_displacement": 0.0,
+        "probe_successes": 0
+      },
+      "CONT_NO_CORRECTION": {
+        "successful": 13,
+        "success_equal_484_task_steps": 13,
+        "mean_total_steps": 347.15625,
+        "environment_resets": 32,
+        "valid_fits": 0,
+        "mean_offset_error_oracle": null,
+        "mean_probe_object_displacement": 1.1208240648747442e-05,
+        "probe_successes": 0
+      },
+      "CONT_STATIC": {
+        "successful": 5,
+        "success_equal_484_task_steps": 5,
+        "mean_total_steps": 436.1875,
+        "environment_resets": 32,
+        "valid_fits": 32,
+        "mean_offset_error_oracle": 0.7965130424571134,
+        "mean_probe_object_displacement": 1.1208240648747442e-05,
+        "probe_successes": 0
+      },
+      "CONT_DYNAMIC": {
+        "successful": 15,
+        "success_equal_484_task_steps": 15,
+        "mean_total_steps": 305.15625,
+        "environment_resets": 32,
+        "valid_fits": 32,
+        "mean_offset_error_oracle": 0.20871762306201672,
+        "mean_probe_object_displacement": 1.1208240648747442e-05,
+        "probe_successes": 0
+      },
+      "RESET_REFERENCE": {
+        "successful": 31,
+        "success_equal_484_task_steps": 31,
+        "mean_total_steps": 87.53125,
+        "environment_resets": 160,
+        "valid_fits": 32,
+        "mean_offset_error_oracle": 0.09497763476111108,
+        "mean_probe_object_displacement": 0.0,
+        "probe_successes": 0
+      }
+    },
+    "contrasts_vs_cont_no_correction": {
+      "CONT_STATIC": {
+        "difference": -0.25,
+        "per_seed": [
+          -0.25,
+          -0.25,
+          -0.75,
+          0.0,
+          -0.25,
+          -0.75,
+          0.0,
+          0.25
+        ],
+        "cluster_interval_975": [
+          -0.5,
+          0.0
+        ]
+      },
+      "CONT_DYNAMIC": {
+        "difference": 0.0625,
+        "per_seed": [
+          0.0,
+          0.0,
+          -0.25,
+          0.25,
+          0.25,
+          -0.25,
+          0.25,
+          0.25
+        ],
+        "cluster_interval_975": [
+          -0.09375,
+          0.21875
+        ]
+      }
+    },
+    "passing_estimators": [],
+    "gate_passed": false,
+    "independent_seed_clusters": 8
+  }
+}

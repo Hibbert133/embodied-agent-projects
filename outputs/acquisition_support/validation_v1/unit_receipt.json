@@ -1,0 +1,35 @@
+{
+  "integrity": "PASSED",
+  "tests": 13,
+  "output": "test_complete_and_remaining_losses_cancel_prefix_once (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_early_and_delayed_pi_are_not_the_same_suffix (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_early_success_invalid_fit_and_missing_movement_are_not_zeros (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_full_six_cell_portfolio_keeps_ties_and_future_label_warning (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_future_edit_does_not_change_earlier_prefix (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_independent_csv_check_rejects_zero_for_missing_value (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_independent_direct_prefix_comparison_does_not_call_main_helpers (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_initial_fit_and_task_steps_cannot_be_relabelled_as_acquisition (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_initial_private_state_difference_rejected (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_no_canonical_replacement_after_early_end (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_phase_and_wall_timer_are_not_physical_differences (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_raw_pi_history_requires_its_own_matching_movement_suffix (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\ntest_same_visible_observation_not_sufficient_for_physical_matching (tests.test_acquisition_support_v1.PrefixSupportTests) ... ok\n\n----------------------------------------------------------------------\nRan 13 tests in 0.055s\n\nOK\n",
+  "interaction_guard": {
+    "integrity": "PASSED",
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "fits": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "analysis_source_sha256": {
+    "src/analysis/acquisition_support_sources_v1.py": "8253d006734ead9b9ea133907be1a32d6b1993e2ffa24c6f0a77d4e7da015c09",
+    "src/analysis/acquisition_support_v1.py": "4bc444f4bb6e0c2230fce0f9ad1e94b7eed4b900da2def89f659208a49605fc4",
+    "src/analysis/acquisition_support_audit_v1.py": "6f30ebc6256ad14400317fd2048f24303a0079ef313546abe58edbf954a0371c",
+    "scripts/analyze_acquisition_support_v1.py": "a952ad99444a6c8a7037ca341915f7c60ff134ebf0bc88586437d28e985c7f38",
+    "scripts/audit_acquisition_support_v1.py": "39e20b1fe033be9d8b432ef0984f09cecaf594ce8a9b98133c940a4b599c80bd",
+    "scripts/prepare_acquisition_support_v1.py": "82f194a378996d4eebf103fa0b8d5fed85ca0e0aa3ac419f73c1733c370d918d",
+    "scripts/report_acquisition_support_v1.py": "8f062e5963e3925a1d0cde54a2cadc2cee7d41c62ff62501bf648125ba8c30b6",
+    "scripts/plot_acquisition_support_v1.py": "92ebdea967e6d0116b35ceac65e1995aa7efedc7968914f5b0815c326c665764",
+    "tests/test_acquisition_support_v1.py": "ff3fd0859cd2ca8392f96a5b361958bd3d1627e805aebc35d5f4fb80e81d220b",
+    "configs/movement_task/acquisition_support_audit_v1.json": "ba0f0a32202afbcd31f856ffd7856f18d758798708ce82b6680e33d4c78320c1",
+    "docs/protocols/acquisition_support_audit_v1_zh.md": "d815af941f57b432c7bd9e05065d776db6cba66f50d4faa022673b9b86ab34fe",
+    "docs/research/acquisition_branch_support_prior_art_v1_zh.md": "6c34348c56484cee16c7d966a16baf696731cb8b61ab92c69e929bc8968c72a1"
+  },
+  "wall_ns": 420385000
+}

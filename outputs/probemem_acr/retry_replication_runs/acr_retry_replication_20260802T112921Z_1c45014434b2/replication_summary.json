@@ -1,0 +1,54 @@
+{
+  "experiment_run_id": "acr_retry_replication_20260802T112921Z_1c45014434b2",
+  "manifest_id": "1fb27aa4238731c97cfa9ae07607ac84b6fbb5d4ddecc17ab3bdb3533329dca1",
+  "source_git_commit": "1c45014434b26f957354788a7fdaafa9bded0d0b",
+  "claim_scope": "prospective development replication of two evaluator-only feature directions; no selector",
+  "initial_units": 100,
+  "operational_cases": 36,
+  "outcome_partitions": {
+    "BOTH_RECOVER": 14,
+    "COMPENSATION_ONLY_RECOVERY": 5,
+    "NEITHER_RECOVERS": 6,
+    "RETRY_ONLY_RECOVERY": 11
+  },
+  "exclusive_recovery_cases": 16,
+  "retry_only_cases": 11,
+  "compensation_only_cases": 5,
+  "registered_endpoints": {
+    "phase_inconsistency": {
+      "registered_direction": "RETRY_ONLY_HIGHER_THAN_COMPENSATION_ONLY",
+      "rank_probability_retry_greater": 0.6727272727272727,
+      "retry_only_mean": 0.9566445610673887,
+      "compensation_only_mean": 0.9559504610118669,
+      "bootstrap_ci95": {
+        "low": 0.4,
+        "high": 0.9090909090909091
+      },
+      "passed": false
+    },
+    "probe_mean_estimation_residual": {
+      "registered_direction": "RETRY_ONLY_HIGHER_THAN_COMPENSATION_ONLY",
+      "rank_probability_retry_greater": 0.7272727272727273,
+      "retry_only_mean": 4.223069852469222e-05,
+      "compensation_only_mean": 2.8686966906904812e-05,
+      "bootstrap_ci95": {
+        "low": 0.41818181818181815,
+        "high": 0.9818181818181818
+      },
+      "passed": true
+    }
+  },
+  "integrity_and_population_checks": {
+    "operational_cases": true,
+    "retry_only_cases": true,
+    "compensation_only_cases": false,
+    "zero_chronology_violations": true,
+    "zero_oracle_leakage": true,
+    "zero_budget_violations": true
+  },
+  "replication_gate_passed": false,
+  "selector_fitting_authorized": false,
+  "validation_authorized": false,
+  "threshold_fitted": false,
+  "api_calls": 0
+}

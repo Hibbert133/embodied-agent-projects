@@ -1,0 +1,4722 @@
+{
+  "experiment_run_id": "task_passive_20261022T032948Z_67fefc4da922",
+  "manifest_id": "e11e6d48c8be94514293467826352123c2b512c1fbf34d9441ad3413be1cd0c3",
+  "source_git_commit": "67fefc4da9224e0c62b8373d0d4e8cb5b3d1bade",
+  "cohort": "DEV",
+  "executions": 720,
+  "programs": [
+    {
+      "program": "NO_PROBE",
+      "style": "NO_PROBE",
+      "time_constant_s": null,
+      "n": 36,
+      "successes": 29,
+      "loss_sum": 5924,
+      "mean_deadline_loss": 164.55555555555557,
+      "group_mean_deadline_loss": {
+        "0": 155.83333333333334,
+        "1": 81.5,
+        "2": 142.83333333333334,
+        "3": 231.16666666666666,
+        "4": 223.16666666666666,
+        "5": 152.83333333333334
+      },
+      "actual_control_steps": 5924,
+      "movement_steps": 0,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 2
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 7
+      }
+    },
+    {
+      "program": "DIRECT_C8",
+      "style": "DIRECT_C8",
+      "time_constant_s": null,
+      "n": 36,
+      "successes": 30,
+      "loss_sum": 5364,
+      "mean_deadline_loss": 149.0,
+      "group_mean_deadline_loss": {
+        "0": 218.16666666666666,
+        "1": 219.16666666666666,
+        "2": 81.16666666666667,
+        "3": 223.5,
+        "4": 80.16666666666667,
+        "5": 71.83333333333333
+      },
+      "actual_control_steps": 5364,
+      "movement_steps": 0,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 6
+      }
+    },
+    {
+      "program": "MOVE_KEEP_C8",
+      "style": "MOVE_KEEP_C8",
+      "time_constant_s": null,
+      "n": 36,
+      "successes": 30,
+      "loss_sum": 6520,
+      "mean_deadline_loss": 181.11111111111111,
+      "group_mean_deadline_loss": {
+        "0": 236.5,
+        "1": 246.83333333333334,
+        "2": 99.83333333333333,
+        "3": 240.16666666666666,
+        "4": 127.33333333333333,
+        "5": 136.0
+      },
+      "actual_control_steps": 6520,
+      "movement_steps": 967,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 6
+      }
+    },
+    {
+      "program": "MOVE_INTEGRAL",
+      "style": "MOVE_INTEGRAL",
+      "time_constant_s": null,
+      "n": 36,
+      "successes": 34,
+      "loss_sum": 5052,
+      "mean_deadline_loss": 140.33333333333334,
+      "group_mean_deadline_loss": {
+        "0": 111.66666666666667,
+        "1": 193.5,
+        "2": 101.83333333333333,
+        "3": 115.0,
+        "4": 182.83333333333334,
+        "5": 137.16666666666666
+      },
+      "actual_control_steps": 5052,
+      "movement_steps": 967,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 2
+      }
+    },
+    {
+      "program": "RAW_TASK_PI_T0.125",
+      "style": "RAW_TASK_PI",
+      "time_constant_s": 0.125,
+      "n": 36,
+      "successes": 34,
+      "loss_sum": 3475,
+      "mean_deadline_loss": 96.52777777777779,
+      "group_mean_deadline_loss": {
+        "0": 72.16666666666667,
+        "1": 68.83333333333333,
+        "2": 54.5,
+        "3": 139.0,
+        "4": 176.83333333333334,
+        "5": 67.83333333333333
+      },
+      "actual_control_steps": 3475,
+      "movement_steps": 0,
+      "task_pi_steps": 3475,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 2
+      }
+    },
+    {
+      "program": "RAW_TASK_PI_T0.5",
+      "style": "RAW_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 36,
+      "successes": 35,
+      "loss_sum": 2905,
+      "mean_deadline_loss": 80.69444444444444,
+      "group_mean_deadline_loss": {
+        "0": 135.66666666666666,
+        "1": 61.333333333333336,
+        "2": 54.833333333333336,
+        "3": 70.5,
+        "4": 101.33333333333333,
+        "5": 60.5
+      },
+      "actual_control_steps": 2905,
+      "movement_steps": 0,
+      "task_pi_steps": 2905,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 8
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 1
+      }
+    },
+    {
+      "program": "RAW_TASK_PI_T2.0",
+      "style": "RAW_TASK_PI",
+      "time_constant_s": 2.0,
+      "n": 36,
+      "successes": 34,
+      "loss_sum": 3646,
+      "mean_deadline_loss": 101.27777777777779,
+      "group_mean_deadline_loss": {
+        "0": 82.0,
+        "1": 68.16666666666667,
+        "2": 58.5,
+        "3": 185.5,
+        "4": 146.5,
+        "5": 67.0
+      },
+      "actual_control_steps": 3646,
+      "movement_steps": 0,
+      "task_pi_steps": 3646,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 2
+      }
+    },
+    {
+      "program": "RAW_TASK_PI_T8.0",
+      "style": "RAW_TASK_PI",
+      "time_constant_s": 8.0,
+      "n": 36,
+      "successes": 32,
+      "loss_sum": 5065,
+      "mean_deadline_loss": 140.69444444444443,
+      "group_mean_deadline_loss": {
+        "0": 147.0,
+        "1": 77.0,
+        "2": 61.833333333333336,
+        "3": 208.0,
+        "4": 221.16666666666666,
+        "5": 129.16666666666666
+      },
+      "actual_control_steps": 5065,
+      "movement_steps": 0,
+      "task_pi_steps": 5065,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 4
+      }
+    },
+    {
+      "program": "DIRECT_TASK_PI_T0.125",
+      "style": "DIRECT_TASK_PI",
+      "time_constant_s": 0.125,
+      "n": 36,
+      "successes": 34,
+      "loss_sum": 3999,
+      "mean_deadline_loss": 111.08333333333333,
+      "group_mean_deadline_loss": {
+        "0": 144.5,
+        "1": 75.5,
+        "2": 74.33333333333333,
+        "3": 158.5,
+        "4": 119.33333333333333,
+        "5": 94.33333333333333
+      },
+      "actual_control_steps": 3999,
+      "movement_steps": 0,
+      "task_pi_steps": 3711,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 2
+      }
+    },
+    {
+      "program": "DIRECT_TASK_PI_T0.5",
+      "style": "DIRECT_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 36,
+      "successes": 36,
+      "loss_sum": 2832,
+      "mean_deadline_loss": 78.66666666666667,
+      "group_mean_deadline_loss": {
+        "0": 78.83333333333333,
+        "1": 68.16666666666667,
+        "2": 64.0,
+        "3": 81.66666666666667,
+        "4": 101.66666666666667,
+        "5": 77.66666666666667
+      },
+      "actual_control_steps": 2832,
+      "movement_steps": 0,
+      "task_pi_steps": 2544,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {}
+    },
+    {
+      "program": "DIRECT_TASK_PI_T2.0",
+      "style": "DIRECT_TASK_PI",
+      "time_constant_s": 2.0,
+      "n": 36,
+      "successes": 35,
+      "loss_sum": 3675,
+      "mean_deadline_loss": 102.08333333333333,
+      "group_mean_deadline_loss": {
+        "0": 174.83333333333334,
+        "1": 80.66666666666667,
+        "2": 67.16666666666667,
+        "3": 137.83333333333334,
+        "4": 76.33333333333333,
+        "5": 75.66666666666667
+      },
+      "actual_control_steps": 3675,
+      "movement_steps": 0,
+      "task_pi_steps": 3387,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 1
+      }
+    },
+    {
+      "program": "DIRECT_TASK_PI_T8.0",
+      "style": "DIRECT_TASK_PI",
+      "time_constant_s": 8.0,
+      "n": 36,
+      "successes": 32,
+      "loss_sum": 4830,
+      "mean_deadline_loss": 134.16666666666666,
+      "group_mean_deadline_loss": {
+        "0": 198.33333333333334,
+        "1": 169.16666666666666,
+        "2": 65.83333333333333,
+        "3": 220.5,
+        "4": 79.33333333333333,
+        "5": 71.83333333333333
+      },
+      "actual_control_steps": 4830,
+      "movement_steps": 0,
+      "task_pi_steps": 4542,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 4
+      }
+    },
+    {
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "style": "MOVE_KEEP_TASK_PI",
+      "time_constant_s": 0.125,
+      "n": 36,
+      "successes": 34,
+      "loss_sum": 5011,
+      "mean_deadline_loss": 139.19444444444446,
+      "group_mean_deadline_loss": {
+        "0": 99.0,
+        "1": 119.0,
+        "2": 100.5,
+        "3": 239.33333333333334,
+        "4": 119.33333333333333,
+        "5": 158.0
+      },
+      "actual_control_steps": 5011,
+      "movement_steps": 967,
+      "task_pi_steps": 2772,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 2
+      }
+    },
+    {
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "style": "MOVE_KEEP_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 36,
+      "successes": 36,
+      "loss_sum": 4059,
+      "mean_deadline_loss": 112.75,
+      "group_mean_deadline_loss": {
+        "0": 100.5,
+        "1": 115.16666666666667,
+        "2": 100.16666666666667,
+        "3": 115.16666666666667,
+        "4": 111.33333333333333,
+        "5": 134.16666666666666
+      },
+      "actual_control_steps": 4059,
+      "movement_steps": 967,
+      "task_pi_steps": 1820,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {}
+    },
+    {
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "style": "MOVE_KEEP_TASK_PI",
+      "time_constant_s": 2.0,
+      "n": 36,
+      "successes": 35,
+      "loss_sum": 5032,
+      "mean_deadline_loss": 139.7777777777778,
+      "group_mean_deadline_loss": {
+        "0": 139.83333333333334,
+        "1": 180.5,
+        "2": 100.0,
+        "3": 170.5,
+        "4": 112.83333333333333,
+        "5": 135.0
+      },
+      "actual_control_steps": 5032,
+      "movement_steps": 967,
+      "task_pi_steps": 2793,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 1
+      }
+    },
+    {
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "style": "MOVE_KEEP_TASK_PI",
+      "time_constant_s": 8.0,
+      "n": 36,
+      "successes": 32,
+      "loss_sum": 6021,
+      "mean_deadline_loss": 167.25000000000003,
+      "group_mean_deadline_loss": {
+        "0": 217.0,
+        "1": 198.83333333333334,
+        "2": 99.83333333333333,
+        "3": 238.83333333333334,
+        "4": 112.66666666666667,
+        "5": 136.33333333333334
+      },
+      "actual_control_steps": 6021,
+      "movement_steps": 967,
+      "task_pi_steps": 3782,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 4
+      }
+    },
+    {
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "style": "MOVE_INTEGRAL_TASK_PI",
+      "time_constant_s": 0.125,
+      "n": 36,
+      "successes": 35,
+      "loss_sum": 4687,
+      "mean_deadline_loss": 130.19444444444443,
+      "group_mean_deadline_loss": {
+        "0": 98.5,
+        "1": 124.33333333333333,
+        "2": 100.83333333333333,
+        "3": 180.0,
+        "4": 123.0,
+        "5": 154.5
+      },
+      "actual_control_steps": 4687,
+      "movement_steps": 967,
+      "task_pi_steps": 2448,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 1
+      }
+    },
+    {
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "style": "MOVE_INTEGRAL_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 36,
+      "successes": 36,
+      "loss_sum": 4122,
+      "mean_deadline_loss": 114.49999999999999,
+      "group_mean_deadline_loss": {
+        "0": 99.5,
+        "1": 118.33333333333333,
+        "2": 100.83333333333333,
+        "3": 106.83333333333333,
+        "4": 124.33333333333333,
+        "5": 137.16666666666666
+      },
+      "actual_control_steps": 4122,
+      "movement_steps": 967,
+      "task_pi_steps": 1883,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {}
+    },
+    {
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "style": "MOVE_INTEGRAL_TASK_PI",
+      "time_constant_s": 2.0,
+      "n": 36,
+      "successes": 36,
+      "loss_sum": 4118,
+      "mean_deadline_loss": 114.3888888888889,
+      "group_mean_deadline_loss": {
+        "0": 104.16666666666667,
+        "1": 119.66666666666667,
+        "2": 100.83333333333333,
+        "3": 110.16666666666667,
+        "4": 115.83333333333333,
+        "5": 135.66666666666666
+      },
+      "actual_control_steps": 4118,
+      "movement_steps": 967,
+      "task_pi_steps": 1879,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {}
+    },
+    {
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "style": "MOVE_INTEGRAL_TASK_PI",
+      "time_constant_s": 8.0,
+      "n": 36,
+      "successes": 36,
+      "loss_sum": 4289,
+      "mean_deadline_loss": 119.1388888888889,
+      "group_mean_deadline_loss": {
+        "0": 111.33333333333333,
+        "1": 129.66666666666666,
+        "2": 101.33333333333333,
+        "3": 113.0,
+        "4": 123.16666666666667,
+        "5": 136.33333333333334
+      },
+      "actual_control_steps": 4289,
+      "movement_steps": 967,
+      "task_pi_steps": 2050,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {}
+    }
+  ],
+  "primary_program": "DIRECT_TASK_PI_T0.5",
+  "primary_comparisons": {
+    "DIRECT_TASK_PI_T0.5_MINUS_DIRECT_C8": {
+      "mean": -70.33333333333333,
+      "lower95": -102.91666666666664,
+      "upper95": -37.74999999999999,
+      "groups": 6,
+      "replicates": 10000,
+      "seed": 202610390,
+      "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+      "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+    },
+    "DIRECT_TASK_PI_T0.5_MINUS_MOVE_INTEGRAL": {
+      "mean": -61.666666666666664,
+      "lower95": -72.63888888888889,
+      "upper95": -50.694444444444436,
+      "groups": 6,
+      "replicates": 10000,
+      "seed": 202610390,
+      "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+      "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+    }
+  },
+  "all_paired_secondary_comparisons": [
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_C8",
+      "loss_difference": {
+        "mean": 15.555555555555559,
+        "lower95": -42.888888888888864,
+        "upper95": 74.0,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_C8",
+      "loss_difference": {
+        "mean": -16.555555555555554,
+        "lower95": -72.02777777777777,
+        "upper95": 38.91666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL",
+      "loss_difference": {
+        "mean": 24.222222222222225,
+        "lower95": -13.166666666666659,
+        "upper95": 61.61111111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "RAW_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 68.02777777777779,
+        "lower95": 61.0,
+        "upper95": 75.05555555555554,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 83.8611111111111,
+        "lower95": 43.5,
+        "upper95": 124.22222222222223,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "RAW_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 63.27777777777777,
+        "lower95": 48.02777777777777,
+        "upper95": 78.52777777777779,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 23.861111111111114,
+        "lower95": 11.916666666666677,
+        "upper95": 35.80555555555555,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 53.47222222222222,
+        "lower95": 26.944444444444454,
+        "upper95": 79.99999999999999,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 85.8888888888889,
+        "lower95": 55.77777777777778,
+        "upper95": 116.0,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 62.47222222222222,
+        "lower95": 19.416666666666668,
+        "upper95": 105.52777777777776,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 30.38888888888889,
+        "lower95": -17.05555555555555,
+        "upper95": 77.83333333333333,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 25.36111111111111,
+        "lower95": -9.02777777777778,
+        "upper95": 59.75,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 51.80555555555555,
+        "lower95": 17.44444444444445,
+        "upper95": 86.16666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 24.777777777777775,
+        "lower95": -17.555555555555554,
+        "upper95": 67.1111111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -2.69444444444445,
+        "lower95": -49.583333333333336,
+        "upper95": 44.194444444444436,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 34.361111111111114,
+        "lower95": 3.250000000000005,
+        "upper95": 65.47222222222221,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 50.055555555555564,
+        "lower95": 16.11111111111112,
+        "upper95": 84.0,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 50.166666666666664,
+        "lower95": 14.361111111111116,
+        "upper95": 85.97222222222223,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 36
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 45.416666666666664,
+        "lower95": 8.444444444444455,
+        "upper95": 82.38888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_C8",
+      "loss_difference": {
+        "mean": -32.111111111111114,
+        "lower95": -42.94444444444445,
+        "upper95": -21.277777777777782,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL",
+      "loss_difference": {
+        "mean": 8.666666666666663,
+        "lower95": -20.166666666666668,
+        "upper95": 37.5,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "RAW_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 52.47222222222222,
+        "lower95": 1.0555555555555547,
+        "upper95": 103.88888888888887,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 68.30555555555556,
+        "lower95": 26.722222222222225,
+        "upper95": 109.8888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "RAW_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 47.72222222222222,
+        "lower95": -4.86111111111111,
+        "upper95": 100.30555555555554,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 8.305555555555555,
+        "lower95": -51.666666666666664,
+        "upper95": 68.27777777777777,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 37.916666666666664,
+        "lower95": 2.555555555555557,
+        "upper95": 73.27777777777779,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 70.33333333333333,
+        "lower95": 37.74999999999999,
+        "upper95": 102.91666666666664,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 46.916666666666664,
+        "lower95": 17.41666666666666,
+        "upper95": 76.41666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 14.833333333333334,
+        "lower95": 3.833333333333338,
+        "upper95": 25.83333333333333,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 9.805555555555555,
+        "lower95": -35.916666666666664,
+        "upper95": 55.52777777777777,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 36.24999999999999,
+        "lower95": 6.500000000000004,
+        "upper95": 66.0,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 9.222222222222216,
+        "lower95": -10.055555555555557,
+        "upper95": 28.5,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -18.250000000000007,
+        "lower95": -34.69444444444445,
+        "upper95": -1.8055555555555618,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 18.805555555555554,
+        "lower95": -16.833333333333332,
+        "upper95": 54.444444444444436,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 34.50000000000001,
+        "lower95": 2.7222222222222237,
+        "upper95": 66.27777777777777,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 34.611111111111114,
+        "lower95": 4.722222222222224,
+        "upper95": 64.5,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 29.861111111111104,
+        "lower95": 0.388888888888881,
+        "upper95": 59.333333333333336,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL",
+      "loss_difference": {
+        "mean": 40.777777777777786,
+        "lower95": 22.5,
+        "upper95": 59.05555555555558,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "RAW_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 84.58333333333333,
+        "lower95": 36.138888888888886,
+        "upper95": 133.02777777777777,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 100.41666666666667,
+        "lower95": 62.361111111111114,
+        "upper95": 138.4722222222222,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "RAW_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 79.83333333333333,
+        "lower95": 30.222222222222218,
+        "upper95": 129.44444444444446,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 40.41666666666667,
+        "lower95": -13.083333333333334,
+        "upper95": 93.91666666666669,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 70.02777777777779,
+        "lower95": 40.11111111111111,
+        "upper95": 99.94444444444444,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 102.44444444444446,
+        "lower95": 73.19444444444444,
+        "upper95": 131.69444444444446,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 79.02777777777777,
+        "lower95": 53.05555555555554,
+        "upper95": 105.0,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 46.94444444444445,
+        "lower95": 36.97222222222222,
+        "upper95": 56.91666666666668,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 41.916666666666664,
+        "lower95": -0.8333333333333405,
+        "upper95": 84.66666666666669,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 68.36111111111113,
+        "lower95": 47.25,
+        "upper95": 89.47222222222223,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 41.33333333333333,
+        "lower95": 28.19444444444444,
+        "upper95": 54.47222222222222,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 13.861111111111105,
+        "lower95": 5.277777777777767,
+        "upper95": 22.444444444444443,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 50.91666666666666,
+        "lower95": 18.249999999999996,
+        "upper95": 83.58333333333333,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 66.6111111111111,
+        "lower95": 45.083333333333336,
+        "upper95": 88.1388888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 66.72222222222223,
+        "lower95": 47.055555555555564,
+        "upper95": 86.3888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 61.97222222222221,
+        "lower95": 42.80555555555554,
+        "upper95": 81.1388888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -6,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "RAW_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 43.80555555555555,
+        "lower95": 13.444444444444443,
+        "upper95": 74.16666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 59.63888888888889,
+        "lower95": 39.777777777777786,
+        "upper95": 79.5,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "RAW_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 39.05555555555555,
+        "lower95": 7.527777777777779,
+        "upper95": 70.58333333333333,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -0.36111111111110955,
+        "lower95": -35.77777777777777,
+        "upper95": 35.05555555555556,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 29.25,
+        "lower95": 17.611111111111118,
+        "upper95": 40.888888888888886,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 61.666666666666664,
+        "lower95": 50.694444444444436,
+        "upper95": 72.63888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 38.25,
+        "lower95": 27.055555555555554,
+        "upper95": 49.444444444444436,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 6.166666666666671,
+        "lower95": -11.916666666666666,
+        "upper95": 24.25,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 1.1388888888888882,
+        "lower95": -25.388888888888896,
+        "upper95": 27.666666666666668,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 27.583333333333332,
+        "lower95": 24.555555555555557,
+        "upper95": 30.61111111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 0.5555555555555548,
+        "lower95": -13.500000000000002,
+        "upper95": 14.611111111111112,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -26.916666666666668,
+        "lower95": -42.58333333333334,
+        "upper95": -11.250000000000002,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 10.138888888888891,
+        "lower95": -5.9444444444444455,
+        "upper95": 26.22222222222223,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 25.83333333333334,
+        "lower95": 22.388888888888896,
+        "upper95": 29.277777777777782,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 25.944444444444446,
+        "lower95": 24.361111111111114,
+        "upper95": 27.527777777777775,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 21.194444444444446,
+        "lower95": 20.222222222222225,
+        "upper95": 22.166666666666668,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 15.833333333333336,
+        "lower95": -17.499999999999996,
+        "upper95": 49.166666666666664,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "RAW_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -4.75,
+        "lower95": -15.805555555555559,
+        "upper95": 6.30555555555556,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -44.166666666666664,
+        "lower95": -59.19444444444443,
+        "upper95": -29.138888888888896,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -14.555555555555552,
+        "lower95": -34.05555555555555,
+        "upper95": 4.94444444444445,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 17.86111111111111,
+        "lower95": -5.222222222222224,
+        "upper95": 40.94444444444444,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -5.55555555555556,
+        "lower95": -41.58333333333334,
+        "upper95": 30.472222222222225,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -37.638888888888886,
+        "lower95": -78.05555555555556,
+        "upper95": 2.7777777777777835,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -42.666666666666664,
+        "lower95": -72.86111111111113,
+        "upper95": -12.472222222222216,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -16.22222222222222,
+        "lower95": -43.555555555555564,
+        "upper95": 11.111111111111114,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -43.25000000000001,
+        "lower95": -78.55555555555556,
+        "upper95": -7.94444444444444,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -70.72222222222221,
+        "lower95": -110.58333333333333,
+        "upper95": -30.861111111111114,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -33.666666666666664,
+        "lower95": -58.611111111111114,
+        "upper95": -8.722222222222216,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -17.972222222222218,
+        "lower95": -44.888888888888886,
+        "upper95": 8.944444444444452,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -17.86111111111111,
+        "lower95": -46.638888888888886,
+        "upper95": 10.916666666666673,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -22.61111111111111,
+        "lower95": -52.55555555555554,
+        "upper95": 7.333333333333333,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "RAW_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -20.583333333333336,
+        "lower95": -55.08333333333334,
+        "upper95": 13.916666666666663,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -60.0,
+        "lower95": -98.38888888888887,
+        "upper95": -21.611111111111114,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -30.388888888888886,
+        "lower95": -45.97222222222222,
+        "upper95": -14.805555555555557,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 2.0277777777777737,
+        "lower95": -10.638888888888895,
+        "upper95": 14.694444444444443,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -21.388888888888896,
+        "lower95": -33.472222222222236,
+        "upper95": -9.305555555555562,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -53.47222222222222,
+        "lower95": -89.66666666666667,
+        "upper95": -17.277777777777782,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -58.5,
+        "lower95": -101.3888888888889,
+        "upper95": -15.611111111111114,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -32.05555555555556,
+        "lower95": -52.666666666666664,
+        "upper95": -11.444444444444448,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -59.083333333333336,
+        "lower95": -93.0,
+        "upper95": -25.16666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -86.55555555555556,
+        "lower95": -122.08333333333336,
+        "upper95": -51.02777777777779,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -49.5,
+        "lower95": -81.94444444444444,
+        "upper95": -17.055555555555557,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -33.80555555555555,
+        "lower95": -51.55555555555555,
+        "upper95": -16.055555555555557,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -33.69444444444445,
+        "lower95": -52.861111111111114,
+        "upper95": -14.52777777777778,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -38.44444444444444,
+        "lower95": -57.333333333333336,
+        "upper95": -19.55555555555556,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "RAW_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -39.416666666666664,
+        "lower95": -60.194444444444436,
+        "upper95": -18.63888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -9.805555555555552,
+        "lower95": -30.47222222222221,
+        "upper95": 10.861111111111114,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 22.611111111111104,
+        "lower95": -1.6388888888888882,
+        "upper95": 46.86111111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -0.8055555555555595,
+        "lower95": -38.00000000000001,
+        "upper95": 36.388888888888886,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -32.88888888888888,
+        "lower95": -74.47222222222221,
+        "upper95": 8.694444444444448,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -37.916666666666664,
+        "lower95": -59.083333333333336,
+        "upper95": -16.75,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -11.472222222222221,
+        "lower95": -39.97222222222222,
+        "upper95": 17.02777777777778,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -38.5,
+        "lower95": -74.97222222222221,
+        "upper95": -2.0277777777777763,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -65.97222222222223,
+        "lower95": -107.00000000000001,
+        "upper95": -24.944444444444446,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -28.916666666666668,
+        "lower95": -49.72222222222222,
+        "upper95": -8.111111111111109,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -13.222222222222216,
+        "lower95": -41.30555555555555,
+        "upper95": 14.86111111111112,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -13.111111111111109,
+        "lower95": -43.055555555555564,
+        "upper95": 16.83333333333334,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -17.861111111111107,
+        "lower95": -48.97222222222222,
+        "upper95": 13.249999999999995,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "DIRECT_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 29.611111111111114,
+        "lower95": 5.000000000000003,
+        "upper95": 54.22222222222221,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 62.02777777777778,
+        "lower95": 33.888888888888886,
+        "upper95": 90.16666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 38.61111111111111,
+        "lower95": -2.4722222222222308,
+        "upper95": 79.69444444444444,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 6.527777777777774,
+        "lower95": -42.694444444444436,
+        "upper95": 55.74999999999999,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 1.4999999999999976,
+        "lower95": -35.69444444444445,
+        "upper95": 38.694444444444436,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 27.944444444444443,
+        "lower95": -4.444444444444446,
+        "upper95": 60.333333333333336,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 0.9166666666666643,
+        "lower95": -39.77777777777778,
+        "upper95": 41.61111111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -26.55555555555556,
+        "lower95": -71.47222222222224,
+        "upper95": 18.3611111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 10.5,
+        "lower95": -17.166666666666668,
+        "upper95": 38.166666666666664,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 26.194444444444446,
+        "lower95": -5.777777777777775,
+        "upper95": 58.166666666666664,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 26.305555555555554,
+        "lower95": -7.5277777777777795,
+        "upper95": 60.138888888888886,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "RAW_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 21.555555555555554,
+        "lower95": -13.444444444444443,
+        "upper95": 56.55555555555555,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 32.416666666666664,
+        "lower95": 28.83333333333333,
+        "upper95": 35.99999999999999,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 8.999999999999993,
+        "lower95": -7.527777777777786,
+        "upper95": 25.52777777777777,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -23.083333333333332,
+        "lower95": -47.694444444444436,
+        "upper95": 1.5277777777777761,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -28.111111111111114,
+        "lower95": -56.41666666666668,
+        "upper95": 0.19444444444444287,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -1.666666666666669,
+        "lower95": -11.944444444444445,
+        "upper95": 8.611111111111107,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -28.694444444444446,
+        "lower95": -50.055555555555564,
+        "upper95": -7.333333333333338,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -56.166666666666664,
+        "lower95": -80.58333333333333,
+        "upper95": -31.750000000000004,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -19.11111111111111,
+        "lower95": -37.888888888888886,
+        "upper95": -0.3333333333333357,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -3.4166666666666643,
+        "lower95": -12.444444444444441,
+        "upper95": 5.611111111111112,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -3.305555555555557,
+        "lower95": -13.722222222222223,
+        "upper95": 7.11111111111111,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -8.055555555555557,
+        "lower95": -18.944444444444446,
+        "upper95": 2.833333333333331,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -23.41666666666667,
+        "lower95": -36.361111111111114,
+        "upper95": -10.472222222222221,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -55.49999999999998,
+        "lower95": -79.27777777777777,
+        "upper95": -31.722222222222218,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -60.52777777777778,
+        "lower95": -90.75,
+        "upper95": -30.305555555555554,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -34.083333333333336,
+        "lower95": -43.69444444444445,
+        "upper95": -24.472222222222218,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -61.111111111111114,
+        "lower95": -82.6111111111111,
+        "upper95": -39.611111111111114,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -88.58333333333333,
+        "lower95": -112.33333333333333,
+        "upper95": -64.83333333333333,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -51.52777777777777,
+        "lower95": -71.30555555555554,
+        "upper95": -31.75,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -35.83333333333332,
+        "lower95": -44.194444444444436,
+        "upper95": -27.472222222222218,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -35.72222222222222,
+        "lower95": -45.47222222222222,
+        "upper95": -25.972222222222218,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -40.47222222222222,
+        "lower95": -50.69444444444445,
+        "upper95": -30.25,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "DIRECT_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -32.08333333333333,
+        "lower95": -56.194444444444436,
+        "upper95": -7.972222222222219,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -37.11111111111111,
+        "lower95": -74.83333333333333,
+        "upper95": 0.6111111111111166,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -10.666666666666663,
+        "lower95": -23.52777777777777,
+        "upper95": 2.1944444444444478,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -37.694444444444436,
+        "lower95": -59.527777777777764,
+        "upper95": -15.861111111111109,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -65.16666666666667,
+        "lower95": -88.61111111111113,
+        "upper95": -41.72222222222222,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -28.111111111111104,
+        "lower95": -55.388888888888886,
+        "upper95": -0.8333333333333263,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -12.416666666666657,
+        "lower95": -24.444444444444432,
+        "upper95": -0.388888888888881,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -12.30555555555555,
+        "lower95": -23.861111111111104,
+        "upper95": -0.7499999999999952,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -17.05555555555555,
+        "lower95": -27.916666666666668,
+        "upper95": -6.194444444444436,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -5.027777777777781,
+        "lower95": -39.75000000000001,
+        "upper95": 29.69444444444444,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 21.416666666666668,
+        "lower95": 2.4166666666666714,
+        "upper95": 40.41666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -5.611111111111114,
+        "lower95": -14.138888888888891,
+        "upper95": 2.916666666666662,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -33.08333333333334,
+        "lower95": -38.77777777777778,
+        "upper95": -27.388888888888896,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 3.9722222222222237,
+        "lower95": -20.666666666666668,
+        "upper95": 28.611111111111104,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 19.666666666666675,
+        "lower95": -1.3611111111111096,
+        "upper95": 40.694444444444436,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 19.77777777777778,
+        "lower95": 0.6388888888888905,
+        "upper95": 38.916666666666664,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "DIRECT_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 15.027777777777773,
+        "lower95": -3.694444444444452,
+        "upper95": 33.75,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 26.444444444444443,
+        "lower95": 1.583333333333331,
+        "upper95": 51.305555555555564,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -0.5833333333333334,
+        "lower95": -30.194444444444446,
+        "upper95": 29.027777777777782,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -28.05555555555556,
+        "lower95": -62.222222222222236,
+        "upper95": 6.111111111111107,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 9.000000000000002,
+        "lower95": -1.4444444444444429,
+        "upper95": 19.444444444444446,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 24.694444444444446,
+        "lower95": -0.9999999999999977,
+        "upper95": 50.38888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 24.80555555555556,
+        "lower95": -1.3611111111111118,
+        "upper95": 50.97222222222223,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 20.055555555555557,
+        "lower95": -6.805555555555553,
+        "upper95": 46.916666666666664,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -2,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -27.027777777777775,
+        "lower95": -40.333333333333336,
+        "upper95": -13.722222222222227,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -54.50000000000001,
+        "lower95": -69.41666666666667,
+        "upper95": -39.583333333333336,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": -17.444444444444443,
+        "lower95": -31.861111111111114,
+        "upper95": -3.0277777777777737,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -1.7499999999999953,
+        "lower95": -4.61111111111111,
+        "upper95": 1.111111111111119,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -1.6388888888888882,
+        "lower95": -3.2222222222222237,
+        "upper95": -0.055555555555552395,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -6.388888888888888,
+        "lower95": -8.999999999999995,
+        "upper95": -3.777777777777781,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T2.0",
+      "right": "MOVE_KEEP_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -27.47222222222223,
+        "lower95": -32.02777777777778,
+        "upper95": -22.91666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 9.583333333333336,
+        "lower95": -9.944444444444445,
+        "upper95": 29.111111111111125,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 25.277777777777786,
+        "lower95": 9.111111111111116,
+        "upper95": 41.44444444444445,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 25.38888888888889,
+        "lower95": 10.638888888888893,
+        "upper95": 40.13888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 20.63888888888889,
+        "lower95": 5.611111111111112,
+        "upper95": 35.66666666666667,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "loss_difference": {
+        "mean": 37.05555555555556,
+        "lower95": 12.972222222222229,
+        "upper95": 61.13888888888889,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -3,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 52.75000000000001,
+        "lower95": 34.97222222222223,
+        "upper95": 70.52777777777779,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 52.861111111111114,
+        "lower95": 36.50000000000001,
+        "upper95": 69.22222222222224,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T8.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 48.11111111111112,
+        "lower95": 31.472222222222225,
+        "upper95": 64.75000000000001,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -4,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 15.694444444444448,
+        "lower95": 0.44444444444444525,
+        "upper95": 30.944444444444446,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 15.805555555555555,
+        "lower95": 0.08333333333333097,
+        "upper95": 31.527777777777782,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": 11.055555555555555,
+        "lower95": -5.36111111111111,
+        "upper95": 27.472222222222218,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 0.11111111111110716,
+        "lower95": -1.7777777777777832,
+        "upper95": 1.9999999999999976,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -4.638888888888893,
+        "lower95": -7.666666666666667,
+        "upper95": -1.611111111111119,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    },
+    {
+      "left": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "right": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "loss_difference": {
+        "mean": -4.75,
+        "lower95": -5.916666666666662,
+        "upper95": -3.583333333333338,
+        "groups": 6,
+        "replicates": 10000,
+        "seed": 202610390,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 36
+    }
+  ],
+  "complete_task_context_cells": [
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "NO_PROBE",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 282.5,
+      "actual_control_steps": 1695
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 70.16666666666667,
+      "actual_control_steps": 421
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 109.16666666666667,
+      "actual_control_steps": 655
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 110.0,
+      "actual_control_steps": 660
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 4,
+      "mean_deadline_loss": 222.66666666666666,
+      "actual_control_steps": 1336
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 170.0,
+      "actual_control_steps": 1020
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 152.66666666666666,
+      "actual_control_steps": 916
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 282.3333333333333,
+      "actual_control_steps": 1694
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 4,
+      "mean_deadline_loss": 262.8333333333333,
+      "actual_control_steps": 1577
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 79.83333333333333,
+      "actual_control_steps": 479
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 70.83333333333333,
+      "actual_control_steps": 425
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 69.66666666666667,
+      "actual_control_steps": 418
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 186.83333333333334,
+      "actual_control_steps": 1121
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 106.0,
+      "actual_control_steps": 636
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 107.0,
+      "actual_control_steps": 642
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 109.33333333333333,
+      "actual_control_steps": 656
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 176.5,
+      "actual_control_steps": 1059
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 108.5,
+      "actual_control_steps": 651
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 108.5,
+      "actual_control_steps": 651
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 109.66666666666667,
+      "actual_control_steps": 658
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "NO_PROBE",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 136.33333333333334,
+      "actual_control_steps": 818
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_C8",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 286.0,
+      "actual_control_steps": 1716
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 305.5,
+      "actual_control_steps": 1833
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 114.33333333333333,
+      "actual_control_steps": 686
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 104.66666666666667,
+      "actual_control_steps": 628
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 69.0,
+      "actual_control_steps": 414
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 138.83333333333334,
+      "actual_control_steps": 833
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 136.33333333333334,
+      "actual_control_steps": 818
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 130.16666666666666,
+      "actual_control_steps": 781
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 88.16666666666667,
+      "actual_control_steps": 529
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 167.66666666666666,
+      "actual_control_steps": 1006
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 285.5,
+      "actual_control_steps": 1713
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 190.5,
+      "actual_control_steps": 1143
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 121.66666666666667,
+      "actual_control_steps": 730
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 198.5,
+      "actual_control_steps": 1191
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 305.3333333333333,
+      "actual_control_steps": 1832
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 137.16666666666666,
+      "actual_control_steps": 823
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 114.0,
+      "actual_control_steps": 684
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 113.16666666666667,
+      "actual_control_steps": 679
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 113.5,
+      "actual_control_steps": 681
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "NO_PROBE",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 182.83333333333334,
+      "actual_control_steps": 1097
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 54.833333333333336,
+      "actual_control_steps": 329
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 67.66666666666667,
+      "actual_control_steps": 406
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 75.83333333333333,
+      "actual_control_steps": 455
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 44.666666666666664,
+      "actual_control_steps": 268
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 37.833333333333336,
+      "actual_control_steps": 227
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 54.666666666666664,
+      "actual_control_steps": 328
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 77.66666666666667,
+      "actual_control_steps": 466
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 41.333333333333336,
+      "actual_control_steps": 248
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 45.166666666666664,
+      "actual_control_steps": 271
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 50.666666666666664,
+      "actual_control_steps": 304
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 53.333333333333336,
+      "actual_control_steps": 320
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 61.166666666666664,
+      "actual_control_steps": 367
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 63.333333333333336,
+      "actual_control_steps": 380
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 66.0,
+      "actual_control_steps": 396
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 67.16666666666667,
+      "actual_control_steps": 403
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 61.5,
+      "actual_control_steps": 369
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 64.5,
+      "actual_control_steps": 387
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 70.16666666666667,
+      "actual_control_steps": 421
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 74.0,
+      "actual_control_steps": 444
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "NO_PROBE",
+      "n": 6,
+      "successes": 4,
+      "mean_deadline_loss": 217.0,
+      "actual_control_steps": 1302
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_C8",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 279.5,
+      "actual_control_steps": 1677
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 6,
+      "successes": 3,
+      "mean_deadline_loss": 289.3333333333333,
+      "actual_control_steps": 1736
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 6,
+      "successes": 4,
+      "mean_deadline_loss": 225.16666666666666,
+      "actual_control_steps": 1351
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 36.333333333333336,
+      "actual_control_steps": 218
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 38.5,
+      "actual_control_steps": 231
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 93.0,
+      "actual_control_steps": 558
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 179.16666666666666,
+      "actual_control_steps": 1075
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 42.666666666666664,
+      "actual_control_steps": 256
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 75.16666666666667,
+      "actual_control_steps": 451
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 137.66666666666666,
+      "actual_control_steps": 826
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 208.33333333333334,
+      "actual_control_steps": 1250
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 67.83333333333333,
+      "actual_control_steps": 407
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 73.66666666666667,
+      "actual_control_steps": 442
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 157.66666666666666,
+      "actual_control_steps": 946
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 5,
+      "mean_deadline_loss": 214.66666666666666,
+      "actual_control_steps": 1288
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 68.16666666666667,
+      "actual_control_steps": 409
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 72.66666666666667,
+      "actual_control_steps": 436
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 82.66666666666667,
+      "actual_control_steps": 496
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 106.0,
+      "actual_control_steps": 636
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "NO_PROBE",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 85.83333333333333,
+      "actual_control_steps": 515
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 98.5,
+      "actual_control_steps": 591
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 146.66666666666666,
+      "actual_control_steps": 880
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 155.16666666666666,
+      "actual_control_steps": 931
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 86.66666666666667,
+      "actual_control_steps": 520
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 85.5,
+      "actual_control_steps": 513
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 85.66666666666667,
+      "actual_control_steps": 514
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 85.66666666666667,
+      "actual_control_steps": 514
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 94.83333333333333,
+      "actual_control_steps": 569
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 92.16666666666667,
+      "actual_control_steps": 553
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 93.33333333333333,
+      "actual_control_steps": 560
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 94.5,
+      "actual_control_steps": 567
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 155.33333333333334,
+      "actual_control_steps": 932
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 149.16666666666666,
+      "actual_control_steps": 895
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 148.66666666666666,
+      "actual_control_steps": 892
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 147.33333333333334,
+      "actual_control_steps": 884
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 157.83333333333334,
+      "actual_control_steps": 947
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 151.16666666666666,
+      "actual_control_steps": 907
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 150.0,
+      "actual_control_steps": 900
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 149.83333333333334,
+      "actual_control_steps": 899
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "NO_PROBE",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 82.83333333333333,
+      "actual_control_steps": 497
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 105.0,
+      "actual_control_steps": 630
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 168.33333333333334,
+      "actual_control_steps": 1010
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 161.5,
+      "actual_control_steps": 969
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 84.16666666666667,
+      "actual_control_steps": 505
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 83.33333333333333,
+      "actual_control_steps": 500
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 82.83333333333333,
+      "actual_control_steps": 497
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 83.0,
+      "actual_control_steps": 498
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 94.66666666666667,
+      "actual_control_steps": 568
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 91.5,
+      "actual_control_steps": 549
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 92.33333333333333,
+      "actual_control_steps": 554
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 93.66666666666667,
+      "actual_control_steps": 562
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 173.5,
+      "actual_control_steps": 1041
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 162.66666666666666,
+      "actual_control_steps": 976
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 160.83333333333334,
+      "actual_control_steps": 965
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 159.66666666666666,
+      "actual_control_steps": 958
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 180.0,
+      "actual_control_steps": 1080
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 176.16666666666666,
+      "actual_control_steps": 1057
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 161.83333333333334,
+      "actual_control_steps": 971
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+      "n": 6,
+      "successes": 6,
+      "mean_deadline_loss": 161.83333333333334,
+      "actual_control_steps": 971
+    }
+  ],
+  "all_failure_case_ids": [
+    "DEV/00/push-v3/UNCHANGED/NO_PROBE",
+    "DEV/00/push-v3/UNCHANGED/RAW_TASK_PI_T0.5",
+    "DEV/00/push-v3/UNCHANGED/RAW_TASK_PI_T8.0",
+    "DEV/00/push-v3/UNCHANGED/DIRECT_TASK_PI_T0.125",
+    "DEV/00/push-v3/CHANGED/DIRECT_C8",
+    "DEV/00/push-v3/CHANGED/MOVE_KEEP_C8",
+    "DEV/00/push-v3/CHANGED/DIRECT_TASK_PI_T2.0",
+    "DEV/00/push-v3/CHANGED/DIRECT_TASK_PI_T8.0",
+    "DEV/00/push-v3/CHANGED/MOVE_KEEP_TASK_PI_T8.0",
+    "DEV/00/reach-v3/CHANGED/DIRECT_C8",
+    "DEV/00/reach-v3/CHANGED/MOVE_KEEP_C8",
+    "DEV/01/push-v3/CHANGED/DIRECT_C8",
+    "DEV/01/push-v3/CHANGED/MOVE_KEEP_C8",
+    "DEV/01/push-v3/CHANGED/DIRECT_TASK_PI_T8.0",
+    "DEV/01/push-v3/CHANGED/MOVE_KEEP_TASK_PI_T2.0",
+    "DEV/01/push-v3/CHANGED/MOVE_KEEP_TASK_PI_T8.0",
+    "DEV/01/reach-v3/CHANGED/DIRECT_C8",
+    "DEV/01/reach-v3/CHANGED/MOVE_KEEP_C8",
+    "DEV/01/reach-v3/CHANGED/MOVE_INTEGRAL",
+    "DEV/02/reach-v3/UNCHANGED/NO_PROBE",
+    "DEV/03/push-v3/UNCHANGED/NO_PROBE",
+    "DEV/03/push-v3/UNCHANGED/RAW_TASK_PI_T0.125",
+    "DEV/03/push-v3/UNCHANGED/RAW_TASK_PI_T2.0",
+    "DEV/03/push-v3/UNCHANGED/RAW_TASK_PI_T8.0",
+    "DEV/03/push-v3/UNCHANGED/DIRECT_TASK_PI_T0.125",
+    "DEV/03/push-v3/UNCHANGED/MOVE_KEEP_TASK_PI_T0.125",
+    "DEV/03/push-v3/UNCHANGED/MOVE_INTEGRAL_TASK_PI_T0.125",
+    "DEV/03/push-v3/CHANGED/DIRECT_C8",
+    "DEV/03/push-v3/CHANGED/MOVE_KEEP_C8",
+    "DEV/03/push-v3/CHANGED/DIRECT_TASK_PI_T8.0",
+    "DEV/03/push-v3/CHANGED/MOVE_KEEP_TASK_PI_T0.125",
+    "DEV/03/push-v3/CHANGED/MOVE_KEEP_TASK_PI_T8.0",
+    "DEV/03/reach-v3/CHANGED/NO_PROBE",
+    "DEV/03/reach-v3/CHANGED/DIRECT_C8",
+    "DEV/03/reach-v3/CHANGED/MOVE_KEEP_C8",
+    "DEV/03/reach-v3/CHANGED/DIRECT_TASK_PI_T8.0",
+    "DEV/03/reach-v3/CHANGED/MOVE_KEEP_TASK_PI_T8.0",
+    "DEV/04/push-v3/UNCHANGED/NO_PROBE",
+    "DEV/04/push-v3/UNCHANGED/RAW_TASK_PI_T0.125",
+    "DEV/04/push-v3/UNCHANGED/RAW_TASK_PI_T8.0",
+    "DEV/04/push-v3/CHANGED/NO_PROBE",
+    "DEV/04/push-v3/CHANGED/RAW_TASK_PI_T2.0",
+    "DEV/04/push-v3/CHANGED/RAW_TASK_PI_T8.0",
+    "DEV/04/reach-v3/CHANGED/MOVE_INTEGRAL",
+    "DEV/05/reach-v3/CHANGED/NO_PROBE"
+  ],
+  "qualification_gate": "DEVELOPMENT_SELECTION_ONLY",
+  "no_safety_guarantee": true,
+  "no_algorithmic_novelty_claim": true,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "audit_sha256": "f1f0819f459a7453eefbfbcb7ea333eceb41577e577f14d954e4a934d2a1642f",
+  "selection_sha256": "62a78458eff2ac33395168f90c60365297ac9fe2a9d31420e52cdfb331ddcffd",
+  "statistics_source_sha256": "0d21d5215a3589fe5a9b13ee5626f378537a3eec551768c67769550129832dca"
+}

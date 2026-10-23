@@ -1,0 +1,45 @@
+{
+  "run_id": "relative_evidence_20261015T130002Z_10fb84282ecb",
+  "source_git_commit": "10fb84282ecbc45d1770795af42f30bdff59c438",
+  "config": {
+    "protocol_id": "relative_update_evidence_mathematical_qualification_v1",
+    "scenarios": [
+      "STATIC_NULL",
+      "DRIFT_NULL",
+      "SMALL_GAIN",
+      "STRONG_GAIN",
+      "EFFECT_FLIP"
+    ],
+    "replicates": 256,
+    "horizon": 64,
+    "checkpoints": [
+      8,
+      16,
+      32,
+      64
+    ],
+    "alpha": 0.05,
+    "rho": 4.0,
+    "assignment_seed_base": 700001,
+    "noise_seed_base": 900001,
+    "seed_scenario_stride": 10000,
+    "counterexample_seed": 1100001,
+    "new_environment_steps": 0,
+    "api_calls": 0,
+    "controller_fits": 0,
+    "output_root": "outputs/relative_update_evidence/qualification_v1"
+  },
+  "input_sha256": {
+    "src/probe/relative_effects.py": "e713703f364215d3732edbec70804ddd2790b1b73e865bd5b9da4afdd4160565",
+    "tests/test_relative_effects.py": "f0c7583538f04b78cfa92c98fc27ed2f2733f6d0bc2087b634da8f2c88ed6bf3",
+    "scripts/qualify_relative_update_evidence.py": "ce4258e2a3d3a008f167c25a2f2277b310835943dc1c816c5778ba233e024eec",
+    "scripts/audit_relative_update_evidence.py": "8ada854d4482061767c109ea0c65b0c8fdd7c32e73ab1475bbf69d20d7921ce6",
+    "configs/relative_update_evidence/qualification_v1.json": "0a792b72ac8968d3bf1d3a1fe0b8d770c0154b4d96fae70fd8212f3e05001124",
+    "docs/research/relative_update_evidence_v1.md": "63c4119ab1adf214eabde2ebf6bb7db3b6698b455f9d57c1d25deca66dd5624d",
+    "docs/protocols/relative_update_evidence_qualification_v1.md": "5d76314094bf4ea710779ed1eb3c4db5c0b68097a75799821ea2d6275c261497",
+    "AGENTS.md": "885135259a9637936c7da6475d4c7c8c82116125e4ca4f0f978cb2568c699c79",
+    ".gitattributes": "1d65ce7f581d24f9457d3a2903539263cbebecf460a619cbbf7a047144949859"
+  },
+  "python": "3.10.11",
+  "manifest_id": "d51ecc44d5250f917be59077e3201570f0ff27c1b3a09339c4d9842eb921a234"
+}

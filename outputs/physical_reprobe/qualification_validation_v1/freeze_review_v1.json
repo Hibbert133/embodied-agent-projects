@@ -1,0 +1,296 @@
+{
+  "status": "PASSED_SOFTWARE_BEFORE_SCIENTIFIC_COLLECTION",
+  "created_utc": "2026-10-19T12:05:49.399591+00:00",
+  "parent_commit": "7022e36d00f7b1d0a4b4a53ff96226f79a369ccc",
+  "previous_goal_turn": "Explanation only; no scientific progress, resumed pending implementation.",
+  "tests_passed": 1187,
+  "checks": {
+    "unittest": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 270646622400,
+      "output_sha256": "514763b476130298c9148da9c916c40e77d7435ec037d016651522e2c8d18db9",
+      "created_utc": "2026-10-19T12:04:53.006472+00:00",
+      "source_sha256": "29a65ab2aaf22e0460fded586ca50dae5eaa6150380b5a692a7b435babc988e9"
+    },
+    "compileall": {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 674864900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T12:00:44.519165+00:00",
+      "source_sha256": "29a65ab2aaf22e0460fded586ca50dae5eaa6150380b5a692a7b435babc988e9"
+    },
+    "pip_check": {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 901452400,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T12:00:44.744197+00:00",
+      "source_sha256": "29a65ab2aaf22e0460fded586ca50dae5eaa6150380b5a692a7b435babc988e9"
+    },
+    "tracked_secret_scan": {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 59674939100,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T12:02:56.034999+00:00",
+      "source_sha256": "29a65ab2aaf22e0460fded586ca50dae5eaa6150380b5a692a7b435babc988e9"
+    },
+    "diff_check": {
+      "check": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 41494900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T12:05:05.681097+00:00",
+      "source_sha256": "29a65ab2aaf22e0460fded586ca50dae5eaa6150380b5a692a7b435babc988e9"
+    }
+  },
+  "files": [
+    {
+      "path": "configs/physical_reprobe/qualification_v1.json",
+      "sha256": "098b593f74b8826c5536e4e70d3de274eb936f44194fe4a6eb7d608a6bea6f5d",
+      "bytes": 3042
+    },
+    {
+      "path": "docs/protocols/physical_reprobe_execution_qualification_v1.md",
+      "sha256": "4acbb6f674d819be21e27b411a7e777c725e10c672f95e709c3856bba61d36a5",
+      "bytes": 5189
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/.gitattributes",
+      "sha256": "33f019d733cb609c6f7aa7333ed57a7fb608a68b7f2cbdd45f180612915495e6",
+      "bytes": 76
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/.gitattributes",
+      "sha256": "0ccf672399ac091ce1068f620210f11afa2987a167b6c33268d842e425c9ab6d",
+      "bytes": 65
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/compileall.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/compileall_receipt.json",
+      "sha256": "cee85d61902cb8708efa1519bc9db23c64f399b20ffe8a13b48703499dc487e8",
+      "bytes": 485
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/diff_check_receipt.json",
+      "sha256": "392b754a79384cb153f8f875152e12bdd0454053a74665564c00df81d860961c",
+      "bytes": 351
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/pip_check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/pip_check_receipt.json",
+      "sha256": "743c25530662494ec8eab7885c09943c298aafec14c0fc8ff32966df9d5f964f",
+      "bytes": 441
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/run_checks.py",
+      "sha256": "29a65ab2aaf22e0460fded586ca50dae5eaa6150380b5a692a7b435babc988e9",
+      "bytes": 3271
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/targeted_01.txt",
+      "sha256": "9e839a5444a09fbc5cb8453514a4c627a1097dd710d45fba77b464e32b3eb135",
+      "bytes": 1360
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/targeted_01_native_costs.json",
+      "sha256": "1533c703af82027f61c3736742ac70b40580756223aa120dd249e73a4b1e5b68",
+      "bytes": 15135
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/targeted_01_receipt.json",
+      "sha256": "d3c76879f998f09b5aff7d2866a488d0c6990258eb81716e79cecb8b979f1ed5",
+      "bytes": 499
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/tracked_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/tracked_secret_scan_receipt.json",
+      "sha256": "9d78682b8bf295a6173465f4b1cdbb25bb526f848ad37da6d6b1c3cd28ce8b4b",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/unittest.txt",
+      "sha256": "514763b476130298c9148da9c916c40e77d7435ec037d016651522e2c8d18db9",
+      "bytes": 141630
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/unittest_native_costs.json",
+      "sha256": "485047aecbd2328b8dd54ca18d6df459457862d26b8d561762470f030c1d5eb3",
+      "bytes": 98708
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_validation_v1/unittest_receipt.json",
+      "sha256": "dda98ac4817f8218e9a65e6118d77c1ff89786e8cc3c4c935c14db15600e1fae",
+      "bytes": 484
+    },
+    {
+      "path": "scripts/audit_physical_reprobe_v1.py",
+      "sha256": "f117f6ed22bf006e6143266d39512d42c63372d8dd57b16cea220ba263ea4c61",
+      "bytes": 35080
+    },
+    {
+      "path": "scripts/qualify_physical_reprobe_v1.py",
+      "sha256": "f92a4b3a51edfed95299157708e332f845e3491dc59a7a1618695f581a38f32f",
+      "bytes": 13548
+    },
+    {
+      "path": "src/analysis/physical_reprobe_host_v2.py",
+      "sha256": "5a42f7204544e4078fea65ba99d54571e9c1e5a53ba86aee85a0ded882b6975e",
+      "bytes": 10931
+    },
+    {
+      "path": "src/analysis/physical_reprobe_io_v1.py",
+      "sha256": "aa18a334dbc38499bceea4dccc264b12ac53f752c8af743ed0a82d8abfa4a865",
+      "bytes": 5663
+    },
+    {
+      "path": "tests/test_physical_reprobe_qualification_v1.py",
+      "sha256": "3e2962e0a9abc671ee82a862bf9e56976afe965ff064658f0da40068a5702bd2",
+      "bytes": 12606
+    }
+  ],
+  "frozen_prior_inputs_unchanged": 965,
+  "index_matches_working_bytes": true,
+  "strict_utf8_index_secret_scan": "PASSED",
+  "new_metaworld_qualification_cases_executed": 0,
+  "api_calls": 0,
+  "qualification_native_fixture_costs": [
+    {
+      "completed": true,
+      "partial_requested": false,
+      "native_frames": 128665,
+      "actual_policy_queries": 96,
+      "constructed_tiny_envs": 5,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 255,
+          "simulation_attempts": 25733,
+          "simulation_frames_attempted": 128665,
+          "simulation_completed": 25733,
+          "simulation_frames_completed": 128665,
+          "reset_completed": 255
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 250,
+            "simulation_attempts": 25000,
+            "simulation_frames_attempted": 125000,
+            "simulation_completed": 25000,
+            "simulation_frames_completed": 125000,
+            "reset_completed": 250
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 5,
+            "simulation_attempts": 500,
+            "simulation_frames_attempted": 2500,
+            "simulation_completed": 500,
+            "simulation_frames_completed": 2500,
+            "reset_completed": 5
+          },
+          "CONTROL": {
+            "simulation_attempts": 233,
+            "simulation_frames_attempted": 1165,
+            "simulation_completed": 233,
+            "simulation_frames_completed": 1165
+          }
+        }
+      }
+    },
+    {
+      "completed": true,
+      "partial_requested": true,
+      "native_frames": 25600,
+      "actual_policy_queries": 8,
+      "constructed_tiny_envs": 1,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 51,
+          "simulation_attempts": 5120,
+          "simulation_frames_attempted": 25600,
+          "simulation_completed": 5120,
+          "simulation_frames_completed": 25600,
+          "reset_completed": 51
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 50,
+            "simulation_attempts": 5000,
+            "simulation_frames_attempted": 25000,
+            "simulation_completed": 5000,
+            "simulation_frames_completed": 25000,
+            "reset_completed": 50
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 1,
+            "simulation_attempts": 100,
+            "simulation_frames_attempted": 500,
+            "simulation_completed": 100,
+            "simulation_frames_completed": 500,
+            "reset_completed": 1
+          },
+          "CONTROL": {
+            "simulation_attempts": 20,
+            "simulation_frames_attempted": 100,
+            "simulation_completed": 20,
+            "simulation_frames_completed": 100
+          }
+        }
+      }
+    }
+  ],
+  "test_cost_scope": "Only captured instrumented fixtures. Earlier pre-summary targeted test output/cost was not persisted; not a complete development-cost total.",
+  "publication_goal_complete": false
+}

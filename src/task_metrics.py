@@ -27,6 +27,22 @@ def extract_push_positions(observation: Sequence[float]) -> tuple[np.ndarray,np.
     if obs.size != 39: raise ValueError(f"push-v3 observation must have 39 values, got {obs.size}")
     return obs[0:3].copy(), obs[4:7].copy(), obs[-3:].copy()
 
+def classify_push_phase(
+    observation: Sequence[float],
+    *,
+    contact_distance: float = 0.08,
+    near_goal_distance: float = 0.08,
+) -> str:
+    """Classify the causally visible phase from current push-v3 geometry."""
+    if contact_distance <= 0.0 or near_goal_distance <= 0.0:
+        raise ValueError("phase distance thresholds must be positive")
+    gripper, object_position, goal = extract_push_positions(observation)
+    if float(np.linalg.norm(object_position - goal)) <= near_goal_distance:
+        return "near_goal"
+    if float(np.linalg.norm(gripper - object_position)) <= contact_distance:
+        return "push"
+    return "approach"
+
 def compute_push_step_metrics(observation: Sequence[float], initial_observation: Sequence[float]) -> PushStepMetrics:
     grip,obj,goal=extract_push_positions(observation); _,initial_obj,initial_goal=extract_push_positions(initial_observation)
     if not np.allclose(goal, initial_goal): raise ValueError("goal changed within episode")

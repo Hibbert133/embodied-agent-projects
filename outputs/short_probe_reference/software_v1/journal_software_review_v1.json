@@ -1,0 +1,101 @@
+{
+  "phase": "SHORT_REFERENCE_JOURNAL_SOFTWARE_V1",
+  "created_utc": "2026-10-19T03:46:27.367860+00:00",
+  "parent_git_commit": "b064089ed0efbdec31146a98e34e339ed3e723df",
+  "status": "SOFTWARE_CONSISTENCY_TESTED_NOT_PHYSICAL_POPULATION_QUALIFIED",
+  "code_and_artifact_sha256_excluding_this_review": {
+    "docs/research/short_probe_journal_audit_20261019_zh.md": "9f5cbff0df4c776ac35efb74c61bdfc641d149c5d3dcc8d23d0e3ec6c97a380c",
+    "outputs/short_probe_reference/.gitattributes": "308a40fa1d89ae5ea4390b4c9b46a0108b09f171f07898f25d451fa0c69c4e9f",
+    "outputs/short_probe_reference/software_v1/journal_full_regression_20261019.txt": "45591dbe3fd4ccf099f05ec492f58f29a7330278f36ecbd686c1605856a52d58",
+    "outputs/short_probe_reference/software_v1/journal_full_regression_result_v1.json": "631f2034c70215884a060642be8391f4192ff8e82e0c5a9d9fd79553677c8469",
+    "outputs/short_probe_reference/software_v1/journal_full_regression_source_v1.json": "9a3237a59d28215c85c68e50454ff529bf9ac252999a9d82d043c60b63ae215b",
+    "outputs/short_probe_reference/software_v1/journal_target_costs_v2.json": "7493bdaddcba498e19a67d631ecdae522000d2479d15c44bec7b0ad01674bf5f",
+    "outputs/short_probe_reference/software_v1/journal_target_costs_v3.json": "b80ce186f5734e4e5e1488a162cf1f5a165a15b75db27fe6de5a565b071a45d5",
+    "outputs/short_probe_reference/software_v1/journal_target_costs_v4.json": "f02fca8559ac3ce1bcaacf2c17336c4b413db5b074c73fe0035465470a0fc8a0",
+    "outputs/short_probe_reference/software_v1/journal_target_failed_v1.txt": "73577b64f4fc954745d3ccfcff92d4d5438bef57e2768f81b6b955ed95de4f88",
+    "outputs/short_probe_reference/software_v1/journal_target_v2.txt": "686ac38b9ae38cf7750c4e6d0bb1cd51eed21135f811607f8253c72842d7463e",
+    "outputs/short_probe_reference/software_v1/journal_target_v3.txt": "f2503285011cc909d196228a27086961bab75e38463cc5d766760b88a49a58eb",
+    "outputs/short_probe_reference/software_v1/journal_target_v4.txt": "35a301ef4222d9233dcf1002bf6d2c464c7780c76253c4079d46d7e477edda5e",
+    "src/analysis/short_probe_journal_audit_v1.py": "bd7fa85e5b4aeb5d868ed027890b1a589ebb0741aa57af9fd5a57a215a07b1ae",
+    "tests/test_short_probe_journal_audit_v1.py": "a57c620f9c653d530f8a812024a572baa29c5b968b0b276d8f1a900b7fc2ae8b"
+  },
+  "targeted_tests": 14,
+  "full_regression_tests": 1088,
+  "full_regression_wall_seconds": 164.668,
+  "full_source_files_hashed": 751,
+  "source_unchanged_during_full_regression": true,
+  "full_regression_invocation": "project venv Python unittest.defaultTestLoader.discover('tests') with TextTestRunner(verbosity=2)",
+  "target_v4_instrumented_tiny_native_costs": {
+    "tiny_fixture_environments": 13,
+    "all_reset_calls": 663,
+    "host_step_attempts": 630,
+    "host_returned_steps": 630,
+    "actual_native_requested_frames": 334650,
+    "actual_tiny_policy_queries": 568,
+    "captures": 0,
+    "restores": 0
+  },
+  "target_v4_instrumented_computation": {
+    "SETUP": {
+      "candidate_library_enumerations": 1,
+      "candidate_rows_enumerated": 144
+    },
+    "FIXTURE_GENERATION": {
+      "actual_tiny_policy_queries": 568,
+      "candidate_library_enumerations": 9,
+      "candidate_rows_enumerated": 1296
+    },
+    "JOURNAL_AUDIT": {
+      "actual_tiny_policy_queries": 756,
+      "candidate_library_enumerations": 24,
+      "candidate_rows_enumerated": 3456
+    }
+  },
+  "target_v4_numeric_fitters_stubbed": true,
+  "target_v4_real_optimizer_calls": 0,
+  "target_v4_audit_native_frames": 0,
+  "full_regression_new_fixture_fees_retained_in": "journal_full_regression_result_v1.json",
+  "remaining_full_suite_costs": "NOT_EXHAUSTIVELY_AGGREGATED_NOT_ZERO",
+  "preserved_prior_target_failure": {
+    "log": "journal_target_failed_v1.txt",
+    "tests": 11,
+    "errors": 14,
+    "reason": "Fixture experiment phase used reserved phase name and collided with lifecycle/action phase. New identity uses study_phase; auditor rejects phase as invariant identity. No frozen scientific collection was started."
+  },
+  "earliest_target_v1_native_costs": "NOT_AGGREGATED_NOT_ZERO",
+  "prior_passed_target_costs": [
+    "journal_target_costs_v2.json",
+    "journal_target_costs_v3.json"
+  ],
+  "frozen_previous_experiment_inputs_rehashed": 778,
+  "changed_frozen_inputs": [],
+  "new_metaworld_task_execution": 0,
+  "new_scientific_task_seeds_executed": [],
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "actual_nominal_task_designs_selected": 0,
+  "planning_execution_allowed": false,
+  "new_data_tiny_noise_seed_is_not_a_metaworld_allocation": 700017,
+  "scope": "Independent outer saved-record/lifecycle/clock/private-noise/fixed-policy consistency and registered prefix matching. Source native/Python signatures are witnesses, not independent physics or complete hidden-state proof. Population ownership/allocation and independent statistics audit remain required.",
+  "shared_helpers": [
+    "public program parser",
+    "four/eight numerical estimators",
+    "local nominal D-optimal design",
+    "controller math",
+    "normalization/digest"
+  ],
+  "supplemental_utf8_utf16_secret_files": 14,
+  "secret_findings": [],
+  "required_checks": {
+    "compileall": 0,
+    "pip_check": 0,
+    "working_diff": 0,
+    "final_staged_secret_and_diff": "REQUIRED_BEFORE_COMMIT"
+  },
+  "existing_note_links_checked": [
+    "../../src/analysis/short_probe_journal_audit_v1.py",
+    "../../src/analysis/short_probe_public_audit_v1.py",
+    "../../tests/test_short_probe_journal_audit_v1.py",
+    "short_probe_task_comparison_draft_20261018_zh.md"
+  ]
+}

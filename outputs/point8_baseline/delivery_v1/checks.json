@@ -1,0 +1,68 @@
+{
+  "compile": {
+    "exit_code": 0,
+    "seconds": 0.435898100000486,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "compileall",
+      "-q",
+      "src",
+      "scripts",
+      "tests",
+      "outputs/point8_baseline"
+    ]
+  },
+  "dependencies": {
+    "exit_code": 0,
+    "seconds": 0.6887836999994761,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pip",
+      "check"
+    ]
+  },
+  "diff": {
+    "exit_code": 0,
+    "seconds": 0.03921440000340226,
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ]
+  },
+  "compile_final": {
+    "exit_code": 0,
+    "seconds": 0.4900506999983918,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "compileall",
+      "-q",
+      "src",
+      "scripts",
+      "tests",
+      "outputs/point8_baseline"
+    ]
+  },
+  "secrets": {
+    "exit_code": 0,
+    "seconds": 29.015218399999867,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "scripts/check_tracked_secrets.py",
+      "--staged"
+    ]
+  },
+  "staged_diff": {
+    "exit_code": 0,
+    "seconds": 0.04643039999791654,
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ]
+  }
+}

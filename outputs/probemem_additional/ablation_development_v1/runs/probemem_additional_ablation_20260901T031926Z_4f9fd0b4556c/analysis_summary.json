@@ -1,0 +1,255 @@
+{
+  "run_status": "COMPLETED_WITH_POPULATION_IMBALANCE",
+  "experiment_run_id": "probemem_additional_ablation_20260901T031926Z_4f9fd0b4556c",
+  "manifest_id": "759c9586f88d5bff43380b67e2bdae1931cd24e3bd57c726643e95510c6fc80f",
+  "source_git_commit": "4f9fd0b4556c11c0b730ccef787bff4beee977d1",
+  "common_initial_failure_denominator": 60,
+  "methods": {
+    "BASELINE": {
+      "method": "BASELINE",
+      "initial_failed_episodes": 60,
+      "successful_recoveries": 51,
+      "recovery_rate": 0.85,
+      "recovery_wilson_lower": 0.7388541093022145,
+      "recovery_wilson_upper": 0.9190255941983225,
+      "correct_diagnoses": 52,
+      "diagnosis_accuracy": 0.8666666666666667,
+      "diagnosis_wilson_lower": 0.7583484032350039,
+      "diagnosis_wilson_upper": 0.9308589051941303,
+      "total_evidence_steps": 0,
+      "mean_evidence_steps": 0.0,
+      "total_online_steps": 36712,
+      "mean_online_steps": 611.8666666666667
+    },
+    "MEMORY_ONLY": {
+      "method": "MEMORY_ONLY",
+      "initial_failed_episodes": 60,
+      "successful_recoveries": 52,
+      "recovery_rate": 0.8666666666666667,
+      "recovery_wilson_lower": 0.7583484032350039,
+      "recovery_wilson_upper": 0.9308589051941303,
+      "correct_diagnoses": 52,
+      "diagnosis_accuracy": 0.8666666666666667,
+      "diagnosis_wilson_lower": 0.7583484032350039,
+      "diagnosis_wilson_upper": 0.9308589051941303,
+      "total_evidence_steps": 0,
+      "mean_evidence_steps": 0.0,
+      "total_online_steps": 35922,
+      "mean_online_steps": 598.7
+    },
+    "EVIDENCE_ACQUISITION_ENABLED": {
+      "method": "EVIDENCE_ACQUISITION_ENABLED",
+      "initial_failed_episodes": 60,
+      "successful_recoveries": 55,
+      "recovery_rate": 0.9166666666666666,
+      "recovery_wilson_lower": 0.8193105798166558,
+      "recovery_wilson_upper": 0.9638795433982692,
+      "correct_diagnoses": 57,
+      "diagnosis_accuracy": 0.95,
+      "diagnosis_wilson_lower": 0.8629948352365147,
+      "diagnosis_wilson_upper": 0.9828504978356043,
+      "total_evidence_steps": 960,
+      "mean_evidence_steps": 16.0,
+      "total_online_steps": 36673,
+      "mean_online_steps": 611.2166666666667
+    },
+    "PROBE_MEMORY": {
+      "method": "PROBE_MEMORY",
+      "initial_failed_episodes": 60,
+      "successful_recoveries": 52,
+      "recovery_rate": 0.8666666666666667,
+      "recovery_wilson_lower": 0.7583484032350039,
+      "recovery_wilson_upper": 0.9308589051941303,
+      "correct_diagnoses": 57,
+      "diagnosis_accuracy": 0.95,
+      "diagnosis_wilson_lower": 0.8629948352365147,
+      "diagnosis_wilson_upper": 0.9828504978356043,
+      "total_evidence_steps": 960,
+      "mean_evidence_steps": 16.0,
+      "total_online_steps": 37836,
+      "mean_online_steps": 630.6
+    },
+    "FULL_PROBEMEM": {
+      "method": "FULL_PROBEMEM",
+      "initial_failed_episodes": 60,
+      "successful_recoveries": 52,
+      "recovery_rate": 0.8666666666666667,
+      "recovery_wilson_lower": 0.7583484032350039,
+      "recovery_wilson_upper": 0.9308589051941303,
+      "correct_diagnoses": 57,
+      "diagnosis_accuracy": 0.95,
+      "diagnosis_wilson_lower": 0.8629948352365147,
+      "diagnosis_wilson_upper": 0.9828504978356043,
+      "total_evidence_steps": 960,
+      "mean_evidence_steps": 16.0,
+      "total_online_steps": 37836,
+      "mean_online_steps": 630.6
+    }
+  },
+  "paired_recovery_differences": {
+    "MEMORY_ONLY_MINUS_BASELINE": {
+      "difference": 0.01666666666666672,
+      "lower": 0.0,
+      "upper": 0.05
+    },
+    "PROBE_MEMORY_MINUS_EVIDENCE_ACQUISITION": {
+      "difference": -0.04999999999999993,
+      "lower": -0.11666666666666667,
+      "upper": 0.016666666666666666
+    },
+    "FULL_MINUS_PROBE_MEMORY": {
+      "difference": 0.0,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    "EVIDENCE_ACQUISITION_MINUS_BASELINE": {
+      "difference": 0.06666666666666665,
+      "lower": 0.016666666666666666,
+      "upper": 0.13333333333333333
+    }
+  },
+  "memory_retrieval_utility": {
+    "MEMORY_ONLY_VS_BASELINE": {
+      "eligible_cases": 60,
+      "action_changes": 4,
+      "counts": {
+        "NO_RETRIEVAL": 1,
+        "USEFUL_TRANSFER": 2,
+        "HARMFUL_TRANSFER": 1,
+        "NEUTRAL_TRANSFER": 56,
+        "INDETERMINATE": 0
+      },
+      "rates_all_eligible": {
+        "NO_RETRIEVAL": 0.016666666666666666,
+        "USEFUL_TRANSFER": 0.03333333333333333,
+        "HARMFUL_TRANSFER": 0.016666666666666666,
+        "NEUTRAL_TRANSFER": 0.9333333333333333,
+        "INDETERMINATE": 0.0
+      },
+      "nonempty_retrieval_rate": 0.9833333333333333
+    },
+    "PROBE_MEMORY_VS_EVIDENCE_ACQUISITION": {
+      "eligible_cases": 60,
+      "action_changes": 9,
+      "counts": {
+        "NO_RETRIEVAL": 1,
+        "USEFUL_TRANSFER": 2,
+        "HARMFUL_TRANSFER": 4,
+        "NEUTRAL_TRANSFER": 53,
+        "INDETERMINATE": 0
+      },
+      "rates_all_eligible": {
+        "NO_RETRIEVAL": 0.016666666666666666,
+        "USEFUL_TRANSFER": 0.03333333333333333,
+        "HARMFUL_TRANSFER": 0.06666666666666667,
+        "NEUTRAL_TRANSFER": 0.8833333333333333,
+        "INDETERMINATE": 0.0
+      },
+      "nonempty_retrieval_rate": 0.9833333333333333
+    }
+  },
+  "memory_leakage_audit": {
+    "retrieval_items": 522,
+    "owner_mismatches": 0,
+    "non_accepted_items": 0,
+    "not_strictly_prior": 0
+  },
+  "verifier": {
+    "eligible_cases": 60,
+    "valid_proposals": 60,
+    "proposal_coverage": 1.0,
+    "proposal_coverage_wilson": [
+      0.93982814785791,
+      0.9999999999999998
+    ],
+    "invocations": 59,
+    "invocation_coverage": 0.9833333333333333,
+    "invocation_coverage_wilson": [
+      0.9114487027240993,
+      0.9970518402052136
+    ],
+    "intervention_outcomes": {
+      "NOT_INVOKED": 1,
+      "CORRECT_ACCEPTANCE": 51,
+      "FALSE_ACCEPTANCE": 8
+    },
+    "prevented_unsafe_actions": 0,
+    "unnecessary_rejections": 0,
+    "calibration_counts": {
+      "HIGH_CONFIDENCE_SUCCESS": 50,
+      "HIGH_CONFIDENCE_FAILURE": 8,
+      "UNCERTAIN_PREDICTION": 1,
+      "LOW_PREDICTED_SUCCESS": 0
+    },
+    "brier_score": 0.12324779215183314,
+    "coverage_caveat": "Low invocation coverage must not be interpreted as high verifier reliability."
+  },
+  "population_by_condition": {
+    "fault_01": 9,
+    "fault_02": 9,
+    "fault_03": 15,
+    "fault_04": 19,
+    "fault_05": 8
+  },
+  "population_by_mechanism": {
+    "stable_bias": 52,
+    "stochastic_noise": 8
+  },
+  "descriptive_population_imbalance": true,
+  "failure_taxonomy_counts": {
+    "DIAGNOSIS_FAILURE": 3,
+    "DIAGNOSIS_CORRECT_RECOVERY_FAILED": 2,
+    "MEMORY_HARMFUL_TRANSFER": 4,
+    "VERIFIER_FAILED_TO_PREVENT_UNRELIABLE_ACTION": 6
+  },
+  "research_findings": {
+    "RQ1": {
+      "question": "Does adaptive evidence acquisition reduce diagnosis cost?",
+      "observed_evidence": "On 33 comparable historical cases, adaptive acquisition and fixed 64-step acquisition both diagnosed 33/33 cases (100.0%); adaptive acquisition used 13.58 mean evidence steps versus 64.00, a 78.8% reduction.",
+      "conclusion": "Supported"
+    },
+    "RQ2": {
+      "question": "Does memory improve evidence utilization?",
+      "observed_evidence": "Adding method-isolated accepted-only memory on top of evidence acquisition changed recovery from 55/60 to 52/60 (paired difference -5.0%); transfer labels were 2 useful, 4 harmful, 53 neutral, and 1 no-retrieval.",
+      "conclusion": "Not supported"
+    },
+    "RQ3": {
+      "question": "Can verification bridge diagnosis and recovery?",
+      "observed_evidence": "Adding verifier on top of Probe+Memory changed recovery by +0.0% (52/60 versus 52/60). Proposal coverage was 60/60, invocation coverage was 59/60, and no unsafe proposal was converted from a non-ACCEPTED evaluator outcome to an ACCEPTED selected outcome.",
+      "conclusion": "Not supported"
+    }
+  },
+  "selected_cases": [
+    {
+      "selection_basis": "FIRST_SEQUENTIAL_OPERATIONAL_fault_01",
+      "observed_case_types": "SUCCESS_OR_NO_REGISTERED_FAILURE_TAG",
+      "episode_id": 1,
+      "seed": 7200
+    },
+    {
+      "selection_basis": "FIRST_SEQUENTIAL_OPERATIONAL_fault_02",
+      "observed_case_types": "SUCCESS_OR_NO_REGISTERED_FAILURE_TAG",
+      "episode_id": 2,
+      "seed": 7201
+    },
+    {
+      "selection_basis": "FIRST_SEQUENTIAL_OPERATIONAL_fault_03",
+      "observed_case_types": "SUCCESS_OR_NO_REGISTERED_FAILURE_TAG",
+      "episode_id": 3,
+      "seed": 7202
+    },
+    {
+      "selection_basis": "FIRST_SEQUENTIAL_OPERATIONAL_fault_04",
+      "observed_case_types": "SUCCESS_OR_NO_REGISTERED_FAILURE_TAG",
+      "episode_id": 4,
+      "seed": 7203
+    },
+    {
+      "selection_basis": "FIRST_SEQUENTIAL_OPERATIONAL_fault_05",
+      "observed_case_types": "MEMORY_HARMFUL_TRANSFER;VERIFIER_FAILED_TO_PREVENT_UNRELIABLE_ACTION",
+      "episode_id": 9,
+      "seed": 7209
+    }
+  ],
+  "claim_boundary": "configuration-level marginal effects, not fully independent component causal effects"
+}

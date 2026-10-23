@@ -1,0 +1,52 @@
+{
+  "source_git_commit": "4498cf0f4fb5451e879a0e7aab43eed1a7f0abf0",
+  "helper_pid": 18024,
+  "status": "READY_FOR_REVIEW",
+  "stages": [
+    {
+      "name": "collector",
+      "command": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/run_state_capsule_qualification_v2.py",
+        "run",
+        "--manifest",
+        "outputs\\state_capsule\\qualification_v2\\state_capsule_20261016T180022Z_4498cf0f4fb5\\manifest.json"
+      ],
+      "started_utc": "2026-10-16T18:00:43.673683+00:00",
+      "pid": 13976,
+      "returncode": 0,
+      "wall_seconds": 39.8119999999908,
+      "finished_utc": "2026-10-16T18:01:23.491856+00:00"
+    },
+    {
+      "name": "record_audit",
+      "command": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/audit_state_capsule_qualification_v2.py",
+        "--manifest",
+        "outputs\\state_capsule\\qualification_v2\\state_capsule_20261016T180022Z_4498cf0f4fb5\\manifest.json"
+      ],
+      "started_utc": "2026-10-16T18:01:23.491856+00:00",
+      "pid": 14560,
+      "returncode": 0,
+      "wall_seconds": 2.937000000005355,
+      "finished_utc": "2026-10-16T18:01:26.443735+00:00"
+    },
+    {
+      "name": "chinese_report",
+      "command": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/report_state_capsule_qualification_v2.py",
+        "--manifest",
+        "outputs\\state_capsule\\qualification_v2\\state_capsule_20261016T180022Z_4498cf0f4fb5\\manifest.json"
+      ],
+      "started_utc": "2026-10-16T18:01:26.444774+00:00",
+      "pid": 18304,
+      "returncode": 0,
+      "wall_seconds": 1.3439999999973224,
+      "finished_utc": "2026-10-16T18:01:27.776337+00:00"
+    }
+  ],
+  "updated_utc": "2026-10-16T18:01:27.776337+00:00",
+  "exit_code": 0
+}

@@ -1,0 +1,33 @@
+{
+  "protocol_id": "evidence_refresh_prefix_development_v1",
+  "seed_start": 8200,
+  "streams": 8,
+  "episodes_per_stream": 12,
+  "reserved_seed_range": [8296, 8499],
+  "methods": ["FIXED_16", "FIXED_32", "FIXED_64", "STALE", "PERIODIC_4", "CHANGE_THRESHOLD", "DECISION_STABILITY", "UNCORRECTED"],
+  "condition_ids": ["fault_01", "fault_02", "fault_03", "fault_04"],
+  "noise_std": 0.05,
+  "noise_mask": [true, true, true, false],
+  "stationary_streams": [0, 1, 2, 3],
+  "abrupt_streams": [4, 5, 6, 7],
+  "context_block_episodes": 3,
+  "max_probe_repetitions": 4,
+  "steps_per_repetition": 16,
+  "probe_magnitude": 0.2,
+  "steps_per_direction": 4,
+  "verification_steps": 500,
+  "path_max_steps": 564,
+  "maximum_physical_steps": 390144,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261014,
+  "recovery_config": "configs/autoresearch/default_recovery_config.json",
+  "output_root": "outputs/evidence_refresh/development_v1",
+  "promotion": {
+    "maximum_success_shortfall_vs_fixed64": 0.05,
+    "minimum_probe_saving_vs_fixed64": 0.25,
+    "require_no_baseline_pareto_dominance": true,
+    "require_zero_integrity_errors": true
+  },
+  "api_calls": 0,
+  "future_evaluator_reads_by_method": 0
+}

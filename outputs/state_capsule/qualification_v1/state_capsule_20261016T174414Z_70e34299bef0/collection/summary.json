@@ -1,0 +1,221 @@
+{
+  "experiment_run_id": "state_capsule_20261016T174414Z_70e34299bef0",
+  "manifest_id": "62d344e1740f02c000290c647fa1eb09a29eeb9abf5b8fc265f2326904583992",
+  "source_git_commit": "70e34299bef0baf73cf2111ad5cdc8759998b416",
+  "status": "FAILED_SAVED_NOT_RETRIED",
+  "cases": [
+    {
+      "experiment_run_id": "state_capsule_20261016T174414Z_70e34299bef0",
+      "manifest_id": "62d344e1740f02c000290c647fa1eb09a29eeb9abf5b8fc265f2326904583992",
+      "source_git_commit": "70e34299bef0baf73cf2111ad5cdc8759998b416",
+      "case": 0,
+      "seed": 18800,
+      "replicate": 0,
+      "prefix_steps": 8,
+      "task": "push-v3",
+      "branches": [],
+      "capture": null,
+      "inventory": [
+        {
+          "class": "gymnasium.wrappers.common.OrderEnforcing",
+          "fields": {
+            "_saved_kwargs": "builtins.dict",
+            "env": "gymnasium.wrappers.common.PassiveEnvChecker",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "builtins.NoneType",
+            "_has_reset": "builtins.bool",
+            "_disable_render_order_enforcing": "builtins.bool"
+          }
+        },
+        {
+          "class": "gymnasium.wrappers.common.PassiveEnvChecker",
+          "fields": {
+            "_saved_kwargs": "builtins.dict",
+            "env": "metaworld.wrappers.CheckpointWrapper",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "builtins.NoneType",
+            "checked_reset": "builtins.bool",
+            "checked_step": "builtins.bool",
+            "checked_render": "builtins.bool",
+            "close_called": "builtins.bool"
+          }
+        },
+        {
+          "class": "metaworld.wrappers.CheckpointWrapper",
+          "fields": {
+            "env": "metaworld.wrappers.RandomTaskSelectWrapper",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "gymnasium.envs.registration.EnvSpec",
+            "env_id": "builtins.str"
+          }
+        },
+        {
+          "class": "metaworld.wrappers.RandomTaskSelectWrapper",
+          "fields": {
+            "env": "gymnasium.wrappers.common.RecordEpisodeStatistics",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "gymnasium.envs.registration.EnvSpec",
+            "tasks": "builtins.list",
+            "sample_tasks_on_reset": "builtins.bool"
+          }
+        },
+        {
+          "class": "gymnasium.wrappers.common.RecordEpisodeStatistics",
+          "fields": {
+            "_saved_kwargs": "builtins.dict",
+            "env": "metaworld.wrappers.AutoTerminateOnSuccessWrapper",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "gymnasium.envs.registration.EnvSpec",
+            "_stats_key": "builtins.str",
+            "episode_count": "builtins.int",
+            "episode_start_time": "builtins.float",
+            "episode_returns": "builtins.float",
+            "episode_lengths": "builtins.int",
+            "time_queue": "collections.deque",
+            "return_queue": "collections.deque",
+            "length_queue": "collections.deque"
+          }
+        },
+        {
+          "class": "metaworld.wrappers.AutoTerminateOnSuccessWrapper",
+          "fields": {
+            "env": "gymnasium.wrappers.common.TimeLimit",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "gymnasium.envs.registration.EnvSpec",
+            "terminate_on_success": "builtins.bool"
+          }
+        },
+        {
+          "class": "gymnasium.wrappers.common.TimeLimit",
+          "fields": {
+            "_saved_kwargs": "builtins.dict",
+            "env": "metaworld.envs.sawyer_push_v3.SawyerPushEnvV3",
+            "_action_space": "builtins.NoneType",
+            "_observation_space": "builtins.NoneType",
+            "_metadata": "builtins.NoneType",
+            "_cached_spec": "gymnasium.envs.registration.EnvSpec",
+            "_max_episode_steps": "builtins.int",
+            "_elapsed_steps": "builtins.int"
+          }
+        },
+        {
+          "class": "metaworld.envs.sawyer_push_v3.SawyerPushEnvV3",
+          "fields": {
+            "action_scale": "builtins.float",
+            "action_rot_scale": "builtins.float",
+            "hand_low": "numpy.ndarray",
+            "hand_high": "numpy.ndarray",
+            "mocap_low": "numpy.ndarray",
+            "mocap_high": "numpy.ndarray",
+            "curr_path_length": "builtins.int",
+            "seeded_rand_vec": "builtins.bool",
+            "_freeze_rand_vec": "builtins.bool",
+            "_last_rand_vec": "numpy.ndarray",
+            "num_resets": "builtins.int",
+            "current_seed": "builtins.NoneType",
+            "obj_init_pos": "numpy.ndarray",
+            "width": "builtins.int",
+            "height": "builtins.int",
+            "discrete_goal_space": "builtins.NoneType",
+            "discrete_goals": "builtins.list",
+            "active_discrete_goal": "builtins.NoneType",
+            "_partially_observable": "builtins.bool",
+            "task_name": "builtins.str",
+            "fullpath": "builtins.str",
+            "model": "mujoco._structs.MjModel",
+            "data": "mujoco._structs.MjData",
+            "init_qpos": "numpy.ndarray",
+            "init_qvel": "numpy.ndarray",
+            "frame_skip": "builtins.int",
+            "observation_space": "gymnasium.spaces.box.Box",
+            "action_space": "gymnasium.spaces.box.Box",
+            "render_mode": "builtins.NoneType",
+            "camera_name": "builtins.NoneType",
+            "camera_id": "builtins.NoneType",
+            "mujoco_renderer": "gymnasium.envs.mujoco.mujoco_rendering.MujocoRenderer",
+            "_did_see_sim_exception": "builtins.bool",
+            "init_left_pad": "numpy.ndarray",
+            "init_right_pad": "numpy.ndarray",
+            "_obs_obj_max_len": "builtins.int",
+            "_set_task_called": "builtins.bool",
+            "hand_init_pos": "numpy.ndarray",
+            "_target_pos": "numpy.ndarray",
+            "_random_reset_space": "gymnasium.spaces.box.Box",
+            "goal_space": "gymnasium.spaces.box.Box",
+            "_last_stable_obs": "builtins.NoneType",
+            "_prev_obs": "numpy.ndarray",
+            "_ezpickle_args": "builtins.tuple",
+            "_ezpickle_kwargs": "builtins.dict",
+            "reward_function_version": "builtins.str",
+            "init_config": "builtins.dict",
+            "goal": "numpy.ndarray",
+            "obj_init_angle": "builtins.float",
+            "_np_random": "numpy.random._generator.Generator",
+            "_np_random_seed": "builtins.int",
+            "spec": "gymnasium.envs.registration.EnvSpec",
+            "init_tcp": "numpy.ndarray",
+            "objHeight": "numpy.float64",
+            "heightTarget": "numpy.float64",
+            "maxPushDist": "numpy.float64",
+            "maxPlacingDist": "numpy.float64"
+          }
+        }
+      ]
+    }
+  ],
+  "actual_controlled_steps": 0,
+  "actual_controlled_resets": 1,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 51,
+      "simulation_attempts": 5100,
+      "simulation_frames_attempted": 25500,
+      "simulation_completed": 5100,
+      "simulation_frames_completed": 25500,
+      "reset_completed": 51
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 50,
+        "simulation_attempts": 5000,
+        "simulation_frames_attempted": 25000,
+        "simulation_completed": 5000,
+        "simulation_frames_completed": 25000,
+        "reset_completed": 50
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 1,
+        "simulation_attempts": 100,
+        "simulation_frames_attempted": 500,
+        "simulation_completed": 100,
+        "simulation_frames_completed": 500,
+        "reset_completed": 1
+      }
+    }
+  },
+  "restore_calls": 0,
+  "capture_wall_ns": 0,
+  "restore_wall_ns": 0,
+  "failure": {
+    "type": "TypeError",
+    "reason": "Object of type ndarray is not JSON serializable"
+  },
+  "policy_queries": 0,
+  "api_calls": 0,
+  "nominal_fits": 0,
+  "selector_fits": 0,
+  "policy_updates": 0,
+  "universal_complete_hidden_state_qualification": false
+}

@@ -1,0 +1,39 @@
+{
+  "status": "PASSED",
+  "tests_run": 13,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "src/analysis/continuous_state_witness_v1.py": "d77f7c107a6f544ecb7ff6a00447024cfb3c3cba5b8a1dfaadc630a22480fdea",
+    "src/analysis/state_capsule_v1.py": "71f376a7c343534cc5742a366aeebfd1302e800bd72d0d62f08e1cc5e0c0fe68",
+    "tests/test_continuous_state_witness_v1.py": "f1bd2113b2bc7ed016b90d56d15192add4bd679172d553379e665fdfddced7bb",
+    "tests/test_state_capsule_v1.py": "2bd7ef298c57f481331e705d31365cccf32a5a8da0ef95a85dc74c8fbbb1e080",
+    "scripts/qualify_continuous_witness_v1.py": "fb57706d67465b8f3627260467cec30812bf037e31d46540add9926fcc980417"
+  },
+  "source_changed_during_run": [],
+  "artifact_sha256": {
+    "native_cost_receipts.json": "a3e266d4237728032c853d29313f78e5d2cca4e70c7dd2d9a43d5ca5c199bfff",
+    "tests.txt": "80c7734babcb6b686cace822d212b9bbcb9ba12fc7ed96c0b15c9e936aaf49e3",
+    "witness_examples.jsonl.gz": "73fbe9c9ea102e7a42217bc35a3fcd4d2f00f023a91d3e51a6c9092f0d80f291",
+    "source_snapshot/scripts/qualify_continuous_witness_v1.py": "fb57706d67465b8f3627260467cec30812bf037e31d46540add9926fcc980417",
+    "source_snapshot/src/analysis/continuous_state_witness_v1.py": "d77f7c107a6f544ecb7ff6a00447024cfb3c3cba5b8a1dfaadc630a22480fdea",
+    "source_snapshot/src/analysis/state_capsule_v1.py": "71f376a7c343534cc5742a366aeebfd1302e800bd72d0d62f08e1cc5e0c0fe68",
+    "source_snapshot/tests/test_continuous_state_witness_v1.py": "f1bd2113b2bc7ed016b90d56d15192add4bd679172d553379e665fdfddced7bb",
+    "source_snapshot/tests/test_state_capsule_v1.py": "2bd7ef298c57f481331e705d31365cccf32a5a8da0ef95a85dc74c8fbbb1e080"
+  },
+  "software_native_costs": {
+    "native_frames": 10,
+    "native_forward_calls": 33,
+    "constructed_tiny_envs": 33,
+    "environment_step_attempts": 2,
+    "policy_queries": 2,
+    "environment_reset_attempts": 0
+  },
+  "new_metaworld_steps": 0,
+  "new_scientific_seeds": 0,
+  "new_api_calls": 0,
+  "wall_ns": 1248524600,
+  "source_was_uncommitted_development": true,
+  "source_git_commit": "eb4b07b29bcf3e5d3e4c5aa2fa5f0827869e5bc9",
+  "scope": "Inspectable graph and exact timing projection software checks; no live MetaWorld qualification or algorithmic utility claim."
+}

@@ -1,0 +1,50 @@
+{
+  "experiment_run_id": "acr_feedback_sufficiency_20260803T031147Z_dc82fef58e26",
+  "manifest_id": "e7ee616e070af571479838f8719be1ff0e6da0e348026d463035e709af4e237a",
+  "source_git_commit": "dc82fef58e2693c0c91ed23a9147964d4177492b",
+  "claim_scope": "development-only audit of repeated first-verification stability and continuous feedback sufficiency",
+  "eligible_initial_states": 30,
+  "first_realization_branches": 120,
+  "nonaccepted_first_branches": 39,
+  "exclusive_second_recovery_branches": 20,
+  "mean_modal_status_share": 0.75,
+  "mixed_status_state_fraction": 0.7,
+  "candidate_winner_reversal_states": 9,
+  "conditional_second_acceptance": {
+    "INCONCLUSIVE": {
+      "cases": 19,
+      "repeat_rate": 0.631578947368421,
+      "switch_rate": 0.21052631578947367
+    },
+    "REJECTED": {
+      "cases": 20,
+      "repeat_rate": 0.6,
+      "switch_rate": 0.6
+    }
+  },
+  "continuous_signal_auc_retry_only": {
+    "first_observed_progress": 0.7976190476190477,
+    "negative_first_final_object_goal_distance": 0.7261904761904762
+  },
+  "cluster_bootstrap_status_rule_difference": {
+    "vs_always_repeat": {
+      "point": 0.0,
+      "low": -0.1794871794871795,
+      "high": 0.1724137931034483
+    },
+    "vs_always_switch": {
+      "point": 0.20512820512820512,
+      "low": 0.058823529411764705,
+      "high": 0.3684210526315789
+    }
+  },
+  "integrity_complete": true,
+  "status_instability_detected": true,
+  "continuous_signal_candidate": true,
+  "selector_authorized": false,
+  "glm_authorized": false,
+  "memory_authorized": false,
+  "validation_authorized": false,
+  "heldout_authorized": false,
+  "api_calls": 0
+}

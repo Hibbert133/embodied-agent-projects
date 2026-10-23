@@ -1,0 +1,58 @@
+{
+  "experiment_run_id": "probe_support_20261013T095304Z_d51c76e77072",
+  "manifest_id": "ef4634bf2dff4f697fcad92854eed53c6adae9842d8c167b92778ae1f77e6ab8",
+  "source_git_commit": "d51c76e7707239bdca17278e213657285efe9f3d",
+  "plans": {
+    "negative_x": {
+      "plan_id": "negative_x",
+      "evidence_id": "fixed_candidate_set",
+      "mechanism_belief": "stable_bias",
+      "family": "bias_compensation",
+      "skill_id": "negative_x",
+      "schedule": "whole",
+      "correction": [
+        -0.2,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_source": "fixed_evaluator_candidate",
+      "requires_fresh_verification": true,
+      "rationale": "predeclared evaluator candidate, not selected from a hidden context"
+    },
+    "zero": {
+      "plan_id": "zero",
+      "evidence_id": "fixed_candidate_set",
+      "mechanism_belief": "stochastic_noise",
+      "family": "stochastic_retry",
+      "skill_id": "zero",
+      "schedule": "whole",
+      "correction": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_source": "fixed_evaluator_candidate",
+      "requires_fresh_verification": true,
+      "rationale": "predeclared evaluator candidate, not selected from a hidden context"
+    },
+    "positive_x": {
+      "plan_id": "positive_x",
+      "evidence_id": "fixed_candidate_set",
+      "mechanism_belief": "stable_bias",
+      "family": "bias_compensation",
+      "skill_id": "positive_x",
+      "schedule": "whole",
+      "correction": [
+        0.2,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "evidence_source": "fixed_evaluator_candidate",
+      "requires_fresh_verification": true,
+      "rationale": "predeclared evaluator candidate, not selected from a hidden context"
+    }
+  }
+}

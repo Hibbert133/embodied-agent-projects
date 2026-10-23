@@ -1,0 +1,1918 @@
+{
+  "CONTINUE_CURRENT": {
+    "status": "COMPLETED",
+    "failure": null,
+    "initial_completed_steps": 100,
+    "completed_steps": 102,
+    "charged_steps": 102,
+    "remaining_budget": 398,
+    "step_attempts": 2,
+    "accepted_step_receipts": 2,
+    "unconfirmed_step_attempts": 0,
+    "policy_queries_attempted": 2,
+    "policy_queries_completed": 2,
+    "last_confirmed_observation": {
+      "observation": [
+        0.40600000023841865,
+        0.5020000000298024,
+        0.19399999976158144,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": false,
+      "truncated": false,
+      "success": true
+    },
+    "choice": {
+      "action_id": "CONTINUE_CURRENT",
+      "at_calls": 100,
+      "boundary_observation": {
+        "observation": [
+          0.4,
+          0.5,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": false
+      },
+      "task": "push-v3",
+      "remaining_budget": 400,
+      "candidate_map": {
+        "CONTINUE_CURRENT": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.1,
+            0.2,
+            0.0,
+            0.0
+          ]
+        },
+        "SWITCH_SAVED": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "RUN_UNCORRECTED": {
+          "source": "UNCORRECTED",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "STOP": null
+      },
+      "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+      "sequence": 0,
+      "saved_ns": 343250928876800
+    },
+    "success": true,
+    "deadline_loss": 102,
+    "events": [
+      {
+        "kind": "CHOICE",
+        "payload": {
+          "action_id": "CONTINUE_CURRENT",
+          "at_calls": 100,
+          "boundary_observation": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "task": "push-v3",
+          "remaining_budget": 400,
+          "candidate_map": {
+            "CONTINUE_CURRENT": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.1,
+                0.2,
+                0.0,
+                0.0
+              ]
+            },
+            "SWITCH_SAVED": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "RUN_UNCORRECTED": {
+              "source": "UNCORRECTED",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "STOP": null
+          },
+          "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+          "sequence": 0,
+          "saved_ns": 343250928876800
+        }
+      },
+      {
+        "kind": "COMMAND",
+        "payload": {
+          "at_calls": 100,
+          "decision_sequence": 0,
+          "command": [
+            0.30000001192092896,
+            0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "raw_policy": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "before": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 1,
+          "saved_ns": 343250931047400
+        }
+      },
+      {
+        "kind": "STEP_RESULT",
+        "payload": {
+          "command_sequence": 1,
+          "at_calls": 101,
+          "after": {
+            "observation": [
+              0.40300000011920933,
+              0.5010000000149012,
+              0.19699999988079073,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 2,
+          "saved_ns": 343250942294500
+        }
+      },
+      {
+        "kind": "COMMAND",
+        "payload": {
+          "at_calls": 101,
+          "decision_sequence": 0,
+          "command": [
+            0.30000001192092896,
+            0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "raw_policy": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "before": {
+            "observation": [
+              0.40300000011920933,
+              0.5010000000149012,
+              0.19699999988079073,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 3,
+          "saved_ns": 343250944107100
+        }
+      },
+      {
+        "kind": "STEP_RESULT",
+        "payload": {
+          "command_sequence": 3,
+          "at_calls": 102,
+          "after": {
+            "observation": [
+              0.40600000023841865,
+              0.5020000000298024,
+              0.19399999976158144,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": true
+          },
+          "sequence": 4,
+          "saved_ns": 343250952580000
+        }
+      }
+    ]
+  },
+  "SWITCH_SAVED": {
+    "status": "COMPLETED",
+    "failure": null,
+    "initial_completed_steps": 100,
+    "completed_steps": 102,
+    "charged_steps": 102,
+    "remaining_budget": 398,
+    "step_attempts": 2,
+    "accepted_step_receipts": 2,
+    "unconfirmed_step_attempts": 0,
+    "policy_queries_attempted": 2,
+    "policy_queries_completed": 2,
+    "last_confirmed_observation": {
+      "observation": [
+        0.4020000000298023,
+        0.5040000000596045,
+        0.19399999976158144,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": false,
+      "truncated": false,
+      "success": true
+    },
+    "choice": {
+      "action_id": "SWITCH_SAVED",
+      "at_calls": 100,
+      "boundary_observation": {
+        "observation": [
+          0.4,
+          0.5,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": false
+      },
+      "task": "push-v3",
+      "remaining_budget": 400,
+      "candidate_map": {
+        "CONTINUE_CURRENT": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.1,
+            0.2,
+            0.0,
+            0.0
+          ]
+        },
+        "SWITCH_SAVED": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "RUN_UNCORRECTED": {
+          "source": "UNCORRECTED",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "STOP": null
+      },
+      "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+      "sequence": 0,
+      "saved_ns": 343250955088800
+    },
+    "success": true,
+    "deadline_loss": 102,
+    "events": [
+      {
+        "kind": "CHOICE",
+        "payload": {
+          "action_id": "SWITCH_SAVED",
+          "at_calls": 100,
+          "boundary_observation": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "task": "push-v3",
+          "remaining_budget": 400,
+          "candidate_map": {
+            "CONTINUE_CURRENT": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.1,
+                0.2,
+                0.0,
+                0.0
+              ]
+            },
+            "SWITCH_SAVED": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "RUN_UNCORRECTED": {
+              "source": "UNCORRECTED",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "STOP": null
+          },
+          "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+          "sequence": 0,
+          "saved_ns": 343250955088800
+        }
+      },
+      {
+        "kind": "COMMAND",
+        "payload": {
+          "at_calls": 100,
+          "decision_sequence": 0,
+          "command": [
+            0.10000000149011612,
+            0.20000000298023224,
+            -0.30000001192092896,
+            0.0
+          ],
+          "raw_policy": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "before": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 1,
+          "saved_ns": 343250956839900
+        }
+      },
+      {
+        "kind": "STEP_RESULT",
+        "payload": {
+          "command_sequence": 1,
+          "at_calls": 101,
+          "after": {
+            "observation": [
+              0.40100000001490116,
+              0.5020000000298023,
+              0.19699999988079073,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 2,
+          "saved_ns": 343250966769300
+        }
+      },
+      {
+        "kind": "COMMAND",
+        "payload": {
+          "at_calls": 101,
+          "decision_sequence": 0,
+          "command": [
+            0.10000000149011612,
+            0.20000000298023224,
+            -0.30000001192092896,
+            0.0
+          ],
+          "raw_policy": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "before": {
+            "observation": [
+              0.40100000001490116,
+              0.5020000000298023,
+              0.19699999988079073,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 3,
+          "saved_ns": 343250968087700
+        }
+      },
+      {
+        "kind": "STEP_RESULT",
+        "payload": {
+          "command_sequence": 3,
+          "at_calls": 102,
+          "after": {
+            "observation": [
+              0.4020000000298023,
+              0.5040000000596045,
+              0.19399999976158144,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": true
+          },
+          "sequence": 4,
+          "saved_ns": 343250976126600
+        }
+      }
+    ]
+  },
+  "RUN_UNCORRECTED": {
+    "status": "COMPLETED",
+    "failure": null,
+    "initial_completed_steps": 100,
+    "completed_steps": 102,
+    "charged_steps": 102,
+    "remaining_budget": 398,
+    "step_attempts": 2,
+    "accepted_step_receipts": 2,
+    "unconfirmed_step_attempts": 0,
+    "policy_queries_attempted": 2,
+    "policy_queries_completed": 2,
+    "last_confirmed_observation": {
+      "observation": [
+        0.4040000000596047,
+        0.4979999999701977,
+        0.19399999976158144,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": false,
+      "truncated": false,
+      "success": true
+    },
+    "choice": {
+      "action_id": "RUN_UNCORRECTED",
+      "at_calls": 100,
+      "boundary_observation": {
+        "observation": [
+          0.4,
+          0.5,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": false
+      },
+      "task": "push-v3",
+      "remaining_budget": 400,
+      "candidate_map": {
+        "CONTINUE_CURRENT": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.1,
+            0.2,
+            0.0,
+            0.0
+          ]
+        },
+        "SWITCH_SAVED": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "RUN_UNCORRECTED": {
+          "source": "UNCORRECTED",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "STOP": null
+      },
+      "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+      "sequence": 0,
+      "saved_ns": 343250978263400
+    },
+    "success": true,
+    "deadline_loss": 102,
+    "events": [
+      {
+        "kind": "CHOICE",
+        "payload": {
+          "action_id": "RUN_UNCORRECTED",
+          "at_calls": 100,
+          "boundary_observation": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "task": "push-v3",
+          "remaining_budget": 400,
+          "candidate_map": {
+            "CONTINUE_CURRENT": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.1,
+                0.2,
+                0.0,
+                0.0
+              ]
+            },
+            "SWITCH_SAVED": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "RUN_UNCORRECTED": {
+              "source": "UNCORRECTED",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "STOP": null
+          },
+          "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+          "sequence": 0,
+          "saved_ns": 343250978263400
+        }
+      },
+      {
+        "kind": "COMMAND",
+        "payload": {
+          "at_calls": 100,
+          "decision_sequence": 0,
+          "command": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "raw_policy": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "before": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 1,
+          "saved_ns": 343250980085000
+        }
+      },
+      {
+        "kind": "STEP_RESULT",
+        "payload": {
+          "command_sequence": 1,
+          "at_calls": 101,
+          "after": {
+            "observation": [
+              0.40200000002980235,
+              0.49899999998509886,
+              0.19699999988079073,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 2,
+          "saved_ns": 343250989772700
+        }
+      },
+      {
+        "kind": "COMMAND",
+        "payload": {
+          "at_calls": 101,
+          "decision_sequence": 0,
+          "command": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "raw_policy": [
+            0.20000000298023224,
+            -0.10000000149011612,
+            -0.30000001192092896,
+            0.0
+          ],
+          "before": {
+            "observation": [
+              0.40200000002980235,
+              0.49899999998509886,
+              0.19699999988079073,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "sequence": 3,
+          "saved_ns": 343250991122500
+        }
+      },
+      {
+        "kind": "STEP_RESULT",
+        "payload": {
+          "command_sequence": 3,
+          "at_calls": 102,
+          "after": {
+            "observation": [
+              0.4040000000596047,
+              0.4979999999701977,
+              0.19399999976158144,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": true
+          },
+          "sequence": 4,
+          "saved_ns": 343250999570800
+        }
+      }
+    ]
+  },
+  "STOP": {
+    "status": "STOPPED",
+    "failure": null,
+    "initial_completed_steps": 100,
+    "completed_steps": 100,
+    "charged_steps": 100,
+    "remaining_budget": 400,
+    "step_attempts": 0,
+    "accepted_step_receipts": 0,
+    "unconfirmed_step_attempts": 0,
+    "policy_queries_attempted": 0,
+    "policy_queries_completed": 0,
+    "last_confirmed_observation": {
+      "observation": [
+        0.4,
+        0.5,
+        0.2,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "terminated": false,
+      "truncated": false,
+      "success": false
+    },
+    "choice": {
+      "action_id": "STOP",
+      "at_calls": 100,
+      "boundary_observation": {
+        "observation": [
+          0.4,
+          0.5,
+          0.2,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "terminated": false,
+        "truncated": false,
+        "success": false
+      },
+      "task": "push-v3",
+      "remaining_budget": 400,
+      "candidate_map": {
+        "CONTINUE_CURRENT": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.1,
+            0.2,
+            0.0,
+            0.0
+          ]
+        },
+        "SWITCH_SAVED": {
+          "source": "ESTIMATED_AFFINE",
+          "matrix_xy": [
+            [
+              0.0,
+              -1.0
+            ],
+            [
+              1.0,
+              0.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "RUN_UNCORRECTED": {
+          "source": "UNCORRECTED",
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "STOP": null
+      },
+      "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+      "sequence": 0,
+      "saved_ns": 343251001776300
+    },
+    "success": false,
+    "deadline_loss": 500,
+    "events": [
+      {
+        "kind": "CHOICE",
+        "payload": {
+          "action_id": "STOP",
+          "at_calls": 100,
+          "boundary_observation": {
+            "observation": [
+              0.4,
+              0.5,
+              0.2,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "terminated": false,
+            "truncated": false,
+            "success": false
+          },
+          "task": "push-v3",
+          "remaining_budget": 400,
+          "candidate_map": {
+            "CONTINUE_CURRENT": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.1,
+                0.2,
+                0.0,
+                0.0
+              ]
+            },
+            "SWITCH_SAVED": {
+              "source": "ESTIMATED_AFFINE",
+              "matrix_xy": [
+                [
+                  0.0,
+                  -1.0
+                ],
+                [
+                  1.0,
+                  0.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "RUN_UNCORRECTED": {
+              "source": "UNCORRECTED",
+              "matrix_xy": [
+                [
+                  1.0,
+                  0.0
+                ],
+                [
+                  0.0,
+                  1.0
+                ]
+              ],
+              "offset": [
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "STOP": null
+          },
+          "candidate_map_sha256": "0ac49a4986203642b75548c2d063f42bdabb741964b14235eda6c2031818e5e9",
+          "sequence": 0,
+          "saved_ns": 343251001776300
+        }
+      }
+    ]
+  }
+}

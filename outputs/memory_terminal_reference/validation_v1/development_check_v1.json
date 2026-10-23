@@ -1,0 +1,19 @@
+{
+  "classification": "KNOWN_FINITE_MODEL_DEVELOPMENT_CHECK_BEFORE_FREEZE",
+  "observed_atom_count": 44,
+  "settings_inspected": 48,
+  "estimator_calls_in_precheck": 2112,
+  "all_40_stagewise_correct_differences_inspected_below_1e_minus_9": true,
+  "both_wrong_biases_inspected_and_not_deleted": 8,
+  "dedicated_wall_ns": null,
+  "wall_missing_reason": "Earlier development exec printed arithmetic results but did not persist a dedicated monotonic timer",
+  "not_unseen_or_robot_data": true,
+  "source_files_unchanged_since_development_check": {
+    "src/probe/task_memory_option_v1.py": "c60ce1f746bd525e1a61795a8e2204c7e84b3496b832fb647a81ac637d2ffe20",
+    "src/analysis/two_stage_terminal_dr_v1.py": "e998953a596a3ad98e9fd40018419769208b5078b71f31bb83da35951585b184",
+    "src/analysis/memory_terminal_world_v1.py": "e291bc2317e5d486b184d8174e20725c1ad04de3cf73bfe309fb0e9f08f88024"
+  },
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "new_online_LLM_API_calls": 0
+}

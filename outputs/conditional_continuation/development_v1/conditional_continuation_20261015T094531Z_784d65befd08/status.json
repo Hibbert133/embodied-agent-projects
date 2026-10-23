@@ -1,0 +1,45 @@
+{
+  "experiment_run_id": "conditional_continuation_20261015T094531Z_784d65befd08",
+  "manifest_id": "61d70c7c4fc14b2f0841bb8a549b2d2d320c828e14bd1c5328273b307dbdb46f",
+  "source_git_commit": "784d65befd089da29f002869c38c9936b9b6ee02",
+  "status": "COMPLETED_CONDITIONAL_CONTINUATION",
+  "episodes": 672,
+  "controlled_steps": 101069,
+  "controlled_resets": 672,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 34272,
+      "simulation_attempts": 3528269,
+      "simulation_frames_attempted": 17641345,
+      "simulation_completed": 3528269,
+      "simulation_frames_completed": 17641345,
+      "reset_completed": 34272
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 33600,
+        "simulation_attempts": 3360000,
+        "simulation_frames_attempted": 16800000,
+        "simulation_completed": 3360000,
+        "simulation_frames_completed": 16800000,
+        "reset_completed": 33600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 672,
+        "simulation_attempts": 67200,
+        "simulation_frames_attempted": 336000,
+        "simulation_completed": 67200,
+        "simulation_frames_completed": 336000,
+        "reset_completed": 672
+      },
+      "CONTROL": {
+        "simulation_attempts": 101069,
+        "simulation_frames_attempted": 505345,
+        "simulation_completed": 101069,
+        "simulation_frames_completed": 505345
+      }
+    }
+  }
+}

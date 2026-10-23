@@ -1,0 +1,58 @@
+{
+  "experiment_run_id": "latent_response_20261022T190735Z_e4410b8985e3",
+  "manifest_id": "f2bd7849340ebd46a45ab45fce1dcd39c9aa85818b014b18c6a1fa79696c7650",
+  "source_git_commit": "e4410b8985e383f8429e00bb9e577c99df129ea8",
+  "split": "QUAL",
+  "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+  "executions": 432,
+  "control_steps": 30758,
+  "events": 250252,
+  "private_target_records": 62380,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 22032,
+      "simulation_attempts": 2233958,
+      "simulation_frames_attempted": 11169790,
+      "simulation_completed": 2233958,
+      "simulation_frames_completed": 11169790,
+      "reset_completed": 22032
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 21600,
+        "simulation_attempts": 2160000,
+        "simulation_frames_attempted": 10800000,
+        "simulation_completed": 2160000,
+        "simulation_frames_completed": 10800000,
+        "reset_completed": 21600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 432,
+        "simulation_attempts": 43200,
+        "simulation_frames_attempted": 216000,
+        "simulation_completed": 43200,
+        "simulation_frames_completed": 216000,
+        "reset_completed": 432
+      },
+      "CONTROL": {
+        "simulation_attempts": 30758,
+        "simulation_frames_attempted": 153790,
+        "simulation_completed": 30758,
+        "simulation_frames_completed": 153790
+      }
+    }
+  },
+  "failure": null,
+  "network_guard": {
+    "attempted_network_calls": 0
+  },
+  "fitting_guard": {
+    "attempted_fits": 0
+  },
+  "model_sha256": "eef1248354af181d2cb965de5fd3f5550fa39d9502758da6db97241672b801b4",
+  "started_unix_ns": 1792697853627089500,
+  "wall_ns": 1063937293200,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "full_task_tail_evaluated": false
+}

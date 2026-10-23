@@ -1,0 +1,127 @@
+{
+  "experiment_run_id": "acr_distributional_v2_20260802T131001Z_6178437d677a",
+  "manifest_id": "5521614e7dbaf2acc2e7fbe0c7c96051754d6a581459a0d4b1bb1e131b2bb7c4",
+  "source_git_commit": "6178437d677aff08c16bd506b82f9aac01890095",
+  "claim_scope": "development-only chronological replay of action-outcome distributions and abstention",
+  "operational_cases": 40,
+  "method_summaries": {
+    "always_compensation": {
+      "experiment_run_id": "acr_distributional_v2_20260802T131001Z_6178437d677a",
+      "manifest_id": "5521614e7dbaf2acc2e7fbe0c7c96051754d6a581459a0d4b1bb1e131b2bb7c4",
+      "method": "always_compensation",
+      "episodes": 40,
+      "accepted_cases": 20,
+      "accepted_rate": 0.5,
+      "post_exploration_accepted_cases": 15,
+      "post_exploration_coverage": 1.0,
+      "covered_accepted_precision": 0.5,
+      "post_exploration_covered_precision": 0.46875,
+      "harmful_transfer_cases": 11,
+      "missed_recoverable_abstentions": 0,
+      "abstentions": 0,
+      "mean_total_additional_steps": 389.725,
+      "total_additional_steps": 15589,
+      "selected_accept_brier": 0.26913206472596535
+    },
+    "always_retry": {
+      "experiment_run_id": "acr_distributional_v2_20260802T131001Z_6178437d677a",
+      "manifest_id": "5521614e7dbaf2acc2e7fbe0c7c96051754d6a581459a0d4b1bb1e131b2bb7c4",
+      "method": "always_retry",
+      "episodes": 40,
+      "accepted_cases": 24,
+      "accepted_rate": 0.6,
+      "post_exploration_accepted_cases": 19,
+      "post_exploration_coverage": 1.0,
+      "covered_accepted_precision": 0.6,
+      "post_exploration_covered_precision": 0.59375,
+      "harmful_transfer_cases": 7,
+      "missed_recoverable_abstentions": 0,
+      "abstentions": 0,
+      "mean_total_additional_steps": 341.7,
+      "total_additional_steps": 13668,
+      "selected_accept_brier": 0.262883010258494
+    },
+    "accepted_only_last": {
+      "experiment_run_id": "acr_distributional_v2_20260802T131001Z_6178437d677a",
+      "manifest_id": "5521614e7dbaf2acc2e7fbe0c7c96051754d6a581459a0d4b1bb1e131b2bb7c4",
+      "method": "accepted_only_last",
+      "episodes": 40,
+      "accepted_cases": 22,
+      "accepted_rate": 0.55,
+      "post_exploration_accepted_cases": 19,
+      "post_exploration_coverage": 1.0,
+      "covered_accepted_precision": 0.55,
+      "post_exploration_covered_precision": 0.59375,
+      "harmful_transfer_cases": 9,
+      "missed_recoverable_abstentions": 0,
+      "abstentions": 0,
+      "mean_total_additional_steps": 358.575,
+      "total_additional_steps": 14343,
+      "selected_accept_brier": 0.26259769427770985
+    },
+    "posterior_greedy": {
+      "experiment_run_id": "acr_distributional_v2_20260802T131001Z_6178437d677a",
+      "manifest_id": "5521614e7dbaf2acc2e7fbe0c7c96051754d6a581459a0d4b1bb1e131b2bb7c4",
+      "method": "posterior_greedy",
+      "episodes": 40,
+      "accepted_cases": 22,
+      "accepted_rate": 0.55,
+      "post_exploration_accepted_cases": 19,
+      "post_exploration_coverage": 1.0,
+      "covered_accepted_precision": 0.55,
+      "post_exploration_covered_precision": 0.59375,
+      "harmful_transfer_cases": 9,
+      "missed_recoverable_abstentions": 0,
+      "abstentions": 0,
+      "mean_total_additional_steps": 358.575,
+      "total_additional_steps": 14343,
+      "selected_accept_brier": 0.26259769427770985
+    },
+    "posterior_abstain": {
+      "experiment_run_id": "acr_distributional_v2_20260802T131001Z_6178437d677a",
+      "manifest_id": "5521614e7dbaf2acc2e7fbe0c7c96051754d6a581459a0d4b1bb1e131b2bb7c4",
+      "method": "posterior_abstain",
+      "episodes": 40,
+      "accepted_cases": 3,
+      "accepted_rate": 0.075,
+      "post_exploration_accepted_cases": 0,
+      "post_exploration_coverage": 0.0,
+      "covered_accepted_precision": 0.375,
+      "post_exploration_covered_precision": null,
+      "harmful_transfer_cases": 4,
+      "missed_recoverable_abstentions": 24,
+      "abstentions": 32,
+      "mean_total_additional_steps": 133.3,
+      "total_additional_steps": 5332,
+      "selected_accept_brier": 0.2732638888888889
+    }
+  },
+  "paired_bootstrap_accepted_difference": {
+    "posterior_greedy_minus_accepted_only_last": {
+      "point": 0.0,
+      "low": 0.0,
+      "high": 0.0
+    },
+    "posterior_abstain_minus_accepted_only_last": {
+      "point": -0.475,
+      "low": -0.625,
+      "high": -0.325
+    }
+  },
+  "promotion_routes": {
+    "posterior_greedy": false,
+    "posterior_abstain": false,
+    "abstain_harmful_transfer_relative_reduction": 0.5555555555555556,
+    "abstain_post_exploration_precision_gain": null
+  },
+  "integrity": {
+    "chronology_violations": 0,
+    "oracle_leakage_events": 0,
+    "current_outcome_predecision_reads": 0
+  },
+  "promotion_gate_passed": false,
+  "llm_authorized": false,
+  "validation_authorized": false,
+  "heldout_authorized": false,
+  "api_calls": 0
+}

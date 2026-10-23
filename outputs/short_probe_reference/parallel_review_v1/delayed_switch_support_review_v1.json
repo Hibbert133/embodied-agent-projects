@@ -1,0 +1,57 @@
+{
+  "review": "delayed_switch_support_review_v1",
+  "status": "PASSED",
+  "created_utc": "2026-10-19T06:07:52.095477+00:00",
+  "numeric_curve_fields_checked": 4428,
+  "integer_boundaries_checked": 492,
+  "all_pairs_checked": 1024,
+  "source_event_lines_scanned": 3656705,
+  "saved_choices_checked": 4096,
+  "policy_commands_checked": 187296,
+  "checkpoint_observations_checked": 180,
+  "both_live_hand_positions_different": 36,
+  "hand_position_distance_min_max_m": [
+    0.0031113060790078704,
+    0.27888883611267545
+  ],
+  "abstract_two_world_witness_checked": true,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_fits": 0,
+  "new_full_policy_queries": 0,
+  "local_report_links_checked": 8,
+  "new_text_secret_and_whitespace_scan": "passed",
+  "syntax_compilation": "passed",
+  "git_diff_check": "passed",
+  "frozen_main_inputs_unchanged": 810,
+  "source_git_commit_unchanged": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "tracked_tree_and_index_clean": true,
+  "current_main_partial_performance_read": false,
+  "primary_sources_read": [
+    {
+      "title": "Doubly Robust Off-policy Value Evaluation for Reinforcement Learning",
+      "authors": "Nan Jiang; Lihong Li",
+      "year": 2016,
+      "url": "https://proceedings.mlr.press/v48/jiang16.pdf",
+      "scope": "Official publication metadata and PDF section 3.2, regression and importance sampling equations; no complete algorithm reproduction."
+    },
+    {
+      "title": "Safe Policy Improvement with Baseline Bootstrapping",
+      "authors": "Romain Laroche; Paul Trichelair; Remi Tachet des Combes",
+      "year": 2019,
+      "url": "https://proceedings.mlr.press/v97/laroche19a/laroche19a.pdf",
+      "scope": "Official publication metadata and PDF finite-MDP setup, sections 2.2-2.3, Theorem 2; no full reproduction or automatic transfer of guarantees."
+    }
+  ],
+  "artifact_sha256": {
+    "docs/paper/delayed_switch_support_and_next_measurement_20261019_zh.md": "c99b061b155c9cec4a5f9935be3ee91a1bd2d5b93149830f1db0f51f9acfa5c6",
+    "docs/paper/audit_delayed_switch_support_20261019.py": "3fa22d303b6038eff1e5d621ea58fd2458808918c9cc4754b2ea3d3e6f8acbd6",
+    "outputs/reproduction_reviews/paired_probe_v1/delayed_switch_support_v1/availability_by_step.csv": "95df8e1c40a0cba15b92b3a9965da82885fff0ab8e14550f9313f9f354394a99",
+    "outputs/reproduction_reviews/paired_probe_v1/delayed_switch_support_v1/checkpoint100_observations.json": "04feff45462da5c55036e27a28309315fa2889a6836215d29c76c64ab5f5d04d",
+    "outputs/reproduction_reviews/paired_probe_v1/delayed_switch_support_v1/checkpoint100_pairs.csv": "ea985035afecec43ddd9333ed72a84e74764d09579cc8bad62ec699e921a2c46",
+    "outputs/reproduction_reviews/paired_probe_v1/delayed_switch_support_v1/receipt.json": "240ecf4e84d6943eccc1376457663c15a5ff2b07243c897ed333199c6da25b7d",
+    "outputs/reproduction_reviews/paired_probe_v1/delayed_switch_support_v1/summary.json": "e8ff2cec0cc87e3c3920664a8be511ae0cf15e885094181ad56669e1a7ed6ac1"
+  },
+  "review_wall_ns": 34741849200,
+  "scope": "Whole-population availability and actual saved-choice support; unsupported delayed-switch utility remains unestimated."
+}

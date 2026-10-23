@@ -1,0 +1,127 @@
+{
+  "status": "PASSED_RECORD_DELIVERY_PID_EXECUTION_NOT_QUALIFIED",
+  "created_utc": "2026-10-19T13:36:55.409186+00:00",
+  "source_commit": "8014d27d424a0ca59d61971ea66ea9b440c8e9eb",
+  "manifest_id": "2406a8e68db6e603bd85443b0587354cf9f3f4d78a787b3de096a0323e3c405e",
+  "integrity": "PASSED",
+  "qualification": "NOT_QUALIFIED",
+  "executions": 36,
+  "paired_units": 9,
+  "complete_windows": {
+    "UNCHANGED_PD": 6,
+    "UNCHANGED_PID": 5,
+    "CHANGED_PD": 0,
+    "CHANGED_PID": 2
+  },
+  "new_control_steps": 2973,
+  "new_api_calls": 0,
+  "tests_reused": {
+    "passed": 1244,
+    "reason": "All frozen scientific code, configuration, protocols and tests verified unchanged; only recorded outputs and read-only diagnosis added",
+    "receipt": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 350416735400,
+      "output_sha256": "4d78fee2be698c0862ca7e6df62cbef7ce66ef47346ba637d9795e85cd9ef572",
+      "created_utc": "2026-10-19T13:22:41.468520+00:00",
+      "source_sha256": "04794b9f59a3d3f17735f8942785e811bf585775875ffd199ab696e3703dc736"
+    }
+  },
+  "checks": {
+    "cached_diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 75106300,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "compileall": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 983297200,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "diagnostics_compile": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "docs/paper/diagnose_integral_reprobe_entries_20261019.py"
+      ],
+      "returncode": 0,
+      "wall_ns": 86371500,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 37723300,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pip_check": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 877885000,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    "report_compile": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "docs/paper/report_integral_reprobe_qualification_20261019.py"
+      ],
+      "returncode": 0,
+      "wall_ns": 129110500,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tracked_secret_scan": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 54176433800,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    }
+  },
+  "verified_analysis_inputs": 1103,
+  "verified_frozen_review_files": 32,
+  "visual_review": "Both Chinese 3x3 plots inspected; all nine units per condition, common axes, labels and full curves visible",
+  "strict_scan_sha256": "40d5a3d5e638ee29443f14a6d76260ea25ca03cc9e9b0f206f42bbe53af526cd",
+  "analysis_receipt_sha256": "f352db11bbaaa6f4253b1e78c8a315ccfd93c7324309593fbae675cf1d746f95",
+  "diagnostic_receipt_sha256": "16bc5e66c075a62c63e644bf04ed2c62fe09778009cfa6d783facf5ac6269cd0",
+  "new_simulation_during_delivery": 0,
+  "scope": "Partial integral-control benefit and regression retained; no task utility or measurement-model qualification; publication goal incomplete"
+}

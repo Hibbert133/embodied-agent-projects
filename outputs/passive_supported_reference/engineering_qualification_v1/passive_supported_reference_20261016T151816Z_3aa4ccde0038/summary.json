@@ -1,0 +1,57 @@
+{
+  "experiment_run_id": "passive_supported_reference_20261016T151816Z_3aa4ccde0038",
+  "manifest_id": "3527f4291668f678ba5372ee2034f8dfd7767aad53390b6d77ef7d8c5dd55b6f",
+  "source_git_commit": "3aa4ccde00384fb4676f6bcc77950bf50980e624",
+  "artifact_type": "SOFTWARE_TEST_FIXTURES_NOT_METAWORLD",
+  "control_flow_integrity": "PASSED",
+  "cases": 5,
+  "audits": [
+    {
+      "case_id": "valid_fit_changes_commands",
+      "control_flow_integrity": "PASSED",
+      "events_checked": 55,
+      "physical_host_qualified": false,
+      "shared_components": "numerical ARX fitter, encoder and strict cache schema"
+    },
+    {
+      "case_id": "invalid_fit_keeps_owned_cache",
+      "control_flow_integrity": "PASSED",
+      "events_checked": 55,
+      "physical_host_qualified": false,
+      "shared_components": "numerical ARX fitter, encoder and strict cache schema"
+    },
+    {
+      "case_id": "later_invalid_keeps_current_update",
+      "control_flow_integrity": "PASSED",
+      "events_checked": 208,
+      "physical_host_qualified": false,
+      "shared_components": "numerical ARX fitter, encoder and strict cache schema"
+    },
+    {
+      "case_id": "budget_cap",
+      "control_flow_integrity": "PASSED",
+      "events_checked": 1033,
+      "physical_host_qualified": false,
+      "shared_components": "numerical ARX fitter, encoder and strict cache schema"
+    },
+    {
+      "case_id": "failure_clears_cache",
+      "control_flow_integrity": "PASSED",
+      "events_checked": 27,
+      "physical_host_qualified": false,
+      "shared_components": "numerical ARX fitter, encoder and strict cache schema"
+    }
+  ],
+  "test_callback_steps": 664,
+  "test_fit_attempts": 40,
+  "test_optimizer_nfev": 5,
+  "test_policy_queries": 664,
+  "audit_policy_queries": 664,
+  "new_scientific_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_nominal_model_fits": 0,
+  "physical_host_qualified": false,
+  "robotic_task_result": false,
+  "new_algorithm_established": false,
+  "scope": "Synthetic software callbacks and saved-control-flow replay only; shared numerical fitter, encoder and cache schema. Not robot success or utility."
+}

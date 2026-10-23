@@ -1,0 +1,40 @@
+{
+  "protocol_id": "oracle_inverse_error_attribution_v1",
+  "sources": [
+    {
+      "id": "DISCOVERY_REUSE",
+      "manifest_path": "outputs/conditional_continuation/development_v1/conditional_continuation_20261015T094531Z_784d65befd08/manifest.json",
+      "manifest_sha256": "17b492ef82127ec5a35926966c8ce72560f2e4a20ba8124201e7cf453a6b2208",
+      "audit_path": "outputs/conditional_continuation/analysis_v1/audit.json",
+      "audit_sha256": "97d02d280cf378ca8479a3c4864bd27c56a4ce00f27a10cc0659cc087307e303",
+      "streams": 8,
+      "futures": 4,
+      "source_episodes": 672,
+      "source_steps": 101069
+    },
+    {
+      "id": "LATER_REUSE",
+      "manifest_path": "outputs/continuation_selector/development_v1/causal_continuation_20261015T104523Z_68da2c7ef160/manifest.json",
+      "manifest_sha256": "da899d250459b2174c78ab716e2b1c262c0bf4e3dce1afa6c58b6d0ed320654d",
+      "audit_path": "outputs/continuation_selector/analysis_v1/audit.json",
+      "audit_sha256": "76cb42e04eb7b4a44099abf487f1abbc90bf776c7b03f6947d9fe567e6dbb705",
+      "streams": 16,
+      "futures": 2,
+      "source_episodes": 1152,
+      "source_steps": 133450
+    }
+  ],
+  "tasks": ["push-v3", "reach-v3", "door-open-v3"],
+  "methods_used": ["DIRECT_G8", "PASSIVE_G16"],
+  "prefix_boundaries": [8, 16],
+  "expected_pairs": 192,
+  "forward_model_sha256": "b3f2d7e69316dba65e722d74d49df25c7d651043e78bf4c0f6e1d37f1e599c80",
+  "new_environment_steps": 0,
+  "api_calls": 0,
+  "controller_fits": 0,
+  "source_bank_steps": 234519,
+  "source_bank_resets": 1824,
+  "nominal_source_steps": 21010,
+  "nominal_source_resets": 288,
+  "output_root": "outputs/inverse_error_attribution/development_v1"
+}

@@ -1,0 +1,56 @@
+{
+  "status": "PASSED",
+  "tests_run": 11,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "scripts/qualify_delayed_audit_software_v1.py": "5cfc68f6c7a197fad2a3765f8430b9674d99484b40f96d74dafdb201b6d4da42",
+    "scripts/qualify_delayed_intervention_v1.py": "12d1b1487927ca2d5197ffdb8066018c899dc3c7bd78675b5104cbfd1ba03e89",
+    "scripts/audit_delayed_intervention_v1.py": "047a5850670d4aff19ca4857ed5d6b1d91dfe4c094441641625e6a8eb2f18ac2",
+    "src/analysis/delayed_qualification_io_v1.py": "55cec5a125417b356b97c9b32206a2c710230064ef7af0661c655600709c5841",
+    "tests/test_delayed_intervention_qualification_v1.py": "5f4c3132e222eef7f763c3532efe21ae7029122eb9306dc0221ec1ea376c795a",
+    "configs/delayed_intervention/qualification_v1.json": "2ee2a1d87070e907153a4292fa39cd7922439669fc859159f439c8a165a50325",
+    "docs/prototypes/delayed_intervention_v1/boundary_prefix.py": "99ed9c1674b8102ddac8f1ffc8f6f99588450e56001d62a2b269110b4f60ed17",
+    "docs/prototypes/delayed_intervention_v1/boundary_host.py": "82b24687acd20fe125fbd7b09a8d0999eff74e82f05f9ac6bb4fe9066843c9bc",
+    "docs/prototypes/delayed_intervention_v1/controller.py": "5c107ac655f20355d864297dcc94351ea4e10f85bfe6454f4852209c87398097",
+    "docs/prototypes/delayed_intervention_v1/session_adapter.py": "7496604bbb866f278cd80481c0042eb7f72447f011ec15eee564dc93492cd5db"
+  },
+  "source_changed_during_tests": [],
+  "artifact_sha256": {
+    "native_cost_receipts.json": "10ef398cbf114f55d8c93f40dcb7df3a35bdd3569a26426e8c9ed5c34a029cc4",
+    "native_packets.jsonl.gz": "1a51000a83999ce7fd75708e08569113ec5da716af5473190e60f68e3e70073e",
+    "pipeline_receipts.json": "51032ee1c64ea578689a9be0d7b599e03697df0d7822dd550ea5691a92f846bc",
+    "tests.txt": "c79980f30287aeb43411c5c519dfc0a155819d552a22d2f2207e14808796bc65",
+    "source_snapshot/configs/delayed_intervention/qualification_v1.json": "2ee2a1d87070e907153a4292fa39cd7922439669fc859159f439c8a165a50325",
+    "source_snapshot/docs/prototypes/delayed_intervention_v1/boundary_host.py": "82b24687acd20fe125fbd7b09a8d0999eff74e82f05f9ac6bb4fe9066843c9bc",
+    "source_snapshot/docs/prototypes/delayed_intervention_v1/boundary_prefix.py": "99ed9c1674b8102ddac8f1ffc8f6f99588450e56001d62a2b269110b4f60ed17",
+    "source_snapshot/docs/prototypes/delayed_intervention_v1/controller.py": "5c107ac655f20355d864297dcc94351ea4e10f85bfe6454f4852209c87398097",
+    "source_snapshot/docs/prototypes/delayed_intervention_v1/session_adapter.py": "7496604bbb866f278cd80481c0042eb7f72447f011ec15eee564dc93492cd5db",
+    "source_snapshot/scripts/audit_delayed_intervention_v1.py": "047a5850670d4aff19ca4857ed5d6b1d91dfe4c094441641625e6a8eb2f18ac2",
+    "source_snapshot/scripts/qualify_delayed_audit_software_v1.py": "5cfc68f6c7a197fad2a3765f8430b9674d99484b40f96d74dafdb201b6d4da42",
+    "source_snapshot/scripts/qualify_delayed_intervention_v1.py": "12d1b1487927ca2d5197ffdb8066018c899dc3c7bd78675b5104cbfd1ba03e89",
+    "source_snapshot/src/analysis/delayed_qualification_io_v1.py": "55cec5a125417b356b97c9b32206a2c710230064ef7af0661c655600709c5841",
+    "source_snapshot/tests/test_delayed_intervention_qualification_v1.py": "5f4c3132e222eef7f763c3532efe21ae7029122eb9306dc0221ec1ea376c795a"
+  },
+  "native_fixture_instances": 15,
+  "native_software_costs": {
+    "native_frames": 386125,
+    "actual_policy_calls": 617,
+    "host_attempts": 725,
+    "host_returned": 724,
+    "captures": 0,
+    "restores": 0,
+    "all_reset_completed": 765
+  },
+  "pipeline_native_costs": {
+    "native_frames": 384180,
+    "actual_policy_calls": 216
+  },
+  "source_git_commit": "b91a932b80c18d12fd20db96a032d3cd1c8ccc63",
+  "source_was_uncommitted_development": true,
+  "wall_ns": 13052016300,
+  "new_metaworld_task_steps": 0,
+  "new_scientific_task_seeds": 0,
+  "new_api_calls": 0,
+  "scope": "Tiny native physics with mocked estimators and synthetic fixed policy/ending rules; not MetaWorld qualification or task benefit."
+}

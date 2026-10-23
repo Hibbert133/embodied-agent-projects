@@ -1,0 +1,56 @@
+test_closed_transport_binds_raw_estimates_and_audits (__main__.ReportChecks.test_closed_transport_binds_raw_estimates_and_audits) ... ERROR
+test_failed_train_has_no_invented_qualification (__main__.ReportChecks.test_failed_train_has_no_invented_qualification) ... ERROR
+test_no_report_before_numeric_audit_or_after_source_changes (__main__.ReportChecks.test_no_report_before_numeric_audit_or_after_source_changes) ... ERROR
+test_report_preserves_denominators_gates_and_distinct_cost_accounts (__main__.ReportChecks.test_report_preserves_denominators_gates_and_distinct_cost_accounts) ... ok
+test_running_study_is_rejected_before_any_record_read (__main__.ReportChecks.test_running_study_is_rejected_before_any_record_read) ... ok
+test_wrong_source_scope_is_rejected (__main__.ReportChecks.test_wrong_source_scope_is_rejected) ... ok
+
+======================================================================
+ERROR: test_closed_transport_binds_raw_estimates_and_audits (__main__.ReportChecks.test_closed_transport_binds_raw_estimates_and_audits)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\report_validation_v1\check_report.py", line 98, in test_closed_transport_binds_raw_estimates_and_audits
+    path=write_transport(Path(temp));packet,bindings=report.load_closed(path)
+                                                     ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\docs\paper\report_selected_response_identification_20261019.py", line 34, in load_closed
+    require(path.is_relative_to(ROOT/"outputs/selected_response/qualification_v1"),"registered report source required")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\docs\paper\report_selected_response_identification_20261019.py", line 19, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: registered report source required
+
+======================================================================
+ERROR: test_failed_train_has_no_invented_qualification (__main__.ReportChecks.test_failed_train_has_no_invented_qualification)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\report_validation_v1\check_report.py", line 109, in test_failed_train_has_no_invented_qualification
+    path=write_transport(Path(temp),failed=True);packet,_=report.load_closed(path)
+                                                          ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\docs\paper\report_selected_response_identification_20261019.py", line 34, in load_closed
+    require(path.is_relative_to(ROOT/"outputs/selected_response/qualification_v1"),"registered report source required")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\docs\paper\report_selected_response_identification_20261019.py", line 19, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: registered report source required
+
+======================================================================
+ERROR: test_no_report_before_numeric_audit_or_after_source_changes (__main__.ReportChecks.test_no_report_before_numeric_audit_or_after_source_changes)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\report_validation_v1\check_report.py", line 118, in test_no_report_before_numeric_audit_or_after_source_changes
+    with self.assertRaises(RuntimeError):report.load_closed(path)
+                                         ~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\docs\paper\report_selected_response_identification_20261019.py", line 34, in load_closed
+    require(path.is_relative_to(ROOT/"outputs/selected_response/qualification_v1"),"registered report source required")
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\docs\paper\report_selected_response_identification_20261019.py", line 19, in require
+    if not ok:raise ValueError(message)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: registered report source required
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.299s
+
+FAILED (errors=3)

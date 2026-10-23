@@ -1,0 +1,91 @@
+{
+  "protocol": "LATENT_RESPONSE_FAILURE_DIAGNOSIS_V1",
+  "classification": "POST_HOC_DESCRIPTIVE_ONLY",
+  "source_populations": {
+    "latent": {
+      "executions": 792,
+      "steps": 59268,
+      "groups_by_split": {
+        "SOFTWARE": 3,
+        "TRAIN": 36,
+        "CAL": 9,
+        "QUAL": 18
+      }
+    },
+    "reference_QUAL": {
+      "executions": 540,
+      "steps": 65854,
+      "independent_groups": 9,
+      "paired_units": 54
+    }
+  },
+  "latent_training_queries": 4186,
+  "training_available_trajectories": 168,
+  "saved_CAL_QUAL_query_count": 428,
+  "methods": [
+    "SS_SENT",
+    "SS_NO_SENT",
+    "SS_CURRENT_SENT",
+    "DIRECT_MLP_H8",
+    "DIRECT_RIDGE_H8",
+    "PERSIST_ZERO",
+    "HISTORY_LINEAR10",
+    "QUADRATIC_STATE20"
+  ],
+  "TRAIN_checkpoints_only": [
+    1000,
+    2000,
+    3000,
+    4000,
+    5000
+  ],
+  "no_checkpoint_selection": true,
+  "CAL_QUAL": "SAVED_ENTRY_FORECASTS_ONLY_NO_CHECKPOINT_REEVALUATION",
+  "TRAIN_final_model_query_forwards": 33488,
+  "TRAIN_earlier_checkpoint_query_forwards": 66976,
+  "each_pass_maximum_new_model_query_forwards": 100464,
+  "expected_prediction_rows_each_pass": 103888,
+  "regimes": [
+    "ALL_WINDOWS",
+    "ENTRY_ONLY",
+    "START_01_08",
+    "START_09_16",
+    "START_17_24"
+  ],
+  "training_objective": "TRAJECTORY_EQUAL_THEN_WINDOW_EQUAL_MEAN_ACTUAL_MASKED_XY_SQUARED_CUMULATIVE_ERROR",
+  "cohort_descriptions": "WITHIN_TRAJECTORY_THEN_WITHIN_INDEPENDENT_GROUP_THEN_EQUAL_GROUPS_AVAILABLE_SUPPORT_EXPLICIT",
+  "no_new_confidence_intervals_or_qualification_or_task_claims": true,
+  "error_components": "prediction-minus-nominal-target-change + nominal-minus-native-target-change + native-target-minus-hand-change",
+  "component_cross_terms_retained": true,
+  "noise_and_private_native_values": "EVALUATOR_ONLY_NOT_MODEL_INPUT",
+  "menu": [
+    "RAW_CONTINUE",
+    "FIXED_PD_KEEP",
+    "FIXED_PID_KEEP",
+    "LOCAL_PD_KEEP",
+    "LOCAL_PID_KEEP",
+    "LOCAL_PID_REFERENCE_RESET",
+    "LOCAL_PID_REFERENCE_CARRY",
+    "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+  ],
+  "same_acquisition_adoption_submenu": [
+    "RAW_CONTINUE",
+    "LOCAL_PID_KEEP",
+    "LOCAL_PID_REFERENCE_RESET",
+    "LOCAL_PID_REFERENCE_CARRY"
+  ],
+  "menu_state": "RAW_PI_COMMON_PREFIX_NOT_C8_PREFIX",
+  "oracle_ties": "ALL_RECORDED_MINIMIZERS_RETAINED",
+  "oracle_scope": "OPTIMISTIC_REALIZED_FUTURE_RECORD_MENU_NOT_DEPLOYABLE_NOT_LEARNABILITY_OR_OFF_POLICY_PROOF",
+  "reference_decomposition": "L_REF-L_RAW=(L_KEEP-L_RAW)+(L_REF-L_KEEP), full observed cutoff loss, no extra fees added",
+  "DIRECT_C8_and_MOVE_INTEGRAL": "EXTERNAL_WHOLE_PROGRAM_CONTROLS_DIFFERENT_PREFIX_NOT_PREMOVE_ACTION_MENU",
+  "new_environment_creations": 0,
+  "new_resets": 0,
+  "new_control_steps": 0,
+  "new_physical_frames": 0,
+  "new_model_fits": 0,
+  "new_optimizer_updates": 0,
+  "new_policy_training": 0,
+  "new_online_LLM_API_calls": 0,
+  "publication_goal_complete": false
+}

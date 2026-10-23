@@ -1,0 +1,28 @@
+{
+  "scope": "Preserved software development failures and superseded audit; no scientific records were modified.",
+  "attempts": [
+    {
+      "kind": "pure_saved_record_test",
+      "result": "FAILED",
+      "reason": "Initial witness-field lookup used comparison_sha256 instead of the actual comparison_python_sha256 and native_sha256 fields.",
+      "resolution": "Correct the new diagnostic lookup; all 23 then-existing pure tests passed."
+    },
+    {
+      "kind": "independent_array_audit",
+      "result": "FAILED",
+      "reason": "Independent scalar predictor retained float32 scalars; the existing predictor standardizes float64 features. The strict one-step residual check detected this arithmetic mismatch.",
+      "resolution": "Cast independent scalar inputs to float64; add a specific array regression test. No diagnostic residual, tolerance, model or original record was changed.",
+      "recorded_process_wall_seconds": 1.6842005
+    },
+    {
+      "kind": "independent_array_audit_check_json",
+      "result": "SUPERSEDED_FOR_IMPLEMENTATION_PROVENANCE",
+      "reason": "Additional registry, common-history and rank audit checks were added to the auditor source while this invocation was already running. Its end-of-run source hash cannot establish which version executed.",
+      "resolution": "Preserve check.json, and rerun the complete fixed auditor to exclusive check_v2.json. Only check_v2.json is authoritative for final delivery."
+    }
+  ],
+  "new_environment_steps": 0,
+  "new_all_resets": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0
+}

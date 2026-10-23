@@ -1,0 +1,112 @@
+{
+  "status": "PASSED_RECORD_DELIVERY_EXECUTION_NOT_QUALIFIED",
+  "created_utc": "2026-10-19T13:07:02.230798+00:00",
+  "source_commit": "fdb617869c37a32caa69e47613786fac633f823b",
+  "manifest_id": "5ea66255714e4c3011ee21e5dbdf01b6069f3bbbb94693a33c74cd42e5390b60",
+  "integrity": "PASSED",
+  "qualification": "NOT_QUALIFIED",
+  "executions": 18,
+  "paired_units": 9,
+  "complete_windows": {
+    "UNCHANGED": 6,
+    "CHANGED": 0
+  },
+  "new_control_steps": 1616,
+  "new_api_calls": 0,
+  "tests_reused": {
+    "passed": 1215,
+    "reason": "Frozen scientific implementation, configuration and tests unchanged; only collected records and reporting helper added",
+    "receipt": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 293904656300,
+      "output_sha256": "9a550cdba69f2e0cc082264b63dbf0947d172f3efadc5dc5b68294ed8c6438b3",
+      "created_utc": "2026-10-19T12:54:31.403821+00:00",
+      "source_sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752"
+    }
+  },
+  "checks": {
+    "cached_diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 59567000,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "compileall": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 2639457200,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 38451000,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pip_check": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 1920040100,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    "report_compile": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "docs/paper/report_stale_reprobe_qualification_20261019.py"
+      ],
+      "returncode": 0,
+      "wall_ns": 92049400,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tracked_secret_scan": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 55391588700,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    }
+  },
+  "verified_analysis_inputs": 1071,
+  "visual_review": "All nine pairs shown; Chinese labels and shared axis bounds inspected; full curves visible",
+  "strict_scan_sha256": "4b4aee249b651dcb55664c34304de13e9babefdd61a4dc5cfae771fa8fb2b5ca",
+  "analysis_receipt_sha256": "51b9810a05e7e3d5c6e209e6efee037067fffe03b852294c40def8c7ab66fad9",
+  "new_simulation_during_delivery": 0,
+  "scope": "Negative reacquisition result retained; no task utility or new measurement model qualification; publication goal incomplete"
+}

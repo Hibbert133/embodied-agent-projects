@@ -1,0 +1,43 @@
+{
+  "campaign_id": "active_evidence_threshold_heldout10_v1",
+  "experiment_role": "frozen_heldout_threshold_validation",
+  "selection_provenance": {
+    "source_csv": "outputs/day2_5/selected_config_50_seed.csv",
+    "filter": "success == False",
+    "ordering": "final_object_goal_distance ascending after exclusions",
+    "exclude_seeds": [135, 124, 136, 108, 144, 148],
+    "rank_fractions": [0.0, 0.111111, 0.222222, 0.333333, 0.444444, 0.555556, 0.666667, 0.777778, 0.888889, 1.0],
+    "selected_seeds": [107, 139, 115, 103, 111, 128, 110, 113, 145, 132],
+    "selection_uses_oracle_only_for_offline_case_stratification": true
+  },
+  "threshold_provenance": {
+    "source_campaign": "active_evidence_glm52_dev5_v1",
+    "selection_split": "seeds 135,124,136,108,144",
+    "threshold": 0.8649071032179548,
+    "heldout_retuning": false
+  },
+  "task": "MetaWorld push-v3",
+  "seeds": [107, 139, 115, 103, 111, 128, 110, 113, 145, 132],
+  "repeats": 1,
+  "conditions": [
+    {
+      "condition_id": "x_positive_0.145",
+      "kind": "action_bias",
+      "bias": [0.145, 0.0, 0.0, 0.0],
+      "oracle_axis": "x",
+      "oracle_direction": "positive"
+    }
+  ],
+  "methods": ["passive", "always_probe", "uncertainty_gated"],
+  "max_steps": 500,
+  "probe_steps": 8,
+  "probe_magnitude": 0.2,
+  "uncertainty_threshold": 0.8649071032179548,
+  "random_probe_probability": 0.5,
+  "budget": {
+    "max_jobs": 30,
+    "max_environment_steps": 35000,
+    "max_api_calls": 0,
+    "max_wall_time_seconds": 7200
+  }
+}

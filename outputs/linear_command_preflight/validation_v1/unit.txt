@@ -1,0 +1,32 @@
+test_closed_loop_command_columns_confounded_with_nuisance (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_command_contrasts_independent_of_state_for_fixed_commands (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_finite_differences_match_unscaled_command_rows_all_features (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_full_rank_geometry_matches_known_inverse_information (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_future_time_and_nonconsecutive_history_rejected (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_invalid_numbers_and_unknown_candidate_ids (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_missing_history_rejected_without_zero_fill (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_offsets_are_clipped_only_in_xy_and_preserve_other_commands (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_output_predictions_are_not_synthetic_truth (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_reversing_or_rescaling_command_coefficients_changes_query_predictions (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_roundtrip_preserves_every_issued_query (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_saturated_identical_query_is_retained_with_zero_contrast (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_target_statistics_are_not_applied_twice_to_saved_linear_metres (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_three_real_observations_and_all_feature_mappings (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_unknown_nested_oracle_and_future_fields_rejected (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_wrong_task_and_parameter_mapping_rejected (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_xy_projection_treats_other_command_coordinates_as_nuisance (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_zero_query_and_zero_design_do_not_invent_support (tests.test_linear_command_preflight_v1.CommandPreflightTests) ... ok
+test_guard_blocks_fits_without_computing_parameters (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_guard_blocks_network_and_simulator_before_execution (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_guard_blocks_old_dev_test_and_private_source_reads (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_guard_blocks_shell_before_launch (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_guard_protects_allowlisted_source_writes (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_guard_restores_solvers_and_imports (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_independent_features_match_known_geometry (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_raw_record_audit_detects_candidate_and_command_cursor_changes (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+test_raw_record_audit_detects_future_values_even_with_current_timestamps (tests.test_linear_command_preflight_pipeline_v1.PreflightPipelineTests) ... ok
+
+----------------------------------------------------------------------
+Ran 27 tests in 0.094s
+
+OK

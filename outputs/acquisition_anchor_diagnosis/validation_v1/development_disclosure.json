@@ -1,0 +1,16 @@
+{
+  "first_pure_array_attempt": {
+    "tests": 13,
+    "errors": 2,
+    "cause": "Closed-form reference returned NumPy float64; strict ordinary-number audit rejected it",
+    "repair": "Return Python float with the same numeric values before freeze"
+  },
+  "second_pure_array_attempt": {
+    "tests": 13,
+    "passed": true
+  },
+  "real_source_diagnostics_executed_before_freeze": false,
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "new_online_LLM_API_calls": 0
+}

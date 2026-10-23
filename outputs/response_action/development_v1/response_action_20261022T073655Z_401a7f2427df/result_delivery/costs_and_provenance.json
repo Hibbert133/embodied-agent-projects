@@ -1,0 +1,495 @@
+{
+  "actual_new_phases": [
+    {
+      "cohort": "SOFTWARE_NATIVE",
+      "executions": 36,
+      "control_steps": 8888,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 1836,
+          "simulation_attempts": 192488,
+          "simulation_frames_attempted": 962440,
+          "simulation_completed": 192488,
+          "simulation_frames_completed": 962440,
+          "reset_completed": 1836
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 1800,
+            "simulation_attempts": 180000,
+            "simulation_frames_attempted": 900000,
+            "simulation_completed": 180000,
+            "simulation_frames_completed": 900000,
+            "reset_completed": 1800
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 36,
+            "simulation_attempts": 3600,
+            "simulation_frames_attempted": 18000,
+            "simulation_completed": 3600,
+            "simulation_frames_completed": 18000,
+            "reset_completed": 36
+          },
+          "CONTROL": {
+            "simulation_attempts": 8888,
+            "simulation_frames_attempted": 44440,
+            "simulation_completed": 8888,
+            "simulation_frames_completed": 44440
+          }
+        }
+      },
+      "C4_C8_estimate_attempts": 60,
+      "read_only_C4_C8_refits": 60,
+      "response_model_forward_evaluations": 28220,
+      "kinematic_proxy_evaluations": 10580,
+      "independent_audit_compute": {
+        "policy_queries": 8416,
+        "control_steps": 8888,
+        "successes": 23,
+        "independent_c4_c8_refits": 60,
+        "independent_c4_c8_nfev": 60,
+        "pi_plans": 1043,
+        "pi_changed_command_steps": 1025,
+        "pi_send_limit_steps": 349,
+        "pi_integral_limit_steps": 0,
+        "independent_response_model_forward_evaluations": 28220,
+        "independent_kinematic_proxy_evaluations": 10580,
+        "rank_plans": 3880,
+        "rank_changed_command_steps": 379,
+        "independent_rank_score_fields": 58200,
+        "independent_rank_raw_coefficient_forecasts": 14110
+      },
+      "collection_wall_ns": 228761504700,
+      "record_audit_wall_ns": 65557188300,
+      "failed_v1_audit_attempt_separate_costs": null,
+      "extra_discrepancy_locator_compute": null,
+      "effective_independent_rank_audit_version": "FROZEN_V1",
+      "new_predictor_training": 0,
+      "new_policy_training": 0,
+      "new_online_LLM_API_calls": 0
+    },
+    {
+      "cohort": "DEV",
+      "executions": 432,
+      "control_steps": 58685,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 22032,
+          "simulation_attempts": 2261885,
+          "simulation_frames_attempted": 11309425,
+          "simulation_completed": 2261885,
+          "simulation_frames_completed": 11309425,
+          "reset_completed": 22032
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 21600,
+            "simulation_attempts": 2160000,
+            "simulation_frames_attempted": 10800000,
+            "simulation_completed": 2160000,
+            "simulation_frames_completed": 10800000,
+            "reset_completed": 21600
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 432,
+            "simulation_attempts": 43200,
+            "simulation_frames_attempted": 216000,
+            "simulation_completed": 43200,
+            "simulation_frames_completed": 216000,
+            "reset_completed": 432
+          },
+          "CONTROL": {
+            "simulation_attempts": 58685,
+            "simulation_frames_attempted": 293425,
+            "simulation_completed": 58685,
+            "simulation_frames_completed": 293425
+          }
+        }
+      },
+      "C4_C8_estimate_attempts": 720,
+      "read_only_C4_C8_refits": 720,
+      "response_model_forward_evaluations": 125870,
+      "kinematic_proxy_evaluations": 46900,
+      "independent_audit_compute": {
+        "policy_queries": 51337,
+        "control_steps": 58685,
+        "successes": 391,
+        "independent_c4_c8_refits": 720,
+        "independent_c4_c8_nfev": 720,
+        "pi_plans": 10636,
+        "pi_changed_command_steps": 10359,
+        "pi_send_limit_steps": 5025,
+        "pi_integral_limit_steps": 0,
+        "independent_response_model_forward_evaluations": 125870,
+        "independent_kinematic_proxy_evaluations": 46900,
+        "rank_plans": 17277,
+        "rank_changed_command_steps": 2354,
+        "independent_rank_score_fields": 259155,
+        "independent_rank_raw_coefficient_forecasts": 62935
+      },
+      "collection_wall_ns": 2328386580800,
+      "record_audit_wall_ns": 403310735100,
+      "failed_v1_audit_attempt_separate_costs": {
+        "status": "FAILED_V1_PRESERVED",
+        "compute_reconstructed_from_recorded_replay_prefix": {
+          "independent_c4_c8_refits": 340,
+          "independent_c4_c8_nfev": 340,
+          "rank_plans_visited_including_first_failure": 9232,
+          "raw_coefficient_forecasts": 33990,
+          "response_model_forward_evaluations": 67980,
+          "kinematic_proxy_evaluations": 24340
+        },
+        "completed_cases_before_error": 203,
+        "first_failed_case": "DEV/02/door-open-v3/UNCHANGED/KINEMATIC_RANK_W1.0",
+        "first_failed_step": 64,
+        "wall_ns": null,
+        "wall_missing_reason": "Original failed wrapper did not persist a monotonic elapsed-time receipt",
+        "new_environment_steps": 0,
+        "new_online_LLM_API_calls": 0
+      },
+      "extra_discrepancy_locator_compute": {
+        "additional_raw_coefficient_forecasts": 33990,
+        "plans_checked": 9232,
+        "wall_ns": 17119321800
+      },
+      "effective_independent_rank_audit_version": "V2_EXPLICIT_DOT_NORM_AMENDMENT",
+      "new_predictor_training": 0,
+      "new_policy_training": 0,
+      "new_online_LLM_API_calls": 0
+    }
+  ],
+  "original_source_inputs_sha256": {
+    "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/models.json": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/delivery_v1/costs_and_provenance.json": "a6b96bfc5644aba74a8bc64a69db86a797988cdecf06f22ef7f1aea0ed50e274",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_door-open-v3_LINEAR_F20.json": "bf216f458931c543e2edad0f2f926a4718fa2c12ff89eff7a34ffebee44fd9a5",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_door-open-v3_LINEAR_F43.json": "b344d1c5246b5799c288a67f8b7b51387edf29838e1d404a5f9ab54ca7e39efc",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_door-open-v3_LINEAR_H10.json": "5a46b3e2fb0ea023e9afc6acb0fa91d38d7241913039425854917890c981965b",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_push-v3_LINEAR_F20.json": "f6be81b232f90fe7c86261f8991aa4e7be1f86d6d8d876c539a0a1d8cf4d7f14",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_push-v3_LINEAR_F43.json": "d6961f0c13dc932ab091d4b3057fdf8a699716ecf473360d22ce8c3df42df34c",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_push-v3_LINEAR_H10.json": "bb33a9a6f99747523588b92cee0e83b0cfd0e5f8848a4e7db9a57f4c33b65498",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_reach-v3_LINEAR_F20.json": "721c28816bd08e361da8a1c36f231fe1d6a250002ae48749ff564a089c3d709a",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_reach-v3_LINEAR_F43.json": "a00c1b343b231628727f37a3f7268592669aac965d1f3bf3c8dcbf91db300c3a",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/BALANCED8_reach-v3_LINEAR_H10.json": "edbd601f3c25ad6e48867752d999dbc266d91a035cf7fee33a2532056cbdb520",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_door-open-v3_LINEAR_F20.json": "657c290a13498d29d6ac6ec10c2f941fbbf409c326a2e5bf8897dd8094dca347",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_door-open-v3_LINEAR_F43.json": "e152f8f8c8f563c432687ad7e99f1677d9352323dc84586248dfcee79f4d547c",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_door-open-v3_LINEAR_H10.json": "471c541e52f04d724f79f6da2f1d274b5d5c101bfc4cad44a4d384e25a5d136a",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_push-v3_LINEAR_F20.json": "a1f37ad5c7fa0bc753c9e23144e2279c15ff9a5c5998cc229d690fdb5334dbba",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_push-v3_LINEAR_F43.json": "5bb900f6cf93aa643ff395c5886f031c215f786086441a6bbd582e5c6e4ebdc5",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_push-v3_LINEAR_H10.json": "9cc1d78ed8d5f019b0c4a0336da6a724ab08331d8b99f36b303c59cfd393f7d5",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_reach-v3_LINEAR_F20.json": "d830f68328154103207e0b7b926cecd3a42099803840acf15029f0507376f3eb",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_reach-v3_LINEAR_F43.json": "0dcc740766b1157e852ae459a753974748136900839bf600cef9cd6edb0ea659",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/FEEDBACK8_reach-v3_LINEAR_H10.json": "ad7859116d93afccc4bbe7fe942bb1625ef1658efc8d6dae1387e94d22a5b28e",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/training/models.json": "b76a5e0260b6f0de174697a99c739501c4baed20255f89c533fdd82f538bcf78",
+    "outputs/task_passive/development_v1/task_passive_20261022T032948Z_67fefc4da922/selection.json": "62a78458eff2ac33395168f90c60365297ac9fe2a9d31420e52cdfb331ddcffd"
+  },
+  "original_source_cost_receipt": "outputs\\response_training_controls\\development_v1\\training_controls_20261021T191002Z_a7a33756b1c7\\delivery_v1\\costs_and_provenance.json",
+  "original_source_cost_receipt_sha256": "a6b96bfc5644aba74a8bc64a69db86a797988cdecf06f22ef7f1aea0ed50e274",
+  "previous_PI_DEV_source_file": "outputs\\task_passive\\development_v1\\task_passive_20261022T032948Z_67fefc4da922\\dev\\summary.json",
+  "previous_PI_DEV_source_sha256": "b0f7c6ca0b6d36518147061fe723112742ba00032e8a9d1ea5d25e24f251da27",
+  "source_fees_by_program": [
+    {
+      "program": "NO_PROBE",
+      "artifact_source_collections": {},
+      "source_collection_totals": {
+        "executions": 0,
+        "control_steps": 0,
+        "all_resets": 0,
+        "physical_frames": 0
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 0.0,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "DIRECT_C8",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        }
+      },
+      "source_collection_totals": {
+        "executions": 480,
+        "control_steps": 3840,
+        "all_resets": 24480,
+        "physical_frames": 12259200
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 71.11111111111111,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "MOVE_KEEP_C8",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        }
+      },
+      "source_collection_totals": {
+        "executions": 480,
+        "control_steps": 3840,
+        "all_resets": 24480,
+        "physical_frames": 12259200
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 71.11111111111111,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "MOVE_INTEGRAL",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        }
+      },
+      "source_collection_totals": {
+        "executions": 480,
+        "control_steps": 3840,
+        "all_resets": 24480,
+        "physical_frames": 12259200
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 71.11111111111111,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "RAW_TASK_PI_T0.5",
+      "artifact_source_collections": {
+        "full_previous_PI_DEV_search": {
+          "executions": 720,
+          "control_steps": 90626,
+          "all_resets": 36720,
+          "physical_frames": 18813130
+        }
+      },
+      "source_collection_totals": {
+        "executions": 720,
+        "control_steps": 90626,
+        "all_resets": 36720,
+        "physical_frames": 18813130
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 1678.2592592592594,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "DIRECT_TASK_PI_T0.5",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        },
+        "full_previous_PI_DEV_search": {
+          "executions": 720,
+          "control_steps": 90626,
+          "all_resets": 36720,
+          "physical_frames": 18813130
+        }
+      },
+      "source_collection_totals": {
+        "executions": 1200,
+        "control_steps": 94466,
+        "all_resets": 61200,
+        "physical_frames": 31072330
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 1749.3703703703704,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        },
+        "full_previous_PI_DEV_search": {
+          "executions": 720,
+          "control_steps": 90626,
+          "all_resets": 36720,
+          "physical_frames": 18813130
+        }
+      },
+      "source_collection_totals": {
+        "executions": 1200,
+        "control_steps": 94466,
+        "all_resets": 61200,
+        "physical_frames": 31072330
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 1749.3703703703704,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        },
+        "full_previous_PI_DEV_search": {
+          "executions": 720,
+          "control_steps": 90626,
+          "all_resets": 36720,
+          "physical_frames": 18813130
+        }
+      },
+      "source_collection_totals": {
+        "executions": 1200,
+        "control_steps": 94466,
+        "all_resets": 61200,
+        "physical_frames": 31072330
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 1749.3703703703704,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "F20_RANK_W0.1",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        },
+        "full_response_training_parent": {
+          "executions": 756,
+          "control_steps": 71773,
+          "all_resets": 38556,
+          "physical_frames": 19636865
+        },
+        "full_new_DEV_weight_search": {
+          "executions": 432,
+          "control_steps": 58685,
+          "all_resets": 22032,
+          "physical_frames": 11309425
+        }
+      },
+      "source_collection_totals": {
+        "executions": 1668,
+        "control_steps": 134298,
+        "all_resets": 85068,
+        "physical_frames": 43205490
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 2487.0,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    },
+    {
+      "program": "KINEMATIC_RANK_W1.0",
+      "artifact_source_collections": {
+        "full_nominal_C8_bank": {
+          "executions": 480,
+          "control_steps": 3840,
+          "all_resets": 24480,
+          "physical_frames": 12259200
+        }
+      },
+      "source_collection_totals": {
+        "executions": 480,
+        "control_steps": 3840,
+        "all_resets": 24480,
+        "physical_frames": 12259200
+      },
+      "QUAL_actually_executed": false,
+      "prospective_deployment_units": 54,
+      "source_steps_per_54_units": 71.11111111111111,
+      "amortization_is_observed_deployment": false,
+      "scope": "Per-program artifact/full-search source fee; not added again to actual collection totals or online task loss"
+    }
+  ],
+  "historical_response_training_fits": 162,
+  "historical_response_optimizer_updates": 720000,
+  "historical_training_controls_stage_compute": {
+    "linear_fits": 18,
+    "neural_fits": 144,
+    "fits_attempted": 162,
+    "optimizer_updates": 720000,
+    "sampled_targets": 23040000,
+    "predictor_normalization_calculations": 162
+  },
+  "historical_response_parent_research_compute": {
+    "physical": {
+      "executions": 756,
+      "control_steps": 71773,
+      "all_resets": 38556,
+      "physical_frames": 19636865,
+      "controlled_resets": 756,
+      "factory_resets": 37800,
+      "c4_c8_fit_attempts": 1512,
+      "measurement_steps": 5159
+    },
+    "response_fits": 30,
+    "optimizer_updates": 60000,
+    "audit_only_computations": {
+      "independent_cold_fit_recomputations": 1512,
+      "independent_cold_fit_nfev": 1518,
+      "augmented_ridge_reconstructions": 18,
+      "gru_optimizer_replays": 0
+    }
+  },
+  "earlier_sources_disclosed_separately_not_fresh_collection": {
+    "previous_response_qualification": {
+      "executions": 270,
+      "control_steps": 23716,
+      "all_resets": 13770,
+      "physical_frames": 7003580,
+      "c4_c8_fits": 540,
+      "response_fits": 6
+    },
+    "nominal_c8_bank": {
+      "source_summary": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/summary.json",
+      "source_summary_sha256": "8c5f1961d2984bad4952d2ecbf205d255b80d8d122d3338ba4e5e9c0af397c24",
+      "model_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+      "training_episodes": 384,
+      "qualification_episodes": 96,
+      "control_steps": 3840,
+      "controlled_resets": 480,
+      "all_resets": 24480,
+      "physical_frames": 12259200,
+      "new_this_study": false
+    }
+  },
+  "FIT144_is_a_subset_not_an_extra_collection": true,
+  "selected_F20_weight": 0.1,
+  "development_gate_passed": false,
+  "qualification_executed": false,
+  "source_fees_are_separate_from_online_loss": true,
+  "no_duplicate_subset_collection_charge": true,
+  "new_environment_steps_by_export": 0,
+  "new_model_fits_by_export": 0,
+  "new_online_LLM_API_calls": 0
+}

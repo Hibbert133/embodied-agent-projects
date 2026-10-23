@@ -1,0 +1,61 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "phase": "SMOKE",
+  "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+  "source_units": 9,
+  "controlled_steps": 6964,
+  "controlled_resets": 9,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 459,
+      "simulation_attempts": 52864,
+      "simulation_frames_attempted": 264320,
+      "simulation_completed": 52864,
+      "simulation_frames_completed": 264320,
+      "reset_completed": 459
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 450,
+        "simulation_attempts": 45000,
+        "simulation_frames_attempted": 225000,
+        "simulation_completed": 45000,
+        "simulation_frames_completed": 225000,
+        "reset_completed": 450
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 9,
+        "simulation_attempts": 900,
+        "simulation_frames_attempted": 4500,
+        "simulation_completed": 900,
+        "simulation_frames_completed": 4500,
+        "reset_completed": 9
+      },
+      "CONTROL": {
+        "simulation_attempts": 6964,
+        "simulation_frames_attempted": 34820,
+        "simulation_completed": 6964,
+        "simulation_frames_completed": 34820
+      }
+    }
+  },
+  "counters": {
+    "captures": 16,
+    "restores": 73,
+    "policy_queries": 6736,
+    "capture_ns": 2369610300,
+    "restore_ns": 19028786100,
+    "fits": 34,
+    "nfev": 34
+  },
+  "computation_counters_complete": true,
+  "counter_scope": "Cases with case_actual. On failure, partial_actual may overlap; incomplete optimizer computation is unknown, not zero.",
+  "sentinels_completed": 1,
+  "failure": null,
+  "new_api_calls": 0,
+  "collection_body_wall_ns": 98507951900,
+  "universal_complete_hidden_state_qualification": false,
+  "registered_restore_source_used": true
+}

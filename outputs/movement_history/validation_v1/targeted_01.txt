@@ -1,0 +1,21 @@
+test_all_responses_use_real_pre_movement_context_including_first_two (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_ended_and_zero_movement_do_not_fit_or_invent_task_actions (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_existing_arx_recovers_synthetic_affine_without_oracle_argument (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_future_cutoff_missing_context_and_budget_overrun_fail (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_gaps_duplicates_reordering_and_changed_observation_fail (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_no_transition_after_termination_or_nonfinite_commands (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_roundtrip_and_mutable_inputs_cannot_rewrite_saved_snapshot (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_unknown_oracle_future_and_nested_status_fields_are_rejected (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_weak_and_short_history_preserve_invalid_estimates_without_fallback (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_wrong_model_scope_and_poisoned_model_rejected_even_on_early_end (tests.test_movement_history_reference_v1.MovementHistoryReferenceTest) ... ok
+test_actual_clock_convention_and_every_visible_transition_preserved (tests.test_movement_history_io_v1.MovementHistoryIOTest) ... ok
+test_host_mismatch_and_result_saved_before_execution_reject (tests.test_movement_history_io_v1.MovementHistoryIOTest) ... ok
+test_missing_actual_operation_is_preserved_without_fabricated_history (tests.test_movement_history_io_v1.MovementHistoryIOTest) ... ok
+test_missing_seal_pending_command_and_reversed_time_reject (tests.test_movement_history_io_v1.MovementHistoryIOTest) ... ok
+test_no_post_cutoff_probe_future_outcome_or_private_action_is_read (tests.test_movement_history_io_v1.MovementHistoryIOTest) ... ok
+test_unknown_public_fields_and_wrong_phase_before_cutoff_reject (tests.test_movement_history_io_v1.MovementHistoryIOTest) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.102s
+
+OK

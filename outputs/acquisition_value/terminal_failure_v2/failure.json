@@ -1,0 +1,19 @@
+{
+  "experiment_run_id": "acquisition_value_20261014T151159Z_cb935ccb7187",
+  "manifest_id": "04a3a6b2928956a7522296435a209e330b03c6dc42c98da8b982b15b16ff6c5f",
+  "auditor": "scripts/audit_acquisition_value_clock_v2.py",
+  "auditor_sha256": "001045162d0934e02a7c9c754071ae9d5db3ec8a257d4a2eb39d3c27cf42c900",
+  "audit_parent_commit": "f0f23ac",
+  "result": "FAILED_TERMINAL_COLD_SOURCE_SCHEMA",
+  "terminal_exit_code": 1,
+  "cases_replayed_before_failure": 2304,
+  "error": "ValueError: status/cost differs",
+  "cause": "summary.cold_sources is the complete 24-record list; status.cold_sources is integer 24; the v2 auditor required an integer in both",
+  "failure_log_original_sha256": "4d987c29cf210239fa7b2bae19224d6cf51d8661710e92513b9818a687c35193",
+  "failure_log_archive": "../delivery_v1/audit_v2_failed.log.gz",
+  "new_robot_steps": 0,
+  "new_resets": 0,
+  "raw_files_changed": false,
+  "superseding_read_only_audit": "../analysis_v3/audit.json",
+  "scope": "V2 failure remains failed; v3 repair is separate."
+}

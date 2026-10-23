@@ -1,0 +1,34 @@
+test_bad_policy_outputs_fail_before_physical_attempt (test_controller.ExecutorTests) ... ok
+test_bounded_commands_preserve_nominal_z_and_gripper (test_controller.ExecutorTests) ... ok
+test_callback_owned_ack_cannot_redirect_saved_choice (test_controller.ExecutorTests) ... ok
+test_early_success_terminated_and_truncated_never_step (test_controller.ExecutorTests) ... ok
+test_ending_receipt_stops_further_queries (test_controller.ExecutorTests) ... ok
+test_host_rejects_stale_boundary_before_motion (test_controller.ExecutorTests) ... ok
+test_journal_clock_regression_before_command_aborts (test_controller.ExecutorTests) ... ok
+test_journal_write_failures_preserve_attempt_accounting (test_controller.ExecutorTests) ... ok
+test_legal_choices_change_actual_sent_commands (test_controller.ExecutorTests) ... ok
+test_malformed_journal_ack_never_starts_execution (test_controller.ExecutorTests) ... ok
+test_missing_saved_controller_rejected_before_callbacks (test_controller.ExecutorTests) ... ok
+test_no_remaining_budget_rejects_execution (test_controller.ExecutorTests) ... ok
+test_one_remaining_step_is_only_one_step (test_controller.ExecutorTests) ... ok
+test_policy_exception_is_not_retried (test_controller.ExecutorTests) ... ok
+test_policy_input_mutation_does_not_change_live_boundary (test_controller.ExecutorTests) ... ok
+test_receipt_mismatches_abort_after_one_attempt (test_controller.ExecutorTests) ... ok
+test_reentrant_execution_is_rejected (test_controller.ExecutorTests) ... ok
+test_repeated_intervention_rejected (test_controller.ExecutorTests) ... ok
+test_saved_choice_precedes_each_command_and_receipt (test_controller.ExecutorTests) ... ok
+test_snapshot_mutation_does_not_modify_executor (test_controller.ExecutorTests) ... ok
+test_step_exception_is_charged_unconfirmed_and_not_retried (test_controller.ExecutorTests) ... ok
+test_stop_keeps_failure_penalty_and_performs_no_action (test_controller.ExecutorTests) ... ok
+test_switch_starts_at_live_nonzero_state_without_rewind (test_controller.ExecutorTests) ... ok
+test_unknown_and_probe_actions_rejected (test_controller.ExecutorTests) ... ok
+test_bad_steps_and_observation_shapes_rejected (test_controller.SchemaTests) ... ok
+test_bool_nan_and_nested_controller_values_rejected (test_controller.SchemaTests) ... ok
+test_input_lists_cannot_mutate_frozen_controller (test_controller.SchemaTests) ... ok
+test_oracle_and_unknown_fields_rejected_at_every_level (test_controller.SchemaTests) ... ok
+test_ordinary_roundtrip (test_controller.SchemaTests) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 0.064s
+
+OK

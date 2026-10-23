@@ -1,0 +1,15 @@
+{
+  "version": "AUDIT_REPAIR_V2",
+  "original_attempt_status": "FAILED_BEFORE_FIRST_FIELD_COMPARISON",
+  "original_auditor_sha256": "e651a14d0071ed8ffaaf37471e8f1b95b29a00c4b06096904d71e5bce018f6df",
+  "failure_log_sha256": "53f517c0a86fe06930de9e0978f354efafa1544d8beaed0bb51487a89348b8fb",
+  "failure": "UnboundLocalError: local variable rows referenced before assignment",
+  "repair": "Rename the global plain JSONL reader to read_rows and its two call sites; no arithmetic, parameter, record, comparison or tolerance changed",
+  "primary_output_rerun": false,
+  "original_failure_guard_exit_receipt": "MISSING: the existing guarded wrapper did not return a guard when its function raised",
+  "failure_reproduced_under_guard_in_regression_test": true,
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "new_online_LLM_API_calls": 0,
+  "recorded_at_utc": "2026-10-22T10:51:28.673150+00:00"
+}

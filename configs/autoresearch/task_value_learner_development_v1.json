@@ -1,0 +1,23 @@
+{
+  "protocol_id": "task_value_learner_development_v1",
+  "source_manifest": "outputs/acquisition_value/development_v1/acquisition_value_20261014T151159Z_cb935ccb7187/manifest.json",
+  "source_audit": "outputs/acquisition_value/analysis_v3/audit.json",
+  "source_audit_sha256": "d1bb1bc6438ac2f510dff8cb0db718a083aa7b64a41dea74ebe9420c5d06355d",
+  "groups": 8,
+  "cases": 192,
+  "tasks": ["push-v3", "reach-v3", "door-open-v3"],
+  "pre_actions": ["CACHE_CONTINUE", "PROBE8_WIDE", "PROBE16_WIDE"],
+  "post_actions": ["KEEP", "UPDATE"],
+  "kernel": "RBF_TRAIN_MEDIAN_SQUARED_DISTANCE",
+  "ridge": 1.0,
+  "scale_floor": 0.000001,
+  "loss_scale": 500.0,
+  "task_models": "SEPARATE",
+  "outer_split": "LEAVE_ONE_OPERATOR_STREAM_OUT",
+  "inner_split": "LEAVE_ONE_OPERATOR_STREAM_OUT",
+  "post_tie_action": "KEEP",
+  "pre_tie_order": ["CACHE_CONTINUE", "PROBE8_WIDE", "PROBE16_WIDE"],
+  "new_simulator_steps": 0,
+  "new_api_calls": 0,
+  "output_root": "outputs/task_value_learner/development_v1"
+}

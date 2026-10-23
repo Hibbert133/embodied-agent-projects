@@ -1,0 +1,29 @@
+{
+  "threshold": 0.91612970415368,
+  "selection_direction": "request probe when phase_inconsistency >= threshold",
+  "selection_rule": "maximize development diagnostic accuracy, then minimize probe requests; higher threshold tie-break",
+  "development_cases": 10,
+  "development_correct": 10,
+  "development_accuracy": 1.0,
+  "development_probe_requests": 6,
+  "development_probe_request_rate": 0.6,
+  "score": "phase_inconsistency",
+  "probe_need_roc_auc": 0.7916666666666666,
+  "promotion_gate": {
+    "minimum_probe_need_roc_auc": 0.75,
+    "minimum_diagnostic_accuracy_relative_to_always_probe": 1.0,
+    "maximum_probe_request_rate": 0.6
+  },
+  "promotion_result": {
+    "criteria": {
+      "probe_need_auc": true,
+      "diagnostic_accuracy": true,
+      "probe_request_rate": true
+    },
+    "all_passed": true,
+    "online_agent_allowed": true,
+    "accuracy_relative_to_always_probe": 1.0
+  },
+  "development_only": true,
+  "heldout_evaluated": false
+}

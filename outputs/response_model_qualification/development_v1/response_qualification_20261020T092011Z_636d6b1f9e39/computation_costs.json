@@ -1,0 +1,50 @@
+{
+  "experiment_run_id": "response_qualification_20261020T092011Z_636d6b1f9e39",
+  "manifest_id": "b3bd767f35c0720e8fa148097ba8f1b909da5c3d61c8a3c4398f58ae76a536e6",
+  "source_git_commit": "636d6b1f9e395af41a415786561e39a23e16c8c5",
+  "scientific_fixed_policy_queries": 14681,
+  "scientific_c4_c8_fit_attempts": 540,
+  "scientific_c4_c8_optimizer_nfev": 540,
+  "scientific_response_fit_attempts": 6,
+  "scientific_response_models_saved": 6,
+  "record_audit_cold_fit_recomputations": 540,
+  "record_audit_cold_fit_optimizer_nfev": 540,
+  "numerical_audit_response_coefficient_reconstructions": 12,
+  "record_audit_receipts": [
+    {
+      "split": "TRAIN",
+      "costs": {
+        "steps": 9192,
+        "policy_queries": 5847,
+        "independent_cold_fit_recomputations": 216,
+        "independent_cold_fit_nfev": 216
+      },
+      "wall_ns": 36356436900
+    },
+    {
+      "split": "CAL",
+      "costs": {
+        "steps": 4762,
+        "policy_queries": 2942,
+        "independent_cold_fit_recomputations": 108,
+        "independent_cold_fit_nfev": 108
+      },
+      "wall_ns": 18318282200
+    },
+    {
+      "split": "QUAL",
+      "costs": {
+        "steps": 9762,
+        "policy_queries": 5892,
+        "independent_cold_fit_recomputations": 216,
+        "independent_cold_fit_nfev": 216
+      },
+      "wall_ns": 40087397600
+    }
+  ],
+  "pipeline_wall_ns": 1300164609300,
+  "new_online_api_calls": 0,
+  "new_environment_steps_by_this_summary": 0,
+  "pipeline_wall_scope": "Thirteen frozen science stages; report generation and publication occur after this timer.",
+  "report_generation_approx_wall_ns_from_filesystem_timestamps": 8823627600
+}

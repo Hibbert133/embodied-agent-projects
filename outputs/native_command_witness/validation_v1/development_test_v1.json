@@ -1,0 +1,23 @@
+{
+  "status": "PASSED",
+  "tests": 18,
+  "stdout": "test_actuator_order_and_target_precision_counterexamples (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_changed_fault_boundary_preserves_continuity (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_changed_plan_acknowledgement_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_clock_discontinuity_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_early_success_keeps_missing_measurement_and_all_costs (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_export_oracle_injection_rejected_by_audit (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_false_public_reference_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_fit_guard_blocks_real_optimization (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_frozen_population_and_full_budget (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_full_array_host_independent_replay_and_native_arithmetic (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_known_target_model_mismatch_is_retained_as_failed_contract (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_native_values_are_copied_not_mutated_or_exposed (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_noise_cursor_shift_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_private_fields_and_fabricated_past_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_private_world_replacement_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_public_query_does_not_read_future_rows_or_responses (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_reordered_native_witness_rejected (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\ntest_separate_noise_and_context_random_sources (tests.test_native_command_witness_v1.NativeCommandWitnessTests) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 1.785s\n\nOK\n",
+  "guard": {
+    "integrity": "PASSED",
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "fits": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "wall_ns": 9243490500,
+  "new_environment_interactions": 0,
+  "actual_new_fits": 0
+}

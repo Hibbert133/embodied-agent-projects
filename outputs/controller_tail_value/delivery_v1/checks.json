@@ -1,0 +1,73 @@
+{
+  "compile": {
+    "exit_code": 0,
+    "seconds": 0.4004275000006601,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "compileall",
+      "-q",
+      "src",
+      "scripts",
+      "tests",
+      "outputs/controller_tail_value/report_v1",
+      "outputs/controller_tail_value/figure_v1"
+    ]
+  },
+  "dependencies": {
+    "exit_code": 0,
+    "seconds": 0.6889123000000836,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-m",
+      "pip",
+      "check"
+    ]
+  },
+  "diff": {
+    "exit_code": 0,
+    "seconds": 0.03471780000108993,
+    "command": [
+      "git",
+      "diff",
+      "--check"
+    ]
+  },
+  "secrets": {
+    "exit_code": 0,
+    "seconds": 28.456785700000182,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "scripts/check_tracked_secrets.py",
+      "--staged"
+    ]
+  },
+  "staged_diff": {
+    "exit_code": 0,
+    "seconds": 0.054916299999604234,
+    "command": [
+      "git",
+      "diff",
+      "--cached",
+      "--check"
+    ]
+  },
+  "compile_final": {
+    "exit_code": 0,
+    "seconds": 0.4641111999990244,
+    "command": [
+      ".venv/Scripts/python.exe",
+      "-X",
+      "utf8",
+      "-m",
+      "compileall",
+      "-q",
+      "src",
+      "scripts",
+      "tests",
+      "outputs/controller_tail_value"
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "experiment_run_id": "cold_start_task_bridge_20261015T175406Z_44d3e6864ac1",
+  "manifest_id": "75b2ed1525dc62022d75e350a967361f5494968298fd437bc29eed375d2fa631",
+  "source_git_commit": "44d3e6864ac1800393162760f24da7722f7c4bac",
+  "new_environment_steps": 440012,
+  "new_controlled_resets": 2688,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 137088,
+      "simulation_attempts": 14148812,
+      "simulation_frames_attempted": 70744060,
+      "simulation_completed": 14148812,
+      "simulation_frames_completed": 70744060,
+      "reset_completed": 137088
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 134400,
+        "simulation_attempts": 13440000,
+        "simulation_frames_attempted": 67200000,
+        "simulation_completed": 13440000,
+        "simulation_frames_completed": 67200000,
+        "reset_completed": 134400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 2688,
+        "simulation_attempts": 268800,
+        "simulation_frames_attempted": 1344000,
+        "simulation_completed": 268800,
+        "simulation_frames_completed": 1344000,
+        "reset_completed": 2688
+      },
+      "CONTROL": {
+        "simulation_attempts": 440012,
+        "simulation_frames_attempted": 2200060,
+        "simulation_completed": 440012,
+        "simulation_frames_completed": 2200060
+      }
+    }
+  },
+  "response_source_environment_steps": 3840,
+  "response_source_controlled_resets": 480,
+  "response_training_steps": 3072,
+  "response_training_resets": 384,
+  "response_qualification_steps": 768,
+  "response_qualification_resets": 96,
+  "response_source_lifecycle": {
+    "counts": {
+      "reset_attempts": 24480,
+      "simulation_attempts": 2451840,
+      "simulation_frames_attempted": 12259200,
+      "simulation_completed": 2451840,
+      "simulation_frames_completed": 12259200,
+      "reset_completed": 24480
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 24000,
+        "simulation_attempts": 2400000,
+        "simulation_frames_attempted": 12000000,
+        "simulation_completed": 2400000,
+        "simulation_frames_completed": 12000000,
+        "reset_completed": 24000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 480,
+        "simulation_attempts": 48000,
+        "simulation_frames_attempted": 240000,
+        "simulation_completed": 48000,
+        "simulation_frames_completed": 240000,
+        "reset_completed": 480
+      },
+      "CONTROL": {
+        "simulation_attempts": 3840,
+        "simulation_frames_attempted": 19200,
+        "simulation_completed": 3840,
+        "simulation_frames_completed": 19200
+      }
+    }
+  },
+  "old_forward_source_environment_steps": 21010,
+  "old_forward_source_controlled_resets": 288,
+  "old_factory_lifecycle_verified": false,
+  "new_nominal_training": 0,
+  "new_policy_weight_updates": 0,
+  "new_api_calls": 0,
+  "new_api_input_tokens": 0,
+  "new_api_output_tokens": 0,
+  "new_api_latency_seconds": 0,
+  "new_memory_writes": 0,
+  "saved_fit_records": 2016,
+  "saved_optimizer_nfev": 2099,
+  "source_fees_note": "Each new fitted method pays the complete 3840/480 source, each old fitted method 21010/288. Shared data collected once. Old factory cost is unknown, not zero.",
+  "optimizer_note": "Function evaluations stored in decisions, not a CPU-time estimate; Gaussian failure logging may repeat a point fit."
+}

@@ -1,0 +1,31 @@
+{
+  "selection_order": [
+    "higher conditional recovery rate",
+    "lower mean recovery environment steps",
+    "lower final distance"
+  ],
+  "best_research_config": {
+    "method": "research_agent",
+    "config_id": "research_r1_c1",
+    "cases": "6",
+    "initial_failures": "6",
+    "recovered": "5",
+    "conditional_recovery_rate": "0.8333333333333334",
+    "mean_recovery_environment_steps": "161.0",
+    "mean_final_object_goal_distance": "0.08955022683899551"
+  },
+  "best_random_config": {
+    "method": "random_search",
+    "config_id": "random_03",
+    "cases": "6",
+    "initial_failures": "6",
+    "recovered": "5",
+    "conditional_recovery_rate": "0.8333333333333334",
+    "mean_recovery_environment_steps": "159.83333333333334",
+    "mean_final_object_goal_distance": "0.08988898460127884"
+  },
+  "recovery_rate_difference": 0.0,
+  "mean_step_difference": 1.1666666666666572,
+  "tuning_conclusion": "tie_or_random_better",
+  "claim_boundary": "six tuning cases only; validation and held-out claims are not permitted"
+}

@@ -1,0 +1,1796 @@
+{
+  "experiment_run_id": "point8_baseline_20261015T153211Z_b9506ff0e3ae",
+  "manifest_id": "15226f9f43e1dbbb11d9e5354b975663038557e501b43c42ad79c5caa293cdce",
+  "source_git_commit": "b9506ff0e3aeeb209e18cd2b1b7a6bb0514d11b2",
+  "labels": {
+    "DIRECT_POINT8": "8步点估计纠正",
+    "KEEP_POINT8_AFTER16": "探测16步、保留8步点估计",
+    "POINT16_CYCLE": "循环16步点估计纠正",
+    "DIRECT_G8": "8步Gaussian纠正",
+    "UPDATE_G16": "16步Gaussian纠正",
+    "NO_PROBE": "不探测、不纠正",
+    "IDENTITY_AFTER8": "探测8步、不纠正"
+  },
+  "method_order": [
+    "DIRECT_POINT8",
+    "KEEP_POINT8_AFTER16",
+    "POINT16_CYCLE",
+    "DIRECT_G8",
+    "UPDATE_G16",
+    "NO_PROBE",
+    "IDENTITY_AFTER8"
+  ],
+  "statistics": {
+    "methods": {
+      "DIRECT_POINT8": {
+        "cases": 96,
+        "successes": 90,
+        "stops": 0,
+        "mean_total_steps": 113.25,
+        "mean_deadline_loss": 113.25,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 28,
+            "mean_deadline_loss": 127.4375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 71.90625
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 140.40625
+          }
+        }
+      },
+      "KEEP_POINT8_AFTER16": {
+        "cases": 96,
+        "successes": 91,
+        "stops": 0,
+        "mean_total_steps": 114.58333333333333,
+        "mean_deadline_loss": 114.58333333333333,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 29,
+            "mean_deadline_loss": 120.375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 78.84375
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 144.53125
+          }
+        }
+      },
+      "POINT16_CYCLE": {
+        "cases": 96,
+        "successes": 94,
+        "stops": 0,
+        "mean_total_steps": 94.60416666666667,
+        "mean_deadline_loss": 94.60416666666667,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 79.375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 70.71875
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 133.71875
+          }
+        }
+      },
+      "DIRECT_G8": {
+        "cases": 96,
+        "successes": 91,
+        "stops": 0,
+        "mean_total_steps": 103.04166666666667,
+        "mean_deadline_loss": 103.04166666666667,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 99.59375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 69.34375
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 29,
+            "mean_deadline_loss": 140.1875
+          }
+        }
+      },
+      "UPDATE_G16": {
+        "cases": 96,
+        "successes": 94,
+        "stops": 0,
+        "mean_total_steps": 95.30208333333333,
+        "mean_deadline_loss": 95.30208333333333,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 79.375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 71.0625
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 135.46875
+          }
+        }
+      },
+      "NO_PROBE": {
+        "cases": 96,
+        "successes": 35,
+        "stops": 0,
+        "mean_total_steps": 350.71875,
+        "mean_deadline_loss": 350.71875,
+        "mean_fixed_probe_steps": 0.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 0,
+        "nominal_offline_resets": 0,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 11,
+            "mean_deadline_loss": 353.75
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 10,
+            "mean_deadline_loss": 369.46875
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 14,
+            "mean_deadline_loss": 328.9375
+          }
+        }
+      },
+      "IDENTITY_AFTER8": {
+        "cases": 96,
+        "successes": 34,
+        "stops": 0,
+        "mean_total_steps": 356.6770833333333,
+        "mean_deadline_loss": 356.6770833333333,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 0,
+        "nominal_offline_resets": 0,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 10,
+            "mean_deadline_loss": 368.28125
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 10,
+            "mean_deadline_loss": 372.1875
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 14,
+            "mean_deadline_loss": 329.5625
+          }
+        }
+      }
+    },
+    "registered_contrasts": [
+      {
+        "method": "DIRECT_POINT8",
+        "reference": "POINT16_CYCLE",
+        "role": "PRIMARY",
+        "stream_values": [
+          [
+            0.0,
+            -8.333333333333334,
+            -8.333333333333334
+          ],
+          [
+            0.0,
+            -4.833333333333333,
+            -4.833333333333333
+          ],
+          [
+            -0.3333333333333333,
+            145.66666666666666,
+            145.66666666666666
+          ],
+          [
+            0.0,
+            -9.333333333333334,
+            -9.333333333333334
+          ],
+          [
+            0.0,
+            54.5,
+            54.5
+          ],
+          [
+            0.0,
+            -9.833333333333334,
+            -9.833333333333334
+          ],
+          [
+            0.0,
+            -2.6666666666666665,
+            -2.6666666666666665
+          ],
+          [
+            0.0,
+            -12.166666666666666,
+            -12.166666666666666
+          ],
+          [
+            0.0,
+            25.5,
+            25.5
+          ],
+          [
+            -0.3333333333333333,
+            139.16666666666666,
+            139.16666666666666
+          ],
+          [
+            0.0,
+            5.5,
+            5.5
+          ],
+          [
+            0.0,
+            -5.333333333333333,
+            -5.333333333333333
+          ],
+          [
+            0.0,
+            2.0,
+            2.0
+          ],
+          [
+            0.0,
+            -3.0,
+            -3.0
+          ],
+          [
+            0.0,
+            -6.5,
+            -6.5
+          ],
+          [
+            0.0,
+            -12.0,
+            -12.0
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.041666666666666664,
+            "paired_stream_percentile_95": [
+              -0.10416666666666666,
+              0.0
+            ]
+          },
+          "deadline_loss": {
+            "difference": 18.645833333333332,
+            "paired_stream_percentile_95": [
+              -2.000260416666666,
+              45.41692708333332
+            ]
+          },
+          "actual_steps": {
+            "difference": 18.645833333333332,
+            "paired_stream_percentile_95": [
+              -2.000260416666666,
+              45.41692708333332
+            ]
+          }
+        },
+        "success_to_failure": 4,
+        "failure_to_success": 0
+      },
+      {
+        "method": "DIRECT_POINT8",
+        "reference": "DIRECT_G8",
+        "role": "SECONDARY_UNADJUSTED",
+        "stream_values": [
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            -1.5,
+            -1.5
+          ],
+          [
+            0.0,
+            7.333333333333333,
+            7.333333333333333
+          ],
+          [
+            0.0,
+            -0.6666666666666666,
+            -0.6666666666666666
+          ],
+          [
+            0.0,
+            61.5,
+            61.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            0.0,
+            3.5,
+            3.5
+          ],
+          [
+            0.0,
+            -10.5,
+            -10.5
+          ],
+          [
+            0.0,
+            10.166666666666666,
+            10.166666666666666
+          ],
+          [
+            -0.3333333333333333,
+            145.0,
+            145.0
+          ],
+          [
+            0.0,
+            10.0,
+            10.0
+          ],
+          [
+            0.0,
+            -4.166666666666667,
+            -4.166666666666667
+          ],
+          [
+            0.16666666666666666,
+            -56.166666666666664,
+            -56.166666666666664
+          ],
+          [
+            0.0,
+            2.1666666666666665,
+            2.1666666666666665
+          ],
+          [
+            0.0,
+            -0.16666666666666666,
+            -0.16666666666666666
+          ],
+          [
+            0.0,
+            -2.6666666666666665,
+            -2.6666666666666665
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.010416666666666666,
+            "paired_stream_percentile_95": [
+              -0.0625,
+              0.020833333333333332
+            ]
+          },
+          "deadline_loss": {
+            "difference": 10.208333333333332,
+            "paired_stream_percentile_95": [
+              -6.677343750000001,
+              32.40625
+            ]
+          },
+          "actual_steps": {
+            "difference": 10.208333333333332,
+            "paired_stream_percentile_95": [
+              -6.677343750000001,
+              32.40625
+            ]
+          }
+        },
+        "success_to_failure": 2,
+        "failure_to_success": 1
+      },
+      {
+        "method": "KEEP_POINT8_AFTER16",
+        "reference": "POINT16_CYCLE",
+        "role": "SECONDARY_UNADJUSTED",
+        "stream_values": [
+          [
+            0.0,
+            -1.3333333333333333,
+            -1.3333333333333333
+          ],
+          [
+            0.0,
+            3.5,
+            3.5
+          ],
+          [
+            -0.3333333333333333,
+            148.83333333333334,
+            148.83333333333334
+          ],
+          [
+            0.0,
+            3.6666666666666665,
+            3.6666666666666665
+          ],
+          [
+            0.0,
+            44.833333333333336,
+            44.833333333333336
+          ],
+          [
+            0.0,
+            -3.1666666666666665,
+            -3.1666666666666665
+          ],
+          [
+            -0.16666666666666666,
+            71.83333333333333,
+            71.83333333333333
+          ],
+          [
+            0.0,
+            -3.0,
+            -3.0
+          ],
+          [
+            0.0,
+            32.333333333333336,
+            32.333333333333336
+          ],
+          [
+            0.0,
+            1.1666666666666667,
+            1.1666666666666667
+          ],
+          [
+            0.0,
+            18.333333333333332,
+            18.333333333333332
+          ],
+          [
+            0.0,
+            3.1666666666666665,
+            3.1666666666666665
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            2.6666666666666665,
+            2.6666666666666665
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            0.0,
+            -2.3333333333333335,
+            -2.3333333333333335
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.03125,
+            "paired_stream_percentile_95": [
+              -0.07291666666666667,
+              0.0
+            ]
+          },
+          "deadline_loss": {
+            "difference": 19.979166666666668,
+            "paired_stream_percentile_95": [
+              5.63541666666667,
+              38.52161458333332
+            ]
+          },
+          "actual_steps": {
+            "difference": 19.979166666666668,
+            "paired_stream_percentile_95": [
+              5.63541666666667,
+              38.52161458333332
+            ]
+          }
+        },
+        "success_to_failure": 3,
+        "failure_to_success": 0
+      },
+      {
+        "method": "UPDATE_G16",
+        "reference": "POINT16_CYCLE",
+        "role": "SECONDARY_UNADJUSTED",
+        "stream_values": [
+          [
+            0.0,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          [
+            0.0,
+            0.6666666666666666,
+            0.6666666666666666
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            8.333333333333334,
+            8.333333333333334
+          ],
+          [
+            0.0,
+            -1.5,
+            -1.5
+          ],
+          [
+            0.0,
+            0.3333333333333333,
+            0.3333333333333333
+          ],
+          [
+            0.0,
+            0.5,
+            0.5
+          ],
+          [
+            0.0,
+            6.0,
+            6.0
+          ],
+          [
+            0.0,
+            0.16666666666666666,
+            0.16666666666666666
+          ],
+          [
+            0.0,
+            -0.5,
+            -0.5
+          ],
+          [
+            0.0,
+            -1.1666666666666667,
+            -1.1666666666666667
+          ],
+          [
+            0.0,
+            1.5,
+            1.5
+          ],
+          [
+            0.0,
+            -4.333333333333333,
+            -4.333333333333333
+          ],
+          [
+            0.0,
+            1.5,
+            1.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": 0.0,
+            "paired_stream_percentile_95": [
+              0.0,
+              0.0
+            ]
+          },
+          "deadline_loss": {
+            "difference": 0.6979166666666667,
+            "paired_stream_percentile_95": [
+              -0.4270833333333333,
+              1.9479166666666667
+            ]
+          },
+          "actual_steps": {
+            "difference": 0.6979166666666667,
+            "paired_stream_percentile_95": [
+              -0.4270833333333333,
+              1.9479166666666667
+            ]
+          }
+        },
+        "success_to_failure": 0,
+        "failure_to_success": 0
+      },
+      {
+        "method": "DIRECT_POINT8",
+        "reference": "KEEP_POINT8_AFTER16",
+        "role": "SECONDARY_UNADJUSTED",
+        "stream_values": [
+          [
+            0.0,
+            -7.0,
+            -7.0
+          ],
+          [
+            0.0,
+            -8.333333333333334,
+            -8.333333333333334
+          ],
+          [
+            0.0,
+            -3.1666666666666665,
+            -3.1666666666666665
+          ],
+          [
+            0.0,
+            -13.0,
+            -13.0
+          ],
+          [
+            0.0,
+            9.666666666666666,
+            9.666666666666666
+          ],
+          [
+            0.0,
+            -6.666666666666667,
+            -6.666666666666667
+          ],
+          [
+            0.16666666666666666,
+            -74.5,
+            -74.5
+          ],
+          [
+            0.0,
+            -9.166666666666666,
+            -9.166666666666666
+          ],
+          [
+            0.0,
+            -6.833333333333333,
+            -6.833333333333333
+          ],
+          [
+            -0.3333333333333333,
+            138.0,
+            138.0
+          ],
+          [
+            0.0,
+            -12.833333333333334,
+            -12.833333333333334
+          ],
+          [
+            0.0,
+            -8.5,
+            -8.5
+          ],
+          [
+            0.0,
+            2.0,
+            2.0
+          ],
+          [
+            0.0,
+            -5.666666666666667,
+            -5.666666666666667
+          ],
+          [
+            0.0,
+            -5.666666666666667,
+            -5.666666666666667
+          ],
+          [
+            0.0,
+            -9.666666666666666,
+            -9.666666666666666
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.010416666666666666,
+            "paired_stream_percentile_95": [
+              -0.0625,
+              0.020833333333333332
+            ]
+          },
+          "deadline_loss": {
+            "difference": -1.333333333333334,
+            "paired_stream_percentile_95": [
+              -17.198177083333334,
+              20.625260416666663
+            ]
+          },
+          "actual_steps": {
+            "difference": -1.333333333333334,
+            "paired_stream_percentile_95": [
+              -17.198177083333334,
+              20.625260416666663
+            ]
+          }
+        },
+        "success_to_failure": 2,
+        "failure_to_success": 1
+      }
+    ],
+    "prefix_pairs": 768,
+    "future_prefix_pairs": 336,
+    "eight_step_pair_entries": 576,
+    "eight_step_different_method_pairs": 480,
+    "eight_step_self_checks": 96,
+    "sixteen_step_pairs": 192,
+    "prefix_reason_counts": {
+      "MATCHED_ACTIVE_PREFIX_16": 192,
+      "MATCHED_ACTIVE_PREFIX_8": 576
+    },
+    "independent_streams": 16,
+    "operator_parity_strata": [
+      8,
+      8
+    ],
+    "context_futures_are_not_independent_streams": true,
+    "algorithm_novelty_established": false,
+    "online_selector_executions": 0,
+    "scope": "Frozen standard baseline comparison only; controller family and probe quantity separated by explicit controls."
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 34272,
+      "simulation_attempts": 3545105,
+      "simulation_frames_attempted": 17725525,
+      "simulation_completed": 3545105,
+      "simulation_frames_completed": 17725525,
+      "reset_completed": 34272
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 33600,
+        "simulation_attempts": 3360000,
+        "simulation_frames_attempted": 16800000,
+        "simulation_completed": 3360000,
+        "simulation_frames_completed": 16800000,
+        "reset_completed": 33600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 672,
+        "simulation_attempts": 67200,
+        "simulation_frames_attempted": 336000,
+        "simulation_completed": 67200,
+        "simulation_frames_completed": 336000,
+        "reset_completed": 672
+      },
+      "CONTROL": {
+        "simulation_attempts": 117905,
+        "simulation_frames_attempted": 589525,
+        "simulation_completed": 117905,
+        "simulation_frames_completed": 589525
+      }
+    }
+  },
+  "episodes": 672,
+  "controlled_steps": 117905,
+  "controlled_resets": 672,
+  "decomposition": {
+    "total": 18.645833333333332,
+    "direct_minus_kept_extra_probe": -1.3333333333333333,
+    "kept_old_minus_updated": 19.979166666666668
+  },
+  "failures_or_stops": 143,
+  "record_audit": {
+    "experiment_run_id": "point8_baseline_20261015T153211Z_b9506ff0e3ae",
+    "manifest_id": "15226f9f43e1dbbb11d9e5354b975663038557e501b43c42ad79c5caa293cdce",
+    "source_git_commit": "b9506ff0e3aeeb209e18cd2b1b7a6bb0514d11b2",
+    "integrity": "PASSED",
+    "status": "COMPLETED_POINT8_BASELINE",
+    "episodes": 672,
+    "controlled_steps": 117905,
+    "controlled_resets": 672,
+    "statistics": {
+      "methods": {
+        "DIRECT_POINT8": {
+          "cases": 96,
+          "successes": 90,
+          "stops": 0,
+          "mean_total_steps": 113.25,
+          "mean_deadline_loss": 113.25,
+          "mean_fixed_probe_steps": 8.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 21010,
+          "nominal_offline_resets": 288,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 28,
+              "mean_deadline_loss": 127.4375
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 71.90625
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 30,
+              "mean_deadline_loss": 140.40625
+            }
+          }
+        },
+        "KEEP_POINT8_AFTER16": {
+          "cases": 96,
+          "successes": 91,
+          "stops": 0,
+          "mean_total_steps": 114.58333333333333,
+          "mean_deadline_loss": 114.58333333333333,
+          "mean_fixed_probe_steps": 16.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 21010,
+          "nominal_offline_resets": 288,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 29,
+              "mean_deadline_loss": 120.375
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 78.84375
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 30,
+              "mean_deadline_loss": 144.53125
+            }
+          }
+        },
+        "POINT16_CYCLE": {
+          "cases": 96,
+          "successes": 94,
+          "stops": 0,
+          "mean_total_steps": 94.60416666666667,
+          "mean_deadline_loss": 94.60416666666667,
+          "mean_fixed_probe_steps": 16.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 21010,
+          "nominal_offline_resets": 288,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 79.375
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 70.71875
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 30,
+              "mean_deadline_loss": 133.71875
+            }
+          }
+        },
+        "DIRECT_G8": {
+          "cases": 96,
+          "successes": 91,
+          "stops": 0,
+          "mean_total_steps": 103.04166666666667,
+          "mean_deadline_loss": 103.04166666666667,
+          "mean_fixed_probe_steps": 8.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 21010,
+          "nominal_offline_resets": 288,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 30,
+              "mean_deadline_loss": 99.59375
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 69.34375
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 29,
+              "mean_deadline_loss": 140.1875
+            }
+          }
+        },
+        "UPDATE_G16": {
+          "cases": 96,
+          "successes": 94,
+          "stops": 0,
+          "mean_total_steps": 95.30208333333333,
+          "mean_deadline_loss": 95.30208333333333,
+          "mean_fixed_probe_steps": 16.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 21010,
+          "nominal_offline_resets": 288,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 79.375
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 32,
+              "mean_deadline_loss": 71.0625
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 30,
+              "mean_deadline_loss": 135.46875
+            }
+          }
+        },
+        "NO_PROBE": {
+          "cases": 96,
+          "successes": 35,
+          "stops": 0,
+          "mean_total_steps": 350.71875,
+          "mean_deadline_loss": 350.71875,
+          "mean_fixed_probe_steps": 0.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 0,
+          "nominal_offline_resets": 0,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 11,
+              "mean_deadline_loss": 353.75
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 10,
+              "mean_deadline_loss": 369.46875
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 14,
+              "mean_deadline_loss": 328.9375
+            }
+          }
+        },
+        "IDENTITY_AFTER8": {
+          "cases": 96,
+          "successes": 34,
+          "stops": 0,
+          "mean_total_steps": 356.6770833333333,
+          "mean_deadline_loss": 356.6770833333333,
+          "mean_fixed_probe_steps": 8.0,
+          "mean_policy_measure_steps": 0.0,
+          "nominal_offline_steps": 0,
+          "nominal_offline_resets": 0,
+          "by_task": {
+            "push-v3": {
+              "cases": 32,
+              "successes": 10,
+              "mean_deadline_loss": 368.28125
+            },
+            "reach-v3": {
+              "cases": 32,
+              "successes": 10,
+              "mean_deadline_loss": 372.1875
+            },
+            "door-open-v3": {
+              "cases": 32,
+              "successes": 14,
+              "mean_deadline_loss": 329.5625
+            }
+          }
+        }
+      },
+      "registered_contrasts": [
+        {
+          "method": "DIRECT_POINT8",
+          "reference": "POINT16_CYCLE",
+          "role": "PRIMARY",
+          "stream_values": [
+            [
+              0.0,
+              -8.333333333333334,
+              -8.333333333333334
+            ],
+            [
+              0.0,
+              -4.833333333333333,
+              -4.833333333333333
+            ],
+            [
+              -0.3333333333333333,
+              145.66666666666666,
+              145.66666666666666
+            ],
+            [
+              0.0,
+              -9.333333333333334,
+              -9.333333333333334
+            ],
+            [
+              0.0,
+              54.5,
+              54.5
+            ],
+            [
+              0.0,
+              -9.833333333333334,
+              -9.833333333333334
+            ],
+            [
+              0.0,
+              -2.6666666666666665,
+              -2.6666666666666665
+            ],
+            [
+              0.0,
+              -12.166666666666666,
+              -12.166666666666666
+            ],
+            [
+              0.0,
+              25.5,
+              25.5
+            ],
+            [
+              -0.3333333333333333,
+              139.16666666666666,
+              139.16666666666666
+            ],
+            [
+              0.0,
+              5.5,
+              5.5
+            ],
+            [
+              0.0,
+              -5.333333333333333,
+              -5.333333333333333
+            ],
+            [
+              0.0,
+              2.0,
+              2.0
+            ],
+            [
+              0.0,
+              -3.0,
+              -3.0
+            ],
+            [
+              0.0,
+              -6.5,
+              -6.5
+            ],
+            [
+              0.0,
+              -12.0,
+              -12.0
+            ]
+          ],
+          "statistics": {
+            "success_rate": {
+              "difference": -0.041666666666666664,
+              "paired_stream_percentile_95": [
+                -0.10416666666666666,
+                0.0
+              ]
+            },
+            "deadline_loss": {
+              "difference": 18.645833333333332,
+              "paired_stream_percentile_95": [
+                -2.000260416666666,
+                45.41692708333332
+              ]
+            },
+            "actual_steps": {
+              "difference": 18.645833333333332,
+              "paired_stream_percentile_95": [
+                -2.000260416666666,
+                45.41692708333332
+              ]
+            }
+          },
+          "success_to_failure": 4,
+          "failure_to_success": 0
+        },
+        {
+          "method": "DIRECT_POINT8",
+          "reference": "DIRECT_G8",
+          "role": "SECONDARY_UNADJUSTED",
+          "stream_values": [
+            [
+              0.0,
+              0.5,
+              0.5
+            ],
+            [
+              0.0,
+              -1.5,
+              -1.5
+            ],
+            [
+              0.0,
+              7.333333333333333,
+              7.333333333333333
+            ],
+            [
+              0.0,
+              -0.6666666666666666,
+              -0.6666666666666666
+            ],
+            [
+              0.0,
+              61.5,
+              61.5
+            ],
+            [
+              0.0,
+              -1.0,
+              -1.0
+            ],
+            [
+              0.0,
+              3.5,
+              3.5
+            ],
+            [
+              0.0,
+              -10.5,
+              -10.5
+            ],
+            [
+              0.0,
+              10.166666666666666,
+              10.166666666666666
+            ],
+            [
+              -0.3333333333333333,
+              145.0,
+              145.0
+            ],
+            [
+              0.0,
+              10.0,
+              10.0
+            ],
+            [
+              0.0,
+              -4.166666666666667,
+              -4.166666666666667
+            ],
+            [
+              0.16666666666666666,
+              -56.166666666666664,
+              -56.166666666666664
+            ],
+            [
+              0.0,
+              2.1666666666666665,
+              2.1666666666666665
+            ],
+            [
+              0.0,
+              -0.16666666666666666,
+              -0.16666666666666666
+            ],
+            [
+              0.0,
+              -2.6666666666666665,
+              -2.6666666666666665
+            ]
+          ],
+          "statistics": {
+            "success_rate": {
+              "difference": -0.010416666666666666,
+              "paired_stream_percentile_95": [
+                -0.0625,
+                0.020833333333333332
+              ]
+            },
+            "deadline_loss": {
+              "difference": 10.208333333333332,
+              "paired_stream_percentile_95": [
+                -6.677343750000001,
+                32.40625
+              ]
+            },
+            "actual_steps": {
+              "difference": 10.208333333333332,
+              "paired_stream_percentile_95": [
+                -6.677343750000001,
+                32.40625
+              ]
+            }
+          },
+          "success_to_failure": 2,
+          "failure_to_success": 1
+        },
+        {
+          "method": "KEEP_POINT8_AFTER16",
+          "reference": "POINT16_CYCLE",
+          "role": "SECONDARY_UNADJUSTED",
+          "stream_values": [
+            [
+              0.0,
+              -1.3333333333333333,
+              -1.3333333333333333
+            ],
+            [
+              0.0,
+              3.5,
+              3.5
+            ],
+            [
+              -0.3333333333333333,
+              148.83333333333334,
+              148.83333333333334
+            ],
+            [
+              0.0,
+              3.6666666666666665,
+              3.6666666666666665
+            ],
+            [
+              0.0,
+              44.833333333333336,
+              44.833333333333336
+            ],
+            [
+              0.0,
+              -3.1666666666666665,
+              -3.1666666666666665
+            ],
+            [
+              -0.16666666666666666,
+              71.83333333333333,
+              71.83333333333333
+            ],
+            [
+              0.0,
+              -3.0,
+              -3.0
+            ],
+            [
+              0.0,
+              32.333333333333336,
+              32.333333333333336
+            ],
+            [
+              0.0,
+              1.1666666666666667,
+              1.1666666666666667
+            ],
+            [
+              0.0,
+              18.333333333333332,
+              18.333333333333332
+            ],
+            [
+              0.0,
+              3.1666666666666665,
+              3.1666666666666665
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              2.6666666666666665,
+              2.6666666666666665
+            ],
+            [
+              0.0,
+              -0.8333333333333334,
+              -0.8333333333333334
+            ],
+            [
+              0.0,
+              -2.3333333333333335,
+              -2.3333333333333335
+            ]
+          ],
+          "statistics": {
+            "success_rate": {
+              "difference": -0.03125,
+              "paired_stream_percentile_95": [
+                -0.07291666666666667,
+                0.0
+              ]
+            },
+            "deadline_loss": {
+              "difference": 19.979166666666668,
+              "paired_stream_percentile_95": [
+                5.63541666666667,
+                38.52161458333332
+              ]
+            },
+            "actual_steps": {
+              "difference": 19.979166666666668,
+              "paired_stream_percentile_95": [
+                5.63541666666667,
+                38.52161458333332
+              ]
+            }
+          },
+          "success_to_failure": 3,
+          "failure_to_success": 0
+        },
+        {
+          "method": "UPDATE_G16",
+          "reference": "POINT16_CYCLE",
+          "role": "SECONDARY_UNADJUSTED",
+          "stream_values": [
+            [
+              0.0,
+              0.16666666666666666,
+              0.16666666666666666
+            ],
+            [
+              0.0,
+              0.6666666666666666,
+              0.6666666666666666
+            ],
+            [
+              0.0,
+              0.5,
+              0.5
+            ],
+            [
+              0.0,
+              8.333333333333334,
+              8.333333333333334
+            ],
+            [
+              0.0,
+              -1.5,
+              -1.5
+            ],
+            [
+              0.0,
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            [
+              0.0,
+              0.5,
+              0.5
+            ],
+            [
+              0.0,
+              6.0,
+              6.0
+            ],
+            [
+              0.0,
+              0.16666666666666666,
+              0.16666666666666666
+            ],
+            [
+              0.0,
+              -0.5,
+              -0.5
+            ],
+            [
+              0.0,
+              -1.1666666666666667,
+              -1.1666666666666667
+            ],
+            [
+              0.0,
+              1.5,
+              1.5
+            ],
+            [
+              0.0,
+              -4.333333333333333,
+              -4.333333333333333
+            ],
+            [
+              0.0,
+              1.5,
+              1.5
+            ],
+            [
+              0.0,
+              0.0,
+              0.0
+            ],
+            [
+              0.0,
+              -1.0,
+              -1.0
+            ]
+          ],
+          "statistics": {
+            "success_rate": {
+              "difference": 0.0,
+              "paired_stream_percentile_95": [
+                0.0,
+                0.0
+              ]
+            },
+            "deadline_loss": {
+              "difference": 0.6979166666666667,
+              "paired_stream_percentile_95": [
+                -0.4270833333333333,
+                1.9479166666666667
+              ]
+            },
+            "actual_steps": {
+              "difference": 0.6979166666666667,
+              "paired_stream_percentile_95": [
+                -0.4270833333333333,
+                1.9479166666666667
+              ]
+            }
+          },
+          "success_to_failure": 0,
+          "failure_to_success": 0
+        },
+        {
+          "method": "DIRECT_POINT8",
+          "reference": "KEEP_POINT8_AFTER16",
+          "role": "SECONDARY_UNADJUSTED",
+          "stream_values": [
+            [
+              0.0,
+              -7.0,
+              -7.0
+            ],
+            [
+              0.0,
+              -8.333333333333334,
+              -8.333333333333334
+            ],
+            [
+              0.0,
+              -3.1666666666666665,
+              -3.1666666666666665
+            ],
+            [
+              0.0,
+              -13.0,
+              -13.0
+            ],
+            [
+              0.0,
+              9.666666666666666,
+              9.666666666666666
+            ],
+            [
+              0.0,
+              -6.666666666666667,
+              -6.666666666666667
+            ],
+            [
+              0.16666666666666666,
+              -74.5,
+              -74.5
+            ],
+            [
+              0.0,
+              -9.166666666666666,
+              -9.166666666666666
+            ],
+            [
+              0.0,
+              -6.833333333333333,
+              -6.833333333333333
+            ],
+            [
+              -0.3333333333333333,
+              138.0,
+              138.0
+            ],
+            [
+              0.0,
+              -12.833333333333334,
+              -12.833333333333334
+            ],
+            [
+              0.0,
+              -8.5,
+              -8.5
+            ],
+            [
+              0.0,
+              2.0,
+              2.0
+            ],
+            [
+              0.0,
+              -5.666666666666667,
+              -5.666666666666667
+            ],
+            [
+              0.0,
+              -5.666666666666667,
+              -5.666666666666667
+            ],
+            [
+              0.0,
+              -9.666666666666666,
+              -9.666666666666666
+            ]
+          ],
+          "statistics": {
+            "success_rate": {
+              "difference": -0.010416666666666666,
+              "paired_stream_percentile_95": [
+                -0.0625,
+                0.020833333333333332
+              ]
+            },
+            "deadline_loss": {
+              "difference": -1.333333333333334,
+              "paired_stream_percentile_95": [
+                -17.198177083333334,
+                20.625260416666663
+              ]
+            },
+            "actual_steps": {
+              "difference": -1.333333333333334,
+              "paired_stream_percentile_95": [
+                -17.198177083333334,
+                20.625260416666663
+              ]
+            }
+          },
+          "success_to_failure": 2,
+          "failure_to_success": 1
+        }
+      ],
+      "prefix_pairs": 768,
+      "future_prefix_pairs": 336,
+      "eight_step_pair_entries": 576,
+      "eight_step_different_method_pairs": 480,
+      "eight_step_self_checks": 96,
+      "sixteen_step_pairs": 192,
+      "prefix_reason_counts": {
+        "MATCHED_ACTIVE_PREFIX_16": 192,
+        "MATCHED_ACTIVE_PREFIX_8": 576
+      },
+      "independent_streams": 16,
+      "operator_parity_strata": [
+        8,
+        8
+      ],
+      "context_futures_are_not_independent_streams": true,
+      "algorithm_novelty_established": false,
+      "online_selector_executions": 0,
+      "scope": "Frozen standard baseline comparison only; controller family and probe quantity separated by explicit controls."
+    },
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 34272,
+        "simulation_attempts": 3545105,
+        "simulation_frames_attempted": 17725525,
+        "simulation_completed": 3545105,
+        "simulation_frames_completed": 17725525,
+        "reset_completed": 34272
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 33600,
+          "simulation_attempts": 3360000,
+          "simulation_frames_attempted": 16800000,
+          "simulation_completed": 3360000,
+          "simulation_frames_completed": 16800000,
+          "reset_completed": 33600
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 672,
+          "simulation_attempts": 67200,
+          "simulation_frames_attempted": 336000,
+          "simulation_completed": 67200,
+          "simulation_frames_completed": 336000,
+          "reset_completed": 672
+        },
+        "CONTROL": {
+          "simulation_attempts": 117905,
+          "simulation_frames_attempted": 589525,
+          "simulation_completed": 117905,
+          "simulation_frames_completed": 589525
+        }
+      }
+    },
+    "events_checked": 308002,
+    "clock_units": {
+      "push-v3": {
+        "model_xml": "metaworld/assets/sawyer_xyz/sawyer_push_v3.xml",
+        "model_xml_sha256": "8c4bf7169be4f3c666811930aa13682e755b43a8e6e8186265a0a8e9815ae502",
+        "compiled_timestep_seconds": 0.0025,
+        "env_step_frames": 5,
+        "env_step_seconds": 0.0125
+      },
+      "reach-v3": {
+        "model_xml": "metaworld/assets/sawyer_xyz/sawyer_reach_v3.xml",
+        "model_xml_sha256": "bc0427293317164af71c82e9fd41a5fa568c3185a97d92da8e57e4e39254361c",
+        "compiled_timestep_seconds": 0.0025,
+        "env_step_frames": 5,
+        "env_step_seconds": 0.0125
+      },
+      "door-open-v3": {
+        "model_xml": "metaworld/assets/sawyer_xyz/sawyer_door_pull.xml",
+        "model_xml_sha256": "f14cdb95f214dc13959351585b8a41b77f8876b112405d05f3e927ecac74513a",
+        "compiled_timestep_seconds": 0.0025,
+        "env_step_frames": 5,
+        "env_step_seconds": 0.0125
+      }
+    },
+    "frozen_git_inputs_checked": 681,
+    "api_calls": 0,
+    "memory_writes": 0,
+    "artifact_sha256": {
+      "episodes_00.jsonl.gz": "61346f783c9c8733313359268e55cba3df3e585e13e5444d6e55a244b216b31a",
+      "episodes_01.jsonl.gz": "e185e381a4a0e149450d998359f772ed446a07cb187b19704088cf5299dd5b41",
+      "episodes_02.jsonl.gz": "dbc900576bccb7e34efbc98823412737a0b7281096b452159b1b550e51871432",
+      "episodes_03.jsonl.gz": "4b41c180a31c0764802c78f0872746172f2f7d3393e95dfaa156b6f3590bca5d",
+      "episodes_04.jsonl.gz": "5df49dcf38b6825b9f9ed074f9bf5e6c983d9792d5ac7512eb264621be2fb993",
+      "episodes_05.jsonl.gz": "a707e66de394a9b5fe8c56f1e9260c7de4103c30ac08c755dc74f3525fef2f1f",
+      "episodes_06.jsonl.gz": "3687d9fd786cd95b94026abcfbb2aaba7573f75fe5484cbb875f3f9a052ffd6b",
+      "episodes_07.jsonl.gz": "88989ed47bdf5f39736705fec9ce0e626bbc98fe1c94100693cab4bf2b1e4ad2",
+      "episodes_08.jsonl.gz": "b33b850b2c7e24c9f033c27bae77ac0a2a0aa04271afdf47f270bc927b24fe74",
+      "episodes_09.jsonl.gz": "c1482837c94511cbff0e9cc1cacd9acb322d3c678ce8b40227fbbeba31594c85",
+      "episodes_10.jsonl.gz": "2eb4027bce705109255d76026f45781efecb08d47f563ac5e53c130299d599fd",
+      "episodes_11.jsonl.gz": "03fac3b4304a91893a6ba9d277fb615c423603bb30e4c10e71070d2589d8d20f",
+      "episodes_12.jsonl.gz": "458eae4e9f426903d0ba5ab40f6d3ab3f761a9ae082a0e390c524c3e6749c488",
+      "episodes_13.jsonl.gz": "81ccfb268fa233f664147e2eade69d75c8da2b31abf1f7eb0028cae3f0b81636",
+      "episodes_14.jsonl.gz": "590ac8117a593cdce7f6e350c39365f24379d4837ff5d2bcd63ca8007a226fa0",
+      "episodes_15.jsonl.gz": "77917514d44361a471b48486eeb527f9aa942ecc286fc3c67592f78f180aef82",
+      "events_00.jsonl.gz": "6807386a11661aaff25f2f1b2b9e732ff8f7a7e19f8c998825e21bbd3386c8e4",
+      "events_01.jsonl.gz": "2703d9faf2f56439a26cfd470272cef283076e2246e6e8ae10a93af4151fb471",
+      "events_02.jsonl.gz": "814bed7381b1f97b92fe7d468243b6af3c4fe5ddeb1164aa7a470624eb12aeb1",
+      "events_03.jsonl.gz": "387f74358d7e851f5340e08f3ca882bd0cb393b2b70e133c01d542c87a9f1628",
+      "events_04.jsonl.gz": "6e4ca928093a4d790344a51ba2e95216d6f407957cb42604aa7d71d68a3cae27",
+      "events_05.jsonl.gz": "671312b58fb1d6e163a8a84a3659255ad94da9cb8313826930fb8a861fc71267",
+      "events_06.jsonl.gz": "b48bd438270a75e4704ade8d013e13beb3dfde9ef882f34190ee0128f9c69695",
+      "events_07.jsonl.gz": "9463cbe8467f0f140c698cbe897c88cf466d03cf4a3a8bf7a664e354c3b26609",
+      "events_08.jsonl.gz": "88cb07d74d84c807ceb70548cff4a5dd6a1ce3cd5e2a1917aeae60f56f5b3405",
+      "events_09.jsonl.gz": "d04595c04b78c4c0e341ae06b0a6ce42b61782c757885e7f476b8c7c1d45f069",
+      "events_10.jsonl.gz": "8b0754ac2019cbfcb6941d941666bee2ee54dda3f3d6ed747ed4edcbe0133b3f",
+      "events_11.jsonl.gz": "bf90c2934b5da5dfff35c2b21e66e904f58034c692e618a61887016e24f68700",
+      "events_12.jsonl.gz": "e6b824c076906d3df80f5e62a3505693d939180afdd372bde70789fab89d9fe7",
+      "events_13.jsonl.gz": "bc81929a7e560dac0fe22e887215ba8fd9663d06867833f20f23fe8cba6f154e",
+      "events_14.jsonl.gz": "8d7001a02f2d8d8a75b6dde76eef9b25adb12cc94b92c5b3f5f860ca3c16c438",
+      "events_15.jsonl.gz": "98c38cef3e371b5c925fcc0632c428eda31e1d95f9e4be84b0a7188bc3e9e5a7",
+      "manifest.json": "3e40efcd0b378c43a98618c361014d69b73644ad01b551b9442be56853c92e09",
+      "status.json": "2899fdbc4e5dfac551fb04dbb975e152cdf556ed2f99ff2063fee74723dd60f5",
+      "summary.json": "d786f4e16f5d1baf99435abcebca1fe483c2e567b33e9ce373e3e899454f479e"
+    },
+    "scope": "Recorded identity/Gaussian/point choices and lifecycle replay; noise independently reconstructed. Gaussian/point helpers, declared-prefix checks and fixed-control statistics reused. No robot resimulation, hidden-state proof, new selector or physical/probability qualification."
+  },
+  "statistics_audit": {
+    "experiment_run_id": "point8_baseline_20261015T153211Z_b9506ff0e3ae",
+    "manifest_id": "15226f9f43e1dbbb11d9e5354b975663038557e501b43c42ad79c5caa293cdce",
+    "source_git_commit": "b9506ff0e3aeeb209e18cd2b1b7a6bb0514d11b2",
+    "integrity": "PASSED",
+    "episodes_checked": 672,
+    "numeric_fields_checked": 421,
+    "registered_contrasts_checked": 5,
+    "record_audit_sha256": "bbb9b14ef2cf1b8342994b6bc653b07b6304a3434fe0966b9dafeebabda62cf7",
+    "summary_sha256": "d786f4e16f5d1baf99435abcebca1fe483c2e567b33e9ce373e3e899454f479e",
+    "scope": "Independent raw-outcome aggregation and paired bootstrap; NumPy RNG and percentile reused. No new simulation or model fit."
+  },
+  "fit_costs": {
+    "DIRECT_POINT8": {
+      "saved_estimation_decisions": 96,
+      "infer_operator_calls": 96,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 96
+    },
+    "KEEP_POINT8_AFTER16": {
+      "saved_estimation_decisions": 96,
+      "infer_operator_calls": 96,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 96
+    },
+    "POINT16_CYCLE": {
+      "saved_estimation_decisions": 96,
+      "infer_operator_calls": 96,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 96
+    },
+    "DIRECT_G8": {
+      "saved_estimation_decisions": 96,
+      "infer_operator_calls": 96,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 96
+    },
+    "UPDATE_G16": {
+      "saved_estimation_decisions": 96,
+      "infer_operator_calls": 96,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 96
+    },
+    "NO_PROBE": {
+      "saved_estimation_decisions": 0,
+      "infer_operator_calls": 0,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 0
+    },
+    "IDENTITY_AFTER8": {
+      "saved_estimation_decisions": 0,
+      "infer_operator_calls": 0,
+      "invalid_saved_fits": 0,
+      "saved_optimizer_nfev": 0
+    }
+  },
+  "no_api": true,
+  "no_learner": true,
+  "no_algorithm_promotion": true
+}

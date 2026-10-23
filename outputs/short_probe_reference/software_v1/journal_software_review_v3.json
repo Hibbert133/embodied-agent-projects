@@ -1,0 +1,75 @@
+{
+  "phase": "SHORT_REFERENCE_JOURNAL_SOFTWARE_AND_NOMINAL_DESIGN_PREPARATION_V1",
+  "created_utc": "2026-10-19T03:51:29.650794+00:00",
+  "parent_git_commit": "b064089ed0efbdec31146a98e34e339ed3e723df",
+  "status": "READY_FOR_LOCAL_SOFTWARE_COMMIT_NOT_PHYSICAL_PROTOCOL_FREEZE",
+  "supersedes_delivery_hashes_in": "journal_software_review_v2.json",
+  "previous_review_sha256": "26da229f6e9ac1819ea8de6e0062ce1a81a39c486429610a1eab865af9477ed8",
+  "files_sha256_excluding_this_review": {
+    "docs/research/short_probe_journal_audit_20261019_zh.md": "0ec0c92d8eee3d315b6ed56e3522d014742a907cbf8d74ff086c1c3886de4baf",
+    "docs/research/short_probe_nominal_design_preparation_20261019_zh.md": "f923d40d6d0b6b3a34da4a1b46f788f635c307cfe47f777452ba719e06397413",
+    "outputs/short_probe_reference/.gitattributes": "6ca0ae6739e6a265a46129a74b6760d6b2f0979566cf9a95e74719839514c04d",
+    "outputs/short_probe_reference/design_preparation_v1/nominal_designs_v1.json": "5d706153dae9939ded3824ef616ea976cd0b967996895e785cd95b1f6a14bfc4",
+    "outputs/short_probe_reference/software_v1/journal_delivery_attributes_before_v2.txt": "308a40fa1d89ae5ea4390b4c9b46a0108b09f171f07898f25d451fa0c69c4e9f",
+    "outputs/short_probe_reference/software_v1/journal_full_regression_20261019.txt": "45591dbe3fd4ccf099f05ec492f58f29a7330278f36ecbd686c1605856a52d58",
+    "outputs/short_probe_reference/software_v1/journal_full_regression_result_v1.json": "631f2034c70215884a060642be8391f4192ff8e82e0c5a9d9fd79553677c8469",
+    "outputs/short_probe_reference/software_v1/journal_full_regression_source_v1.json": "9a3237a59d28215c85c68e50454ff529bf9ac252999a9d82d043c60b63ae215b",
+    "outputs/short_probe_reference/software_v1/journal_note_before_design_preparation_v1.md": "9f5cbff0df4c776ac35efb74c61bdfc641d149c5d3dcc8d23d0e3ec6c97a380c",
+    "outputs/short_probe_reference/software_v1/journal_software_review_v1.json": "fdf72b873251502505bb3ff8f11bd70c3bca80a4ba6f2e56c1c09160e381b71d",
+    "outputs/short_probe_reference/software_v1/journal_software_review_v2.json": "26da229f6e9ac1819ea8de6e0062ce1a81a39c486429610a1eab865af9477ed8",
+    "outputs/short_probe_reference/software_v1/journal_target_costs_v2.json": "7493bdaddcba498e19a67d631ecdae522000d2479d15c44bec7b0ad01674bf5f",
+    "outputs/short_probe_reference/software_v1/journal_target_costs_v3.json": "b80ce186f5734e4e5e1488a162cf1f5a165a15b75db27fe6de5a565b071a45d5",
+    "outputs/short_probe_reference/software_v1/journal_target_costs_v4.json": "f02fca8559ac3ce1bcaacf2c17336c4b413db5b074c73fe0035465470a0fc8a0",
+    "outputs/short_probe_reference/software_v1/journal_target_failed_v1.txt": "73577b64f4fc954745d3ccfcff92d4d5438bef57e2768f81b6b955ed95de4f88",
+    "outputs/short_probe_reference/software_v1/journal_target_v2.txt": "686ac38b9ae38cf7750c4e6d0bb1cd51eed21135f811607f8253c72842d7463e",
+    "outputs/short_probe_reference/software_v1/journal_target_v3.txt": "f2503285011cc909d196228a27086961bab75e38463cc5d766760b88a49a58eb",
+    "outputs/short_probe_reference/software_v1/journal_target_v4.txt": "35a301ef4222d9233dcf1002bf6d2c464c7780c76253c4079d46d7e477edda5e",
+    "src/analysis/short_probe_journal_audit_v1.py": "bd7fa85e5b4aeb5d868ed027890b1a589ebb0741aa57af9fd5a57a215a07b1ae",
+    "tests/test_short_probe_journal_audit_v1.py": "a57c620f9c653d530f8a812024a572baa29c5b968b0b276d8f1a900b7fc2ae8b"
+  },
+  "prior_17_file_checks": {
+    "exec_session": 5720,
+    "exit_code": 0,
+    "tracked_secret_check": "PASSED",
+    "staged_diff_check": "PASSED",
+    "working_diff_check": "PASSED"
+  },
+  "full_regression": {
+    "tests": 1088,
+    "wall_seconds": 164.668,
+    "source_files_rehashed": 751,
+    "source_unchanged": true
+  },
+  "compileall_exit_code": 0,
+  "pip_check_exit_code": 0,
+  "final_supplemental_utf8_utf16_secret_files": 20,
+  "secret_findings": [],
+  "later_nominal_design_preparation": {
+    "nominal_task_models": 3,
+    "candidate_rows_evaluated": 432,
+    "selected_ids": {
+      "push-v3": "FOUR_002",
+      "reach-v3": "FOUR_002",
+      "door-open-v3": "FOUR_002"
+    },
+    "new_optimizer_calls": 0,
+    "new_nominal_training": 0,
+    "new_environment_steps": 0,
+    "new_reset_calls": 0,
+    "new_api_calls": 0
+  },
+  "older_review_zero_actual_design_count_is_as_of_before_preparation": true,
+  "previous_chinese_note_snapshot": "journal_note_before_design_preparation_v1.md",
+  "planning_execution_allowed": false,
+  "new_scientific_task_seeds_executed": [],
+  "remaining_requirements": [
+    "physical population collector",
+    "complete population ownership/allocation audit",
+    "independent statistics audit",
+    "executable protocol/configuration/manifest freeze",
+    "one-shot smoke and main task comparison",
+    "novel-method contribution and independent confirmation",
+    "full paper"
+  ],
+  "scope": "Software and nominal-only preparation; no new MetaWorld task evidence, API capability or completed publication requirement."
+}

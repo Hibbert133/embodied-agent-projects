@@ -1,0 +1,55 @@
+{
+  "experiment_run_id": "cold_start_evidence_20261015T170124Z_c5b76fb5ddb6",
+  "manifest_id": "efd4ecacfbbcdb36cbe8c2399d45a5d6ee2154aa263d0bb49b040c2448521715",
+  "source_git_commit": "c5b76fb5ddb6602a7f632aa6193a025790e52df3",
+  "required_validation": "PASSED",
+  "full_suite": {
+    "tests": 881,
+    "seconds": 131.01,
+    "exit_code": 0,
+    "log": "cold_start_delivery_tests_v2.log.gz"
+  },
+  "preceding_suites": [
+    {
+      "tests": 880,
+      "seconds": 130.328
+    },
+    {
+      "tests": 880,
+      "seconds": 132.053
+    }
+  ],
+  "targeted_cold_tests": {
+    "tests": 15,
+    "seconds": 1.893,
+    "exit_code": 0
+  },
+  "compileall_src_scripts_tests_exit_code": 0,
+  "report_figure_helpers_py_compile_exit_code": 0,
+  "pip_check_exit_code": 0,
+  "tracked_secret_scan_exit_code": 0,
+  "tracked_secret_scope": "canonical command scans all tracked working files; exact staged bytes additionally checked by index_check.py",
+  "git_diff_check_exit_code": 0,
+  "git_diff_cached_check_exit_code": 0,
+  "final_report_check": "outputs/cold_start_evidence/report_v1/check_final.json",
+  "final_report_numeric_fields": 1848,
+  "record_audit": "outputs/cold_start_evidence/analysis_v2/audit.json",
+  "record_audit_events": 58657,
+  "v1_tooling_error_preserved": true,
+  "figure_visual_review": "PASSED",
+  "local_report_links_checked": 13,
+  "python": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "frozen_library_files": 440,
+  "source_files_sha256": {
+    "scripts/audit_cold_start_evidence_v2.py": "145f5db5603df34239b787667fc7d3e66192bd41ca9ca7c8a4e22457ba422fee",
+    "tests/test_cold_start_audit_v2.py": "0f34d2f727e40766d4b52ad9a638133f93e061571bdf731d62ecd87955926b21"
+  },
+  "log_sha256": {
+    "cold_start_delivery_tests_v1.log.gz": "47111903398119e55917a33084159ef011cae7e4b355051d5d22b60941f0fa97",
+    "cold_start_delivery_tests_v2.log.gz": "7546db09a792e6cb7018a41b0bb118a59b79534d098755d427a6665499c9b952",
+    "cold_start_evidence_audit_v2.log.gz": "fa663aabc87b86c1112c978e6ba7eed9aef68d47b065642b118dd027633c1c9f",
+    "cold_start_evidence_collection_v1.log.gz": "a703642fd3a8dbcd9a06d683a51833d8604179a1be5f15e6268a2581257d725c",
+    "cold_start_qualification_tests_v1.log.gz": "2e2007b6724531b4e7fd4275bababb5bf3259eafb91929ab9e4df82ec4947157",
+    "secret_scan.log.gz": "0ce98a3999f4d06868a50dd6400d9daed0331ec7017142d4081b215f507beee5"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "protocol_id": "cross_task_cache_validity_development_v2",
+  "bridge_manifest": "outputs/cold_start_task_bridge/development_v1/cold_start_task_bridge_20261015T175406Z_44d3e6864ac1/manifest.json",
+  "bridge_manifest_sha256": "8ba276726e35b107a52c53d0b6864c93eee6dc48bc2b5f1e21cd9afda97a4633",
+  "bridge_audit": "outputs/cold_start_task_bridge/analysis_v1/audit.json",
+  "bridge_audit_sha256": "387c38de20ab93b0a6133355831aae9cd34e1c57062807165d650f5fbcc60414",
+  "bridge_costs": "outputs/cold_start_task_bridge/report_v1/costs.json",
+  "bridge_costs_sha256": "61d1018fe20a7e6a9b341feaf855c9c900e59e07b67294a0175a20c17fa8dd84",
+  "unique_prefixes": 168,
+  "paired_future_duplicates": 168,
+  "task_pairs_per_stream": 6,
+  "prefix_steps": [
+    2,
+    4,
+    8
+  ],
+  "modes": [
+    "PLUGIN",
+    "SOURCE_UNCERTAINTY"
+  ],
+  "nominal_alpha": 0.05,
+  "changed_permutation": "NEXT_STREAM_WITHIN_EIGHT_SOURCE_BLOCK",
+  "constructed_pairs": 672,
+  "forecast_scores": 4032,
+  "bootstrap_unit": "SEVEN_COMPLETE_GENERATOR_BLOCKS",
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261018,
+  "new_environment_steps": 0,
+  "new_reset_calls": 0,
+  "new_controller_fits": 0,
+  "api_calls": 0,
+  "output_root": "outputs/cross_task_cache_validity/development_v2"
+}

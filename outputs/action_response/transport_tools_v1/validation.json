@@ -1,0 +1,39 @@
+{
+  "experiment_run_id": "action_response_20261014T104928Z_1c3798544481",
+  "manifest_id": "579864fc921cbd15bb5222c8f7b127a49fc7c1c92fd2bdde6f38d62bb165e060",
+  "source_git_commit": "1c37985444816ad9cca434d2fe38825678fc82dd",
+  "phase": "LOSSLESS_TRANSPORT_TOOLS_V1",
+  "recorded_at_utc": "2026-10-14T12:04:22.500942+00:00",
+  "source_sha256": {
+    "scripts/archive_action_response.py": "952c4609ce2f0f94d631b609cf60332f2ca0b3c503cafce7c6e02ecb45675be9",
+    "tests/test_action_response_archive.py": "42eb3d8d3055945b3d723c06cefbd55403774571a5fe00f1ed441ba7ecbeb1fd",
+    "docs/research/action_response_transport_v1.md": "a44d7797f1b0efa0528295cc15746893feb2fe2287a73a7f4b5851bdeb5e80fc"
+  },
+  "checks": {
+    "full_unit_suite": "PASSED",
+    "test_count": 726,
+    "elapsed_seconds": 123.295,
+    "compileall": "PASSED",
+    "pip_check": "PASSED",
+    "tracked_secret_scan": "PASSED",
+    "git_diff_check": "PASSED",
+    "git_cached_diff_check": "PASSED",
+    "frozen_input_hashes_unchanged": 600
+  },
+  "archived_logs": {
+    "full_suite.log.gz": {
+      "uncompressed_sha256": "f293c4271cafe02c5a6b4ea44af086297d59158cc655e5908f010c4582719bde",
+      "gzip_sha256": "e5586b78ea967f975a1566d4c0b87823b388539674e4362f2fd9c76d2ce33ffe"
+    },
+    "secret_scan.log.gz": {
+      "uncompressed_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "gzip_sha256": "cbe17bd7513ac1fc9cc6d1e9201af3fe041d8b7e0919d01106bf6fcd11e3f2ed"
+    }
+  },
+  "primary_collection_status": "RUNNING",
+  "real_live_data_archived": false,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "physical_response_qualified": false,
+  "scope": "Lossless byte transport, exclusive restoration, corruption/order/path and incomplete-audit rejection tested with synthetic fixtures. Actual archive awaits completed primary audit; originals remain untouched."
+}

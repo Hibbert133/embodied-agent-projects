@@ -1,0 +1,197 @@
+{
+  "status": "PASSED_NINE_CASE_EXECUTION_QUALIFICATION_ONLY",
+  "created_utc": "2026-10-19T12:18:17.432362+00:00",
+  "source_commit": "e6ffa2f4deaec07d116aba031cd1d9520621fbda",
+  "checks": {
+    "compileall": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 980301900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "report_compile": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "docs/paper/report_physical_reprobe_qualification_20261019.py"
+      ],
+      "returncode": 0,
+      "wall_ns": 84901500,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pip_check": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 856534000,
+      "output_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09"
+    },
+    "tracked_secret_scan": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 55961223700,
+      "output_sha256": "600d3d4d96736b20d8b52eaa0f28da99c6467d6cd332b0e37b44b9c3e3fceb1d"
+    },
+    "diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 41857700,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "cached_diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 49376500,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "files": [
+    {
+      "path": "docs/paper/report_physical_reprobe_qualification_20261019.py",
+      "sha256": "8db06005c63a5084e23e4e3ee06ee0ee70afc4cf2a7902d3c9e581dbc9de05ce",
+      "bytes": 12009
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit/record_audit.json",
+      "sha256": "53c359cb43c8c14154d22780b72bb6ec8b51f451390175707bc45c022ea8f417",
+      "bytes": 8281
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit/report_receipt.json",
+      "sha256": "9fc9f679d5f53d0fda23ed57c45004c82f4f0c3879ee132e3ee5437c70780cef",
+      "bytes": 502
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit/report_zh.md",
+      "sha256": "a8e97099967db4fd10317bfbf24284055a2856a52bdc92f75a9318c0f944bfdd",
+      "bytes": 2346
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit_process.txt",
+      "sha256": "53ee4ee50f44ea023107a4b7be525147154a5c2dd68f177de7e350709c0ef940",
+      "bytes": 304
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit_process_receipt.json",
+      "sha256": "fbc5bb39e84ee5641a47611a226387e6db68ff2442ac7fe1c9c6960f51fc8303",
+      "bytes": 604
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/audit_process_started.json",
+      "sha256": "a7076b83782627e8704b0fd1010b6d8e32018be8179c9e3680231f16daa9692c",
+      "bytes": 507
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collect_process.txt",
+      "sha256": "a03a6eaac40c4154b25d2378933ce9c75b2233aa61ec9183199e9aa152c0c2b3",
+      "bytes": 1815
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collect_process_receipt.json",
+      "sha256": "53dce16a58e42a4e58be9c87e8e007ff6078a58fc4aa967f2870d9100b6776db",
+      "bytes": 620
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collect_process_started.json",
+      "sha256": "0e8f409a58aa8e867106156cabeaedd9fbbacc2dbef4ca825cef1a7077c2f51b",
+      "bytes": 523
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collection/cases.jsonl.gz",
+      "sha256": "ae21e017d8e1f75c07017b2cf033e3b8eb65d66a00c6cd35718c409c17a2da3d",
+      "bytes": 787472
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collection/completion.json",
+      "sha256": "531477eec4d532a906d9f604d150f2a887ced79378c7ebbdcc3d4235ae4a7769",
+      "bytes": 758
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collection/events.jsonl.gz",
+      "sha256": "d99b9b515c3edbfba8dadd7e27fb1d633f04a9cd2befdb332253f850ca640cbd",
+      "bytes": 546447
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collection/state_witnesses.jsonl.gz",
+      "sha256": "3562345220955547d1c2a6394fba0079926797597d80b518a1689e6840ed8195",
+      "bytes": 444427
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collection/status.json",
+      "sha256": "baf398014eb685eb3aeb5f6486823359de67fac86646100f9c407354b0102c11",
+      "bytes": 1581
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/collection/summary.json",
+      "sha256": "16bca7d6377cc70285ce0d7321225b8a229d283d592828b06d9f4dcaa1b70d3a",
+      "bytes": 6701
+    },
+    {
+      "path": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/manifest.json",
+      "sha256": "157c6c21d5a38046d2d4573fffa9fdcb502ccc07bde27f1a3057d6e21fc53463",
+      "bytes": 186128
+    },
+    {
+      "path": "outputs/reproduction_reviews/physical_reprobe_qualification_v1/analysis_v1/anchor_trajectories_zh.png",
+      "sha256": "e0a14a5eb61d90ad8e12524e04e1107e55fa74889123b56a824878c776a2ea61",
+      "bytes": 266992
+    },
+    {
+      "path": "outputs/reproduction_reviews/physical_reprobe_qualification_v1/analysis_v1/descriptive_metrics.json",
+      "sha256": "a2dbf9080ee844e9374f21d65b193c9cef451c3cf845c237b1ab1b75d3234512",
+      "bytes": 2688
+    },
+    {
+      "path": "outputs/reproduction_reviews/physical_reprobe_qualification_v1/analysis_v1/report_receipt.json",
+      "sha256": "d1cec8c43ce1ab8bcd953d321a86ea2c2bcad104b58852ad56842ac715a6152c",
+      "bytes": 131361
+    },
+    {
+      "path": "reports/physical_reprobe_execution_qualification_v1_zh.md",
+      "sha256": "289860177e694280e38ce921c3f812b5e0b3a888f1fae3877b68f4da77d3355b",
+      "bytes": 4251
+    }
+  ],
+  "index_equals_working_bytes": true,
+  "strict_utf8_and_gzip_secret_scan": "PASSED",
+  "decompressed_json_lines": 3739,
+  "png_text_metadata_scanned": [
+    "Software\u0000Matplotlib version3.11.2, https://matplotlib.org/"
+  ],
+  "figure_visually_reviewed": true,
+  "tests": {
+    "passed": 1187,
+    "receipt": "outputs/physical_reprobe/qualification_validation_v1/unittest_receipt.json",
+    "scientific_source_unchanged_since_test_and_freeze": true
+  },
+  "collection_returncode": 0,
+  "audit_returncode": 0,
+  "task_utility_demonstrated": false,
+  "publication_goal_complete": false
+}

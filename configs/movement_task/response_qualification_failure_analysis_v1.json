@@ -1,0 +1,51 @@
+{
+  "version": "response_qualification_failure_analysis_v1",
+  "scope": "POSTHOC_DESCRIPTIVE_ONLY",
+  "source": "outputs/response_model_qualification/development_v1/response_qualification_20261020T092011Z_636d6b1f9e39",
+  "source_manifest_id": "b3bd767f35c0720e8fa148097ba8f1b909da5c3d61c8a3c4398f58ae76a536e6",
+  "populations": {
+    "TRAIN": 108,
+    "CAL": 54,
+    "QUAL": 108
+  },
+  "stages": [
+    "ALL_RESPONSE",
+    "FIXED_PROBE",
+    "PRE_BOUNDARY",
+    "MOVEMENT_ALL",
+    "LIFT",
+    "POST_LIFT",
+    "POST_TASK",
+    "MOVE_1_8",
+    "MOVE_9_16",
+    "MOVE_17_32",
+    "MOVE_33_64"
+  ],
+  "training_geometry": "FROZEN_QUADRATIC_NORMALIZATION; TRAIN_RANGES; WEIGHTED_PHI_GRAM_PLUS_ORIGINAL_RIDGE; NO_TARGETS_OR_NEW_RESPONSE_FIT",
+  "terms": [
+    "CONSTANT",
+    "LINEAR_STATE",
+    "LINEAR_HISTORY",
+    "LINEAR_COMMAND",
+    "COMMAND_COMMAND",
+    "COMMAND_HISTORY",
+    "COMMAND_STATE",
+    "HISTORY_HISTORY",
+    "HISTORY_STATE",
+    "STATE_STATE"
+  ],
+  "correlation_lags": [
+    0,
+    1,
+    2
+  ],
+  "within_trajectory_quantiles": [
+    0.9
+  ],
+  "aggregation": "TRAJECTORY_FIRST_THEN_EQUAL_GROUP; NULL_NOT_ZERO; ALL_TASKS_CONDITIONS_STAGES_RETAINED",
+  "new_collection": 0,
+  "new_api_calls": 0,
+  "new_response_fits": 0,
+  "threshold_or_model_search": false,
+  "arx_selector_changes": false
+}

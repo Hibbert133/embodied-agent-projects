@@ -1,0 +1,412 @@
+{
+  "scope": "Instrumented native fixtures only; earlier unrecorded test attempts and other repository fixtures are not covered.",
+  "modules": {
+    "test_physical_reprobe_qualification_v1": {
+      "PIPELINE_RECEIPTS": [
+        {
+          "completed": true,
+          "partial_requested": false,
+          "rows": [
+            {
+              "unit": 0,
+              "task": "push-v3",
+              "seed": 700111,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 1,
+              "task": "reach-v3",
+              "seed": 700112,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 32,
+              "completed": true,
+              "boundary_ready": false,
+              "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+              "complete_window": false,
+              "success": true,
+              "total_steps": 24,
+              "reposition_steps": 0,
+              "probe_steps": 0,
+              "host_attempts": 24,
+              "host_returned": 24,
+              "policy_queries": 16,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 2,
+              "task": "door-open-v3",
+              "seed": 700113,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 64,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "ANCHOR_NOT_REACHED",
+              "complete_window": false,
+              "success": false,
+              "total_steps": 128,
+              "reposition_steps": 64,
+              "probe_steps": 0,
+              "host_attempts": 128,
+              "host_returned": 128,
+              "policy_queries": 56,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 3,
+              "task": "reach-v3",
+              "seed": 700114,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 4,
+              "task": "door-open-v3",
+              "seed": 700115,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            }
+          ],
+          "audit": {
+            "experiment_run_id": "PHYSICAL_REPROBE_TINY_SOFTWARE_ONLY",
+            "manifest_id": "SOFTWARE_MANIFEST",
+            "source_git_commit": "SOFTWARE_COMMIT",
+            "integrity": "PASSED",
+            "computations_complete": true,
+            "qualification": "QUALIFIED",
+            "executions": 5,
+            "event_count": 1500,
+            "task_rows": [
+              {
+                "task": "push-v3",
+                "executions": 1,
+                "available_boundaries": 1,
+                "complete_windows": 1
+              },
+              {
+                "task": "reach-v3",
+                "executions": 2,
+                "available_boundaries": 1,
+                "complete_windows": 1
+              },
+              {
+                "task": "door-open-v3",
+                "executions": 2,
+                "available_boundaries": 2,
+                "complete_windows": 1
+              }
+            ],
+            "rows": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700111,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 1,
+                "task": "reach-v3",
+                "seed": 700112,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 32,
+                "completed": true,
+                "boundary_ready": false,
+                "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+                "complete_window": false,
+                "success": true,
+                "total_steps": 24,
+                "reposition_steps": 0,
+                "probe_steps": 0,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 2,
+                "task": "door-open-v3",
+                "seed": 700113,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 64,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "ANCHOR_NOT_REACHED",
+                "complete_window": false,
+                "success": false,
+                "total_steps": 128,
+                "reposition_steps": 64,
+                "probe_steps": 0,
+                "host_attempts": 128,
+                "host_returned": 128,
+                "policy_queries": 56,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 3,
+                "task": "reach-v3",
+                "seed": 700114,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 4,
+                "task": "door-open-v3",
+                "seed": 700115,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              }
+            ],
+            "private_witness_records": 15,
+            "witness_construction_wall_ns": 432524600,
+            "context_arrays_and_counters_reconstructed": true,
+            "measurement_model_qualified": false,
+            "task_utility_demonstrated": false,
+            "costs": {
+              "new_control_steps": 233,
+              "lifecycle": {
+                "counts": {
+                  "reset_attempts": 255,
+                  "simulation_attempts": 25733,
+                  "simulation_completed": 25733,
+                  "simulation_frames_attempted": 128665,
+                  "simulation_frames_completed": 128665,
+                  "reset_completed": 255
+                },
+                "by_phase": {
+                  "GOAL_GENERATION": {
+                    "reset_attempts": 250,
+                    "simulation_attempts": 25000,
+                    "simulation_completed": 25000,
+                    "simulation_frames_attempted": 125000,
+                    "simulation_frames_completed": 125000,
+                    "reset_completed": 250
+                  },
+                  "CONTROLLED_RESET": {
+                    "reset_attempts": 5,
+                    "simulation_attempts": 500,
+                    "simulation_completed": 500,
+                    "simulation_frames_attempted": 2500,
+                    "simulation_frames_completed": 2500,
+                    "reset_completed": 5
+                  },
+                  "CONTROL": {
+                    "simulation_attempts": 233,
+                    "simulation_completed": 233,
+                    "simulation_frames_attempted": 1165,
+                    "simulation_frames_completed": 1165
+                  }
+                }
+              },
+              "collection_wall_ns": 2090977700,
+              "host_attempts": 233,
+              "host_returned": 233,
+              "policy_queries": 96,
+              "parameter_fit_attempts": 10,
+              "parameter_fit_results": 10,
+              "optimizer_nfev": 15,
+              "historical_nominal_cost": {
+                "environment_steps": 3840,
+                "controlled_resets": 480,
+                "all_reset_calls": 24480,
+                "simulation_frames": 12259200
+              },
+              "new_api_calls": 0
+            },
+            "audit_computations": {
+              "recomputed_policy_queries": 96,
+              "recomputed_parameter_fits": 10,
+              "recomputed_optimizer_nfev": 15
+            },
+            "collection_artifact_sha256": {
+              "cases.jsonl.gz": "ded98f12a3985dffc4dbd092d32afe72d75b3efc96e93c7259d9b8c3391a3a29",
+              "events.jsonl.gz": "f575e3069142d9999c44c199ab94cf8f25539ad7e832fc51cc424c2b9c94f9e7",
+              "state_witnesses.jsonl.gz": "f2437b3eef4885ac53d29fa7018b113267fad788641ea3335fa109664a1088ce",
+              "status.json": "4eebce67dfb0ec2a5d632894e470484349c87ced7f04dd7b2ac60f84f64abcdf",
+              "summary.json": "b9372106dd4944aeba584fcf9e0add4aa8b9582089f9c239d08424defb9aac61"
+            },
+            "audit_wall_ns": 878972700
+          },
+          "native_frames": 128665,
+          "actual_policy_queries": 96,
+          "constructed_tiny_envs": 5,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 255,
+              "simulation_attempts": 25733,
+              "simulation_frames_attempted": 128665,
+              "simulation_completed": 25733,
+              "simulation_frames_completed": 128665,
+              "reset_completed": 255
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 250,
+                "simulation_attempts": 25000,
+                "simulation_frames_attempted": 125000,
+                "simulation_completed": 25000,
+                "simulation_frames_completed": 125000,
+                "reset_completed": 250
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 5,
+                "simulation_attempts": 500,
+                "simulation_frames_attempted": 2500,
+                "simulation_completed": 500,
+                "simulation_frames_completed": 2500,
+                "reset_completed": 5
+              },
+              "CONTROL": {
+                "simulation_attempts": 233,
+                "simulation_frames_attempted": 1165,
+                "simulation_completed": 233,
+                "simulation_frames_completed": 1165
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "completed": true,
+          "partial_requested": true,
+          "rows": [],
+          "audit": null,
+          "native_frames": 25600,
+          "actual_policy_queries": 8,
+          "constructed_tiny_envs": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5120,
+              "simulation_frames_attempted": 25600,
+              "simulation_completed": 5120,
+              "simulation_frames_completed": 25600,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        }
+      ]
+    }
+  }
+}

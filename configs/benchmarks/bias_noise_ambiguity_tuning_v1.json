@@ -1,0 +1,28 @@
+{
+  "benchmark_id": "bias_noise_tuning_v1",
+  "split": "tuning",
+  "source_oracle_audit": "outputs/autoresearch/benchmark_tuning/oracle_audit.jsonl",
+  "source_probe_results": "outputs/autoresearch/probe_consistency_tuning/results.csv",
+  "source_threshold": "outputs/autoresearch/probe_consistency_tuning/threshold_selection.json",
+  "matching": {
+    "candidate_filter": "failed initial rollouts only",
+    "stable_class": "action_bias",
+    "stochastic_class": "gaussian_noise",
+    "features": [
+      "episode_return",
+      "final_object_goal_distance",
+      "progress_to_goal"
+    ],
+    "standardization": "candidate failure pool population mean and standard deviation",
+    "assignment": "global one-to-one minimum Euclidean distance",
+    "tie_break": "lexicographic bias case_id",
+    "probe_evidence_used_for_selection": false
+  },
+  "probe_audit": {
+    "score": "estimated_bias_std_norm",
+    "threshold": 0.11560838098372882,
+    "threshold_rule": "score > threshold predicts stochastic_noise",
+    "threshold_provenance": "Oracle-only seeds 300-309 tuning selection"
+  },
+  "claim_boundary": "Tuning pilot only; no held-out performance claim"
+}

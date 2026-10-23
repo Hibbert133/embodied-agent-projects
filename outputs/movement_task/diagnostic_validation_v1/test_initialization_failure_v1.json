@@ -1,0 +1,10 @@
+{
+  "status": "PRESERVED_FAILED_PURE_TEST_INVOCATION",
+  "receipt": "pure_tests_receipt.json",
+  "reason": "NumPy's lazy testing helper initialization asks for local platform metadata through socket.gethostname; the broad diagnostic socket guard correctly rejected that event, causing seven fixture initialization errors.",
+  "repair": "Preload numpy.testing before entering the existing guard. Keep the guard unchanged for all tests and actual analysis. Rerun all 26 tests to exclusive pure_tests_v2 files.",
+  "scientific_diagnostics_changed": false,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0
+}

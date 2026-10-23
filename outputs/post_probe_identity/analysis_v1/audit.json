@@ -1,0 +1,742 @@
+{
+  "experiment_run_id": "post_probe_identity_20261015T134029Z_e0a879a8c014",
+  "manifest_id": "7e3a87d5e755ee496ae2a8653e76d2d553092624b94a98a45625c91d9369ae30",
+  "source_git_commit": "e0a879a8c014f35354a282737f033087f8863b5b",
+  "integrity": "PASSED",
+  "status": "COMPLETED_POST_PROBE_IDENTITY",
+  "episodes": 960,
+  "controlled_steps": 180930,
+  "controlled_resets": 960,
+  "statistics": {
+    "methods": {
+      "DIRECT_G8": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "mean_total_steps": 99.5,
+        "mean_deadline_loss": 99.5,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 106.0625
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 58.9375
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 133.5
+          }
+        }
+      },
+      "KEEP_G8_AFTER16": {
+        "cases": 96,
+        "successes": 91,
+        "stops": 0,
+        "mean_total_steps": 111.39583333333333,
+        "mean_deadline_loss": 111.39583333333333,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 29,
+            "mean_deadline_loss": 122.96875
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 66.75
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 30,
+            "mean_deadline_loss": 144.46875
+          }
+        }
+      },
+      "UPDATE_G16": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "mean_total_steps": 89.375,
+        "mean_deadline_loss": 89.375,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 77.9375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 66.65625
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 31,
+            "mean_deadline_loss": 123.53125
+          }
+        }
+      },
+      "POINT16_CYCLE": {
+        "cases": 96,
+        "successes": 96,
+        "stops": 0,
+        "mean_total_steps": 84.35416666666667,
+        "mean_deadline_loss": 84.35416666666667,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 77.5625
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 66.34375
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 109.15625
+          }
+        }
+      },
+      "PASSIVE_G16": {
+        "cases": 96,
+        "successes": 90,
+        "stops": 0,
+        "mean_total_steps": 101.19791666666667,
+        "mean_deadline_loss": 101.19791666666667,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 8.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 27,
+            "mean_deadline_loss": 137.375
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 54.90625
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 31,
+            "mean_deadline_loss": 111.3125
+          }
+        }
+      },
+      "POINT16_WIDE": {
+        "cases": 96,
+        "successes": 96,
+        "stops": 0,
+        "mean_total_steps": 89.14583333333333,
+        "mean_deadline_loss": 89.14583333333333,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 80.0625
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 67.78125
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 32,
+            "mean_deadline_loss": 119.59375
+          }
+        }
+      },
+      "NO_PROBE": {
+        "cases": 96,
+        "successes": 41,
+        "stops": 0,
+        "mean_total_steps": 318.28125,
+        "mean_deadline_loss": 318.28125,
+        "mean_fixed_probe_steps": 0.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 0,
+        "nominal_offline_resets": 0,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 14,
+            "mean_deadline_loss": 314.125
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 13,
+            "mean_deadline_loss": 316.5
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 14,
+            "mean_deadline_loss": 324.21875
+          }
+        }
+      },
+      "IDENTITY_AFTER8": {
+        "cases": 96,
+        "successes": 39,
+        "stops": 0,
+        "mean_total_steps": 332.2083333333333,
+        "mean_deadline_loss": 332.2083333333333,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 0,
+        "nominal_offline_resets": 0,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 14,
+            "mean_deadline_loss": 316.75
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 10,
+            "mean_deadline_loss": 360.9375
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 15,
+            "mean_deadline_loss": 318.9375
+          }
+        }
+      },
+      "IDENTITY_AFTER16_CYCLE": {
+        "cases": 96,
+        "successes": 40,
+        "stops": 0,
+        "mean_total_steps": 332.1041666666667,
+        "mean_deadline_loss": 332.1041666666667,
+        "mean_fixed_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "nominal_offline_steps": 0,
+        "nominal_offline_resets": 0,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 14,
+            "mean_deadline_loss": 320.125
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 10,
+            "mean_deadline_loss": 363.90625
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 16,
+            "mean_deadline_loss": 312.28125
+          }
+        }
+      },
+      "IDENTITY_AFTER16_PASSIVE": {
+        "cases": 96,
+        "successes": 40,
+        "stops": 0,
+        "mean_total_steps": 327.125,
+        "mean_deadline_loss": 327.125,
+        "mean_fixed_probe_steps": 8.0,
+        "mean_policy_measure_steps": 8.0,
+        "nominal_offline_steps": 21010,
+        "nominal_offline_resets": 288,
+        "by_task": {
+          "push-v3": {
+            "cases": 32,
+            "successes": 12,
+            "mean_deadline_loss": 340.15625
+          },
+          "reach-v3": {
+            "cases": 32,
+            "successes": 12,
+            "mean_deadline_loss": 332.28125
+          },
+          "door-open-v3": {
+            "cases": 32,
+            "successes": 16,
+            "mean_deadline_loss": 308.9375
+          }
+        }
+      }
+    },
+    "registered_contrasts": [
+      {
+        "method": "IDENTITY_AFTER8",
+        "reference": "DIRECT_G8",
+        "role": "PRIMARY",
+        "stream_values": [
+          [
+            0.0,
+            20.333333333333332,
+            20.333333333333332
+          ],
+          [
+            -1.0,
+            425.1666666666667,
+            425.1666666666667
+          ],
+          [
+            -0.3333333333333333,
+            164.5,
+            164.5
+          ],
+          [
+            -1.0,
+            400.1666666666667,
+            400.1666666666667
+          ],
+          [
+            0.16666666666666666,
+            -108.0,
+            -108.0
+          ],
+          [
+            -0.8333333333333334,
+            358.3333333333333,
+            358.3333333333333
+          ],
+          [
+            0.0,
+            1.3333333333333333,
+            1.3333333333333333
+          ],
+          [
+            -1.0,
+            424.3333333333333,
+            424.3333333333333
+          ],
+          [
+            0.0,
+            3.5,
+            3.5
+          ],
+          [
+            -1.0,
+            422.6666666666667,
+            422.6666666666667
+          ],
+          [
+            -0.16666666666666666,
+            101.5,
+            101.5
+          ],
+          [
+            -1.0,
+            435.3333333333333,
+            435.3333333333333
+          ],
+          [
+            0.0,
+            -4.0,
+            -4.0
+          ],
+          [
+            -1.0,
+            425.3333333333333,
+            425.3333333333333
+          ],
+          [
+            -0.6666666666666666,
+            235.16666666666666,
+            235.16666666666666
+          ],
+          [
+            -1.0,
+            417.6666666666667,
+            417.6666666666667
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.5520833333333333,
+            "paired_stream_percentile_95": [
+              -0.6458333333333334,
+              -0.46875
+            ]
+          },
+          "deadline_loss": {
+            "difference": 232.70833333333331,
+            "paired_stream_percentile_95": [
+              197.87421875,
+              270.75182291666664
+            ]
+          },
+          "actual_steps": {
+            "difference": 232.70833333333331,
+            "paired_stream_percentile_95": [
+              197.87421875,
+              270.75182291666664
+            ]
+          }
+        },
+        "success_to_failure": 55,
+        "failure_to_success": 2
+      },
+      {
+        "method": "IDENTITY_AFTER16_CYCLE",
+        "reference": "POINT16_CYCLE",
+        "role": "SECONDARY_UNADJUSTED",
+        "stream_values": [
+          [
+            0.0,
+            21.0,
+            21.0
+          ],
+          [
+            -1.0,
+            423.0,
+            423.0
+          ],
+          [
+            -0.3333333333333333,
+            161.16666666666666,
+            161.16666666666666
+          ],
+          [
+            -1.0,
+            393.5,
+            393.5
+          ],
+          [
+            0.0,
+            -1.0,
+            -1.0
+          ],
+          [
+            -1.0,
+            423.3333333333333,
+            423.3333333333333
+          ],
+          [
+            0.0,
+            2.6666666666666665,
+            2.6666666666666665
+          ],
+          [
+            -1.0,
+            417.5,
+            417.5
+          ],
+          [
+            0.0,
+            3.3333333333333335,
+            3.3333333333333335
+          ],
+          [
+            -1.0,
+            414.3333333333333,
+            414.3333333333333
+          ],
+          [
+            -0.3333333333333333,
+            153.66666666666666,
+            153.66666666666666
+          ],
+          [
+            -1.0,
+            424.5,
+            424.5
+          ],
+          [
+            0.0,
+            -1.6666666666666667,
+            -1.6666666666666667
+          ],
+          [
+            -1.0,
+            415.6666666666667,
+            415.6666666666667
+          ],
+          [
+            -0.6666666666666666,
+            292.6666666666667,
+            292.6666666666667
+          ],
+          [
+            -1.0,
+            420.3333333333333,
+            420.3333333333333
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.5833333333333333,
+            "paired_stream_percentile_95": [
+              -0.6666666666666666,
+              -0.5208333333333333
+            ]
+          },
+          "deadline_loss": {
+            "difference": 247.75,
+            "paired_stream_percentile_95": [
+              215.31093750000002,
+              285.9820312499999
+            ]
+          },
+          "actual_steps": {
+            "difference": 247.75,
+            "paired_stream_percentile_95": [
+              215.31093750000002,
+              285.9820312499999
+            ]
+          }
+        },
+        "success_to_failure": 56,
+        "failure_to_success": 0
+      },
+      {
+        "method": "IDENTITY_AFTER16_PASSIVE",
+        "reference": "PASSIVE_G16",
+        "role": "SECONDARY_UNADJUSTED",
+        "stream_values": [
+          [
+            0.0,
+            19.0,
+            19.0
+          ],
+          [
+            -0.6666666666666666,
+            278.1666666666667,
+            278.1666666666667
+          ],
+          [
+            -0.6666666666666666,
+            292.3333333333333,
+            292.3333333333333
+          ],
+          [
+            -1.0,
+            406.5,
+            406.5
+          ],
+          [
+            0.0,
+            -0.8333333333333334,
+            -0.8333333333333334
+          ],
+          [
+            -0.6666666666666666,
+            285.8333333333333,
+            285.8333333333333
+          ],
+          [
+            0.0,
+            2.1666666666666665,
+            2.1666666666666665
+          ],
+          [
+            -0.6666666666666666,
+            282.1666666666667,
+            282.1666666666667
+          ],
+          [
+            0.0,
+            2.0,
+            2.0
+          ],
+          [
+            -1.0,
+            426.3333333333333,
+            426.3333333333333
+          ],
+          [
+            -0.16666666666666666,
+            112.0,
+            112.0
+          ],
+          [
+            -1.0,
+            437.8333333333333,
+            437.8333333333333
+          ],
+          [
+            0.0,
+            -9.166666666666666,
+            -9.166666666666666
+          ],
+          [
+            -1.0,
+            427.5,
+            427.5
+          ],
+          [
+            -0.5,
+            228.66666666666666,
+            228.66666666666666
+          ],
+          [
+            -1.0,
+            424.3333333333333,
+            424.3333333333333
+          ]
+        ],
+        "statistics": {
+          "success_rate": {
+            "difference": -0.5208333333333333,
+            "paired_stream_percentile_95": [
+              -0.625,
+              -0.4270833333333333
+            ]
+          },
+          "deadline_loss": {
+            "difference": 225.92708333333331,
+            "paired_stream_percentile_95": [
+              182.91640625,
+              274.39635416666664
+            ]
+          },
+          "actual_steps": {
+            "difference": 225.92708333333331,
+            "paired_stream_percentile_95": [
+              182.91640625,
+              274.39635416666664
+            ]
+          }
+        },
+        "success_to_failure": 51,
+        "failure_to_success": 1
+      }
+    ],
+    "prefix_pairs": 960,
+    "future_prefix_pairs": 480,
+    "independent_streams": 16,
+    "generator_parity_strata": [
+      8,
+      8
+    ],
+    "context_futures_are_not_independent_streams": true,
+    "algorithm_novelty_established": false,
+    "online_selector_executions": 0,
+    "scope": "Fixed matched controls only. No offline oracle promoted as an online method; primary and secondary contrasts remain separate."
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 48960,
+      "simulation_attempts": 5076930,
+      "simulation_frames_attempted": 25384650,
+      "simulation_completed": 5076930,
+      "simulation_frames_completed": 25384650,
+      "reset_completed": 48960
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 48000,
+        "simulation_attempts": 4800000,
+        "simulation_frames_attempted": 24000000,
+        "simulation_completed": 4800000,
+        "simulation_frames_completed": 24000000,
+        "reset_completed": 48000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 960,
+        "simulation_attempts": 96000,
+        "simulation_frames_attempted": 480000,
+        "simulation_completed": 96000,
+        "simulation_frames_completed": 480000,
+        "reset_completed": 960
+      },
+      "CONTROL": {
+        "simulation_attempts": 180930,
+        "simulation_frames_attempted": 904650,
+        "simulation_completed": 180930,
+        "simulation_frames_completed": 904650
+      }
+    }
+  },
+  "events_checked": 465348,
+  "clock_units": {
+    "push-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_push_v3.xml",
+      "model_xml_sha256": "8c4bf7169be4f3c666811930aa13682e755b43a8e6e8186265a0a8e9815ae502",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "reach-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_reach_v3.xml",
+      "model_xml_sha256": "bc0427293317164af71c82e9fd41a5fa568c3185a97d92da8e57e4e39254361c",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "door-open-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_door_pull.xml",
+      "model_xml_sha256": "f14cdb95f214dc13959351585b8a41b77f8876b112405d05f3e927ecac74513a",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    }
+  },
+  "frozen_git_inputs_checked": 671,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "artifact_sha256": {
+    "episodes_00.jsonl.gz": "8e60c3e813b5fe9b60cdd7c5e8f36354fa2ac7542bba4c50b649d93d662d57ef",
+    "episodes_01.jsonl.gz": "c60b18e9856177dedada33ba95b1b517c69f948fa9d9113d239c1b119d90a11e",
+    "episodes_02.jsonl.gz": "bd6564062c6676de5e124bf23915d450065f4cddf13fd85588e937a65cf24624",
+    "episodes_03.jsonl.gz": "5266664b73744a96d54d237caa23caf64bad06ff6d8508454144fcd2dd1e1af9",
+    "episodes_04.jsonl.gz": "4408fc36a8b798a8782636cc9c83db4c52c1702c3c561ebfc843042fe522e649",
+    "episodes_05.jsonl.gz": "b9708101af05e0975d489e277adbfa41cce8d3f8d6e9c92383806b649c6c8102",
+    "episodes_06.jsonl.gz": "0bd0ee236c2b73e559924f45961973d6ab45ea56190c2b1ca64fca53193b16d0",
+    "episodes_07.jsonl.gz": "d34f54f19cd828303b9171cee040ccd49724558a4f09ce5e18f5e6cc1a252a76",
+    "episodes_08.jsonl.gz": "72ca80f097c869df767562af47faf9969d1d03cb1711ad5acc1ad0e19a9f0086",
+    "episodes_09.jsonl.gz": "9a8ca045bbb5e44257ba73263be480f8db8da62e6c034526ddad8e73d9b4bf16",
+    "episodes_10.jsonl.gz": "f6f6e9ff0edcfbe8b50cb445929cae6c9cc62dff6d41874c4ca354be5a660eed",
+    "episodes_11.jsonl.gz": "022563d12bb10875926fbe7db3652d9ede274307fa00cc6d86deccd741465db3",
+    "episodes_12.jsonl.gz": "e4d240dd462687e4c91aa8457be3c10f46f93428ffeff82f4d6f906b3b68ee04",
+    "episodes_13.jsonl.gz": "401fa7370fc7edb98b43f155e588a9a23191716681fe1be100b40fffa48be2ba",
+    "episodes_14.jsonl.gz": "77847450869227224036168ba7952f341837ba780bcf3292d803b90f8e1250a1",
+    "episodes_15.jsonl.gz": "a84c169f9d875457ba6f6db8c3628e86b49d7136aeb7401136f2e73be6a98dee",
+    "events_00.jsonl.gz": "f15b982f95dadf6e5681e6b8fa105d63b4f954f241591e292afc7433463ba51d",
+    "events_01.jsonl.gz": "5f970cd42aa9e65b7cfdc0e7e0d41c0f562e854601349b5c95b47fd4070d5eb0",
+    "events_02.jsonl.gz": "426b1c90a31342eff2110fc199c21e05ed38760fcb6269dad0b8e9227116a33d",
+    "events_03.jsonl.gz": "a6471d268d0e8ab81242734549ee8195788c679581180f9cdcb35f47c8b32a56",
+    "events_04.jsonl.gz": "a8d5d85b2ad3aa32bef4031230d5b159cedd91ab938a1ec7bd51a690876ad00e",
+    "events_05.jsonl.gz": "6071eb552f04f1134ec3f2e13a78ffbd6453fbb48dcedcaff6d0534990de6577",
+    "events_06.jsonl.gz": "975696966e6c0ec770e88221e650a502ed6693e97ea24f701416c3606e460bf1",
+    "events_07.jsonl.gz": "30b92479b1482d6815c944e469a36d95cc554e6ec97cdc38f7a3949b79f25475",
+    "events_08.jsonl.gz": "642c0eb788236896ddd650849fa1a98eca0f9cdae4e8a34e72ad1efa31c04d03",
+    "events_09.jsonl.gz": "025a2d683c56363e581a65cc86dabe7764819bcebe2b9db8fb17f3cb0e29f80a",
+    "events_10.jsonl.gz": "027a91983d0319de4ce4f91bda7ded1d25d054333b223cde6db1094df7bae859",
+    "events_11.jsonl.gz": "a677cb86a95670fa8d816403025acf7e584b9d43ad99723b5744a1d72ca72d9d",
+    "events_12.jsonl.gz": "709558e7b8a6a93c70bbdc8266361567fc94bf6933705cb11cdb8d64781e6ee2",
+    "events_13.jsonl.gz": "7f92e5002dd8da056084365c2baca4ddb29fa285b35dcba9ba859b2741afbad7",
+    "events_14.jsonl.gz": "ddf77fb49447d372418f2d03b5eb49895ba3786ef1e5ae56b77059d822944a59",
+    "events_15.jsonl.gz": "7a0fc452bf82eabb1ebe1c95e34f28b7350715bdada06cc0b588075844099e1e",
+    "manifest.json": "7c4a92a7f17126724c628d5f8d6f1b5dbe9033cfa304e38bb1acc2f2847f9e4b",
+    "status.json": "3ced99cc19fbd73b12f1db2a1eb283d2f64d76686b98650faa00bddb89ab4e0a",
+    "summary.json": "7a67e6919399d9d3892ac75848ec31166b203cfd9769fde8c4db54f75718db1e"
+  },
+  "scope": "Recorded identity/Gaussian/point choices and lifecycle replay; noise independently reconstructed. Gaussian/point helpers, declared-prefix checks and fixed-control statistics reused. No robot resimulation, hidden-state proof, new selector or physical/probability qualification."
+}

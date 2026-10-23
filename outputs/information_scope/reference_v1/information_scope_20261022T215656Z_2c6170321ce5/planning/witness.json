@@ -1,0 +1,65 @@
+{
+  "input": {
+    "case_id": "FULL_SUPPORT_WITNESS",
+    "family": "CONSTRUCTED_RATIONAL_WITNESS",
+    "p": [
+      [
+        "9/40",
+        "1/4",
+        "1/40"
+      ],
+      [
+        "1/40",
+        "1/4",
+        "9/40"
+      ]
+    ],
+    "q": [
+      [
+        "9/25",
+        "1/10",
+        "1/25"
+      ],
+      [
+        "1/25",
+        "1/10",
+        "9/25"
+      ]
+    ],
+    "mapping": [
+      0,
+      0,
+      1
+    ]
+  },
+  "result": {
+    "case_id": "FULL_SUPPORT_WITNESS",
+    "family": "CONSTRUCTED_RATIONAL_WITNESS",
+    "fine": {
+      "true_mutual_information": 0.18403210358424854,
+      "conditional_posterior_KL": 0.0,
+      "joint_KL": 0.22314355131420976,
+      "predictive_marginal_KL": 0.22314355131420974,
+      "EGIG": 0.18403210358424854,
+      "RFIM_KL": -0.039111447729961224,
+      "chain_rule_residual": 2.7755575615628914e-17,
+      "EGIG_decomposition_residual": 0.0
+    },
+    "coarse": {
+      "true_mutual_information": 0.11900811608907784,
+      "conditional_posterior_KL": 0.033544671567053874,
+      "joint_KL": 0.08340142774127723,
+      "predictive_marginal_KL": 0.04985675617422344,
+      "EGIG": 0.08546344452202398,
+      "RFIM_KL": 0.035606688347800605,
+      "chain_rule_residual": -8.326672684688674e-17,
+      "EGIG_decomposition_residual": 1.3877787807814457e-17
+    },
+    "posterior_penalty_increase": 0.033544671567053874,
+    "predictive_slack": 0.1732867951399863,
+    "unconditional_posterior_contraction_holds": false,
+    "joint_KL_contraction_holds": true,
+    "corrected_slack_bound_holds": true,
+    "true_information_contraction_holds": true
+  }
+}

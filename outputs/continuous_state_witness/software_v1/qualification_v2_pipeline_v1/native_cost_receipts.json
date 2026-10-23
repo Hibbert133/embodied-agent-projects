@@ -1,0 +1,1741 @@
+[
+  {
+    "completed": true,
+    "result": {
+      "experiment_run_id": "V2_TINY_WRAPPED_SOFTWARE_ONLY",
+      "manifest_id": "SOFTWARE_MANIFEST",
+      "source_git_commit": "SOFTWARE_COMMIT",
+      "integrity": "PASSED",
+      "qualification": "QUALIFIED",
+      "failure": null,
+      "task_checks": [
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "all_boundaries_ready": true,
+          "matched_prefixes": true,
+          "direct_loop_equal": true,
+          "three_distinct_first_commands": true,
+          "stop_has_zero_suffix": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "all_boundaries_ready": true,
+          "matched_prefixes": true,
+          "direct_loop_equal": true,
+          "three_distinct_first_commands": true,
+          "stop_has_zero_suffix": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "all_boundaries_ready": true,
+          "matched_prefixes": true,
+          "direct_loop_equal": true,
+          "three_distinct_first_commands": true,
+          "stop_has_zero_suffix": true
+        }
+      ],
+      "legacy_full_fingerprint_checks": [
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "all_boundaries_ready": true,
+          "matched_prefixes": false,
+          "direct_loop_equal": false,
+          "three_distinct_first_commands": true,
+          "stop_has_zero_suffix": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "all_boundaries_ready": true,
+          "matched_prefixes": false,
+          "direct_loop_equal": false,
+          "three_distinct_first_commands": true,
+          "stop_has_zero_suffix": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "all_boundaries_ready": true,
+          "matched_prefixes": false,
+          "direct_loop_equal": false,
+          "three_distinct_first_commands": true,
+          "stop_has_zero_suffix": true
+        }
+      ],
+      "witness_pair_diagnostics": [
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "SWITCH_SAVED",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "daa62094c3beaa89c4dde23566617ea5e3c2f7e52f52efac67351b2f7ee5c549",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "daa62094c3beaa89c4dde23566617ea5e3c2f7e52f52efac67351b2f7ee5c549",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "RUN_UNCORRECTED",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f835777de1386b9b908f03f79b76a8881e233de6e84eeed8acb4b3485069f7ec",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f835777de1386b9b908f03f79b76a8881e233de6e84eeed8acb4b3485069f7ec",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "1a64066005b630e30f7e4d4e121c28a5aabea36309823312354dc0fcf5882bf4",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "1a64066005b630e30f7e4d4e121c28a5aabea36309823312354dc0fcf5882bf4",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "DIRECT_CURRENT",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "254b4fde541047dabbf67a099a8312ae9f3d32e545c15bdaffd860072786f746",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "254b4fde541047dabbf67a099a8312ae9f3d32e545c15bdaffd860072786f746",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true,
+          "ending": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "3fd7f5bc29cff7eba7bc1f330f66bd9d021a18a0483976e07b558f9c01af1f89",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "254b4fde541047dabbf67a099a8312ae9f3d32e545c15bdaffd860072786f746",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "complete_physical_trajectory_equal": true,
+          "final_observation_and_counts_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "SWITCH_SAVED",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "a4fefaef3484014dc6c0e31165cb455a94bc62c249a87b85de7d273322aaa8ff",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "a4fefaef3484014dc6c0e31165cb455a94bc62c249a87b85de7d273322aaa8ff",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "RUN_UNCORRECTED",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "a5e0d5fb2b7fd5ff5e3edfdaaa45afc01c73aad42692fad2bd9fa62910b4084a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "a5e0d5fb2b7fd5ff5e3edfdaaa45afc01c73aad42692fad2bd9fa62910b4084a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "0ed10b437a201fb20466b325318da9c0bd2464ea63a553e8c048f2891a388f00",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "0ed10b437a201fb20466b325318da9c0bd2464ea63a553e8c048f2891a388f00",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "DIRECT_CURRENT",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "4d066556ff7e8a21b5d3845c619b4f83c9e7babc472f84259e6bcfa077745d09",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "4d066556ff7e8a21b5d3845c619b4f83c9e7babc472f84259e6bcfa077745d09",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true,
+          "ending": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "2fc5ec551b79696b7f84e320255d5f28eed02d6a56120128175c7b76cbab778a",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "4d066556ff7e8a21b5d3845c619b4f83c9e7babc472f84259e6bcfa077745d09",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "complete_physical_trajectory_equal": true,
+          "final_observation_and_counts_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "SWITCH_SAVED",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "d59435f27939aad5989f1af96881797662d3c9601bd40f0a7129ae691062e9a0",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "d59435f27939aad5989f1af96881797662d3c9601bd40f0a7129ae691062e9a0",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "RUN_UNCORRECTED",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "37407d77a2151bae8d092b0541341d1b64dd8e11c8e9812851bfc47abad7c924",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "37407d77a2151bae8d092b0541341d1b64dd8e11c8e9812851bfc47abad7c924",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "ab8511b1a9444aee51f92904a3f3ecae7db6daa066636703e640272fd96b2b6b",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "ab8511b1a9444aee51f92904a3f3ecae7db6daa066636703e640272fd96b2b6b",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true
+        },
+        {
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "DIRECT_CURRENT",
+          "initial": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "ebf5ef19c797858f3bbf2a1507f7251b545b73e75714ba11cad41654323bf22c",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "boundary": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "ebf5ef19c797858f3bbf2a1507f7251b545b73e75714ba11cad41654323bf22c",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "initial_observation_equal": true,
+          "physical_prefix16_equal": true,
+          "ending": {
+            "same_native": true,
+            "same_full_python": false,
+            "same_comparison_python": true,
+            "comparison_equal": true,
+            "component_differences": [
+              {
+                "path": [
+                  "layers",
+                  0,
+                  "episode_start_time"
+                ],
+                "left": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "f0e0a7d51e3b5da1b5e40370356a39fbdd3708c5b06df1a53c887101acdbf05f",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                },
+                "right": {
+                  "path": [
+                    "layers",
+                    0,
+                    "episode_start_time"
+                  ],
+                  "raw_sha256": "ebf5ef19c797858f3bbf2a1507f7251b545b73e75714ba11cad41654323bf22c",
+                  "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                }
+              }
+            ],
+            "only_registered_timing_components_differ": true
+          },
+          "complete_physical_trajectory_equal": true,
+          "final_observation_and_counts_equal": true
+        }
+      ],
+      "methods": [
+        {
+          "variant": "CONTINUE_CURRENT",
+          "executions": 3,
+          "successes": 3,
+          "failures": 0,
+          "stops": 0,
+          "unavailable_boundaries": 0,
+          "control_steps": 72,
+          "deadline_loss_total": 72,
+          "historical_nominal_cost": {
+            "environment_steps": 3840,
+            "controlled_resets": 480,
+            "all_reset_calls": 24480,
+            "simulation_frames": 12259200
+          },
+          "historical_steps_amortized_per_unit": 1280.0
+        },
+        {
+          "variant": "SWITCH_SAVED",
+          "executions": 3,
+          "successes": 3,
+          "failures": 0,
+          "stops": 0,
+          "unavailable_boundaries": 0,
+          "control_steps": 72,
+          "deadline_loss_total": 72,
+          "historical_nominal_cost": {
+            "environment_steps": 3840,
+            "controlled_resets": 480,
+            "all_reset_calls": 24480,
+            "simulation_frames": 12259200
+          },
+          "historical_steps_amortized_per_unit": 1280.0
+        },
+        {
+          "variant": "RUN_UNCORRECTED",
+          "executions": 3,
+          "successes": 3,
+          "failures": 0,
+          "stops": 0,
+          "unavailable_boundaries": 0,
+          "control_steps": 72,
+          "deadline_loss_total": 72,
+          "historical_nominal_cost": {
+            "environment_steps": 3840,
+            "controlled_resets": 480,
+            "all_reset_calls": 24480,
+            "simulation_frames": 12259200
+          },
+          "historical_steps_amortized_per_unit": 1280.0
+        },
+        {
+          "variant": "STOP",
+          "executions": 3,
+          "successes": 0,
+          "failures": 3,
+          "stops": 3,
+          "unavailable_boundaries": 0,
+          "control_steps": 48,
+          "deadline_loss_total": 1500,
+          "historical_nominal_cost": {
+            "environment_steps": 3840,
+            "controlled_resets": 480,
+            "all_reset_calls": 24480,
+            "simulation_frames": 12259200
+          },
+          "historical_steps_amortized_per_unit": 1280.0
+        },
+        {
+          "variant": "DIRECT_CURRENT",
+          "executions": 3,
+          "successes": 3,
+          "failures": 0,
+          "stops": 0,
+          "unavailable_boundaries": 0,
+          "control_steps": 72,
+          "deadline_loss_total": 72,
+          "historical_nominal_cost": {
+            "environment_steps": 3840,
+            "controlled_resets": 480,
+            "all_reset_calls": 24480,
+            "simulation_frames": 12259200
+          },
+          "historical_steps_amortized_per_unit": 1280.0
+        }
+      ],
+      "execution_rows": [
+        {
+          "unit": 0,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "CONTINUE_CURRENT",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 0,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "SWITCH_SAVED",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 0,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "RUN_UNCORRECTED",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 0,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "completed": true,
+          "success": false,
+          "stopped": true,
+          "total_steps": 16,
+          "deadline_loss": 500,
+          "boundary_ready": true,
+          "host_attempts": 16,
+          "host_returned": 16,
+          "policy_queries": 8,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 0,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "DIRECT_CURRENT",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 1,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "CONTINUE_CURRENT",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 1,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "SWITCH_SAVED",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 1,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "RUN_UNCORRECTED",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 1,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "completed": true,
+          "success": false,
+          "stopped": true,
+          "total_steps": 16,
+          "deadline_loss": 500,
+          "boundary_ready": true,
+          "host_attempts": 16,
+          "host_returned": 16,
+          "policy_queries": 8,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 1,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "DIRECT_CURRENT",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 2,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "CONTINUE_CURRENT",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 2,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "SWITCH_SAVED",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 2,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "RUN_UNCORRECTED",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 2,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "completed": true,
+          "success": false,
+          "stopped": true,
+          "total_steps": 16,
+          "deadline_loss": 500,
+          "boundary_ready": true,
+          "host_attempts": 16,
+          "host_returned": 16,
+          "policy_queries": 8,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 2,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "DIRECT_CURRENT",
+          "completed": true,
+          "success": true,
+          "stopped": false,
+          "total_steps": 24,
+          "deadline_loss": 24,
+          "boundary_ready": true,
+          "host_attempts": 24,
+          "host_returned": 24,
+          "policy_queries": 16,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        }
+      ],
+      "failures": [
+        {
+          "unit": 0,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "completed": true,
+          "success": false,
+          "stopped": true,
+          "total_steps": 16,
+          "deadline_loss": 500,
+          "boundary_ready": true,
+          "host_attempts": 16,
+          "host_returned": 16,
+          "policy_queries": 8,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 1,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "completed": true,
+          "success": false,
+          "stopped": true,
+          "total_steps": 16,
+          "deadline_loss": 500,
+          "boundary_ready": true,
+          "host_attempts": 16,
+          "host_returned": 16,
+          "policy_queries": 8,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        },
+        {
+          "unit": 2,
+          "task": "push-v3",
+          "seed": 700031,
+          "variant": "STOP",
+          "completed": true,
+          "success": false,
+          "stopped": true,
+          "total_steps": 16,
+          "deadline_loss": 500,
+          "boundary_ready": true,
+          "host_attempts": 16,
+          "host_returned": 16,
+          "policy_queries": 8,
+          "parameter_fit_attempts": 2,
+          "parameter_fit_results": 2,
+          "optimizer_nfev": 3,
+          "optimizer_nfev_complete": true
+        }
+      ],
+      "unavailable_boundaries": [],
+      "event_count": 3147,
+      "executions": 15,
+      "costs": {
+        "new_control_steps": 336,
+        "lifecycle": {
+          "counts": {
+            "reset_attempts": 765,
+            "simulation_attempts": 76836,
+            "simulation_completed": 76836,
+            "simulation_frames_attempted": 384180,
+            "simulation_frames_completed": 384180,
+            "reset_completed": 765
+          },
+          "by_phase": {
+            "GOAL_GENERATION": {
+              "reset_attempts": 750,
+              "simulation_attempts": 75000,
+              "simulation_completed": 75000,
+              "simulation_frames_attempted": 375000,
+              "simulation_frames_completed": 375000,
+              "reset_completed": 750
+            },
+            "CONTROLLED_RESET": {
+              "reset_attempts": 15,
+              "simulation_attempts": 1500,
+              "simulation_completed": 1500,
+              "simulation_frames_attempted": 7500,
+              "simulation_frames_completed": 7500,
+              "reset_completed": 15
+            },
+            "CONTROL": {
+              "simulation_attempts": 336,
+              "simulation_completed": 336,
+              "simulation_frames_attempted": 1680,
+              "simulation_frames_completed": 1680
+            }
+          }
+        },
+        "collection_wall_ns": 4919370900,
+        "host_attempts": 336,
+        "host_returned": 336,
+        "policy_queries": 216,
+        "parameter_fit_attempts": 30,
+        "parameter_fit_results": 30,
+        "optimizer_nfev": 45,
+        "private_witness_records": 45,
+        "witness_construction_wall_ns": 1299844700,
+        "historical_nominal_cost_paid_once": {
+          "environment_steps": 3840,
+          "controlled_resets": 480,
+          "all_reset_calls": 24480,
+          "simulation_frames": 12259200
+        },
+        "historical_design_preparation": {
+          "enumerations": 3,
+          "candidate_rows": 432
+        },
+        "historical_qualification_v1_cost": {
+          "environment_steps": 1377,
+          "controlled_resets": 15,
+          "all_reset_calls": 765,
+          "simulation_frames": 389385
+        },
+        "new_api_calls": 0,
+        "new_nominal_training": 0,
+        "new_selector_fits": 0,
+        "policy_updates": 0
+      },
+      "audit_computations": {
+        "recomputed_policy_queries": 216,
+        "recomputed_parameter_fits": 30,
+        "recomputed_optimizer_nfev": 45
+      },
+      "collection_artifact_sha256": {
+        "cases.jsonl.gz": "1227b652a39875b85dcbf59b864081737007b7d7a697759cb729fa70e75aabf5",
+        "events.jsonl.gz": "c585b05458491d61a872f531fa5b5afa9a402057dabee63d8302ba5f889626b1",
+        "state_witnesses.jsonl.gz": "ad6c141278d59a23c38e557b1543f79192ea3757ba06f0b82953f7a95668d85b",
+        "status.json": "52a034670ba344dc10c4b66c72d148a7e0fbfc54b284fd9461be1ddf6184815a",
+        "summary.json": "f9f7a19a01dd03aab7728599771cfce33324c07cd8e04557d61d789bdf433a80",
+        "completion.json": "5c52e9f7aa9def27a8349ba4bfc065193e6a576f860a7ed8fd063a97107e697d"
+      },
+      "source_v1_qualification_unchanged": "NOT_QUALIFIED",
+      "comparison_contract": "EXACT_STATISTICS_TIMING_VALUES_ONLY",
+      "limitations": [
+        "SOURCE_GENERATED_STATE_WITNESSES_NOT_EXTERNAL_PHYSICS",
+        "SHARED_GRAPH_SERIALIZER_AND_PROJECTION",
+        "ONLY_THREE_QUALIFICATION_STATES_NOT_ALGORITHM_UTILITY",
+        "NO_RETROSPECTIVE_PROMOTION_OF_V1"
+      ],
+      "audit_wall_ns": 2126516800
+    },
+    "manifest": {
+      "experiment_run_id": "V2_TINY_WRAPPED_SOFTWARE_ONLY",
+      "manifest_id": "SOFTWARE_MANIFEST",
+      "source_git_commit": "SOFTWARE_COMMIT",
+      "config": {
+        "protocol_id": "delayed_intervention_qualification_v2",
+        "purpose": "CONTINUOUS_EXECUTION_WITH_INSPECTABLE_TIMING_PROJECTION_NOT_TASK_BENEFIT",
+        "tasks_and_seeds": [
+          {
+            "task": "push-v3",
+            "seed": 700031
+          },
+          {
+            "task": "push-v3",
+            "seed": 700031
+          },
+          {
+            "task": "push-v3",
+            "seed": 700031
+          }
+        ],
+        "reserved_seeds": [
+          21603,
+          21799
+        ],
+        "variants": [
+          "CONTINUE_CURRENT",
+          "SWITCH_SAVED",
+          "RUN_UNCORRECTED",
+          "STOP",
+          "DIRECT_CURRENT"
+        ],
+        "boundary_step": 16,
+        "logical_total_steps": 500,
+        "noise_std": 0.05,
+        "noise_namespace": 47001,
+        "fault_oracle": {
+          "matrix_xy": [
+            [
+              1.0,
+              0.0
+            ],
+            [
+              0.0,
+              1.0
+            ]
+          ],
+          "bias_xy": [
+            0.12,
+            -0.08
+          ],
+          "deadzone_xy": [
+            0.0,
+            0.0
+          ]
+        },
+        "maximum_environment_steps": 7500,
+        "maximum_controlled_resets": 15,
+        "maximum_simulation_frames": 420000,
+        "new_api_calls": 0,
+        "new_nominal_training": 0,
+        "new_selector_fits": 0,
+        "policy_updates": 0,
+        "required_ready_boundaries": 15,
+        "required_direct_comparison_tasks": 3,
+        "minimum_tasks_with_three_distinct_first_commands": 1,
+        "source_manifest": "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/manifest.json",
+        "source_completion": "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/main_pipeline_completion.json",
+        "nominal_models": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/models.json",
+        "nominal_models_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+        "historical_nominal_cost": {
+          "environment_steps": 3840,
+          "controlled_resets": 480,
+          "all_reset_calls": 24480,
+          "simulation_frames": 12259200
+        },
+        "historical_design_preparation": {
+          "enumerations": 3,
+          "candidate_rows": 432
+        },
+        "source_amortization_units_per_variant": 3,
+        "output_root": "outputs/delayed_intervention/qualification_v2",
+        "prior_qualification_manifest": "outputs/delayed_intervention/qualification_v1/delayed_intervention_20261019T081007Z_72cd966d73d9/manifest.json",
+        "prior_qualification_manifest_id": "764fa8ef1c65e0bef7d40b085641c0d5cf6c4318aa6fcd3a4278a545d6c4f8ab",
+        "prior_record_audit": "outputs/delayed_intervention/qualification_v1/delayed_intervention_20261019T081007Z_72cd966d73d9/audit/record_audit.json",
+        "prior_record_audit_sha256": "9f55468b17f6414d936d2348603c79da934c1234c72413c49b5566ca4ee5f6b0",
+        "witness_schema": "continuous_state_witness_v1",
+        "witnesses_per_execution": 3,
+        "historical_qualification_v1_cost": {
+          "environment_steps": 1377,
+          "controlled_resets": 15,
+          "all_reset_calls": 765,
+          "simulation_frames": 389385
+        }
+      }
+    },
+    "native_frames": 384180,
+    "actual_policy_queries": 216,
+    "constructed_tiny_envs": 15,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 765,
+        "simulation_attempts": 76836,
+        "simulation_frames_attempted": 384180,
+        "simulation_completed": 76836,
+        "simulation_frames_completed": 384180,
+        "reset_completed": 765
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 750,
+          "simulation_attempts": 75000,
+          "simulation_frames_attempted": 375000,
+          "simulation_completed": 75000,
+          "simulation_frames_completed": 375000,
+          "reset_completed": 750
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 15,
+          "simulation_attempts": 1500,
+          "simulation_frames_attempted": 7500,
+          "simulation_completed": 1500,
+          "simulation_frames_completed": 7500,
+          "reset_completed": 15
+        },
+        "CONTROL": {
+          "simulation_attempts": 336,
+          "simulation_frames_attempted": 1680,
+          "simulation_completed": 336,
+          "simulation_frames_completed": 1680
+        }
+      }
+    },
+    "new_metaworld_steps": 0,
+    "new_scientific_seeds": 0,
+    "new_api_calls": 0
+  }
+]

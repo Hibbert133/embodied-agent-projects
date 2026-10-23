@@ -1,0 +1,38 @@
+{
+  "review": "baseline_upstream_access_20261019",
+  "scope": "Point-in-time observations; failure does not establish permanent unavailability. No repository checkout, package installation or third-party code execution.",
+  "observations": [
+    {
+      "url": "https://github.com/EurekaZang/CalibAgent",
+      "via": "web.open",
+      "status": 404,
+      "reason": "Not Found",
+      "checked_date_utc": "2026-10-19"
+    },
+    {
+      "url": "https://api.github.com/repos/EurekaZang/CalibAgent",
+      "via": "urllib",
+      "status": 403,
+      "reason": "rate limit exceeded",
+      "checked_utc": "2026-10-19T04:50:16.604758+00:00"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/EurekaZang/CalibAgent/main/README.md",
+      "via": "urllib",
+      "status": 404,
+      "reason": "Not Found",
+      "checked_utc": "2026-10-19T04:50:17.251146+00:00"
+    },
+    {
+      "url": "https://marina-aoyama.github.io/poke-and-strike/",
+      "via": "urllib and HTMLParser",
+      "status": 200,
+      "bytes": 14852,
+      "sha256": "6941412fd89dad6ad17c6ceb77dff307beb4f5ce36ebeff4ccb12b19417afd2a",
+      "code_href": "#",
+      "checked_utc": "2026-10-19T04:50:18.127199+00:00"
+    }
+  ],
+  "search_cache_not_used_as_current_checkout_evidence": true,
+  "decision": "No original-code reproduction claimed. Any equation-based port must document modifications, observation/training permissions and full costs."
+}

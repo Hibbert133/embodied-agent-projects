@@ -1,0 +1,41 @@
+{
+  "review": "short_probe_replay_output_guards_v1",
+  "status": "PASSED",
+  "created_utc": "2026-10-19T07:06:10.112594+00:00",
+  "existing_receipt_unchanged": true,
+  "out_of_root_file_created": false,
+  "helper_sha256": "a25e332730cd3df29fda1a9b763658ebfe4c07cca23a1fd44ac38f11fd460210",
+  "checks": [
+    {
+      "argv": [
+        "docs\\paper\\replay_short_probe_results_20261019.py",
+        "--phase",
+        "SMOKE",
+        "--mode",
+        "hashes",
+        "--output",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\reproduction_reviews\\short_probe_reference_v1\\smoke_records_v1.json"
+      ],
+      "returncode": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "usage: replay_short_probe_results_20261019.py [-h]\r\n                                              [--mode {hashes,numeric,records}]\r\n                                              [--phase {SMOKE,MAIN}]\r\n                                              [--output OUTPUT]\r\nreplay_short_probe_results_20261019.py: error: receipt already exists; it will not be overwritten\r\n"
+    },
+    {
+      "argv": [
+        "docs\\paper\\replay_short_probe_results_20261019.py",
+        "--phase",
+        "SMOKE",
+        "--mode",
+        "hashes",
+        "--output",
+        "outputs/should_not_be_written.json"
+      ],
+      "returncode": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr": "usage: replay_short_probe_results_20261019.py [-h]\r\n                                              [--mode {hashes,numeric,records}]\r\n                                              [--phase {SMOKE,MAIN}]\r\n                                              [--output OUTPUT]\r\nreplay_short_probe_results_20261019.py: error: output must be a new JSON file inside outputs\\reproduction_reviews\\short_probe_reference_v1\r\n"
+    }
+  ],
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "scope": "CLI no-overwrite and destination-boundary checks; successful actual SMOKE record replay is in its separate receipt."
+}

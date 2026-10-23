@@ -1,0 +1,59 @@
+{
+  "scope": "ANALYTIC_SOFTWARE_REFERENCE_NOT_ROBOT_RESULT_NOT_SOURCE_FAILURE_ATTRIBUTION",
+  "known_plant": "F(a)=a, one dimension; dimensionless action, not hand displacement",
+  "noise": "Independent zero-mean Gaussian, sigma=.05; real-valued reference, not an executor float32 replay",
+  "examples": {
+    "noise_then_final_clip": 0.9995754648691586,
+    "preclip_then_noise_then_final_clip": 0.9800528859799282,
+    "two_independent_input_noises_then_final_clip": 0.9974872729169993,
+    "mean_after_blending_bounded_commands": 0.6999999999921822,
+    "blend_of_two_separate_mean_predictions": 0.6900264429899641
+  },
+  "independent_integrations": [
+    {
+      "mu_before_noise": 1.1,
+      "noise_sigma": 0.05,
+      "analytic_expected_clipped_action": 0.9995754648691586,
+      "independent_Simpson_mean": 0.9995754648691474,
+      "absolute_difference": 1.1213252548714081e-14
+    },
+    {
+      "mu_before_noise": 1.0,
+      "noise_sigma": 0.05,
+      "analytic_expected_clipped_action": 0.9800528859799282,
+      "independent_Simpson_mean": 0.9800528859799166,
+      "absolute_difference": 1.1657341758564144e-14
+    },
+    {
+      "mu_before_noise": 1.1,
+      "noise_sigma": 0.07071067811865477,
+      "analytic_expected_clipped_action": 0.9974872729169993,
+      "independent_Simpson_mean": 0.9974872724147089,
+      "absolute_difference": 5.022904314699872e-10
+    },
+    {
+      "mu_before_noise": 0.7,
+      "noise_sigma": 0.05,
+      "analytic_expected_clipped_action": 0.6999999999921822,
+      "independent_Simpson_mean": 0.699999999992174,
+      "absolute_difference": 8.215650382226158e-15
+    },
+    {
+      "mu_before_noise": 0.4,
+      "noise_sigma": 0.05,
+      "analytic_expected_clipped_action": 0.3999999999999999,
+      "independent_Simpson_mean": 0.39999999999999664,
+      "absolute_difference": 3.2751579226442118e-15
+    }
+  ],
+  "quadrature_evaluations": 100005,
+  "random_draws": 0,
+  "new_robot_steps": 0,
+  "new_resets": 0,
+  "new_api_calls": 0,
+  "new_scientific_model_fits": 0,
+  "new_software_model_fits": 0,
+  "frozen_development_models_modified": false,
+  "source_sha256": "6d5f1bd3b0dc5e42d912e0611f11dc12a8c81edb8cad05c8e80f3f5e584dcbcf",
+  "wall_ns": 67741900
+}

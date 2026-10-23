@@ -1,0 +1,172 @@
+{
+  "experiment_run_id": "point8_baseline_20261015T153211Z_b9506ff0e3ae",
+  "manifest_id": "15226f9f43e1dbbb11d9e5354b975663038557e501b43c42ad79c5caa293cdce",
+  "source_git_commit": "b9506ff0e3aeeb209e18cd2b1b7a6bb0514d11b2",
+  "integrity": "PASSED",
+  "full_tests": {
+    "tests": 866,
+    "seconds": 126.889,
+    "result": "OK"
+  },
+  "final_changed_module_tests": 9,
+  "required_checks": {
+    "compile": {
+      "exit_code": 0,
+      "seconds": 0.435898100000486,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "outputs/point8_baseline"
+      ]
+    },
+    "dependencies": {
+      "exit_code": 0,
+      "seconds": 0.6887836999994761,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "pip",
+        "check"
+      ]
+    },
+    "diff": {
+      "exit_code": 0,
+      "seconds": 0.03921440000340226,
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ]
+    },
+    "compile_final": {
+      "exit_code": 0,
+      "seconds": 0.4900506999983918,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "outputs/point8_baseline"
+      ]
+    },
+    "secrets": {
+      "exit_code": 0,
+      "seconds": 29.015218399999867,
+      "command": [
+        ".venv/Scripts/python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ]
+    },
+    "staged_diff": {
+      "exit_code": 0,
+      "seconds": 0.04643039999791654,
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ]
+    }
+  },
+  "frozen_inputs_checked": 681,
+  "raw_record_events_checked": 308002,
+  "independent_statistics_checked": 421,
+  "registered_contrasts": 5,
+  "plot_visual_qa": "PASSED",
+  "artifact_sha256": {
+    "docs/research/research_status_20261015_zh.md": "69b426bd4b8f09865f7a37baf12845aea93b435fdf0e7c0f3e146fb4f309f2c2",
+    "outputs/point8_baseline/analysis_v1/audit.json": "bbb9b14ef2cf1b8342994b6bc653b07b6304a3434fe0966b9dafeebabda62cf7",
+    "outputs/point8_baseline/delivery_v1/checks.json": "48a9801a2918f3ad1bb3dfca91e290d152a3d2232b9254a214ba776ea8f1e2ca",
+    "outputs/point8_baseline/delivery_v1/compile.log.gz": "8d60b95b9a4b3e7c3a58e2ecfe6c62faddefae43b41d4184ac46c1261a4a45cf",
+    "outputs/point8_baseline/delivery_v1/compile_final.log.gz": "8d601a28ebd8ffd385010c214b87854da8148f9e53d8ad8e721c5e44c36a4f7f",
+    "outputs/point8_baseline/delivery_v1/dependencies.log.gz": "9c0789f570a85b9f438a86811148eac737c7bb729292d8efbb452a4bb41b9c77",
+    "outputs/point8_baseline/delivery_v1/diff.log.gz": "405af51988ad7ee07b5fc6b63cb1ade52e518cc774d3b5a08339e21a9264cc03",
+    "outputs/point8_baseline/delivery_v1/freeze_audit.log.gz": "7150f18cbd1f818b0b7d8815c43786f272f88ac7bc163ab896fe02783f863c95",
+    "outputs/point8_baseline/delivery_v1/freeze_checks.json.gz": "86916b640311c57ad22e21ff75da4939cfd364e75441b3be649b234311caa8fa",
+    "outputs/point8_baseline/delivery_v1/freeze_compile.log.gz": "7a8669270ece314694e50f8ab3452adea28585c7fd8b7f288f9925beda3aeb2e",
+    "outputs/point8_baseline/delivery_v1/freeze_compile_final.log.gz": "82478f63963d919a2b602d984e469126a17f867bd820fb2953cbc8ad700b3df5",
+    "outputs/point8_baseline/delivery_v1/freeze_dependencies.log.gz": "d5bb4f641f6967b8737e1f62dd36c2f05a0ed4719d34c63e4d8dba5fc204a779",
+    "outputs/point8_baseline/delivery_v1/freeze_diff.log.gz": "806e19f2a252462dfab424b77748f92f97dd77940fe2ccc23f2631f1ce634253",
+    "outputs/point8_baseline/delivery_v1/freeze_new_tests_final.log.gz": "d484ffaf6f3f5c76ae40b72df96ec63cd9159ebbfcb2a0ae56540265ea17bbcd",
+    "outputs/point8_baseline/delivery_v1/freeze_run.log.gz": "51d7ef00321e9d5f136c34e66877d9a6262443cdb991b1a3c609b99a434349ec",
+    "outputs/point8_baseline/delivery_v1/freeze_secrets.log.gz": "a47b4fefb2f14e1c7e9197c17561ab646a13781ab0d62d5c5d18f76d91d1272e",
+    "outputs/point8_baseline/delivery_v1/freeze_staged_diff.log.gz": "c320cc7d71da83da927571eba823635f7860d3b01abbe4e6c3de7bf618070566",
+    "outputs/point8_baseline/delivery_v1/freeze_statistics_audit.log.gz": "024807c6c8fce027301b9cecc70ea0ccfd4bf3ffc6992af089bf9b86456edce5",
+    "outputs/point8_baseline/delivery_v1/freeze_tests.log.gz": "0661fdd5841413c9244968ebc46e5d04ec4f0e6e4bf456bd2933c6b3383b1857",
+    "outputs/point8_baseline/delivery_v1/index_validation_source.py": "e228027c8d0823bd12ad71275ee4b6a02b4062eba8020293e3d32823cc0347b0",
+    "outputs/point8_baseline/delivery_v1/receipt_source.py": "e56de04032a5425300be6cd1d63365083698d92dbc524bd393fcf147917495cf",
+    "outputs/point8_baseline/delivery_v1/secrets.log.gz": "20e093e99e1c70010171815fe87e2972096923b864bf0672b439cd51d25c6482",
+    "outputs/point8_baseline/delivery_v1/staged_diff.log.gz": "e440d52f2bce6533eaa2dcc6c1864580b7c05dada9d540506a4bbd76c77b9946",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_00.jsonl.gz": "61346f783c9c8733313359268e55cba3df3e585e13e5444d6e55a244b216b31a",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_01.jsonl.gz": "e185e381a4a0e149450d998359f772ed446a07cb187b19704088cf5299dd5b41",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_02.jsonl.gz": "dbc900576bccb7e34efbc98823412737a0b7281096b452159b1b550e51871432",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_03.jsonl.gz": "4b41c180a31c0764802c78f0872746172f2f7d3393e95dfaa156b6f3590bca5d",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_04.jsonl.gz": "5df49dcf38b6825b9f9ed074f9bf5e6c983d9792d5ac7512eb264621be2fb993",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_05.jsonl.gz": "a707e66de394a9b5fe8c56f1e9260c7de4103c30ac08c755dc74f3525fef2f1f",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_06.jsonl.gz": "3687d9fd786cd95b94026abcfbb2aaba7573f75fe5484cbb875f3f9a052ffd6b",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_07.jsonl.gz": "88989ed47bdf5f39736705fec9ce0e626bbc98fe1c94100693cab4bf2b1e4ad2",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_08.jsonl.gz": "b33b850b2c7e24c9f033c27bae77ac0a2a0aa04271afdf47f270bc927b24fe74",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_09.jsonl.gz": "c1482837c94511cbff0e9cc1cacd9acb322d3c678ce8b40227fbbeba31594c85",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_10.jsonl.gz": "2eb4027bce705109255d76026f45781efecb08d47f563ac5e53c130299d599fd",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_11.jsonl.gz": "03fac3b4304a91893a6ba9d277fb615c423603bb30e4c10e71070d2589d8d20f",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_12.jsonl.gz": "458eae4e9f426903d0ba5ab40f6d3ab3f761a9ae082a0e390c524c3e6749c488",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_13.jsonl.gz": "81ccfb268fa233f664147e2eade69d75c8da2b31abf1f7eb0028cae3f0b81636",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_14.jsonl.gz": "590ac8117a593cdce7f6e350c39365f24379d4837ff5d2bcd63ca8007a226fa0",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/episodes_15.jsonl.gz": "77917514d44361a471b48486eeb527f9aa942ecc286fc3c67592f78f180aef82",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_00.jsonl.gz": "6807386a11661aaff25f2f1b2b9e732ff8f7a7e19f8c998825e21bbd3386c8e4",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_01.jsonl.gz": "2703d9faf2f56439a26cfd470272cef283076e2246e6e8ae10a93af4151fb471",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_02.jsonl.gz": "814bed7381b1f97b92fe7d468243b6af3c4fe5ddeb1164aa7a470624eb12aeb1",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_03.jsonl.gz": "387f74358d7e851f5340e08f3ca882bd0cb393b2b70e133c01d542c87a9f1628",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_04.jsonl.gz": "6e4ca928093a4d790344a51ba2e95216d6f407957cb42604aa7d71d68a3cae27",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_05.jsonl.gz": "671312b58fb1d6e163a8a84a3659255ad94da9cb8313826930fb8a861fc71267",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_06.jsonl.gz": "b48bd438270a75e4704ade8d013e13beb3dfde9ef882f34190ee0128f9c69695",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_07.jsonl.gz": "9463cbe8467f0f140c698cbe897c88cf466d03cf4a3a8bf7a664e354c3b26609",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_08.jsonl.gz": "88cb07d74d84c807ceb70548cff4a5dd6a1ce3cd5e2a1917aeae60f56f5b3405",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_09.jsonl.gz": "d04595c04b78c4c0e341ae06b0a6ce42b61782c757885e7f476b8c7c1d45f069",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_10.jsonl.gz": "8b0754ac2019cbfcb6941d941666bee2ee54dda3f3d6ed747ed4edcbe0133b3f",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_11.jsonl.gz": "bf90c2934b5da5dfff35c2b21e66e904f58034c692e618a61887016e24f68700",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_12.jsonl.gz": "e6b824c076906d3df80f5e62a3505693d939180afdd372bde70789fab89d9fe7",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_13.jsonl.gz": "bc81929a7e560dac0fe22e887215ba8fd9663d06867833f20f23fe8cba6f154e",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_14.jsonl.gz": "8d7001a02f2d8d8a75b6dde76eef9b25adb12cc94b92c5b3f5f860ca3c16c438",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/events_15.jsonl.gz": "98c38cef3e371b5c925fcc0632c428eda31e1d95f9e4be84b0a7188bc3e9e5a7",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/manifest.json": "3e40efcd0b378c43a98618c361014d69b73644ad01b551b9442be56853c92e09",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/status.json": "2899fdbc4e5dfac551fb04dbb975e152cdf556ed2f99ff2063fee74723dd60f5",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/summary.json": "d786f4e16f5d1baf99435abcebca1fe483c2e567b33e9ce373e3e899454f479e",
+    "outputs/point8_baseline/figure_v1/figure.png": "045e2126d4519b2adfe485a3f191b37241d5c6c31bde7326ae2c61dcd3f02497",
+    "outputs/point8_baseline/figure_v1/figure.svg": "e3f7b3803e3346a2dcd1e3002c642fde8458526cbeb3b13936f421d771b8947e",
+    "outputs/point8_baseline/figure_v1/provenance.json": "5fcf28855f979a603c4c54f0b9614cbc3e728bf2e5a0809657811fa3ced80360",
+    "outputs/point8_baseline/figure_v1/render.py": "4aab0c6f891d215233b1fdb7623075cf511ede414feb4f834d29bb96e1bafc98",
+    "outputs/point8_baseline/figure_v2/figure.png": "e00c3a07216fc692de06b324767e3f3383262e2d17ee2a9fd2626d44c49c0c25",
+    "outputs/point8_baseline/figure_v2/figure.svg": "2bae43ef88fdcc5b33b963edb2ae0f73df800dda05cc3df7bc68d4dcc4e6e8b2",
+    "outputs/point8_baseline/figure_v2/provenance.json": "63adcf3bf99b8f46ef0445d667f4985122a54dfca5bfaa0fcc3626e49fa57649",
+    "outputs/point8_baseline/figure_v2/render.py": "35b4a1dfba917d806ad50a781a79f884375a5d51540763e1db2bb7f2675f9eb3",
+    "outputs/point8_baseline/integrity_stream0_v1/check.json": "3a23bc804a0e7f7df15df21ccb6bc3e5df0f87a2334f72a1f33a6595e63faf58",
+    "outputs/point8_baseline/integrity_stream0_v1/check_source.py": "9b4a5b42c7f2a9a84e857d38fe4eb52203fb5b4b0d88bcb245f8095d71dbb4f6",
+    "outputs/point8_baseline/literature_v1/notes_zh.md": "b6c0cde43ddfe4090478b470b5a28158c2f2ece7d8df7a06b5f6108bc22c5692",
+    "outputs/point8_baseline/literature_v1/source_check.json": "8a23171c6768a4ae955ae60662a407471dd7c8dadccfac89c24b58ab89b0a6b2",
+    "outputs/point8_baseline/rationale_v1/check.json": "21862e78d5d38028c31b5fefb16989fa73a4e64d510d859d67aeecdf5948868f",
+    "outputs/point8_baseline/rationale_v1/check_source.py": "7c312eb2e2e74f6f65a02fe0648e412a932a0990390c747e8b7d19fb232a837b",
+    "outputs/point8_baseline/report_v1/build_report.py": "0ea6e388fe183f9d8c6f31bad730f3764d2b7f1d303a38bf4c70f764007f4ca3",
+    "outputs/point8_baseline/report_v1/decomposition.json": "11d52988eac7061c1a448593ed38a0bfeea120084f83de9c90184f973fc1c1b6",
+    "outputs/point8_baseline/report_v1/failures.json": "6586c583819f0bb419c6e620988e7dc6fc99b0ae38532d13be3922db69f303bc",
+    "outputs/point8_baseline/report_v1/fit_costs.json": "9ab16958cdaaa77b5e76e9884a913e26a4de3fbc8d7f62e301094fd10370abca",
+    "outputs/point8_baseline/report_v1/matched_outcomes.json": "23c36ba63ed080db48409d10a6b8958cceeff3bbb68ac2199527386241fe9a2a",
+    "outputs/point8_baseline/report_v1/report.json": "3be8b543a9fc501b1213529e5e83ce6a2579bfdc9693745042b9cdb01359df26",
+    "outputs/point8_baseline/report_v1/update_research_status.py": "55a6f59aa05c0c15e7c7beffdaced004696b787907e1eb7f0145de1006fd2c94",
+    "outputs/point8_baseline/statistics_audit_v1/check.json": "346c767d38726d9f9338aedac19d2b0f5967afb430e400586d55f63bef768a88",
+    "README.md": "059e799404f5e67204b55c8e9fab2c936b120a345d4c9ac5c5ee4aade9a10bc8",
+    "reports/point8_baseline_development_v1.md": "74335279867b7e74c22bceeb5aa93bf21b75dc74b577702a62e8c891f66cecc3"
+  },
+  "new_method_promoted": false,
+  "publication_objective": "ACTIVE_NOT_ACHIEVED",
+  "pushed": false
+}

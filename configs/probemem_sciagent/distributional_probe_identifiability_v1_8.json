@@ -1,0 +1,35 @@
+{
+  "protocol_id": "probemem_sciagent_distributional_probe_identifiability_v1_8",
+  "protocol_version": 8,
+  "status": "DEVELOPMENT_FROZEN_BEFORE_EXECUTION",
+  "split": "development_evaluator_audit",
+  "seed_registry": "configs/probemem_sciagent/seed_registry_v9.json",
+  "seed_range": [6950, 7099],
+  "maximum_initial_units": 150,
+  "target_operational_cases": 30,
+  "minimum_operational_cases": 30,
+  "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "mandatory_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "registered_probes": {
+    "COMPENSATION_RESPONSE_PROBE": {"trials": 1, "steps_per_trial": 64, "maximum_steps": 64},
+    "RETRY_REPEATABILITY_PROBE": {"trials": 3, "steps_per_trial": 64, "maximum_steps": 192}
+  },
+  "probe_measurement": {"contact_distance": 0.08, "positive_progress_threshold": 0.0, "severe_failure_threshold": -0.02},
+  "verification_realizations_per_skill": 4,
+  "distributional_decisive_margin": 0.50,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 28018,
+  "budget": {"initial_max_steps": 500, "mandatory_probe_max_steps": 64, "micro_probe_collection_max_steps": 256, "verification_max_steps_each": 500, "maximum_total_steps_per_case": 4820},
+  "success_gate": {"operational_cases": 30, "minimum_decisive_cases": 12, "minimum_each_decisive_class": 4, "minimum_probe_contrast_auc": 0.75, "minimum_bootstrap_auc_lower_exclusive": 0.50, "minimum_rank_correlation": 0.30, "maximum_integrity_violations": 0},
+  "random_namespaces": {"initial": 26801, "mandatory_probe": 26802, "compensation_probe": 26803, "retry_probe_base": 26810, "verification_base": 26820},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "output_root": "outputs/probemem_sciagent/distributional_probe_identifiability_v1_8/runs",
+  "claim_boundary": "evaluator_only_probe_identifiability_no_agent_or_online_recovery_claim",
+  "prohibitions": {"api_calls": true, "agent_decision": true, "online_recovery_execution": true, "memory_write": true, "hypothesis_update": true, "principle_update": true, "validation": true, "heldout": true}
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 5,
+  "registry_id": "probemem_sciagent_probe_value_seed_registry_v5",
+  "inherits": "configs/probemem_sciagent/seed_registry_v4.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "probe_value_shadow": [6300, 6349],
+    "probe_value_future_reserved": [6350, 6449]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 6299]],
+  "notes": "Seeds through 6199 are immutable API shadow streams; 6200--6299 remain reserved. Only probe-value shadow evaluation is registered on 6300--6349."
+}

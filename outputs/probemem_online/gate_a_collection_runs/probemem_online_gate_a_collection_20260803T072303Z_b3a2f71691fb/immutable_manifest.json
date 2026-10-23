@@ -1,0 +1,1624 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_online_gate_a_collection_20260803T072303Z_b3a2f71691fb",
+  "source_git_commit": "b3a2f71691fb5fc89d1c863a30a72111d2cff97a",
+  "created_at_utc": "20260803T072303Z",
+  "config_path": "configs/probemem_online/gate_a_collection_v1.json",
+  "config_sha256": "8bf55c85f6a911197630fad094c64d14e62e3a14402a9ba8683bbf504013e6c2",
+  "implementation_sha256": {
+    "scripts/generate_online_gate_a_collection_manifest.py": "600b7fa3fdfe5d3dca35373d47a8e9c81d9a21536d2e90db2d2ee8fa4bdf4d9e",
+    "scripts/run_online_gate_a_collection.py": "212ddd18d5296698d7aa91b5cfa5fda928e92861111cb1d077de03c6a8fab43c",
+    "src/probemem/compact_evidence.py": "c9d9981aa15926b238d94524e4be8b5df3991d5bf8eb4098bdb780fc6e7c7b16",
+    "scripts/run_probemem_v2_smoke.py": "855e0811fc5e5e36a4656e33b9aa0156f481d0e51b9f213358e4ade55ee742ec",
+    "src/rollout/engine.py": "a347c0d8acb76bc200af476150e6c9f699d43bf7b1fca6318aba7fe526906c28"
+  },
+  "input_sha256": {
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "outputs/autoresearch/noise_calibration/selected.json": "748b6ab6e143ec0939b68cb4bca73e96dcdf934f3f153aa4936f7607923a5e2c",
+    "configs/probemem_online/seed_registry_v1.json": "66a2fe855e5d96217a8011b9f742663c22d8fe9c323f9246554c00209ce3c8ba"
+  },
+  "candidate_units": [
+    {
+      "unit_id": 1,
+      "environment_seed": 4000,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1262700480,
+      "diagnostic_probe_seed": 3405030520,
+      "paired_verification_seed": 3905735311
+    },
+    {
+      "unit_id": 2,
+      "environment_seed": 4000,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1508778415,
+      "diagnostic_probe_seed": 4088007575,
+      "paired_verification_seed": 2578822956
+    },
+    {
+      "unit_id": 3,
+      "environment_seed": 4001,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3586638937,
+      "diagnostic_probe_seed": 2542253141,
+      "paired_verification_seed": 3556399861
+    },
+    {
+      "unit_id": 4,
+      "environment_seed": 4001,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 131999067,
+      "diagnostic_probe_seed": 2824365886,
+      "paired_verification_seed": 2740884883
+    },
+    {
+      "unit_id": 5,
+      "environment_seed": 4002,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4199810201,
+      "diagnostic_probe_seed": 3807227752,
+      "paired_verification_seed": 3783298802
+    },
+    {
+      "unit_id": 6,
+      "environment_seed": 4002,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1429239987,
+      "diagnostic_probe_seed": 809238385,
+      "paired_verification_seed": 183457911
+    },
+    {
+      "unit_id": 7,
+      "environment_seed": 4003,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2011234074,
+      "diagnostic_probe_seed": 2499380515,
+      "paired_verification_seed": 986932508
+    },
+    {
+      "unit_id": 8,
+      "environment_seed": 4003,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 207806985,
+      "diagnostic_probe_seed": 784823723,
+      "paired_verification_seed": 170949232
+    },
+    {
+      "unit_id": 9,
+      "environment_seed": 4004,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 829915552,
+      "diagnostic_probe_seed": 2833248527,
+      "paired_verification_seed": 3318614938
+    },
+    {
+      "unit_id": 10,
+      "environment_seed": 4004,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3417184613,
+      "diagnostic_probe_seed": 2931924120,
+      "paired_verification_seed": 3748454377
+    },
+    {
+      "unit_id": 11,
+      "environment_seed": 4005,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4225556386,
+      "diagnostic_probe_seed": 2732540537,
+      "paired_verification_seed": 1724545085
+    },
+    {
+      "unit_id": 12,
+      "environment_seed": 4005,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3671823378,
+      "diagnostic_probe_seed": 1508972280,
+      "paired_verification_seed": 136057394
+    },
+    {
+      "unit_id": 13,
+      "environment_seed": 4006,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1834515931,
+      "diagnostic_probe_seed": 3964897235,
+      "paired_verification_seed": 1736159962
+    },
+    {
+      "unit_id": 14,
+      "environment_seed": 4006,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4253084258,
+      "diagnostic_probe_seed": 2441346712,
+      "paired_verification_seed": 3904566385
+    },
+    {
+      "unit_id": 15,
+      "environment_seed": 4007,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3220002291,
+      "diagnostic_probe_seed": 3855013651,
+      "paired_verification_seed": 799903078
+    },
+    {
+      "unit_id": 16,
+      "environment_seed": 4007,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 265893635,
+      "diagnostic_probe_seed": 85180903,
+      "paired_verification_seed": 3302333344
+    },
+    {
+      "unit_id": 17,
+      "environment_seed": 4008,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3339238921,
+      "diagnostic_probe_seed": 268579170,
+      "paired_verification_seed": 2023731407
+    },
+    {
+      "unit_id": 18,
+      "environment_seed": 4008,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4230400231,
+      "diagnostic_probe_seed": 3076987444,
+      "paired_verification_seed": 379298551
+    },
+    {
+      "unit_id": 19,
+      "environment_seed": 4009,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4077021286,
+      "diagnostic_probe_seed": 1291279558,
+      "paired_verification_seed": 1518740890
+    },
+    {
+      "unit_id": 20,
+      "environment_seed": 4009,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3821398455,
+      "diagnostic_probe_seed": 620087985,
+      "paired_verification_seed": 2520052665
+    },
+    {
+      "unit_id": 21,
+      "environment_seed": 4010,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 246424738,
+      "diagnostic_probe_seed": 2506869192,
+      "paired_verification_seed": 2058918908
+    },
+    {
+      "unit_id": 22,
+      "environment_seed": 4010,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 340112306,
+      "diagnostic_probe_seed": 3108024500,
+      "paired_verification_seed": 2462480415
+    },
+    {
+      "unit_id": 23,
+      "environment_seed": 4011,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1920227996,
+      "diagnostic_probe_seed": 1806548473,
+      "paired_verification_seed": 3331919566
+    },
+    {
+      "unit_id": 24,
+      "environment_seed": 4011,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 131712012,
+      "diagnostic_probe_seed": 4280326939,
+      "paired_verification_seed": 353667442
+    },
+    {
+      "unit_id": 25,
+      "environment_seed": 4012,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3097683773,
+      "diagnostic_probe_seed": 2844233631,
+      "paired_verification_seed": 68539007
+    },
+    {
+      "unit_id": 26,
+      "environment_seed": 4012,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3279530071,
+      "diagnostic_probe_seed": 1165809807,
+      "paired_verification_seed": 261603119
+    },
+    {
+      "unit_id": 27,
+      "environment_seed": 4013,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2213583022,
+      "diagnostic_probe_seed": 3799152334,
+      "paired_verification_seed": 1858467542
+    },
+    {
+      "unit_id": 28,
+      "environment_seed": 4013,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3791911820,
+      "diagnostic_probe_seed": 1898054473,
+      "paired_verification_seed": 4088526541
+    },
+    {
+      "unit_id": 29,
+      "environment_seed": 4014,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 480747368,
+      "diagnostic_probe_seed": 1729925964,
+      "paired_verification_seed": 4003121398
+    },
+    {
+      "unit_id": 30,
+      "environment_seed": 4014,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4221944616,
+      "diagnostic_probe_seed": 4037367259,
+      "paired_verification_seed": 3153757055
+    },
+    {
+      "unit_id": 31,
+      "environment_seed": 4015,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3680014454,
+      "diagnostic_probe_seed": 875555234,
+      "paired_verification_seed": 4260228358
+    },
+    {
+      "unit_id": 32,
+      "environment_seed": 4015,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3292093984,
+      "diagnostic_probe_seed": 3992926452,
+      "paired_verification_seed": 2433056972
+    },
+    {
+      "unit_id": 33,
+      "environment_seed": 4016,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2425865313,
+      "diagnostic_probe_seed": 309295165,
+      "paired_verification_seed": 2504542030
+    },
+    {
+      "unit_id": 34,
+      "environment_seed": 4016,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2862158185,
+      "diagnostic_probe_seed": 1302647997,
+      "paired_verification_seed": 3631638348
+    },
+    {
+      "unit_id": 35,
+      "environment_seed": 4017,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 543036688,
+      "diagnostic_probe_seed": 3517773815,
+      "paired_verification_seed": 2428763614
+    },
+    {
+      "unit_id": 36,
+      "environment_seed": 4017,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1496822565,
+      "diagnostic_probe_seed": 1738864415,
+      "paired_verification_seed": 3957792192
+    },
+    {
+      "unit_id": 37,
+      "environment_seed": 4018,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1943792267,
+      "diagnostic_probe_seed": 2437149989,
+      "paired_verification_seed": 1805634344
+    },
+    {
+      "unit_id": 38,
+      "environment_seed": 4018,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3553623189,
+      "diagnostic_probe_seed": 4130864040,
+      "paired_verification_seed": 3832751445
+    },
+    {
+      "unit_id": 39,
+      "environment_seed": 4019,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3916256575,
+      "diagnostic_probe_seed": 2658971846,
+      "paired_verification_seed": 1690458530
+    },
+    {
+      "unit_id": 40,
+      "environment_seed": 4019,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1916506261,
+      "diagnostic_probe_seed": 3136005921,
+      "paired_verification_seed": 3691518592
+    },
+    {
+      "unit_id": 41,
+      "environment_seed": 4020,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1288589431,
+      "diagnostic_probe_seed": 1935362950,
+      "paired_verification_seed": 1914611235
+    },
+    {
+      "unit_id": 42,
+      "environment_seed": 4020,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 936541394,
+      "diagnostic_probe_seed": 3878403351,
+      "paired_verification_seed": 3536741313
+    },
+    {
+      "unit_id": 43,
+      "environment_seed": 4021,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 995866700,
+      "diagnostic_probe_seed": 2697878392,
+      "paired_verification_seed": 3330282900
+    },
+    {
+      "unit_id": 44,
+      "environment_seed": 4021,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 799271841,
+      "diagnostic_probe_seed": 1460322095,
+      "paired_verification_seed": 2550777267
+    },
+    {
+      "unit_id": 45,
+      "environment_seed": 4022,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 478805738,
+      "diagnostic_probe_seed": 166234579,
+      "paired_verification_seed": 324460983
+    },
+    {
+      "unit_id": 46,
+      "environment_seed": 4022,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4138476809,
+      "diagnostic_probe_seed": 4105201176,
+      "paired_verification_seed": 4154230724
+    },
+    {
+      "unit_id": 47,
+      "environment_seed": 4023,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3791197153,
+      "diagnostic_probe_seed": 3271207319,
+      "paired_verification_seed": 3679057722
+    },
+    {
+      "unit_id": 48,
+      "environment_seed": 4023,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3569424966,
+      "diagnostic_probe_seed": 775000717,
+      "paired_verification_seed": 489770822
+    },
+    {
+      "unit_id": 49,
+      "environment_seed": 4024,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3132445957,
+      "diagnostic_probe_seed": 4241887597,
+      "paired_verification_seed": 1732676927
+    },
+    {
+      "unit_id": 50,
+      "environment_seed": 4024,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2432939632,
+      "diagnostic_probe_seed": 1885209161,
+      "paired_verification_seed": 802929273
+    },
+    {
+      "unit_id": 51,
+      "environment_seed": 4025,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 346280742,
+      "diagnostic_probe_seed": 165653944,
+      "paired_verification_seed": 2095642605
+    },
+    {
+      "unit_id": 52,
+      "environment_seed": 4025,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 294694038,
+      "diagnostic_probe_seed": 2866384403,
+      "paired_verification_seed": 1779117274
+    },
+    {
+      "unit_id": 53,
+      "environment_seed": 4026,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 373352294,
+      "diagnostic_probe_seed": 2310183627,
+      "paired_verification_seed": 4127344633
+    },
+    {
+      "unit_id": 54,
+      "environment_seed": 4026,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1990423095,
+      "diagnostic_probe_seed": 215692067,
+      "paired_verification_seed": 783918816
+    },
+    {
+      "unit_id": 55,
+      "environment_seed": 4027,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3849072035,
+      "diagnostic_probe_seed": 621789435,
+      "paired_verification_seed": 3540967371
+    },
+    {
+      "unit_id": 56,
+      "environment_seed": 4027,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1367638980,
+      "diagnostic_probe_seed": 2046314856,
+      "paired_verification_seed": 1462147995
+    },
+    {
+      "unit_id": 57,
+      "environment_seed": 4028,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1507322942,
+      "diagnostic_probe_seed": 2820489143,
+      "paired_verification_seed": 2948255003
+    },
+    {
+      "unit_id": 58,
+      "environment_seed": 4028,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3338016925,
+      "diagnostic_probe_seed": 3997559618,
+      "paired_verification_seed": 1011234019
+    },
+    {
+      "unit_id": 59,
+      "environment_seed": 4029,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2804707029,
+      "diagnostic_probe_seed": 3643802732,
+      "paired_verification_seed": 640209599
+    },
+    {
+      "unit_id": 60,
+      "environment_seed": 4029,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 848821764,
+      "diagnostic_probe_seed": 3567775713,
+      "paired_verification_seed": 3029489436
+    },
+    {
+      "unit_id": 61,
+      "environment_seed": 4030,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 764104866,
+      "diagnostic_probe_seed": 327797925,
+      "paired_verification_seed": 1519947381
+    },
+    {
+      "unit_id": 62,
+      "environment_seed": 4030,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1098214884,
+      "diagnostic_probe_seed": 3837062069,
+      "paired_verification_seed": 2224118415
+    },
+    {
+      "unit_id": 63,
+      "environment_seed": 4031,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3075090124,
+      "diagnostic_probe_seed": 2863533705,
+      "paired_verification_seed": 1136466837
+    },
+    {
+      "unit_id": 64,
+      "environment_seed": 4031,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1688565357,
+      "diagnostic_probe_seed": 1879488150,
+      "paired_verification_seed": 1754016470
+    },
+    {
+      "unit_id": 65,
+      "environment_seed": 4032,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1542479727,
+      "diagnostic_probe_seed": 3834131496,
+      "paired_verification_seed": 991689536
+    },
+    {
+      "unit_id": 66,
+      "environment_seed": 4032,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1918551607,
+      "diagnostic_probe_seed": 1099903497,
+      "paired_verification_seed": 2472588640
+    },
+    {
+      "unit_id": 67,
+      "environment_seed": 4033,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3773653109,
+      "diagnostic_probe_seed": 1647485362,
+      "paired_verification_seed": 1609596944
+    },
+    {
+      "unit_id": 68,
+      "environment_seed": 4033,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 696588599,
+      "diagnostic_probe_seed": 803645595,
+      "paired_verification_seed": 1811668295
+    },
+    {
+      "unit_id": 69,
+      "environment_seed": 4034,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1025058192,
+      "diagnostic_probe_seed": 3778865817,
+      "paired_verification_seed": 2677620086
+    },
+    {
+      "unit_id": 70,
+      "environment_seed": 4034,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2124962640,
+      "diagnostic_probe_seed": 3209331223,
+      "paired_verification_seed": 2350451237
+    },
+    {
+      "unit_id": 71,
+      "environment_seed": 4035,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 168986224,
+      "diagnostic_probe_seed": 2812322430,
+      "paired_verification_seed": 1148151713
+    },
+    {
+      "unit_id": 72,
+      "environment_seed": 4035,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4100729184,
+      "diagnostic_probe_seed": 67497339,
+      "paired_verification_seed": 3310405599
+    },
+    {
+      "unit_id": 73,
+      "environment_seed": 4036,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 526629454,
+      "diagnostic_probe_seed": 3925014012,
+      "paired_verification_seed": 502865788
+    },
+    {
+      "unit_id": 74,
+      "environment_seed": 4036,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1467525310,
+      "diagnostic_probe_seed": 1975846512,
+      "paired_verification_seed": 2181548548
+    },
+    {
+      "unit_id": 75,
+      "environment_seed": 4037,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1408145533,
+      "diagnostic_probe_seed": 614258518,
+      "paired_verification_seed": 203841639
+    },
+    {
+      "unit_id": 76,
+      "environment_seed": 4037,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1080159829,
+      "diagnostic_probe_seed": 475922175,
+      "paired_verification_seed": 742075956
+    },
+    {
+      "unit_id": 77,
+      "environment_seed": 4038,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1698483229,
+      "diagnostic_probe_seed": 631551377,
+      "paired_verification_seed": 3970616346
+    },
+    {
+      "unit_id": 78,
+      "environment_seed": 4038,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3420390228,
+      "diagnostic_probe_seed": 2773613511,
+      "paired_verification_seed": 2674438796
+    },
+    {
+      "unit_id": 79,
+      "environment_seed": 4039,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2776181050,
+      "diagnostic_probe_seed": 3153947231,
+      "paired_verification_seed": 1376484770
+    },
+    {
+      "unit_id": 80,
+      "environment_seed": 4039,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1228299716,
+      "diagnostic_probe_seed": 36715483,
+      "paired_verification_seed": 848879697
+    },
+    {
+      "unit_id": 81,
+      "environment_seed": 4040,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 42985975,
+      "diagnostic_probe_seed": 2648799629,
+      "paired_verification_seed": 2077547125
+    },
+    {
+      "unit_id": 82,
+      "environment_seed": 4040,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2971312939,
+      "diagnostic_probe_seed": 3409691996,
+      "paired_verification_seed": 4251469688
+    },
+    {
+      "unit_id": 83,
+      "environment_seed": 4041,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1740578666,
+      "diagnostic_probe_seed": 2409616254,
+      "paired_verification_seed": 1109427039
+    },
+    {
+      "unit_id": 84,
+      "environment_seed": 4041,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2097638210,
+      "diagnostic_probe_seed": 2738969273,
+      "paired_verification_seed": 1820780211
+    },
+    {
+      "unit_id": 85,
+      "environment_seed": 4042,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2821295525,
+      "diagnostic_probe_seed": 1572304734,
+      "paired_verification_seed": 2463231330
+    },
+    {
+      "unit_id": 86,
+      "environment_seed": 4042,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 11014767,
+      "diagnostic_probe_seed": 672926654,
+      "paired_verification_seed": 2209646847
+    },
+    {
+      "unit_id": 87,
+      "environment_seed": 4043,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2269411665,
+      "diagnostic_probe_seed": 3886636840,
+      "paired_verification_seed": 3221122372
+    },
+    {
+      "unit_id": 88,
+      "environment_seed": 4043,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3930891527,
+      "diagnostic_probe_seed": 3497880770,
+      "paired_verification_seed": 488482157
+    },
+    {
+      "unit_id": 89,
+      "environment_seed": 4044,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1092045332,
+      "diagnostic_probe_seed": 3800659171,
+      "paired_verification_seed": 395651884
+    },
+    {
+      "unit_id": 90,
+      "environment_seed": 4044,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2351036503,
+      "diagnostic_probe_seed": 2827106591,
+      "paired_verification_seed": 932155518
+    },
+    {
+      "unit_id": 91,
+      "environment_seed": 4045,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 715168924,
+      "diagnostic_probe_seed": 3231806646,
+      "paired_verification_seed": 1013825577
+    },
+    {
+      "unit_id": 92,
+      "environment_seed": 4045,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1423090249,
+      "diagnostic_probe_seed": 2099485277,
+      "paired_verification_seed": 1360862079
+    },
+    {
+      "unit_id": 93,
+      "environment_seed": 4046,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1152786457,
+      "diagnostic_probe_seed": 3640656479,
+      "paired_verification_seed": 700768899
+    },
+    {
+      "unit_id": 94,
+      "environment_seed": 4046,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2339285818,
+      "diagnostic_probe_seed": 1301012074,
+      "paired_verification_seed": 1074422754
+    },
+    {
+      "unit_id": 95,
+      "environment_seed": 4047,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1546182114,
+      "diagnostic_probe_seed": 2356685750,
+      "paired_verification_seed": 2026911417
+    },
+    {
+      "unit_id": 96,
+      "environment_seed": 4047,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3045425358,
+      "diagnostic_probe_seed": 1365049831,
+      "paired_verification_seed": 3870632242
+    },
+    {
+      "unit_id": 97,
+      "environment_seed": 4048,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2593468795,
+      "diagnostic_probe_seed": 947294971,
+      "paired_verification_seed": 2871047972
+    },
+    {
+      "unit_id": 98,
+      "environment_seed": 4048,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3880497001,
+      "diagnostic_probe_seed": 4018660122,
+      "paired_verification_seed": 142733988
+    },
+    {
+      "unit_id": 99,
+      "environment_seed": 4049,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4021371106,
+      "diagnostic_probe_seed": 634566630,
+      "paired_verification_seed": 1958113558
+    },
+    {
+      "unit_id": 100,
+      "environment_seed": 4049,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 606111629,
+      "diagnostic_probe_seed": 2142597592,
+      "paired_verification_seed": 61729421
+    },
+    {
+      "unit_id": 101,
+      "environment_seed": 4050,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3715527432,
+      "diagnostic_probe_seed": 3758328589,
+      "paired_verification_seed": 4286520572
+    },
+    {
+      "unit_id": 102,
+      "environment_seed": 4050,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1699275535,
+      "diagnostic_probe_seed": 2014161402,
+      "paired_verification_seed": 1966611360
+    },
+    {
+      "unit_id": 103,
+      "environment_seed": 4051,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1531417580,
+      "diagnostic_probe_seed": 2567545261,
+      "paired_verification_seed": 1472057778
+    },
+    {
+      "unit_id": 104,
+      "environment_seed": 4051,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3860153656,
+      "diagnostic_probe_seed": 2550069006,
+      "paired_verification_seed": 4221167862
+    },
+    {
+      "unit_id": 105,
+      "environment_seed": 4052,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2440547687,
+      "diagnostic_probe_seed": 4115809872,
+      "paired_verification_seed": 2555647633
+    },
+    {
+      "unit_id": 106,
+      "environment_seed": 4052,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1877518404,
+      "diagnostic_probe_seed": 2350056780,
+      "paired_verification_seed": 386328010
+    },
+    {
+      "unit_id": 107,
+      "environment_seed": 4053,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1012498049,
+      "diagnostic_probe_seed": 2421392493,
+      "paired_verification_seed": 1773196696
+    },
+    {
+      "unit_id": 108,
+      "environment_seed": 4053,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2834633209,
+      "diagnostic_probe_seed": 3019714084,
+      "paired_verification_seed": 3544277968
+    },
+    {
+      "unit_id": 109,
+      "environment_seed": 4054,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 27707179,
+      "diagnostic_probe_seed": 5801241,
+      "paired_verification_seed": 2351364656
+    },
+    {
+      "unit_id": 110,
+      "environment_seed": 4054,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 582436772,
+      "diagnostic_probe_seed": 4272365633,
+      "paired_verification_seed": 2172214858
+    },
+    {
+      "unit_id": 111,
+      "environment_seed": 4055,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1610253313,
+      "diagnostic_probe_seed": 2797977297,
+      "paired_verification_seed": 393288661
+    },
+    {
+      "unit_id": 112,
+      "environment_seed": 4055,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3574822814,
+      "diagnostic_probe_seed": 44636107,
+      "paired_verification_seed": 1402574969
+    },
+    {
+      "unit_id": 113,
+      "environment_seed": 4056,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 409534650,
+      "diagnostic_probe_seed": 1902341968,
+      "paired_verification_seed": 555103165
+    },
+    {
+      "unit_id": 114,
+      "environment_seed": 4056,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2105502164,
+      "diagnostic_probe_seed": 2577538545,
+      "paired_verification_seed": 1840957647
+    },
+    {
+      "unit_id": 115,
+      "environment_seed": 4057,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1745915604,
+      "diagnostic_probe_seed": 2479904251,
+      "paired_verification_seed": 3863385731
+    },
+    {
+      "unit_id": 116,
+      "environment_seed": 4057,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1632939942,
+      "diagnostic_probe_seed": 3965701537,
+      "paired_verification_seed": 564194778
+    },
+    {
+      "unit_id": 117,
+      "environment_seed": 4058,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1514420729,
+      "diagnostic_probe_seed": 3601886566,
+      "paired_verification_seed": 3145272141
+    },
+    {
+      "unit_id": 118,
+      "environment_seed": 4058,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1126694496,
+      "diagnostic_probe_seed": 3676434473,
+      "paired_verification_seed": 1463141480
+    },
+    {
+      "unit_id": 119,
+      "environment_seed": 4059,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1022387663,
+      "diagnostic_probe_seed": 1506065738,
+      "paired_verification_seed": 3433738793
+    },
+    {
+      "unit_id": 120,
+      "environment_seed": 4059,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2922468388,
+      "diagnostic_probe_seed": 922250506,
+      "paired_verification_seed": 1925546155
+    },
+    {
+      "unit_id": 121,
+      "environment_seed": 4060,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1878940424,
+      "diagnostic_probe_seed": 4098920271,
+      "paired_verification_seed": 1566586278
+    },
+    {
+      "unit_id": 122,
+      "environment_seed": 4060,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2046383628,
+      "diagnostic_probe_seed": 1662658977,
+      "paired_verification_seed": 2060055623
+    },
+    {
+      "unit_id": 123,
+      "environment_seed": 4061,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3829696085,
+      "diagnostic_probe_seed": 2258154673,
+      "paired_verification_seed": 2693203002
+    },
+    {
+      "unit_id": 124,
+      "environment_seed": 4061,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2656336236,
+      "diagnostic_probe_seed": 633411541,
+      "paired_verification_seed": 520923066
+    },
+    {
+      "unit_id": 125,
+      "environment_seed": 4062,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4064504297,
+      "diagnostic_probe_seed": 1770528586,
+      "paired_verification_seed": 3040472567
+    },
+    {
+      "unit_id": 126,
+      "environment_seed": 4062,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1199634784,
+      "diagnostic_probe_seed": 206748316,
+      "paired_verification_seed": 1419996769
+    },
+    {
+      "unit_id": 127,
+      "environment_seed": 4063,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4032036929,
+      "diagnostic_probe_seed": 2713307229,
+      "paired_verification_seed": 2952545811
+    },
+    {
+      "unit_id": 128,
+      "environment_seed": 4063,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2883042523,
+      "diagnostic_probe_seed": 109956101,
+      "paired_verification_seed": 110736811
+    },
+    {
+      "unit_id": 129,
+      "environment_seed": 4064,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2700117535,
+      "diagnostic_probe_seed": 3577410080,
+      "paired_verification_seed": 3131934837
+    },
+    {
+      "unit_id": 130,
+      "environment_seed": 4064,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3278455314,
+      "diagnostic_probe_seed": 2214809969,
+      "paired_verification_seed": 2930391782
+    },
+    {
+      "unit_id": 131,
+      "environment_seed": 4065,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2289534724,
+      "diagnostic_probe_seed": 1733963623,
+      "paired_verification_seed": 2666634294
+    },
+    {
+      "unit_id": 132,
+      "environment_seed": 4065,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 293535553,
+      "diagnostic_probe_seed": 2964802793,
+      "paired_verification_seed": 3346893339
+    },
+    {
+      "unit_id": 133,
+      "environment_seed": 4066,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1948865464,
+      "diagnostic_probe_seed": 3293144227,
+      "paired_verification_seed": 2737610547
+    },
+    {
+      "unit_id": 134,
+      "environment_seed": 4066,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 480181329,
+      "diagnostic_probe_seed": 2841892514,
+      "paired_verification_seed": 2259466624
+    },
+    {
+      "unit_id": 135,
+      "environment_seed": 4067,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2371170882,
+      "diagnostic_probe_seed": 1775646635,
+      "paired_verification_seed": 3352663871
+    },
+    {
+      "unit_id": 136,
+      "environment_seed": 4067,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2966354499,
+      "diagnostic_probe_seed": 1032568486,
+      "paired_verification_seed": 145794223
+    },
+    {
+      "unit_id": 137,
+      "environment_seed": 4068,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2608243521,
+      "diagnostic_probe_seed": 3997639567,
+      "paired_verification_seed": 2552069825
+    },
+    {
+      "unit_id": 138,
+      "environment_seed": 4068,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4232862712,
+      "diagnostic_probe_seed": 4191893994,
+      "paired_verification_seed": 1782381830
+    },
+    {
+      "unit_id": 139,
+      "environment_seed": 4069,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2208904122,
+      "diagnostic_probe_seed": 3012595615,
+      "paired_verification_seed": 3720966120
+    },
+    {
+      "unit_id": 140,
+      "environment_seed": 4069,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3586480547,
+      "diagnostic_probe_seed": 4213250043,
+      "paired_verification_seed": 2454364920
+    },
+    {
+      "unit_id": 141,
+      "environment_seed": 4070,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 326614955,
+      "diagnostic_probe_seed": 3499805164,
+      "paired_verification_seed": 3071877224
+    },
+    {
+      "unit_id": 142,
+      "environment_seed": 4070,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3579342231,
+      "diagnostic_probe_seed": 4060713015,
+      "paired_verification_seed": 4096749223
+    },
+    {
+      "unit_id": 143,
+      "environment_seed": 4071,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2758439321,
+      "diagnostic_probe_seed": 3794704233,
+      "paired_verification_seed": 3659244641
+    },
+    {
+      "unit_id": 144,
+      "environment_seed": 4071,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2113298096,
+      "diagnostic_probe_seed": 3983459599,
+      "paired_verification_seed": 2612198228
+    },
+    {
+      "unit_id": 145,
+      "environment_seed": 4072,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4059085354,
+      "diagnostic_probe_seed": 1999803009,
+      "paired_verification_seed": 726176863
+    },
+    {
+      "unit_id": 146,
+      "environment_seed": 4072,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 382312924,
+      "diagnostic_probe_seed": 3650881081,
+      "paired_verification_seed": 206390050
+    },
+    {
+      "unit_id": 147,
+      "environment_seed": 4073,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1291141748,
+      "diagnostic_probe_seed": 1653087727,
+      "paired_verification_seed": 2896300742
+    },
+    {
+      "unit_id": 148,
+      "environment_seed": 4073,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 923800002,
+      "diagnostic_probe_seed": 2159998331,
+      "paired_verification_seed": 1278765988
+    },
+    {
+      "unit_id": 149,
+      "environment_seed": 4074,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 156842429,
+      "diagnostic_probe_seed": 2991414960,
+      "paired_verification_seed": 3354802118
+    },
+    {
+      "unit_id": 150,
+      "environment_seed": 4074,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3059361279,
+      "diagnostic_probe_seed": 363170846,
+      "paired_verification_seed": 1338426492
+    },
+    {
+      "unit_id": 151,
+      "environment_seed": 4075,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3487685404,
+      "diagnostic_probe_seed": 1434100075,
+      "paired_verification_seed": 3991490685
+    },
+    {
+      "unit_id": 152,
+      "environment_seed": 4075,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4200349919,
+      "diagnostic_probe_seed": 3254917971,
+      "paired_verification_seed": 1090159033
+    },
+    {
+      "unit_id": 153,
+      "environment_seed": 4076,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3284231808,
+      "diagnostic_probe_seed": 1533140144,
+      "paired_verification_seed": 2030943250
+    },
+    {
+      "unit_id": 154,
+      "environment_seed": 4076,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3441029078,
+      "diagnostic_probe_seed": 271864794,
+      "paired_verification_seed": 3608353590
+    },
+    {
+      "unit_id": 155,
+      "environment_seed": 4077,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 428766501,
+      "diagnostic_probe_seed": 1619151580,
+      "paired_verification_seed": 2312153344
+    },
+    {
+      "unit_id": 156,
+      "environment_seed": 4077,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1491594166,
+      "diagnostic_probe_seed": 4399057,
+      "paired_verification_seed": 3373230121
+    },
+    {
+      "unit_id": 157,
+      "environment_seed": 4078,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1802699186,
+      "diagnostic_probe_seed": 2815994713,
+      "paired_verification_seed": 1149016037
+    },
+    {
+      "unit_id": 158,
+      "environment_seed": 4078,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 866690534,
+      "diagnostic_probe_seed": 108267614,
+      "paired_verification_seed": 1363547173
+    },
+    {
+      "unit_id": 159,
+      "environment_seed": 4079,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2845287837,
+      "diagnostic_probe_seed": 2440519723,
+      "paired_verification_seed": 1777273649
+    },
+    {
+      "unit_id": 160,
+      "environment_seed": 4079,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 234988174,
+      "diagnostic_probe_seed": 2021320770,
+      "paired_verification_seed": 2424027931
+    },
+    {
+      "unit_id": 161,
+      "environment_seed": 4080,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1852844744,
+      "diagnostic_probe_seed": 2740388381,
+      "paired_verification_seed": 762225717
+    },
+    {
+      "unit_id": 162,
+      "environment_seed": 4080,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2625243494,
+      "diagnostic_probe_seed": 3726740391,
+      "paired_verification_seed": 625932095
+    },
+    {
+      "unit_id": 163,
+      "environment_seed": 4081,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1689915784,
+      "diagnostic_probe_seed": 1249427990,
+      "paired_verification_seed": 1012820130
+    },
+    {
+      "unit_id": 164,
+      "environment_seed": 4081,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3440306404,
+      "diagnostic_probe_seed": 270763502,
+      "paired_verification_seed": 510445967
+    },
+    {
+      "unit_id": 165,
+      "environment_seed": 4082,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1317191831,
+      "diagnostic_probe_seed": 3119730234,
+      "paired_verification_seed": 474618107
+    },
+    {
+      "unit_id": 166,
+      "environment_seed": 4082,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3605977942,
+      "diagnostic_probe_seed": 3195873246,
+      "paired_verification_seed": 3135485947
+    },
+    {
+      "unit_id": 167,
+      "environment_seed": 4083,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1440399215,
+      "diagnostic_probe_seed": 3145394689,
+      "paired_verification_seed": 606868385
+    },
+    {
+      "unit_id": 168,
+      "environment_seed": 4083,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1541592256,
+      "diagnostic_probe_seed": 2723673596,
+      "paired_verification_seed": 728465574
+    },
+    {
+      "unit_id": 169,
+      "environment_seed": 4084,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2609056412,
+      "diagnostic_probe_seed": 763180137,
+      "paired_verification_seed": 1738507766
+    },
+    {
+      "unit_id": 170,
+      "environment_seed": 4084,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1230390337,
+      "diagnostic_probe_seed": 2545938134,
+      "paired_verification_seed": 1198099103
+    },
+    {
+      "unit_id": 171,
+      "environment_seed": 4085,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1116416834,
+      "diagnostic_probe_seed": 2550704779,
+      "paired_verification_seed": 1727839602
+    },
+    {
+      "unit_id": 172,
+      "environment_seed": 4085,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3899614771,
+      "diagnostic_probe_seed": 2211451344,
+      "paired_verification_seed": 157351535
+    },
+    {
+      "unit_id": 173,
+      "environment_seed": 4086,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2918846723,
+      "diagnostic_probe_seed": 585699840,
+      "paired_verification_seed": 2540084890
+    },
+    {
+      "unit_id": 174,
+      "environment_seed": 4086,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3366923459,
+      "diagnostic_probe_seed": 4138829300,
+      "paired_verification_seed": 1752475547
+    },
+    {
+      "unit_id": 175,
+      "environment_seed": 4087,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2752233847,
+      "diagnostic_probe_seed": 1666946639,
+      "paired_verification_seed": 2294573015
+    },
+    {
+      "unit_id": 176,
+      "environment_seed": 4087,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3795881940,
+      "diagnostic_probe_seed": 252854916,
+      "paired_verification_seed": 1253534615
+    },
+    {
+      "unit_id": 177,
+      "environment_seed": 4088,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2622515367,
+      "diagnostic_probe_seed": 1190506161,
+      "paired_verification_seed": 2270615740
+    },
+    {
+      "unit_id": 178,
+      "environment_seed": 4088,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1481512427,
+      "diagnostic_probe_seed": 1269632757,
+      "paired_verification_seed": 813475967
+    },
+    {
+      "unit_id": 179,
+      "environment_seed": 4089,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3618224716,
+      "diagnostic_probe_seed": 1961959391,
+      "paired_verification_seed": 1617272303
+    },
+    {
+      "unit_id": 180,
+      "environment_seed": 4089,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 849558789,
+      "diagnostic_probe_seed": 1264592564,
+      "paired_verification_seed": 3282650615
+    },
+    {
+      "unit_id": 181,
+      "environment_seed": 4090,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3240868690,
+      "diagnostic_probe_seed": 2911873382,
+      "paired_verification_seed": 442643911
+    },
+    {
+      "unit_id": 182,
+      "environment_seed": 4090,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 14652921,
+      "diagnostic_probe_seed": 408694021,
+      "paired_verification_seed": 584378127
+    },
+    {
+      "unit_id": 183,
+      "environment_seed": 4091,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3756822302,
+      "diagnostic_probe_seed": 4148801508,
+      "paired_verification_seed": 1422376931
+    },
+    {
+      "unit_id": 184,
+      "environment_seed": 4091,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4229411830,
+      "diagnostic_probe_seed": 1313101573,
+      "paired_verification_seed": 3271598077
+    },
+    {
+      "unit_id": 185,
+      "environment_seed": 4092,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4147216809,
+      "diagnostic_probe_seed": 2728519401,
+      "paired_verification_seed": 2889918721
+    },
+    {
+      "unit_id": 186,
+      "environment_seed": 4092,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2664980267,
+      "diagnostic_probe_seed": 2737184334,
+      "paired_verification_seed": 1199138451
+    },
+    {
+      "unit_id": 187,
+      "environment_seed": 4093,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3847535893,
+      "diagnostic_probe_seed": 3436845565,
+      "paired_verification_seed": 1975068205
+    },
+    {
+      "unit_id": 188,
+      "environment_seed": 4093,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3109427468,
+      "diagnostic_probe_seed": 4152858930,
+      "paired_verification_seed": 1880213936
+    },
+    {
+      "unit_id": 189,
+      "environment_seed": 4094,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1436708712,
+      "diagnostic_probe_seed": 4645058,
+      "paired_verification_seed": 1141522296
+    },
+    {
+      "unit_id": 190,
+      "environment_seed": 4094,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4228841022,
+      "diagnostic_probe_seed": 569150276,
+      "paired_verification_seed": 82681978
+    },
+    {
+      "unit_id": 191,
+      "environment_seed": 4095,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 960968641,
+      "diagnostic_probe_seed": 12115775,
+      "paired_verification_seed": 309217248
+    },
+    {
+      "unit_id": 192,
+      "environment_seed": 4095,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4040908904,
+      "diagnostic_probe_seed": 4010627159,
+      "paired_verification_seed": 2497326026
+    },
+    {
+      "unit_id": 193,
+      "environment_seed": 4096,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 748942571,
+      "diagnostic_probe_seed": 1630844555,
+      "paired_verification_seed": 2507075442
+    },
+    {
+      "unit_id": 194,
+      "environment_seed": 4096,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4219712628,
+      "diagnostic_probe_seed": 945426694,
+      "paired_verification_seed": 2044241183
+    },
+    {
+      "unit_id": 195,
+      "environment_seed": 4097,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2089451930,
+      "diagnostic_probe_seed": 281749718,
+      "paired_verification_seed": 331715709
+    },
+    {
+      "unit_id": 196,
+      "environment_seed": 4097,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3833233605,
+      "diagnostic_probe_seed": 3554599584,
+      "paired_verification_seed": 816016964
+    },
+    {
+      "unit_id": 197,
+      "environment_seed": 4098,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2024043727,
+      "diagnostic_probe_seed": 2666081968,
+      "paired_verification_seed": 3381655825
+    },
+    {
+      "unit_id": 198,
+      "environment_seed": 4098,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2060074543,
+      "diagnostic_probe_seed": 3854384342,
+      "paired_verification_seed": 3205991910
+    },
+    {
+      "unit_id": 199,
+      "environment_seed": 4099,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3674928992,
+      "diagnostic_probe_seed": 2317139016,
+      "paired_verification_seed": 2653352216
+    },
+    {
+      "unit_id": 200,
+      "environment_seed": 4099,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 28310878,
+      "diagnostic_probe_seed": 644470198,
+      "paired_verification_seed": 1391237084
+    }
+  ],
+  "stop_rule_hash": "bfd0da3bd752d14be8cca027805e7bc80dc2490d062fb5803bee5b14c6c7c880",
+  "manifest_id": "c059684461ceebc6b77212190f66f1cbc92403aa566c98cf63011c9b03d09b7d"
+}

@@ -1,0 +1,22 @@
+test_collector_failure_retains_completed_frames_and_does_not_substitute (tests.test_short_probe_study_v1.ShortStudyCollectorTest) ... ok
+test_complete_collector_to_independent_record_audit_chain (tests.test_short_probe_study_v1.ShortStudyCollectorTest) ... ok
+test_extra_execution_and_forged_phase_are_rejected (tests.test_short_probe_study_v1.ShortStudyCollectorTest) ... ok
+test_population_owner_order_and_summary_cannot_be_substituted (tests.test_short_probe_study_v1.ShortStudyCollectorTest) ... ok
+test_audit_rejects_changed_interval_cost_and_missing_field (tests.test_short_probe_study_v1.ShortStudyNumbersTest) ... ok
+test_cost_denominator_is_units_not_method_executions (tests.test_short_probe_study_v1.ShortStudyNumbersTest) ... ok
+test_failures_stops_population_and_strict_types_cannot_disappear (tests.test_short_probe_study_v1.ShortStudyNumbersTest) ... ok
+test_independent_statistics_costs_and_bootstrap_agree_with_nonconstant_failures (tests.test_short_probe_study_v1.ShortStudyNumbersTest) ... test_population_independent_allocation_and_disjoint_reservations (tests.test_short_probe_study_v1.ShortStudyNumbersTest) ... ok
+test_smoke_has_no_population_interval (tests.test_short_probe_study_v1.ShortStudyNumbersTest) ... ok
+
+======================================================================
+FAIL: test_independent_statistics_costs_and_bootstrap_agree_with_nonconstant_failures (tests.test_short_probe_study_v1.ShortStudyNumbersTest) (phase='SMOKE')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_short_probe_study_v1.py", line 68, in test_independent_statistics_costs_and_bootstrap_agree_with_nonconstant_failures
+    self.assertGreater(result['fields_checked'],800)
+AssertionError: 703 not greater than 800
+
+----------------------------------------------------------------------
+Ran 10 tests in 20.782s
+
+FAILED (failures=1)

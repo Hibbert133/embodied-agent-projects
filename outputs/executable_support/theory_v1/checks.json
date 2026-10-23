@@ -1,0 +1,61 @@
+{
+  "experiment_run_id": "executable_support_20261015T082955Z_48a3e433af85",
+  "manifest_id": "89e843c795d56e06577fa29504366d7023821180f850f0ecc608e84aaf349b78",
+  "source_git_commit": "48a3e433af851fb8d477086bf508d072c02cdecd",
+  "status": "PASSED",
+  "source_sha256": "e512590345c0c07ec202f78bdf1b59ca275897c1f0e7147aa3597e331c35d509",
+  "theory_note_sha256": "addbbec518a5a5114f719d038b88976ac3f34545b08c871a6874a7197caf9f40",
+  "seed": 20261015,
+  "random_matrix_instances": 500,
+  "program_bound_checks": 1500,
+  "same_mask_instances": 298,
+  "changed_mask_instances": 202,
+  "strict_ranking_certificates_checked": 132,
+  "maximum_nonzero_bound_ratio": 0.9370556950154455,
+  "analytic_rotation": {
+    "desired": [
+      [
+        0.8,
+        0.0
+      ]
+    ],
+    "executed": [
+      [
+        0.007339449541284403,
+        -0.7339449541284404
+      ]
+    ],
+    "raw_scores": {
+      "X4": 0.03681797752816989,
+      "Y4": 7.99996800025576e-14,
+      "ZERO4": 7.99996800025576e-14
+    },
+    "executable_scores": {
+      "X4": 3.0988955877927854e-06,
+      "Y4": 0.030988955078011058,
+      "ZERO4": 7.99996800025576e-14
+    },
+    "jacobian_bounds": {
+      "X4": 0.15667489034096627,
+      "Y4": 0.15667489034096627,
+      "ZERO4": 2.1787514788329417e-13
+    },
+    "same_mask_distance_bounds": {
+      "X4": 0.21527985384417797,
+      "Y4": 0.21527985384417797,
+      "ZERO4": 2.9937234926744393e-13
+    },
+    "same_masks": true,
+    "raw_selected": "X4",
+    "executable_selected": "Y4",
+    "strict_ranking_certified": false,
+    "maximum_nonzero_bound_ratio": 0.2349762527515617
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "task_outcomes_read": 0,
+  "refits": 0,
+  "mathematical_novelty_claimed": false,
+  "physical_or_probability_qualification": false,
+  "scope": "Independent finite-matrix numerical checks of standard covariance/norm algebra and a sufficient ranking condition. Not a proof by simulation or a physical/task-performance certificate; never used for online stopping."
+}

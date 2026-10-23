@@ -1,0 +1,94 @@
+{
+  "experiment_run_id": "strong_chronological_reference_20261016T160111Z_3d4da2d89a1e",
+  "manifest_id": "bfa575c8ec6049a90fb21f9be41433c9ccbcfb8ab65105b01a611a9599104c08",
+  "source_git_commit": "3d4da2d89a1e2b3e28ffc605151e5c206200040f",
+  "collector_pid": 3704,
+  "helper_pid": 17728,
+  "helper_path": "scripts/postprocess_strong_reference_v1.py",
+  "helper_sha256": "845d0107272871c27813a4fe55480f5faa30df2645a8c4333f6691e693da0492",
+  "status": "READY_FOR_VISUAL_QA_AND_REVIEW",
+  "stages": [
+    {
+      "name": "record_audit",
+      "started_utc": "2026-10-16T16:55:07.182794+00:00",
+      "command": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/audit_strong_chronological_reference_v1.py",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\strong_chronological_reference\\development_v1\\strong_chronological_reference_20261016T160111Z_3d4da2d89a1e\\manifest.json",
+        "--phase",
+        "MAIN",
+        "--output",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\strong_chronological_reference\\development_v1\\strong_chronological_reference_20261016T160111Z_3d4da2d89a1e\\main_audit\\audit.json"
+      ],
+      "pid": 16200,
+      "returncode": 0,
+      "finished_utc": "2026-10-16T17:02:13.974715+00:00",
+      "log_path": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/postprocess_pipeline_v1/record_audit.log",
+      "log_sha256": "8bb721e37fe51d0764ffe57ded6420e33c26c421c59908c65a2bafb323bd5683"
+    },
+    {
+      "name": "statistics_audit",
+      "started_utc": "2026-10-16T17:02:13.983911+00:00",
+      "command": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/audit_strong_reference_statistics_v1.py",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\strong_chronological_reference\\development_v1\\strong_chronological_reference_20261016T160111Z_3d4da2d89a1e\\manifest.json",
+        "--phase",
+        "MAIN",
+        "--output",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\strong_chronological_reference\\development_v1\\strong_chronological_reference_20261016T160111Z_3d4da2d89a1e\\main_audit\\statistics.json"
+      ],
+      "pid": 5632,
+      "returncode": 0,
+      "finished_utc": "2026-10-16T17:02:49.024214+00:00",
+      "log_path": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/postprocess_pipeline_v1/statistics_audit.log",
+      "log_sha256": "beb177cb03ae22aa3898284cb64204d54f72801ea860ccde0b8b307d1ebe87a8"
+    },
+    {
+      "name": "chinese_report",
+      "started_utc": "2026-10-16T17:02:49.033275+00:00",
+      "command": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/report_strong_chronological_reference_v1.py",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\strong_chronological_reference\\development_v1\\strong_chronological_reference_20261016T160111Z_3d4da2d89a1e\\manifest.json",
+        "--phase",
+        "MAIN"
+      ],
+      "pid": 15160,
+      "returncode": 0,
+      "finished_utc": "2026-10-16T17:02:52.307272+00:00",
+      "log_path": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/postprocess_pipeline_v1/chinese_report.log",
+      "log_sha256": "21c1cc2fdaba5d98f35691ce952d0522c2f837ee5003f47b01618c667a7b327c"
+    },
+    {
+      "name": "figure",
+      "started_utc": "2026-10-16T17:02:52.315902+00:00",
+      "command": [
+        "C:\\Python314\\python.exe",
+        "scripts/plot_strong_chronological_reference_v1.py",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\strong_chronological_reference\\development_v1\\strong_chronological_reference_20261016T160111Z_3d4da2d89a1e\\manifest.json",
+        "--phase",
+        "MAIN"
+      ],
+      "pid": 11988,
+      "returncode": 0,
+      "finished_utc": "2026-10-16T17:02:54.113941+00:00",
+      "log_path": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/postprocess_pipeline_v1/figure.log",
+      "log_sha256": "d85c37e8fe3f03b3e9df4154315aa0aec44b1d10cf560d5b98844f5ca4ae7144"
+    }
+  ],
+  "visual_qa_complete": false,
+  "local_result_commit_complete": false,
+  "updated_utc": "2026-10-16T17:02:54.123044+00:00",
+  "collector_progress": {
+    "status": "RUNNING",
+    "executions": 1926,
+    "controlled_steps": 230385,
+    "controlled_resets": 1926
+  },
+  "collector_exit_code": 0
+}

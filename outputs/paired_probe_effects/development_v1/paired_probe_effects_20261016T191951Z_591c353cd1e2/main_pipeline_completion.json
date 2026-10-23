@@ -1,0 +1,59 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "phase": "MAIN",
+  "status": "COMPLETED_FOR_REVIEW",
+  "steps": [
+    {
+      "script": "run_paired_probe_effects_v1.py",
+      "arguments": [
+        "run"
+      ],
+      "runtime": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "returncode": 0,
+      "wall_ns": 15017649086700
+    },
+    {
+      "script": "audit_paired_probe_effects_v1.py",
+      "arguments": [],
+      "runtime": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "returncode": 0,
+      "wall_ns": 631222011200
+    },
+    {
+      "script": "analyze_paired_probe_effects_v1.py",
+      "arguments": [
+        "analyze"
+      ],
+      "runtime": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "returncode": 0,
+      "wall_ns": 10539522600
+    },
+    {
+      "script": "audit_paired_probe_statistics_v1.py",
+      "arguments": [],
+      "runtime": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "returncode": 0,
+      "wall_ns": 5635064600
+    },
+    {
+      "script": "plot_paired_probe_effects_v1.py",
+      "arguments": [],
+      "runtime": "C:\\Python314\\python.exe",
+      "returncode": 0,
+      "wall_ns": 3767309800
+    },
+    {
+      "script": "analyze_paired_probe_effects_v1.py",
+      "arguments": [
+        "report"
+      ],
+      "runtime": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "returncode": 0,
+      "wall_ns": 9120168300
+    }
+  ],
+  "wall_ns": 15677937706200,
+  "failure": null
+}

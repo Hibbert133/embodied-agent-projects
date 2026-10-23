@@ -1,0 +1,1184 @@
+{
+  "experiment_run_id": "task_passive_20261022T032948Z_67fefc4da922",
+  "manifest_id": "e11e6d48c8be94514293467826352123c2b512c1fbf34d9441ad3413be1cd0c3",
+  "source_git_commit": "67fefc4da9224e0c62b8373d0d4e8cb5b3d1bade",
+  "cohort": "QUAL",
+  "executions": 432,
+  "programs": [
+    {
+      "program": "NO_PROBE",
+      "style": "NO_PROBE",
+      "time_constant_s": null,
+      "n": 54,
+      "successes": 41,
+      "loss_sum": 10615,
+      "mean_deadline_loss": 196.57407407407408,
+      "group_mean_deadline_loss": {
+        "0": 362.0,
+        "1": 287.5,
+        "2": 85.83333333333333,
+        "3": 225.83333333333334,
+        "4": 84.83333333333333,
+        "5": 152.5,
+        "6": 112.66666666666667,
+        "7": 289.6666666666667,
+        "8": 168.33333333333334
+      },
+      "actual_control_steps": 10615,
+      "movement_steps": 0,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 4
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 13
+      }
+    },
+    {
+      "program": "DIRECT_C8",
+      "style": "DIRECT_C8",
+      "time_constant_s": null,
+      "n": 54,
+      "successes": 46,
+      "loss_sum": 7499,
+      "mean_deadline_loss": 138.87037037037038,
+      "group_mean_deadline_loss": {
+        "0": 81.0,
+        "1": 147.83333333333334,
+        "2": 80.66666666666667,
+        "3": 218.16666666666666,
+        "4": 148.33333333333334,
+        "5": 72.83333333333333,
+        "6": 218.0,
+        "7": 216.0,
+        "8": 67.0
+      },
+      "actual_control_steps": 7499,
+      "movement_steps": 0,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 8
+      }
+    },
+    {
+      "program": "MOVE_KEEP_C8",
+      "style": "MOVE_KEEP_C8",
+      "time_constant_s": null,
+      "n": 54,
+      "successes": 46,
+      "loss_sum": 9045,
+      "mean_deadline_loss": 167.5,
+      "group_mean_deadline_loss": {
+        "0": 95.5,
+        "1": 176.0,
+        "2": 93.83333333333333,
+        "3": 234.0,
+        "4": 182.66666666666666,
+        "5": 104.33333333333333,
+        "6": 235.83333333333334,
+        "7": 255.33333333333334,
+        "8": 130.0
+      },
+      "actual_control_steps": 9045,
+      "movement_steps": 1410,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 8
+      }
+    },
+    {
+      "program": "MOVE_INTEGRAL",
+      "style": "MOVE_INTEGRAL",
+      "time_constant_s": null,
+      "n": 54,
+      "successes": 54,
+      "loss_sum": 6206,
+      "mean_deadline_loss": 114.92592592592592,
+      "group_mean_deadline_loss": {
+        "0": 97.33333333333333,
+        "1": 111.66666666666667,
+        "2": 93.83333333333333,
+        "3": 125.0,
+        "4": 130.5,
+        "5": 104.83333333333333,
+        "6": 108.83333333333333,
+        "7": 132.83333333333334,
+        "8": 129.5
+      },
+      "actual_control_steps": 6206,
+      "movement_steps": 1410,
+      "task_pi_steps": 0,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {}
+    },
+    {
+      "program": "RAW_TASK_PI_T0.5",
+      "style": "RAW_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 54,
+      "successes": 53,
+      "loss_sum": 4484,
+      "mean_deadline_loss": 83.03703703703702,
+      "group_mean_deadline_loss": {
+        "0": 92.0,
+        "1": 89.83333333333333,
+        "2": 73.83333333333333,
+        "3": 81.16666666666667,
+        "4": 82.66666666666667,
+        "5": 70.83333333333333,
+        "6": 139.0,
+        "7": 60.0,
+        "8": 58.0
+      },
+      "actual_control_steps": 4484,
+      "movement_steps": 0,
+      "task_pi_steps": 4484,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 8
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 1
+      }
+    },
+    {
+      "program": "DIRECT_TASK_PI_T0.5",
+      "style": "DIRECT_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 54,
+      "successes": 53,
+      "loss_sum": 5506,
+      "mean_deadline_loss": 101.96296296296296,
+      "group_mean_deadline_loss": {
+        "0": 83.66666666666667,
+        "1": 139.66666666666666,
+        "2": 88.16666666666667,
+        "3": 89.0,
+        "4": 187.5,
+        "5": 79.5,
+        "6": 97.5,
+        "7": 85.33333333333333,
+        "8": 67.33333333333333
+      },
+      "actual_control_steps": 5506,
+      "movement_steps": 0,
+      "task_pi_steps": 5074,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {
+        "ENVIRONMENT_ENDED": 1
+      }
+    },
+    {
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "style": "MOVE_KEEP_TASK_PI",
+      "time_constant_s": 0.5,
+      "n": 54,
+      "successes": 54,
+      "loss_sum": 6124,
+      "mean_deadline_loss": 113.4074074074074,
+      "group_mean_deadline_loss": {
+        "0": 100.16666666666667,
+        "1": 111.16666666666667,
+        "2": 94.5,
+        "3": 101.33333333333333,
+        "4": 116.16666666666667,
+        "5": 104.16666666666667,
+        "6": 124.83333333333333,
+        "7": 140.5,
+        "8": 127.83333333333333
+      },
+      "actual_control_steps": 6124,
+      "movement_steps": 1410,
+      "task_pi_steps": 2776,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {}
+    },
+    {
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "style": "MOVE_INTEGRAL_TASK_PI",
+      "time_constant_s": 2.0,
+      "n": 54,
+      "successes": 54,
+      "loss_sum": 6034,
+      "mean_deadline_loss": 111.74074074074073,
+      "group_mean_deadline_loss": {
+        "0": 94.0,
+        "1": 111.0,
+        "2": 94.0,
+        "3": 101.33333333333333,
+        "4": 126.33333333333333,
+        "5": 104.5,
+        "6": 104.33333333333333,
+        "7": 141.16666666666666,
+        "8": 129.0
+      },
+      "actual_control_steps": 6034,
+      "movement_steps": 1410,
+      "task_pi_steps": 2686,
+      "boundary_missing_reasons": {
+        "EARLY_SUCCESS": 6
+      },
+      "failure_reasons": {}
+    }
+  ],
+  "primary_program": "DIRECT_TASK_PI_T0.5",
+  "primary_comparisons": {
+    "DIRECT_TASK_PI_T0.5_MINUS_DIRECT_C8": {
+      "mean": -36.90740740740742,
+      "lower95": -70.33333333333333,
+      "upper95": -3.387037037037067,
+      "groups": 9,
+      "replicates": 10000,
+      "seed": 202610391,
+      "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+      "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+    },
+    "DIRECT_TASK_PI_T0.5_MINUS_MOVE_INTEGRAL": {
+      "mean": -12.962962962962964,
+      "lower95": -32.70370370370371,
+      "upper95": 4.925925925925928,
+      "groups": 9,
+      "replicates": 10000,
+      "seed": 202610391,
+      "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+      "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+    }
+  },
+  "all_paired_secondary_comparisons": [
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_C8",
+      "loss_difference": {
+        "mean": 57.70370370370371,
+        "lower95": -7.796296296296295,
+        "upper95": 130.53703703703704,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 54
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_C8",
+      "loss_difference": {
+        "mean": 29.074074074074083,
+        "lower95": -35.57407407407407,
+        "upper95": 100.79953703703673,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -5,
+      "paired_denominator": 54
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL",
+      "loss_difference": {
+        "mean": 81.64814814814815,
+        "lower95": 24.962962962962965,
+        "upper95": 135.24074074074076,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -13,
+      "paired_denominator": 54
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 113.53703703703704,
+        "lower95": 51.14814814814815,
+        "upper95": 171.74074074074076,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -12,
+      "paired_denominator": 54
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 94.61111111111111,
+        "lower95": 27.109722222222235,
+        "upper95": 157.96296296296293,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -12,
+      "paired_denominator": 54
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 83.16666666666667,
+        "lower95": 28.18472222222223,
+        "upper95": 136.6851851851852,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -13,
+      "paired_denominator": 54
+    },
+    {
+      "left": "NO_PROBE",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 84.83333333333334,
+        "lower95": 29.592592592592595,
+        "upper95": 137.90740740740742,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -13,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_C8",
+      "loss_difference": {
+        "mean": -28.629629629629626,
+        "lower95": -37.29629629629629,
+        "upper95": -21.314814814814813,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL",
+      "loss_difference": {
+        "mean": 23.944444444444443,
+        "lower95": -1.9074074074074017,
+        "upper95": 46.75925925925925,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -8,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 55.83333333333334,
+        "lower95": 28.61111111111111,
+        "upper95": 83.20370370370371,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 36.90740740740742,
+        "lower95": 3.3870370370370417,
+        "upper95": 70.33333333333333,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 25.462962962962965,
+        "lower95": -0.1874999999999968,
+        "upper95": 47.33333333333334,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -8,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 27.129629629629633,
+        "lower95": 0.27777777777778095,
+        "upper95": 49.14814814814815,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -8,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL",
+      "loss_difference": {
+        "mean": 52.57407407407407,
+        "lower95": 27.296296296296294,
+        "upper95": 74.7037037037037,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -8,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 84.46296296296298,
+        "lower95": 54.24074074074073,
+        "upper95": 113.62962962962963,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 65.53703703703704,
+        "lower95": 29.555555555555557,
+        "upper95": 101.8888888888889,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -7,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 54.09259259259259,
+        "lower95": 26.29629629629629,
+        "upper95": 74.94444444444446,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -8,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_KEEP_C8",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 55.75925925925927,
+        "lower95": 27.703703703703702,
+        "upper95": 76.75925925925927,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -8,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "RAW_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 31.88888888888889,
+        "lower95": 16.21805555555556,
+        "upper95": 47.55555555555556,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 12.962962962962964,
+        "lower95": -4.925925925925928,
+        "upper95": 32.70370370370371,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 1,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": 1.5185185185185175,
+        "lower95": -5.259259259259259,
+        "upper95": 8.703703703703702,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 3.1851851851851873,
+        "lower95": -0.4074074074074048,
+        "upper95": 7.240740740740743,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 54
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "DIRECT_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -18.925925925925924,
+        "lower95": -33.7962962962963,
+        "upper95": -4.611111111111111,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 54
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -30.370370370370374,
+        "lower95": -43.74074074074073,
+        "upper95": -17.259259259259263,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 54
+    },
+    {
+      "left": "RAW_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -28.703703703703702,
+        "lower95": -43.59259259259259,
+        "upper95": -13.888888888888891,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_KEEP_TASK_PI_T0.5",
+      "loss_difference": {
+        "mean": -11.444444444444446,
+        "lower95": -33.31620370370371,
+        "upper95": 8.629629629629628,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 54
+    },
+    {
+      "left": "DIRECT_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": -9.777777777777777,
+        "lower95": -30.648148148148145,
+        "upper95": 9.185648148148145,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": -1,
+      "paired_denominator": 54
+    },
+    {
+      "left": "MOVE_KEEP_TASK_PI_T0.5",
+      "right": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "loss_difference": {
+        "mean": 1.6666666666666698,
+        "lower95": -1.7592592592592555,
+        "upper95": 5.444444444444446,
+        "groups": 9,
+        "replicates": 10000,
+        "seed": 202610391,
+        "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY",
+        "multiplicity": "Unadjusted descriptive secondary intervals; both registered primary upper bounds must be negative"
+      },
+      "success_difference": 0,
+      "paired_denominator": 54
+    }
+  ],
+  "complete_task_context_cells": [
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "NO_PROBE",
+      "n": 9,
+      "successes": 5,
+      "mean_deadline_loss": 258.3333333333333,
+      "actual_control_steps": 2325
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 72.77777777777777,
+      "actual_control_steps": 655
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 101.55555555555556,
+      "actual_control_steps": 914
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 112.0,
+      "actual_control_steps": 1008
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 75.66666666666667,
+      "actual_control_steps": 681
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 8,
+      "mean_deadline_loss": 149.11111111111111,
+      "actual_control_steps": 1342
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 99.66666666666667,
+      "actual_control_steps": 897
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 101.44444444444444,
+      "actual_control_steps": 913
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "NO_PROBE",
+      "n": 9,
+      "successes": 7,
+      "mean_deadline_loss": 162.88888888888889,
+      "actual_control_steps": 1466
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_C8",
+      "n": 9,
+      "successes": 5,
+      "mean_deadline_loss": 263.44444444444446,
+      "actual_control_steps": 2371
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 9,
+      "successes": 4,
+      "mean_deadline_loss": 323.1111111111111,
+      "actual_control_steps": 2908
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 112.33333333333333,
+      "actual_control_steps": 1011
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 8,
+      "mean_deadline_loss": 130.22222222222223,
+      "actual_control_steps": 1172
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 104.88888888888889,
+      "actual_control_steps": 944
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 121.44444444444444,
+      "actual_control_steps": 1093
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 111.33333333333333,
+      "actual_control_steps": 1002
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "NO_PROBE",
+      "n": 9,
+      "successes": 4,
+      "mean_deadline_loss": 388.0,
+      "actual_control_steps": 3492
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 57.111111111111114,
+      "actual_control_steps": 514
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 67.22222222222223,
+      "actual_control_steps": 605
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 73.44444444444444,
+      "actual_control_steps": 661
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 66.66666666666667,
+      "actual_control_steps": 600
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 85.11111111111111,
+      "actual_control_steps": 766
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 69.66666666666667,
+      "actual_control_steps": 627
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 67.11111111111111,
+      "actual_control_steps": 604
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "NO_PROBE",
+      "n": 9,
+      "successes": 7,
+      "mean_deadline_loss": 199.66666666666666,
+      "actual_control_steps": 1797
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_C8",
+      "n": 9,
+      "successes": 5,
+      "mean_deadline_loss": 253.77777777777777,
+      "actual_control_steps": 2284
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 9,
+      "successes": 6,
+      "mean_deadline_loss": 209.88888888888889,
+      "actual_control_steps": 1889
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 87.22222222222223,
+      "actual_control_steps": 785
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 54.666666666666664,
+      "actual_control_steps": 492
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 82.0,
+      "actual_control_steps": 738
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 85.55555555555556,
+      "actual_control_steps": 770
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 78.0,
+      "actual_control_steps": 702
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "NO_PROBE",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 85.55555555555556,
+      "actual_control_steps": 770
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 92.77777777777777,
+      "actual_control_steps": 835
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 149.55555555555554,
+      "actual_control_steps": 1346
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 149.55555555555554,
+      "actual_control_steps": 1346
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 85.55555555555556,
+      "actual_control_steps": 770
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 96.22222222222223,
+      "actual_control_steps": 866
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 144.11111111111111,
+      "actual_control_steps": 1297
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 151.66666666666666,
+      "actual_control_steps": 1365
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "NO_PROBE",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 85.0,
+      "actual_control_steps": 765
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 93.33333333333333,
+      "actual_control_steps": 840
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_C8",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 153.66666666666666,
+      "actual_control_steps": 1383
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 155.0,
+      "actual_control_steps": 1395
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "RAW_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 85.44444444444444,
+      "actual_control_steps": 769
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "DIRECT_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 94.44444444444444,
+      "actual_control_steps": 850
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_KEEP_TASK_PI_T0.5",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 160.0,
+      "actual_control_steps": 1440
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+      "n": 9,
+      "successes": 9,
+      "mean_deadline_loss": 160.88888888888889,
+      "actual_control_steps": 1448
+    }
+  ],
+  "all_failure_case_ids": [
+    "QUAL/00/push-v3/UNCHANGED/NO_PROBE",
+    "QUAL/00/push-v3/CHANGED/NO_PROBE",
+    "QUAL/00/reach-v3/UNCHANGED/NO_PROBE",
+    "QUAL/00/reach-v3/CHANGED/NO_PROBE",
+    "QUAL/01/push-v3/UNCHANGED/NO_PROBE",
+    "QUAL/01/push-v3/CHANGED/NO_PROBE",
+    "QUAL/01/push-v3/CHANGED/DIRECT_C8",
+    "QUAL/01/push-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/01/reach-v3/UNCHANGED/NO_PROBE",
+    "QUAL/03/push-v3/UNCHANGED/NO_PROBE",
+    "QUAL/03/push-v3/CHANGED/DIRECT_C8",
+    "QUAL/03/push-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/03/reach-v3/CHANGED/DIRECT_C8",
+    "QUAL/03/reach-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/04/push-v3/UNCHANGED/DIRECT_TASK_PI_T0.5",
+    "QUAL/04/push-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/04/reach-v3/CHANGED/DIRECT_C8",
+    "QUAL/05/reach-v3/UNCHANGED/NO_PROBE",
+    "QUAL/06/push-v3/CHANGED/DIRECT_C8",
+    "QUAL/06/push-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/06/push-v3/CHANGED/RAW_TASK_PI_T0.5",
+    "QUAL/06/reach-v3/CHANGED/DIRECT_C8",
+    "QUAL/06/reach-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/07/push-v3/UNCHANGED/NO_PROBE",
+    "QUAL/07/push-v3/CHANGED/DIRECT_C8",
+    "QUAL/07/push-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/07/reach-v3/UNCHANGED/NO_PROBE",
+    "QUAL/07/reach-v3/CHANGED/NO_PROBE",
+    "QUAL/07/reach-v3/CHANGED/DIRECT_C8",
+    "QUAL/07/reach-v3/CHANGED/MOVE_KEEP_C8",
+    "QUAL/08/reach-v3/UNCHANGED/NO_PROBE"
+  ],
+  "qualification_gate": "NOT_PASSED",
+  "no_safety_guarantee": true,
+  "no_algorithmic_novelty_claim": true,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "audit_sha256": "45bf89ea76a06aa24a2edbfe4cca15c5a0be49a2f7a5bc2ceb3f0f8d7c5d81b4",
+  "selection_sha256": "62a78458eff2ac33395168f90c60365297ac9fe2a9d31420e52cdfb331ddcffd",
+  "statistics_source_sha256": "0d21d5215a3589fe5a9b13ee5626f378537a3eec551768c67769550129832dca"
+}

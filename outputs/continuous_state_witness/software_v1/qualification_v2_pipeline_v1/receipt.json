@@ -1,0 +1,39 @@
+{
+  "status": "PASSED",
+  "tests_run": 6,
+  "failures": 0,
+  "errors": 0,
+  "source_sha256": {
+    "src/analysis/continuous_state_witness_v1.py": "d77f7c107a6f544ecb7ff6a00447024cfb3c3cba5b8a1dfaadc630a22480fdea",
+    "src/analysis/delayed_qualification_io_v2.py": "a3f2b65f4f3ededb69c48a2cf70cf6b8cea6ef0e7c24e3e2e174a493eaecf557",
+    "scripts/qualify_delayed_intervention_v2.py": "a6584432e6f5fe3d6d6ecee4f2735ade962ebfc85ba2dcef90101181d9d9b16b",
+    "scripts/audit_delayed_intervention_v2.py": "3daadce5855e8f7d97812c6a17a55af71a3313019471259967c4f943518744cd",
+    "scripts/qualify_delayed_v2_software.py": "ec668d3aec89f83b5d113d5fb389baa82557f81d97103199ca313bbba33ec81d",
+    "tests/test_delayed_intervention_qualification_v2.py": "a24d336d080fb343e12640568582d562043692370ec881d718618497c26620a2",
+    "configs/delayed_intervention/qualification_v2.json": "d4cdff77bf4191cdfe0cd7a7405dff6beca9c7de0987558068027f2fc39c834d",
+    "docs/protocols/delayed_intervention_qualification_v2.md": "db9f668fe33d7a358f86611b28d4c9bcefb57f20dd9e4912a076dbfafecbc112"
+  },
+  "source_changed_during_run": [],
+  "artifact_sha256": {
+    "native_cost_receipts.json": "f4ef98ebdf4c392305deff010e2de9e114b954a68ea64d4ea73fa59092a449ba",
+    "pipeline_data.jsonl.gz": "edeabc69681c2e688ad36683202ed3c7d22b65266f21433820a601c9e34b3d49",
+    "tests.txt": "a06612ac99aea16d162faf4ac41b22d21188bf8c2d13430293be692c9a0ab975",
+    "source_snapshot/configs/delayed_intervention/qualification_v2.json": "d4cdff77bf4191cdfe0cd7a7405dff6beca9c7de0987558068027f2fc39c834d",
+    "source_snapshot/docs/protocols/delayed_intervention_qualification_v2.md": "db9f668fe33d7a358f86611b28d4c9bcefb57f20dd9e4912a076dbfafecbc112",
+    "source_snapshot/scripts/audit_delayed_intervention_v2.py": "3daadce5855e8f7d97812c6a17a55af71a3313019471259967c4f943518744cd",
+    "source_snapshot/scripts/qualify_delayed_intervention_v2.py": "a6584432e6f5fe3d6d6ecee4f2735ade962ebfc85ba2dcef90101181d9d9b16b",
+    "source_snapshot/scripts/qualify_delayed_v2_software.py": "ec668d3aec89f83b5d113d5fb389baa82557f81d97103199ca313bbba33ec81d",
+    "source_snapshot/src/analysis/continuous_state_witness_v1.py": "d77f7c107a6f544ecb7ff6a00447024cfb3c3cba5b8a1dfaadc630a22480fdea",
+    "source_snapshot/src/analysis/delayed_qualification_io_v2.py": "a3f2b65f4f3ededb69c48a2cf70cf6b8cea6ef0e7c24e3e2e174a493eaecf557",
+    "source_snapshot/tests/test_delayed_intervention_qualification_v2.py": "a24d336d080fb343e12640568582d562043692370ec881d718618497c26620a2"
+  },
+  "native_frames": 384180,
+  "actual_policy_queries": 216,
+  "new_metaworld_steps": 0,
+  "new_scientific_seeds": 0,
+  "new_api_calls": 0,
+  "wall_ns": 40355364400,
+  "source_was_uncommitted_development": true,
+  "source_git_commit": "eb4b07b29bcf3e5d3e4c5aa2fa5f0827869e5bc9",
+  "scope": "One 15-case software pipeline with real RecordEpisodeStatistics and tiny physics; mocked estimators/policy and synthetic seed/ending rule."
+}

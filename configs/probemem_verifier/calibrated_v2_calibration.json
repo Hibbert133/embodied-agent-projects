@@ -1,0 +1,64 @@
+{
+  "protocol": "probemem_calibrated_verifier_v2",
+  "stage": "calibration",
+  "status": "CALIBRATION_FROZEN_BEFORE_EXECUTION",
+  "seed_registry": "configs/probemem_verifier/seed_registry_v2.json",
+  "seed_range": [4800, 4899],
+  "maximum_initial_units": 100,
+  "target_operational_cases": 40,
+  "minimum_operational_cases": 30,
+  "minimum_exclusive_recovery_cases": 12,
+  "first_online_episode_id": 21,
+  "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "registered_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "frozen_variance_threshold": 0.11560838098372882,
+  "admission": {"ambiguity_margin": 0.05, "implementation": "src.probemem_verifier.admission.assess_admission", "frozen_from": "configs/probemem_verifier/demo_v1.json"},
+  "posterior": {
+    "prior_alpha": 1.0,
+    "prior_beta": 1.0,
+    "accepted_utility": 1.0,
+    "inconclusive_utility": 0.5,
+    "rejected_utility": 0.0,
+    "top_k": 10,
+    "recent_count": 10,
+    "weight": "1 / (1 + normalized_distance)",
+    "credible_level": 0.95,
+    "comparison_samples": 10000,
+    "comparison_seed": 19804
+  },
+  "calibration_grid": {
+    "minimum_effective_sample_size": [2.0, 3.0, 4.0, 5.0],
+    "maximum_nearest_distance": [0.5, 0.75, 1.0, 1.5, 2.0],
+    "minimum_weighted_coverage": [1.0, 2.0, 3.0, 4.0],
+    "minimum_superiority_probability": [0.8, 0.85, 0.9, 0.95, 0.975],
+    "minimum_expected_utility_gain": [0.025, 0.05, 0.1, 0.15],
+    "maximum_weighted_contradiction_rate": [0.1, 0.2, 0.3]
+  },
+  "calibration_selection": {
+    "minimum_decisive_overrides": 4,
+    "minimum_override_precision": 0.75,
+    "minimum_net_helpful_overrides": 2,
+    "lexicographic_objective": ["override_precision_desc", "net_helpful_overrides_desc", "accepted_recovery_desc", "harmful_overrides_asc", "total_overrides_asc", "conservatism_desc"],
+    "failure_action": "STOP_WITHOUT_PROSPECTIVE_DEVELOPMENT"
+  },
+  "candidate_skills": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "registered_methods": ["FROZEN_DETERMINISTIC", "UNWEIGHTED_VERIFIER_V1", "WEIGHTED_POSTERIOR_V1_GUARD", "CALIBRATED_SELECTIVE_VERIFIER_V2", "EVALUATOR_ONLY_ORACLE"],
+  "memory": {
+    "bootstrap_records": "outputs/probemem_online/bootstrap_runs/probemem_online_bootstrap_20260803T093056Z_6e6c4ba0f6fe/action_outcome_records.json",
+    "bootstrap_records_sha256": "d723325ac33ec56c5592071ae77abbc1a1e0f9576fcea3d2cc3a294d880a5811",
+    "one_selected_action_per_episode_per_method": true,
+    "write_after_fresh_verification_only": true
+  },
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps": 500, "total_case_max_steps": 1064},
+  "random_namespaces": {"initial_perturbation": 19801, "registered_probe": 19802, "paired_verification": 19803},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "reporting": {"ece_equal_width_bins": 10, "nll_probability_clip": 1e-6, "credible_interval_parameter_coverage": "N/A_SINGLE_REALIZATION"},
+  "claim_boundary": "development_calibration_only_no_validation_or_statistical_superiority_claim",
+  "prohibitions": {"glm": true, "validation": true, "heldout": true, "principle_generation": true, "new_features": true, "new_distance": true, "new_skills": true, "v1_seed_tuning": true, "counterfactual_memory_write": true, "oracle_agent_access": true}
+}

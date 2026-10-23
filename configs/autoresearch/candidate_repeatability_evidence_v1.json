@@ -1,0 +1,24 @@
+{
+  "protocol_id": "candidate_repeatability_evidence_v1",
+  "protocol_version": 1,
+  "split": "development",
+  "required_source_protocol_id": "noise_repeatability_confirmatory_source_v1",
+  "required_source_seed_range": [600, 699],
+  "expected_paired_comparable_cases": 20,
+  "candidates": ["probe_grounded_compensation", "stochastic_retry"],
+  "prefix_horizon": 64,
+  "maximum_repetitions": 3,
+  "reported_repetition_counts": [1, 2, 3],
+  "prefix_perturbation_seed_namespaces": [5031, 5032, 5033],
+  "selector": {
+    "primary": "higher prefix success count",
+    "secondary": "lower mean final object-goal distance plus population standard deviation",
+    "tertiary": "lower mean observed steps then candidate ID",
+    "fit_threshold": false
+  },
+  "cost_definition": "sum of prefix environment steps across candidates and repetitions",
+  "rendering": false,
+  "api_calls": 0,
+  "overwrite_existing_run": false,
+  "claim_boundary": "Development evaluation of repeatability evidence; all repetition counts reported"
+}

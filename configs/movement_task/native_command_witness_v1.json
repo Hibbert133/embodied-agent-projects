@@ -1,0 +1,191 @@
+{
+  "protocol": "NATIVE_COMMAND_WITNESS_V1",
+  "classification": "NATIVE_MEASUREMENT_AND_EXECUTION_CONFORMANCE_ONLY",
+  "population": [
+    {
+      "group": 0,
+      "task": "push-v3",
+      "seed": 70000,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 0,
+      "task": "push-v3",
+      "seed": 70000,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 70001,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 70001,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 70002,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 70002,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 1,
+      "task": "push-v3",
+      "seed": 70003,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 1,
+      "task": "push-v3",
+      "seed": 70003,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 70004,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 70004,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 70005,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 70005,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 2,
+      "task": "push-v3",
+      "seed": 70006,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 2,
+      "task": "push-v3",
+      "seed": 70006,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 70007,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 70007,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 70008,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LOCAL_PID_KEEP"
+    },
+    {
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 70008,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LOCAL_PID_KEEP"
+    }
+  ],
+  "limits": {
+    "executions": 18,
+    "control_steps": 9000,
+    "controlled_resets": 18,
+    "factory_resets": 900,
+    "all_resets": 918,
+    "physical_frames": 504000,
+    "new_model_fits": 0,
+    "audit_refits": 0,
+    "online_LLM_API_calls": 0
+  },
+  "per_case_step_cap": 500,
+  "noise_sigma": 0.05,
+  "control_period_s": 0.0125,
+  "fixed_program": "LOCAL_PID_KEEP",
+  "initial_target": [
+    0.0,
+    0.6,
+    0.2
+  ],
+  "workspace_low": [
+    -0.5,
+    0.4,
+    0.05
+  ],
+  "workspace_high": [
+    0.5,
+    1.0,
+    0.5
+  ],
+  "action_scale": 0.01,
+  "private_values": "Mocap position/quaternion, applied action, native signature; evaluation-only, not training or policy input",
+  "public_export": "Task, initial observation, executed sent-command history, observed responses, public nominal summary only",
+  "native_gate": {
+    "all_18_completed_records": true,
+    "exact_applied_action_and_target_recurrence": true,
+    "one_actual_complete_measurement_per_task_context": true,
+    "no_new_fit_or_API_or_restore": true
+  },
+  "no_power_task_gain_prediction_safety_or_novelty_claim": true,
+  "publication_goal_complete": false
+}

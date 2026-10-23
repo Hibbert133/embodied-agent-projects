@@ -1,0 +1,1238 @@
+{
+  "experiment_run_id": "frame_evidence_20261014T041345Z_82a3dd1469d4",
+  "manifest_id": "529a5509983fb6cc948103753d49b7a3b07faf2a5ee727941b55ddd7f197ff94",
+  "source_git_commit": "82a3dd1469d417501f96f9bb750d929a89a07f52",
+  "status": "COMPLETED_PREREQUISITE_PASS",
+  "complete_units": 16,
+  "episodes": 176,
+  "physical_steps": 45318,
+  "environment_resets": 176,
+  "events": 880,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "integrity": "PASSED",
+  "arx_model_sha256": "f9f8f8b772e94d0639655b508c0038950b5fca0e85d21f03be0ad1454cf08019",
+  "legacy_model_sha256": "3d804711cfd7c17a993ebb96dc3dc4ba80c30c5026a349f2ac33b8dbccc6f037",
+  "statistics": {
+    "methods": {
+      "FIXED_A_PREFIX4": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 283.625,
+        "mean_probe_steps": 4.0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 283.625,
+        "mean_amortized_resets": 1,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "FIXED_B_PREFIX4": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 0,
+          "FRAME90": 8
+        },
+        "mean_online_steps": 284.5,
+        "mean_probe_steps": 4.0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 284.5,
+        "mean_amortized_resets": 1,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "UNCORRECTED_PREFIX4": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 283.3125,
+        "mean_probe_steps": 4.0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 283.3125,
+        "mean_amortized_resets": 1,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "MODEL_REPEAT8": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 285.375,
+        "mean_probe_steps": 8.0,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 429.375,
+        "mean_amortized_resets": 10,
+        "stopped": 0,
+        "correct_frame_choices_oracle": 8
+      },
+      "MODEL_REVERSE8": {
+        "successful": 16,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 8
+        },
+        "mean_online_steps": 72.125,
+        "mean_probe_steps": 8.0,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 216.125,
+        "mean_amortized_resets": 10,
+        "stopped": 0,
+        "correct_frame_choices_oracle": 16
+      },
+      "MODEL_SYM16": {
+        "successful": 16,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 8
+        },
+        "mean_online_steps": 80.25,
+        "mean_probe_steps": 16.0,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 224.25,
+        "mean_amortized_resets": 10,
+        "stopped": 0,
+        "correct_frame_choices_oracle": 16
+      },
+      "LEGACY_AFFINE16": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 288.875,
+        "mean_probe_steps": 16.0,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 432.875,
+        "mean_amortized_resets": 10,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "LEGACY_NEAREST16": {
+        "successful": 4,
+        "per_context_successful": {
+          "FRAME0": 4,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 399.8125,
+        "mean_probe_steps": 16.0,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 543.8125,
+        "mean_amortized_resets": 10,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "FIXED_A_REVERSE8": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 285.125,
+        "mean_probe_steps": 8.0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 285.125,
+        "mean_amortized_resets": 1,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "FIXED_B_REVERSE8": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 0,
+          "FRAME90": 8
+        },
+        "mean_online_steps": 287.0,
+        "mean_probe_steps": 8.0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 287.0,
+        "mean_amortized_resets": 1,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      },
+      "NO_PROBE": {
+        "successful": 8,
+        "per_context_successful": {
+          "FRAME0": 8,
+          "FRAME90": 0
+        },
+        "mean_online_steps": 282.375,
+        "mean_probe_steps": 0.0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 282.375,
+        "mean_amortized_resets": 1,
+        "stopped": 0,
+        "correct_frame_choices_oracle": null
+      }
+    },
+    "witnesses": [
+      {
+        "seed": 9800,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9801,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9802,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9803,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9804,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9805,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9806,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      },
+      {
+        "seed": 9807,
+        "common_prefix_equal": true,
+        "repeat_equal": true,
+        "reverse_distinct": true,
+        "successful_sets": [
+          [
+            "FIXED_A_PREFIX4",
+            "UNCORRECTED_PREFIX4"
+          ],
+          [
+            "FIXED_B_PREFIX4"
+          ]
+        ],
+        "disjoint": true,
+        "context_blind_evaluator_upper": 1,
+        "context_informed_evaluator_upper": 2
+      }
+    ],
+    "disjoint_action_seeds": 8,
+    "context_blind_evaluator_upper": 8,
+    "context_informed_evaluator_upper": 16,
+    "correct_fixed_controller_successes": 16,
+    "structural_gates": {
+      "common_prefix_all": true,
+      "repeated_probe_all": true,
+      "reverse_separates_all": true,
+      "disjoint_actions": true,
+      "correct_fixed_controller": true
+    },
+    "structural_pass": true,
+    "standard_baseline_gates": {
+      "identification": true,
+      "task_count": true,
+      "choice_gain": true,
+      "legacy_affine": true,
+      "legacy_nearest": true,
+      "no_probe": true,
+      "cheap_vs_full": true
+    },
+    "standard_baseline_pass": true,
+    "gate_passed": true,
+    "reverse_minus_baseline": {
+      "FIXED_A_PREFIX4": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "FIXED_B_PREFIX4": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "UNCORRECTED_PREFIX4": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "MODEL_REPEAT8": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "MODEL_SYM16": {
+        "difference": 0.0,
+        "per_seed": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "cluster_bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "LEGACY_AFFINE16": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "LEGACY_NEAREST16": {
+        "difference": 0.75,
+        "per_seed": [
+          0.5,
+          0.5,
+          1.0,
+          1.0,
+          0.5,
+          1.0,
+          0.5,
+          1.0
+        ],
+        "cluster_bootstrap_95": [
+          0.5625,
+          0.9375
+        ]
+      },
+      "FIXED_A_REVERSE8": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "FIXED_B_REVERSE8": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      },
+      "NO_PROBE": {
+        "difference": 0.5,
+        "per_seed": [
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5,
+          0.5
+        ],
+        "cluster_bootstrap_95": [
+          0.5,
+          0.5
+        ]
+      }
+    },
+    "independent_seed_clusters": 8,
+    "failures": [
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9800,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9801,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME0",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9802,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME0",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9803,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9804,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME0",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9805,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9806,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_PREFIX4",
+        "controller_id": "FRAME_B",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME0",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME0",
+        "method": "FIXED_B_REVERSE8",
+        "controller_id": "FRAME_B",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_PREFIX4",
+        "controller_id": "FRAME_A",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "UNCORRECTED_PREFIX4",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 4,
+        "task_steps": 496,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "MODEL_REPEAT8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_AFFINE16",
+        "controller_id": "LEGACY_AFFINE",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "LEGACY_NEAREST16",
+        "controller_id": "LEGACY_NEAREST",
+        "probe_steps": 16,
+        "task_steps": 484,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "FIXED_A_REVERSE8",
+        "controller_id": "FRAME_A",
+        "probe_steps": 8,
+        "task_steps": 492,
+        "stopped": false
+      },
+      {
+        "seed": 9807,
+        "context_oracle": "FRAME90",
+        "method": "NO_PROBE",
+        "controller_id": "UNCORRECTED",
+        "probe_steps": 0,
+        "task_steps": 500,
+        "stopped": false
+      }
+    ]
+  },
+  "replayed_decisions": 176,
+  "continuous_handoffs": 160,
+  "verified_task_steps": 43846,
+  "wall_clock_backsteps": 0,
+  "verified_probe_steps": 1472,
+  "offline_steps": 2304,
+  "offline_resets": 144,
+  "violations": {
+    "leakage": 0,
+    "budget": 0,
+    "handoff": 0,
+    "choice_substitution": 0,
+    "chronology": 0
+  },
+  "source_input_hashes_checked": 565,
+  "artifact_sha256": {
+    "decisions.jsonl": "366ce7796498e805a5379a8854406fc3bbd610a197d0733934fe7cad86f58f74",
+    "episodes.jsonl.gz": "f3312e97e57b80263d1af114c0976a7c5f50ba654a764668899aa6e71c1ba8b7",
+    "events.jsonl": "d5cab28f5b29bf07c03f253ba7fc454c6ec7e11ba38de3dccff6e5b508050ef7",
+    "manifest.json": "bd158538a1b9c99b28ab73f4cb91c46f3dbc0bc29715ffbaac2b1dfa97fcb66d",
+    "nominal_arx.json": "e7e39cda8272fe2a4499247201d76036a3d348b3150a4ce631f1b9dba0b2cf25",
+    "status.json": "c8cc6ab32469372b23b839a3ee46684f36da8e323636ac0e8659cf41cf5c1eb8",
+    "summary.json": "f77c4e728915cca2cebcd940eb2ee973cc5845e7b03066e8c0996c5a557b3a2a"
+  },
+  "audit_scope": "Training-only reconstruction, visible decision replay, complete observation/RNG chains, fixed-policy commands and evaluator frame/noise/clipping inputs. Task dynamics are not resimulated."
+}

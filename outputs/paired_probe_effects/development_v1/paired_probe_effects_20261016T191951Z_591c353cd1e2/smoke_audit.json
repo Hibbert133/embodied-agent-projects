@@ -1,0 +1,83 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "phase": "SMOKE",
+  "integrity": "PASSED",
+  "required_host_coverage": true,
+  "coverage": {
+    "warm_boundaries": 8,
+    "cache_writes": 2,
+    "matched_probe_prefixes": 32,
+    "valid_update_equalities": 16,
+    "invalid_fallback_equalities": 0,
+    "sentinels": 1,
+    "source_returns": 8,
+    "branch_executions": 74
+  },
+  "events_checked": 22477,
+  "source_units": 9,
+  "controlled_steps": 6964,
+  "controlled_resets": 9,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 459,
+      "simulation_attempts": 52864,
+      "simulation_completed": 52864,
+      "simulation_frames_attempted": 264320,
+      "simulation_frames_completed": 264320,
+      "reset_completed": 459
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 450,
+        "simulation_attempts": 45000,
+        "simulation_completed": 45000,
+        "simulation_frames_attempted": 225000,
+        "simulation_frames_completed": 225000,
+        "reset_completed": 450
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 9,
+        "simulation_attempts": 900,
+        "simulation_completed": 900,
+        "simulation_frames_attempted": 4500,
+        "simulation_frames_completed": 4500,
+        "reset_completed": 9
+      },
+      "CONTROL": {
+        "simulation_attempts": 6964,
+        "simulation_completed": 6964,
+        "simulation_frames_attempted": 34820,
+        "simulation_frames_completed": 34820
+      }
+    }
+  },
+  "recorded_computation": {
+    "captures": 16,
+    "restores": 73,
+    "policy_queries": 6736,
+    "capture_ns": 2369610300,
+    "restore_ns": 19028786100,
+    "fits": 34,
+    "nfev": 34
+  },
+  "audit_policy_queries": 6736,
+  "audit_shared_fitter_attempts": 34,
+  "audit_shared_optimizer_nfev": 34,
+  "summary_sha256": "bc7a4f613880765b50d229938a8b1393a74cb538bd18fa98ef4672e8b04c8d33",
+  "events_sha256": "bbb35d7fdc6f83ee2c6c1ee1c85b4b876704f4b08c79da00171519e15cc9cef3",
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "universal_complete_hidden_state_qualification": false,
+  "registered_restore_source_used": true,
+  "audit_wall_ns": 6296024700,
+  "shared_dependencies": [
+    "Fixed policies",
+    "Joint numerical fitter",
+    "Controller encoder",
+    "Cache/check/source-belief mathematics",
+    "Old fault endpoint generator"
+  ],
+  "scope": "Independent saved-record/noise/ledger/program/cache replay, no task Env or capture/restore execution. Physical state signatures are qualified source-generated witnesses; no universal hidden-state proof, task-value certificate or novel method."
+}

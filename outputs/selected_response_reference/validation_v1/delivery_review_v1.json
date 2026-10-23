@@ -1,0 +1,312 @@
+{
+  "status": "PASSED_SOFTWARE_REFERENCE_ONLY",
+  "created_utc": "2026-10-19T14:45:30.350913+00:00",
+  "parent_commit": "1a0ae955564fe2064239ccd573006a85099c53d6",
+  "previous_goal_turn": {
+    "classification": "progress",
+    "evidence": "1a0ae95 committed 72 physical local-target comparisons, a passed independent record audit and a limited execution qualification; response calibration and task utility remained unproven"
+  },
+  "tests_passed": 1311,
+  "new_tests": 35,
+  "checks": {
+    "targeted_01": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_selected_response_reference_v1",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 3424525300,
+      "output_sha256": "a7003eb3da6817e13a33c0c2fd91a4ae7d9a84301138e68aec5a7fb87c011894",
+      "new_robot_steps": 0,
+      "new_api_calls": 0
+    },
+    "targeted_02": {
+      "check": "targeted_02",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_selected_response_reference_v1",
+        "tests.test_selected_nominal_acquisition_v1",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 3061954600,
+      "output_sha256": "dd369230e9b13af66fd91425a7ebcb41e36b035500e4e8c6a43cb6f984adf18c",
+      "created_utc": "2026-10-19T14:35:54.608849+00:00",
+      "source_sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f"
+    },
+    "unittest": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 475574771300,
+      "output_sha256": "fa10ae00aeec40e1df6dbff51d106d92361ba1ee8768e10019f695a645110595",
+      "created_utc": "2026-10-19T14:44:12.383927+00:00",
+      "source_sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f"
+    },
+    "compileall": {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 2780070400,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T14:36:19.587208+00:00",
+      "source_sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f"
+    },
+    "pip_check": {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 1091330200,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T14:36:20.776069+00:00",
+      "source_sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f"
+    },
+    "tracked_secret_scan": {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 59289522300,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T14:37:16.103916+00:00",
+      "source_sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f"
+    },
+    "docs_secret_scan": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 60037837600,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    },
+    "final_docs_secret_scan": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 59817225800,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    },
+    "diff_check": {
+      "check": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 102394700,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T14:45:27.938801+00:00",
+      "source_sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f"
+    }
+  },
+  "files": [
+    {
+      "path": "docs/research/selected_response_reference_v1_zh.md",
+      "sha256": "955ccf88baca124b7688e9432d9fd165484281ef867838367d15e0e7c68504c8",
+      "bytes": 7801
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/.gitattributes",
+      "sha256": "0ccf672399ac091ce1068f620210f11afa2987a167b6c33268d842e425c9ab6d",
+      "bytes": 65
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/compileall.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/compileall_receipt.json",
+      "sha256": "bd75ff83a9c7774e21d981b2495e78d3cd49146535e506800ab83ae2ac50c09c",
+      "bytes": 486
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/diff_check_receipt.json",
+      "sha256": "5f2171e4e8027ae2dca102792bf9a9f145ce48673ee6c4d8d084b5069e01eb3e",
+      "bytes": 352
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/docs_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/docs_secret_scan_receipt.json",
+      "sha256": "c5983eb474e2b78d770ae162ac359628fb0fdbb88af84d0d68c97830ffb29fec",
+      "bytes": 301
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/final_docs_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/final_docs_secret_scan_receipt.json",
+      "sha256": "b459670621dd4cd2c383b7808da279115473a507f5153a55cde03cf17f80beb9",
+      "bytes": 301
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/pip_check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/pip_check_receipt.json",
+      "sha256": "ccaeb3f1273508a36bc331cea6dad38aadc7933e43ac5aa398a4aab43f24c712",
+      "bytes": 442
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/run_checks.py",
+      "sha256": "fbad06894867d18b9e588c363b0a5efbae5862ad80ec15d403d4466b7c4c232f",
+      "bytes": 3618
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/targeted_01.txt",
+      "sha256": "a7003eb3da6817e13a33c0c2fd91a4ae7d9a84301138e68aec5a7fb87c011894",
+      "bytes": 2626
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/targeted_01_receipt.json",
+      "sha256": "99c973e7783de1a44c95674e54e61367eb815ace2d211ec7f2d35d41da969b24",
+      "bytes": 375
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/targeted_02.txt",
+      "sha256": "dd369230e9b13af66fd91425a7ebcb41e36b035500e4e8c6a43cb6f984adf18c",
+      "bytes": 4933
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/targeted_02_native_costs.json",
+      "sha256": "cb4d61fdce82625398403b31009714883c6b303125587b324dc812e43296987b",
+      "bytes": 14100
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/targeted_02_receipt.json",
+      "sha256": "89e9aa0dcd8ba160f9eddd1ecfad210761e830167beccf494473ce366b76594c",
+      "bytes": 545
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/tracked_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/tracked_secret_scan_receipt.json",
+      "sha256": "2edbeb5992aa5c7372c974b2f624dcb68af42256adf196624f6b72c1db81591f",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/unittest.txt",
+      "sha256": "fa10ae00aeec40e1df6dbff51d106d92361ba1ee8768e10019f695a645110595",
+      "bytes": 158003
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/unittest_native_costs.json",
+      "sha256": "00a3b3cc3002a2d55276e39ff5cbc847b8870f77c3f6cb3cb9e29700d34c4a7c",
+      "bytes": 459482
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/unittest_receipt.json",
+      "sha256": "030c4884710e397eaaa63b497c7525395d1fe5e4570ee3aab7ae9647dd758949",
+      "bytes": 484
+    },
+    {
+      "path": "outputs/selected_response_reference/validation_v1/unmetered_development_attempt_01.json",
+      "sha256": "7deb6d74504b8f5f6fbd965d593b8e538c6e980acb0fcea82db0fc8a65e2653e",
+      "bytes": 805
+    },
+    {
+      "path": "src/analysis/selected_nominal_host_v1.py",
+      "sha256": "2b357bbfb9df49931713d11cbfffa94b44545a96931ee12357d9069b4efa5900",
+      "bytes": 14065
+    },
+    {
+      "path": "src/probe/selected_nominal_acquisition_v1.py",
+      "sha256": "aa13a1150f60635092e2de15c685a0c26eda9af450a819f48facef789dc2888c",
+      "bytes": 7082
+    },
+    {
+      "path": "src/probe/selected_response_reference_v1.py",
+      "sha256": "ca57de7153dc1af1be1d03797c1647e4c8f173e5e83cbd3b99a357d790c7d2f5",
+      "bytes": 15331
+    },
+    {
+      "path": "tests/test_selected_nominal_acquisition_v1.py",
+      "sha256": "4c8cf8d9f9ad8bd0681fba81f636664b83d5f97ec35d1f4fa0cf255725f57741",
+      "bytes": 10815
+    },
+    {
+      "path": "tests/test_selected_response_reference_v1.py",
+      "sha256": "b94dcbfc7c19ce9ad8267e6a408069451691b9dc1ba2e997d9b21dc0890918bd",
+      "bytes": 13446
+    }
+  ],
+  "strict_staged_utf8_json_secret_scan": "PASSED",
+  "prior_report_bindings_verified": 1138,
+  "new_native_fixture_subtotals": {
+    "targeted_02": {
+      "tests": 11,
+      "native_frames": 620,
+      "native_resets": 12,
+      "host_control_steps": 124,
+      "receipt_sha256": "cb4d61fdce82625398403b31009714883c6b303125587b324dc812e43296987b",
+      "scope": "Only new nominal-host instrumented one-axis software fixtures; other modules are separately recorded in the same cost file"
+    },
+    "unittest": {
+      "tests": 11,
+      "native_frames": 620,
+      "native_resets": 12,
+      "host_control_steps": 124,
+      "receipt_sha256": "00a3b3cc3002a2d55276e39ff5cbc847b8870f77c3f6cb3cb9e29700d34c4a7c",
+      "scope": "Only new nominal-host instrumented one-axis software fixtures; other modules are separately recorded in the same cost file"
+    }
+  },
+  "unmetered_attempt_receipt": "outputs/selected_response_reference/validation_v1/unmetered_development_attempt_01.json",
+  "new_metaworld_scientific_executions": 0,
+  "new_physical_nominal_training_windows": 0,
+  "new_api_calls": 0,
+  "physical_response_qualified": false,
+  "task_utility_demonstrated": false,
+  "publication_goal_complete": false,
+  "remaining_work": "Build scientific collector and independent auditor; preregister fixed nominal attempts and fresh held-out identification before any new scientific data. Save fitted models before qualification; preserve all unavailable windows, nominal cost and preprobe-integral/C8 controls."
+}

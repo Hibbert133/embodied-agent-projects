@@ -1,0 +1,77 @@
+{
+  "protocol": "probemem_acr_resonance_second_verification_development_v1",
+  "status": "FROZEN_BEFORE_EXECUTION",
+  "claim_scope": "development-only feasibility of allocating one second fresh verification from first-verification feedback",
+  "environment": "MetaWorld push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "registered_condition": "fault_05",
+  "seed_partitions": {
+    "development": [2850, 3049],
+    "validation_reserved": [3050, 3099],
+    "heldout_reserved": [3100, 3199]
+  },
+  "stopping_rule": {
+    "target_second_decision_cases": 30,
+    "maximum_initial_units": 200,
+    "second_decision_eligibility": "initial failure, bounded compensation constructible, and first retry verification is not ACCEPTED",
+    "reads_second_candidate_outcomes": false
+  },
+  "random_namespaces": {
+    "initial_perturbation": 12851,
+    "registered_probe": 12852,
+    "first_verification": 12853,
+    "paired_second_verification": 12854,
+    "paired_bootstrap": 12855
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "first_verification_max_steps": 500,
+    "second_verification_max_steps": 500,
+    "online_max_steps_per_case": 1564,
+    "evaluator_paired_collection_max_steps_per_case": 2064,
+    "maximum_verification_attempts": 2
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "first_intervention": "INDEPENDENT_STOCHASTIC_RETRY",
+  "second_candidate_interventions": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "methods": [
+    "single_retry",
+    "repeat_retry",
+    "switch_compensation",
+    "status_conditioned",
+    "rejection_abstain",
+    "oracle_second"
+  ],
+  "promotion_gate": {
+    "second_decision_cases_minimum": 30,
+    "integrity_violations_maximum": 0,
+    "status_conditioned_net_accepted_gain_over_strongest_fixed_minimum": 2,
+    "or_rejection_abstain_accepted_deficit_maximum": 1,
+    "or_rejection_abstain_second_attempt_relative_reduction_minimum": 0.25,
+    "or_rejection_abstain_total_steps_strictly_lower": true
+  },
+  "bootstrap": {
+    "resamples": 10000,
+    "unit": "eligible_initial_failure"
+  },
+  "prohibitions": {
+    "retune_on_stream": true,
+    "call_llm": true,
+    "write_online_memory": true,
+    "promote_principle": true,
+    "run_validation": true,
+    "run_heldout": true,
+    "claim_online_learning": true
+  }
+}

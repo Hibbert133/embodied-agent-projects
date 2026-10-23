@@ -1,0 +1,243 @@
+{
+  "protocol": "response_action_execution_v1",
+  "source_diagnostic_commit": "0d006c08831f9812fa2f170ddd50b49523f751d9",
+  "scope": "ENGINEERING_CONTROL_INTERFACE_DEVELOPMENT_THEN_INDEPENDENT_OWN_HISTORY_TASK_QUALIFICATION",
+  "groups": {
+    "SOFTWARE_NATIVE": 1,
+    "DEV": 6,
+    "QUAL": 9
+  },
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "contexts": [
+    "UNCHANGED",
+    "CHANGED"
+  ],
+  "registered_programs": [
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "NO_PROBE",
+      "time_constant_s": null
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "DIRECT_C8",
+      "time_constant_s": null
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "MOVE_KEEP_C8",
+      "time_constant_s": null
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "MOVE_INTEGRAL",
+      "time_constant_s": null
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "RAW_TASK_PI",
+      "time_constant_s": 0.5
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "DIRECT_TASK_PI",
+      "time_constant_s": 0.5
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "MOVE_KEEP_TASK_PI",
+      "time_constant_s": 0.5
+    },
+    {
+      "schema": "TASK_PASSIVE_PROGRAM_V1",
+      "style": "MOVE_INTEGRAL_TASK_PI",
+      "time_constant_s": 2.0
+    },
+    {
+      "schema": "RESPONSE_ACTION_RANK_PROGRAM_V1",
+      "style": "F20_RANK",
+      "regularization_weight": 0.1
+    },
+    {
+      "schema": "RESPONSE_ACTION_RANK_PROGRAM_V1",
+      "style": "F20_RANK",
+      "regularization_weight": 1.0
+    },
+    {
+      "schema": "RESPONSE_ACTION_RANK_PROGRAM_V1",
+      "style": "F20_RANK",
+      "regularization_weight": 10.0
+    },
+    {
+      "schema": "RESPONSE_ACTION_RANK_PROGRAM_V1",
+      "style": "KINEMATIC_RANK",
+      "regularization_weight": 1.0
+    }
+  ],
+  "limits": {
+    "SOFTWARE_NATIVE": {
+      "executions": 36,
+      "control_steps": 18000,
+      "controlled_resets": 36,
+      "factory_resets": 1800,
+      "all_resets": 1836,
+      "physical_frames": 1008000,
+      "online_c4_c8_fit_attempts": 60,
+      "independent_audit_c4_c8_refits": 60,
+      "response_model_forward_evaluations": 44280,
+      "kinematic_proxy_evaluations": 14760,
+      "independent_rank_raw_coefficient_forecasts": 22140,
+      "new_response_predictor_training": 0,
+      "new_policy_training": 0,
+      "new_api_calls": 0
+    },
+    "DEV": {
+      "executions": 432,
+      "control_steps": 216000,
+      "controlled_resets": 432,
+      "factory_resets": 21600,
+      "all_resets": 22032,
+      "physical_frames": 12096000,
+      "online_c4_c8_fit_attempts": 720,
+      "independent_audit_c4_c8_refits": 720,
+      "response_model_forward_evaluations": 531360,
+      "kinematic_proxy_evaluations": 177120,
+      "independent_rank_raw_coefficient_forecasts": 265680,
+      "new_response_predictor_training": 0,
+      "new_policy_training": 0,
+      "new_api_calls": 0
+    },
+    "QUAL": {
+      "executions": 540,
+      "control_steps": 270000,
+      "controlled_resets": 540,
+      "factory_resets": 27000,
+      "all_resets": 27540,
+      "physical_frames": 15120000,
+      "online_c4_c8_fit_attempts": 864,
+      "independent_audit_c4_c8_refits": 864,
+      "response_model_forward_evaluations": 265680,
+      "kinematic_proxy_evaluations": 265680,
+      "independent_rank_raw_coefficient_forecasts": 132840,
+      "new_response_predictor_training": 0,
+      "new_policy_training": 0,
+      "new_api_calls": 0
+    }
+  },
+  "combined_limits": {
+    "executions": 1008,
+    "control_steps": 504000,
+    "controlled_resets": 1008,
+    "factory_resets": 50400,
+    "all_resets": 51408,
+    "physical_frames": 28224000,
+    "online_c4_c8_fit_attempts": 1644,
+    "independent_audit_c4_c8_refits": 1644,
+    "response_model_forward_evaluations": 841320,
+    "kinematic_proxy_evaluations": 457560,
+    "independent_rank_raw_coefficient_forecasts": 420660,
+    "new_response_predictor_training": 0,
+    "new_policy_training": 0,
+    "new_api_calls": 0
+  },
+  "per_execution_steps": 500,
+  "movement_steps": 64,
+  "noise_sigma": 0.05,
+  "control_period_s": 0.0125,
+  "fixed_policy_gains_per_m": {
+    "push-v3": 10.0,
+    "reach-v3": 5.0,
+    "door-open-v3": 25.0
+  },
+  "locked_PI_time_constants_s": {
+    "RAW_TASK_PI": 0.5,
+    "DIRECT_TASK_PI": 0.5,
+    "MOVE_KEEP_TASK_PI": 0.5,
+    "MOVE_INTEGRAL_TASK_PI": 2.0
+  },
+  "rank_weights": [
+    0.1,
+    1.0,
+    10.0
+  ],
+  "rank_model": "FEEDBACK8 task-matching LINEAR_F20; full saved conditional model, actual sent command input; no inverse or nominal-plant interpretation",
+  "rank_candidates": [
+    "BASELINE",
+    "X_PLUS",
+    "X_MINUS",
+    "Y_PLUS",
+    "Y_MINUS"
+  ],
+  "candidate_xy_offset": 0.25,
+  "rank_reference": "0.01 * clip(original float32 policy action,-1,1).XY metres; provisional mocap-shaped tracking reference, not measured hand response",
+  "rank_score": "squared XY prediction-reference distance + weight*(0.01 metre)^2*squared XY candidate-minus-bounded-C8 command distance",
+  "rank_start": "After actual C8 at step8; use real last three public observations, one policy query and saved selection per actual task step",
+  "rank_precision": "All five bounded commands rounded to float32 BEFORE prediction and selection; keep clipped duplicate labels",
+  "rank_ties": "First ordered candidate; baseline wins exact ties",
+  "rank_model_forward_evaluations_per_step": 10,
+  "kinematic": "Same five C8-based candidates, reference and score; prediction0.01*sentXY, fixed weight1; no learned predictor fee",
+  "baseline_behavior": "All eight old programs unchanged, including four old locked PI references; no new time-constant selection",
+  "initial_fault": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "change": "Private affine update at actual completed16/32/64 if alive; same world/RNG/noise/clock; no ranker boundary input",
+  "selection": "One global F20 weight minimizing complete DEV cutoff-loss sum; tie largest weight; no task/context selection",
+  "development_gate": "Selected F20 full DEV mean loss strictly below every one of eight baselines and KINEMATIC_RANK; otherwise stop without QUAL",
+  "primary_controls": [
+    "DIRECT_C8",
+    "MOVE_INTEGRAL",
+    "RAW_TASK_PI_T0.5",
+    "KINEMATIC_RANK_W1.0"
+  ],
+  "qualification_gate": "All four co-primary paired whole-group bootstrap95 upper bounds<0; selected F20 point mean below all nine controls; full success changes disclosed",
+  "bootstrap": {
+    "replicates": 10000,
+    "DEV_seed": 202610400,
+    "QUAL_seed": 202610401,
+    "unit": "WHOLE_GROUP_STRATIFIED_BY_BOUNDARY"
+  },
+  "loss": "Actual total control steps on success;500 on invalid/stop/task failure; C8 and movement already counted once",
+  "early_end": "Retain all assignments; no forced change/movement/command after early success; unavailable phases null with reasons",
+  "native_contract": "All allocated executions audited; every rank program has a real plan on each task; PI styles have actual plans; no task-gain requirement",
+  "failure": "Software/response numerical or validation errors stop one-shot phase with incomplete allocation preserved; invalid C4/C8 stops case at loss500; no substitute/retry/append",
+  "source_costs": "Full C8 bank and complete historical predictor FIT parent/training fees plus previous PI tuning disclosed; source steps separately amortized, not hidden or double-charged",
+  "new_api_calls": 0,
+  "new_response_predictor_training": 0,
+  "new_policy_training": 0,
+  "retry": false,
+  "append_samples": false,
+  "disk_free_floor_bytes": 4294967296,
+  "runtime_emergency_free_floor_bytes": 536870912,
+  "source_nominal_c8_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+  "source_predictors_index_sha256": "b76a5e0260b6f0de174697a99c739501c4baed20255f89c533fdd82f538bcf78",
+  "expected_runtime_versions": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "mujoco": "3.3.0",
+    "gymnasium": "1.3.0",
+    "metaworld": "3.1.1"
+  },
+  "no_safety_guarantee": true,
+  "no_algorithmic_novelty_claim": true
+}

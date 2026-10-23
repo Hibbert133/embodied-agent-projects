@@ -1,0 +1,20 @@
+{
+  "experiment_run_id": "delayed_switch_effects_20261019T093447Z_5193855b2123",
+  "manifest_id": "13e29ef1bf5f09dd8ea39f1f61f04293c091ed0d038293a7ea8475e13a806c3f",
+  "source_git_commit": "5193855b2123a17277c63c817529d3fe653422d0",
+  "status": "PASSED",
+  "reviewed_utc": "2026-10-19T10:53:07.007981+00:00",
+  "reviewer": "Codex root, direct inspection of both PNGs",
+  "images": {
+    "current_failures_zh.png": "47b0de69f5e3b9af182ae9ddfc575816627fc98a55cbf142cc958da24c5aff1a",
+    "switch_harms_zh.png": "b3625c0995f53d37a4cc54aa4c93071830c21a6be9387b1ef9918f5d58730d07"
+  },
+  "checks": [
+    "Chinese glyphs readable; labels and legends do not overlap",
+    "All six current failures and four C4 harms shown",
+    "Actual trace endpoints, success line and step-16 boundary shown",
+    "Case-specific y-axis limits disclosed in report",
+    "Complete curves reviewed; no robot rendering or physical root-cause verification claimed"
+  ],
+  "scope": "Visual presentation review, not an independent numerical audit."
+}

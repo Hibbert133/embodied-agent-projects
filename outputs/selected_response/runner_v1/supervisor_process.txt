@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\runner_v1\continue_pipeline.py", line 193, in <module>
+    main()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\runner_v1\continue_pipeline.py", line 178, in main
+    wait_for_original_train(journal)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\runner_v1\continue_pipeline.py", line 116, in wait_for_original_train
+    verify_train_record(RUN)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\selected_response\runner_v1\continue_pipeline.py", line 66, in verify_train_record
+    require(receipt["log_sha256"] == sha(folder / "train_process.txt"), "TRAIN process log changed")
+KeyError: 'log_sha256'

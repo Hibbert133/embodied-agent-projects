@@ -1,0 +1,51 @@
+{
+  "protocol_id": "state_capsule_qualification_v2",
+  "source_manifest": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/manifest.json",
+  "source_result_commit": "3a7a9d8f82b7026ac9a5bf605b212c627c80a33a",
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "seed_start": 19000,
+  "seed_end": 19011,
+  "reserved": [
+    19012,
+    19199
+  ],
+  "prefix_lengths": [
+    8,
+    488
+  ],
+  "replicates": 2,
+  "branch_horizon": 32,
+  "logical_step_budget": 500,
+  "noise_namespace": 64001,
+  "noise_std": 0.05,
+  "bias_xy_oracle": [
+    0.1,
+    -0.06
+  ],
+  "branch_order": [
+    "DIRECT_0",
+    "PROBE8_0",
+    "DIRECT_1",
+    "PROBE8_1"
+  ],
+  "expected_contexts": 12,
+  "maximum_environment_steps": 7392,
+  "maximum_controlled_resets": 12,
+  "maximum_simulation_frames": 1000000,
+  "excluded_trajectory_equality_paths": [
+    "info.episode.t"
+  ],
+  "api_calls": 0,
+  "nominal_fits": 0,
+  "selector_fits": 0,
+  "policy_updates": 0,
+  "output_root": "outputs/state_capsule/qualification_v2",
+  "failed_v1_manifest": "outputs/state_capsule/qualification_v1/state_capsule_20261016T174414Z_70e34299bef0/manifest.json",
+  "failed_v1_manifest_sha256": "fb4db6a5d7692fa9df10e631103c992cee3ec97b3febb9352032cf3c9289e694",
+  "failed_v1_summary": "outputs/state_capsule/qualification_v1/state_capsule_20261016T174414Z_70e34299bef0/collection/summary.json",
+  "failed_v1_summary_sha256": "ac78ac7348eebab03af7a098f24d994392858a1f73d2997f3ae820d920004ed6"
+}

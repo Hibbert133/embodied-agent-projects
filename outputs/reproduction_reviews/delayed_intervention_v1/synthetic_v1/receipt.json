@@ -1,0 +1,44 @@
+{
+  "schema": "single_intervention_synthetic_execution_qualification_v1",
+  "status": "PASSED_SYNTHETIC_TESTS",
+  "tests_run": 29,
+  "test_failures": 0,
+  "test_errors": 0,
+  "test_host_activity": {
+    "host_callback_attempts": 32,
+    "synthetic_host_transitions": 31
+  },
+  "durable_examples": 4,
+  "durable_example_synthetic_transitions": 6,
+  "new_environment_steps": 0,
+  "new_environment_resets": 0,
+  "new_api_calls": 0,
+  "new_parameter_fits": 0,
+  "physical_qualification": false,
+  "task_benefit_tested": false,
+  "detector_or_acquisition_policy_implemented": false,
+  "source_sha256": {
+    "docs/prototypes/delayed_intervention_v1/controller.py": "5c107ac655f20355d864297dcc94351ea4e10f85bfe6454f4852209c87398097",
+    "docs/prototypes/delayed_intervention_v1/qualify.py": "555490af524b405be330b5ef4f67639ab3fcea5fcd4d3cbe46e6cab11d58fc12",
+    "docs/prototypes/delayed_intervention_v1/test_controller.py": "e1d034e4464b181290513785f260473df2169c7963ac5c7ea4d2bf4ffab916b9",
+    "docs/prototypes/delayed_intervention_v1/.gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da"
+  },
+  "frozen_dependency_sha256": {
+    "src/probe/continuous.py": "705315954b025ba845c0399bba71fe1ebdd508b1568f4379dca963eea5a544ba",
+    "src/probe/operator_identification.py": "ce8b15b633c5c4492f154ceb263afb1af44d27bc35b98a7ed4e3657bcf06bc02",
+    "src/probe/forward_prediction.py": "3f2ee0b0faf8a16a4a6d95ee9e639b24ff08cd724eec39be43ae5157235f45d8"
+  },
+  "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "artifact_sha256": {
+    "continue_current.jsonl": "2704c73426ba6f9ec09b8c61dd24db94837338ab87cb16d38421830cf8569da8",
+    "example_results.json": "6171a50844716a319197c9a99a5950fb0e6078af52da6c79449492d473ed5b34",
+    "run_uncorrected.jsonl": "494638b3383e3102c9083eacef58db3c43ba5d303ab36a9ddf70ab105a6e06c5",
+    "stop.jsonl": "d611e10bc0e8b1979355392ffd27693468c1d16560fb99246c3b0eed7c9fb39b",
+    "switch_saved.jsonl": "2f0d76ca7b0c38d588c9bc5308f95511cd2741e0b2433cbc0911838546087578",
+    "synthetic_host_callbacks.json": "b4dd4218812b1c496b232e2d1ff8e520c5713624a1bfdcb0c9478d0b63715ffa",
+    "tests.txt": "91ef428725f68d0830b63dd0a3fd9b283e6e0714391f1eb50830a3f07dd0ad12"
+  },
+  "qualification_wall_ns": 231741500,
+  "development_history": "The first pre-qualification test run had 3 failures and 12 errors caused by the mock host comparing tuple observations with JSON lists. The fixture serialization check was corrected before this qualification; no physical experiment was rerun.",
+  "scope": "Single-use continuous-boundary command execution with synthetic hosts and flushed/fsynced example journals. Host truth, crash recovery, MetaWorld continuity and scientific utility require separate integration and physical qualification."
+}

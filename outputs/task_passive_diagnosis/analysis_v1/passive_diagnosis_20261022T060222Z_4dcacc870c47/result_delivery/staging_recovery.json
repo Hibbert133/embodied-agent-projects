@@ -1,0 +1,14 @@
+{
+  "integrity": "PASSED",
+  "cause": "The outer capture wrapper staged its own still-open console log. The log writer has exited; final stable bytes are restaged.",
+  "affected_path": "outputs/task_passive_diagnosis/validation_v1/seal_console.log",
+  "prior_index_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "final_disk_sha256": "5b649063ebca19f7b52684b8f4f1abd6adee198fe4045d2144c875aa12ffd7bb",
+  "scientific_or_test_sources_changed": false,
+  "full_tracked_secret_scan_receipt_sha256": "bee995eb8d6481147feff5292ccc2e91ddf58e412ad4daf0953ab95db5083baa",
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "repair": "Restage only the closed log, recheck all actual staged bytes/secrets and both diffs, then stage final index receipt.",
+  "original_log_retained": true
+}

@@ -1,0 +1,95 @@
+{
+  "experiment_run_id": "acr_continuous_feedback_20260803T033027Z_fdff57ab321b",
+  "manifest_id": "4bca2c97898ef8f36e3fc100cf5df19fe37808f9da44de5205b17a09d3d9e856",
+  "source_git_commit": "fdff57ab321bbf4edc5f8ed6e17bcd8a83c4c17a",
+  "initial_units_scanned": 231,
+  "eligible_first_attempts": 85,
+  "second_decision_cases": 30,
+  "strongest_fixed": "always_repeat",
+  "method_summaries": {
+    "single_retry": {
+      "cases": 85,
+      "accepted": 55,
+      "accepted_rate": 0.6470588235294118,
+      "harmful_selections": 0,
+      "second_attempts": 0,
+      "total_environment_steps": 70051,
+      "mean_environment_steps": 824.1294117647059
+    },
+    "always_repeat": {
+      "cases": 85,
+      "accepted": 74,
+      "accepted_rate": 0.8705882352941177,
+      "harmful_selections": 7,
+      "second_attempts": 30,
+      "total_environment_steps": 78189,
+      "mean_environment_steps": 919.8705882352941
+    },
+    "always_switch": {
+      "cases": 85,
+      "accepted": 71,
+      "accepted_rate": 0.8352941176470589,
+      "harmful_selections": 10,
+      "second_attempts": 30,
+      "total_environment_steps": 79799,
+      "mean_environment_steps": 938.8117647058823
+    },
+    "frozen_status_rule": {
+      "cases": 85,
+      "accepted": 70,
+      "accepted_rate": 0.8235294117647058,
+      "harmful_selections": 11,
+      "second_attempts": 30,
+      "total_environment_steps": 79416,
+      "mean_environment_steps": 934.3058823529411
+    },
+    "zero_progress_rule": {
+      "cases": 85,
+      "accepted": 70,
+      "accepted_rate": 0.8235294117647058,
+      "harmful_selections": 11,
+      "second_attempts": 30,
+      "total_environment_steps": 79416,
+      "mean_environment_steps": 934.3058823529411
+    },
+    "oracle_second": {
+      "cases": 85,
+      "accepted": 81,
+      "accepted_rate": 0.9529411764705882,
+      "harmful_selections": 0,
+      "second_attempts": 30,
+      "total_environment_steps": 76309,
+      "mean_environment_steps": 897.7529411764706
+    }
+  },
+  "paired_bootstrap_zero_vs_strongest_fixed": {
+    "accepted_rate": {
+      "point": -0.047058823529411764,
+      "low": -0.11764705882352941,
+      "high": 0.023529411764705882
+    },
+    "harmful_rate": {
+      "point": 0.047058823529411764,
+      "low": -0.023529411764705882,
+      "high": 0.11764705882352941
+    },
+    "steps": {
+      "point": 14.435294117647059,
+      "low": -12.035294117647059,
+      "high": 40.811764705882354
+    }
+  },
+  "promotion_checks": {
+    "population_complete": true,
+    "recovery_not_below": false,
+    "harm_not_above": false,
+    "recovery_tied": false,
+    "tie_has_efficiency_improvement": false
+  },
+  "promotion_gate_passed": false,
+  "glm_authorized": false,
+  "memory_authorized": false,
+  "validation_authorized": false,
+  "heldout_authorized": false,
+  "api_calls": 0
+}

@@ -1,0 +1,115 @@
+{
+  "scope": "POSTHOC_TRAIN_ONLY_NO_PHYSICAL_QUALIFICATION",
+  "new_environment_steps": 0,
+  "new_all_resets": 0,
+  "new_physical_frames": 0,
+  "new_online_llm_api_calls": 0,
+  "new_model_fits": 0,
+  "optimizer_updates": 0,
+  "analysis_svd_computations": 72,
+  "independent_audit_svd_computations": 72,
+  "actual_reused_FIT": {
+    "trajectories": 144,
+    "source_control_steps": 13690
+  },
+  "complete_parent_costs_separate": {
+    "integrity": "PASSED",
+    "scope": "TRAIN_ONLY_DEVELOPMENT_NOT_INDEPENDENT_CONFIRMATION",
+    "scientific": {
+      "linear_fits": 18,
+      "neural_fits": 144,
+      "fits_attempted": 162,
+      "optimizer_updates": 720000,
+      "sampled_targets": 23040000,
+      "predictor_normalization_calculations": 162
+    },
+    "audit_computations": {
+      "regression_refits": 18,
+      "optimizer_retraining": 0,
+      "independent_torch_forward_pairs": 948624,
+      "independent_numeric_predictions": 1067202
+    },
+    "software": {
+      "neural_fits": 16,
+      "linear_fits": 8,
+      "optimizer_updates": 1600,
+      "neural_fits_without_saved_weights": 8,
+      "new_tests_run": 25,
+      "unchanged_test_receipts_reused": 1506
+    },
+    "new_environment_creations": 0,
+    "new_environment_steps": 0,
+    "new_all_resets": 0,
+    "new_physical_frames": 0,
+    "new_online_llm_api_calls": 0,
+    "source_fees": {
+      "actually_reused_TRAIN": {
+        "executions": 216,
+        "control_steps": 20195,
+        "all_resets": 11016,
+        "physical_frames": 5608975,
+        "c4_c8_fits": 432
+      },
+      "complete_parent_study": {
+        "physical": {
+          "executions": 756,
+          "control_steps": 71773,
+          "all_resets": 38556,
+          "physical_frames": 19636865,
+          "controlled_resets": 756,
+          "factory_resets": 37800,
+          "c4_c8_fit_attempts": 1512,
+          "measurement_steps": 5159
+        },
+        "response_fits": 30,
+        "optimizer_updates": 60000,
+        "audit_only_computations": {
+          "independent_cold_fit_recomputations": 1512,
+          "independent_cold_fit_nfev": 1518,
+          "augmented_ridge_reconstructions": 18,
+          "gru_optimizer_replays": 0
+        }
+      },
+      "earlier_sources_separate": {
+        "previous_response_qualification": {
+          "executions": 270,
+          "control_steps": 23716,
+          "all_resets": 13770,
+          "physical_frames": 7003580,
+          "c4_c8_fits": 540,
+          "response_fits": 6
+        },
+        "nominal_c8_bank": {
+          "source_summary": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/summary.json",
+          "source_summary_sha256": "8c5f1961d2984bad4952d2ecbf205d255b80d8d122d3338ba4e5e9c0af397c24",
+          "model_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+          "training_episodes": 384,
+          "qualification_episodes": 96,
+          "control_steps": 3840,
+          "controlled_resets": 480,
+          "all_resets": 24480,
+          "physical_frames": 12259200,
+          "new_this_study": false
+        }
+      },
+      "interpretation": "TRAIN is a subset of the parent study, not an additional physical charge. Earlier 270-run response qualification did not supply this fit data. Nominal C8 acquisition costs remain inherited. Full parent research costs are disclosed separately."
+    },
+    "timing": {
+      "pipeline_after_manifest_wall_ns": 4506919126900,
+      "training_process_wall_ns": 4080454659800,
+      "forward_process_wall_ns": 154662481800,
+      "regression_audit_wall_ns": 11566755400,
+      "evaluation_wall_ns": 112028577500,
+      "numeric_audit_wall_ns": 129979608200,
+      "scope": "The pipeline clock begins after new manifest creation. Freeze-time software checks and pre-manifest runtime rehash are outside this clock; no unmeasured interval is asserted to be zero."
+    },
+    "source_cost_sha256": "077509b09a575ce38f8d7031c1c05797126909dd4e67f6148144067f4cf290a5",
+    "source_scientific_manifest_id": "08210501d273d06af58745614b8fbcfe67164f1a0498d90e3d85e435aab86ad0",
+    "source_freeze_commit": "a7a33756b1c7d9379f826edb1523b2aa08905b75"
+  },
+  "source_cost_sha256": "a6b96bfc5644aba74a8bc64a69db86a797988cdecf06f22ef7f1aea0ed50e274",
+  "report_sha256": "52d34aefaebd3a4427826b13c5d6004520391133f0f15d41b111cc1671ca6293",
+  "analysis_wall_ns": 51563571000,
+  "audit_wall_ns": 38511332300,
+  "timing_scope": "Analysis starts before manifest creation. Software verification, reporting and Git operations are outside these clocks; no unmeasured time is asserted to be zero."
+}

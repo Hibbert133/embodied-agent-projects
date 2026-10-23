@@ -1,0 +1,71 @@
+{
+  "protocol_id": "strong_chronological_reference_development_v1",
+  "source_manifest": "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/manifest.json",
+  "source_manifest_sha256": "da6cb123352b7f04ad4481446e42a92b8ae6bf3989829a31e1b7fd6d4b06afe9",
+  "source_record_audit": "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/main_audit/audit.json",
+  "source_record_audit_sha256": "0926ecd024dd1e14d3bf4fa950333c14edddf7794c9e6dc9b747292454c9f894",
+  "source_statistics_audit": "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/main_audit/statistics.json",
+  "source_statistics_audit_sha256": "3aca32c14c18416aaa1977db18cb2a4faed86fe1694f64046f23aedc909ced83",
+  "source_costs": "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/analysis_v1/costs.json",
+  "source_costs_sha256": "4d29bb8a057ab25c3f8c3632d71213a0ce5ae64c25a47ce4cc27db507f959993",
+  "software_qualification_manifest": "outputs/passive_supported_reference/engineering_qualification_v1/passive_supported_reference_20261016T151816Z_3aa4ccde0038/manifest.json",
+  "software_qualification_manifest_sha256": "11cefae237315b99e3701fd12b801620089d05ff220d714fab740b29ea3cf7b0",
+  "software_qualification_summary": "outputs/passive_supported_reference/engineering_qualification_v1/passive_supported_reference_20261016T151816Z_3aa4ccde0038/summary.json",
+  "software_qualification_summary_sha256": "bd20fa45bf71b1f76b33ed6eeecd5d48fb2fa21ec8e98ead23ab3426356ff964",
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "methods": [
+    "NO_PROBE",
+    "ALWAYS8",
+    "ALWAYS16_OLD",
+    "PASSIVE_RECENT8",
+    "PASSIVE8_KEEP",
+    "PASSIVE64_PERIODIC16_KEEP",
+    "UNCERTAINTY4",
+    "TASK_IVR4",
+    "TASK_HISTORY_IVR4"
+  ],
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "total_steps": 500,
+  "query_history_cap_per_task": 64,
+  "history_ivr_threshold": 0.25,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261020,
+  "api_calls": 0,
+  "policy_weight_updates": 0,
+  "nominal_model_fits": 0,
+  "selector_fits": 0,
+  "smoke": {
+    "units": 12,
+    "streams": 1,
+    "executions": 108,
+    "seed_start": 18000,
+    "seed_end": 18011,
+    "reserved": [
+      18012,
+      18099
+    ],
+    "maximum_environment_steps": 54000,
+    "maximum_controlled_resets": 108,
+    "maximum_simulation_frames": 4000000
+  },
+  "main": {
+    "units": 216,
+    "streams": 18,
+    "executions": 1944,
+    "seed_start": 18100,
+    "seed_end": 18315,
+    "reserved": [
+      18316,
+      18799
+    ],
+    "maximum_environment_steps": 972000,
+    "maximum_controlled_resets": 1944,
+    "maximum_simulation_frames": 55000000
+  },
+  "output_root": "outputs/strong_chronological_reference/development_v1"
+}

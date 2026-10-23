@@ -1,0 +1,30 @@
+{
+  "integrity": "PASSED",
+  "tests": 5,
+  "stdout": "test_full_saved_native_verdict_matches_frozen_v1_without_new_fits (tests.test_acquisition_reference_streaming_v2.StreamingTests) ... ok\ntest_missing_extra_changed_case_and_future_private_are_rejected (tests.test_acquisition_reference_streaming_v2.StreamingTests) ... ok\ntest_partitions_all_records_without_dropping_private_or_case_markers (tests.test_acquisition_reference_streaming_v2.StreamingTests) ... ok\ntest_reader_does_not_load_future_cases (tests.test_acquisition_reference_streaming_v2.StreamingTests) ... ok\ntest_reader_rejects_sequence_time_and_other_manifest (tests.test_acquisition_reference_streaming_v2.StreamingTests) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 116.967s\n\nOK\n",
+  "interaction_guard": {
+    "integrity": "PASSED",
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "fits": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/acquisition_reference_streaming_audit_v2.py": "704bfb782f33ac79899c1d40ab749ba00eca2d1e52df6313e68e5a2a01610c01",
+    "scripts/audit_acquisition_reference_streaming_v2.py": "f56be6b9b242baa866dfef72e90523ab5360a73e440944b930f32189f0540a3c",
+    "tests/test_acquisition_reference_streaming_v2.py": "2c9f24efd0384559db9047f0081bf46fdd10b4a905a2b73ab25629a8c57d196f",
+    "docs/protocols/acquisition_reference_audit_storage_repair_v2_zh.md": "8c52639df65a1b114b62085ce4a21eaf52987c2f24462716312446d39d33b0d7"
+  },
+  "saved_refit_cache_reads": 48,
+  "actual_new_fits": 0,
+  "extra_policy_queries_on_saved_observations": 17918,
+  "wall_ns": 117138774700
+}

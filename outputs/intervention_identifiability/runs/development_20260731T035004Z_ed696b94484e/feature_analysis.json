@@ -1,0 +1,55 @@
+{
+  "experiment_run_id": "development_20260731T035004Z_ed696b94484e",
+  "source_git_commit": "ed696b94484ee10b7cb2ad633c5c9d2fa9d8bbf7",
+  "config_sha256": "943b41590815f13f677452a160bf73fdd9d1775d8f762791f4d4df7183ed73e3",
+  "paired_comparable_units": 20,
+  "retry_preferred_units": 8,
+  "compensation_preferred_units": 12,
+  "retry_prevalence": 0.4,
+  "status": "COMPLETE_FOR_FEATURE_CHARACTERIZATION",
+  "threshold_fitted": false,
+  "features": {
+    "phase_inconsistency": {
+      "registered_direction": "higher predicts retry preference",
+      "retry_preferred_median": 0.9608752267316114,
+      "compensation_preferred_median": 0.9638320549955194,
+      "roc_auc": 0.46875,
+      "pr_auc": 0.45466530910609854
+    },
+    "temporal_uncertainty": {
+      "registered_direction": "higher predicts retry preference",
+      "retry_preferred_median": 0.9566162272173094,
+      "compensation_preferred_median": 0.9589023784591711,
+      "roc_auc": 0.46875,
+      "pr_auc": 0.411962015667511
+    },
+    "probe_score": {
+      "registered_direction": "higher predicts retry preference",
+      "retry_preferred_median": 0.565500614019979,
+      "compensation_preferred_median": 0.3632338392902579,
+      "roc_auc": 0.6979166666666666,
+      "pr_auc": 0.5735331253713607
+    },
+    "probe_relative_bias_std": {
+      "registered_direction": "higher predicts retry preference",
+      "retry_preferred_median": 1.4703243959054957,
+      "compensation_preferred_median": 1.529437442061139,
+      "roc_auc": 0.5416666666666666,
+      "pr_auc": 0.4372061965811966
+    },
+    "probe_mean_estimation_residual": {
+      "registered_direction": "higher predicts retry preference",
+      "retry_preferred_median": 5.6155508059632126e-05,
+      "compensation_preferred_median": 3.7348311483210205e-05,
+      "roc_auc": 0.5104166666666666,
+      "pr_auc": 0.44908057521254113
+    },
+    "probe_sign_disagreement": {
+      "registered_direction": "higher predicts retry preference",
+      "retry_preferred_median": 0.5,
+      "compensation_preferred_median": 0.5,
+      "roc_auc": 0.5104166666666666,
+      "pr_auc": 0.4052631578947369
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "methods": {
+    "CHANGE_THRESHOLD": {
+      "episodes": 96,
+      "successful": 89,
+      "charged_probe_steps": 4896,
+      "charged_direction_resets": 1224,
+      "mean_steps_excluding_resets": 146.0625,
+      "mean_additional_direction_resets": 12.75
+    },
+    "DECISION_STABILITY": {
+      "episodes": 96,
+      "successful": 87,
+      "charged_probe_steps": 3568,
+      "charged_direction_resets": 892,
+      "mean_steps_excluding_resets": 141.40625,
+      "mean_additional_direction_resets": 9.291666666666666
+    },
+    "FIXED_16": {
+      "episodes": 96,
+      "successful": 88,
+      "charged_probe_steps": 1536,
+      "charged_direction_resets": 384,
+      "mean_steps_excluding_resets": 116.92708333333333,
+      "mean_additional_direction_resets": 4.0
+    },
+    "FIXED_32": {
+      "episodes": 96,
+      "successful": 88,
+      "charged_probe_steps": 3072,
+      "charged_direction_resets": 768,
+      "mean_steps_excluding_resets": 131.88541666666666,
+      "mean_additional_direction_resets": 8.0
+    },
+    "FIXED_64": {
+      "episodes": 96,
+      "successful": 88,
+      "charged_probe_steps": 6144,
+      "charged_direction_resets": 1536,
+      "mean_steps_excluding_resets": 163.5625,
+      "mean_additional_direction_resets": 16.0
+    },
+    "PERIODIC_4": {
+      "episodes": 96,
+      "successful": 71,
+      "charged_probe_steps": 1536,
+      "charged_direction_resets": 384,
+      "mean_steps_excluding_resets": 194.40625,
+      "mean_additional_direction_resets": 4.0
+    },
+    "STALE": {
+      "episodes": 96,
+      "successful": 71,
+      "charged_probe_steps": 512,
+      "charged_direction_resets": 128,
+      "mean_steps_excluding_resets": 183.53125,
+      "mean_additional_direction_resets": 1.3333333333333333
+    },
+    "UNCORRECTED": {
+      "episodes": 96,
+      "successful": 41,
+      "charged_probe_steps": 0,
+      "charged_direction_resets": 0,
+      "mean_steps_excluding_resets": 333.2708333333333,
+      "mean_additional_direction_resets": 0.0
+    }
+  },
+  "candidate_minus_fixed16_cost": {
+    "intercept_task_plus_probe_steps": 24.47916666666667,
+    "slope_per_reset_step_equivalent": 5.291666666666666,
+    "dominated_for_every_nonnegative_uniform_reset_cost": true
+  },
+  "experiment_run_id": "evidence_refresh_20261013T092539Z_ac3fa90f6d20",
+  "manifest_id": "2cf32cb330906f2df423b24800d7fe5fb1389c8f94456aeb5da062569891a96b",
+  "source_git_commit": "ac3fa90f6d20f433675ebbf497af281a814807c5",
+  "source_outcomes_sha256": "bbb951f8d779399bfa7951f8b122897445a8f7a0e46ee359c6fe7973b043b955",
+  "explicit_collection_reset_calls": {
+    "initial_state_inspections": 96,
+    "direction_probes": 1536,
+    "task_branches": 332,
+    "total": 1964
+  },
+  "semantics": "Source-derived explicit reset calls, not measured robot time; internal constructor work excluded."
+}

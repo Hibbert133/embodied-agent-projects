@@ -1,0 +1,22 @@
+{
+  "protocol_id": "calibrated_continuous_task_utility_v1",
+  "seed_start": 9100,
+  "num_seeds": 16,
+  "reserved_seeds": [9116, 9399],
+  "conditions": ["fault_01", "fault_02", "fault_03", "fault_04"],
+  "methods": ["NO_PROBE", "CONT_NO_CORRECTION", "CONT_DYNAMIC", "PRIOR_AFFINE", "PRIOR_NEAREST"],
+  "noise_std": 0.05,
+  "total_steps": 500,
+  "probe_steps": 16,
+  "post_probe_reserve": 484,
+  "offline_steps": 2304,
+  "offline_resets": 144,
+  "maximum_physical_steps": 160000,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261013,
+  "calibration_manifest": "outputs/response_calibration/development_v1/response_calibration_20261013T105913Z_bfbd86c7c1dd/manifest.json",
+  "model_path": "outputs/response_calibration/development_v1/response_calibration_20261013T105913Z_bfbd86c7c1dd/model.json",
+  "output_root": "outputs/calibrated_tasks/development_v1",
+  "api_calls": 0,
+  "memory_writes": 0
+}

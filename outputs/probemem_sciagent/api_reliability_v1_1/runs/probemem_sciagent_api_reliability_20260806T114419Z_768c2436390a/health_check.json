@@ -1,0 +1,62 @@
+{
+  "cache_hit": false,
+  "certified_decision": {
+    "certificate": {
+      "alternative_skill": null,
+      "bound_decision_mode": "ABSTAIN",
+      "bound_selected_skill": null,
+      "counterevidence_summary": "No supplied principles, experiences, or probe records establish that BOUNDED_PLANAR_COMPENSATION or INDEPENDENT_STOCHASTIC_RETRY would safely improve API health; evidence quality is intentionally insufficient.",
+      "current_evidence_id": "api_health_check_evidence",
+      "decision_basis": "ABSTENTION_SAFETY",
+      "grounding_claim": "INSUFFICIENT_EVIDENCE",
+      "supporting_evidence_ids": [
+        "api_health_check_evidence"
+      ],
+      "supporting_experience_ids": [],
+      "supporting_principle_ids": [],
+      "supporting_probe_record_ids": []
+    },
+    "decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION utility for API health is untested",
+        "INDEPENDENT_STOCHASTIC_RETRY utility for API health is untested"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "API health-check evidence is intentionally insufficient; no supporting principles, experiences, or probe records are available.",
+      "expected_effect": "No skill executed; no robot control emitted.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "ABSTENTION_SAFETY: insufficient evidence for safe skill selection.",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Intentionally insufficient evidence and empty scientific memory prevent bounding utility or safety of either registered skill."
+    }
+  },
+  "error": null,
+  "fail_closed_decision": {
+    "candidate_hypotheses": [
+      "BOUNDED_PLANAR_COMPENSATION utility for API health is untested",
+      "INDEPENDENT_STOCHASTIC_RETRY utility for API health is untested"
+    ],
+    "decision_mode": "ABSTAIN",
+    "evidence_summary": "API health-check evidence is intentionally insufficient; no supporting principles, experiences, or probe records are available.",
+    "expected_effect": "No skill executed; no robot control emitted.",
+    "predicted_success_probability": 0.0,
+    "probe_justification_codes": [],
+    "retrieved_experience_ids": [],
+    "retrieved_hypothesis_ids": [],
+    "retrieved_principle_ids": [],
+    "selected_probe_type": null,
+    "selected_skill": null,
+    "stop_reason": "ABSTENTION_SAFETY: insufficient evidence for safe skill selection.",
+    "tested_hypothesis_ids": [],
+    "uncertainty_reason": "Intentionally insufficient evidence and empty scientific memory prevent bounding utility or safety of either registered skill."
+  },
+  "repaired": true,
+  "request_hash": "93c0e43e04e348467f583ed422cc702670f3151d06e4ce9848a77b0fbd82c7db",
+  "valid": true
+}

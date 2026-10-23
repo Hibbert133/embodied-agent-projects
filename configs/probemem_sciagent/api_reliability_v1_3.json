@@ -1,0 +1,46 @@
+{
+  "protocol_id": "probemem_sciagent_capability_contract_v1_3",
+  "protocol_version": 3,
+  "status": "SHADOW_FROZEN_BEFORE_EXECUTION",
+  "split": "development_shadow",
+  "seed_registry": "configs/probemem_sciagent/seed_registry_v4.json",
+  "seed_range": [6150, 6199],
+  "maximum_initial_units": 50,
+  "target_operational_cases": 8,
+  "minimum_operational_cases": 8,
+  "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "mandatory_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "budget": {"initial_max_steps": 500, "mandatory_probe_max_steps": 64, "maximum_environment_steps_per_unit": 564},
+  "api": {
+    "model": "glm-5.2",
+    "timeout_seconds": 300,
+    "max_tokens": 1500,
+    "health_check_primary_calls": 1,
+    "case_primary_calls": 8,
+    "maximum_schema_repairs": 1,
+    "maximum_total_calls": 10,
+    "maximum_consecutive_logical_failures": 2,
+    "cache_identical_read_only_requests": true,
+    "transport_retries": 0,
+    "response_envelope_mode": "UNIQUE_CERTIFIED_OBJECT",
+    "capability_contract_mode": "PER_REQUEST_TOKENS_V1"
+  },
+  "success_gate": {
+    "health_check_valid": true,
+    "minimum_certified_valid_outputs": 7,
+    "minimum_grounded_output_rate": 0.875,
+    "maximum_fail_closed_outputs": 1,
+    "maximum_repairs": 1,
+    "maximum_integrity_violations": 0
+  },
+  "random_namespaces": {"initial": 26151, "mandatory_probe": 26152},
+  "output_root": "outputs/probemem_sciagent/api_reliability_v1_3/runs",
+  "claim_boundary": "shadow_capability_contract_only_no_action_execution_or_recovery_claim",
+  "prohibitions": {"action_execution": true, "memory_write": true, "principle_update": true, "micro_probe_execution": true, "paired_outcome_collection": true, "validation": true, "heldout": true}
+}

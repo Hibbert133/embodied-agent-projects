@@ -1,0 +1,211 @@
+{
+  "experiment_run_id": "short_probe_reference_20261019T042309Z_39300e556379",
+  "manifest_id": "470c763b64db660ba5f0f075508f625bda894cbadd597aab8ae7cc84cb84576f",
+  "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "phase": "SMOKE",
+  "actual_lifecycle": {
+    "counts": {
+      "reset_attempts": 3213,
+      "simulation_attempts": 329515,
+      "simulation_frames_attempted": 1647575,
+      "simulation_completed": 329515,
+      "simulation_frames_completed": 1647575,
+      "reset_completed": 3213
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 3150,
+        "simulation_attempts": 315000,
+        "simulation_frames_attempted": 1575000,
+        "simulation_completed": 315000,
+        "simulation_frames_completed": 1575000,
+        "reset_completed": 3150
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 63,
+        "simulation_attempts": 6300,
+        "simulation_frames_attempted": 31500,
+        "simulation_completed": 6300,
+        "simulation_frames_completed": 31500,
+        "reset_completed": 63
+      },
+      "CONTROL": {
+        "simulation_attempts": 8215,
+        "simulation_frames_attempted": 41075,
+        "simulation_completed": 8215,
+        "simulation_frames_completed": 41075
+      }
+    }
+  },
+  "methods": {
+    "NO_PROBE": {
+      "executions": 9,
+      "online_environment_steps": 1995,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 239475,
+      "full_prior_nominal_source": {
+        "environment_steps": 0,
+        "controlled_resets": 0,
+        "all_reset_calls": 0,
+        "simulation_frames": 0
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 0.0,
+      "total_steps": 1995,
+      "fixed_probe_steps": 0,
+      "policy_steps": 1995,
+      "online_parameter_fits": 0,
+      "optimizer_nfev": 0,
+      "policy_queries": 1995,
+      "design_verification_candidates": 0
+    },
+    "ORIGINAL8_UPDATE": {
+      "executions": 9,
+      "online_environment_steps": 1038,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 234690,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 426.6666666666667,
+      "total_steps": 1038,
+      "fixed_probe_steps": 72,
+      "policy_steps": 966,
+      "online_parameter_fits": 9,
+      "optimizer_nfev": 9,
+      "policy_queries": 966,
+      "design_verification_candidates": 0
+    },
+    "BALANCED4_UPDATE": {
+      "executions": 9,
+      "online_environment_steps": 1043,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 234715,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 426.6666666666667,
+      "total_steps": 1043,
+      "fixed_probe_steps": 36,
+      "policy_steps": 1007,
+      "online_parameter_fits": 9,
+      "optimizer_nfev": 9,
+      "policy_queries": 1007,
+      "design_verification_candidates": 0
+    },
+    "DOPT4_UPDATE": {
+      "executions": 9,
+      "online_environment_steps": 1024,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 234620,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 426.6666666666667,
+      "total_steps": 1024,
+      "fixed_probe_steps": 36,
+      "policy_steps": 988,
+      "online_parameter_fits": 9,
+      "optimizer_nfev": 9,
+      "policy_queries": 988,
+      "design_verification_candidates": 1296
+    },
+    "DOPT8_UPDATE": {
+      "executions": 9,
+      "online_environment_steps": 1034,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 234670,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 426.6666666666667,
+      "total_steps": 1034,
+      "fixed_probe_steps": 72,
+      "policy_steps": 962,
+      "online_parameter_fits": 9,
+      "optimizer_nfev": 9,
+      "policy_queries": 962,
+      "design_verification_candidates": 1296
+    },
+    "DOPT4_KEEP_AT8": {
+      "executions": 9,
+      "online_environment_steps": 1057,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 234785,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 426.6666666666667,
+      "total_steps": 1057,
+      "fixed_probe_steps": 72,
+      "policy_steps": 985,
+      "online_parameter_fits": 9,
+      "optimizer_nfev": 9,
+      "policy_queries": 985,
+      "design_verification_candidates": 1296
+    },
+    "DOPT4_FALLBACK8": {
+      "executions": 9,
+      "online_environment_steps": 1024,
+      "online_controlled_resets": 9,
+      "online_all_reset_calls": 459,
+      "online_simulation_frames": 234620,
+      "full_prior_nominal_source": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "source_amortization_units": 9,
+      "prior_source_steps_per_unit": 426.6666666666667,
+      "total_steps": 1024,
+      "fixed_probe_steps": 36,
+      "policy_steps": 988,
+      "online_parameter_fits": 9,
+      "optimizer_nfev": 9,
+      "policy_queries": 988,
+      "design_verification_candidates": 1296
+    }
+  },
+  "shared_historical_nominal_source_paid_once": {
+    "environment_steps": 3840,
+    "controlled_resets": 480,
+    "all_reset_calls": 24480,
+    "simulation_frames": 12259200
+  },
+  "prior_nominal_design_preparation": {
+    "enumerations": 3,
+    "candidate_rows": 432
+  },
+  "collection_wall_ns": 126769642000,
+  "new_api_calls": 0,
+  "new_nominal_training": 0,
+  "new_selector_fits": 0,
+  "source_fees_are_historical_not_new_collection": true
+}

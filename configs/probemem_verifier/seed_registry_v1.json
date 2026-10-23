@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "registry_id": "probemem_verifier_seed_registry_v1",
+  "inherits": "configs/probemem_online/seed_registry_v2.json",
+  "historical_partitions_immutable": true,
+  "new_partitions": {
+    "verifier_demo_development": [4700, 4749],
+    "verifier_demo_future_reserved": [4750, 4799]
+  },
+  "blocked_historical": [[3100, 3199], [3950, 3999], [4600, 4699]],
+  "notes": "Seeds 4700--4749 are authorized only for the ProbeMem verifier feasibility demo. Seeds 4750--4799 remain unexecuted and reserved."
+}

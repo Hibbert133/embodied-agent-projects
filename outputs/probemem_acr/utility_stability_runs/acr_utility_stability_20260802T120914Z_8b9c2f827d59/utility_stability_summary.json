@@ -1,0 +1,54 @@
+{
+  "experiment_run_id": "acr_utility_stability_20260802T120914Z_8b9c2f827d59",
+  "manifest_id": "9cc531eecc45cfe63790729ccf52c3b2994c8e46e46b7e31ddc9c13dea339cda",
+  "source_git_commit": "8b9c2f827d593a29ca389da863d02f99b6ebbded",
+  "claim_scope": "development-only repeated paired counterfactual study of intervention-utility identifiability under stochastic execution",
+  "initial_units_scanned": 45,
+  "operational_cases": 20,
+  "verification_repetitions": 6,
+  "candidate_rollouts": 240,
+  "stable_preference_cases": 11,
+  "realization_winner_reversal_cases": 18,
+  "leave_one_realization_out": {
+    "correct": 77,
+    "comparable": 120,
+    "winner_reliability": 0.6416666666666667,
+    "bootstrap_ci95": {
+      "low": 0.55,
+      "high": 0.7333333333333333
+    }
+  },
+  "action_outcomes": {
+    "BOUNDED_PLANAR_COMPENSATION": {
+      "counts": {
+        "ACCEPTED": 61,
+        "INCONCLUSIVE": 26,
+        "REJECTED": 33
+      },
+      "accepted_rate": 0.5083333333333333,
+      "mean_within_state_status_entropy": 0.6347069898902341
+    },
+    "INDEPENDENT_STOCHASTIC_RETRY": {
+      "counts": {
+        "REJECTED": 20,
+        "INCONCLUSIVE": 18,
+        "ACCEPTED": 82
+      },
+      "accepted_rate": 0.6833333333333333,
+      "mean_within_state_status_entropy": 0.5939346285231119
+    }
+  },
+  "integrity": {
+    "chronology_violations": 0,
+    "oracle_leakage_events": 0,
+    "budget_violations": 0,
+    "random_stream_violations": 0,
+    "pair_completeness_violations": 0
+  },
+  "feasibility_gate_passed": false,
+  "selector_fitting_authorized": false,
+  "llm_authorized": false,
+  "validation_authorized": false,
+  "threshold_fitted": false,
+  "api_calls": 0
+}

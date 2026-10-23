@@ -1,0 +1,238 @@
+{
+  "experiment_run_id": "chronological_cache_reference_20261016T114510Z_88c168320712",
+  "manifest_id": "040f916d3425043fe091fcbba8d79ab54b896701bc86b287da47b3f37317f8c5",
+  "source_git_commit": "88c168320712dab2db6a4f3de12f515e69e2a4fa",
+  "phase": "MAIN",
+  "actual_executions": 4752,
+  "task_units_per_method": 432,
+  "physical_new_controlled_steps": 484275,
+  "physical_new_controlled_resets": 4752,
+  "physical_lifecycle": {
+    "counts": {
+      "reset_attempts": 242352,
+      "simulation_attempts": 24719475,
+      "simulation_frames_attempted": 123597375,
+      "simulation_completed": 24719475,
+      "simulation_frames_completed": 123597375,
+      "reset_completed": 242352
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 237600,
+        "simulation_attempts": 23760000,
+        "simulation_frames_attempted": 118800000,
+        "simulation_completed": 23760000,
+        "simulation_frames_completed": 118800000,
+        "reset_completed": 237600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 4752,
+        "simulation_attempts": 475200,
+        "simulation_frames_attempted": 2376000,
+        "simulation_completed": 475200,
+        "simulation_frames_completed": 2376000,
+        "reset_completed": 4752
+      },
+      "CONTROL": {
+        "simulation_attempts": 484275,
+        "simulation_frames_attempted": 2421375,
+        "simulation_completed": 484275,
+        "simulation_frames_completed": 2421375
+      }
+    }
+  },
+  "per_method_source_and_online": [
+    {
+      "method": "NO_PROBE",
+      "actual_online_steps": 65122,
+      "offline_source_steps": 0,
+      "offline_source_controlled_resets": 0,
+      "mean_amortized_actual_steps": 150.74537037037038,
+      "online_parameter_fits": 0,
+      "optimizer_nfev": 0,
+      "cache_writes": 0
+    },
+    {
+      "method": "ALWAYS8",
+      "actual_online_steps": 39333,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 99.9375,
+      "online_parameter_fits": 432,
+      "optimizer_nfev": 432,
+      "cache_writes": 420
+    },
+    {
+      "method": "ALWAYS16_OLD",
+      "actual_online_steps": 41934,
+      "offline_source_steps": 21010,
+      "offline_source_controlled_resets": 288,
+      "mean_amortized_actual_steps": 145.7037037037037,
+      "online_parameter_fits": 432,
+      "optimizer_nfev": 432,
+      "cache_writes": 421
+    },
+    {
+      "method": "STALE",
+      "actual_online_steps": 41766,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 105.56944444444444,
+      "online_parameter_fits": 55,
+      "optimizer_nfev": 55,
+      "cache_writes": 54
+    },
+    {
+      "method": "PERIODIC4",
+      "actual_online_steps": 41196,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 104.25,
+      "online_parameter_fits": 120,
+      "optimizer_nfev": 120,
+      "cache_writes": 117
+    },
+    {
+      "method": "PASSIVE_RECENT8",
+      "actual_online_steps": 54408,
+      "offline_source_steps": 21010,
+      "offline_source_controlled_resets": 288,
+      "mean_amortized_actual_steps": 174.5787037037037,
+      "online_parameter_fits": 432,
+      "optimizer_nfev": 2062,
+      "cache_writes": 45
+    },
+    {
+      "method": "CUSUM4",
+      "actual_online_steps": 41067,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 103.95138888888889,
+      "online_parameter_fits": 63,
+      "optimizer_nfev": 63,
+      "cache_writes": 61
+    },
+    {
+      "method": "PLUGIN4",
+      "actual_online_steps": 39517,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 100.36342592592592,
+      "online_parameter_fits": 119,
+      "optimizer_nfev": 119,
+      "cache_writes": 113
+    },
+    {
+      "method": "UNCERTAINTY4",
+      "actual_online_steps": 40804,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 103.3425925925926,
+      "online_parameter_fits": 79,
+      "optimizer_nfev": 79,
+      "cache_writes": 76
+    },
+    {
+      "method": "BALANCED4",
+      "actual_online_steps": 39490,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 100.30092592592592,
+      "online_parameter_fits": 84,
+      "optimizer_nfev": 84,
+      "cache_writes": 81
+    },
+    {
+      "method": "TASK_IVR4",
+      "actual_online_steps": 39638,
+      "offline_source_steps": 3840,
+      "offline_source_controlled_resets": 480,
+      "mean_amortized_actual_steps": 100.64351851851852,
+      "online_parameter_fits": 400,
+      "optimizer_nfev": 400,
+      "cache_writes": 388
+    }
+  ],
+  "source_fee_interpretation": "Full source per standalone method; shared raw source was collected once, not once per reference.",
+  "old_source_factory_cost": "UNKNOWN_NOT_ZERO",
+  "joint_source_summary_reference": {
+    "path": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/summary.json",
+    "sha256": "8c5f1961d2984bad4952d2ecbf205d255b80d8d122d3338ba4e5e9c0af397c24"
+  },
+  "joint_source_full_lifecycle": {
+    "counts": {
+      "reset_attempts": 24480,
+      "simulation_attempts": 2451840,
+      "simulation_frames_attempted": 12259200,
+      "simulation_completed": 2451840,
+      "simulation_frames_completed": 12259200,
+      "reset_completed": 24480
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 24000,
+        "simulation_attempts": 2400000,
+        "simulation_frames_attempted": 12000000,
+        "simulation_completed": 2400000,
+        "simulation_frames_completed": 12000000,
+        "reset_completed": 24000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 480,
+        "simulation_attempts": 48000,
+        "simulation_frames_attempted": 240000,
+        "simulation_completed": 48000,
+        "simulation_frames_completed": 240000,
+        "reset_completed": 480
+      },
+      "CONTROL": {
+        "simulation_attempts": 3840,
+        "simulation_frames_attempted": 19200,
+        "simulation_completed": 3840,
+        "simulation_frames_completed": 19200
+      }
+    }
+  },
+  "new_nominal_model_fits": 0,
+  "policy_weight_updates": 0,
+  "api_calls": 0,
+  "stops_keep_500_deadline_loss_actual_cost_not_imputed": true,
+  "separate_smoke_physical_cost": {
+    "controlled_steps": 7370,
+    "controlled_resets": 66,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 3366,
+        "simulation_attempts": 343970,
+        "simulation_frames_attempted": 1719850,
+        "simulation_completed": 343970,
+        "simulation_frames_completed": 1719850,
+        "reset_completed": 3366
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 3300,
+          "simulation_attempts": 330000,
+          "simulation_frames_attempted": 1650000,
+          "simulation_completed": 330000,
+          "simulation_frames_completed": 1650000,
+          "reset_completed": 3300
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 66,
+          "simulation_attempts": 6600,
+          "simulation_frames_attempted": 33000,
+          "simulation_completed": 6600,
+          "simulation_frames_completed": 33000,
+          "reset_completed": 66
+        },
+        "CONTROL": {
+          "simulation_attempts": 7370,
+          "simulation_frames_attempted": 36850,
+          "simulation_completed": 7370,
+          "simulation_frames_completed": 36850
+        }
+      }
+    }
+  }
+}

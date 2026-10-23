@@ -1,0 +1,34 @@
+{
+  "integrity": "SOURCE_BOUND_DESCRIPTIVE_REPORT",
+  "manifest_id": "29fbdbceba0312e4aaada453f3665f817d69c9311edce50cb880704a18b6e907",
+  "report": "reports/latent_response_diagnosis_v1_zh.md",
+  "report_sha256": "f86489a7d03a4844c8a7f168efb9b9cbe9ccda9149da30f8cd9faab411eb744e",
+  "decision": "docs/research/latent_response_diagnosis_decision_v1_zh.md",
+  "decision_sha256": "9196bb52bd1ba6e510494062e57673fa989887dfe994a4e07c0ccedd63e81fe1",
+  "diagnostic_audit_sha256": "f23b3c594a5748c866e43a38839b8d234f10dada09ae2ba61fa1ea3c121cc51d",
+  "TRAIN_counterevidence": [
+    {
+      "task": "push-v3",
+      "SS_TRAIN_objective_m2": 1.0273789453544255e-06,
+      "ridge_TRAIN_objective_m2": 1.5664754035457367e-06,
+      "network_already_worse_on_TRAIN": false
+    },
+    {
+      "task": "reach-v3",
+      "SS_TRAIN_objective_m2": 1.2200393326117138e-06,
+      "ridge_TRAIN_objective_m2": 1.9315306681377758e-06,
+      "network_already_worse_on_TRAIN": false
+    },
+    {
+      "task": "door-open-v3",
+      "SS_TRAIN_objective_m2": 1.7470031411032273e-06,
+      "ridge_TRAIN_objective_m2": 3.115967866228743e-06,
+      "network_already_worse_on_TRAIN": false
+    }
+  ],
+  "wall_ns": 5546459600,
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "publication_goal_complete": false
+}

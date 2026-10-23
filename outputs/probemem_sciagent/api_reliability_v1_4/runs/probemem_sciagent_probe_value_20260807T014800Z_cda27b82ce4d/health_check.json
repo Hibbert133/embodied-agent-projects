@@ -1,0 +1,62 @@
+{
+  "cache_hit": false,
+  "certified_decision": {
+    "certificate": {
+      "alternative_skill": null,
+      "bound_decision_mode": "ABSTAIN",
+      "bound_selected_skill": null,
+      "counterevidence_summary": "No supporting principles, experiences, or hypotheses exist in scientific memory; evidence is explicitly marked INTENTIONALLY_INSUFFICIENT; neither BOUNDED_PLANAR_COMPENSATION nor INDEPENDENT_STOCHASTIC_RETRY can be grounded.",
+      "current_evidence_id": "api_health_check_evidence",
+      "decision_basis": "ABSTENTION_SAFETY",
+      "grounding_claim": "INSUFFICIENT_EVIDENCE",
+      "supporting_evidence_ids": [
+        "api_health_check_evidence"
+      ],
+      "supporting_experience_ids": [],
+      "supporting_principle_ids": [],
+      "supporting_probe_record_ids": []
+    },
+    "decision": {
+      "candidate_hypotheses": [
+        "BOUNDED_PLANAR_COMPENSATION",
+        "INDEPENDENT_STOCHASTIC_RETRY"
+      ],
+      "decision_mode": "ABSTAIN",
+      "evidence_summary": "API health check evidence is intentionally insufficient; scientific memory contains no principles, experiences, or hypotheses to support any skill selection.",
+      "expected_effect": "No skill action can be justified; abstention prevents unsafe or ungrounded robot control.",
+      "predicted_success_probability": 0.0,
+      "probe_justification_codes": [],
+      "retrieved_experience_ids": [],
+      "retrieved_hypothesis_ids": [],
+      "retrieved_principle_ids": [],
+      "selected_probe_type": null,
+      "selected_skill": null,
+      "stop_reason": "Insufficient evidence and empty scientific memory preclude safe skill selection; abstention required for safety.",
+      "tested_hypothesis_ids": [],
+      "uncertainty_reason": "Evidence quality is INTENTIONALLY_INSUFFICIENT and scientific memory is empty; no basis exists to select or evaluate either registered skill."
+    }
+  },
+  "error": null,
+  "fail_closed_decision": {
+    "candidate_hypotheses": [
+      "BOUNDED_PLANAR_COMPENSATION",
+      "INDEPENDENT_STOCHASTIC_RETRY"
+    ],
+    "decision_mode": "ABSTAIN",
+    "evidence_summary": "API health check evidence is intentionally insufficient; scientific memory contains no principles, experiences, or hypotheses to support any skill selection.",
+    "expected_effect": "No skill action can be justified; abstention prevents unsafe or ungrounded robot control.",
+    "predicted_success_probability": 0.0,
+    "probe_justification_codes": [],
+    "retrieved_experience_ids": [],
+    "retrieved_hypothesis_ids": [],
+    "retrieved_principle_ids": [],
+    "selected_probe_type": null,
+    "selected_skill": null,
+    "stop_reason": "Insufficient evidence and empty scientific memory preclude safe skill selection; abstention required for safety.",
+    "tested_hypothesis_ids": [],
+    "uncertainty_reason": "Evidence quality is INTENTIONALLY_INSUFFICIENT and scientific memory is empty; no basis exists to select or evaluate either registered skill."
+  },
+  "repaired": false,
+  "request_hash": "12e3c6fcdb530c0af2e432a1565e07f6e26cf99889aeb76d682a178e4770ff4e",
+  "valid": true
+}

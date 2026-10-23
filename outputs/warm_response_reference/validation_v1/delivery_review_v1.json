@@ -1,0 +1,195 @@
+{
+  "status": "PASSED_SOFTWARE_REFERENCE_ONLY",
+  "created_utc": "2026-10-19T12:37:47.128231+00:00",
+  "parent_commit": "116e502df603baaae4d2c435160c604e567d4e3c",
+  "previous_goal_turn": {
+    "classification": "progress",
+    "evidence": "116e502 committed nine real cases and independent physical-reprobe audit"
+  },
+  "checks": {
+    "unittest": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 267804607400,
+      "output_sha256": "e7dafa99abb0de5505e32dba697b153bd3345347c2bb1f62a1e7c4326d9edd2d",
+      "created_utc": "2026-10-19T12:36:27.270774+00:00",
+      "source_sha256": "8da5c703b2fb70394ce72dd8435d43ebca776e24b515448521ee898be9fca80a"
+    },
+    "compileall": {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 676978900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T12:33:27.414060+00:00",
+      "source_sha256": "8da5c703b2fb70394ce72dd8435d43ebca776e24b515448521ee898be9fca80a"
+    },
+    "pip_check": {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 906548200,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T12:33:27.667703+00:00",
+      "source_sha256": "8da5c703b2fb70394ce72dd8435d43ebca776e24b515448521ee898be9fca80a"
+    },
+    "tracked_secret_scan": {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 58992097100,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T12:35:41.811671+00:00",
+      "source_sha256": "8da5c703b2fb70394ce72dd8435d43ebca776e24b515448521ee898be9fca80a"
+    },
+    "diff_check": {
+      "check": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 36434300,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T12:36:58.235560+00:00",
+      "source_sha256": "8da5c703b2fb70394ce72dd8435d43ebca776e24b515448521ee898be9fca80a"
+    }
+  },
+  "files": [
+    {
+      "path": "docs/paper/check_relocation_stale_equilibrium_20261019.py",
+      "sha256": "35cd85408ef7d6695875e3101feff9fbcc98e28e6f48a95eed7d57cd915397fd",
+      "bytes": 3532
+    },
+    {
+      "path": "docs/research/warm_response_reference_v1_zh.md",
+      "sha256": "7ba0e764b276b74d8e4c4c2b0ef3e2f12a4cc5dd4a6f4ebd1be9361dfa1763db",
+      "bytes": 6776
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/.gitattributes",
+      "sha256": "0ccf672399ac091ce1068f620210f11afa2987a167b6c33268d842e425c9ab6d",
+      "bytes": 65
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/compileall.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/compileall_receipt.json",
+      "sha256": "18db9dc437b99e62981414e566e411a466bce1e687c18a2dc89e06d4d93422e8",
+      "bytes": 485
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/diff_check_receipt.json",
+      "sha256": "b20b81604e71fe0f167ceafff7be3051862e1a5e4abb7d9e22e27f93cafd72b4",
+      "bytes": 351
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/pip_check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/pip_check_receipt.json",
+      "sha256": "43f01d3057ce4ae34a2d4e9b599dcc5dc9e754350c157bf57c5a7868de2691e8",
+      "bytes": 441
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/relocation_counterexample.json",
+      "sha256": "fbd6aef5ef39a8da932cdda19e6a909d47ea90a2a72447f77e3cf8fa736640fa",
+      "bytes": 259768
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/run_checks.py",
+      "sha256": "8da5c703b2fb70394ce72dd8435d43ebca776e24b515448521ee898be9fca80a",
+      "bytes": 3264
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/tracked_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/tracked_secret_scan_receipt.json",
+      "sha256": "8f32dc29458595888030973a2b15dc0521fdf5e2a9cb99fb4865baf736d0b8dd",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/unittest.txt",
+      "sha256": "e7dafa99abb0de5505e32dba697b153bd3345347c2bb1f62a1e7c4326d9edd2d",
+      "bytes": 143172
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/unittest_native_costs.json",
+      "sha256": "94be9791909ed3d098673789592c11b0074a20adcc6b5e6d2b168d015a7031ff",
+      "bytes": 98708
+    },
+    {
+      "path": "outputs/warm_response_reference/validation_v1/unittest_receipt.json",
+      "sha256": "5c8c72163c859b9e21c2bc8c4ac18ac0f5c03aaa2607a6bdd3d962742659b506",
+      "bytes": 484
+    },
+    {
+      "path": "src/probe/warm_response_reference_v1.py",
+      "sha256": "a526413a0b76d2c9d1cfc9fa8ce7b2b4aa6489bfd7d9d14ff0646fcdd5d3bb7e",
+      "bytes": 12561
+    },
+    {
+      "path": "tests/test_warm_response_reference_v1.py",
+      "sha256": "dd624b8720082c99689cd51340c1b2d13f5dae0ed942e3aaba767a0fde96a4cb",
+      "bytes": 8957
+    }
+  ],
+  "tests_passed": 1199,
+  "new_tests": 12,
+  "unchanged_old_bound_files": 1032,
+  "index_bytes_match_working": true,
+  "strict_utf8_index_secret_scan": "PASSED",
+  "new_scientific_metaworld_cases": 0,
+  "new_scientific_seeds": 0,
+  "new_api_calls": 0,
+  "counterexample_scope": "IDEALIZED_KINEMATIC_COUNTEREXAMPLE_ONLY",
+  "standalone_synthetic_callback_steps": [
+    64,
+    16
+  ],
+  "early_targeted_test_note": "Interactive attempts exposed a NumPy scalar fixture mismatch, an input/history scaling issue, and an incorrect rank-loss fixture; fixed before scientific data. These mathematical attempts had no native physics or API calls; their output is in the session transcript, not the final full-suite log.",
+  "next_required_scientific_check": "Relocation with stale correction after an evaluator-only actuator change, before broad warm calibration.",
+  "physical_model_qualified": false,
+  "task_utility_demonstrated": false,
+  "publication_goal_complete": false
+}

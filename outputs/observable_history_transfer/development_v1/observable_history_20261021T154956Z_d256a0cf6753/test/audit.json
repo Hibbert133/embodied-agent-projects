@@ -1,0 +1,61 @@
+{
+  "experiment_run_id": "observable_history_20261021T154956Z_d256a0cf6753",
+  "manifest_id": "210833e32b9ae18d9ad6f08eab55a4a2db9adebb00fc000686ea3e20a776ae5e",
+  "source_git_commit": "d256a0cf675377e1895e323648276a5309c0416b",
+  "integrity": "PASSED",
+  "split": "TEST",
+  "executions": 432,
+  "events_checked": 233278,
+  "witness_records_checked": 2160,
+  "common_pre_measurement_pairs": 216,
+  "common_pre_context_change_pairs": 216,
+  "post_measurement_diverged_pairs": 182,
+  "costs": {
+    "steps": 42008,
+    "measurement_steps": 2912,
+    "policy_queries": 24746,
+    "independent_cold_fit_recomputations": 864,
+    "independent_cold_fit_nfev": 864
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 22032,
+      "simulation_attempts": 2245208,
+      "simulation_completed": 2245208,
+      "simulation_frames_attempted": 11226040,
+      "simulation_frames_completed": 11226040,
+      "reset_completed": 22032
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 21600,
+        "simulation_attempts": 2160000,
+        "simulation_completed": 2160000,
+        "simulation_frames_attempted": 10800000,
+        "simulation_frames_completed": 10800000,
+        "reset_completed": 21600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 432,
+        "simulation_attempts": 43200,
+        "simulation_completed": 43200,
+        "simulation_frames_attempted": 216000,
+        "simulation_frames_completed": 216000,
+        "reset_completed": 432
+      },
+      "CONTROL": {
+        "simulation_attempts": 42008,
+        "simulation_completed": 42008,
+        "simulation_frames_attempted": 210040,
+        "simulation_frames_completed": 210040
+      }
+    }
+  },
+  "completion_sha256": "a05af72b3f288409e8412a2e3fe9509cc64be9e145b2780d79150582c1e7cdba",
+  "source_sha256": "8a3e9e36004ca95ff9b262098786c86bf18d733fa6a8e0371a1ba0cba56c9b9d",
+  "wall_ns": 202974279500,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_model_fits": 0,
+  "scope": "Source-generated native/Python witnesses, not independent physics reproduction."
+}

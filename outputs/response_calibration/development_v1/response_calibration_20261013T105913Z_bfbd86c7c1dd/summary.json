@@ -1,0 +1,54 @@
+{
+  "experiment_run_id": "response_calibration_20261013T105913Z_bfbd86c7c1dd",
+  "manifest_id": "9570d7f92be1dd26896d0818e488cbc1ea5b64149f11495331b0410476c4d9a5",
+  "source_git_commit": "bfbd86c7c1dd6e149a1afa981ade61da9bd052cf",
+  "status": "COMPLETED_QUALIFICATION_PASS",
+  "training_trials": 72,
+  "qualification_trials": 72,
+  "physical_steps": 2304,
+  "environment_resets": 144,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "model_sha256": "3d804711cfd7c17a993ebb96dc3dc4ba80c30c5026a349f2ac33b8dbccc6f037",
+  "statistics": {
+    "methods": {
+      "affine": {
+        "mean_error": 0.01746859255078441,
+        "median_error": 0.01687830552117028,
+        "p90_error": 0.031794659623559283,
+        "per_seed_mean": {
+          "8908": 0.02264904008932229,
+          "8909": 0.016289144014971706,
+          "8910": 0.019458415782054928,
+          "8911": 0.01507457533765614,
+          "8912": 0.015786883006275454,
+          "8913": 0.020182270731352186,
+          "8914": 0.01474878073896408,
+          "8915": 0.015559630705678507
+        }
+      },
+      "nearest": {
+        "mean_error": 0.05364919027495769,
+        "median_error": 0.05000000000000002,
+        "p90_error": 0.07071067811865478,
+        "per_seed_mean": {
+          "8908": 0.05364919027495769,
+          "8909": 0.05364919027495769,
+          "8910": 0.05364919027495769,
+          "8911": 0.05364919027495769,
+          "8912": 0.05364919027495769,
+          "8913": 0.05364919027495769,
+          "8914": 0.05364919027495769,
+          "8915": 0.05364919027495769
+        }
+      }
+    },
+    "gates": {
+      "mean_error": true,
+      "p90_error": true
+    },
+    "gate_passed": true,
+    "qualification_trials": 72,
+    "mean_feature_reconstruction_rmse": 0.0003061208995994269
+  }
+}

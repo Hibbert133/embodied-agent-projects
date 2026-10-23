@@ -1,0 +1,367 @@
+{
+  "status": "PASSED_SOFTWARE_BEFORE_STALE_COLLECTION",
+  "created_utc": "2026-10-19T12:55:44.682899+00:00",
+  "parent_commit": "ed3afaf4a7f85785ef61978b6f2e639ca95acb36",
+  "previous_goal_turn": {
+    "classification": "progress",
+    "evidence": "ed3afaf committed warm reference and executable stale-relocation counterexample"
+  },
+  "tests_passed": 1215,
+  "new_tests": 16,
+  "checks": {
+    "unittest": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 293904656300,
+      "output_sha256": "9a550cdba69f2e0cc082264b63dbf0947d172f3efadc5dc5b68294ed8c6438b3",
+      "created_utc": "2026-10-19T12:54:31.403821+00:00",
+      "source_sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752"
+    },
+    "compileall": {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 673630800,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T12:50:44.439820+00:00",
+      "source_sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752"
+    },
+    "pip_check": {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 880011000,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T12:50:44.667412+00:00",
+      "source_sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752"
+    },
+    "tracked_secret_scan": {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 55812713000,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T12:52:29.952696+00:00",
+      "source_sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752"
+    },
+    "diff_check": {
+      "check": "diff_check",
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 36827900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T12:55:30.648482+00:00",
+      "source_sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752"
+    }
+  },
+  "files": [
+    {
+      "path": "configs/stale_reprobe/qualification_v1.json",
+      "sha256": "2e111174853e95bba840f0f3475b83e5a9be449eb8a29e4d5c93fb7063b37ecd",
+      "bytes": 4446
+    },
+    {
+      "path": "docs/protocols/stale_reprobe_execution_qualification_v1.md",
+      "sha256": "110caf6242399000744de31137b74e9798c97a0ecde8055561885b4ac84c5f19",
+      "bytes": 4364
+    },
+    {
+      "path": "outputs/stale_reprobe/qualification_v1/.gitattributes",
+      "sha256": "33f019d733cb609c6f7aa7333ed57a7fb608a68b7f2cbdd45f180612915495e6",
+      "bytes": 76
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/.gitattributes",
+      "sha256": "0ccf672399ac091ce1068f620210f11afa2987a167b6c33268d842e425c9ab6d",
+      "bytes": 65
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/compileall.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/compileall_receipt.json",
+      "sha256": "5314f3bafec9fa05f433a2713aa33a8fe101c596f035e3bd65108081c36e7ca4",
+      "bytes": 485
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/diff_check.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/diff_check_receipt.json",
+      "sha256": "38c40202838806bda4f5c5876df4dbf994b5843e69ac5eb6c99df455471ff4d6",
+      "bytes": 351
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/pip_check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "bytes": 31
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/pip_check_receipt.json",
+      "sha256": "9d4da773435aa22c81c2f04469dc572665e70deb899cdbd8dd02dced94801443",
+      "bytes": 441
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/run_checks.py",
+      "sha256": "695183441a3d0f218e53a145debd84a88fe2e26d682c0060200d9bc7285c9752",
+      "bytes": 3343
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/tracked_secret_scan.txt",
+      "sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "bytes": 29
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/tracked_secret_scan_receipt.json",
+      "sha256": "650761c1df575cbd66c9daf7bd10edaa8df4231ef0b4d7e8b326d0fd7cb22701",
+      "bytes": 475
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/unittest.txt",
+      "sha256": "9a550cdba69f2e0cc082264b63dbf0947d172f3efadc5dc5b68294ed8c6438b3",
+      "bytes": 145354
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/unittest_native_costs.json",
+      "sha256": "7a9e335544969951387f716445c5239994e526254660995df0f33f323d27e1bc",
+      "bytes": 143642
+    },
+    {
+      "path": "outputs/stale_reprobe/validation_v1/unittest_receipt.json",
+      "sha256": "cf400d3fc6558dea03d7094722bda26afc3a90f11691bf033c219c021d71bd5e",
+      "bytes": 484
+    },
+    {
+      "path": "scripts/audit_stale_reprobe_v1.py",
+      "sha256": "82d8295e58440031b24926cd27b4447ee7476c75f3a0e1850a772d673027377b",
+      "bytes": 39653
+    },
+    {
+      "path": "scripts/qualify_stale_reprobe_v1.py",
+      "sha256": "e7123a6a563cb9dd015c1e8cda695f55257116564e4e1e558109dadcbac8d394",
+      "bytes": 13908
+    },
+    {
+      "path": "src/analysis/stale_reprobe_context_v1.py",
+      "sha256": "2726b42ea9e68c86ec52508390fdda04c2d413e387d210cd10839b2c2457d2c4",
+      "bytes": 2278
+    },
+    {
+      "path": "src/analysis/stale_reprobe_io_v1.py",
+      "sha256": "f28e318b9b901c43ffc322f819218cdea9e2f697990ed1cb37b10a19196d1d39",
+      "bytes": 5437
+    },
+    {
+      "path": "tests/test_stale_reprobe_qualification_v1.py",
+      "sha256": "8a0a5b174126ab3f2fe4b1a36000ba9246d5c58682e94fa125a1b0a3f74e56eb",
+      "bytes": 15905
+    }
+  ],
+  "index_matches_working_bytes": true,
+  "strict_utf8_index_secret_scan": "PASSED",
+  "previous_manifest_inputs_unchanged": 1016,
+  "new_scientific_cases_executed": 0,
+  "new_api_calls": 0,
+  "stale_qualification_fixture_costs": [
+    {
+      "completed": true,
+      "partial_requested": false,
+      "native_frames": 257330,
+      "actual_policy_queries": 192,
+      "constructed_tiny_envs": 10,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 510,
+          "simulation_attempts": 51466,
+          "simulation_frames_attempted": 257330,
+          "simulation_completed": 51466,
+          "simulation_frames_completed": 257330,
+          "reset_completed": 510
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 500,
+            "simulation_attempts": 50000,
+            "simulation_frames_attempted": 250000,
+            "simulation_completed": 50000,
+            "simulation_frames_completed": 250000,
+            "reset_completed": 500
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 10,
+            "simulation_attempts": 1000,
+            "simulation_frames_attempted": 5000,
+            "simulation_completed": 1000,
+            "simulation_frames_completed": 5000,
+            "reset_completed": 10
+          },
+          "CONTROL": {
+            "simulation_attempts": 466,
+            "simulation_frames_attempted": 2330,
+            "simulation_completed": 466,
+            "simulation_frames_completed": 2330
+          }
+        }
+      }
+    },
+    {
+      "completed": true,
+      "partial_requested": true,
+      "native_frames": 25660,
+      "actual_policy_queries": 8,
+      "constructed_tiny_envs": 1,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 51,
+          "simulation_attempts": 5132,
+          "simulation_frames_attempted": 25660,
+          "simulation_completed": 5132,
+          "simulation_frames_completed": 25660,
+          "reset_completed": 51
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 50,
+            "simulation_attempts": 5000,
+            "simulation_frames_attempted": 25000,
+            "simulation_completed": 5000,
+            "simulation_frames_completed": 25000,
+            "reset_completed": 50
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 1,
+            "simulation_attempts": 100,
+            "simulation_frames_attempted": 500,
+            "simulation_completed": 100,
+            "simulation_frames_completed": 500,
+            "reset_completed": 1
+          },
+          "CONTROL": {
+            "simulation_attempts": 32,
+            "simulation_frames_attempted": 160,
+            "simulation_completed": 32,
+            "simulation_frames_completed": 160
+          }
+        }
+      }
+    },
+    {
+      "completed": true,
+      "partial_requested": true,
+      "native_frames": 25600,
+      "actual_policy_queries": 8,
+      "constructed_tiny_envs": 1,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 51,
+          "simulation_attempts": 5120,
+          "simulation_frames_attempted": 25600,
+          "simulation_completed": 5120,
+          "simulation_frames_completed": 25600,
+          "reset_completed": 51
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 50,
+            "simulation_attempts": 5000,
+            "simulation_frames_attempted": 25000,
+            "simulation_completed": 5000,
+            "simulation_frames_completed": 25000,
+            "reset_completed": 50
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 1,
+            "simulation_attempts": 100,
+            "simulation_frames_attempted": 500,
+            "simulation_completed": 100,
+            "simulation_frames_completed": 500,
+            "reset_completed": 1
+          },
+          "CONTROL": {
+            "simulation_attempts": 20,
+            "simulation_frames_attempted": 100,
+            "simulation_completed": 20,
+            "simulation_frames_completed": 100
+          }
+        }
+      }
+    },
+    {
+      "completed": true,
+      "partial_requested": true,
+      "native_frames": 25580,
+      "actual_policy_queries": 8,
+      "constructed_tiny_envs": 1,
+      "lifecycle": {
+        "counts": {
+          "reset_attempts": 51,
+          "simulation_attempts": 5116,
+          "simulation_frames_attempted": 25580,
+          "simulation_completed": 5116,
+          "simulation_frames_completed": 25580,
+          "reset_completed": 51
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 50,
+            "simulation_attempts": 5000,
+            "simulation_frames_attempted": 25000,
+            "simulation_completed": 5000,
+            "simulation_frames_completed": 25000,
+            "reset_completed": 50
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 1,
+            "simulation_attempts": 100,
+            "simulation_frames_attempted": 500,
+            "simulation_completed": 100,
+            "simulation_frames_completed": 500,
+            "reset_completed": 1
+          },
+          "CONTROL": {
+            "simulation_attempts": 16,
+            "simulation_frames_attempted": 80,
+            "simulation_completed": 16,
+            "simulation_frames_completed": 80
+          }
+        }
+      }
+    }
+  ],
+  "test_cost_scope": "This saved full-suite instrumented subset only. Two earlier targeted native-fixture attempts (11 and 16 tests) passed in the session but their per-process cost lists were not exported; not a whole-development cost total.",
+  "publication_goal_complete": false
+}

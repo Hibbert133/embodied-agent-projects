@@ -1,0 +1,109 @@
+{
+  "scope": "Exploratory complete-push-population description. Outcome groups and final-window summaries are retrospective, not online decision rules or independent samples.",
+  "states": 128,
+  "futures_per_state": 8,
+  "executions": 2048,
+  "groups": [
+    {
+      "program": "PROBE_KEEP",
+      "success": true,
+      "executions": 951,
+      "source_states_represented": 126,
+      "last_requested_mode_counts": {
+        "PUSH_TO_GOAL": 932,
+        "DESCEND": 12,
+        "ALIGN_XY": 7
+      },
+      "last_100_all_descent_count": 2,
+      "longest_descent_min_q25_median_q75_max": [
+        12.0,
+        24.0,
+        24.0,
+        24.0,
+        201.0
+      ],
+      "fit_residual_min_median_max_m": []
+    },
+    {
+      "program": "PROBE_KEEP",
+      "success": false,
+      "executions": 73,
+      "source_states_represented": 17,
+      "last_requested_mode_counts": {
+        "DESCEND": 50,
+        "ALIGN_XY": 22,
+        "PUSH_TO_GOAL": 1
+      },
+      "last_100_all_descent_count": 42,
+      "longest_descent_min_q25_median_q75_max": [
+        0.0,
+        21.0,
+        250.0,
+        395.0,
+        458.0
+      ],
+      "fit_residual_min_median_max_m": []
+    },
+    {
+      "program": "PROBE_UPDATE_KEEP",
+      "success": true,
+      "executions": 990,
+      "source_states_represented": 128,
+      "last_requested_mode_counts": {
+        "PUSH_TO_GOAL": 973,
+        "DESCEND": 13,
+        "ALIGN_XY": 4
+      },
+      "last_100_all_descent_count": 1,
+      "longest_descent_min_q25_median_q75_max": [
+        17.0,
+        24.0,
+        24.0,
+        24.0,
+        222.0
+      ],
+      "fit_residual_min_median_max_m": [
+        1.0632963802750378e-05,
+        7.195794632428434e-05,
+        0.0002836199283426245
+      ]
+    },
+    {
+      "program": "PROBE_UPDATE_KEEP",
+      "success": false,
+      "executions": 34,
+      "source_states_represented": 11,
+      "last_requested_mode_counts": {
+        "DESCEND": 32,
+        "ALIGN_XY": 2
+      },
+      "last_100_all_descent_count": 32,
+      "longest_descent_min_q25_median_q75_max": [
+        24.0,
+        381.0,
+        393.0,
+        413.75,
+        456.0
+      ],
+      "fit_residual_min_median_max_m": [
+        3.435053208862853e-05,
+        0.0001100015452598298,
+        0.00019887623029632976
+      ]
+    }
+  ],
+  "paired_outcome_counts": {
+    "BOTH_SUCCESS": 937,
+    "P_FAILURE_K_SUCCESS": 53,
+    "BOTH_FAILURE": 20,
+    "P_SUCCESS_K_FAILURE": 14
+  },
+  "harmful_update_last_mode_counts": {
+    "DESCEND": 13,
+    "ALIGN_XY": 1
+  },
+  "harmful_update_last_100_descent_count": 13,
+  "mean_P_minus_K_deadline_loss": 22.03515625,
+  "no_new_confidence_intervals": true,
+  "tail_window_is_posthoc_descriptive": true
+}

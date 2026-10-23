@@ -1,0 +1,30 @@
+test_all_feature_shapes_and_real_first_displacements (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_batch_sampling_schedule_has_real_indices_and_is_reproducible (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_cal_test_duplicate_and_empty_training_rejected (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_empty_prediction_and_illegal_controls (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_f20_padding_never_adds_state_information (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_first_window_is_same_real_t2_for_both_features (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_future_observation_and_commands_cannot_change_early_predictions (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_isotropic_scale_and_loss_algebra (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_known_linear_response_in_all_three_references (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_prediction_does_not_mutate_saved_parameters (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_private_or_nonfinite_trajectory_fields_rejected (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_small_and_constant_scale_use_frozen_rule (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_trajectory_weighting_is_not_timestep_weighting (tests.test_response_training_controls_v1.TrainingControlsTests) ... ok
+test_duplicate_source_and_trajectory_ids_rejected (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_failed_child_is_retained_without_substitution (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_fit_dev_split_is_complete_disjoint_and_grouped (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_full_cost_grid_and_no_selection_rule (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_guard_blocks_network_simulator_child_and_protected_data (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_independent_feature_reconstruction_all_families (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_missing_short_stage_is_null_and_registered (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_primary_whole_group_interval_uses_all_six_groups (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_sources_and_initializations_do_not_become_replicates (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_timeout_is_terminal_and_not_retried (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_training_guard_rejects_dev_and_original_raw_sources (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+test_wrong_role_schema_private_fields_and_dev_fit_poison_rejected (tests.test_response_training_controls_pipeline_v1.PipelineControlTests) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.825s
+
+OK

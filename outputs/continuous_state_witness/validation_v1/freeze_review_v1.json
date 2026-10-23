@@ -1,0 +1,96 @@
+{
+  "status": "PASSED_FOR_FREEZE",
+  "base_commit": "eb4b07b29bcf3e5d3e4c5aa2fa5f0827869e5bc9",
+  "root_tests_passed": 1137,
+  "checks": [
+    {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 246972862300,
+      "output_sha256": "caed9de7589d3bb8ddbcd351edc319264a45b70c04978618f446713d76e01602",
+      "created_utc": "2026-10-19T08:51:45.089165+00:00",
+      "source_sha256": "f64d5bd9485cc79e7e66448defb60350a040747c9d907a08deb222aa71192beb",
+      "unittest_cli_via_runpy": true,
+      "delayed_fixture_costs_saved": true
+    },
+    {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "docs/prototypes/delayed_intervention_v1"
+      ],
+      "returncode": 0,
+      "wall_ns": 2649766800,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T08:47:40.752231+00:00",
+      "source_sha256": "f64d5bd9485cc79e7e66448defb60350a040747c9d907a08deb222aa71192beb",
+      "unittest_cli_via_runpy": false,
+      "delayed_fixture_costs_saved": false
+    },
+    {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 2589742100,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T08:47:40.699549+00:00",
+      "source_sha256": "f64d5bd9485cc79e7e66448defb60350a040747c9d907a08deb222aa71192beb",
+      "unittest_cli_via_runpy": false,
+      "delayed_fixture_costs_saved": false
+    },
+    {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 56092428100,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T08:48:34.231923+00:00",
+      "source_sha256": "f64d5bd9485cc79e7e66448defb60350a040747c9d907a08deb222aa71192beb",
+      "unittest_cli_via_runpy": false,
+      "delayed_fixture_costs_saved": false
+    }
+  ],
+  "old_frozen_inputs_unchanged": 928,
+  "old_qualification_preserved": "NOT_QUALIFIED",
+  "new_metaworld_population_started": false,
+  "new_api_calls": 0,
+  "registered_new_cases": [
+    {
+      "task": "push-v3",
+      "seed": 21600
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602
+    }
+  ],
+  "publication_goal_complete": false
+}

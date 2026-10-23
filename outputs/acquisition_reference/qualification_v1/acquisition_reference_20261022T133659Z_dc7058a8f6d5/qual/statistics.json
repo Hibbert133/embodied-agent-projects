@@ -1,0 +1,482 @@
+{
+  "classification": "STANDARD_ACTION_AND_REFERENCE_BRANCH_ONLY",
+  "program_summaries": [
+    {
+      "program": "RAW_CONTINUE",
+      "assigned": 54,
+      "successes": 53,
+      "mean_deadline_loss": 87.16666666666667,
+      "actual_control_steps": 4707,
+      "movement_steps": 0,
+      "probe_steps": 0,
+      "complete_windows": 0,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "DIRECT_C8",
+      "assigned": 54,
+      "successes": 51,
+      "mean_deadline_loss": 105.01851851851852,
+      "actual_control_steps": 5671,
+      "movement_steps": 0,
+      "probe_steps": 0,
+      "complete_windows": 0,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 108
+    },
+    {
+      "program": "MOVE_INTEGRAL",
+      "assigned": 54,
+      "successes": 50,
+      "mean_deadline_loss": 146.22222222222223,
+      "actual_control_steps": 7896,
+      "movement_steps": 1402,
+      "probe_steps": 0,
+      "complete_windows": 0,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 108
+    },
+    {
+      "program": "FIXED_PD_KEEP",
+      "assigned": 54,
+      "successes": 50,
+      "mean_deadline_loss": 160.46296296296296,
+      "actual_control_steps": 8665,
+      "movement_steps": 2326,
+      "probe_steps": 128,
+      "complete_windows": 16,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "FIXED_PID_KEEP",
+      "assigned": 54,
+      "successes": 51,
+      "mean_deadline_loss": 154.1851851851852,
+      "actual_control_steps": 8326,
+      "movement_steps": 2342,
+      "probe_steps": 136,
+      "complete_windows": 17,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "LOCAL_PD_KEEP",
+      "assigned": 54,
+      "successes": 52,
+      "mean_deadline_loss": 125.94444444444444,
+      "actual_control_steps": 6801,
+      "movement_steps": 1664,
+      "probe_steps": 224,
+      "complete_windows": 28,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "LOCAL_PID_KEEP",
+      "assigned": 54,
+      "successes": 54,
+      "mean_deadline_loss": 110.98148148148148,
+      "actual_control_steps": 5993,
+      "movement_steps": 1293,
+      "probe_steps": 312,
+      "complete_windows": 39,
+      "reference_updates": 0,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "LOCAL_PID_REFERENCE_RESET",
+      "assigned": 54,
+      "successes": 54,
+      "mean_deadline_loss": 107.24074074074075,
+      "actual_control_steps": 5791,
+      "movement_steps": 1293,
+      "probe_steps": 312,
+      "complete_windows": 39,
+      "reference_updates": 39,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "LOCAL_PID_REFERENCE_CARRY",
+      "assigned": 54,
+      "successes": 54,
+      "mean_deadline_loss": 110.05555555555556,
+      "actual_control_steps": 5943,
+      "movement_steps": 1293,
+      "probe_steps": 312,
+      "complete_windows": 39,
+      "reference_updates": 39,
+      "initial_C4_C8_fit_attempts": 0
+    },
+    {
+      "program": "LOCAL_PID_REFERENCE_RESET_NO_PROBE",
+      "assigned": 54,
+      "successes": 53,
+      "mean_deadline_loss": 112.24074074074075,
+      "actual_control_steps": 6061,
+      "movement_steps": 1293,
+      "probe_steps": 0,
+      "complete_windows": 0,
+      "reference_updates": 39,
+      "initial_C4_C8_fit_attempts": 0
+    }
+  ],
+  "registered_contrasts": [
+    {
+      "left": "LOCAL_PID_KEEP",
+      "right": "FIXED_PD_KEEP",
+      "metric": "WINDOW_RATE",
+      "mean_difference": 0.42592592592592593,
+      "group_differences": [
+        0.6666666666666666,
+        0.8333333333333334,
+        0.16666666666666666,
+        0.5,
+        0.5,
+        0.16666666666666666,
+        0.3333333333333333,
+        0.5,
+        0.16666666666666666
+      ],
+      "group_bootstrap95": [
+        0.35185185185185186,
+        0.5
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_REFERENCE_RESET",
+      "right": "LOCAL_PID_KEEP",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": -3.740740740740741,
+      "group_differences": [
+        -0.3333333333333333,
+        -29.833333333333332,
+        -5.166666666666667,
+        0.6666666666666666,
+        0.8333333333333334,
+        -1.0,
+        1.8333333333333333,
+        -0.5,
+        -0.16666666666666666
+      ],
+      "group_bootstrap95": [
+        -10.25925925925926,
+        0.2222222222222222
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_REFERENCE_CARRY",
+      "right": "LOCAL_PID_KEEP",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": -0.9259259259259259,
+      "group_differences": [
+        1.8333333333333333,
+        -1.5,
+        -2.6666666666666665,
+        -3.5,
+        -0.3333333333333333,
+        -0.5,
+        -0.6666666666666666,
+        -0.8333333333333334,
+        -0.16666666666666666
+      ],
+      "group_bootstrap95": [
+        -1.8703703703703705,
+        0.0
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_REFERENCE_RESET",
+      "right": "LOCAL_PID_REFERENCE_RESET_NO_PROBE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": -5.0,
+      "group_differences": [
+        4.666666666666667,
+        8.0,
+        1.3333333333333333,
+        -50.833333333333336,
+        -10.0,
+        3.0,
+        -9.333333333333334,
+        5.0,
+        3.1666666666666665
+      ],
+      "group_bootstrap95": [
+        -15.462962962962964,
+        3.1481481481481484
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "DIRECT_C8",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 17.85185185185185,
+      "group_differences": [
+        73.66666666666667,
+        -17.833333333333332,
+        12.333333333333334,
+        76.66666666666667,
+        -89.83333333333333,
+        12.833333333333334,
+        71.83333333333333,
+        11.5,
+        9.5
+      ],
+      "group_bootstrap95": [
+        -1.1296296296296295,
+        32.222685185185185
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "MOVE_INTEGRAL",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 59.05555555555556,
+      "group_differences": [
+        93.16666666666667,
+        -28.5,
+        137.66666666666666,
+        98.83333333333333,
+        -35.666666666666664,
+        46.833333333333336,
+        119.83333333333333,
+        55.833333333333336,
+        43.5
+      ],
+      "group_bootstrap95": [
+        37.629629629629626,
+        82.27777777777777
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "FIXED_PD_KEEP",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 73.29629629629629,
+      "group_differences": [
+        61.5,
+        55.833333333333336,
+        78.5,
+        74.66666666666667,
+        97.66666666666667,
+        40.666666666666664,
+        75.83333333333333,
+        73.83333333333333,
+        101.16666666666667
+      ],
+      "group_bootstrap95": [
+        61.51851851851852,
+        84.53703703703704
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "FIXED_PID_KEEP",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 67.01851851851852,
+      "group_differences": [
+        64.66666666666667,
+        12.0,
+        64.0,
+        77.66666666666667,
+        96.5,
+        44.166666666666664,
+        78.83333333333333,
+        74.33333333333333,
+        91.0
+      ],
+      "group_bootstrap95": [
+        50.7037037037037,
+        81.48148148148148
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PD_KEEP",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 38.77777777777778,
+      "group_differences": [
+        37.666666666666664,
+        -10.333333333333334,
+        44.0,
+        167.33333333333334,
+        -42.5,
+        16.0,
+        46.0,
+        58.333333333333336,
+        32.5
+      ],
+      "group_bootstrap95": [
+        13.166666666666666,
+        67.98148148148148
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_KEEP",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 23.814814814814813,
+      "group_differences": [
+        37.833333333333336,
+        -21.5,
+        42.666666666666664,
+        47.5,
+        -54.166666666666664,
+        21.5,
+        49.0,
+        56.666666666666664,
+        34.833333333333336
+      ],
+      "group_bootstrap95": [
+        7.907407407407407,
+        44.111111111111114
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_REFERENCE_RESET",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 20.074074074074073,
+      "group_differences": [
+        37.5,
+        -51.333333333333336,
+        37.5,
+        48.166666666666664,
+        -53.333333333333336,
+        20.5,
+        50.833333333333336,
+        56.166666666666664,
+        34.666666666666664
+      ],
+      "group_bootstrap95": [
+        5.3694444444444445,
+        43.7962962962963
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_REFERENCE_CARRY",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 22.88888888888889,
+      "group_differences": [
+        39.666666666666664,
+        -23.0,
+        40.0,
+        44.0,
+        -54.5,
+        21.0,
+        48.333333333333336,
+        55.833333333333336,
+        34.666666666666664
+      ],
+      "group_bootstrap95": [
+        7.481481481481482,
+        43.351851851851855
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    },
+    {
+      "left": "LOCAL_PID_REFERENCE_RESET_NO_PROBE",
+      "right": "RAW_CONTINUE",
+      "metric": "DEADLINE_LOSS",
+      "mean_difference": 25.074074074074073,
+      "group_differences": [
+        32.833333333333336,
+        -59.333333333333336,
+        36.166666666666664,
+        99.0,
+        -43.333333333333336,
+        17.5,
+        60.166666666666664,
+        51.166666666666664,
+        31.5
+      ],
+      "group_bootstrap95": [
+        5.903240740740741,
+        47.851851851851855
+      ],
+      "independent_groups": 9,
+      "unadjusted_interval": true
+    }
+  ],
+  "acquisition_cell_coverage": [
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "assigned": 9,
+      "complete_windows": 6
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "assigned": 9,
+      "complete_windows": 6
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "assigned": 9,
+      "complete_windows": 5
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "assigned": 9,
+      "complete_windows": 4
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "assigned": 9,
+      "complete_windows": 9
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "assigned": 9,
+      "complete_windows": 9
+    }
+  ],
+  "acquisition_checks": {
+    "point_window_rate_at_least_half": true,
+    "each_task_context_at_least_three_full_windows": true,
+    "paired_window_rate_95_lower_above_zero": true
+  },
+  "reference_update_checks": {
+    "primary_full_population_loss_95_upper_below_zero": false,
+    "actual_reset_adoption_on_every_task": true
+  },
+  "acquisition_status": "SUPPORTED_FOR_SEPARATE_MODEL_DESIGN",
+  "reference_update_status": "NOT_QUALIFIED",
+  "joint_component_gate_passed": false,
+  "RAW_C8_integral_full_program_gains_not_established_by_component_gates": true,
+  "CARRY_secondary_no_replacement_of_failed_RESET": true,
+  "new_response_training": 0,
+  "new_policy_training": 0,
+  "new_online_LLM_API_calls": 0,
+  "publication_goal_complete": false
+}

@@ -1,0 +1,134 @@
+{
+  "experiment_run_id": "repeatability_20260731T070645Z_9650e171518a",
+  "source_git_commit": "9650e171518a66eb3a4fb1498143e3b18dd3eacd",
+  "config_path": "configs/autoresearch/candidate_repeatability_evidence_v1.json",
+  "config_sha256": "e4ce2c67f581151c3ddd940af82253ebf065d5dc542c5a60ae2894fdb9ab744b",
+  "source_run_id": "development_20260731T070305Z_1046f463d168",
+  "source_run_commit": "1046f463d16807f5a93c96870bc1eae43f0e7cab",
+  "execution_timestamp_utc": "2026-07-31T07:06:45.091356+00:00",
+  "split": "development",
+  "cases": 20,
+  "fixed_compensation_recovery_rate": 0.2,
+  "fixed_retry_recovery_rate": 0.6,
+  "oracle_candidate_recovery_rate": 0.7,
+  "repetitions": [
+    {
+      "repetition_count": 1,
+      "cases": 20,
+      "utility_agreement_count": 14,
+      "utility_agreement_rate": 0.7,
+      "utility_agreement_wilson95": [
+        0.4810271816464765,
+        0.8545227551323956
+      ],
+      "selected_recovery_count": 10,
+      "selected_recovery_rate": 0.5,
+      "selected_recovery_wilson95": [
+        0.2992980081982123,
+        0.7007019918017877
+      ],
+      "versus_compensation": {
+        "win": 6,
+        "tie": 14,
+        "loss": 0
+      },
+      "versus_retry": {
+        "win": 2,
+        "tie": 14,
+        "loss": 4
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": -0.1,
+        "ci95_lower": -0.35,
+        "ci95_upper": 0.15
+      },
+      "mean_prefix_environment_steps": 127.9,
+      "mean_total_additional_steps": 438.9
+    },
+    {
+      "repetition_count": 2,
+      "cases": 20,
+      "utility_agreement_count": 11,
+      "utility_agreement_rate": 0.55,
+      "utility_agreement_wilson95": [
+        0.34208534245034233,
+        0.7418021417443759
+      ],
+      "selected_recovery_count": 9,
+      "selected_recovery_rate": 0.45,
+      "selected_recovery_wilson95": [
+        0.2581978582556243,
+        0.6579146575496577
+      ],
+      "versus_compensation": {
+        "win": 5,
+        "tie": 15,
+        "loss": 0
+      },
+      "versus_retry": {
+        "win": 2,
+        "tie": 13,
+        "loss": 5
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": -0.15,
+        "ci95_lower": -0.4,
+        "ci95_upper": 0.1
+      },
+      "mean_prefix_environment_steps": 255.65,
+      "mean_total_additional_steps": 590.4
+    },
+    {
+      "repetition_count": 3,
+      "cases": 20,
+      "utility_agreement_count": 11,
+      "utility_agreement_rate": 0.55,
+      "utility_agreement_wilson95": [
+        0.34208534245034233,
+        0.7418021417443759
+      ],
+      "selected_recovery_count": 6,
+      "selected_recovery_rate": 0.3,
+      "selected_recovery_wilson95": [
+        0.1454772448676043,
+        0.5189728183535235
+      ],
+      "versus_compensation": {
+        "win": 3,
+        "tie": 16,
+        "loss": 1
+      },
+      "versus_retry": {
+        "win": 1,
+        "tie": 12,
+        "loss": 7
+      },
+      "recovery_difference_vs_retry": {
+        "paired_units": 20,
+        "repetitions": 10000,
+        "mean_difference": -0.3,
+        "ci95_lower": -0.55,
+        "ci95_upper": -0.05
+      },
+      "mean_prefix_environment_steps": 383.65,
+      "mean_total_additional_steps": 770.8
+    }
+  ],
+  "additional_evidence_transitions": {
+    "k1_to_k2": {
+      "decision_changed": 5,
+      "recovery_improved": 1,
+      "recovery_worsened": 2
+    },
+    "k1_to_k3": {
+      "decision_changed": 11,
+      "recovery_improved": 2,
+      "recovery_worsened": 6
+    }
+  },
+  "claim_status": "REPEATED_PREFIX_EVIDENCE_NOT_COST_JUSTIFIED"
+}

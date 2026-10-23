@@ -1,0 +1,45 @@
+{
+  "protocol_id": "probemem_sciagent_micro_probe_utility_v1_7",
+  "protocol_version": 7,
+  "status": "DEVELOPMENT_FROZEN_BEFORE_EXECUTION",
+  "split": "development_probe_utility",
+  "seed_registry": "configs/probemem_sciagent/seed_registry_v8.json",
+  "seed_range": [6750, 6849],
+  "maximum_initial_units": 100,
+  "target_operational_cases": 12,
+  "minimum_operational_cases": 10,
+  "regime_cycle": ["A_bias_low_noise", "B_zero_mean_noise", "C_bias_dominant_mixed", "D_noise_dominant_mixed"],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "registered_skills": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "registered_probes": {
+    "COMPENSATION_RESPONSE_PROBE": {"trials": 1, "steps_per_trial": 64, "maximum_steps": 64},
+    "RETRY_REPEATABILITY_PROBE": {"trials": 3, "steps_per_trial": 64, "maximum_steps": 192}
+  },
+  "mandatory_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "probe_measurement": {"contact_distance": 0.08, "positive_progress_threshold": 0.0, "severe_failure_threshold": -0.02},
+  "budget": {"initial_max_steps": 500, "mandatory_probe_max_steps": 64, "micro_probe_max_steps": 192, "verification_max_steps": 500, "total_online_case_max_steps": 1256, "maximum_evaluator_collection_steps": 1000},
+  "api": {
+    "model": "glm-5.2", "timeout_seconds": 210, "hard_deadline_seconds": 210, "max_tokens": 1800,
+    "transport_deadline_mode": "SUBPROCESS_HARD_DEADLINE_V1", "transport_retries": 0,
+    "health_check_primary_calls": 1, "pre_probe_primary_calls": 12, "maximum_post_probe_primary_calls": 6,
+    "maximum_schema_repairs": 2, "maximum_total_calls": 21, "maximum_consecutive_logical_failures": 2,
+    "response_envelope_mode": "UNIQUE_CERTIFIED_OBJECT", "capability_contract_mode": "PER_REQUEST_TOKENS_V1",
+    "probe_value_contract_mode": "ROBUST_QUANTIZED_EXPECTED_VALUE_OF_SAMPLE_INFORMATION_V1"
+  },
+  "robust_value_rule": {"maximum_current_probability_gap": 0.10, "quantization_half_width": 0.025, "require_outcome_discrimination": true, "require_robust_gain_strictly_above_cost": true},
+  "success_gate": {
+    "minimum_valid_pre_probe_outputs": 9, "minimum_executed_probes": 2, "minimum_valid_post_probe_outputs": 2,
+    "maximum_fail_closed_outputs": 2, "maximum_repairs": 2, "maximum_integrity_violations": 0,
+    "minimum_helpful_probes": 1, "require_helpful_strictly_above_harmful": true
+  },
+  "random_namespaces": {"initial": 26701, "mandatory_probe": 26702, "compensation_probe": 26703, "retry_probe_base": 26710, "paired_verification": 26720},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "output_root": "outputs/probemem_sciagent/micro_probe_utility_v1_7/runs",
+  "claim_boundary": "development_actual_micro_probe_evaluator_utility_only_no_online_recovery_or_memory_claim",
+  "prohibitions": {"memory_write": true, "principle_update": true, "online_recovery_execution": true, "validation": true, "heldout": true, "new_skill": true, "continuous_agent_actions": true}
+}

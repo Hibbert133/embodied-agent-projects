@@ -1,0 +1,2628 @@
+{
+  "schema_version": 1,
+  "experiment_run_id": "probemem_additional_ablation_20260901T031926Z_4f9fd0b4556c",
+  "created_at_utc": "20260901T031926Z",
+  "source_git_commit": "4f9fd0b4556c11c0b730ccef787bff4beee977d1",
+  "config_path": "configs/probemem_additional/ablation_development_v1.json",
+  "config_sha256": "cd37b7ba0b0fa3816ce92f4ee13d1940d9d23d9e53a22c807ed44e019109fba3",
+  "implementation_sha256": {
+    "src/probemem/additional_experiments.py": "f8183982d6435e6ffceff3c9baa71180c985a72e1b120c006fd90afe8f1ed1bf",
+    "scripts/generate_probemem_additional_manifest.py": "cf428af363870bec4c7fb91a523cb3231ba443c0fcaa973fa4b82c4fb6326937",
+    "scripts/run_probemem_additional_ablation.py": "f29d3c4140f01153c1a9865558f718047b901fe9efe15bced6b221755c407229",
+    "scripts/analyze_probemem_additional_ablation.py": "d73552dbb3816508c50eddf7bad2eb933a1e7efd4f7c0e0ae84dddcf4ccbe33d",
+    "scripts/render_probemem_additional_ablation.py": "9e2f420dd6878082e42a6ce8d2df2ab1c891a19868d44cef9518d1735d089d19",
+    "src/planner/evidence_grounded.py": "245324d042dbba9459eb164ba21631a8dc808a2c21a151f58e46e89f17788436",
+    "src/reasoning/structured_evidence.py": "84a49e8435968d8a8257c6935bd9364235c80f97cb612b316ab568cfaf2565ea",
+    "src/probe/directional.py": "909fe22e7c906bddd63d32678376d5f021b04dd4a6e668289204cd796110b988"
+  },
+  "input_sha256": {
+    "configs/probemem_additional/seed_registry_v1.json": "4d291374f4a8be01c67ad571e567042f4c80b9bfca16fa771e5fdd4c0d2eb347",
+    "configs/autoresearch/default_recovery_config.json": "c8e724a92fcca1c212a2330187e8a5cf10539e379297484a4766f28a0f1bc5e7",
+    "outputs/ambiguity_benchmark/bias_noise_tuning_v1/cases.csv": "c0fd9553374ef7ec4720721986cb29364b373ad14e91ad340acb5e1551a8babe",
+    "outputs/autoresearch/noise_calibration/selected.json": "748b6ab6e143ec0939b68cb4bca73e96dcdf934f3f153aa4936f7607923a5e2c",
+    "docs/protocols/probemem_additional_experiments_v1.md": "70573124b7c49b566e2143b4b0fe49d60f10a9ad6e1aa9097ce76e59436ef1ee"
+  },
+  "population_units": [
+    {
+      "unit_id": 1,
+      "environment_seed": 7200,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 277939964,
+      "probe_seed": 1653377413,
+      "verification_seeds": [
+        2289035226,
+        3545536070,
+        3565415057,
+        3236412499
+      ]
+    },
+    {
+      "unit_id": 2,
+      "environment_seed": 7201,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 763370868,
+      "probe_seed": 4016371948,
+      "verification_seeds": [
+        1374127216,
+        2427276247,
+        3707524031,
+        2824895170
+      ]
+    },
+    {
+      "unit_id": 3,
+      "environment_seed": 7202,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1203715822,
+      "probe_seed": 1449584612,
+      "verification_seeds": [
+        1862509607,
+        2659180367,
+        3539597923,
+        89638606
+      ]
+    },
+    {
+      "unit_id": 4,
+      "environment_seed": 7203,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3955219044,
+      "probe_seed": 2610963224,
+      "verification_seeds": [
+        988754647,
+        572447087,
+        4169068835,
+        3484477979
+      ]
+    },
+    {
+      "unit_id": 5,
+      "environment_seed": 7204,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3277901287,
+      "probe_seed": 894739027,
+      "verification_seeds": [
+        3578179813,
+        3226733591,
+        3467775343,
+        1061981840
+      ]
+    },
+    {
+      "unit_id": 6,
+      "environment_seed": 7205,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2610437109,
+      "probe_seed": 3300522420,
+      "verification_seeds": [
+        2153865476,
+        2064923038,
+        1440303936,
+        46694013
+      ]
+    },
+    {
+      "unit_id": 7,
+      "environment_seed": 7206,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 3975533692,
+      "probe_seed": 4155200404,
+      "verification_seeds": [
+        2755697743,
+        159346233,
+        3073436571,
+        700834903
+      ]
+    },
+    {
+      "unit_id": 8,
+      "environment_seed": 7207,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2183463449,
+      "probe_seed": 1682140619,
+      "verification_seeds": [
+        2416143650,
+        421343269,
+        2196652315,
+        1837407493
+      ]
+    },
+    {
+      "unit_id": 9,
+      "environment_seed": 7208,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 916001028,
+      "probe_seed": 3975649134,
+      "verification_seeds": [
+        784318273,
+        3751390245,
+        926402265,
+        1528461650
+      ]
+    },
+    {
+      "unit_id": 10,
+      "environment_seed": 7209,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2878397640,
+      "probe_seed": 793386281,
+      "verification_seeds": [
+        3899138487,
+        2837419557,
+        1052632778,
+        2344082194
+      ]
+    },
+    {
+      "unit_id": 11,
+      "environment_seed": 7210,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2620680396,
+      "probe_seed": 3215612564,
+      "verification_seeds": [
+        1886295159,
+        1397847342,
+        3261000633,
+        1196137536
+      ]
+    },
+    {
+      "unit_id": 12,
+      "environment_seed": 7211,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2728265448,
+      "probe_seed": 4147777047,
+      "verification_seeds": [
+        2072548206,
+        4176887173,
+        2965928007,
+        4173270234
+      ]
+    },
+    {
+      "unit_id": 13,
+      "environment_seed": 7212,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 411626982,
+      "probe_seed": 593271787,
+      "verification_seeds": [
+        1412481614,
+        3999778421,
+        1305822783,
+        1952930709
+      ]
+    },
+    {
+      "unit_id": 14,
+      "environment_seed": 7213,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3860194095,
+      "probe_seed": 1081334771,
+      "verification_seeds": [
+        546189987,
+        3770327844,
+        4266505665,
+        1828625091
+      ]
+    },
+    {
+      "unit_id": 15,
+      "environment_seed": 7214,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3148129676,
+      "probe_seed": 4053325387,
+      "verification_seeds": [
+        1585189018,
+        3481098880,
+        2576321459,
+        2743966755
+      ]
+    },
+    {
+      "unit_id": 16,
+      "environment_seed": 7215,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3656615552,
+      "probe_seed": 1695534423,
+      "verification_seeds": [
+        4272595894,
+        1091153044,
+        2340737843,
+        4013902588
+      ]
+    },
+    {
+      "unit_id": 17,
+      "environment_seed": 7216,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 164119197,
+      "probe_seed": 3699089700,
+      "verification_seeds": [
+        2556044682,
+        1122002593,
+        1366676707,
+        196536389
+      ]
+    },
+    {
+      "unit_id": 18,
+      "environment_seed": 7217,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3889454644,
+      "probe_seed": 4226501905,
+      "verification_seeds": [
+        2486199866,
+        3528594076,
+        3444850625,
+        4023900179
+      ]
+    },
+    {
+      "unit_id": 19,
+      "environment_seed": 7218,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 4141916785,
+      "probe_seed": 602459368,
+      "verification_seeds": [
+        2392289505,
+        1308724970,
+        2251876155,
+        4026892459
+      ]
+    },
+    {
+      "unit_id": 20,
+      "environment_seed": 7219,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1020839616,
+      "probe_seed": 2185275003,
+      "verification_seeds": [
+        3347670981,
+        1082354778,
+        3748671985,
+        2523654029
+      ]
+    },
+    {
+      "unit_id": 21,
+      "environment_seed": 7220,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3976712432,
+      "probe_seed": 3588554651,
+      "verification_seeds": [
+        1772624468,
+        752670672,
+        3325320387,
+        950926722
+      ]
+    },
+    {
+      "unit_id": 22,
+      "environment_seed": 7221,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 4041097288,
+      "probe_seed": 2698658625,
+      "verification_seeds": [
+        59852624,
+        3017356349,
+        1995552000,
+        2097795784
+      ]
+    },
+    {
+      "unit_id": 23,
+      "environment_seed": 7222,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 763073652,
+      "probe_seed": 503754087,
+      "verification_seeds": [
+        1129935412,
+        739781305,
+        1967748664,
+        1409609934
+      ]
+    },
+    {
+      "unit_id": 24,
+      "environment_seed": 7223,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2371856928,
+      "probe_seed": 692690226,
+      "verification_seeds": [
+        2298106721,
+        1785141363,
+        1848711283,
+        1039589307
+      ]
+    },
+    {
+      "unit_id": 25,
+      "environment_seed": 7224,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2175885131,
+      "probe_seed": 1625766977,
+      "verification_seeds": [
+        2278065648,
+        4117749147,
+        2807273621,
+        1781856449
+      ]
+    },
+    {
+      "unit_id": 26,
+      "environment_seed": 7225,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1545915559,
+      "probe_seed": 2874643873,
+      "verification_seeds": [
+        2509053559,
+        2786065130,
+        1071448520,
+        1871965563
+      ]
+    },
+    {
+      "unit_id": 27,
+      "environment_seed": 7226,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2879909290,
+      "probe_seed": 2184396998,
+      "verification_seeds": [
+        2077729589,
+        1182165279,
+        4226669251,
+        93553260
+      ]
+    },
+    {
+      "unit_id": 28,
+      "environment_seed": 7227,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 930874162,
+      "probe_seed": 3216754156,
+      "verification_seeds": [
+        1034893961,
+        3232925888,
+        3874209464,
+        1460059592
+      ]
+    },
+    {
+      "unit_id": 29,
+      "environment_seed": 7228,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3346254521,
+      "probe_seed": 1759599837,
+      "verification_seeds": [
+        53742910,
+        2829056801,
+        3659036589,
+        2034917444
+      ]
+    },
+    {
+      "unit_id": 30,
+      "environment_seed": 7229,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 385945688,
+      "probe_seed": 99458565,
+      "verification_seeds": [
+        1651922385,
+        3070355190,
+        1933175913,
+        143367063
+      ]
+    },
+    {
+      "unit_id": 31,
+      "environment_seed": 7230,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 768600383,
+      "probe_seed": 3423647868,
+      "verification_seeds": [
+        2781654227,
+        2504094847,
+        299344789,
+        3617752249
+      ]
+    },
+    {
+      "unit_id": 32,
+      "environment_seed": 7231,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 4009164234,
+      "probe_seed": 1716844243,
+      "verification_seeds": [
+        395253313,
+        1029346312,
+        3410344237,
+        1786207937
+      ]
+    },
+    {
+      "unit_id": 33,
+      "environment_seed": 7232,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2663513739,
+      "probe_seed": 1940272776,
+      "verification_seeds": [
+        3947550564,
+        3747245703,
+        402410090,
+        1449179838
+      ]
+    },
+    {
+      "unit_id": 34,
+      "environment_seed": 7233,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2417704852,
+      "probe_seed": 1473874123,
+      "verification_seeds": [
+        1528987100,
+        1228733157,
+        2088309357,
+        4238225275
+      ]
+    },
+    {
+      "unit_id": 35,
+      "environment_seed": 7234,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1612792621,
+      "probe_seed": 3398814202,
+      "verification_seeds": [
+        2660694294,
+        2128279057,
+        661660196,
+        696595028
+      ]
+    },
+    {
+      "unit_id": 36,
+      "environment_seed": 7235,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3225193547,
+      "probe_seed": 3904265869,
+      "verification_seeds": [
+        299190129,
+        408403661,
+        1569184901,
+        234605838
+      ]
+    },
+    {
+      "unit_id": 37,
+      "environment_seed": 7236,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2819621114,
+      "probe_seed": 4200965615,
+      "verification_seeds": [
+        719876037,
+        224941489,
+        3047105427,
+        4073284286
+      ]
+    },
+    {
+      "unit_id": 38,
+      "environment_seed": 7237,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3581663833,
+      "probe_seed": 114811685,
+      "verification_seeds": [
+        2269048524,
+        1264874040,
+        4158575163,
+        750599176
+      ]
+    },
+    {
+      "unit_id": 39,
+      "environment_seed": 7238,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 4278520751,
+      "probe_seed": 2245240600,
+      "verification_seeds": [
+        3494594717,
+        2106250199,
+        2338673891,
+        3136012303
+      ]
+    },
+    {
+      "unit_id": 40,
+      "environment_seed": 7239,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4053716636,
+      "probe_seed": 886725613,
+      "verification_seeds": [
+        166184962,
+        425487285,
+        2598543618,
+        648381392
+      ]
+    },
+    {
+      "unit_id": 41,
+      "environment_seed": 7240,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2788291272,
+      "probe_seed": 1097177223,
+      "verification_seeds": [
+        1255832116,
+        2532131922,
+        2300271562,
+        2335036475
+      ]
+    },
+    {
+      "unit_id": 42,
+      "environment_seed": 7241,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 603029648,
+      "probe_seed": 1246085016,
+      "verification_seeds": [
+        3440887200,
+        1429130567,
+        2312385292,
+        682483962
+      ]
+    },
+    {
+      "unit_id": 43,
+      "environment_seed": 7242,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 103165383,
+      "probe_seed": 2129615627,
+      "verification_seeds": [
+        1488309979,
+        3919788481,
+        833339172,
+        483573139
+      ]
+    },
+    {
+      "unit_id": 44,
+      "environment_seed": 7243,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1104053221,
+      "probe_seed": 658194823,
+      "verification_seeds": [
+        1936971534,
+        1815243903,
+        1925689474,
+        2547155234
+      ]
+    },
+    {
+      "unit_id": 45,
+      "environment_seed": 7244,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 787612029,
+      "probe_seed": 1422364330,
+      "verification_seeds": [
+        3565656996,
+        90270055,
+        3392763617,
+        1650935479
+      ]
+    },
+    {
+      "unit_id": 46,
+      "environment_seed": 7245,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2391389100,
+      "probe_seed": 3559430837,
+      "verification_seeds": [
+        1168739886,
+        2032478530,
+        603690993,
+        1223906337
+      ]
+    },
+    {
+      "unit_id": 47,
+      "environment_seed": 7246,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1533208723,
+      "probe_seed": 3607173594,
+      "verification_seeds": [
+        2620345970,
+        4030293659,
+        1203162402,
+        2441607177
+      ]
+    },
+    {
+      "unit_id": 48,
+      "environment_seed": 7247,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1628044418,
+      "probe_seed": 2332516882,
+      "verification_seeds": [
+        195868161,
+        1580220327,
+        1914796021,
+        3186003592
+      ]
+    },
+    {
+      "unit_id": 49,
+      "environment_seed": 7248,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3219075236,
+      "probe_seed": 2517756363,
+      "verification_seeds": [
+        313525455,
+        528391538,
+        2084369428,
+        2590310319
+      ]
+    },
+    {
+      "unit_id": 50,
+      "environment_seed": 7249,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1469251743,
+      "probe_seed": 3483725270,
+      "verification_seeds": [
+        2058733600,
+        914107715,
+        2080466593,
+        3990920956
+      ]
+    },
+    {
+      "unit_id": 51,
+      "environment_seed": 7250,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2543626649,
+      "probe_seed": 1377086808,
+      "verification_seeds": [
+        895530152,
+        355983053,
+        3879819617,
+        690234059
+      ]
+    },
+    {
+      "unit_id": 52,
+      "environment_seed": 7251,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1167898648,
+      "probe_seed": 3958378597,
+      "verification_seeds": [
+        1531992959,
+        2018252074,
+        351374808,
+        216259223
+      ]
+    },
+    {
+      "unit_id": 53,
+      "environment_seed": 7252,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3322314747,
+      "probe_seed": 1171288008,
+      "verification_seeds": [
+        2692104648,
+        2890153335,
+        2659206646,
+        3027749624
+      ]
+    },
+    {
+      "unit_id": 54,
+      "environment_seed": 7253,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1012972396,
+      "probe_seed": 2826160067,
+      "verification_seeds": [
+        3228746115,
+        2053699926,
+        359810424,
+        2154884143
+      ]
+    },
+    {
+      "unit_id": 55,
+      "environment_seed": 7254,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1061903425,
+      "probe_seed": 3904718445,
+      "verification_seeds": [
+        2397045335,
+        1649518188,
+        3633447281,
+        667103243
+      ]
+    },
+    {
+      "unit_id": 56,
+      "environment_seed": 7255,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4139139386,
+      "probe_seed": 2010724743,
+      "verification_seeds": [
+        2215888833,
+        4096349692,
+        2324190667,
+        3423101216
+      ]
+    },
+    {
+      "unit_id": 57,
+      "environment_seed": 7256,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 414030096,
+      "probe_seed": 1050878626,
+      "verification_seeds": [
+        3318695134,
+        900349563,
+        3617503117,
+        2717749023
+      ]
+    },
+    {
+      "unit_id": 58,
+      "environment_seed": 7257,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1943646928,
+      "probe_seed": 2799766699,
+      "verification_seeds": [
+        4147214268,
+        3015256338,
+        1672429189,
+        4049901320
+      ]
+    },
+    {
+      "unit_id": 59,
+      "environment_seed": 7258,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1839537101,
+      "probe_seed": 3157962069,
+      "verification_seeds": [
+        354760442,
+        3744508924,
+        3347870218,
+        3775760964
+      ]
+    },
+    {
+      "unit_id": 60,
+      "environment_seed": 7259,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3468091772,
+      "probe_seed": 3380042125,
+      "verification_seeds": [
+        1827936793,
+        278638918,
+        1980700457,
+        3971301145
+      ]
+    },
+    {
+      "unit_id": 61,
+      "environment_seed": 7260,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2466202563,
+      "probe_seed": 1633796337,
+      "verification_seeds": [
+        1087930385,
+        3208428505,
+        316499332,
+        2539295645
+      ]
+    },
+    {
+      "unit_id": 62,
+      "environment_seed": 7261,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2498491562,
+      "probe_seed": 2331408458,
+      "verification_seeds": [
+        1370840544,
+        1413566256,
+        2062781822,
+        434113501
+      ]
+    },
+    {
+      "unit_id": 63,
+      "environment_seed": 7262,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 4152987896,
+      "probe_seed": 3576498934,
+      "verification_seeds": [
+        4200063970,
+        866854010,
+        3407548108,
+        1869290958
+      ]
+    },
+    {
+      "unit_id": 64,
+      "environment_seed": 7263,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3232495884,
+      "probe_seed": 3685971082,
+      "verification_seeds": [
+        1770355403,
+        4139391584,
+        388599698,
+        75971665
+      ]
+    },
+    {
+      "unit_id": 65,
+      "environment_seed": 7264,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 689289547,
+      "probe_seed": 1721090376,
+      "verification_seeds": [
+        1110878827,
+        763639685,
+        1476825929,
+        2421934096
+      ]
+    },
+    {
+      "unit_id": 66,
+      "environment_seed": 7265,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3616966890,
+      "probe_seed": 1266126840,
+      "verification_seeds": [
+        371549588,
+        1997582272,
+        4031400679,
+        997394783
+      ]
+    },
+    {
+      "unit_id": 67,
+      "environment_seed": 7266,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1398039022,
+      "probe_seed": 1331532088,
+      "verification_seeds": [
+        2833488302,
+        3270686888,
+        2301519,
+        1239841150
+      ]
+    },
+    {
+      "unit_id": 68,
+      "environment_seed": 7267,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1934468875,
+      "probe_seed": 1550095195,
+      "verification_seeds": [
+        4132662450,
+        1802238331,
+        1051640701,
+        1988227038
+      ]
+    },
+    {
+      "unit_id": 69,
+      "environment_seed": 7268,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3538454474,
+      "probe_seed": 189774204,
+      "verification_seeds": [
+        2721818516,
+        1679459715,
+        1344946671,
+        1941904486
+      ]
+    },
+    {
+      "unit_id": 70,
+      "environment_seed": 7269,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 748162352,
+      "probe_seed": 3035529809,
+      "verification_seeds": [
+        4184814058,
+        3986339155,
+        2446403112,
+        729107108
+      ]
+    },
+    {
+      "unit_id": 71,
+      "environment_seed": 7270,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1840378267,
+      "probe_seed": 2078106998,
+      "verification_seeds": [
+        622688180,
+        3555825214,
+        2655616782,
+        1115884596
+      ]
+    },
+    {
+      "unit_id": 72,
+      "environment_seed": 7271,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1563413090,
+      "probe_seed": 3420845767,
+      "verification_seeds": [
+        4293076500,
+        3729648476,
+        2002307890,
+        570946243
+      ]
+    },
+    {
+      "unit_id": 73,
+      "environment_seed": 7272,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2583897460,
+      "probe_seed": 359611646,
+      "verification_seeds": [
+        245499809,
+        3825079993,
+        2594054906,
+        2178824443
+      ]
+    },
+    {
+      "unit_id": 74,
+      "environment_seed": 7273,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1516321752,
+      "probe_seed": 2023431294,
+      "verification_seeds": [
+        2745733672,
+        3896013124,
+        2040968003,
+        1848253322
+      ]
+    },
+    {
+      "unit_id": 75,
+      "environment_seed": 7274,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1839122869,
+      "probe_seed": 811387941,
+      "verification_seeds": [
+        3508838828,
+        4230521130,
+        2865520046,
+        3439266892
+      ]
+    },
+    {
+      "unit_id": 76,
+      "environment_seed": 7275,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1927845480,
+      "probe_seed": 4093849820,
+      "verification_seeds": [
+        3893284123,
+        3630089902,
+        623328636,
+        1626235935
+      ]
+    },
+    {
+      "unit_id": 77,
+      "environment_seed": 7276,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2643900155,
+      "probe_seed": 1127778651,
+      "verification_seeds": [
+        2037710230,
+        2070114206,
+        1746829823,
+        65462923
+      ]
+    },
+    {
+      "unit_id": 78,
+      "environment_seed": 7277,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 227979842,
+      "probe_seed": 1673661199,
+      "verification_seeds": [
+        1401043714,
+        2460156850,
+        3054597159,
+        3416128868
+      ]
+    },
+    {
+      "unit_id": 79,
+      "environment_seed": 7278,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2034604246,
+      "probe_seed": 124956155,
+      "verification_seeds": [
+        2964144933,
+        846684799,
+        2235906067,
+        3326300599
+      ]
+    },
+    {
+      "unit_id": 80,
+      "environment_seed": 7279,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3106006184,
+      "probe_seed": 515291351,
+      "verification_seeds": [
+        2382133237,
+        90268247,
+        2844618086,
+        2143074507
+      ]
+    },
+    {
+      "unit_id": 81,
+      "environment_seed": 7280,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1813622908,
+      "probe_seed": 2268963444,
+      "verification_seeds": [
+        3920118281,
+        955697933,
+        3525600664,
+        3291977677
+      ]
+    },
+    {
+      "unit_id": 82,
+      "environment_seed": 7281,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 298906556,
+      "probe_seed": 2275387122,
+      "verification_seeds": [
+        3227701782,
+        133149744,
+        672941600,
+        2263813915
+      ]
+    },
+    {
+      "unit_id": 83,
+      "environment_seed": 7282,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2132290064,
+      "probe_seed": 2109586585,
+      "verification_seeds": [
+        1203490543,
+        692475641,
+        124158022,
+        1370733722
+      ]
+    },
+    {
+      "unit_id": 84,
+      "environment_seed": 7283,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 741680538,
+      "probe_seed": 1743225729,
+      "verification_seeds": [
+        3340098497,
+        3750489528,
+        4287229024,
+        981638703
+      ]
+    },
+    {
+      "unit_id": 85,
+      "environment_seed": 7284,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3483726542,
+      "probe_seed": 2178800261,
+      "verification_seeds": [
+        2245273744,
+        1653890795,
+        2735837215,
+        1574514646
+      ]
+    },
+    {
+      "unit_id": 86,
+      "environment_seed": 7285,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 833875672,
+      "probe_seed": 27464364,
+      "verification_seeds": [
+        2188158259,
+        725228077,
+        303695241,
+        2469003829
+      ]
+    },
+    {
+      "unit_id": 87,
+      "environment_seed": 7286,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2854439263,
+      "probe_seed": 104469697,
+      "verification_seeds": [
+        222455331,
+        225693827,
+        3505115051,
+        3983320970
+      ]
+    },
+    {
+      "unit_id": 88,
+      "environment_seed": 7287,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2546233430,
+      "probe_seed": 4105760935,
+      "verification_seeds": [
+        3190418057,
+        640561142,
+        965689811,
+        1787173127
+      ]
+    },
+    {
+      "unit_id": 89,
+      "environment_seed": 7288,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1297631351,
+      "probe_seed": 217213276,
+      "verification_seeds": [
+        4196818522,
+        884507784,
+        3028052572,
+        2978067234
+      ]
+    },
+    {
+      "unit_id": 90,
+      "environment_seed": 7289,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1763017871,
+      "probe_seed": 1693432260,
+      "verification_seeds": [
+        603287755,
+        1789657390,
+        3419575958,
+        2595470527
+      ]
+    },
+    {
+      "unit_id": 91,
+      "environment_seed": 7290,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 339256093,
+      "probe_seed": 2221465192,
+      "verification_seeds": [
+        3997225851,
+        2701672080,
+        2425955837,
+        1977008904
+      ]
+    },
+    {
+      "unit_id": 92,
+      "environment_seed": 7291,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 3603163132,
+      "probe_seed": 1519132751,
+      "verification_seeds": [
+        2402625918,
+        1062938054,
+        2130242927,
+        714225619
+      ]
+    },
+    {
+      "unit_id": 93,
+      "environment_seed": 7292,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2107592206,
+      "probe_seed": 2987087613,
+      "verification_seeds": [
+        2117918713,
+        2365875848,
+        221512506,
+        2663515355
+      ]
+    },
+    {
+      "unit_id": 94,
+      "environment_seed": 7293,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 386242542,
+      "probe_seed": 3488746011,
+      "verification_seeds": [
+        1351516716,
+        3798598752,
+        2280879552,
+        235991373
+      ]
+    },
+    {
+      "unit_id": 95,
+      "environment_seed": 7294,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2624595291,
+      "probe_seed": 946667112,
+      "verification_seeds": [
+        4149800925,
+        1138823970,
+        1181941547,
+        1165396415
+      ]
+    },
+    {
+      "unit_id": 96,
+      "environment_seed": 7295,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2208144054,
+      "probe_seed": 2232416242,
+      "verification_seeds": [
+        2483100097,
+        248086850,
+        2734752495,
+        2483132656
+      ]
+    },
+    {
+      "unit_id": 97,
+      "environment_seed": 7296,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 104774720,
+      "probe_seed": 2616906397,
+      "verification_seeds": [
+        3593852609,
+        931379028,
+        487693963,
+        3202903134
+      ]
+    },
+    {
+      "unit_id": 98,
+      "environment_seed": 7297,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2069184615,
+      "probe_seed": 2854449800,
+      "verification_seeds": [
+        2935722829,
+        2624762012,
+        2132341388,
+        3486716607
+      ]
+    },
+    {
+      "unit_id": 99,
+      "environment_seed": 7298,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1560065084,
+      "probe_seed": 219315309,
+      "verification_seeds": [
+        1581525764,
+        1604750152,
+        1335226463,
+        3294529894
+      ]
+    },
+    {
+      "unit_id": 100,
+      "environment_seed": 7299,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3168747214,
+      "probe_seed": 2313674222,
+      "verification_seeds": [
+        3061326232,
+        526446653,
+        2890878152,
+        2500573602
+      ]
+    },
+    {
+      "unit_id": 101,
+      "environment_seed": 7300,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1202746764,
+      "probe_seed": 918661953,
+      "verification_seeds": [
+        2820520575,
+        2963153741,
+        1833392626,
+        2201168302
+      ]
+    },
+    {
+      "unit_id": 102,
+      "environment_seed": 7301,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 776974333,
+      "probe_seed": 2768890170,
+      "verification_seeds": [
+        3959302280,
+        4229111207,
+        229542601,
+        2535967736
+      ]
+    },
+    {
+      "unit_id": 103,
+      "environment_seed": 7302,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 390712831,
+      "probe_seed": 3286676711,
+      "verification_seeds": [
+        3073410160,
+        714650792,
+        1911715287,
+        2404585490
+      ]
+    },
+    {
+      "unit_id": 104,
+      "environment_seed": 7303,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 213009447,
+      "probe_seed": 2245620889,
+      "verification_seeds": [
+        2897093503,
+        3912540670,
+        2468486194,
+        487002226
+      ]
+    },
+    {
+      "unit_id": 105,
+      "environment_seed": 7304,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1369413506,
+      "probe_seed": 3834062814,
+      "verification_seeds": [
+        1632466717,
+        1977716514,
+        644388671,
+        1386667980
+      ]
+    },
+    {
+      "unit_id": 106,
+      "environment_seed": 7305,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3811515364,
+      "probe_seed": 1834278588,
+      "verification_seeds": [
+        1179518101,
+        452011711,
+        647781308,
+        3750242583
+      ]
+    },
+    {
+      "unit_id": 107,
+      "environment_seed": 7306,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1114548085,
+      "probe_seed": 1107901197,
+      "verification_seeds": [
+        2850769330,
+        4193092231,
+        3229307550,
+        917287411
+      ]
+    },
+    {
+      "unit_id": 108,
+      "environment_seed": 7307,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1222857685,
+      "probe_seed": 2912612966,
+      "verification_seeds": [
+        3584179559,
+        3079903880,
+        697438898,
+        3820125511
+      ]
+    },
+    {
+      "unit_id": 109,
+      "environment_seed": 7308,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1689273156,
+      "probe_seed": 4111151292,
+      "verification_seeds": [
+        4286932698,
+        810775871,
+        275359716,
+        1625996147
+      ]
+    },
+    {
+      "unit_id": 110,
+      "environment_seed": 7309,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4182623148,
+      "probe_seed": 3715703360,
+      "verification_seeds": [
+        785227631,
+        1607495809,
+        3217739134,
+        3298399362
+      ]
+    },
+    {
+      "unit_id": 111,
+      "environment_seed": 7310,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2702708758,
+      "probe_seed": 3858670806,
+      "verification_seeds": [
+        3509866286,
+        3699193379,
+        378033539,
+        3331557916
+      ]
+    },
+    {
+      "unit_id": 112,
+      "environment_seed": 7311,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 460901580,
+      "probe_seed": 1234572738,
+      "verification_seeds": [
+        1972380727,
+        1859367173,
+        765572834,
+        2798762753
+      ]
+    },
+    {
+      "unit_id": 113,
+      "environment_seed": 7312,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3338772145,
+      "probe_seed": 1681815986,
+      "verification_seeds": [
+        856086917,
+        3176542744,
+        1303858189,
+        1621713480
+      ]
+    },
+    {
+      "unit_id": 114,
+      "environment_seed": 7313,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2124689864,
+      "probe_seed": 3161259061,
+      "verification_seeds": [
+        3938987190,
+        2092012966,
+        1813789424,
+        3396718244
+      ]
+    },
+    {
+      "unit_id": 115,
+      "environment_seed": 7314,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2792942952,
+      "probe_seed": 1770355062,
+      "verification_seeds": [
+        736702000,
+        1705268589,
+        2991210979,
+        2876581628
+      ]
+    },
+    {
+      "unit_id": 116,
+      "environment_seed": 7315,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2444038423,
+      "probe_seed": 44952984,
+      "verification_seeds": [
+        575931044,
+        189530330,
+        179057994,
+        1395383542
+      ]
+    },
+    {
+      "unit_id": 117,
+      "environment_seed": 7316,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2486840613,
+      "probe_seed": 54355452,
+      "verification_seeds": [
+        2992200047,
+        3756552479,
+        3366938892,
+        2689492599
+      ]
+    },
+    {
+      "unit_id": 118,
+      "environment_seed": 7317,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2633758133,
+      "probe_seed": 1048184707,
+      "verification_seeds": [
+        3820845695,
+        2553039863,
+        1021006516,
+        1580064574
+      ]
+    },
+    {
+      "unit_id": 119,
+      "environment_seed": 7318,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3809814157,
+      "probe_seed": 3260207812,
+      "verification_seeds": [
+        2253439101,
+        1877132452,
+        1895627881,
+        2210311580
+      ]
+    },
+    {
+      "unit_id": 120,
+      "environment_seed": 7319,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1932501932,
+      "probe_seed": 2852913026,
+      "verification_seeds": [
+        165331761,
+        1906244433,
+        1457053880,
+        1192872280
+      ]
+    },
+    {
+      "unit_id": 121,
+      "environment_seed": 7320,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 258201148,
+      "probe_seed": 3129110267,
+      "verification_seeds": [
+        3445880419,
+        247652602,
+        3425478113,
+        280611438
+      ]
+    },
+    {
+      "unit_id": 122,
+      "environment_seed": 7321,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 317152153,
+      "probe_seed": 1686843115,
+      "verification_seeds": [
+        1681806014,
+        2475223552,
+        789781419,
+        1630810537
+      ]
+    },
+    {
+      "unit_id": 123,
+      "environment_seed": 7322,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3577598837,
+      "probe_seed": 3038066901,
+      "verification_seeds": [
+        2533021379,
+        902720818,
+        2330187555,
+        1087516912
+      ]
+    },
+    {
+      "unit_id": 124,
+      "environment_seed": 7323,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2896935766,
+      "probe_seed": 819394932,
+      "verification_seeds": [
+        405597276,
+        3123208241,
+        450271174,
+        60122505
+      ]
+    },
+    {
+      "unit_id": 125,
+      "environment_seed": 7324,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2850860895,
+      "probe_seed": 2185675100,
+      "verification_seeds": [
+        325413150,
+        1934427939,
+        1272336708,
+        2909156818
+      ]
+    },
+    {
+      "unit_id": 126,
+      "environment_seed": 7325,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3365637261,
+      "probe_seed": 3785655173,
+      "verification_seeds": [
+        718625939,
+        1687434207,
+        4240945429,
+        1890837270
+      ]
+    },
+    {
+      "unit_id": 127,
+      "environment_seed": 7326,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1155834720,
+      "probe_seed": 25985684,
+      "verification_seeds": [
+        1028255001,
+        1181954757,
+        547401380,
+        3200419882
+      ]
+    },
+    {
+      "unit_id": 128,
+      "environment_seed": 7327,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3339106775,
+      "probe_seed": 977085612,
+      "verification_seeds": [
+        726141426,
+        565101687,
+        2208086479,
+        1063520433
+      ]
+    },
+    {
+      "unit_id": 129,
+      "environment_seed": 7328,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2263004947,
+      "probe_seed": 2574862115,
+      "verification_seeds": [
+        635193148,
+        2975688304,
+        2298188757,
+        240413976
+      ]
+    },
+    {
+      "unit_id": 130,
+      "environment_seed": 7329,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2225193608,
+      "probe_seed": 250597033,
+      "verification_seeds": [
+        521498869,
+        3019299992,
+        3445724215,
+        1942072926
+      ]
+    },
+    {
+      "unit_id": 131,
+      "environment_seed": 7330,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2378804066,
+      "probe_seed": 2631217643,
+      "verification_seeds": [
+        3857755855,
+        1077696456,
+        1454589125,
+        1109569343
+      ]
+    },
+    {
+      "unit_id": 132,
+      "environment_seed": 7331,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 518260754,
+      "probe_seed": 1214283240,
+      "verification_seeds": [
+        3593993180,
+        3592344977,
+        2039565518,
+        2548666002
+      ]
+    },
+    {
+      "unit_id": 133,
+      "environment_seed": 7332,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 423766465,
+      "probe_seed": 1175262463,
+      "verification_seeds": [
+        4053414860,
+        2626871912,
+        3965674824,
+        1457619539
+      ]
+    },
+    {
+      "unit_id": 134,
+      "environment_seed": 7333,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 254230301,
+      "probe_seed": 1485163485,
+      "verification_seeds": [
+        1667954282,
+        3397633229,
+        2264883324,
+        790561766
+      ]
+    },
+    {
+      "unit_id": 135,
+      "environment_seed": 7334,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2030792689,
+      "probe_seed": 3018091035,
+      "verification_seeds": [
+        748178343,
+        3172108520,
+        1207670057,
+        3383903754
+      ]
+    },
+    {
+      "unit_id": 136,
+      "environment_seed": 7335,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3325874738,
+      "probe_seed": 83716425,
+      "verification_seeds": [
+        3397936780,
+        3079609212,
+        3262290826,
+        1624227469
+      ]
+    },
+    {
+      "unit_id": 137,
+      "environment_seed": 7336,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 977845103,
+      "probe_seed": 130506780,
+      "verification_seeds": [
+        722661997,
+        920918226,
+        2670756704,
+        1272616763
+      ]
+    },
+    {
+      "unit_id": 138,
+      "environment_seed": 7337,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3884697354,
+      "probe_seed": 1748124257,
+      "verification_seeds": [
+        512846953,
+        3778367144,
+        1321385573,
+        3471587767
+      ]
+    },
+    {
+      "unit_id": 139,
+      "environment_seed": 7338,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 4203794039,
+      "probe_seed": 73189673,
+      "verification_seeds": [
+        1271252329,
+        3831265809,
+        1970447909,
+        1213980498
+      ]
+    },
+    {
+      "unit_id": 140,
+      "environment_seed": 7339,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1260426454,
+      "probe_seed": 2357507656,
+      "verification_seeds": [
+        3374100563,
+        2906444947,
+        3293602472,
+        4094725669
+      ]
+    },
+    {
+      "unit_id": 141,
+      "environment_seed": 7340,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3586907447,
+      "probe_seed": 1879693187,
+      "verification_seeds": [
+        4003629028,
+        1575375096,
+        4080105483,
+        994139476
+      ]
+    },
+    {
+      "unit_id": 142,
+      "environment_seed": 7341,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 933673039,
+      "probe_seed": 1438629683,
+      "verification_seeds": [
+        2023284674,
+        1317341622,
+        2167062331,
+        3063514075
+      ]
+    },
+    {
+      "unit_id": 143,
+      "environment_seed": 7342,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2903459026,
+      "probe_seed": 2891607131,
+      "verification_seeds": [
+        604465189,
+        1234069309,
+        1153746156,
+        931344888
+      ]
+    },
+    {
+      "unit_id": 144,
+      "environment_seed": 7343,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2134091409,
+      "probe_seed": 974196011,
+      "verification_seeds": [
+        2562770865,
+        2084258000,
+        774611909,
+        517405793
+      ]
+    },
+    {
+      "unit_id": 145,
+      "environment_seed": 7344,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 1647641528,
+      "probe_seed": 4285102952,
+      "verification_seeds": [
+        594297104,
+        3131976739,
+        2260584718,
+        3151521526
+      ]
+    },
+    {
+      "unit_id": 146,
+      "environment_seed": 7345,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 487761656,
+      "probe_seed": 2605507955,
+      "verification_seeds": [
+        2416041070,
+        1453500995,
+        3508426606,
+        3700263053
+      ]
+    },
+    {
+      "unit_id": 147,
+      "environment_seed": 7346,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2776108672,
+      "probe_seed": 1711207588,
+      "verification_seeds": [
+        1053660847,
+        4097896319,
+        849927647,
+        4264428460
+      ]
+    },
+    {
+      "unit_id": 148,
+      "environment_seed": 7347,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1615298143,
+      "probe_seed": 306698755,
+      "verification_seeds": [
+        2330557211,
+        3832784991,
+        4269357395,
+        3362231863
+      ]
+    },
+    {
+      "unit_id": 149,
+      "environment_seed": 7348,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 631695187,
+      "probe_seed": 3471125949,
+      "verification_seeds": [
+        3616035033,
+        664959398,
+        2352138710,
+        1935237129
+      ]
+    },
+    {
+      "unit_id": 150,
+      "environment_seed": 7349,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 4193166453,
+      "probe_seed": 9955150,
+      "verification_seeds": [
+        1907039018,
+        2407487840,
+        2886277256,
+        3191241527
+      ]
+    },
+    {
+      "unit_id": 151,
+      "environment_seed": 7350,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 4009544572,
+      "probe_seed": 752266964,
+      "verification_seeds": [
+        3090671837,
+        3727111833,
+        3001782102,
+        76809248
+      ]
+    },
+    {
+      "unit_id": 152,
+      "environment_seed": 7351,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2106574872,
+      "probe_seed": 957578194,
+      "verification_seeds": [
+        712141960,
+        920637089,
+        4219654177,
+        2320937070
+      ]
+    },
+    {
+      "unit_id": 153,
+      "environment_seed": 7352,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3009368645,
+      "probe_seed": 1517987603,
+      "verification_seeds": [
+        3985902838,
+        2308518647,
+        3345031174,
+        2545734096
+      ]
+    },
+    {
+      "unit_id": 154,
+      "environment_seed": 7353,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1662153561,
+      "probe_seed": 3679385254,
+      "verification_seeds": [
+        3004114903,
+        3962327990,
+        3263899042,
+        3089071716
+      ]
+    },
+    {
+      "unit_id": 155,
+      "environment_seed": 7354,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 531897370,
+      "probe_seed": 3409315939,
+      "verification_seeds": [
+        316780445,
+        2543861374,
+        3655651277,
+        1378201000
+      ]
+    },
+    {
+      "unit_id": 156,
+      "environment_seed": 7355,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 757024916,
+      "probe_seed": 795922179,
+      "verification_seeds": [
+        3530000592,
+        74783109,
+        3266483350,
+        1827358481
+      ]
+    },
+    {
+      "unit_id": 157,
+      "environment_seed": 7356,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 3287931108,
+      "probe_seed": 38714318,
+      "verification_seeds": [
+        4168532780,
+        694664485,
+        3193006874,
+        2386348045
+      ]
+    },
+    {
+      "unit_id": 158,
+      "environment_seed": 7357,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 3651132442,
+      "probe_seed": 4081753250,
+      "verification_seeds": [
+        1199679816,
+        2709234279,
+        1877692582,
+        2941640933
+      ]
+    },
+    {
+      "unit_id": 159,
+      "environment_seed": 7358,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2506530380,
+      "probe_seed": 2324563190,
+      "verification_seeds": [
+        1609515549,
+        3326212381,
+        1482637569,
+        2491126051
+      ]
+    },
+    {
+      "unit_id": 160,
+      "environment_seed": 7359,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2510641936,
+      "probe_seed": 406513458,
+      "verification_seeds": [
+        459029453,
+        2752902896,
+        3742872985,
+        1751637934
+      ]
+    },
+    {
+      "unit_id": 161,
+      "environment_seed": 7360,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3004984738,
+      "probe_seed": 2316447134,
+      "verification_seeds": [
+        3492102500,
+        449321739,
+        1768217821,
+        2693995046
+      ]
+    },
+    {
+      "unit_id": 162,
+      "environment_seed": 7361,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 589109973,
+      "probe_seed": 1916775739,
+      "verification_seeds": [
+        2045636220,
+        3961878884,
+        4011837215,
+        3341806859
+      ]
+    },
+    {
+      "unit_id": 163,
+      "environment_seed": 7362,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2807882518,
+      "probe_seed": 3526863688,
+      "verification_seeds": [
+        3953698048,
+        643982288,
+        2970948272,
+        1684389680
+      ]
+    },
+    {
+      "unit_id": 164,
+      "environment_seed": 7363,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3893039747,
+      "probe_seed": 623450738,
+      "verification_seeds": [
+        2470228646,
+        1375219446,
+        3341176934,
+        572140242
+      ]
+    },
+    {
+      "unit_id": 165,
+      "environment_seed": 7364,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 293928515,
+      "probe_seed": 1171622468,
+      "verification_seeds": [
+        1996374619,
+        1298776908,
+        1145022823,
+        4277079780
+      ]
+    },
+    {
+      "unit_id": 166,
+      "environment_seed": 7365,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1942056011,
+      "probe_seed": 1876289375,
+      "verification_seeds": [
+        1766403501,
+        2131487740,
+        1833620554,
+        1636661435
+      ]
+    },
+    {
+      "unit_id": 167,
+      "environment_seed": 7366,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2827831214,
+      "probe_seed": 28971037,
+      "verification_seeds": [
+        3814108047,
+        2503268442,
+        690472803,
+        1511431310
+      ]
+    },
+    {
+      "unit_id": 168,
+      "environment_seed": 7367,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 208503801,
+      "probe_seed": 2915910340,
+      "verification_seeds": [
+        1785385217,
+        1450004311,
+        1369638820,
+        3359055331
+      ]
+    },
+    {
+      "unit_id": 169,
+      "environment_seed": 7368,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 4071920496,
+      "probe_seed": 1577912517,
+      "verification_seeds": [
+        873548531,
+        2328777346,
+        3641434312,
+        1714836914
+      ]
+    },
+    {
+      "unit_id": 170,
+      "environment_seed": 7369,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 3501581419,
+      "probe_seed": 3658023670,
+      "verification_seeds": [
+        3836331350,
+        4219276651,
+        4005821550,
+        4208935897
+      ]
+    },
+    {
+      "unit_id": 171,
+      "environment_seed": 7370,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1076127330,
+      "probe_seed": 2867575601,
+      "verification_seeds": [
+        482810935,
+        1292228631,
+        1684073426,
+        48329390
+      ]
+    },
+    {
+      "unit_id": 172,
+      "environment_seed": 7371,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2992830203,
+      "probe_seed": 2201008038,
+      "verification_seeds": [
+        1632704409,
+        213162948,
+        1141538760,
+        2314408674
+      ]
+    },
+    {
+      "unit_id": 173,
+      "environment_seed": 7372,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2818634011,
+      "probe_seed": 3351173971,
+      "verification_seeds": [
+        1034475727,
+        4263901918,
+        1688376650,
+        950451312
+      ]
+    },
+    {
+      "unit_id": 174,
+      "environment_seed": 7373,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 140588669,
+      "probe_seed": 4249622939,
+      "verification_seeds": [
+        3330718963,
+        2921826011,
+        841175313,
+        1921995620
+      ]
+    },
+    {
+      "unit_id": 175,
+      "environment_seed": 7374,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 293107205,
+      "probe_seed": 2636093909,
+      "verification_seeds": [
+        1200037056,
+        2151130848,
+        1601301556,
+        1971845463
+      ]
+    },
+    {
+      "unit_id": 176,
+      "environment_seed": 7375,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 3200820673,
+      "probe_seed": 3898772429,
+      "verification_seeds": [
+        3420449701,
+        883082453,
+        402594288,
+        2172680129
+      ]
+    },
+    {
+      "unit_id": 177,
+      "environment_seed": 7376,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1735331251,
+      "probe_seed": 1066893547,
+      "verification_seeds": [
+        277742577,
+        1803085448,
+        2097606515,
+        2228335317
+      ]
+    },
+    {
+      "unit_id": 178,
+      "environment_seed": 7377,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 4107057100,
+      "probe_seed": 603046889,
+      "verification_seeds": [
+        3281304978,
+        217257643,
+        1575362048,
+        825876756
+      ]
+    },
+    {
+      "unit_id": 179,
+      "environment_seed": 7378,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 2434024542,
+      "probe_seed": 342923510,
+      "verification_seeds": [
+        1901628325,
+        1460433163,
+        1701785433,
+        359521611
+      ]
+    },
+    {
+      "unit_id": 180,
+      "environment_seed": 7379,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 434872356,
+      "probe_seed": 2909721913,
+      "verification_seeds": [
+        3452556825,
+        1985589725,
+        805334857,
+        4007149351
+      ]
+    },
+    {
+      "unit_id": 181,
+      "environment_seed": 7380,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2870710498,
+      "probe_seed": 1258679720,
+      "verification_seeds": [
+        1347045683,
+        3199746756,
+        3707427323,
+        1246804635
+      ]
+    },
+    {
+      "unit_id": 182,
+      "environment_seed": 7381,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2097788013,
+      "probe_seed": 1194826608,
+      "verification_seeds": [
+        395015708,
+        4194256013,
+        3123066230,
+        3263818165
+      ]
+    },
+    {
+      "unit_id": 183,
+      "environment_seed": 7382,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2286246080,
+      "probe_seed": 398985307,
+      "verification_seeds": [
+        3513376197,
+        2783092555,
+        1361532545,
+        1210513080
+      ]
+    },
+    {
+      "unit_id": 184,
+      "environment_seed": 7383,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 111686478,
+      "probe_seed": 3202889023,
+      "verification_seeds": [
+        636471862,
+        3264324382,
+        3483326298,
+        3420939060
+      ]
+    },
+    {
+      "unit_id": 185,
+      "environment_seed": 7384,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 65796909,
+      "probe_seed": 744009339,
+      "verification_seeds": [
+        2448915591,
+        844830712,
+        1892392195,
+        1112842830
+      ]
+    },
+    {
+      "unit_id": 186,
+      "environment_seed": 7385,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 624034893,
+      "probe_seed": 3886450365,
+      "verification_seeds": [
+        1969703673,
+        3232350104,
+        4113910865,
+        3311032090
+      ]
+    },
+    {
+      "unit_id": 187,
+      "environment_seed": 7386,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 2265835771,
+      "probe_seed": 4055264432,
+      "verification_seeds": [
+        335523548,
+        2349069359,
+        89234239,
+        3355607408
+      ]
+    },
+    {
+      "unit_id": 188,
+      "environment_seed": 7387,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 1807085473,
+      "probe_seed": 176860502,
+      "verification_seeds": [
+        2400590177,
+        2030432801,
+        979127315,
+        2940059707
+      ]
+    },
+    {
+      "unit_id": 189,
+      "environment_seed": 7388,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1194108102,
+      "probe_seed": 612447134,
+      "verification_seeds": [
+        1461973436,
+        1801413531,
+        336949258,
+        1274600250
+      ]
+    },
+    {
+      "unit_id": 190,
+      "environment_seed": 7389,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 831786044,
+      "probe_seed": 2605999450,
+      "verification_seeds": [
+        1022493975,
+        1244604432,
+        1696417538,
+        247986843
+      ]
+    },
+    {
+      "unit_id": 191,
+      "environment_seed": 7390,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 2345338437,
+      "probe_seed": 1814903739,
+      "verification_seeds": [
+        4243351841,
+        3913238021,
+        2831100207,
+        235775859
+      ]
+    },
+    {
+      "unit_id": 192,
+      "environment_seed": 7391,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1347149919,
+      "probe_seed": 2755248579,
+      "verification_seeds": [
+        3505548912,
+        4277834475,
+        3418255450,
+        3567111517
+      ]
+    },
+    {
+      "unit_id": 193,
+      "environment_seed": 7392,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 2237996746,
+      "probe_seed": 1474974994,
+      "verification_seeds": [
+        3412771268,
+        2696418695,
+        1171407700,
+        2389022992
+      ]
+    },
+    {
+      "unit_id": 194,
+      "environment_seed": 7393,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 1231920750,
+      "probe_seed": 2697310849,
+      "verification_seeds": [
+        2740674671,
+        3915914505,
+        514518151,
+        537388297
+      ]
+    },
+    {
+      "unit_id": 195,
+      "environment_seed": 7394,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 497116089,
+      "probe_seed": 3802443174,
+      "verification_seeds": [
+        1515586176,
+        2258334899,
+        2919005145,
+        963214632
+      ]
+    },
+    {
+      "unit_id": 196,
+      "environment_seed": 7395,
+      "condition_id_oracle": "fault_01",
+      "initial_perturbation_seed": 1837012936,
+      "probe_seed": 2933085422,
+      "verification_seeds": [
+        2926343364,
+        1986538822,
+        902228002,
+        2711258054
+      ]
+    },
+    {
+      "unit_id": 197,
+      "environment_seed": 7396,
+      "condition_id_oracle": "fault_02",
+      "initial_perturbation_seed": 1868931922,
+      "probe_seed": 3437448008,
+      "verification_seeds": [
+        506943739,
+        1222851281,
+        56105828,
+        3875733107
+      ]
+    },
+    {
+      "unit_id": 198,
+      "environment_seed": 7397,
+      "condition_id_oracle": "fault_03",
+      "initial_perturbation_seed": 4129118361,
+      "probe_seed": 1626623413,
+      "verification_seeds": [
+        111884888,
+        3479100957,
+        2695152706,
+        1958710445
+      ]
+    },
+    {
+      "unit_id": 199,
+      "environment_seed": 7398,
+      "condition_id_oracle": "fault_04",
+      "initial_perturbation_seed": 3736293456,
+      "probe_seed": 3579739362,
+      "verification_seeds": [
+        3577385278,
+        2091119012,
+        554385582,
+        461973219
+      ]
+    },
+    {
+      "unit_id": 200,
+      "environment_seed": 7399,
+      "condition_id_oracle": "fault_05",
+      "initial_perturbation_seed": 2452748581,
+      "probe_seed": 2304856882,
+      "verification_seeds": [
+        1248986239,
+        1492994026,
+        899058399,
+        587675546
+      ]
+    }
+  ],
+  "manifest_id": "759c9586f88d5bff43380b67e2bdae1931cd24e3bd57c726643e95510c6fc80f"
+}

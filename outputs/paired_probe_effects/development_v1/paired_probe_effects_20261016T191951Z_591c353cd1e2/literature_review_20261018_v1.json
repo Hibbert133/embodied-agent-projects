@@ -1,0 +1,60 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "created_utc": "2026-10-18T03:33:05.282841+00:00",
+  "note_path": "docs/research/correction_selection_prior_art_20261018_zh.md",
+  "note_sha256": "7243bcd9437861be3ff15fb4595a87f46a4e9f01699d6c82ccfb564325604540",
+  "sources": [
+    {
+      "url": "https://proceedings.mlr.press/v139/wagenmaker21a.html",
+      "read_scope": "Publisher abstract"
+    },
+    {
+      "url": "https://arxiv.org/abs/2106.04193v2",
+      "read_scope": "Abstract and version history"
+    },
+    {
+      "url": "https://proceedings.neurips.cc/paper_files/paper/2022/hash/b90cb10d4dae058dd167388e76168c1b-Abstract-Conference.html",
+      "read_scope": "Publisher abstract"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v305/aoyama25a.html",
+      "read_scope": "Publisher abstract"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.32154v1",
+      "read_scope": "Sections III and VI boundary"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.19378v1",
+      "read_scope": "Sections II, III and VI"
+    },
+    {
+      "url": "https://proceedings.mlr.press/v120/arcari20a/arcari20a.pdf",
+      "read_scope": "Sections 2 and 3"
+    },
+    {
+      "url": "https://arxiv.org/pdf/2610.09207v1",
+      "read_scope": "Sections III to V; Assumption 1; equations 12 to 24"
+    }
+  ],
+  "algebra_check": {
+    "prior_mean": "0",
+    "prior_variance": "2",
+    "actual_mean": "-2/3",
+    "actual_variance": "2/9",
+    "actual_quadratic_risk": "2/3",
+    "incorrect_independence_mean": "0",
+    "incorrect_independence_quadratic_risk": "4/3",
+    "passed": true
+  },
+  "new_environment_steps": 0,
+  "new_reset_calls": 0,
+  "new_api_calls": 0,
+  "random_draws": 0,
+  "new_selector_fits": 0,
+  "frozen_scientific_source_modified": false,
+  "in_flight_main_outcomes_used": false,
+  "scope": "Primary-source comparison plus exact deterministic fractional arithmetic; no new theory, empirical result or method promotion."
+}

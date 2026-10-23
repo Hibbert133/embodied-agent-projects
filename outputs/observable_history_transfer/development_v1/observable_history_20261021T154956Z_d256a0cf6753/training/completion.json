@@ -1,0 +1,142 @@
+{
+  "experiment_run_id": "observable_history_20261021T154956Z_d256a0cf6753",
+  "manifest_id": "210833e32b9ae18d9ad6f08eab55a4a2db9adebb00fc000686ea3e20a776ae5e",
+  "source_git_commit": "d256a0cf675377e1895e323648276a5309c0416b",
+  "status": "THIRTY_MODELS_SAVED_TRAIN_ONLY",
+  "linear_attempts": [
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "push-v3",
+      "method": "HISTORY_LINEAR10",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "push-v3",
+      "method": "STATE_LINEAR20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "push-v3",
+      "method": "QUADRATIC_STATE20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "reach-v3",
+      "method": "HISTORY_LINEAR10",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "reach-v3",
+      "method": "STATE_LINEAR20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "reach-v3",
+      "method": "QUADRATIC_STATE20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "door-open-v3",
+      "method": "HISTORY_LINEAR10",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "door-open-v3",
+      "method": "STATE_LINEAR20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "FEEDBACK8",
+      "task": "door-open-v3",
+      "method": "QUADRATIC_STATE20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "push-v3",
+      "method": "HISTORY_LINEAR10",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "push-v3",
+      "method": "STATE_LINEAR20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "push-v3",
+      "method": "QUADRATIC_STATE20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "reach-v3",
+      "method": "HISTORY_LINEAR10",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "reach-v3",
+      "method": "STATE_LINEAR20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "reach-v3",
+      "method": "QUADRATIC_STATE20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "door-open-v3",
+      "method": "HISTORY_LINEAR10",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "door-open-v3",
+      "method": "STATE_LINEAR20",
+      "status": "SAVED"
+    },
+    {
+      "source_bank": "BALANCED8",
+      "task": "door-open-v3",
+      "method": "QUADRATIC_STATE20",
+      "status": "SAVED"
+    }
+  ],
+  "linear_fits_attempted": 18,
+  "linear_fits_saved": 18,
+  "failure": null,
+  "saved_ns": 552563469567800,
+  "wall_ns": 1104549993000,
+  "new_api_calls": 0,
+  "new_environment_steps": 0,
+  "artifact_sha256": {
+    "gru_process.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "models.json": "b168a7b11e53ae20d014361fdf132f52fda1b57e8ed3eb23277946cb271411d3",
+    "public_train_bundle.json": "79bf2819261976b7e62faba8ad6c12d39d0552dc2acebc81949e2da8a4631e75",
+    "gru/BALANCED8_door-open-v3_GRU_WINDOW1.json": "401c63b8736a856c8b26e0b7e9685bd6b5365e29a16110f669389aef63600e31",
+    "gru/BALANCED8_door-open-v3_GRU_WINDOW16.json": "19002b92feedd73a2904ec85127a6f88da1aefbcbfeed627da76183339190d19",
+    "gru/BALANCED8_push-v3_GRU_WINDOW1.json": "acec3d277539827255a7adba13e8c96d6d3a6bb933ef3978e54ac6b0c2ea3142",
+    "gru/BALANCED8_push-v3_GRU_WINDOW16.json": "38ff499c37f6ed1dc99a78c17af9ae5f89a2fb68688c37d8fc766611b3c85be1",
+    "gru/BALANCED8_reach-v3_GRU_WINDOW1.json": "520820ebe08ae61ec81bb12ed6c0b57fb8de20e80b0205eabf12ae0bf21cdd18",
+    "gru/BALANCED8_reach-v3_GRU_WINDOW16.json": "160962847bbd895f91c0b5db06a4b56189b12b55dd4138d5122b73d55cf1c24e",
+    "gru/completion.json": "e1749715dea045009dd52da2a7d40c491720e3eb54e3308ae72fcea24e7557cf",
+    "gru/FEEDBACK8_door-open-v3_GRU_WINDOW1.json": "f1192bee9df2bcc13ebe564f0e016f56e0310b68f6d5009e8a173edb6ac3542e",
+    "gru/FEEDBACK8_door-open-v3_GRU_WINDOW16.json": "4a9b42dc70be76d86552abf89d25cd954c0b345325417fbaf4244ea4a2f7bd8a",
+    "gru/FEEDBACK8_push-v3_GRU_WINDOW1.json": "a15152a7d2181693a58000263d98ab982c44fb8d6e62203534081e8ff7784fb6",
+    "gru/FEEDBACK8_push-v3_GRU_WINDOW16.json": "88e879983bedd3b30b5efc0dc47c14db3f2499860b494c85995205cb04197c0a",
+    "gru/FEEDBACK8_reach-v3_GRU_WINDOW1.json": "1d441c0b4edf98ba5e4c23c4a06d318de21774db740b0c3aaf51421ee972cafe",
+    "gru/FEEDBACK8_reach-v3_GRU_WINDOW16.json": "a06a4f0a22789daecf467db64b1c9cf5ed43f4bc256838fd9872b90cc54b7ea2",
+    "gru/training_log.jsonl": "8f887bc29b301fb64f57353bcb930a673759d6089ec7ff992998a22347c5069b"
+  }
+}

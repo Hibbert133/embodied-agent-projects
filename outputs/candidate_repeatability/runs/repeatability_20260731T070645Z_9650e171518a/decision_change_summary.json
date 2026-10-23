@@ -1,0 +1,62 @@
+{
+  "protocol_id": "candidate_repeatability_decision_change_audit_v1",
+  "repeatability_run_id": "repeatability_20260731T070645Z_9650e171518a",
+  "changed_cases": 11,
+  "outcome_counts": {
+    "NEUTRAL": 3,
+    "HARMFUL": 6,
+    "HELPFUL": 2
+  },
+  "driver_counts": {
+    "ROBUST_DISTANCE_RANK_FLIP": 10,
+    "PREFIX_SUCCESS_PRIORITY": 1
+  },
+  "representatives": [
+    {
+      "case_id": "development_case_0037",
+      "seed": 636,
+      "before_candidate": "probe_grounded_compensation",
+      "after_candidate": "stochastic_retry",
+      "outcome_class": "HELPFUL",
+      "evidence_driver": "PREFIX_SUCCESS_PRIORITY",
+      "before_recovery_success": false,
+      "after_recovery_success": true,
+      "compensation_prefix_success_count_k3": 0,
+      "retry_prefix_success_count_k3": 1,
+      "compensation_robust_distance_k3": 0.20381503582191662,
+      "retry_robust_distance_k3": 0.16815952622945046,
+      "retry_minus_compensation_robust_margin_k3": -0.03565550959246616
+    },
+    {
+      "case_id": "development_case_0021",
+      "seed": 620,
+      "before_candidate": "stochastic_retry",
+      "after_candidate": "probe_grounded_compensation",
+      "outcome_class": "HARMFUL",
+      "evidence_driver": "ROBUST_DISTANCE_RANK_FLIP",
+      "before_recovery_success": true,
+      "after_recovery_success": false,
+      "compensation_prefix_success_count_k3": 0,
+      "retry_prefix_success_count_k3": 0,
+      "compensation_robust_distance_k3": 0.2210661122964976,
+      "retry_robust_distance_k3": 0.2649406275502405,
+      "retry_minus_compensation_robust_margin_k3": 0.04387451525374289
+    },
+    {
+      "case_id": "development_case_0001",
+      "seed": 600,
+      "before_candidate": "probe_grounded_compensation",
+      "after_candidate": "stochastic_retry",
+      "outcome_class": "NEUTRAL",
+      "evidence_driver": "ROBUST_DISTANCE_RANK_FLIP",
+      "before_recovery_success": false,
+      "after_recovery_success": false,
+      "compensation_prefix_success_count_k3": 0,
+      "retry_prefix_success_count_k3": 0,
+      "compensation_robust_distance_k3": 0.1894553472845617,
+      "retry_robust_distance_k3": 0.17451880900447303,
+      "retry_minus_compensation_robust_margin_k3": -0.014936538280088674
+    }
+  ],
+  "claim_boundary": "Descriptive development audit only; no new decision rule or performance claim"
+}

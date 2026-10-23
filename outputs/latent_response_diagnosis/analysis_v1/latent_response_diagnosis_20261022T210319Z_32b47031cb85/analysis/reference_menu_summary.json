@@ -1,0 +1,305 @@
+{
+  "classification": "OPTIMISTIC_REALIZED_FUTURE_RECORD_MENU_ONLY",
+  "matched_RAW_prefix_comparisons": 378,
+  "all_units": 54,
+  "independent_groups": 9,
+  "program_summaries": [
+    {
+      "program": "RAW_CONTINUE",
+      "assigned": 54,
+      "successes": 53,
+      "mean_deadline_loss": 87.16666666666667
+    },
+    {
+      "program": "DIRECT_C8",
+      "assigned": 54,
+      "successes": 51,
+      "mean_deadline_loss": 105.01851851851852
+    },
+    {
+      "program": "MOVE_INTEGRAL",
+      "assigned": 54,
+      "successes": 50,
+      "mean_deadline_loss": 146.22222222222223
+    },
+    {
+      "program": "FIXED_PD_KEEP",
+      "assigned": 54,
+      "successes": 50,
+      "mean_deadline_loss": 160.46296296296296
+    },
+    {
+      "program": "FIXED_PID_KEEP",
+      "assigned": 54,
+      "successes": 51,
+      "mean_deadline_loss": 154.1851851851852
+    },
+    {
+      "program": "LOCAL_PD_KEEP",
+      "assigned": 54,
+      "successes": 52,
+      "mean_deadline_loss": 125.94444444444444
+    },
+    {
+      "program": "LOCAL_PID_KEEP",
+      "assigned": 54,
+      "successes": 54,
+      "mean_deadline_loss": 110.98148148148148
+    },
+    {
+      "program": "LOCAL_PID_REFERENCE_RESET",
+      "assigned": 54,
+      "successes": 54,
+      "mean_deadline_loss": 107.24074074074075
+    },
+    {
+      "program": "LOCAL_PID_REFERENCE_CARRY",
+      "assigned": 54,
+      "successes": 54,
+      "mean_deadline_loss": 110.05555555555556
+    },
+    {
+      "program": "LOCAL_PID_REFERENCE_RESET_NO_PROBE",
+      "assigned": 54,
+      "successes": 53,
+      "mean_deadline_loss": 112.24074074074075
+    }
+  ],
+  "oracle_mean_loss": 68.61111111111111,
+  "raw_mean_loss": 87.16666666666667,
+  "optimistic_mean_raw_saving": 18.555555555555557,
+  "positive_realized_opportunity_units": 8,
+  "groups": [
+    {
+      "group": 0,
+      "allocated_units": 6,
+      "oracle_loss_sum": 491,
+      "raw_loss_sum": 503,
+      "optimistic_saving_sum": 12
+    },
+    {
+      "group": 1,
+      "allocated_units": 6,
+      "oracle_loss_sum": 491,
+      "raw_loss_sum": 1032,
+      "optimistic_saving_sum": 541
+    },
+    {
+      "group": 2,
+      "allocated_units": 6,
+      "oracle_loss_sum": 374,
+      "raw_loss_sum": 374,
+      "optimistic_saving_sum": 0
+    },
+    {
+      "group": 3,
+      "allocated_units": 6,
+      "oracle_loss_sum": 373,
+      "raw_loss_sum": 373,
+      "optimistic_saving_sum": 0
+    },
+    {
+      "group": 4,
+      "allocated_units": 6,
+      "oracle_loss_sum": 552,
+      "raw_loss_sum": 1001,
+      "optimistic_saving_sum": 449
+    },
+    {
+      "group": 5,
+      "allocated_units": 6,
+      "oracle_loss_sum": 365,
+      "raw_loss_sum": 365,
+      "optimistic_saving_sum": 0
+    },
+    {
+      "group": 6,
+      "allocated_units": 6,
+      "oracle_loss_sum": 372,
+      "raw_loss_sum": 372,
+      "optimistic_saving_sum": 0
+    },
+    {
+      "group": 7,
+      "allocated_units": 6,
+      "oracle_loss_sum": 335,
+      "raw_loss_sum": 335,
+      "optimistic_saving_sum": 0
+    },
+    {
+      "group": 8,
+      "allocated_units": 6,
+      "oracle_loss_sum": 352,
+      "raw_loss_sum": 352,
+      "optimistic_saving_sum": 0
+    }
+  ],
+  "cells": [
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "boundary": 16,
+      "allocated": 3,
+      "oracle_mean_loss": 75.33333333333333,
+      "raw_mean_loss": 75.33333333333333,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "boundary": 32,
+      "allocated": 3,
+      "oracle_mean_loss": 86.66666666666667,
+      "raw_mean_loss": 123.66666666666667,
+      "positive_realized_opportunity_units": 1
+    },
+    {
+      "task": "push-v3",
+      "context": "UNCHANGED",
+      "boundary": 64,
+      "allocated": 3,
+      "oracle_mean_loss": 64.0,
+      "raw_mean_loss": 64.0,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "boundary": 16,
+      "allocated": 3,
+      "oracle_mean_loss": 79.0,
+      "raw_mean_loss": 83.0,
+      "positive_realized_opportunity_units": 1
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "boundary": 32,
+      "allocated": 3,
+      "oracle_mean_loss": 112.0,
+      "raw_mean_loss": 286.0,
+      "positive_realized_opportunity_units": 2
+    },
+    {
+      "task": "push-v3",
+      "context": "CHANGED",
+      "boundary": 64,
+      "allocated": 3,
+      "oracle_mean_loss": 64.0,
+      "raw_mean_loss": 64.0,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "boundary": 16,
+      "allocated": 3,
+      "oracle_mean_loss": 36.333333333333336,
+      "raw_mean_loss": 36.333333333333336,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "boundary": 32,
+      "allocated": 3,
+      "oracle_mean_loss": 46.0,
+      "raw_mean_loss": 98.66666666666667,
+      "positive_realized_opportunity_units": 2
+    },
+    {
+      "task": "reach-v3",
+      "context": "UNCHANGED",
+      "boundary": 64,
+      "allocated": 3,
+      "oracle_mean_loss": 36.333333333333336,
+      "raw_mean_loss": 36.333333333333336,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "boundary": 16,
+      "allocated": 3,
+      "oracle_mean_loss": 32.666666666666664,
+      "raw_mean_loss": 32.666666666666664,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "boundary": 32,
+      "allocated": 3,
+      "oracle_mean_loss": 41.333333333333336,
+      "raw_mean_loss": 107.66666666666667,
+      "positive_realized_opportunity_units": 2
+    },
+    {
+      "task": "reach-v3",
+      "context": "CHANGED",
+      "boundary": 64,
+      "allocated": 3,
+      "oracle_mean_loss": 36.333333333333336,
+      "raw_mean_loss": 36.333333333333336,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "boundary": 16,
+      "allocated": 3,
+      "oracle_mean_loss": 94.33333333333333,
+      "raw_mean_loss": 94.33333333333333,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "boundary": 32,
+      "allocated": 3,
+      "oracle_mean_loss": 85.33333333333333,
+      "raw_mean_loss": 85.33333333333333,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "boundary": 64,
+      "allocated": 3,
+      "oracle_mean_loss": 81.66666666666667,
+      "raw_mean_loss": 81.66666666666667,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "boundary": 16,
+      "allocated": 3,
+      "oracle_mean_loss": 94.33333333333333,
+      "raw_mean_loss": 94.33333333333333,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "boundary": 32,
+      "allocated": 3,
+      "oracle_mean_loss": 88.0,
+      "raw_mean_loss": 88.0,
+      "positive_realized_opportunity_units": 0
+    },
+    {
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "boundary": 64,
+      "allocated": 3,
+      "oracle_mean_loss": 81.33333333333333,
+      "raw_mean_loss": 81.33333333333333,
+      "positive_realized_opportunity_units": 0
+    }
+  ],
+  "same_acquisition_submenu_mean_loss": 69.5925925925926,
+  "same_acquisition_submenu_mean_raw_saving": 17.574074074074073,
+  "deployable_policy_or_learnability_or_new_task_gain": false,
+  "new_confidence_intervals": false
+}

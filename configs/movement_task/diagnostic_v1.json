@@ -1,0 +1,22 @@
+{
+  "protocol_id": "movement_failure_diagnostic_v1",
+  "scope": "POSTHOC_DESCRIPTIVE_ONLY",
+  "source_run": "outputs/movement_task/development_v1/movement_task_20261019T191708Z_eee0803df5bf",
+  "manifest_sha256": "3321f87afc0273a3533b4550b100f5d6a55046a9c1a4879b39c8791a9a42de9d",
+  "analysis_summary_sha256": "dc050a0cede423f7f7bdbf4d8ffd6661c148dd6113601b74df5add4041bc3a53",
+  "source_models": "outputs/forward_prediction/baselines_v1/forward_prediction_20261014T064233Z_bb812df15401/models.json",
+  "source_models_sha256": "b3f2d7e69316dba65e722d74d49df25c7d651043e78bf4c0f6e1d37f1e599c80",
+  "canonical_movement_program": "MOVE_ARX_KEEP",
+  "executions": 1296,
+  "canonical_cases": 324,
+  "independent_groups": 54,
+  "lags": [0, 1, 2],
+  "movement_bins": [[1, 8], [9, 16], [17, 32], [33, 64]],
+  "new_environment_steps": 0,
+  "new_all_resets": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "output": "outputs/movement_task/diagnostic_v1",
+  "primary_comparisons_unchanged": 6,
+  "later_development_rule": "Full new development mean cutoff loss below BOTH DIRECT_C8 and MOVE_INTEGRAL; disclose all success-rate changes."
+}

@@ -1,0 +1,19 @@
+{
+  "benchmark_id": "bias_noise_heldout_v1",
+  "split": "heldout",
+  "seed_start": 310,
+  "num_seeds": 10,
+  "max_steps": 500,
+  "source_oracle_audit": "outputs/ambiguity_benchmark/heldout_rollouts/oracle_audit.jsonl",
+  "source_probe_results": "outputs/autoresearch/probe_consistency_validation/results.csv",
+  "source_threshold": "outputs/autoresearch/probe_consistency_tuning/threshold_selection.json",
+  "matching_features": [
+    "episode_return",
+    "final_object_goal_distance",
+    "progress_to_goal"
+  ],
+  "matching_rule": "same global one-to-one standardized-distance rule as tuning",
+  "probe_threshold": 0.11560838098372882,
+  "heldout_retuning": false,
+  "rendering": false
+}

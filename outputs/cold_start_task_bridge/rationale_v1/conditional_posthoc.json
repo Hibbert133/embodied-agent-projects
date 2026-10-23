@@ -1,0 +1,2927 @@
+{
+  "reference_id": "same_response_conditional_late_posthoc_v1",
+  "experiment_run_id": "cold_start_evidence_20261015T170124Z_c5b76fb5ddb6",
+  "manifest_id": "efd4ecacfbbcdb36cbe8c2399d45a5d6ee2154aa263d0bb49b040c2448521715",
+  "source_git_commit": "c5b76fb5ddb6602a7f632aa6193a025790e52df3",
+  "kind": "EXPLORATORY_OLD_SOURCE_REUSE_NOT_INDEPENDENT_CONFIRMATION",
+  "current_task_outcomes_read": false,
+  "current_task_methods_changed": false,
+  "promotion_gate_evaluated": false,
+  "assumptions": "Same frozen working response mean/covariance; condition last six observed displacements on first two; no guarantee for true float32 physics.",
+  "self_check": [
+    {
+      "rho": 0.0,
+      "max_parameter_difference": 3.1363800445660672e-15
+    },
+    {
+      "rho": 0.4,
+      "max_parameter_difference": 1.3322676295501878e-15
+    },
+    {
+      "rho": 0.85,
+      "max_parameter_difference": 7.771561172376096e-15
+    }
+  ],
+  "cases": 96,
+  "valid": 96,
+  "mean_score": 0.286986987750311,
+  "mean_matrix_error": 0.2087277606051984,
+  "mean_bias_error": 0.03130369085804504,
+  "frozen_reference_scores": {
+    "JOINT_FULL8": 0.20229978766527892,
+    "JOINT_DROP2": 0.20490085384572473,
+    "SAME_DATA_ARX8": 0.7669984077269719,
+    "OLD_ARX8": 0.718234900550209
+  },
+  "details": [
+    {
+      "case_id": "qual_00_0_0",
+      "stream": 0,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.12462522127111,
+            -0.34235484837940905
+          ],
+          [
+            0.8179012517864732,
+            0.7581879641283367
+          ]
+        ],
+        "bias_xy": [
+          0.08502280004146241,
+          -0.10824742294204323
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2366453700998871,
+      "bias_error": 0.06140492346708619,
+      "score": 0.39015767876760254
+    },
+    {
+      "case_id": "qual_00_0_1",
+      "stream": 0,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9794710030356827,
+            -0.08799273974363475
+          ],
+          [
+            0.7317833379807676,
+            0.656518643028212
+          ]
+        ],
+        "bias_xy": [
+          0.1210303334680945,
+          -0.09494389178675779
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.19719685430387693,
+      "bias_error": 0.039256500023576384,
+      "score": 0.2953381043628179
+    },
+    {
+      "case_id": "qual_00_1_0",
+      "stream": 0,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.2020442252854713,
+            -0.32549089849047713
+          ],
+          [
+            0.37378916020043934,
+            0.6702627743878636
+          ]
+        ],
+        "bias_xy": [
+          0.16046753560479307,
+          -0.17822946817612556
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3049722266248879,
+      "bias_error": 0.0538175263242198,
+      "score": 0.4395160424354374
+    },
+    {
+      "case_id": "qual_00_1_1",
+      "stream": 0,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.096399160654668,
+            -0.30508169168395577
+          ],
+          [
+            0.5904265221817682,
+            0.7164791635879899
+          ]
+        ],
+        "bias_xy": [
+          0.14898608712674238,
+          -0.1205408203854859
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.09796960700515388,
+      "bias_error": 0.008651082211264148,
+      "score": 0.11959731253331424
+    },
+    {
+      "case_id": "qual_00_2_0",
+      "stream": 0,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.0675412899903467,
+            -0.0726319381806817
+          ],
+          [
+            0.6198863009041192,
+            0.7126146063426098
+          ]
+        ],
+        "bias_xy": [
+          0.17404553102768947,
+          -0.11294880686811586
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.158715214038623,
+      "bias_error": 0.033754228333550344,
+      "score": 0.24310078487249884
+    },
+    {
+      "case_id": "qual_00_2_1",
+      "stream": 0,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.242298586531063,
+            -0.20210306590795823
+          ],
+          [
+            0.8085014271836668,
+            0.5421545745001144
+          ]
+        ],
+        "bias_xy": [
+          0.2089976312901955,
+          -0.09453092999300437
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.28051149570825973,
+      "bias_error": 0.07323945143822222,
+      "score": 0.46361012430381526
+    },
+    {
+      "case_id": "qual_01_0_0",
+      "stream": 1,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.1440539372436245,
+            0.11690273638538386
+          ],
+          [
+            -0.2985119346942709,
+            0.8054767981612341
+          ]
+        ],
+        "bias_xy": [
+          -0.07783992133550441,
+          0.08793374582482053
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1374455400123468,
+      "bias_error": 0.0463553642768041,
+      "score": 0.25333395070435705
+    },
+    {
+      "case_id": "qual_01_0_1",
+      "stream": 1,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.3160583255585356,
+            0.042000829656342775
+          ],
+          [
+            -0.08972090613139568,
+            0.7435091242406614
+          ]
+        ],
+        "bias_xy": [
+          -0.11440152864492477,
+          0.14377785943241272
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2370918305730603,
+      "bias_error": 0.0242213415164354,
+      "score": 0.2976451843641488
+    },
+    {
+      "case_id": "qual_01_1_0",
+      "stream": 1,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8908864615958112,
+            0.0697346949342451
+          ],
+          [
+            0.026523568903153112,
+            0.6113536469852483
+          ]
+        ],
+        "bias_xy": [
+          -0.09206247420210964,
+          0.12001947697400936
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.34250196584581355,
+      "bias_error": 0.011637829331157585,
+      "score": 0.3715965391737075
+    },
+    {
+      "case_id": "qual_01_1_1",
+      "stream": 1,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.0645149967857641,
+            0.006057310969287244
+          ],
+          [
+            -0.13881462964952565,
+            0.7089783056149114
+          ]
+        ],
+        "bias_xy": [
+          -0.11783660324127077,
+          0.15357168390122197
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.09626998086877263,
+      "bias_error": 0.032821190144382235,
+      "score": 0.1783229562297282
+    },
+    {
+      "case_id": "qual_01_2_0",
+      "stream": 1,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.1582756513490076,
+            0.02865828923425591
+          ],
+          [
+            -0.01224900597946802,
+            0.6621989554366
+          ]
+        ],
+        "bias_xy": [
+          -0.10245230802087846,
+          0.15721304136016517
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.21534571992399518,
+      "bias_error": 0.02716649581350834,
+      "score": 0.283261959457766
+    },
+    {
+      "case_id": "qual_01_2_1",
+      "stream": 1,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.1593462557391332,
+            -0.0565802918822893
+          ],
+          [
+            -0.42668738466628253,
+            0.969595370645458
+          ]
+        ],
+        "bias_xy": [
+          -0.09754506629436105,
+          0.10645957612321806
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3341256707724876,
+      "bias_error": 0.025437601189783523,
+      "score": 0.3977196737469464
+    },
+    {
+      "case_id": "qual_02_0_0",
+      "stream": 2,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.4262502411402913,
+            0.08580000498849959
+          ],
+          [
+            -0.38923708615556185,
+            0.9860856430743542
+          ]
+        ],
+        "bias_xy": [
+          0.15145840312519662,
+          0.07894634882165838
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3975339173307256,
+      "bias_error": 0.0380845349137187,
+      "score": 0.49274525461502233
+    },
+    {
+      "case_id": "qual_02_0_1",
+      "stream": 2,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7933337590003346,
+            0.1385211424156015
+          ],
+          [
+            -0.05910887615217926,
+            0.7158986798598002
+          ]
+        ],
+        "bias_xy": [
+          0.19289180978668255,
+          0.11934746695880322
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.18385119786574866,
+      "bias_error": 0.02233970277113507,
+      "score": 0.23970045479358632
+    },
+    {
+      "case_id": "qual_02_1_0",
+      "stream": 2,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.6807940991722388,
+            0.05772820736973404
+          ],
+          [
+            -0.18922495195342462,
+            0.7523634442434406
+          ]
+        ],
+        "bias_xy": [
+          0.13686359114088556,
+          0.11393731249421556
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.03880686728764883,
+      "bias_error": 0.03549084646295735,
+      "score": 0.1275339834450422
+    },
+    {
+      "case_id": "qual_02_1_1",
+      "stream": 2,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9513015903301418,
+            0.046656640252457054
+          ],
+          [
+            -0.09098893973820701,
+            0.7316393968427013
+          ]
+        ],
+        "bias_xy": [
+          0.21267189876570447,
+          0.14079318248534306
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.27567359632456534,
+      "bias_error": 0.05031323550218283,
+      "score": 0.4014566850800224
+    },
+    {
+      "case_id": "qual_02_2_0",
+      "stream": 2,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7104863514241259,
+            0.11497239326462946
+          ],
+          [
+            -0.3872001823605678,
+            0.9037890030828084
+          ]
+        ],
+        "bias_xy": [
+          0.14962236381059393,
+          0.07777161920399976
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23405780771403675,
+      "bias_error": 0.04008039809686803,
+      "score": 0.3342588029562068
+    },
+    {
+      "case_id": "qual_02_2_1",
+      "stream": 2,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.5906476217766866,
+            0.20098859514690895
+          ],
+          [
+            -0.5472248704023492,
+            0.7718516633516012
+          ]
+        ],
+        "bias_xy": [
+          0.1234707830857407,
+          0.029058098580781
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3892871891434977,
+      "bias_error": 0.09523835479303645,
+      "score": 0.6273830761260888
+    },
+    {
+      "case_id": "qual_03_0_0",
+      "stream": 3,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.9012075612423096,
+            -0.14231926728218858
+          ],
+          [
+            -0.30927784002164266,
+            0.8744518076790833
+          ]
+        ],
+        "bias_xy": [
+          -0.10086216858878143,
+          0.14409525373466447
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23239475291202222,
+      "bias_error": 0.02086125395694392,
+      "score": 0.284547887804382
+    },
+    {
+      "case_id": "qual_03_0_1",
+      "stream": 3,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8180491038062703,
+            -0.1791939508328688
+          ],
+          [
+            -0.06084059321066401,
+            0.8564351977689526
+          ]
+        ],
+        "bias_xy": [
+          -0.07937371069209173,
+          0.15567379240026916
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.12848769331462917,
+      "bias_error": 0.012747418996184704,
+      "score": 0.16035624080509092
+    },
+    {
+      "case_id": "qual_03_1_0",
+      "stream": 3,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6193251651703348,
+            -0.03671828243033742
+          ],
+          [
+            -0.12862012408406376,
+            0.9021406544333915
+          ]
+        ],
+        "bias_xy": [
+          -0.0749920577584751,
+          0.1688758274476173
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.15186305261167113,
+      "bias_error": 0.016792896492801235,
+      "score": 0.19384529384367422
+    },
+    {
+      "case_id": "qual_03_1_1",
+      "stream": 3,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7708826195665013,
+            -0.1996093341212856
+          ],
+          [
+            -0.15457896259518278,
+            0.9405508752114633
+          ]
+        ],
+        "bias_xy": [
+          -0.1028436707227513,
+          0.18480306195873897
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.09801022751658987,
+      "bias_error": 0.02588308756789139,
+      "score": 0.16271794643631834
+    },
+    {
+      "case_id": "qual_03_2_0",
+      "stream": 3,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8180954847667652,
+            -0.042932724812976886
+          ],
+          [
+            -0.13435370630262658,
+            0.9696388639662608
+          ]
+        ],
+        "bias_xy": [
+          -0.11020029515559882,
+          0.15080539683263236
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.14315957246531325,
+      "bias_error": 0.02283511619986028,
+      "score": 0.20024736296496393
+    },
+    {
+      "case_id": "qual_03_2_1",
+      "stream": 3,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.9200770072307775,
+            -0.06752195201337025
+          ],
+          [
+            -0.28433404370239007,
+            0.9187350484130294
+          ]
+        ],
+        "bias_xy": [
+          -0.1312297601593224,
+          0.1597392898807462
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23898832435238163,
+      "bias_error": 0.0409311092397507,
+      "score": 0.3413160974517584
+    },
+    {
+      "case_id": "qual_04_0_0",
+      "stream": 4,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.998952063130756,
+            0.20314291126755668
+          ],
+          [
+            -0.6114930677499104,
+            0.9413011900862873
+          ]
+        ],
+        "bias_xy": [
+          -0.15013255594669467,
+          -0.11485115679149473
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.15370175568703645,
+      "bias_error": 0.015496014430209077,
+      "score": 0.19244179176255916
+    },
+    {
+      "case_id": "qual_04_0_1",
+      "stream": 4,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.2512030025312222,
+            0.24581560376940964
+          ],
+          [
+            -0.5844574738132333,
+            0.9464729523931241
+          ]
+        ],
+        "bias_xy": [
+          -0.10278801944913692,
+          -0.13713182215001837
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1299827646231429,
+      "bias_error": 0.04561757276516305,
+      "score": 0.24402669653605052
+    },
+    {
+      "case_id": "qual_04_1_0",
+      "stream": 4,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.20398195374898,
+            0.1621862368255141
+          ],
+          [
+            -0.6901761522102271,
+            0.766240171586096
+          ]
+        ],
+        "bias_xy": [
+          -0.134908476675788,
+          -0.10091373248909244
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1667260224448136,
+      "bias_error": 0.006227521863300997,
+      "score": 0.1822948271030661
+    },
+    {
+      "case_id": "qual_04_1_1",
+      "stream": 4,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.180505711438666,
+            0.11807614920100451
+          ],
+          [
+            -0.5158740298040937,
+            0.8834414198511442
+          ]
+        ],
+        "bias_xy": [
+          -0.16855896696788042,
+          -0.10561270434043118
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.12939071088242837,
+      "bias_error": 0.031702568002361625,
+      "score": 0.20864713088833242
+    },
+    {
+      "case_id": "qual_04_2_0",
+      "stream": 4,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.2164141571970966,
+            0.1922777736063468
+          ],
+          [
+            -0.5341401694495526,
+            1.0809637790236657
+          ]
+        ],
+        "bias_xy": [
+          -0.11625140987815386,
+          -0.09631343225765664
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.20989121939907143,
+      "bias_error": 0.023150102853228372,
+      "score": 0.26776647653214236
+    },
+    {
+      "case_id": "qual_04_2_1",
+      "stream": 4,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.90081602311751,
+            0.30177732410989516
+          ],
+          [
+            -0.6810705522618606,
+            0.9250890350583891
+          ]
+        ],
+        "bias_xy": [
+          -0.1348762546211157,
+          -0.13214413908449568
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.27827347981477724,
+      "bias_error": 0.025402117335296633,
+      "score": 0.3417787731530188
+    },
+    {
+      "case_id": "qual_05_0_0",
+      "stream": 5,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7615116483588688,
+            0.41008638069698267
+          ],
+          [
+            0.17741892384774768,
+            0.9676808719037047
+          ]
+        ],
+        "bias_xy": [
+          -0.11199155620398608,
+          0.022458281459292347
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.09343448312982401,
+      "bias_error": 0.054385575818661165,
+      "score": 0.22939842267647692
+    },
+    {
+      "case_id": "qual_05_0_1",
+      "stream": 5,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8416894184263546,
+            0.4780779190510264
+          ],
+          [
+            0.17448450623929443,
+            1.056066009813636
+          ]
+        ],
+        "bias_xy": [
+          -0.1520004953353062,
+          0.011731949739029619
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.06434664175532934,
+      "bias_error": 0.030080794278912783,
+      "score": 0.1395486274526113
+    },
+    {
+      "case_id": "qual_05_1_0",
+      "stream": 5,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6265173522873588,
+            0.43768571362135505
+          ],
+          [
+            0.20584212573007332,
+            1.0128847866144677
+          ]
+        ],
+        "bias_xy": [
+          -0.14747490376521954,
+          0.03228085990179646
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1868897175441774,
+      "bias_error": 0.01769852158143642,
+      "score": 0.23113602149776846
+    },
+    {
+      "case_id": "qual_05_1_1",
+      "stream": 5,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.962423515241143,
+            0.49164895750336357
+          ],
+          [
+            0.166804736074567,
+            1.0379338474829252
+          ]
+        ],
+        "bias_xy": [
+          -0.15260165343231324,
+          0.030995972666588475
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.16539534405087816,
+      "bias_error": 0.0139208190939029,
+      "score": 0.20019739178563542
+    },
+    {
+      "case_id": "qual_05_2_0",
+      "stream": 5,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6990352981311261,
+            0.4023690537520108
+          ],
+          [
+            0.3260623569854913,
+            0.9800039974108774
+          ]
+        ],
+        "bias_xy": [
+          -0.19654310617821458,
+          0.05137657953721856
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.17632613078225826,
+      "bias_error": 0.03498373228554627,
+      "score": 0.2637854614961239
+    },
+    {
+      "case_id": "qual_05_2_1",
+      "stream": 5,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.801828352932044,
+            0.5106851159425287
+          ],
+          [
+            0.20330321588773,
+            1.0904823886824049
+          ]
+        ],
+        "bias_xy": [
+          -0.16194547798058836,
+          0.03508428770381879
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.0932613320105485,
+      "bias_error": 0.004701012130338975,
+      "score": 0.10501386233639592
+    },
+    {
+      "case_id": "qual_06_0_0",
+      "stream": 6,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7655869820938741,
+            -0.32401950727359363
+          ],
+          [
+            0.7039645240378487,
+            0.8628728243776984
+          ]
+        ],
+        "bias_xy": [
+          -0.08508530050481794,
+          0.028729212490223432
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.26352248445911325,
+      "bias_error": 0.02599262828635393,
+      "score": 0.3285040551749981
+    },
+    {
+      "case_id": "qual_06_0_1",
+      "stream": 6,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.8858428612693113,
+            -0.39515162219589633
+          ],
+          [
+            0.5000693255525216,
+            0.7072039309441671
+          ]
+        ],
+        "bias_xy": [
+          -0.08152036723894088,
+          0.005013090383256949
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.13914185182826583,
+      "bias_error": 0.03220118983901684,
+      "score": 0.2196448264258079
+    },
+    {
+      "case_id": "qual_06_1_0",
+      "stream": 6,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.0081085168605741,
+            -0.4732420235609939
+          ],
+          [
+            0.5182497969864015,
+            0.7157361567049882
+          ]
+        ],
+        "bias_xy": [
+          -0.06365649546131719,
+          0.020636216788538674
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.15042835287166115,
+      "bias_error": 0.00876748051247528,
+      "score": 0.17234705415284934
+    },
+    {
+      "case_id": "qual_06_1_1",
+      "stream": 6,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.8853652928196714,
+            -0.43384603912474606
+          ],
+          [
+            0.6191785382195126,
+            0.7999898014173119
+          ]
+        ],
+        "bias_xy": [
+          -0.062269793675726375,
+          0.0448233512151787
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.12673707037308005,
+      "bias_error": 0.016995157811459372,
+      "score": 0.16922496490172848
+    },
+    {
+      "case_id": "qual_06_2_0",
+      "stream": 6,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.0058111553981524,
+            -0.404943753361296
+          ],
+          [
+            0.4672518419935262,
+            0.7386933882848817
+          ]
+        ],
+        "bias_xy": [
+          -0.07272990626840029,
+          -0.0017723441550143851
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.17069160218932122,
+      "bias_error": 0.03285913879301208,
+      "score": 0.2528394491718514
+    },
+    {
+      "case_id": "qual_06_2_1",
+      "stream": 6,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9152938467343525,
+            -0.3260711491167783
+          ],
+          [
+            0.34641193632728157,
+            0.7988980973749135
+          ]
+        ],
+        "bias_xy": [
+          -0.054421096607683045,
+          -0.014066538535411026
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3002162607926946,
+      "bias_error": 0.04245161271373865,
+      "score": 0.4063452925770412
+    },
+    {
+      "case_id": "qual_07_0_0",
+      "stream": 7,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.9960871253155376,
+            0.36054916970474327
+          ],
+          [
+            0.09727552512008324,
+            0.8970726192298818
+          ]
+        ],
+        "bias_xy": [
+          -0.11131028598173731,
+          0.006762027059809589
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.21784471584820506,
+      "bias_error": 0.07197689236377879,
+      "score": 0.397786946757652
+    },
+    {
+      "case_id": "qual_07_0_1",
+      "stream": 7,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.916086228540287,
+            0.31315656490875654
+          ],
+          [
+            0.13135935580351843,
+            0.9578761545922344
+          ]
+        ],
+        "bias_xy": [
+          -0.19227996250203624,
+          0.04781239195968816
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2114560827408261,
+      "bias_error": 0.027105929480240105,
+      "score": 0.2792209064414264
+    },
+    {
+      "case_id": "qual_07_1_0",
+      "stream": 7,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7724696895811164,
+            0.49555064376142477
+          ],
+          [
+            0.3017489931436702,
+            0.9015491064373082
+          ]
+        ],
+        "bias_xy": [
+          -0.1871450631967799,
+          0.06952469139149031
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.17474308680317463,
+      "bias_error": 0.02651454832237392,
+      "score": 0.24102945760910943
+    },
+    {
+      "case_id": "qual_07_1_1",
+      "stream": 7,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8588749221635549,
+            0.4246762052959133
+          ],
+          [
+            0.4462224361419274,
+            0.8377064236069169
+          ]
+        ],
+        "bias_xy": [
+          -0.13826484863243166,
+          0.030373292503500328
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.19804007265783968,
+      "bias_error": 0.03614569751434662,
+      "score": 0.28840431644370623
+    },
+    {
+      "case_id": "qual_07_2_0",
+      "stream": 7,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6818128645574297,
+            0.48622391795589776
+          ],
+          [
+            0.46330398072623846,
+            0.9671509555419067
+          ]
+        ],
+        "bias_xy": [
+          -0.14407257298608625,
+          0.058435076863413905
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3181489895156214,
+      "bias_error": 0.022258444019040678,
+      "score": 0.3737950995632231
+    },
+    {
+      "case_id": "qual_07_2_1",
+      "stream": 7,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7473076590627836,
+            0.6837976540872549
+          ],
+          [
+            0.20581831145024918,
+            1.0027615969073012
+          ]
+        ],
+        "bias_xy": [
+          -0.12588321126970592,
+          0.0584458153604211
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.324544358133567,
+      "bias_error": 0.04022430885900945,
+      "score": 0.42510513028109065
+    },
+    {
+      "case_id": "qual_08_0_0",
+      "stream": 8,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9449626181446169,
+            -0.5989961471288658
+          ],
+          [
+            0.6837271190191747,
+            0.9322422639300056
+          ]
+        ],
+        "bias_xy": [
+          0.020659672033159146,
+          0.144056704819288
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3567767418872925,
+      "bias_error": 0.052083710135161755,
+      "score": 0.4869860172251969
+    },
+    {
+      "case_id": "qual_08_0_1",
+      "stream": 8,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.88581239194896,
+            -0.5444788014024313
+          ],
+          [
+            0.1715807627158877,
+            1.0116139014097514
+          ]
+        ],
+        "bias_xy": [
+          0.08128008019125432,
+          0.11123149756674687
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.18825870962671457,
+      "bias_error": 0.018458352104461898,
+      "score": 0.2344045898878693
+    },
+    {
+      "case_id": "qual_08_1_0",
+      "stream": 8,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.8630994954314295,
+            -0.4487131839094105
+          ],
+          [
+            0.4425487717621987,
+            0.7707459616972596
+          ]
+        ],
+        "bias_xy": [
+          0.027138545141230486,
+          0.11821364321006061
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.22141664165107222,
+      "bias_error": 0.036132109451647215,
+      "score": 0.3117469152801903
+    },
+    {
+      "case_id": "qual_08_1_1",
+      "stream": 8,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.8667929875287003,
+            -0.5346535619237146
+          ],
+          [
+            0.3163817005862767,
+            0.9572451311609452
+          ]
+        ],
+        "bias_xy": [
+          0.0804804461499751,
+          0.11699828958832181
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.034106563961710606,
+      "bias_error": 0.017798145127364835,
+      "score": 0.07860192678012269
+    },
+    {
+      "case_id": "qual_08_2_0",
+      "stream": 8,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9892057024139043,
+            -0.5198698793204662
+          ],
+          [
+            0.1769408121417441,
+            0.8769019785287844
+          ]
+        ],
+        "bias_xy": [
+          0.09019459744944208,
+          0.10572422423937691
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23093407796576487,
+      "bias_error": 0.0283534558701968,
+      "score": 0.30181771764125687
+    },
+    {
+      "case_id": "qual_08_2_1",
+      "stream": 8,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.6777895593580613,
+            -0.5274606408135393
+          ],
+          [
+            0.31840788907622386,
+            1.0889564877549842
+          ]
+        ],
+        "bias_xy": [
+          0.015778435226988165,
+          0.07541783648454448
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.22343892152464404,
+      "bias_error": 0.06078705095548082,
+      "score": 0.37540654891334607
+    },
+    {
+      "case_id": "qual_09_0_0",
+      "stream": 9,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.2218435949750492,
+            -0.09255737415233375
+          ],
+          [
+            0.0751099360634813,
+            1.0166241688715918
+          ]
+        ],
+        "bias_xy": [
+          -0.036482986125719735,
+          -0.10025350336998906
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.22887443601920512,
+      "bias_error": 0.04462212816791728,
+      "score": 0.3404297564389983
+    },
+    {
+      "case_id": "qual_09_0_1",
+      "stream": 9,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.9953815103664146,
+            -0.044522717139803714
+          ],
+          [
+            0.22387371253927904,
+            1.0298751389895695
+          ]
+        ],
+        "bias_xy": [
+          -0.008048345776619937,
+          -0.04695837240611308
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.13767873525875773,
+      "bias_error": 0.023384108143651154,
+      "score": 0.1961390056178856
+    },
+    {
+      "case_id": "qual_09_1_0",
+      "stream": 9,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8531265842680982,
+            -0.13408094161745013
+          ],
+          [
+            0.3758527186885408,
+            1.0379223549850423
+          ]
+        ],
+        "bias_xy": [
+          -0.004811635230391809,
+          -0.037023098974125965
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.32982012336390004,
+      "bias_error": 0.03293599162173152,
+      "score": 0.4121601024182288
+    },
+    {
+      "case_id": "qual_09_1_1",
+      "stream": 9,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.0879437546251474,
+            0.040043375358630534
+          ],
+          [
+            -0.026729492491172097,
+            0.9206241884554153
+          ]
+        ],
+        "bias_xy": [
+          -0.0001693376152429118,
+          -0.08315065192186726
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1975574300626264,
+      "bias_error": 0.013682345263143826,
+      "score": 0.23176329322048597
+    },
+    {
+      "case_id": "qual_09_2_0",
+      "stream": 9,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7887285051888163,
+            -0.02698085996853472
+          ],
+          [
+            0.3103549137511948,
+            0.8638099811648055
+          ]
+        ],
+        "bias_xy": [
+          9.046028482603511e-05,
+          -0.042838350222775386
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.33484954195692945,
+      "bias_error": 0.02737207093662049,
+      "score": 0.40327971929848067
+    },
+    {
+      "case_id": "qual_09_2_1",
+      "stream": 9,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.0081794486128077,
+            -0.12893276510339322
+          ],
+          [
+            0.1579419007332506,
+            1.0018586844211905
+          ]
+        ],
+        "bias_xy": [
+          -0.02691598211686628,
+          -0.08679760192411005
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.09694757488996986,
+      "bias_error": 0.02866018046146966,
+      "score": 0.168598026043644
+    },
+    {
+      "case_id": "qual_10_0_0",
+      "stream": 10,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9550611411232532,
+            0.12884919905683126
+          ],
+          [
+            -0.002176706636222831,
+            1.0751304083236328
+          ]
+        ],
+        "bias_xy": [
+          0.11330303612617054,
+          -0.03372996307550798
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.17265320829120434,
+      "bias_error": 0.035390590436591735,
+      "score": 0.2611296843826837
+    },
+    {
+      "case_id": "qual_10_0_1",
+      "stream": 10,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.6508089333278705,
+            0.09933834594950808
+          ],
+          [
+            -0.13547730455824064,
+            1.0559561336422234
+          ]
+        ],
+        "bias_xy": [
+          0.09803685472729229,
+          0.0010300927895118177
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.21913462080909946,
+      "bias_error": 0.0030611524548137315,
+      "score": 0.22678750194613378
+    },
+    {
+      "case_id": "qual_10_1_0",
+      "stream": 10,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.8813329893838852,
+            0.1891141676559124
+          ],
+          [
+            -0.11098766893218769,
+            1.248044998859285
+          ]
+        ],
+        "bias_xy": [
+          0.10284836813752553,
+          -0.02893220875023055
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.20083920986778975,
+      "bias_error": 0.02830883043044751,
+      "score": 0.2716112859439085
+    },
+    {
+      "case_id": "qual_10_1_1",
+      "stream": 10,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7518687177139552,
+            -0.03279140365156416
+          ],
+          [
+            -0.25828839060952996,
+            1.1047126254811344
+          ]
+        ],
+        "bias_xy": [
+          0.10698502397966646,
+          -0.05463327532690018
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2980148146951333,
+      "bias_error": 0.054299075629190174,
+      "score": 0.43376250376810876
+    },
+    {
+      "case_id": "qual_10_2_0",
+      "stream": 10,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7191826004423602,
+            0.20440161620835018
+          ],
+          [
+            0.10632783956636428,
+            1.2351400338220964
+          ]
+        ],
+        "bias_xy": [
+          0.10777035718912001,
+          0.032464072717649096
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1935385038300151,
+      "bias_error": 0.03395723117721355,
+      "score": 0.27843158177304894
+    },
+    {
+      "case_id": "qual_10_2_1",
+      "stream": 10,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.8598173710115893,
+            0.08960627016115152
+          ],
+          [
+            0.1579708603001757,
+            1.199724863759642
+          ]
+        ],
+        "bias_xy": [
+          0.08198966726128043,
+          0.0033600861747840986
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.17697618470345888,
+      "bias_error": 0.019003428936643432,
+      "score": 0.22448475704506746
+    },
+    {
+      "case_id": "qual_11_0_0",
+      "stream": 11,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.0046226316166578,
+            0.09243062611046307
+          ],
+          [
+            -0.08583739282598454,
+            0.9293932056045537
+          ]
+        ],
+        "bias_xy": [
+          -0.03487325001852273,
+          -0.08017057438529901
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.24586612178076822,
+      "bias_error": 0.023124833685986945,
+      "score": 0.3036782059957356
+    },
+    {
+      "case_id": "qual_11_0_1",
+      "stream": 11,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.9933610097680352,
+            -0.03092791078813195
+          ],
+          [
+            0.07795826324863257,
+            0.9610262762854618
+          ]
+        ],
+        "bias_xy": [
+          -0.03544735704963984,
+          -0.07491103558433826
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.13535888540337992,
+      "bias_error": 0.018643480982545407,
+      "score": 0.18196758785974343
+    },
+    {
+      "case_id": "qual_11_1_0",
+      "stream": 11,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.8115336720152064,
+            0.09415794853598722
+          ],
+          [
+            0.09713908707833767,
+            0.9547093632921202
+          ]
+        ],
+        "bias_xy": [
+          -0.03685842398150003,
+          -0.06234848816922198
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1723653831941982,
+      "bias_error": 0.011232381236775653,
+      "score": 0.20044633628613734
+    },
+    {
+      "case_id": "qual_11_1_1",
+      "stream": 11,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7429912484292533,
+            0.09144769755625859
+          ],
+          [
+            0.18642609617994796,
+            0.9144791771297058
+          ]
+        ],
+        "bias_xy": [
+          -0.010731881309044674,
+          -0.050099323764699534
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23866769480791658,
+      "bias_error": 0.03889796170666707,
+      "score": 0.33591259907458426
+    },
+    {
+      "case_id": "qual_11_2_0",
+      "stream": 11,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.2780378363785048,
+            0.07516242338407157
+          ],
+          [
+            0.28394957300237167,
+            1.0052292675386483
+          ]
+        ],
+        "bias_xy": [
+          -0.07972387756277878,
+          -0.045785386017558945
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3336483958344606,
+      "bias_error": 0.0352251148471162,
+      "score": 0.4217111829522511
+    },
+    {
+      "case_id": "qual_11_2_1",
+      "stream": 11,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6921522911972134,
+            0.10894589648272994
+          ],
+          [
+            0.1250060299325253,
+            1.045334795712711
+          ]
+        ],
+        "bias_xy": [
+          -0.006826150809598691,
+          -0.06199472143783227
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.29384987557259057,
+      "bias_error": 0.04120928247093222,
+      "score": 0.3968730817499211
+    },
+    {
+      "case_id": "qual_12_0_0",
+      "stream": 12,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.3685318603796277,
+            -0.06112988556555771
+          ],
+          [
+            0.08780173381998801,
+            1.3865479975873698
+          ]
+        ],
+        "bias_xy": [
+          -0.16251145328914013,
+          -0.17558349669378118
+        ],
+        "nfev": 2,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1607352941515769,
+      "bias_error": 0.014121148388387378,
+      "score": 0.19603816512254535
+    },
+    {
+      "case_id": "qual_12_0_1",
+      "stream": 12,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.5165012668631446,
+            -0.24654583534549326
+          ],
+          [
+            0.11823839006638448,
+            1.3319478102167535
+          ]
+        ],
+        "bias_xy": [
+          -0.15990122680783905,
+          -0.1549472970769187
+        ],
+        "nfev": 2,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2273463132355328,
+      "bias_error": 0.02868278679745574,
+      "score": 0.29905328022917216
+    },
+    {
+      "case_id": "qual_12_1_0",
+      "stream": 12,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.3181413126055506,
+            -0.10304816031170544
+          ],
+          [
+            -0.00951732536152717,
+            1.3612417457322494
+          ]
+        ],
+        "bias_xy": [
+          -0.18604600640358399,
+          -0.15754855478116422
+        ],
+        "nfev": 2,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.08013853836434628,
+      "bias_error": 0.023049110536727833,
+      "score": 0.13776131470616587
+    },
+    {
+      "case_id": "qual_12_1_1",
+      "stream": 12,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.2917210470998222,
+            -0.1795484185560543
+          ],
+          [
+            -0.12714186418131843,
+            1.2432356841838617
+          ]
+        ],
+        "bias_xy": [
+          -0.1853196687376223,
+          -0.20570840852849004
+        ],
+        "nfev": 2,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.16373210780926215,
+      "bias_error": 0.02869679555549689,
+      "score": 0.23547409669800434
+    },
+    {
+      "case_id": "qual_12_2_0",
+      "stream": 12,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.137424635680848,
+            -0.11988827373472061
+          ],
+          [
+            -0.09156692048253472,
+            1.349009482622609
+          ]
+        ],
+        "bias_xy": [
+          -0.1779617364158197,
+          -0.1539231314030537
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23094795380128974,
+      "bias_error": 0.024583990334547834,
+      "score": 0.2924079296376593
+    },
+    {
+      "case_id": "qual_12_2_1",
+      "stream": 12,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.6003076626327948,
+            -0.145120698869725
+          ],
+          [
+            0.04883755107196975,
+            1.3801722123543465
+          ]
+        ],
+        "bias_xy": [
+          -0.182534412763055,
+          -0.16152000619437482
+        ],
+        "nfev": 2,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.26371143499046656,
+      "bias_error": 0.01803157959763754,
+      "score": 0.3087903839845604
+    },
+    {
+      "case_id": "qual_13_0_0",
+      "stream": 13,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.1950596228687702,
+            0.052307419354192336
+          ],
+          [
+            0.062021333353184535,
+            1.284954044480367
+          ]
+        ],
+        "bias_xy": [
+          -0.0028284736007651383,
+          0.042586407483681706
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.13795655591850609,
+      "bias_error": 0.019518015709826194,
+      "score": 0.18675159519307155
+    },
+    {
+      "case_id": "qual_13_0_1",
+      "stream": 13,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.169368181468715,
+            0.0975290058073642
+          ],
+          [
+            -0.09111126267140526,
+            1.4125254097949396
+          ]
+        ],
+        "bias_xy": [
+          -0.00873263423925381,
+          -0.009432209714258668
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2155541488037639,
+      "bias_error": 0.034029876954805444,
+      "score": 0.3006288411907775
+    },
+    {
+      "case_id": "qual_13_1_0",
+      "stream": 13,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.0992055629169615,
+            0.14697009690920917
+          ],
+          [
+            -0.010764533047127038,
+            1.5110274186370176
+          ]
+        ],
+        "bias_xy": [
+          -0.01720010825397004,
+          -0.020478037621021537
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2133002827724497,
+      "bias_error": 0.0455623049342971,
+      "score": 0.32720604510819246
+    },
+    {
+      "case_id": "qual_13_1_1",
+      "stream": 13,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.1332148227100216,
+            -0.017461319948039566
+          ],
+          [
+            0.0006118679963039579,
+            1.3793384788956504
+          ]
+        ],
+        "bias_xy": [
+          -0.0008919045268326704,
+          0.008465309795931155
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1594182930324753,
+      "bias_error": 0.01865060762406504,
+      "score": 0.2060448120926379
+    },
+    {
+      "case_id": "qual_13_2_0",
+      "stream": 13,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.0947357328103846,
+            -0.058298948163400276
+          ],
+          [
+            0.016836811443497596,
+            1.3251164848622654
+          ]
+        ],
+        "bias_xy": [
+          0.003409615308695237,
+          0.014617098331698922
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1674921735961742,
+      "bias_error": 0.016947524958989588,
+      "score": 0.20986098599364816
+    },
+    {
+      "case_id": "qual_13_2_1",
+      "stream": 13,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.1202220084750023,
+            0.21280268082643533
+          ],
+          [
+            0.043177180986501876,
+            1.2957646184380942
+          ]
+        ],
+        "bias_xy": [
+          -0.007498771882796871,
+          0.0011586198700233009
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.13736602143758453,
+      "bias_error": 0.023571012985146685,
+      "score": 0.19629355390045122
+    },
+    {
+      "case_id": "qual_14_0_0",
+      "stream": 14,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7227033663719238,
+            -0.12284463969741724
+          ],
+          [
+            -0.19503159357326272,
+            0.9392256558816175
+          ]
+        ],
+        "bias_xy": [
+          -0.043519980039412424,
+          0.014217834549939417
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3074981089004738,
+      "bias_error": 0.012091721192802942,
+      "score": 0.3377274118824812
+    },
+    {
+      "case_id": "qual_14_0_1",
+      "stream": 14,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.042960799024467,
+            -0.017024635343088373
+          ],
+          [
+            0.19545598889494792,
+            0.9730106052131812
+          ]
+        ],
+        "bias_xy": [
+          -0.05469132750013284,
+          0.008266522170249443
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.22351574418401543,
+      "bias_error": 0.010752630797082925,
+      "score": 0.25039732117672275
+    },
+    {
+      "case_id": "qual_14_1_0",
+      "stream": 14,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9418591508453136,
+            0.07467063988431571
+          ],
+          [
+            0.19126291175331683,
+            1.030635782705085
+          ]
+        ],
+        "bias_xy": [
+          -0.07155022051777132,
+          -0.010413775979554491
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.19107681699773282,
+      "bias_error": 0.03395574436807071,
+      "score": 0.27596617791790956
+    },
+    {
+      "case_id": "qual_14_1_1",
+      "stream": 14,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            1.1061407940258952,
+            0.06069099930537743
+          ],
+          [
+            0.25428022685855817,
+            0.9915255791125939
+          ]
+        ],
+        "bias_xy": [
+          -0.08049333349535963,
+          0.009296746016263735
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3201750948804601,
+      "bias_error": 0.027641788718327454,
+      "score": 0.3892795666762787
+    },
+    {
+      "case_id": "qual_14_2_0",
+      "stream": 14,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.9813088630792959,
+            -0.0770594168932502
+          ],
+          [
+            0.10052650589041885,
+            1.095940024703918
+          ]
+        ],
+        "bias_xy": [
+          -0.04988629317187258,
+          -0.00419555049089368
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.166661640947686,
+      "bias_error": 0.023691707517605548,
+      "score": 0.2258909097416999
+    },
+    {
+      "case_id": "qual_14_2_1",
+      "stream": 14,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            0.7105262637354982,
+            -0.0864678900984793
+          ],
+          [
+            -0.10891435469398753,
+            1.0180978125541493
+          ]
+        ],
+        "bias_xy": [
+          -0.07610683783966958,
+          -0.025065698977124715
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.23832841051550818,
+      "bias_error": 0.049043193300798274,
+      "score": 0.36093639376750386
+    },
+    {
+      "case_id": "qual_15_0_0",
+      "stream": 15,
+      "task": "push-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.7480623121120299,
+            -0.29881276617544017
+          ],
+          [
+            -0.2363916687658211,
+            1.163143779108053
+          ]
+        ],
+        "bias_xy": [
+          -0.13819068121117423,
+          -0.16615101004574184
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.1829932961371017,
+      "bias_error": 0.041608050679779775,
+      "score": 0.2870134228365511
+    },
+    {
+      "case_id": "qual_15_0_1",
+      "stream": 15,
+      "task": "push-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.5806215979042157,
+            -0.1853651059937408
+          ],
+          [
+            0.1044167662598845,
+            1.2982316792164827
+          ]
+        ],
+        "bias_xy": [
+          -0.15048855965803612,
+          -0.09009585539927688
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.3519083885649517,
+      "bias_error": 0.037716874732581854,
+      "score": 0.44620057539640634
+    },
+    {
+      "case_id": "qual_15_1_0",
+      "stream": 15,
+      "task": "reach-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6968494637261607,
+            -0.1616986820894783
+          ],
+          [
+            -0.0883246217379623,
+            1.13291778676195
+          ]
+        ],
+        "bias_xy": [
+          -0.10916110708321697,
+          -0.1491233914275612
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.11559141651397029,
+      "bias_error": 0.04968886557416765,
+      "score": 0.23981358044938939
+    },
+    {
+      "case_id": "qual_15_1_1",
+      "stream": 15,
+      "task": "reach-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.9534939142851158,
+            -0.029686688230008917
+          ],
+          [
+            -0.2156579332755128,
+            1.1904878943567334
+          ]
+        ],
+        "bias_xy": [
+          -0.1964456128223892,
+          -0.12861136349256072
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.2146545215684504,
+      "bias_error": 0.04248524378986149,
+      "score": 0.3208676310431041
+    },
+    {
+      "case_id": "qual_15_2_0",
+      "stream": 15,
+      "task": "door-open-v3",
+      "replicate": 0,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -0.6972582679442525,
+            0.013011433011165169
+          ],
+          [
+            -0.046979237911662496,
+            1.1837940006440282
+          ]
+        ],
+        "bias_xy": [
+          -0.15593714806722325,
+          -0.16144912122989616
+        ],
+        "nfev": 1,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.20437123474427107,
+      "bias_error": 0.033854652654506046,
+      "score": 0.2890078663805362
+    },
+    {
+      "case_id": "qual_15_2_1",
+      "stream": 15,
+      "task": "door-open-v3",
+      "replicate": 1,
+      "fit": {
+        "valid": true,
+        "reason": "CONDITIONAL_LATE_WORKING_GAUSSIAN",
+        "matrix_xy": [
+          [
+            -1.228091559104436,
+            0.06890486546103308
+          ],
+          [
+            -0.23223542478388517,
+            1.2649653654118374
+          ]
+        ],
+        "bias_xy": [
+          -0.22754099848500167,
+          -0.1170115689726209
+        ],
+        "nfev": 2,
+        "physical_response_qualified": false,
+        "probability_guarantee": false
+      },
+      "matrix_error": 0.5077786243187439,
+      "bias_error": 0.07433521241906034,
+      "score": 0.6936166553663947
+    }
+  ],
+  "new_parameter_fits": 96,
+  "saved_optimizer_nfev": 102,
+  "new_environment_steps": 0,
+  "new_resets": 0,
+  "new_api_calls": 0,
+  "source_model_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+  "source_qualification_sha256": "5831034d150c767266503d03daaa18971ca664ef52b867d7bf27ef9a35ac727a",
+  "source_audit_sha256": "5f5bb280e1cb72f7b04190dfe65e58d650409fba3ee48f8b8a1a9cb9887d596e",
+  "script_sha256": "e95beb547b9112d8393c5aba942c9ef0261cba04c4d856dbcdecf30908804cf8"
+}

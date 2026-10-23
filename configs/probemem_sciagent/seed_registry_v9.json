@@ -1,0 +1,12 @@
+{
+  "schema_version": 9,
+  "registry_id": "probemem_sciagent_distributional_probe_identifiability_seed_registry_v9",
+  "inherits": "configs/probemem_sciagent/seed_registry_v8.json",
+  "historical_partitions_immutable": true,
+  "partitions": {
+    "distributional_probe_identifiability_development": [6950, 7099],
+    "distributional_probe_identifiability_future_reserved": [7100, 7199]
+  },
+  "blocked_partitions": [[3100, 3199], [4600, 6949]],
+  "notes": "v1.7 remains failed and immutable; 6850--6949 remain reserved. Only evaluator-only v1.8 collection is registered on 6950--7099."
+}

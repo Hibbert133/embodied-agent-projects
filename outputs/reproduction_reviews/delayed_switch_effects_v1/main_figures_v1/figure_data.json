@@ -1,0 +1,4255 @@
+{
+  "experiment_run_id": "delayed_switch_effects_20261019T093447Z_5193855b2123",
+  "manifest_id": "13e29ef1bf5f09dd8ea39f1f61f04293c091ed0d038293a7ea8475e13a806c3f",
+  "source_git_commit": "5193855b2123a17277c63c817529d3fe653422d0",
+  "method_labels": {
+    "CONTINUE_CURRENT": [
+      "继续 C8",
+      "Continue C8"
+    ],
+    "SWITCH_SAVED": [
+      "切换 C4",
+      "Switch to C4"
+    ],
+    "RUN_UNCORRECTED": [
+      "取消纠正",
+      "Remove correction"
+    ]
+  },
+  "statistics": {
+    "units": 216,
+    "executions": 648,
+    "independent_generator_groups": 36,
+    "methods": [
+      {
+        "variant": "CONTINUE_CURRENT",
+        "executions": 216,
+        "successes": 210,
+        "failures": 6,
+        "stops": 0,
+        "unavailable_boundaries": 0,
+        "mean_deadline_loss": 91.50925925925925,
+        "actual_control_steps": 19766
+      },
+      {
+        "variant": "SWITCH_SAVED",
+        "executions": 216,
+        "successes": 206,
+        "failures": 10,
+        "stops": 0,
+        "unavailable_boundaries": 0,
+        "mean_deadline_loss": 99.79166666666667,
+        "actual_control_steps": 21555
+      },
+      {
+        "variant": "RUN_UNCORRECTED",
+        "executions": 216,
+        "successes": 181,
+        "failures": 35,
+        "stops": 0,
+        "unavailable_boundaries": 0,
+        "mean_deadline_loss": 160.2037037037037,
+        "actual_control_steps": 34604
+      }
+    ],
+    "contrasts": [
+      {
+        "left": "SWITCH_SAVED",
+        "right": "CONTINUE_CURRENT",
+        "primary": true,
+        "multiplicity": "PRIMARY",
+        "mean_loss_difference": 8.282407407407407,
+        "ci95": [
+          2.810185185185204,
+          14.842592592592581
+        ],
+        "realized_better_units": 57,
+        "realized_worse_units": 89,
+        "realized_tied_units": 70
+      },
+      {
+        "left": "RUN_UNCORRECTED",
+        "right": "CONTINUE_CURRENT",
+        "primary": false,
+        "multiplicity": "UNADJUSTED_SECONDARY",
+        "mean_loss_difference": 68.69444444444444,
+        "ci95": [
+          50.679629629629645,
+          86.15763888888888
+        ],
+        "realized_better_units": 63,
+        "realized_worse_units": 132,
+        "realized_tied_units": 21
+      }
+    ],
+    "paired_rows": [
+      {
+        "unit": 0,
+        "task": "push-v3",
+        "seed": 21800,
+        "group": 0,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 81,
+          "SWITCH_SAVED": 81,
+          "RUN_UNCORRECTED": 85
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 4
+      },
+      {
+        "unit": 1,
+        "task": "reach-v3",
+        "seed": 21801,
+        "group": 0,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 50,
+          "SWITCH_SAVED": 49,
+          "RUN_UNCORRECTED": 107
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 57
+      },
+      {
+        "unit": 2,
+        "task": "door-open-v3",
+        "seed": 21802,
+        "group": 0,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 88,
+          "SWITCH_SAVED": 92,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": 4,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 3,
+        "task": "push-v3",
+        "seed": 21803,
+        "group": 0,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 75,
+          "SWITCH_SAVED": 75,
+          "RUN_UNCORRECTED": 81
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 6
+      },
+      {
+        "unit": 4,
+        "task": "reach-v3",
+        "seed": 21804,
+        "group": 0,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 48,
+          "SWITCH_SAVED": 50,
+          "RUN_UNCORRECTED": 89
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 41
+      },
+      {
+        "unit": 5,
+        "task": "door-open-v3",
+        "seed": 21805,
+        "group": 0,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 86,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 87
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 6,
+        "task": "push-v3",
+        "seed": 21806,
+        "group": 1,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 74,
+          "SWITCH_SAVED": 73,
+          "RUN_UNCORRECTED": 73
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 7,
+        "task": "reach-v3",
+        "seed": 21807,
+        "group": 1,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 47,
+          "SWITCH_SAVED": 52,
+          "RUN_UNCORRECTED": 47
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 8,
+        "task": "door-open-v3",
+        "seed": 21808,
+        "group": 1,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 500,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 9,
+        "task": "push-v3",
+        "seed": 21809,
+        "group": 1,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 84,
+          "RUN_UNCORRECTED": 94
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 10
+      },
+      {
+        "unit": 10,
+        "task": "reach-v3",
+        "seed": 21810,
+        "group": 1,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 77,
+          "SWITCH_SAVED": 85,
+          "RUN_UNCORRECTED": 106
+        },
+        "switch_minus_continue": 8,
+        "uncorrected_minus_continue": 29
+      },
+      {
+        "unit": 11,
+        "task": "door-open-v3",
+        "seed": 21811,
+        "group": 1,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 153,
+          "SWITCH_SAVED": 177,
+          "RUN_UNCORRECTED": 143
+        },
+        "switch_minus_continue": 24,
+        "uncorrected_minus_continue": -10
+      },
+      {
+        "unit": 12,
+        "task": "push-v3",
+        "seed": 21812,
+        "group": 2,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 69,
+          "SWITCH_SAVED": 69,
+          "RUN_UNCORRECTED": 108
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 39
+      },
+      {
+        "unit": 13,
+        "task": "reach-v3",
+        "seed": 21813,
+        "group": 2,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 44,
+          "SWITCH_SAVED": 42,
+          "RUN_UNCORRECTED": 42
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 14,
+        "task": "door-open-v3",
+        "seed": 21814,
+        "group": 2,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 84,
+          "RUN_UNCORRECTED": 85
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 15,
+        "task": "push-v3",
+        "seed": 21815,
+        "group": 2,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 77,
+          "SWITCH_SAVED": 77,
+          "RUN_UNCORRECTED": 78
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 16,
+        "task": "reach-v3",
+        "seed": 21816,
+        "group": 2,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 60,
+          "SWITCH_SAVED": 52,
+          "RUN_UNCORRECTED": 66
+        },
+        "switch_minus_continue": -8,
+        "uncorrected_minus_continue": 6
+      },
+      {
+        "unit": 17,
+        "task": "door-open-v3",
+        "seed": 21817,
+        "group": 2,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 84,
+          "RUN_UNCORRECTED": 87
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 3
+      },
+      {
+        "unit": 18,
+        "task": "push-v3",
+        "seed": 21818,
+        "group": 3,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 64,
+          "SWITCH_SAVED": 64,
+          "RUN_UNCORRECTED": 69
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 5
+      },
+      {
+        "unit": 19,
+        "task": "reach-v3",
+        "seed": 21819,
+        "group": 3,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 60,
+          "SWITCH_SAVED": 60,
+          "RUN_UNCORRECTED": 54
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -6
+      },
+      {
+        "unit": 20,
+        "task": "door-open-v3",
+        "seed": 21820,
+        "group": 3,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 500,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 129
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -371
+      },
+      {
+        "unit": 21,
+        "task": "push-v3",
+        "seed": 21821,
+        "group": 3,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 70,
+          "SWITCH_SAVED": 71,
+          "RUN_UNCORRECTED": 73
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 3
+      },
+      {
+        "unit": 22,
+        "task": "reach-v3",
+        "seed": 21822,
+        "group": 3,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 54,
+          "SWITCH_SAVED": 52,
+          "RUN_UNCORRECTED": 50
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -4
+      },
+      {
+        "unit": 23,
+        "task": "door-open-v3",
+        "seed": 21823,
+        "group": 3,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 127,
+          "SWITCH_SAVED": 94,
+          "RUN_UNCORRECTED": 82
+        },
+        "switch_minus_continue": -33,
+        "uncorrected_minus_continue": -45
+      },
+      {
+        "unit": 24,
+        "task": "push-v3",
+        "seed": 21824,
+        "group": 4,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 64,
+          "SWITCH_SAVED": 66,
+          "RUN_UNCORRECTED": 64
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 25,
+        "task": "reach-v3",
+        "seed": 21825,
+        "group": 4,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 55,
+          "SWITCH_SAVED": 58,
+          "RUN_UNCORRECTED": 61
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 6
+      },
+      {
+        "unit": 26,
+        "task": "door-open-v3",
+        "seed": 21826,
+        "group": 4,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 109,
+          "SWITCH_SAVED": 110,
+          "RUN_UNCORRECTED": 103
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": -6
+      },
+      {
+        "unit": 27,
+        "task": "push-v3",
+        "seed": 21827,
+        "group": 4,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 69,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 71
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 28,
+        "task": "reach-v3",
+        "seed": 21828,
+        "group": 4,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 59,
+          "SWITCH_SAVED": 79,
+          "RUN_UNCORRECTED": 115
+        },
+        "switch_minus_continue": 20,
+        "uncorrected_minus_continue": 56
+      },
+      {
+        "unit": 29,
+        "task": "door-open-v3",
+        "seed": 21829,
+        "group": 4,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 101,
+          "SWITCH_SAVED": 105,
+          "RUN_UNCORRECTED": 88
+        },
+        "switch_minus_continue": 4,
+        "uncorrected_minus_continue": -13
+      },
+      {
+        "unit": 30,
+        "task": "push-v3",
+        "seed": 21830,
+        "group": 5,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 68,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 67
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 31,
+        "task": "reach-v3",
+        "seed": 21831,
+        "group": 5,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 53,
+          "SWITCH_SAVED": 52,
+          "RUN_UNCORRECTED": 52
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 32,
+        "task": "door-open-v3",
+        "seed": 21832,
+        "group": 5,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 82,
+          "SWITCH_SAVED": 82,
+          "RUN_UNCORRECTED": 83
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 33,
+        "task": "push-v3",
+        "seed": 21833,
+        "group": 5,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 61,
+          "SWITCH_SAVED": 61,
+          "RUN_UNCORRECTED": 63
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 34,
+        "task": "reach-v3",
+        "seed": 21834,
+        "group": 5,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 73,
+          "SWITCH_SAVED": 66,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -7,
+        "uncorrected_minus_continue": 427
+      },
+      {
+        "unit": 35,
+        "task": "door-open-v3",
+        "seed": 21835,
+        "group": 5,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 102,
+          "SWITCH_SAVED": 101,
+          "RUN_UNCORRECTED": 103
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 36,
+        "task": "push-v3",
+        "seed": 21836,
+        "group": 6,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 67,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 433
+      },
+      {
+        "unit": 37,
+        "task": "reach-v3",
+        "seed": 21837,
+        "group": 6,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 80,
+          "SWITCH_SAVED": 81,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 420
+      },
+      {
+        "unit": 38,
+        "task": "door-open-v3",
+        "seed": 21838,
+        "group": 6,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 97,
+          "SWITCH_SAVED": 97,
+          "RUN_UNCORRECTED": 99
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 39,
+        "task": "push-v3",
+        "seed": 21839,
+        "group": 6,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 66,
+          "SWITCH_SAVED": 67,
+          "RUN_UNCORRECTED": 75
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 9
+      },
+      {
+        "unit": 40,
+        "task": "reach-v3",
+        "seed": 21840,
+        "group": 6,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 45,
+          "SWITCH_SAVED": 43,
+          "RUN_UNCORRECTED": 41
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -4
+      },
+      {
+        "unit": 41,
+        "task": "door-open-v3",
+        "seed": 21841,
+        "group": 6,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 90,
+          "RUN_UNCORRECTED": 91
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 42,
+        "task": "push-v3",
+        "seed": 21842,
+        "group": 7,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 71,
+          "SWITCH_SAVED": 71,
+          "RUN_UNCORRECTED": 71
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 43,
+        "task": "reach-v3",
+        "seed": 21843,
+        "group": 7,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 59,
+          "SWITCH_SAVED": 62,
+          "RUN_UNCORRECTED": 56
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": -3
+      },
+      {
+        "unit": 44,
+        "task": "door-open-v3",
+        "seed": 21844,
+        "group": 7,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 91,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 45,
+        "task": "push-v3",
+        "seed": 21845,
+        "group": 7,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 91,
+          "SWITCH_SAVED": 91,
+          "RUN_UNCORRECTED": 97
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 6
+      },
+      {
+        "unit": 46,
+        "task": "reach-v3",
+        "seed": 21846,
+        "group": 7,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 81,
+          "SWITCH_SAVED": 73,
+          "RUN_UNCORRECTED": 107
+        },
+        "switch_minus_continue": -8,
+        "uncorrected_minus_continue": 26
+      },
+      {
+        "unit": 47,
+        "task": "door-open-v3",
+        "seed": 21847,
+        "group": 7,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 147,
+          "SWITCH_SAVED": 147,
+          "RUN_UNCORRECTED": 147
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 48,
+        "task": "push-v3",
+        "seed": 21848,
+        "group": 8,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 79,
+          "SWITCH_SAVED": 79,
+          "RUN_UNCORRECTED": 78
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 49,
+        "task": "reach-v3",
+        "seed": 21849,
+        "group": 8,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 153,
+          "SWITCH_SAVED": 206,
+          "RUN_UNCORRECTED": 207
+        },
+        "switch_minus_continue": 53,
+        "uncorrected_minus_continue": 54
+      },
+      {
+        "unit": 50,
+        "task": "door-open-v3",
+        "seed": 21850,
+        "group": 8,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 93,
+          "SWITCH_SAVED": 93,
+          "RUN_UNCORRECTED": 94
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 51,
+        "task": "push-v3",
+        "seed": 21851,
+        "group": 8,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 75,
+          "SWITCH_SAVED": 75,
+          "RUN_UNCORRECTED": 80
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 5
+      },
+      {
+        "unit": 52,
+        "task": "reach-v3",
+        "seed": 21852,
+        "group": 8,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 55,
+          "SWITCH_SAVED": 53,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": 445
+      },
+      {
+        "unit": 53,
+        "task": "door-open-v3",
+        "seed": 21853,
+        "group": 8,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 82,
+          "SWITCH_SAVED": 82,
+          "RUN_UNCORRECTED": 82
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 54,
+        "task": "push-v3",
+        "seed": 21854,
+        "group": 9,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 77,
+          "SWITCH_SAVED": 77,
+          "RUN_UNCORRECTED": 96
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 19
+      },
+      {
+        "unit": 55,
+        "task": "reach-v3",
+        "seed": 21855,
+        "group": 9,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 66,
+          "SWITCH_SAVED": 67,
+          "RUN_UNCORRECTED": 50
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": -16
+      },
+      {
+        "unit": 56,
+        "task": "door-open-v3",
+        "seed": 21856,
+        "group": 9,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 500,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 57,
+        "task": "push-v3",
+        "seed": 21857,
+        "group": 9,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 63,
+          "SWITCH_SAVED": 63,
+          "RUN_UNCORRECTED": 61
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 58,
+        "task": "reach-v3",
+        "seed": 21858,
+        "group": 9,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 62,
+          "SWITCH_SAVED": 63,
+          "RUN_UNCORRECTED": 198
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 136
+      },
+      {
+        "unit": 59,
+        "task": "door-open-v3",
+        "seed": 21859,
+        "group": 9,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 91,
+          "SWITCH_SAVED": 93,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 60,
+        "task": "push-v3",
+        "seed": 21860,
+        "group": 10,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 66,
+          "SWITCH_SAVED": 66,
+          "RUN_UNCORRECTED": 64
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 61,
+        "task": "reach-v3",
+        "seed": 21861,
+        "group": 10,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 49,
+          "SWITCH_SAVED": 47,
+          "RUN_UNCORRECTED": 47
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 62,
+        "task": "door-open-v3",
+        "seed": 21862,
+        "group": 10,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 90,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": -3
+      },
+      {
+        "unit": 63,
+        "task": "push-v3",
+        "seed": 21863,
+        "group": 10,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 89,
+          "RUN_UNCORRECTED": 98
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 9
+      },
+      {
+        "unit": 64,
+        "task": "reach-v3",
+        "seed": 21864,
+        "group": 10,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 49,
+          "SWITCH_SAVED": 46,
+          "RUN_UNCORRECTED": 92
+        },
+        "switch_minus_continue": -3,
+        "uncorrected_minus_continue": 43
+      },
+      {
+        "unit": 65,
+        "task": "door-open-v3",
+        "seed": 21865,
+        "group": 10,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 120,
+          "SWITCH_SAVED": 112,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": -8,
+        "uncorrected_minus_continue": -34
+      },
+      {
+        "unit": 66,
+        "task": "push-v3",
+        "seed": 21866,
+        "group": 11,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 73,
+          "SWITCH_SAVED": 73,
+          "RUN_UNCORRECTED": 73
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 67,
+        "task": "reach-v3",
+        "seed": 21867,
+        "group": 11,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 53,
+          "SWITCH_SAVED": 52,
+          "RUN_UNCORRECTED": 54
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 68,
+        "task": "door-open-v3",
+        "seed": 21868,
+        "group": 11,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 93,
+          "SWITCH_SAVED": 99,
+          "RUN_UNCORRECTED": 92
+        },
+        "switch_minus_continue": 6,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 69,
+        "task": "push-v3",
+        "seed": 21869,
+        "group": 11,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 62,
+          "SWITCH_SAVED": 62,
+          "RUN_UNCORRECTED": 64
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 70,
+        "task": "reach-v3",
+        "seed": 21870,
+        "group": 11,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 51,
+          "SWITCH_SAVED": 48,
+          "RUN_UNCORRECTED": 237
+        },
+        "switch_minus_continue": -3,
+        "uncorrected_minus_continue": 186
+      },
+      {
+        "unit": 71,
+        "task": "door-open-v3",
+        "seed": 21871,
+        "group": 11,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 83,
+          "SWITCH_SAVED": 83,
+          "RUN_UNCORRECTED": 82
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 72,
+        "task": "push-v3",
+        "seed": 21872,
+        "group": 12,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 73,
+          "SWITCH_SAVED": 73,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 427
+      },
+      {
+        "unit": 73,
+        "task": "reach-v3",
+        "seed": 21873,
+        "group": 12,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 62,
+          "SWITCH_SAVED": 61,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 438
+      },
+      {
+        "unit": 74,
+        "task": "door-open-v3",
+        "seed": 21874,
+        "group": 12,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 96,
+          "SWITCH_SAVED": 94,
+          "RUN_UNCORRECTED": 95
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 75,
+        "task": "push-v3",
+        "seed": 21875,
+        "group": 12,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 71,
+          "SWITCH_SAVED": 72,
+          "RUN_UNCORRECTED": 77
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 6
+      },
+      {
+        "unit": 76,
+        "task": "reach-v3",
+        "seed": 21876,
+        "group": 12,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 61,
+          "SWITCH_SAVED": 70,
+          "RUN_UNCORRECTED": 95
+        },
+        "switch_minus_continue": 9,
+        "uncorrected_minus_continue": 34
+      },
+      {
+        "unit": 77,
+        "task": "door-open-v3",
+        "seed": 21877,
+        "group": 12,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 89,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 78,
+        "task": "push-v3",
+        "seed": 21878,
+        "group": 13,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 77,
+          "SWITCH_SAVED": 124,
+          "RUN_UNCORRECTED": 75
+        },
+        "switch_minus_continue": 47,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 79,
+        "task": "reach-v3",
+        "seed": 21879,
+        "group": 13,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 85,
+          "RUN_UNCORRECTED": 85
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 80,
+        "task": "door-open-v3",
+        "seed": 21880,
+        "group": 13,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 90,
+          "SWITCH_SAVED": 89,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -4
+      },
+      {
+        "unit": 81,
+        "task": "push-v3",
+        "seed": 21881,
+        "group": 13,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 96,
+          "SWITCH_SAVED": 96,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 404
+      },
+      {
+        "unit": 82,
+        "task": "reach-v3",
+        "seed": 21882,
+        "group": 13,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 97,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 185
+        },
+        "switch_minus_continue": -11,
+        "uncorrected_minus_continue": 88
+      },
+      {
+        "unit": 83,
+        "task": "door-open-v3",
+        "seed": 21883,
+        "group": 13,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 108,
+          "SWITCH_SAVED": 114,
+          "RUN_UNCORRECTED": 93
+        },
+        "switch_minus_continue": 6,
+        "uncorrected_minus_continue": -15
+      },
+      {
+        "unit": 84,
+        "task": "push-v3",
+        "seed": 21884,
+        "group": 14,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 67,
+          "SWITCH_SAVED": 69,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 433
+      },
+      {
+        "unit": 85,
+        "task": "reach-v3",
+        "seed": 21885,
+        "group": 14,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 66,
+          "SWITCH_SAVED": 66,
+          "RUN_UNCORRECTED": 95
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 29
+      },
+      {
+        "unit": 86,
+        "task": "door-open-v3",
+        "seed": 21886,
+        "group": 14,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 85,
+          "RUN_UNCORRECTED": 85
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 87,
+        "task": "push-v3",
+        "seed": 21887,
+        "group": 14,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 78,
+          "SWITCH_SAVED": 78,
+          "RUN_UNCORRECTED": 223
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 145
+      },
+      {
+        "unit": 88,
+        "task": "reach-v3",
+        "seed": 21888,
+        "group": 14,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 500,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 89,
+        "task": "door-open-v3",
+        "seed": 21889,
+        "group": 14,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 83,
+          "SWITCH_SAVED": 83,
+          "RUN_UNCORRECTED": 82
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 90,
+        "task": "push-v3",
+        "seed": 21890,
+        "group": 15,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 67,
+          "SWITCH_SAVED": 67,
+          "RUN_UNCORRECTED": 67
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 91,
+        "task": "reach-v3",
+        "seed": 21891,
+        "group": 15,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 68,
+          "SWITCH_SAVED": 72,
+          "RUN_UNCORRECTED": 75
+        },
+        "switch_minus_continue": 4,
+        "uncorrected_minus_continue": 7
+      },
+      {
+        "unit": 92,
+        "task": "door-open-v3",
+        "seed": 21892,
+        "group": 15,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 96,
+          "SWITCH_SAVED": 95,
+          "RUN_UNCORRECTED": 94
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 93,
+        "task": "push-v3",
+        "seed": 21893,
+        "group": 15,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 80,
+          "SWITCH_SAVED": 81,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 420
+      },
+      {
+        "unit": 94,
+        "task": "reach-v3",
+        "seed": 21894,
+        "group": 15,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 56,
+          "SWITCH_SAVED": 58,
+          "RUN_UNCORRECTED": 68
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 12
+      },
+      {
+        "unit": 95,
+        "task": "door-open-v3",
+        "seed": 21895,
+        "group": 15,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 94,
+          "SWITCH_SAVED": 95,
+          "RUN_UNCORRECTED": 93
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 96,
+        "task": "push-v3",
+        "seed": 21896,
+        "group": 16,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 71,
+          "SWITCH_SAVED": 73,
+          "RUN_UNCORRECTED": 68
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -3
+      },
+      {
+        "unit": 97,
+        "task": "reach-v3",
+        "seed": 21897,
+        "group": 16,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 63,
+          "SWITCH_SAVED": 65,
+          "RUN_UNCORRECTED": 64
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 98,
+        "task": "door-open-v3",
+        "seed": 21898,
+        "group": 16,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 130,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 122
+        },
+        "switch_minus_continue": 370,
+        "uncorrected_minus_continue": -8
+      },
+      {
+        "unit": 99,
+        "task": "push-v3",
+        "seed": 21899,
+        "group": 16,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 79,
+          "SWITCH_SAVED": 80,
+          "RUN_UNCORRECTED": 95
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 16
+      },
+      {
+        "unit": 100,
+        "task": "reach-v3",
+        "seed": 21900,
+        "group": 16,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 54,
+          "SWITCH_SAVED": 53,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 36
+      },
+      {
+        "unit": 101,
+        "task": "door-open-v3",
+        "seed": 21901,
+        "group": 16,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 123,
+          "SWITCH_SAVED": 126,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": -33
+      },
+      {
+        "unit": 102,
+        "task": "push-v3",
+        "seed": 21902,
+        "group": 17,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 72,
+          "SWITCH_SAVED": 72,
+          "RUN_UNCORRECTED": 73
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 103,
+        "task": "reach-v3",
+        "seed": 21903,
+        "group": 17,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 50,
+          "SWITCH_SAVED": 55,
+          "RUN_UNCORRECTED": 68
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": 18
+      },
+      {
+        "unit": 104,
+        "task": "door-open-v3",
+        "seed": 21904,
+        "group": 17,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 88,
+          "RUN_UNCORRECTED": 82
+        },
+        "switch_minus_continue": 4,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 105,
+        "task": "push-v3",
+        "seed": 21905,
+        "group": 17,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 73,
+          "SWITCH_SAVED": 75,
+          "RUN_UNCORRECTED": 68
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -5
+      },
+      {
+        "unit": 106,
+        "task": "reach-v3",
+        "seed": 21906,
+        "group": 17,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 128,
+          "SWITCH_SAVED": 217,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 89,
+        "uncorrected_minus_continue": 372
+      },
+      {
+        "unit": 107,
+        "task": "door-open-v3",
+        "seed": 21907,
+        "group": 17,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 87,
+          "SWITCH_SAVED": 87,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 3
+      },
+      {
+        "unit": 108,
+        "task": "push-v3",
+        "seed": 21908,
+        "group": 18,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 84,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 416
+      },
+      {
+        "unit": 109,
+        "task": "reach-v3",
+        "seed": 21909,
+        "group": 18,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 67,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 433
+      },
+      {
+        "unit": 110,
+        "task": "door-open-v3",
+        "seed": 21910,
+        "group": 18,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 90,
+          "SWITCH_SAVED": 90,
+          "RUN_UNCORRECTED": 92
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 111,
+        "task": "push-v3",
+        "seed": 21911,
+        "group": 18,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 82,
+          "SWITCH_SAVED": 82,
+          "RUN_UNCORRECTED": 123
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 41
+      },
+      {
+        "unit": 112,
+        "task": "reach-v3",
+        "seed": 21912,
+        "group": 18,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 47,
+          "SWITCH_SAVED": 52,
+          "RUN_UNCORRECTED": 46
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 113,
+        "task": "door-open-v3",
+        "seed": 21913,
+        "group": 18,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 87,
+          "SWITCH_SAVED": 87,
+          "RUN_UNCORRECTED": 88
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 114,
+        "task": "push-v3",
+        "seed": 21914,
+        "group": 19,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 81,
+          "SWITCH_SAVED": 82,
+          "RUN_UNCORRECTED": 79
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 115,
+        "task": "reach-v3",
+        "seed": 21915,
+        "group": 19,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 50,
+          "SWITCH_SAVED": 51,
+          "RUN_UNCORRECTED": 48
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 116,
+        "task": "door-open-v3",
+        "seed": 21916,
+        "group": 19,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 98,
+          "SWITCH_SAVED": 98,
+          "RUN_UNCORRECTED": 100
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 117,
+        "task": "push-v3",
+        "seed": 21917,
+        "group": 19,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 81,
+          "SWITCH_SAVED": 85,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 4,
+        "uncorrected_minus_continue": 419
+      },
+      {
+        "unit": 118,
+        "task": "reach-v3",
+        "seed": 21918,
+        "group": 19,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 63,
+          "SWITCH_SAVED": 62,
+          "RUN_UNCORRECTED": 81
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 18
+      },
+      {
+        "unit": 119,
+        "task": "door-open-v3",
+        "seed": 21919,
+        "group": 19,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 148,
+          "SWITCH_SAVED": 148,
+          "RUN_UNCORRECTED": 151
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 3
+      },
+      {
+        "unit": 120,
+        "task": "push-v3",
+        "seed": 21920,
+        "group": 20,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 70,
+          "SWITCH_SAVED": 70,
+          "RUN_UNCORRECTED": 71
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 121,
+        "task": "reach-v3",
+        "seed": 21921,
+        "group": 20,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 59,
+          "SWITCH_SAVED": 62,
+          "RUN_UNCORRECTED": 62
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 3
+      },
+      {
+        "unit": 122,
+        "task": "door-open-v3",
+        "seed": 21922,
+        "group": 20,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 95,
+          "SWITCH_SAVED": 91,
+          "RUN_UNCORRECTED": 88
+        },
+        "switch_minus_continue": -4,
+        "uncorrected_minus_continue": -7
+      },
+      {
+        "unit": 123,
+        "task": "push-v3",
+        "seed": 21923,
+        "group": 20,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 62,
+          "SWITCH_SAVED": 63,
+          "RUN_UNCORRECTED": 71
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 9
+      },
+      {
+        "unit": 124,
+        "task": "reach-v3",
+        "seed": 21924,
+        "group": 20,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 40,
+          "SWITCH_SAVED": 137,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 97,
+        "uncorrected_minus_continue": 460
+      },
+      {
+        "unit": 125,
+        "task": "door-open-v3",
+        "seed": 21925,
+        "group": 20,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 95,
+          "SWITCH_SAVED": 91,
+          "RUN_UNCORRECTED": 92
+        },
+        "switch_minus_continue": -4,
+        "uncorrected_minus_continue": -3
+      },
+      {
+        "unit": 126,
+        "task": "push-v3",
+        "seed": 21926,
+        "group": 21,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 63,
+          "SWITCH_SAVED": 63,
+          "RUN_UNCORRECTED": 65
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 127,
+        "task": "reach-v3",
+        "seed": 21927,
+        "group": 21,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 59,
+          "SWITCH_SAVED": 53,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -6,
+        "uncorrected_minus_continue": 441
+      },
+      {
+        "unit": 128,
+        "task": "door-open-v3",
+        "seed": 21928,
+        "group": 21,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 102,
+          "SWITCH_SAVED": 104,
+          "RUN_UNCORRECTED": 98
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -4
+      },
+      {
+        "unit": 129,
+        "task": "push-v3",
+        "seed": 21929,
+        "group": 21,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 75,
+          "SWITCH_SAVED": 111,
+          "RUN_UNCORRECTED": 135
+        },
+        "switch_minus_continue": 36,
+        "uncorrected_minus_continue": 60
+      },
+      {
+        "unit": 130,
+        "task": "reach-v3",
+        "seed": 21930,
+        "group": 21,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 49,
+          "SWITCH_SAVED": 55,
+          "RUN_UNCORRECTED": 95
+        },
+        "switch_minus_continue": 6,
+        "uncorrected_minus_continue": 46
+      },
+      {
+        "unit": 131,
+        "task": "door-open-v3",
+        "seed": 21931,
+        "group": 21,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 89,
+          "RUN_UNCORRECTED": 89
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 132,
+        "task": "push-v3",
+        "seed": 21932,
+        "group": 22,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 78,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 422,
+        "uncorrected_minus_continue": 422
+      },
+      {
+        "unit": 133,
+        "task": "reach-v3",
+        "seed": 21933,
+        "group": 22,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 63,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 66
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": 3
+      },
+      {
+        "unit": 134,
+        "task": "door-open-v3",
+        "seed": 21934,
+        "group": 22,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 99,
+          "SWITCH_SAVED": 101,
+          "RUN_UNCORRECTED": 91
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -8
+      },
+      {
+        "unit": 135,
+        "task": "push-v3",
+        "seed": 21935,
+        "group": 22,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 88,
+          "SWITCH_SAVED": 88,
+          "RUN_UNCORRECTED": 99
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 11
+      },
+      {
+        "unit": 136,
+        "task": "reach-v3",
+        "seed": 21936,
+        "group": 22,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 59,
+          "SWITCH_SAVED": 56,
+          "RUN_UNCORRECTED": 95
+        },
+        "switch_minus_continue": -3,
+        "uncorrected_minus_continue": 36
+      },
+      {
+        "unit": 137,
+        "task": "door-open-v3",
+        "seed": 21937,
+        "group": 22,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 133,
+          "SWITCH_SAVED": 131,
+          "RUN_UNCORRECTED": 133
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 138,
+        "task": "push-v3",
+        "seed": 21938,
+        "group": 23,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 245,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 255,
+        "uncorrected_minus_continue": 255
+      },
+      {
+        "unit": 139,
+        "task": "reach-v3",
+        "seed": 21939,
+        "group": 23,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 54,
+          "SWITCH_SAVED": 64,
+          "RUN_UNCORRECTED": 194
+        },
+        "switch_minus_continue": 10,
+        "uncorrected_minus_continue": 140
+      },
+      {
+        "unit": 140,
+        "task": "door-open-v3",
+        "seed": 21940,
+        "group": 23,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 101,
+          "SWITCH_SAVED": 101,
+          "RUN_UNCORRECTED": 101
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 141,
+        "task": "push-v3",
+        "seed": 21941,
+        "group": 23,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 500,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 142,
+        "task": "reach-v3",
+        "seed": 21942,
+        "group": 23,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 44,
+          "SWITCH_SAVED": 48,
+          "RUN_UNCORRECTED": 157
+        },
+        "switch_minus_continue": 4,
+        "uncorrected_minus_continue": 113
+      },
+      {
+        "unit": 143,
+        "task": "door-open-v3",
+        "seed": 21943,
+        "group": 23,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 85,
+          "SWITCH_SAVED": 85,
+          "RUN_UNCORRECTED": 87
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 144,
+        "task": "push-v3",
+        "seed": 21944,
+        "group": 24,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 72,
+          "SWITCH_SAVED": 71,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 428
+      },
+      {
+        "unit": 145,
+        "task": "reach-v3",
+        "seed": 21945,
+        "group": 24,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 57,
+          "SWITCH_SAVED": 55,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": 443
+      },
+      {
+        "unit": 146,
+        "task": "door-open-v3",
+        "seed": 21946,
+        "group": 24,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 131,
+          "SWITCH_SAVED": 114,
+          "RUN_UNCORRECTED": 111
+        },
+        "switch_minus_continue": -17,
+        "uncorrected_minus_continue": -20
+      },
+      {
+        "unit": 147,
+        "task": "push-v3",
+        "seed": 21947,
+        "group": 24,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 67,
+          "SWITCH_SAVED": 67,
+          "RUN_UNCORRECTED": 67
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 148,
+        "task": "reach-v3",
+        "seed": 21948,
+        "group": 24,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 53,
+          "SWITCH_SAVED": 56,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 447
+      },
+      {
+        "unit": 149,
+        "task": "door-open-v3",
+        "seed": 21949,
+        "group": 24,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 124,
+          "SWITCH_SAVED": 123,
+          "RUN_UNCORRECTED": 108
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -16
+      },
+      {
+        "unit": 150,
+        "task": "push-v3",
+        "seed": 21950,
+        "group": 25,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 74,
+          "SWITCH_SAVED": 77,
+          "RUN_UNCORRECTED": 73
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 151,
+        "task": "reach-v3",
+        "seed": 21951,
+        "group": 25,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 40,
+          "SWITCH_SAVED": 38,
+          "RUN_UNCORRECTED": 41
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 152,
+        "task": "door-open-v3",
+        "seed": 21952,
+        "group": 25,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 82,
+          "SWITCH_SAVED": 82,
+          "RUN_UNCORRECTED": 82
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 153,
+        "task": "push-v3",
+        "seed": 21953,
+        "group": 25,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 87,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 105
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 18
+      },
+      {
+        "unit": 154,
+        "task": "reach-v3",
+        "seed": 21954,
+        "group": 25,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 81,
+          "SWITCH_SAVED": 78,
+          "RUN_UNCORRECTED": 125
+        },
+        "switch_minus_continue": -3,
+        "uncorrected_minus_continue": 44
+      },
+      {
+        "unit": 155,
+        "task": "door-open-v3",
+        "seed": 21955,
+        "group": 25,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 111,
+          "SWITCH_SAVED": 110,
+          "RUN_UNCORRECTED": 93
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -18
+      },
+      {
+        "unit": 156,
+        "task": "push-v3",
+        "seed": 21956,
+        "group": 26,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 69,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 73
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 4
+      },
+      {
+        "unit": 157,
+        "task": "reach-v3",
+        "seed": 21957,
+        "group": 26,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 60,
+          "SWITCH_SAVED": 63,
+          "RUN_UNCORRECTED": 117
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 57
+      },
+      {
+        "unit": 158,
+        "task": "door-open-v3",
+        "seed": 21958,
+        "group": 26,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 90,
+          "SWITCH_SAVED": 89,
+          "RUN_UNCORRECTED": 88
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 159,
+        "task": "push-v3",
+        "seed": 21959,
+        "group": 26,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 72,
+          "SWITCH_SAVED": 70,
+          "RUN_UNCORRECTED": 227
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": 155
+      },
+      {
+        "unit": 160,
+        "task": "reach-v3",
+        "seed": 21960,
+        "group": 26,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 64,
+          "SWITCH_SAVED": 69,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": 436
+      },
+      {
+        "unit": 161,
+        "task": "door-open-v3",
+        "seed": 21961,
+        "group": 26,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 89,
+          "SWITCH_SAVED": 90,
+          "RUN_UNCORRECTED": 89
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 162,
+        "task": "push-v3",
+        "seed": 21962,
+        "group": 27,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 71,
+          "SWITCH_SAVED": 71,
+          "RUN_UNCORRECTED": 78
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 7
+      },
+      {
+        "unit": 163,
+        "task": "reach-v3",
+        "seed": 21963,
+        "group": 27,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 63,
+          "SWITCH_SAVED": 62,
+          "RUN_UNCORRECTED": 98
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 35
+      },
+      {
+        "unit": 164,
+        "task": "door-open-v3",
+        "seed": 21964,
+        "group": 27,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 84,
+          "RUN_UNCORRECTED": 84
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 165,
+        "task": "push-v3",
+        "seed": 21965,
+        "group": 27,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 67,
+          "SWITCH_SAVED": 68,
+          "RUN_UNCORRECTED": 76
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 9
+      },
+      {
+        "unit": 166,
+        "task": "reach-v3",
+        "seed": 21966,
+        "group": 27,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 83,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 417
+      },
+      {
+        "unit": 167,
+        "task": "door-open-v3",
+        "seed": 21967,
+        "group": 27,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 90,
+          "SWITCH_SAVED": 95,
+          "RUN_UNCORRECTED": 89
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 168,
+        "task": "push-v3",
+        "seed": 21968,
+        "group": 28,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 83,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 81
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 169,
+        "task": "reach-v3",
+        "seed": 21969,
+        "group": 28,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 42,
+          "SWITCH_SAVED": 39,
+          "RUN_UNCORRECTED": 52
+        },
+        "switch_minus_continue": -3,
+        "uncorrected_minus_continue": 10
+      },
+      {
+        "unit": 170,
+        "task": "door-open-v3",
+        "seed": 21970,
+        "group": 28,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 86,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 171,
+        "task": "push-v3",
+        "seed": 21971,
+        "group": 28,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 84,
+          "SWITCH_SAVED": 85,
+          "RUN_UNCORRECTED": 97
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 13
+      },
+      {
+        "unit": 172,
+        "task": "reach-v3",
+        "seed": 21972,
+        "group": 28,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 85,
+          "SWITCH_SAVED": 86,
+          "RUN_UNCORRECTED": 160
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 75
+      },
+      {
+        "unit": 173,
+        "task": "door-open-v3",
+        "seed": 21973,
+        "group": 28,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 133,
+          "SWITCH_SAVED": 138,
+          "RUN_UNCORRECTED": 131
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 174,
+        "task": "push-v3",
+        "seed": 21974,
+        "group": 29,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 77,
+          "SWITCH_SAVED": 75,
+          "RUN_UNCORRECTED": 75
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -2
+      },
+      {
+        "unit": 175,
+        "task": "reach-v3",
+        "seed": 21975,
+        "group": 29,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 44,
+          "SWITCH_SAVED": 46,
+          "RUN_UNCORRECTED": 41
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -3
+      },
+      {
+        "unit": 176,
+        "task": "door-open-v3",
+        "seed": 21976,
+        "group": 29,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 94,
+          "SWITCH_SAVED": 97,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": -8
+      },
+      {
+        "unit": 177,
+        "task": "push-v3",
+        "seed": 21977,
+        "group": 29,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 79,
+          "SWITCH_SAVED": 78,
+          "RUN_UNCORRECTED": 396
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 317
+      },
+      {
+        "unit": 178,
+        "task": "reach-v3",
+        "seed": 21978,
+        "group": 29,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 97,
+          "SWITCH_SAVED": 111,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 14,
+        "uncorrected_minus_continue": 403
+      },
+      {
+        "unit": 179,
+        "task": "door-open-v3",
+        "seed": 21979,
+        "group": 29,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 96,
+          "SWITCH_SAVED": 96,
+          "RUN_UNCORRECTED": 98
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 180,
+        "task": "push-v3",
+        "seed": 21980,
+        "group": 30,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 65,
+          "SWITCH_SAVED": 65,
+          "RUN_UNCORRECTED": 67
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 181,
+        "task": "reach-v3",
+        "seed": 21981,
+        "group": 30,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 52,
+          "SWITCH_SAVED": 51,
+          "RUN_UNCORRECTED": 118
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 66
+      },
+      {
+        "unit": 182,
+        "task": "door-open-v3",
+        "seed": 21982,
+        "group": 30,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 95,
+          "SWITCH_SAVED": 95,
+          "RUN_UNCORRECTED": 96
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 183,
+        "task": "push-v3",
+        "seed": 21983,
+        "group": 30,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 77,
+          "SWITCH_SAVED": 77,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 423
+      },
+      {
+        "unit": 184,
+        "task": "reach-v3",
+        "seed": 21984,
+        "group": 30,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 90,
+          "SWITCH_SAVED": 90,
+          "RUN_UNCORRECTED": 267
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 177
+      },
+      {
+        "unit": 185,
+        "task": "door-open-v3",
+        "seed": 21985,
+        "group": 30,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 90,
+          "SWITCH_SAVED": 89,
+          "RUN_UNCORRECTED": 90
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 186,
+        "task": "push-v3",
+        "seed": 21986,
+        "group": 31,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 68,
+          "SWITCH_SAVED": 69,
+          "RUN_UNCORRECTED": 69
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 187,
+        "task": "reach-v3",
+        "seed": 21987,
+        "group": 31,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 45,
+          "SWITCH_SAVED": 44,
+          "RUN_UNCORRECTED": 53
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 8
+      },
+      {
+        "unit": 188,
+        "task": "door-open-v3",
+        "seed": 21988,
+        "group": 31,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 87,
+          "SWITCH_SAVED": 84,
+          "RUN_UNCORRECTED": 83
+        },
+        "switch_minus_continue": -3,
+        "uncorrected_minus_continue": -4
+      },
+      {
+        "unit": 189,
+        "task": "push-v3",
+        "seed": 21989,
+        "group": 31,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 92,
+          "SWITCH_SAVED": 94,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 408
+      },
+      {
+        "unit": 190,
+        "task": "reach-v3",
+        "seed": 21990,
+        "group": 31,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 83,
+          "SWITCH_SAVED": 78,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -5,
+        "uncorrected_minus_continue": 417
+      },
+      {
+        "unit": 191,
+        "task": "door-open-v3",
+        "seed": 21991,
+        "group": 31,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 147,
+          "SWITCH_SAVED": 147,
+          "RUN_UNCORRECTED": 146
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 192,
+        "task": "push-v3",
+        "seed": 21992,
+        "group": 32,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 133,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 185
+        },
+        "switch_minus_continue": 367,
+        "uncorrected_minus_continue": 52
+      },
+      {
+        "unit": 193,
+        "task": "reach-v3",
+        "seed": 21993,
+        "group": 32,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 58,
+          "SWITCH_SAVED": 64,
+          "RUN_UNCORRECTED": 70
+        },
+        "switch_minus_continue": 6,
+        "uncorrected_minus_continue": 12
+      },
+      {
+        "unit": 194,
+        "task": "door-open-v3",
+        "seed": 21994,
+        "group": 32,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 93,
+          "SWITCH_SAVED": 100,
+          "RUN_UNCORRECTED": 86
+        },
+        "switch_minus_continue": 7,
+        "uncorrected_minus_continue": -7
+      },
+      {
+        "unit": 195,
+        "task": "push-v3",
+        "seed": 21995,
+        "group": 32,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 500,
+          "SWITCH_SAVED": 500,
+          "RUN_UNCORRECTED": 196
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": -304
+      },
+      {
+        "unit": 196,
+        "task": "reach-v3",
+        "seed": 21996,
+        "group": 32,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 70,
+          "SWITCH_SAVED": 70,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 430
+      },
+      {
+        "unit": 197,
+        "task": "door-open-v3",
+        "seed": 21997,
+        "group": 32,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 88,
+          "SWITCH_SAVED": 91,
+          "RUN_UNCORRECTED": 89
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 1
+      },
+      {
+        "unit": 198,
+        "task": "push-v3",
+        "seed": 21998,
+        "group": 33,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 65,
+          "SWITCH_SAVED": 64,
+          "RUN_UNCORRECTED": 131
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 66
+      },
+      {
+        "unit": 199,
+        "task": "reach-v3",
+        "seed": 21999,
+        "group": 33,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 65,
+          "SWITCH_SAVED": 67,
+          "RUN_UNCORRECTED": 58
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": -7
+      },
+      {
+        "unit": 200,
+        "task": "door-open-v3",
+        "seed": 22000,
+        "group": 33,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 95,
+          "SWITCH_SAVED": 94,
+          "RUN_UNCORRECTED": 100
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 5
+      },
+      {
+        "unit": 201,
+        "task": "push-v3",
+        "seed": 22001,
+        "group": 33,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 65,
+          "SWITCH_SAVED": 64,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": 435
+      },
+      {
+        "unit": 202,
+        "task": "reach-v3",
+        "seed": 22002,
+        "group": 33,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 61,
+          "SWITCH_SAVED": 64,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 3,
+        "uncorrected_minus_continue": 439
+      },
+      {
+        "unit": 203,
+        "task": "door-open-v3",
+        "seed": 22003,
+        "group": 33,
+        "family_oracle": "BIAS",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 92,
+          "SWITCH_SAVED": 92,
+          "RUN_UNCORRECTED": 94
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 204,
+        "task": "push-v3",
+        "seed": 22004,
+        "group": 34,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 81,
+          "SWITCH_SAVED": 79,
+          "RUN_UNCORRECTED": 80
+        },
+        "switch_minus_continue": -2,
+        "uncorrected_minus_continue": -1
+      },
+      {
+        "unit": 205,
+        "task": "reach-v3",
+        "seed": 22005,
+        "group": 34,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 60,
+          "SWITCH_SAVED": 60,
+          "RUN_UNCORRECTED": 62
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 2
+      },
+      {
+        "unit": 206,
+        "task": "door-open-v3",
+        "seed": 22006,
+        "group": 34,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 87,
+          "SWITCH_SAVED": 83,
+          "RUN_UNCORRECTED": 84
+        },
+        "switch_minus_continue": -4,
+        "uncorrected_minus_continue": -3
+      },
+      {
+        "unit": 207,
+        "task": "push-v3",
+        "seed": 22007,
+        "group": 34,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 73,
+          "SWITCH_SAVED": 74,
+          "RUN_UNCORRECTED": 80
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 7
+      },
+      {
+        "unit": 208,
+        "task": "reach-v3",
+        "seed": 22008,
+        "group": 34,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 68,
+          "SWITCH_SAVED": 69,
+          "RUN_UNCORRECTED": 81
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 13
+      },
+      {
+        "unit": 209,
+        "task": "door-open-v3",
+        "seed": 22009,
+        "group": 34,
+        "family_oracle": "COLUMN_Y",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 104,
+          "SWITCH_SAVED": 109,
+          "RUN_UNCORRECTED": 85
+        },
+        "switch_minus_continue": 5,
+        "uncorrected_minus_continue": -19
+      },
+      {
+        "unit": 210,
+        "task": "push-v3",
+        "seed": 22010,
+        "group": 35,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 76,
+          "SWITCH_SAVED": 78,
+          "RUN_UNCORRECTED": 80
+        },
+        "switch_minus_continue": 2,
+        "uncorrected_minus_continue": 4
+      },
+      {
+        "unit": 211,
+        "task": "reach-v3",
+        "seed": 22011,
+        "group": 35,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 91,
+          "SWITCH_SAVED": 53,
+          "RUN_UNCORRECTED": 101
+        },
+        "switch_minus_continue": -38,
+        "uncorrected_minus_continue": 10
+      },
+      {
+        "unit": 212,
+        "task": "door-open-v3",
+        "seed": 22012,
+        "group": 35,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 0,
+        "losses": {
+          "CONTINUE_CURRENT": 93,
+          "SWITCH_SAVED": 93,
+          "RUN_UNCORRECTED": 93
+        },
+        "switch_minus_continue": 0,
+        "uncorrected_minus_continue": 0
+      },
+      {
+        "unit": 213,
+        "task": "push-v3",
+        "seed": 22013,
+        "group": 35,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 68,
+          "SWITCH_SAVED": 69,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 432
+      },
+      {
+        "unit": 214,
+        "task": "reach-v3",
+        "seed": 22014,
+        "group": 35,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 71,
+          "SWITCH_SAVED": 72,
+          "RUN_UNCORRECTED": 500
+        },
+        "switch_minus_continue": 1,
+        "uncorrected_minus_continue": 429
+      },
+      {
+        "unit": 215,
+        "task": "door-open-v3",
+        "seed": 22015,
+        "group": 35,
+        "family_oracle": "DEADZONE",
+        "endpoint_oracle": 1,
+        "losses": {
+          "CONTINUE_CURRENT": 88,
+          "SWITCH_SAVED": 87,
+          "RUN_UNCORRECTED": 87
+        },
+        "switch_minus_continue": -1,
+        "uncorrected_minus_continue": -1
+      }
+    ],
+    "failures": [
+      {
+        "unit": 8,
+        "task": "door-open-v3",
+        "seed": 21808,
+        "variant": "CONTINUE_CURRENT",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 8,
+        "task": "door-open-v3",
+        "seed": 21808,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 8,
+        "task": "door-open-v3",
+        "seed": 21808,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 20,
+        "task": "door-open-v3",
+        "seed": 21820,
+        "variant": "CONTINUE_CURRENT",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 20,
+        "task": "door-open-v3",
+        "seed": 21820,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 34,
+        "task": "reach-v3",
+        "seed": 21834,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 36,
+        "task": "push-v3",
+        "seed": 21836,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 37,
+        "task": "reach-v3",
+        "seed": 21837,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 52,
+        "task": "reach-v3",
+        "seed": 21852,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 56,
+        "task": "door-open-v3",
+        "seed": 21856,
+        "variant": "CONTINUE_CURRENT",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 56,
+        "task": "door-open-v3",
+        "seed": 21856,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 56,
+        "task": "door-open-v3",
+        "seed": 21856,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 72,
+        "task": "push-v3",
+        "seed": 21872,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 73,
+        "task": "reach-v3",
+        "seed": 21873,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 81,
+        "task": "push-v3",
+        "seed": 21881,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 84,
+        "task": "push-v3",
+        "seed": 21884,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 88,
+        "task": "reach-v3",
+        "seed": 21888,
+        "variant": "CONTINUE_CURRENT",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 88,
+        "task": "reach-v3",
+        "seed": 21888,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 88,
+        "task": "reach-v3",
+        "seed": 21888,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 93,
+        "task": "push-v3",
+        "seed": 21893,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 98,
+        "task": "door-open-v3",
+        "seed": 21898,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 106,
+        "task": "reach-v3",
+        "seed": 21906,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 108,
+        "task": "push-v3",
+        "seed": 21908,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 109,
+        "task": "reach-v3",
+        "seed": 21909,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 117,
+        "task": "push-v3",
+        "seed": 21917,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 124,
+        "task": "reach-v3",
+        "seed": 21924,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 127,
+        "task": "reach-v3",
+        "seed": 21927,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 132,
+        "task": "push-v3",
+        "seed": 21932,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 132,
+        "task": "push-v3",
+        "seed": 21932,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 138,
+        "task": "push-v3",
+        "seed": 21938,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 138,
+        "task": "push-v3",
+        "seed": 21938,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 141,
+        "task": "push-v3",
+        "seed": 21941,
+        "variant": "CONTINUE_CURRENT",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 141,
+        "task": "push-v3",
+        "seed": 21941,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 141,
+        "task": "push-v3",
+        "seed": 21941,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 144,
+        "task": "push-v3",
+        "seed": 21944,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 145,
+        "task": "reach-v3",
+        "seed": 21945,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 148,
+        "task": "reach-v3",
+        "seed": 21948,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 160,
+        "task": "reach-v3",
+        "seed": 21960,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 166,
+        "task": "reach-v3",
+        "seed": 21966,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 178,
+        "task": "reach-v3",
+        "seed": 21978,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 183,
+        "task": "push-v3",
+        "seed": 21983,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 189,
+        "task": "push-v3",
+        "seed": 21989,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 190,
+        "task": "reach-v3",
+        "seed": 21990,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 192,
+        "task": "push-v3",
+        "seed": 21992,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 195,
+        "task": "push-v3",
+        "seed": 21995,
+        "variant": "CONTINUE_CURRENT",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 195,
+        "task": "push-v3",
+        "seed": 21995,
+        "variant": "SWITCH_SAVED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 196,
+        "task": "reach-v3",
+        "seed": 21996,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 201,
+        "task": "push-v3",
+        "seed": 22001,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 202,
+        "task": "reach-v3",
+        "seed": 22002,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 213,
+        "task": "push-v3",
+        "seed": 22013,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      },
+      {
+        "unit": 214,
+        "task": "reach-v3",
+        "seed": 22014,
+        "variant": "RUN_UNCORRECTED",
+        "completed": true,
+        "success": false,
+        "stopped": false,
+        "total_steps": 500,
+        "deadline_loss": 500,
+        "boundary_ready": true,
+        "host_attempts": 500,
+        "host_returned": 500,
+        "policy_queries": 492,
+        "parameter_fit_attempts": 2,
+        "parameter_fit_results": 2,
+        "optimizer_nfev": 2
+      }
+    ],
+    "bootstrap_samples": 10000,
+    "bootstrap_seed": 20261023,
+    "interval_scope": "FAMILY_STRATIFIED_WHOLE_GENERATOR_GROUP",
+    "learned_policy_evaluation": false,
+    "algorithm_promotion_claim": false,
+    "individual_expected_effect_identified": false
+  },
+  "scope": "Saved fixed-operation outcomes; no online selector, new inference or fitting."
+}

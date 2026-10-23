@@ -1,0 +1,12 @@
+{
+  "status": "FAILED_AT_FINAL_RECEIPT_WRITE",
+  "error_type": "FileNotFoundError",
+  "reason": "Output parent directory was not created before the software invocation. All eight synthetic fits and forward/improvement checks had completed before the final receipt write failed.",
+  "software_neural_fits_completed": 8,
+  "software_optimizer_updates": 800,
+  "saved_models": 0,
+  "scientific_model_fits": 0,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "repair": "Check destination before software fitting and save each synthetic model immediately; preserve failure, run a separately named second software qualification."
+}

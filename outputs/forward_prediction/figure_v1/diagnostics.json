@@ -1,0 +1,3025 @@
+{
+  "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+  "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+  "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+  "audit_sha256": "403c394dbb6abfffe811ed6c3354e5b78557d5af4bcbf541571441e057a562c2",
+  "analysis_tool_sha256": "846c2200b6132e4dab75d6834ac039d6fc623b27aaab9790cf86b339bd93b98f",
+  "interval_misses": [
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10400,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "episode_index": 195,
+      "method": "QUADRATIC_STATE",
+      "maximum_error_m": 0.001854896477052869,
+      "frozen_radius_m": 0.0012643485114765653,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10400,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "episode_index": 196,
+      "method": "QUADRATIC_STATE",
+      "maximum_error_m": 0.0019645170468329176,
+      "frozen_radius_m": 0.0017307396633695262,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10403,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "episode_index": 213,
+      "method": "QUADRATIC_STATE",
+      "maximum_error_m": 0.0014238296127085147,
+      "frozen_radius_m": 0.0012643485114765653,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10403,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "episode_index": 214,
+      "method": "QUADRATIC_STATE",
+      "maximum_error_m": 0.002008068655786409,
+      "frozen_radius_m": 0.0017307396633695262,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10404,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "episode_index": 219,
+      "method": "QUADRATIC_STATE",
+      "maximum_error_m": 0.0018111413222697775,
+      "frozen_radius_m": 0.0012643485114765653,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10407,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "episode_index": 236,
+      "method": "LEGACY_ARX",
+      "maximum_error_m": 0.0017893743577537344,
+      "frozen_radius_m": 0.0017587640378109969,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10408,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "episode_index": 244,
+      "method": "LEGACY_ARX",
+      "maximum_error_m": 0.0012715887114703114,
+      "frozen_radius_m": 0.0012690414581393106,
+      "nominal_task_success": true
+    },
+    {
+      "stage": "QUALIFICATION",
+      "seed": 10412,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "episode_index": 266,
+      "method": "NEAREST_STATE",
+      "maximum_error_m": 0.003012298771392907,
+      "frozen_radius_m": 0.002609028082075849,
+      "nominal_task_success": true
+    }
+  ],
+  "distinct_missed_episodes": 8,
+  "nominal_task_failures": [
+    {
+      "stage": "CALIBRATION",
+      "seed": 10314,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "episode_index": 185,
+      "total_steps": 500,
+      "maximum_errors_m": {
+        "LEGACY_ARX": 0.006821415043704868,
+        "LINEAR_ARX": 0.00552461737566644,
+        "QUADRATIC_STATE": 0.016639157545037038,
+        "NEAREST_STATE": 0.007392215812663589
+      }
+    }
+  ],
+  "calibration_radius_drivers": [
+    {
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "method": "LEGACY_ARX",
+      "seed": 10309,
+      "total_steps": 55,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.002028841918241678
+    },
+    {
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "method": "LINEAR_ARX",
+      "seed": 10309,
+      "total_steps": 55,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0019102901061315092
+    },
+    {
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "method": "QUADRATIC_STATE",
+      "seed": 10305,
+      "total_steps": 55,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0013453744875697128
+    },
+    {
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "method": "NEAREST_STATE",
+      "seed": 10301,
+      "total_steps": 57,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.002755949694651177
+    },
+    {
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "LEGACY_ARX",
+      "seed": 10303,
+      "total_steps": 70,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0017587640378109969
+    },
+    {
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "LINEAR_ARX",
+      "seed": 10309,
+      "total_steps": 71,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0019552479535746145
+    },
+    {
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "QUADRATIC_STATE",
+      "seed": 10303,
+      "total_steps": 70,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0014385662186899035
+    },
+    {
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "NEAREST_STATE",
+      "seed": 10303,
+      "total_steps": 70,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.002609028082075849
+    },
+    {
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "method": "LEGACY_ARX",
+      "seed": 10313,
+      "total_steps": 39,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0017494852108128787
+    },
+    {
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "method": "LINEAR_ARX",
+      "seed": 10313,
+      "total_steps": 39,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0018943835480051416
+    },
+    {
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "method": "QUADRATIC_STATE",
+      "seed": 10306,
+      "total_steps": 53,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0012643485114765653
+    },
+    {
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "method": "NEAREST_STATE",
+      "seed": 10301,
+      "total_steps": 54,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.003611592586433285
+    },
+    {
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "LEGACY_ARX",
+      "seed": 10313,
+      "total_steps": 56,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0012690414581393106
+    },
+    {
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "LINEAR_ARX",
+      "seed": 10301,
+      "total_steps": 79,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0008152146538588064
+    },
+    {
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "QUADRATIC_STATE",
+      "seed": 10306,
+      "total_steps": 81,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0017307396633695262
+    },
+    {
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "NEAREST_STATE",
+      "seed": 10301,
+      "total_steps": 79,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.002810269453246481
+    },
+    {
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "method": "LEGACY_ARX",
+      "seed": 10307,
+      "total_steps": 87,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.009234433771605734
+    },
+    {
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "method": "LINEAR_ARX",
+      "seed": 10307,
+      "total_steps": 87,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.008425334884808003
+    },
+    {
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "method": "QUADRATIC_STATE",
+      "seed": 10314,
+      "total_steps": 500,
+      "nominal_task_success": false,
+      "radius_driver_score_m": 0.016639157545037038
+    },
+    {
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "method": "NEAREST_STATE",
+      "seed": 10307,
+      "total_steps": 87,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.008520571193848001
+    },
+    {
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "LEGACY_ARX",
+      "seed": 10307,
+      "total_steps": 109,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.009435337911420708
+    },
+    {
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "LINEAR_ARX",
+      "seed": 10307,
+      "total_steps": 109,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.008546428931462933
+    },
+    {
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "QUADRATIC_STATE",
+      "seed": 10314,
+      "total_steps": 113,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.004870877462062422
+    },
+    {
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "method": "NEAREST_STATE",
+      "seed": 10307,
+      "total_steps": 109,
+      "nominal_task_success": true,
+      "radius_driver_score_m": 0.0069611300365262675
+    }
+  ],
+  "qualification_cases": [
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 193,
+      "seed": 10400,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 65,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 63,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.000820271199931116,
+        "LINEAR_ARX": 0.0007512990951168458,
+        "QUADRATIC_STATE": 0.000478034018840954,
+        "NEAREST_STATE": 0.0009935247540222409
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00046057530219862047,
+        "LINEAR_ARX": 0.00018410213290382768,
+        "QUADRATIC_STATE": 0.00017075478153653193,
+        "NEAREST_STATE": 0.0004535205381774157
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 194,
+      "seed": 10400,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 81,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 79,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008972276326479011,
+        "LINEAR_ARX": 0.0008333771442140471,
+        "QUADRATIC_STATE": 0.0003131175876933041,
+        "NEAREST_STATE": 0.002062375118633965
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00045266618556207136,
+        "LINEAR_ARX": 0.00016368311038461632,
+        "QUADRATIC_STATE": 0.0001252697693639251,
+        "NEAREST_STATE": 0.0005481896935281739
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 195,
+      "seed": 10400,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 66,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 64,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008888065847399383,
+        "LINEAR_ARX": 0.0011029147060528722,
+        "QUADRATIC_STATE": 0.001854896477052869,
+        "NEAREST_STATE": 0.00252440923803721
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0003300502292414166,
+        "LINEAR_ARX": 0.00017209029979063824,
+        "QUADRATIC_STATE": 0.0011900777925868311,
+        "NEAREST_STATE": 0.0008480904322029887
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 196,
+      "seed": 10400,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 89,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 87,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008930274023289928,
+        "LINEAR_ARX": 0.0005237287597038157,
+        "QUADRATIC_STATE": 0.0019645170468329176,
+        "NEAREST_STATE": 0.002419097779892922
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00029878739420748427,
+        "LINEAR_ARX": 0.00010314370108549077,
+        "QUADRATIC_STATE": 0.001188187892726991,
+        "NEAREST_STATE": 0.0007696152900357373
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 197,
+      "seed": 10400,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 86,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 84,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005917339326506498,
+        "LINEAR_ARX": 0.006255931959862534,
+        "QUADRATIC_STATE": 0.001969580638782424,
+        "NEAREST_STATE": 0.002038689179498541
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0011534328313927945,
+        "LINEAR_ARX": 0.0009399142743906861,
+        "QUADRATIC_STATE": 0.0004765648771556131,
+        "NEAREST_STATE": 0.0004898908897720593
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 198,
+      "seed": 10400,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 103,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 101,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005343918834984302,
+        "LINEAR_ARX": 0.0059202421248741345,
+        "QUADRATIC_STATE": 0.0015862172358702843,
+        "NEAREST_STATE": 0.0029825967137481384
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001000178750969484,
+        "LINEAR_ARX": 0.0007723889414770653,
+        "QUADRATIC_STATE": 0.00046286483929088354,
+        "NEAREST_STATE": 0.0005481323881172469
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 199,
+      "seed": 10401,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 54,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 52,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0013832111138654814,
+        "LINEAR_ARX": 0.0013736004121517572,
+        "QUADRATIC_STATE": 0.0011889796401442984,
+        "NEAREST_STATE": 0.0021157946373857126
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005639787122557328,
+        "LINEAR_ARX": 0.00031985670399252983,
+        "QUADRATIC_STATE": 0.00021858912234005897,
+        "NEAREST_STATE": 0.0009110136725253228
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 200,
+      "seed": 10401,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 70,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 68,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008221680244488612,
+        "LINEAR_ARX": 0.0007070031829187967,
+        "QUADRATIC_STATE": 0.0003689403977919915,
+        "NEAREST_STATE": 0.0020505471558510935
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004817999753768342,
+        "LINEAR_ARX": 0.0001811646865497765,
+        "QUADRATIC_STATE": 0.0001531436324640273,
+        "NEAREST_STATE": 0.00081262309370752
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 201,
+      "seed": 10401,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 44,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 42,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0015479929180954883,
+        "LINEAR_ARX": 0.0016740748478501135,
+        "QUADRATIC_STATE": 0.0012023654573365512,
+        "NEAREST_STATE": 0.0010103873138707742
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.000490513404395132,
+        "LINEAR_ARX": 0.0002873725279412866,
+        "QUADRATIC_STATE": 0.0003897503256173024,
+        "NEAREST_STATE": 0.0005144242969624702
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 202,
+      "seed": 10401,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 58,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 56,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0011801641420435755,
+        "LINEAR_ARX": 0.0005796306950295968,
+        "QUADRATIC_STATE": 0.0007446544925653669,
+        "NEAREST_STATE": 0.0015120178917860348
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004367142829924567,
+        "LINEAR_ARX": 0.00013753719794625853,
+        "QUADRATIC_STATE": 0.000433916875420353,
+        "NEAREST_STATE": 0.000551981055812957
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 203,
+      "seed": 10401,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 85,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 83,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005348903492204699,
+        "LINEAR_ARX": 0.005972343958230944,
+        "QUADRATIC_STATE": 0.0014673857935587507,
+        "NEAREST_STATE": 0.002086434125748384
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0011166070064644765,
+        "LINEAR_ARX": 0.0008859995409786111,
+        "QUADRATIC_STATE": 0.000391675563764867,
+        "NEAREST_STATE": 0.00041250099638680065
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 204,
+      "seed": 10401,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 101,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 99,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005616563102633332,
+        "LINEAR_ARX": 0.005760550240380068,
+        "QUADRATIC_STATE": 0.001743807837634637,
+        "NEAREST_STATE": 0.002287861150324125
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0010145384642539375,
+        "LINEAR_ARX": 0.0007846589934421332,
+        "QUADRATIC_STATE": 0.00037685028061708575,
+        "NEAREST_STATE": 0.000441079024844479
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 205,
+      "seed": 10402,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 59,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 57,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009579036757431924,
+        "LINEAR_ARX": 0.0008387911377280254,
+        "QUADRATIC_STATE": 0.0007010747037067611,
+        "NEAREST_STATE": 0.0015177947406605596
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004506919037397227,
+        "LINEAR_ARX": 0.0002326293789433237,
+        "QUADRATIC_STATE": 0.00017210064276463596,
+        "NEAREST_STATE": 0.0005873147743521068
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 206,
+      "seed": 10402,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 74,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 72,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009330271363339414,
+        "LINEAR_ARX": 0.0006092886297308711,
+        "QUADRATIC_STATE": 0.0003813768183986016,
+        "NEAREST_STATE": 0.00218704593156278
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004131113944879029,
+        "LINEAR_ARX": 0.00013800892215527777,
+        "QUADRATIC_STATE": 0.00016775237067350536,
+        "NEAREST_STATE": 0.0007129387569624179
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 207,
+      "seed": 10402,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 48,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 46,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012236861247382868,
+        "LINEAR_ARX": 0.0012050176913402598,
+        "QUADRATIC_STATE": 0.000927848028431374,
+        "NEAREST_STATE": 0.0010472427670189422
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.000395764697133461,
+        "LINEAR_ARX": 0.0002175673095080515,
+        "QUADRATIC_STATE": 0.0005901331332402971,
+        "NEAREST_STATE": 0.000523487059819885
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 208,
+      "seed": 10402,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 66,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 64,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009130296621967188,
+        "LINEAR_ARX": 0.00025989116557736036,
+        "QUADRATIC_STATE": 0.0007620080263526963,
+        "NEAREST_STATE": 0.001739090471382225
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.000359373773948773,
+        "LINEAR_ARX": 9.952402620393743e-05,
+        "QUADRATIC_STATE": 0.0005418020279496211,
+        "NEAREST_STATE": 0.0005218645113258607
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 209,
+      "seed": 10402,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 83,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 81,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005435006539805271,
+        "LINEAR_ARX": 0.00459731150835177,
+        "QUADRATIC_STATE": 0.0016274057178704672,
+        "NEAREST_STATE": 0.0013028975516584428
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0010696433075723165,
+        "LINEAR_ARX": 0.0007637261593378757,
+        "QUADRATIC_STATE": 0.000334820478311364,
+        "NEAREST_STATE": 0.00035357136364428396
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 210,
+      "seed": 10402,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 99,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 97,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0053927549435193595,
+        "LINEAR_ARX": 0.004750864308631971,
+        "QUADRATIC_STATE": 0.001376884992739683,
+        "NEAREST_STATE": 0.0016011891276885232
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0009642116707963326,
+        "LINEAR_ARX": 0.0007000656791551595,
+        "QUADRATIC_STATE": 0.00031630127305372504,
+        "NEAREST_STATE": 0.0003721831543649719
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 211,
+      "seed": 10403,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 60,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 58,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0015248723468140706,
+        "LINEAR_ARX": 0.0016014938139640635,
+        "QUADRATIC_STATE": 0.0010164932038867489,
+        "NEAREST_STATE": 0.0023688593408046337
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005074207436843013,
+        "LINEAR_ARX": 0.00036539753101204347,
+        "QUADRATIC_STATE": 0.00026937583553897094,
+        "NEAREST_STATE": 0.0011175888620844298
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 212,
+      "seed": 10403,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 76,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 74,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0013315551929115954,
+        "LINEAR_ARX": 0.001535945210946594,
+        "QUADRATIC_STATE": 0.0006087686242738609,
+        "NEAREST_STATE": 0.0021563366606134303
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004895863890723889,
+        "LINEAR_ARX": 0.00027245528075455996,
+        "QUADRATIC_STATE": 0.0002468877024904383,
+        "NEAREST_STATE": 0.0009648703985180695
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 213,
+      "seed": 10403,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 61,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 59,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0010083533738442637,
+        "LINEAR_ARX": 0.0012797496589380918,
+        "QUADRATIC_STATE": 0.0014238296127085147,
+        "NEAREST_STATE": 0.0030853277416501893
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0003604009895747369,
+        "LINEAR_ARX": 0.00019790348572528406,
+        "QUADRATIC_STATE": 0.0010390641211837086,
+        "NEAREST_STATE": 0.0014030088299942676
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 214,
+      "seed": 10403,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 107,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 105,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0010391517388697535,
+        "LINEAR_ARX": 0.0006877581284686185,
+        "QUADRATIC_STATE": 0.002008068655786409,
+        "NEAREST_STATE": 0.002234960204488646
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00026703838848898484,
+        "LINEAR_ARX": 0.00011566870679571774,
+        "QUADRATIC_STATE": 0.0010134887423490567,
+        "NEAREST_STATE": 0.0012184176472653711
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 215,
+      "seed": 10403,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 79,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 77,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005347971271353962,
+        "LINEAR_ARX": 0.003981894022157411,
+        "QUADRATIC_STATE": 0.001369948536611456,
+        "NEAREST_STATE": 0.0022374415095858064
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0010848511222908753,
+        "LINEAR_ARX": 0.0008187997857714024,
+        "QUADRATIC_STATE": 0.00042645773960169075,
+        "NEAREST_STATE": 0.0005246002957612676
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 216,
+      "seed": 10403,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 95,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 93,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005083562597498599,
+        "LINEAR_ARX": 0.005812834913529758,
+        "QUADRATIC_STATE": 0.0013548666716183613,
+        "NEAREST_STATE": 0.002320048978613305
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0010654197818721549,
+        "LINEAR_ARX": 0.0008374242536134982,
+        "QUADRATIC_STATE": 0.00041231143435834807,
+        "NEAREST_STATE": 0.0005569545590980748
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 217,
+      "seed": 10404,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 68,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 66,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009094484922603126,
+        "LINEAR_ARX": 0.0006752866727843523,
+        "QUADRATIC_STATE": 0.000541263051032945,
+        "NEAREST_STATE": 0.0012596170716590895
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005248951813890525,
+        "LINEAR_ARX": 0.0001885641333484812,
+        "QUADRATIC_STATE": 0.00017760137636604797,
+        "NEAREST_STATE": 0.0005018092412675836
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 218,
+      "seed": 10404,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 86,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 84,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008884948166389683,
+        "LINEAR_ARX": 0.0005004980550120789,
+        "QUADRATIC_STATE": 0.0003825713515449242,
+        "NEAREST_STATE": 0.0018821477434463763
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00047809198367748727,
+        "LINEAR_ARX": 0.00013276909297043902,
+        "QUADRATIC_STATE": 0.00017085088818790742,
+        "NEAREST_STATE": 0.000558146707072226
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 219,
+      "seed": 10404,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 99,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 97,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009010866874241104,
+        "LINEAR_ARX": 0.00104681129900752,
+        "QUADRATIC_STATE": 0.0018111413222697775,
+        "NEAREST_STATE": 0.0019800104800717774
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00030387552217798656,
+        "LINEAR_ARX": 0.00014351412865291153,
+        "QUADRATIC_STATE": 0.0010671736984192437,
+        "NEAREST_STATE": 0.0007476643838690562
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 220,
+      "seed": 10404,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 102,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 100,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009242353167853512,
+        "LINEAR_ARX": 0.0004960006362760308,
+        "QUADRATIC_STATE": 0.001545489218005424,
+        "NEAREST_STATE": 0.00233338684171923
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0003207789429261952,
+        "LINEAR_ARX": 0.00010220519497590264,
+        "QUADRATIC_STATE": 0.0011071030650270704,
+        "NEAREST_STATE": 0.0007337333723785083
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 221,
+      "seed": 10404,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 76,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 74,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0063234011996911085,
+        "LINEAR_ARX": 0.005385497217769337,
+        "QUADRATIC_STATE": 0.001998747415541546,
+        "NEAREST_STATE": 0.00273019101551093
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0012885683435221687,
+        "LINEAR_ARX": 0.0009587480004195786,
+        "QUADRATIC_STATE": 0.0005249943630260779,
+        "NEAREST_STATE": 0.000832147932893061
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 222,
+      "seed": 10404,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 93,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 91,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0060267744133816956,
+        "LINEAR_ARX": 0.006674507039162888,
+        "QUADRATIC_STATE": 0.0013446370035980638,
+        "NEAREST_STATE": 0.003023878755542886
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0011714388682859502,
+        "LINEAR_ARX": 0.0009481824537846427,
+        "QUADRATIC_STATE": 0.0005096035373725327,
+        "NEAREST_STATE": 0.0006835513834987873
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 223,
+      "seed": 10405,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 58,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 56,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008476856647307799,
+        "LINEAR_ARX": 0.0005969352407416283,
+        "QUADRATIC_STATE": 0.0006116370114383333,
+        "NEAREST_STATE": 0.001564647377560908
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004841669707175353,
+        "LINEAR_ARX": 0.00017763259059950365,
+        "QUADRATIC_STATE": 0.00016945139642530734,
+        "NEAREST_STATE": 0.00041361063718794023
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 224,
+      "seed": 10405,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 75,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 73,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008603820597926793,
+        "LINEAR_ARX": 0.0006072791656932929,
+        "QUADRATIC_STATE": 0.0002647524633870601,
+        "NEAREST_STATE": 0.00142602100637649
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00041983447103824357,
+        "LINEAR_ARX": 0.00012809114148737918,
+        "QUADRATIC_STATE": 0.00011730745945304972,
+        "NEAREST_STATE": 0.0004888437045983171
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 225,
+      "seed": 10405,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 41,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 39,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0015618119415344049,
+        "LINEAR_ARX": 0.0016230065689271124,
+        "QUADRATIC_STATE": 0.0006307557023045574,
+        "NEAREST_STATE": 0.0009758513739265037
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00047465850891302666,
+        "LINEAR_ARX": 0.0002960714012931021,
+        "QUADRATIC_STATE": 0.00029222367768360534,
+        "NEAREST_STATE": 0.0004478398061614193
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 226,
+      "seed": 10405,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 56,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 54,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.001108704673269545,
+        "LINEAR_ARX": 0.00026950354365136984,
+        "QUADRATIC_STATE": 0.00044573785685285915,
+        "NEAREST_STATE": 0.0019053477384677314
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0003920815906850687,
+        "LINEAR_ARX": 0.00011263138310369886,
+        "QUADRATIC_STATE": 0.00023970884593331915,
+        "NEAREST_STATE": 0.0004988316306741871
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 227,
+      "seed": 10405,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 75,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 73,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.004273884792748072,
+        "LINEAR_ARX": 0.0038350112634221115,
+        "QUADRATIC_STATE": 0.0019793166577317216,
+        "NEAREST_STATE": 0.0034718609173043664
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0013314428597474511,
+        "LINEAR_ARX": 0.0009294517021612316,
+        "QUADRATIC_STATE": 0.0006584660451268481,
+        "NEAREST_STATE": 0.001104553611338043
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 228,
+      "seed": 10405,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 92,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 90,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.007012470563089755,
+        "LINEAR_ARX": 0.006871324918206198,
+        "QUADRATIC_STATE": 0.0019605346587199275,
+        "NEAREST_STATE": 0.003461903537963968
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001293639927518188,
+        "LINEAR_ARX": 0.000982270566561958,
+        "QUADRATIC_STATE": 0.0004969980612443742,
+        "NEAREST_STATE": 0.0009345229308177079
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 229,
+      "seed": 10406,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 69,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 67,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008792159249670778,
+        "LINEAR_ARX": 0.0006686914072001841,
+        "QUADRATIC_STATE": 0.00037699290833292584,
+        "NEAREST_STATE": 0.0007621264245243815
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.000493080307195242,
+        "LINEAR_ARX": 0.00020026309077857149,
+        "QUADRATIC_STATE": 0.00015741662586312848,
+        "NEAREST_STATE": 0.00042867372566627525
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 230,
+      "seed": 10406,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 83,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 81,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008363693884798837,
+        "LINEAR_ARX": 0.00045565549247237117,
+        "QUADRATIC_STATE": 0.0003621827342016595,
+        "NEAREST_STATE": 0.0017617524707309864
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004558439999162762,
+        "LINEAR_ARX": 0.00013666680432132528,
+        "QUADRATIC_STATE": 0.00014006031411543617,
+        "NEAREST_STATE": 0.0005998640875163259
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 231,
+      "seed": 10406,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 46,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 44,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0016011776930809423,
+        "LINEAR_ARX": 0.0017560605928617146,
+        "QUADRATIC_STATE": 0.0012395127388940825,
+        "NEAREST_STATE": 0.0015696451439271958
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005221990265101424,
+        "LINEAR_ARX": 0.0002920406220603743,
+        "QUADRATIC_STATE": 0.00042820971114446073,
+        "NEAREST_STATE": 0.0005779434466202482
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 232,
+      "seed": 10406,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 63,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 61,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012307895024157656,
+        "LINEAR_ARX": 0.00030517242272042045,
+        "QUADRATIC_STATE": 0.0006943392779204655,
+        "NEAREST_STATE": 0.001674800102984227
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004317924905275296,
+        "LINEAR_ARX": 0.00011719072688394664,
+        "QUADRATIC_STATE": 0.000397121703068959,
+        "NEAREST_STATE": 0.0005922738787244874
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 233,
+      "seed": 10406,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 85,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 83,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005338311777807718,
+        "LINEAR_ARX": 0.005808502786917155,
+        "QUADRATIC_STATE": 0.0012990942804693949,
+        "NEAREST_STATE": 0.0020032481211291293
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0010702238576263685,
+        "LINEAR_ARX": 0.0008446675405817561,
+        "QUADRATIC_STATE": 0.00040044971613393583,
+        "NEAREST_STATE": 0.0004344777521853359
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 234,
+      "seed": 10406,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 100,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 98,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0054687535320769,
+        "LINEAR_ARX": 0.004023410178298114,
+        "QUADRATIC_STATE": 0.0012250981472382658,
+        "NEAREST_STATE": 0.0019510222119535937
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00102681468499025,
+        "LINEAR_ARX": 0.0007551029467816361,
+        "QUADRATIC_STATE": 0.0003550804496103129,
+        "NEAREST_STATE": 0.0004186815272813193
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 235,
+      "seed": 10407,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 52,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 50,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.002000157958719233,
+        "LINEAR_ARX": 0.001868538809951286,
+        "QUADRATIC_STATE": 0.001030344131196269,
+        "NEAREST_STATE": 0.0025366541178469173
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0007546620449005407,
+        "LINEAR_ARX": 0.0006132217740671051,
+        "QUADRATIC_STATE": 0.0003602014893768493,
+        "NEAREST_STATE": 0.0008172515713044778
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 236,
+      "seed": 10407,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 67,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 65,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0017893743577537344,
+        "LINEAR_ARX": 0.0016267119695467288,
+        "QUADRATIC_STATE": 0.0009070999647471357,
+        "NEAREST_STATE": 0.001806366827607294
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005219575775595022,
+        "LINEAR_ARX": 0.00030155098072496466,
+        "QUADRATIC_STATE": 0.00019796248010820407,
+        "NEAREST_STATE": 0.0006933039618170852
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 237,
+      "seed": 10407,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 54,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 52,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008847208738450084,
+        "LINEAR_ARX": 0.0011146654156246735,
+        "QUADRATIC_STATE": 0.0010488645340909887,
+        "NEAREST_STATE": 0.003264663059379793
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0003508464195729176,
+        "LINEAR_ARX": 0.00018030493429310938,
+        "QUADRATIC_STATE": 0.0006577347496715976,
+        "NEAREST_STATE": 0.0014787731486902444
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 238,
+      "seed": 10407,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 71,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 69,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009841796035810553,
+        "LINEAR_ARX": 0.0007291156383747254,
+        "QUADRATIC_STATE": 0.0010646546364549798,
+        "NEAREST_STATE": 0.0025655477538323356
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00031226737398570425,
+        "LINEAR_ARX": 0.0001268609338957228,
+        "QUADRATIC_STATE": 0.0006833807926915994,
+        "NEAREST_STATE": 0.0013846870652809212
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 239,
+      "seed": 10407,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 83,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 81,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.004622655222713578,
+        "LINEAR_ARX": 0.003376524321253358,
+        "QUADRATIC_STATE": 0.0013436468613996708,
+        "NEAREST_STATE": 0.0014750962389502085
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0009330625598822179,
+        "LINEAR_ARX": 0.0006624631089637476,
+        "QUADRATIC_STATE": 0.000371207853844578,
+        "NEAREST_STATE": 0.0004231262556786296
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 240,
+      "seed": 10407,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 99,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 97,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.00564369501348738,
+        "LINEAR_ARX": 0.005464832239007981,
+        "QUADRATIC_STATE": 0.0016492074974789493,
+        "NEAREST_STATE": 0.0018369014733659933
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0009861865513377587,
+        "LINEAR_ARX": 0.0007567466432190761,
+        "QUADRATIC_STATE": 0.00034958406098984323,
+        "NEAREST_STATE": 0.0004356680871214528
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 241,
+      "seed": 10408,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 60,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 58,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.001567815703507303,
+        "LINEAR_ARX": 0.0014528076669836918,
+        "QUADRATIC_STATE": 0.0006121654955114461,
+        "NEAREST_STATE": 0.0018851607586555011
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004926271579806128,
+        "LINEAR_ARX": 0.00036598666386083756,
+        "QUADRATIC_STATE": 0.00021118237282701112,
+        "NEAREST_STATE": 0.0007471415818151896
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 242,
+      "seed": 10408,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 76,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 74,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.001622587100835197,
+        "LINEAR_ARX": 0.001390271263865713,
+        "QUADRATIC_STATE": 0.0008240137955461135,
+        "NEAREST_STATE": 0.002467706417099133
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00046304163446683104,
+        "LINEAR_ARX": 0.00026813063281160807,
+        "QUADRATIC_STATE": 0.00018392057333730937,
+        "NEAREST_STATE": 0.0007444921389461387
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 243,
+      "seed": 10408,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 41,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 39,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0016687769183628726,
+        "LINEAR_ARX": 0.0017894951517257577,
+        "QUADRATIC_STATE": 0.001040053216582384,
+        "NEAREST_STATE": 0.00175733515291385
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005412750483306424,
+        "LINEAR_ARX": 0.00032429715448617486,
+        "QUADRATIC_STATE": 0.0002624293377692939,
+        "NEAREST_STATE": 0.0005018769267320039
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 244,
+      "seed": 10408,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 56,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 54,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012715887114703114,
+        "LINEAR_ARX": 0.00040573648590961123,
+        "QUADRATIC_STATE": 0.00035463234167987907,
+        "NEAREST_STATE": 0.0015440365010740591
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00044150318259652947,
+        "LINEAR_ARX": 0.0001475633815927054,
+        "QUADRATIC_STATE": 0.00018850627209856798,
+        "NEAREST_STATE": 0.0005046237328118995
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 245,
+      "seed": 10408,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 78,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 76,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005535358916349129,
+        "LINEAR_ARX": 0.0037986270085676264,
+        "QUADRATIC_STATE": 0.0019154711778887647,
+        "NEAREST_STATE": 0.0021197150465410916
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001201902532318353,
+        "LINEAR_ARX": 0.0008312666122050553,
+        "QUADRATIC_STATE": 0.0005006832955555538,
+        "NEAREST_STATE": 0.0006111556321195318
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 246,
+      "seed": 10408,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 94,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 92,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.004147948773878845,
+        "LINEAR_ARX": 0.0040513015804924165,
+        "QUADRATIC_STATE": 0.0014961849349812784,
+        "NEAREST_STATE": 0.0020079389238232236
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0009571771458523401,
+        "LINEAR_ARX": 0.0006681432176357171,
+        "QUADRATIC_STATE": 0.00035847705003247036,
+        "NEAREST_STATE": 0.0004834162010685235
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 247,
+      "seed": 10409,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 60,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 58,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0014309128908662795,
+        "LINEAR_ARX": 0.0011871013027531386,
+        "QUADRATIC_STATE": 0.0008547568866682763,
+        "NEAREST_STATE": 0.0014278607038962336
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005267799194589302,
+        "LINEAR_ARX": 0.0003438842366767806,
+        "QUADRATIC_STATE": 0.00021778940613674484,
+        "NEAREST_STATE": 0.0005952253400978382
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 248,
+      "seed": 10409,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 74,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 72,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0014675359946657606,
+        "LINEAR_ARX": 0.001275505936030269,
+        "QUADRATIC_STATE": 0.0006678494122834872,
+        "NEAREST_STATE": 0.0013291761154503841
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004894221402207876,
+        "LINEAR_ARX": 0.00030049072423137815,
+        "QUADRATIC_STATE": 0.00017414698642918686,
+        "NEAREST_STATE": 0.000484235142473487
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 249,
+      "seed": 10409,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 47,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 45,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012431036903564532,
+        "LINEAR_ARX": 0.001380034002671835,
+        "QUADRATIC_STATE": 0.0006534812957735723,
+        "NEAREST_STATE": 0.0016910610123350516
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004261232531967341,
+        "LINEAR_ARX": 0.0002417708240443129,
+        "QUADRATIC_STATE": 0.00027458178273843866,
+        "NEAREST_STATE": 0.00044598655957169404
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 250,
+      "seed": 10409,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 61,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 59,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009173667583826704,
+        "LINEAR_ARX": 0.0003203609343737485,
+        "QUADRATIC_STATE": 0.0004985892501070593,
+        "NEAREST_STATE": 0.0012548593046285833
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0003542223476101319,
+        "LINEAR_ARX": 0.00011091447853212862,
+        "QUADRATIC_STATE": 0.00024012684735554704,
+        "NEAREST_STATE": 0.0004352342801595314
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 251,
+      "seed": 10409,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 76,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 74,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.00478557624750245,
+        "LINEAR_ARX": 0.004486735555746328,
+        "QUADRATIC_STATE": 0.002044677957863705,
+        "NEAREST_STATE": 0.00285646741875489
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0012674077143992823,
+        "LINEAR_ARX": 0.000915053877381346,
+        "QUADRATIC_STATE": 0.0005012263433811402,
+        "NEAREST_STATE": 0.0008074111410838426
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 252,
+      "seed": 10409,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 92,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 90,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.004644850095842652,
+        "LINEAR_ARX": 0.004458789666829437,
+        "QUADRATIC_STATE": 0.0015717061820772118,
+        "NEAREST_STATE": 0.0018842634694521722
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001111858495477759,
+        "LINEAR_ARX": 0.0008559985910507089,
+        "QUADRATIC_STATE": 0.0004560798449785066,
+        "NEAREST_STATE": 0.000590558083661978
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 253,
+      "seed": 10410,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 64,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 62,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0014162010474333049,
+        "LINEAR_ARX": 0.001331007683229165,
+        "QUADRATIC_STATE": 0.0007631214538794881,
+        "NEAREST_STATE": 0.0010457284299279909
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00047499420963819706,
+        "LINEAR_ARX": 0.00027739226487845,
+        "QUADRATIC_STATE": 0.0001802728569017214,
+        "NEAREST_STATE": 0.000532362479870913
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 254,
+      "seed": 10410,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 79,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 77,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012373997991550665,
+        "LINEAR_ARX": 0.0010572620498281093,
+        "QUADRATIC_STATE": 0.0006878232329892479,
+        "NEAREST_STATE": 0.001729231010048367
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00043701669691365323,
+        "LINEAR_ARX": 0.00024740798122510697,
+        "QUADRATIC_STATE": 0.00018424567465761226,
+        "NEAREST_STATE": 0.0005122766550520592
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 255,
+      "seed": 10410,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 53,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 51,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008756799696053405,
+        "LINEAR_ARX": 0.0007319251355840847,
+        "QUADRATIC_STATE": 0.0005698103296533832,
+        "NEAREST_STATE": 0.0011796614842669814
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00033010122156184663,
+        "LINEAR_ARX": 0.00016900258593366104,
+        "QUADRATIC_STATE": 0.00036990341212231293,
+        "NEAREST_STATE": 0.0004654992851805771
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 256,
+      "seed": 10410,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 68,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 66,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008553262962284294,
+        "LINEAR_ARX": 0.0003864092109387613,
+        "QUADRATIC_STATE": 0.0005706632310918764,
+        "NEAREST_STATE": 0.0014597817541545028
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00031912638653337967,
+        "LINEAR_ARX": 0.00010449058289724768,
+        "QUADRATIC_STATE": 0.0003771971523365232,
+        "NEAREST_STATE": 0.00047375841055458025
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 257,
+      "seed": 10410,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 76,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 74,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005467535587109771,
+        "LINEAR_ARX": 0.0039106908627712655,
+        "QUADRATIC_STATE": 0.0021351935314133123,
+        "NEAREST_STATE": 0.004264449341475321
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0014497846061607218,
+        "LINEAR_ARX": 0.0010030089717473053,
+        "QUADRATIC_STATE": 0.0007330565157825389,
+        "NEAREST_STATE": 0.001493957119452369
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 258,
+      "seed": 10410,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 90,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 88,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005322892163293624,
+        "LINEAR_ARX": 0.003947007763076648,
+        "QUADRATIC_STATE": 0.002345124602890762,
+        "NEAREST_STATE": 0.003366432311097612
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0013023002672291617,
+        "LINEAR_ARX": 0.0009319132339454208,
+        "QUADRATIC_STATE": 0.0006740742046258576,
+        "NEAREST_STATE": 0.001133734806862319
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 259,
+      "seed": 10411,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 62,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 60,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008844492181829871,
+        "LINEAR_ARX": 0.0007059042007407554,
+        "QUADRATIC_STATE": 0.0004949100067391655,
+        "NEAREST_STATE": 0.002615389530744555
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004951636585105688,
+        "LINEAR_ARX": 0.00019343430229113627,
+        "QUADRATIC_STATE": 0.00016131370691471555,
+        "NEAREST_STATE": 0.0009789859423829195
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 260,
+      "seed": 10411,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 78,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 76,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009540651362270579,
+        "LINEAR_ARX": 0.00041961695073281955,
+        "QUADRATIC_STATE": 0.00036646619374098785,
+        "NEAREST_STATE": 0.0015524401322294934
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00045524106060238086,
+        "LINEAR_ARX": 0.00012098543235745504,
+        "QUADRATIC_STATE": 0.00014348431456742802,
+        "NEAREST_STATE": 0.0006465571669441333
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 261,
+      "seed": 10411,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 44,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 42,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0016132770259961687,
+        "LINEAR_ARX": 0.0016250726934894312,
+        "QUADRATIC_STATE": 0.0007262685662211652,
+        "NEAREST_STATE": 0.0009503321394673829
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005306721333880514,
+        "LINEAR_ARX": 0.00030023507593628833,
+        "QUADRATIC_STATE": 0.0003615674737590345,
+        "NEAREST_STATE": 0.0003836725343827506
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 262,
+      "seed": 10411,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 60,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 58,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012575364872217396,
+        "LINEAR_ARX": 0.0006422847435220203,
+        "QUADRATIC_STATE": 0.000602803068692656,
+        "NEAREST_STATE": 0.0014853263421220088
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00044629456018617427,
+        "LINEAR_ARX": 0.00014664623612980725,
+        "QUADRATIC_STATE": 0.00038284862220834803,
+        "NEAREST_STATE": 0.00043100529320188653
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 263,
+      "seed": 10411,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 75,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 73,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005454545154971067,
+        "LINEAR_ARX": 0.005494658585034945,
+        "QUADRATIC_STATE": 0.002221546787800904,
+        "NEAREST_STATE": 0.003503786158328014
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0013062794002135641,
+        "LINEAR_ARX": 0.0009612708012080664,
+        "QUADRATIC_STATE": 0.0006342345519586772,
+        "NEAREST_STATE": 0.0010833025470883336
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 264,
+      "seed": 10411,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 91,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 89,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005041108125119919,
+        "LINEAR_ARX": 0.0053540629742510875,
+        "QUADRATIC_STATE": 0.0015653441838683353,
+        "NEAREST_STATE": 0.004729215088392885
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0009555944595646158,
+        "LINEAR_ARX": 0.000720841079910884,
+        "QUADRATIC_STATE": 0.00045265636755987084,
+        "NEAREST_STATE": 0.0007703404113089687
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 265,
+      "seed": 10412,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 62,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 60,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0013657019061689719,
+        "LINEAR_ARX": 0.0014233906469710332,
+        "QUADRATIC_STATE": 0.001092544438594141,
+        "NEAREST_STATE": 0.0027082272649868377
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005583420258546715,
+        "LINEAR_ARX": 0.0003560129463992379,
+        "QUADRATIC_STATE": 0.00028904357870263947,
+        "NEAREST_STATE": 0.001241782216879714
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 266,
+      "seed": 10412,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 78,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 76,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.001753873191366326,
+        "LINEAR_ARX": 0.001909884711057734,
+        "QUADRATIC_STATE": 0.0009304260040433974,
+        "NEAREST_STATE": 0.003012298771392907
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005457979810276677,
+        "LINEAR_ARX": 0.0004002668498374988,
+        "QUADRATIC_STATE": 0.00028645446390044275,
+        "NEAREST_STATE": 0.0011858750713205138
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 267,
+      "seed": 10412,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 44,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 42,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0010594643059347467,
+        "LINEAR_ARX": 0.0013916654363311052,
+        "QUADRATIC_STATE": 0.001141142811364214,
+        "NEAREST_STATE": 0.0021730306775000294
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00039219775974283456,
+        "LINEAR_ARX": 0.0002336009586343627,
+        "QUADRATIC_STATE": 0.0005138696414566917,
+        "NEAREST_STATE": 0.0007426510566621793
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 268,
+      "seed": 10412,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 58,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 56,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012000961634570225,
+        "LINEAR_ARX": 0.0003259351287191721,
+        "QUADRATIC_STATE": 0.0010029444873019522,
+        "NEAREST_STATE": 0.0019938422238632092
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00032659173735906914,
+        "LINEAR_ARX": 0.00010855111497099105,
+        "QUADRATIC_STATE": 0.000610640484326706,
+        "NEAREST_STATE": 0.0007677470685327086
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 269,
+      "seed": 10412,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 79,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 77,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.004852080731500608,
+        "LINEAR_ARX": 0.004222873387304132,
+        "QUADRATIC_STATE": 0.0023899093928722,
+        "NEAREST_STATE": 0.00525879496856476
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0014468550558466029,
+        "LINEAR_ARX": 0.0009829279011015625,
+        "QUADRATIC_STATE": 0.0008374607754896338,
+        "NEAREST_STATE": 0.0017616764249189806
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 270,
+      "seed": 10412,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 95,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 93,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005234115611182779,
+        "LINEAR_ARX": 0.0051949483357648304,
+        "QUADRATIC_STATE": 0.004524949106909137,
+        "NEAREST_STATE": 0.006870381559878863
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0014963532493601002,
+        "LINEAR_ARX": 0.001043233755391958,
+        "QUADRATIC_STATE": 0.0011089215726378186,
+        "NEAREST_STATE": 0.0021194021021319824
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 271,
+      "seed": 10413,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 69,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 67,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0008545390368140185,
+        "LINEAR_ARX": 0.0005109249286330102,
+        "QUADRATIC_STATE": 0.0004388500771704386,
+        "NEAREST_STATE": 0.0009809155155933716
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005332781141764122,
+        "LINEAR_ARX": 0.0001521652369795594,
+        "QUADRATIC_STATE": 0.0001854182556759152,
+        "NEAREST_STATE": 0.000471783937985701
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 272,
+      "seed": 10413,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 85,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 83,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.000980395786038322,
+        "LINEAR_ARX": 0.0004060430691573847,
+        "QUADRATIC_STATE": 0.00033397110738043936,
+        "NEAREST_STATE": 0.0018762373722065544
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00047786876613201086,
+        "LINEAR_ARX": 0.00012721466497163982,
+        "QUADRATIC_STATE": 0.00015261606375458628,
+        "NEAREST_STATE": 0.000498919656310391
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 273,
+      "seed": 10413,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 49,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 47,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0012789470365996715,
+        "LINEAR_ARX": 0.0013266405547891931,
+        "QUADRATIC_STATE": 0.0009974083432098793,
+        "NEAREST_STATE": 0.0015996538981009221
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00044254221716832237,
+        "LINEAR_ARX": 0.00023374484739845347,
+        "QUADRATIC_STATE": 0.0004860816041190351,
+        "NEAREST_STATE": 0.0007655220630736621
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 274,
+      "seed": 10413,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 66,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 64,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0009834798484297637,
+        "LINEAR_ARX": 0.00023610932143019406,
+        "QUADRATIC_STATE": 0.0007310560959241004,
+        "NEAREST_STATE": 0.001825510072734559
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.000363313650383806,
+        "LINEAR_ARX": 8.038205553102408e-05,
+        "QUADRATIC_STATE": 0.000527141639177272,
+        "NEAREST_STATE": 0.0006876553799912007
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 275,
+      "seed": 10413,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 86,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 84,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.007012881014046237,
+        "LINEAR_ARX": 0.006362545634798936,
+        "QUADRATIC_STATE": 0.004785466757196046,
+        "NEAREST_STATE": 0.006664579256562677
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001615990843028457,
+        "LINEAR_ARX": 0.0010038330158476292,
+        "QUADRATIC_STATE": 0.0010943193171275112,
+        "NEAREST_STATE": 0.0010861478429228205
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 276,
+      "seed": 10413,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 100,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 98,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005844762601633561,
+        "LINEAR_ARX": 0.0056316895422651204,
+        "QUADRATIC_STATE": 0.0033409295361777874,
+        "NEAREST_STATE": 0.005760775131219165
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001408028162664148,
+        "LINEAR_ARX": 0.0008221484071484573,
+        "QUADRATIC_STATE": 0.0008885056650645827,
+        "NEAREST_STATE": 0.0010657597138634311
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 277,
+      "seed": 10414,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 66,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 64,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0014780547151797417,
+        "LINEAR_ARX": 0.0012127484090231413,
+        "QUADRATIC_STATE": 0.0005966620991013157,
+        "NEAREST_STATE": 0.002456669355184982
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005107403574324435,
+        "LINEAR_ARX": 0.00026495832042275184,
+        "QUADRATIC_STATE": 0.00017978054920996892,
+        "NEAREST_STATE": 0.000735043659091743
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 278,
+      "seed": 10414,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 81,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 79,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0013769469791686108,
+        "LINEAR_ARX": 0.001142102108822708,
+        "QUADRATIC_STATE": 0.0008066758064429196,
+        "NEAREST_STATE": 0.0024191992906483764
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0004886650250569757,
+        "LINEAR_ARX": 0.00025313974105899205,
+        "QUADRATIC_STATE": 0.00016110697391967312,
+        "NEAREST_STATE": 0.0007668572844105998
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 279,
+      "seed": 10414,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 55,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 53,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.000977921391594098,
+        "LINEAR_ARX": 0.0010301498334850199,
+        "QUADRATIC_STATE": 0.0007857377413407561,
+        "NEAREST_STATE": 0.0021869557528332744
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00037820966868519344,
+        "LINEAR_ARX": 0.00018803264638898946,
+        "QUADRATIC_STATE": 0.0005177109623596083,
+        "NEAREST_STATE": 0.0007225075851290835
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 280,
+      "seed": 10414,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 67,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 65,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0010534147357514404,
+        "LINEAR_ARX": 0.00041390745023548673,
+        "QUADRATIC_STATE": 0.0006317441679206682,
+        "NEAREST_STATE": 0.0016512937946223578
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00034876112697341947,
+        "LINEAR_ARX": 0.00010709384505675493,
+        "QUADRATIC_STATE": 0.00040521426798029284,
+        "NEAREST_STATE": 0.0006278731864470463
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 281,
+      "seed": 10414,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 82,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 80,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.005370189623723832,
+        "LINEAR_ARX": 0.006232266749834618,
+        "QUADRATIC_STATE": 0.0020974703731295643,
+        "NEAREST_STATE": 0.001305972651169703
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0011234057963953883,
+        "LINEAR_ARX": 0.0009077112746906848,
+        "QUADRATIC_STATE": 0.0004332282818818852,
+        "NEAREST_STATE": 0.000321359643620537
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 282,
+      "seed": 10414,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 100,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 98,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0064057406927807755,
+        "LINEAR_ARX": 0.006536993162924359,
+        "QUADRATIC_STATE": 0.0018967546445497734,
+        "NEAREST_STATE": 0.002119979347124757
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.001098180836083824,
+        "LINEAR_ARX": 0.000897250890203029,
+        "QUADRATIC_STATE": 0.0004179863565196424,
+        "NEAREST_STATE": 0.0005042041283004604
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 283,
+      "seed": 10415,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 63,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 61,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.000819572581211233,
+        "LINEAR_ARX": 0.0005529561750504484,
+        "QUADRATIC_STATE": 0.0004652116887191582,
+        "NEAREST_STATE": 0.0009967573121947978
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00046580464900963114,
+        "LINEAR_ARX": 0.00016489732368930567,
+        "QUADRATIC_STATE": 0.00014299462326146394,
+        "NEAREST_STATE": 0.000509176533019148
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 284,
+      "seed": 10415,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 78,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 76,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0010909537942417813,
+        "LINEAR_ARX": 0.0005098445119476897,
+        "QUADRATIC_STATE": 0.00024197887960438922,
+        "NEAREST_STATE": 0.00207110263055712
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00043042232513310926,
+        "LINEAR_ARX": 0.0001315556763414671,
+        "QUADRATIC_STATE": 0.00012685520721330843,
+        "NEAREST_STATE": 0.0006212534676339159
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 285,
+      "seed": 10415,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 39,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 37,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0014981450425417659,
+        "LINEAR_ARX": 0.0015570475928573012,
+        "QUADRATIC_STATE": 0.0007256276028317114,
+        "NEAREST_STATE": 0.0015479692737207233
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0005401909446196477,
+        "LINEAR_ARX": 0.0003155234119670245,
+        "QUADRATIC_STATE": 0.0005360402421222659,
+        "NEAREST_STATE": 0.0007911590292647558
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 286,
+      "seed": 10415,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 56,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 54,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.00126845984774592,
+        "LINEAR_ARX": 0.00029787335450839306,
+        "QUADRATIC_STATE": 0.0007878379078021314,
+        "NEAREST_STATE": 0.0016203543148435556
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.00041131977949088156,
+        "LINEAR_ARX": 0.00011887335093595473,
+        "QUADRATIC_STATE": 0.0005350918670354749,
+        "NEAREST_STATE": 0.0006510186594935417
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 287,
+      "seed": 10415,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "success": true,
+      "total_steps": 84,
+      "probe_steps": 0,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 82,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.009128872038527556,
+        "LINEAR_ARX": 0.00719419441813669,
+        "QUADRATIC_STATE": 0.0029799506284209033,
+        "NEAREST_STATE": 0.004256032222708969
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0018822013448332505,
+        "LINEAR_ARX": 0.001357630077170815,
+        "QUADRATIC_STATE": 0.0009473113502750482,
+        "NEAREST_STATE": 0.0009952199440915821
+      }
+    },
+    {
+      "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+      "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+      "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+      "stage": "QUALIFICATION",
+      "episode_index": 288,
+      "seed": 10415,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "success": true,
+      "total_steps": 98,
+      "probe_steps": 16,
+      "environment_resets": 1,
+      "actuator_resets": 1,
+      "prediction_steps": 96,
+      "maximum_errors": {
+        "LEGACY_ARX": 0.0073268590520309835,
+        "LINEAR_ARX": 0.005647624134390054,
+        "QUADRATIC_STATE": 0.002689616930925217,
+        "NEAREST_STATE": 0.004533182983967499
+      },
+      "rmse_inf": {
+        "LEGACY_ARX": 0.0016427490323511764,
+        "LINEAR_ARX": 0.0011745331147895843,
+        "QUADRATIC_STATE": 0.0008270394433110401,
+        "NEAREST_STATE": 0.0011683792553092806
+      }
+    }
+  ],
+  "new_physical_steps": 0,
+  "new_api_calls": 0,
+  "model_or_threshold_refits": 0
+}

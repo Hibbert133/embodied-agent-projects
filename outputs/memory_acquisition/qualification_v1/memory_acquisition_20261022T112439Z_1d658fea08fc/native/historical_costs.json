@@ -1,0 +1,62 @@
+{
+  "classification": "PRIOR_RESEARCH_AND_PARAMETER_SELECTION_FEES_NOT_NEW_INTERACTIONS",
+  "source": "outputs/task_passive/development_v1/task_passive_20261022T032948Z_67fefc4da922/result_delivery/costs_and_provenance.json",
+  "source_sha256": "d0e5caa2cc63f31ba817ffe38c9869376b7900f163eaeb1871b0bebf960fbfb8",
+  "prior_RAW_PI_parameter_selection_DEV": {
+    "cohort": "DEV",
+    "executions": 720,
+    "control_steps": 90626,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 36720,
+        "simulation_attempts": 3762626,
+        "simulation_frames_attempted": 18813130,
+        "simulation_completed": 3762626,
+        "simulation_frames_completed": 18813130,
+        "reset_completed": 36720
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 36000,
+          "simulation_attempts": 3600000,
+          "simulation_frames_attempted": 18000000,
+          "simulation_completed": 3600000,
+          "simulation_frames_completed": 18000000,
+          "reset_completed": 36000
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 720,
+          "simulation_attempts": 72000,
+          "simulation_frames_attempted": 360000,
+          "simulation_completed": 72000,
+          "simulation_frames_completed": 360000,
+          "reset_completed": 720
+        },
+        "CONTROL": {
+          "simulation_attempts": 90626,
+          "simulation_frames_attempted": 453130,
+          "simulation_completed": 90626,
+          "simulation_frames_completed": 453130
+        }
+      }
+    },
+    "online_c4_c8_fit_attempts": 1080,
+    "independent_audit_c4_c8_refits": 1080,
+    "collection_wall_ns": 3567177151000,
+    "audit_wall_ns": 458696343000,
+    "summary_sha256": "b0f7c6ca0b6d36518147061fe723112742ba00032e8a9d1ea5d25e24f251da27",
+    "completion_sha256": "ed707bc109efec7e5d089bd2b05a5160ff2b6f879af2b839d444acc85df3495c",
+    "audit_sha256": "f1f0819f459a7453eefbfbcb7ea333eceb41577e577f14d954e4a934d2a1642f"
+  },
+  "prior_whole_PI_study_including_that_DEV": {
+    "executions": 1188,
+    "control_steps": 153045,
+    "all_resets": 60588,
+    "physical_frames": 31059225
+  },
+  "prior_nominal_C8_required_for_current_RAW_only_run": null,
+  "prior_DEV_source_control_steps_amortized_over_54": 1678.2592592592594,
+  "do_not_add_overlapping_prior_DEV_and_whole_study_twice": true,
+  "prior_study_failure_unchanged": true,
+  "new_fits_from_reading_cost_receipt": 0
+}

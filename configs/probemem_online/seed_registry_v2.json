@@ -1,0 +1,12 @@
+{
+  "schema_version": 2,
+  "registry_id": "probemem_online_seed_registry_v2",
+  "inherits": "configs/probemem_online/seed_registry_v1.json",
+  "historical_partitions_immutable": true,
+  "new_partitions": {
+    "selective_override_development": [4500, 4599],
+    "selective_override_future_reserved": [4600, 4699]
+  },
+  "blocked_historical": [[3100, 3199], [3950, 3999]],
+  "notes": "Seeds 4500-4599 were future-reserved in v1 and are assigned only by the separately registered selective-override development protocol. No execution is authorized by this registry file alone."
+}

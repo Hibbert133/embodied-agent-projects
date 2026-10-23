@@ -1,0 +1,63 @@
+{
+  "experiment_run_id": "cold_start_evidence_20261015T170124Z_c5b76fb5ddb6",
+  "manifest_id": "efd4ecacfbbcdb36cbe8c2399d45a5d6ee2154aa263d0bb49b040c2448521715",
+  "source_git_commit": "c5b76fb5ddb6602a7f632aa6193a025790e52df3",
+  "training_steps": 3072,
+  "qualification_steps": 768,
+  "training_controlled_resets": 384,
+  "qualification_controlled_resets": 96,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 24480,
+      "simulation_attempts": 2451840,
+      "simulation_frames_attempted": 12259200,
+      "simulation_completed": 2451840,
+      "simulation_frames_completed": 12259200,
+      "reset_completed": 24480
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 24000,
+        "simulation_attempts": 2400000,
+        "simulation_frames_attempted": 12000000,
+        "simulation_completed": 2400000,
+        "simulation_frames_completed": 12000000,
+        "reset_completed": 24000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 480,
+        "simulation_attempts": 48000,
+        "simulation_frames_attempted": 240000,
+        "simulation_completed": 48000,
+        "simulation_frames_completed": 240000,
+        "reset_completed": 480
+      },
+      "CONTROL": {
+        "simulation_attempts": 3840,
+        "simulation_frames_attempted": 19200,
+        "simulation_completed": 3840,
+        "simulation_frames_completed": 19200
+      }
+    }
+  },
+  "new_mean_regressions": 27,
+  "new_residual_covariances": 3,
+  "qualification_inverse_fits": 384,
+  "qualification_optimizer_nfev": 441,
+  "old_arx_source_steps": 21010,
+  "old_arx_source_controlled_resets": 288,
+  "old_arx_source_factory_lifecycle_verified": false,
+  "upstream_historical_legacy_comparator_steps": 2304,
+  "upstream_historical_legacy_comparator_resets": 144,
+  "new_task_policy_executions": 0,
+  "new_api_calls": 0,
+  "new_memory_writes": 0,
+  "audit_refits_extra_environment_steps": 0,
+  "audit_attempts": 2,
+  "audit_training_mean_refits": 54,
+  "audit_inverse_refits": 768,
+  "note": "Four estimators share each actual prefix. Audit repeats training/point numerics, not physical collection. Old source fees apply only to OLD_ARX8.",
+  "new_api_input_tokens": 0,
+  "new_api_output_tokens": 0,
+  "new_api_latency_seconds": 0
+}

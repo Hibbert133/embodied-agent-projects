@@ -1,0 +1,45 @@
+{
+  "integrity": "ORIGINAL_READER_FAILED_RETAINED",
+  "failure": {
+    "type": "ValueError",
+    "message": "no-op entire physical/control/policy trace differs",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\memory_reset\\capture_original_native_audit_failure_v1.py\", line 23, in <module>\n    with readonly_guard(guard),patch.object(core,'replay',side_effect=counted):original.compute(manifest,'SOFTWARE_NATIVE')\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\memory_reset_streaming_audit_v1.py\", line 65, in compute\n    same(left[k],right[k],'no-op entire physical/control/policy trace differs')\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_action_audit_v1.py\", line 26, in same\n    io.require(io.digest(normalize(a))==io.digest(normalize(b)),message)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 40, in require\n    if not ok:raise ValueError(message)\nValueError: no-op entire physical/control/policy trace differs\n"
+  },
+  "evidence": {
+    "logical_step": 499,
+    "original_terminal_wall_durations": [
+      8.353162,
+      7.022529
+    ],
+    "all_other_info_equal": true,
+    "physical_fields_already_compared_equal": true,
+    "after_terminated": false,
+    "after_truncated": true
+  },
+  "original_reader_sha256": "9d8f74f4e3a65b506cc5474d0aa83ed4403ded165391c681dbc658632eb1fb7c",
+  "manifest_id": "9bde4740423055164ccced317633ed953a726046eeb2e02fc28f9e1a044a3c3c",
+  "completed_replays": 2,
+  "completed_replay_costs": {
+    "independent_policy_queries": 1000
+  },
+  "guard": {
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "forbidden_fits": 0,
+      "ridge_linear_systems": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_ridge_budget": 0,
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 7027783400,
+  "original_native_contract_not_evaluated": true,
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0
+}

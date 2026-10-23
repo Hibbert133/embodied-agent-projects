@@ -1,0 +1,16 @@
+{
+  "protocol_id": "response_calibration_development_v1",
+  "training_seeds": [8900, 8901, 8902, 8903, 8904, 8905, 8906, 8907],
+  "qualification_seeds": [8908, 8909, 8910, 8911, 8912, 8913, 8914, 8915],
+  "reserved_seeds": [8916, 9099],
+  "training_levels": [-0.2, 0.0, 0.2],
+  "qualification_levels": [-0.15, 0.0, 0.15],
+  "noise_std": 0.05,
+  "steps_per_trial": 16,
+  "maximum_physical_steps": 2304,
+  "maximum_mean_offset_error": 0.05,
+  "maximum_90th_percentile_error": 0.10,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "output_root": "outputs/response_calibration/development_v1"
+}

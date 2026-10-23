@@ -1,0 +1,16 @@
+{
+  "protocol": "probemem_online_mixed_regime_tuning_v1",
+  "status": "DEVELOPMENT_TUNING_ONLY",
+  "seed_range": [4200, 4224],
+  "regimes": [
+    {"regime_id": "A_bias_low_noise", "bias": [0.145, 0.0, 0.0, 0.0], "noise_std": 0.05},
+    {"regime_id": "B_zero_mean_noise", "bias": [0.0, 0.0, 0.0, 0.0], "noise_std": 0.60},
+    {"regime_id": "C_bias_dominant_mixed", "bias": [0.12, 0.0, 0.0, 0.0], "noise_std": 0.15},
+    {"regime_id": "D_noise_dominant_mixed", "bias": [0.04, 0.0, 0.0, 0.0], "noise_std": 0.45}
+  ],
+  "registered_probe": {"repeats": 4, "magnitude": 0.2, "steps_per_direction": 4, "maximum_steps": 64},
+  "budget": {"initial_max_steps": 500, "probe_max_steps": 64, "verification_max_steps_per_candidate": 500, "evaluator_max_steps_per_case": 1564},
+  "random_namespaces": {"initial_perturbation": 19301, "registered_probe": 19302, "paired_verification": 19303},
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "prohibitions": {"call_llm": true, "write_operational_memory": true, "claim_online_benefit": true, "run_gate_c": true, "run_validation": true, "run_heldout": true}
+}

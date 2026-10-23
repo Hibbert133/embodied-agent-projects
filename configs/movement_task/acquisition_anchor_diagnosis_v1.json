@@ -1,0 +1,38 @@
+{
+  "protocol": "POST_HOC_ACQUISITION_ANCHOR_DIAGNOSIS_V1",
+  "source_result_commit": "49fc002fa41cb0f2e4cb80e3e2f2bf45d283d74e",
+  "source_executions": 54,
+  "source_steps": 8836,
+  "assigned_move_cases": 18,
+  "source_task_failures": 8,
+  "step_bins": [
+    [
+      1,
+      8
+    ],
+    [
+      9,
+      16
+    ],
+    [
+      17,
+      32
+    ],
+    [
+      33,
+      64
+    ]
+  ],
+  "late_actual_relocation_steps": 8,
+  "required_strata": "All three tasks, both contexts, all three boundary groups and all assigned actions",
+  "aggregation": "Within-trajectory first; whole group means, no timestep-as-independent inference",
+  "command_balance": "Evaluator-only e=-M^-1*b/8 for identity correction, zero deadzone, zero measured motion, unclipped input; not physical equilibrium",
+  "new_environment_steps": 0,
+  "new_resets": 0,
+  "new_physical_frames": 0,
+  "new_model_fits": 0,
+  "new_online_LLM_API_calls": 0,
+  "threshold_or_control_tuning": false,
+  "new_task_seed_allocation": null,
+  "publication_goal_complete": false
+}

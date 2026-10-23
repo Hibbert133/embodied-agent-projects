@@ -1,0 +1,105 @@
+{
+  "status": "PASSED_FOR_FREEZE",
+  "created_utc": "2026-10-19T09:34:22.844870+00:00",
+  "base_commit": "10c583177ab4f185b1e9e03ea1468c4028839b31",
+  "root_tests_passed": 1146,
+  "checks": [
+    {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 245748182400,
+      "output_sha256": "9b99ee9bbf60adff561950064ac84a12472d5bdfdfdcfaa8908bcc59b78be4c4",
+      "created_utc": "2026-10-19T09:32:19.533385+00:00",
+      "source_sha256": "fe21b14065be4cdc030f2fcfeac7b0c2d5c51e85e1c8ae140e783907b493b787",
+      "unittest_cli_via_runpy": true,
+      "delayed_fixture_costs_saved": true
+    },
+    {
+      "check": "compileall",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests",
+        "docs/prototypes/delayed_intervention_v1"
+      ],
+      "returncode": 0,
+      "wall_ns": 1067156600,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "created_utc": "2026-10-19T09:28:14.839276+00:00",
+      "source_sha256": "fe21b14065be4cdc030f2fcfeac7b0c2d5c51e85e1c8ae140e783907b493b787",
+      "unittest_cli_via_runpy": false,
+      "delayed_fixture_costs_saved": false
+    },
+    {
+      "check": "pip_check",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 891576100,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "created_utc": "2026-10-19T09:28:14.661966+00:00",
+      "source_sha256": "fe21b14065be4cdc030f2fcfeac7b0c2d5c51e85e1c8ae140e783907b493b787",
+      "unittest_cli_via_runpy": false,
+      "delayed_fixture_costs_saved": false
+    },
+    {
+      "check": "tracked_secret_scan",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 55073542600,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "created_utc": "2026-10-19T09:33:35.646832+00:00",
+      "source_sha256": "fe21b14065be4cdc030f2fcfeac7b0c2d5c51e85e1c8ae140e783907b493b787",
+      "unittest_cli_via_runpy": false,
+      "delayed_fixture_costs_saved": false
+    }
+  ],
+  "new_readonly_tests": 9,
+  "new_test_policy_queries": 2218,
+  "new_test_fit_calls": 58,
+  "new_test_optimizer_nfev": 58,
+  "new_test_environment_steps": 0,
+  "reported_previous_fixture_native_frames_in_full_suite": 1154495,
+  "physical_cost_scope": "Only the fixture modules captured in unittest_native_costs.json, not all historical repository tests.",
+  "new_scientific_population_started": false,
+  "new_api_calls": 0,
+  "registered_units": 216,
+  "registered_executions": 648,
+  "registered_task_seeds": [
+    21800,
+    22015
+  ],
+  "reserved_task_seeds": [
+    22016,
+    22399
+  ],
+  "new_source_sha256": {
+    "src/analysis/delayed_switch_effects_v1.py": "b4d0a91f949e82a494f8ad6df578de226b60ba2340657e6afe6c72494e97a1b7",
+    "scripts/run_delayed_switch_effects_v1.py": "e8f58bbbe78b67a5fc4a6defbe839372e61d94b1f820f42f25a7f24cbe0bf387",
+    "scripts/audit_delayed_switch_effects_v1.py": "d6b951f1c95e4270ddddc3e4fe7de94ad56ca300ac4646b2089edcc4345ae740",
+    "tests/test_delayed_switch_effects_v1.py": "d6aec49c836ec7b8b5ace2c066a789aa86ccc3a6b784c6b733e9fa6af90f8e40",
+    "docs/protocols/delayed_switch_effects_development_v1.md": "d7e55f5f1ac0dd0f33930c6038b734017a5c9ac70c627abdfb4be707f3a94460",
+    "configs/delayed_switch_effects/development_v1.json": "d3d79a507858618d4db55e61d72f6e88d971ba828cfe48b86c0f99beb238686d"
+  }
+}

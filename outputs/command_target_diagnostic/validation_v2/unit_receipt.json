@@ -1,0 +1,40 @@
+{
+  "integrity": "PASSED",
+  "tests": 18,
+  "stdout": "test_explicit_reset_prior_and_limits (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_float64_scale_mutant_is_detected (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_future_entry_and_fabricated_history_rejected (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_grouped_source_journal_rejects_duplicates_and_omissions (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_independent_audit_with_main_disabled_and_tamper (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_installed_array_method_exact_conformance (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_legacy_labels_preserved_without_semantic_remapping (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_malformed_actions_and_exhausted_budget (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_noise_cursor_shift_rejected (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_noise_transform_vector_decomposition_with_clipping (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_per_step_workspace_clip_is_not_clip_at_end (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_private_future_and_unearned_qualification_rejected (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_saved_native_case_and_original_population (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_saved_plan_changes_only_public_accumulator (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_short_window_and_movement_stage_bins (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_trajectory_then_group_weighting_no_time_or_move_duplication (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_zero_length_and_early_success_keep_null_bins (tests.test_command_target_v1.CommandTargetTests) ... ok\ntest_zero_noise_mapping_not_inverse_or_early_clip (tests.test_command_target_v1.CommandTargetTests) ... ok\n\n----------------------------------------------------------------------\nRan 18 tests in 0.241s\n\nOK\n",
+  "guard": {
+    "integrity": "PASSED",
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "fits": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/probe/nominal_command_target_v1.py": "1911b536b7d8af382a70c0207333026883b77f5ed2006607ec5f9644def24220",
+    "src/analysis/command_target_sources_v1.py": "5ccad0705e6bbba23e4ff70b222fab63d5703d0746150b6fc9882749d6dd2ca3",
+    "src/analysis/command_target_diagnostic_v1.py": "13d054f0ceef7bb2801bdfbe9c5c43b762630462f02800099d192d0444e31da6",
+    "src/analysis/command_target_audit_v1.py": "76c1f4e722e8fbceb0e1f1df1e5d9978604c2ec9fe2fb776dc36cf7196a8e547",
+    "scripts/analyze_command_target_v1.py": "07e40c175464f5cf94f835ff6ce5ab56250dde512e03fc3784ef2420914aee52",
+    "scripts/audit_command_target_v1.py": "9995de7a1c1d76c9e5f8a56f2f02b8cd422580b260b95c2bbabbe590757c097f",
+    "scripts/report_command_target_v1.py": "832471a296a453f28ca4b3198ccaaf540fbbe667938cdd6a65e4e9e683a23540",
+    "tests/test_command_target_v1.py": "b939a0c19f629487305c4ee862d5fb58b925966ee623ecce05546a276c7b8f6d",
+    "configs/movement_task/command_target_diagnostic_reader_v2.json": "b00a9d2e3f80f6c14fa784df76c9e36ae7befc103c41abcad7ac4715e512f9ab",
+    "docs/protocols/command_target_diagnostic_reader_repair_v2_zh.md": "38d7b23cd5605340d5ed7a14181492d4306d7b8c3ee5ec084970e622910ba06c",
+    "outputs/command_target_diagnostic/validation_v2/validate_freeze_v2.py": "2c985ceca44f5e026660a04994a0ec63084e7fdd3ebe4120fab2feae2e1ad5dd",
+    "src/analysis/response_qualification_io_v1.py": "035a31658a2420286acfa47b01365dc623f820eab6d57badc3e54da44ba06e17",
+    "src/analysis/short_probe_journal_audit_v1.py": "bd7fa85e5b4aeb5d868ed027890b1a589ebb0741aa57af9fd5a57a215a07b1ae",
+    "scripts/analyze_acquisition_support_v1.py": "a952ad99444a6c8a7037ca341915f7c60ff134ebf0bc88586437d28e985c7f38",
+    "src/analysis/paired_probe_host_v1.py": "8149aafa0430fca5e4442e23a862abadd6bb984d97254bd3a04abd9bb467afc1",
+    "docs/protocols/command_target_diagnostic_v1_zh.md": "ff1ce1ac72ebc519da0bab59bdfb46f418acb7fd16f5beccdb5a48c160b0d764",
+    "configs/movement_task/command_target_diagnostic_v1.json": "5eb82b969e79a1a5f354f45ceeed3f6b93c7116ed68a8657c47fc6943d7f875b"
+  },
+  "wall_ns": 439428900
+}

@@ -1,0 +1,768 @@
+{
+  "experiment_run_id": "early_evidence_20261015T015710Z_a9ec09feaf24",
+  "manifest_id": "35439398e20fc761b51355c6b9833aad899c1dff4aa9fd4d27a778a46ddbb414",
+  "source_git_commit": "a9ec09feaf2499420a17015f3aed379d14199de0",
+  "integrity": "PASSED",
+  "status": "COMPLETED_TARGET_REPEAT_FAILED",
+  "episodes": 768,
+  "controlled_steps": 97824,
+  "controlled_resets": 768,
+  "statistics": {
+    "methods": {
+      "POINT8": {
+        "cases": 96,
+        "successes": 86,
+        "stops": 5,
+        "total_steps": 9782,
+        "mean_steps": 101.89583333333333,
+        "mean_deadline_loss": 127.52083333333333,
+        "mean_probe_steps": 8.0,
+        "point_fit_failures": 5,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 320.75
+      },
+      "POINT16_CYCLE": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "total_steps": 9842,
+        "mean_steps": 102.52083333333333,
+        "mean_deadline_loss": 102.52083333333333,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 321.375
+      },
+      "POINT16_WIDE": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "total_steps": 10145,
+        "mean_steps": 105.67708333333333,
+        "mean_deadline_loss": 105.67708333333333,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 324.53125
+      },
+      "GAUSS8": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "total_steps": 9373,
+        "mean_steps": 97.63541666666667,
+        "mean_deadline_loss": 97.63541666666667,
+        "mean_probe_steps": 8.0,
+        "point_fit_failures": 5,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 316.4895833333333
+      },
+      "GAUSS16_CYCLE": {
+        "cases": 96,
+        "successes": 93,
+        "stops": 0,
+        "total_steps": 9648,
+        "mean_steps": 100.5,
+        "mean_deadline_loss": 100.5,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 319.3541666666667
+      },
+      "IVR_GLOBAL16": {
+        "cases": 96,
+        "successes": 93,
+        "stops": 0,
+        "total_steps": 9648,
+        "mean_steps": 100.5,
+        "mean_deadline_loss": 100.5,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 5,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 319.3541666666667
+      },
+      "IVR_TASK16": {
+        "cases": 96,
+        "successes": 95,
+        "stops": 0,
+        "total_steps": 8888,
+        "mean_steps": 92.58333333333333,
+        "mean_deadline_loss": 92.58333333333333,
+        "mean_probe_steps": 16.0,
+        "point_fit_failures": 9,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 311.4375
+      },
+      "NO_PROBE": {
+        "cases": 96,
+        "successes": 44,
+        "stops": 0,
+        "total_steps": 30498,
+        "mean_steps": 317.6875,
+        "mean_deadline_loss": 317.6875,
+        "mean_probe_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 317.6875
+      }
+    },
+    "primary_contexts": [
+      {
+        "stream": 0,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 0,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 0,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 1,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          0,
+          -1,
+          -1,
+          0
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 2,
+        "leave_one_out_correct": 2,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 2
+      },
+      {
+        "stream": 1,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 1,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 2,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          0,
+          -1,
+          1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 1,
+        "leave_one_out_correct": 0,
+        "leave_one_out_abstained": 2,
+        "zero_ties": 1
+      },
+      {
+        "stream": 2,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 2,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 3,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 3,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 1
+      },
+      {
+        "stream": 3,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          1,
+          1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 0,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 3,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 4,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 4,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 4,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          1,
+          1,
+          1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 5,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          0,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 3,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 1
+      },
+      {
+        "stream": 5,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 5,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          0,
+          0,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 2,
+        "leave_one_out_correct": 2,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 2
+      },
+      {
+        "stream": 6,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 6,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          1,
+          0
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 1,
+        "leave_one_out_correct": 0,
+        "leave_one_out_abstained": 2,
+        "zero_ties": 1
+      },
+      {
+        "stream": 6,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 7,
+        "task": "push-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 7,
+        "task": "reach-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          -1,
+          -1,
+          -1,
+          -1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": false,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 4,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      },
+      {
+        "stream": 7,
+        "task": "door-open-v3",
+        "complete": true,
+        "reasons": [
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION",
+          "MATCHED_CONTINUATION"
+        ],
+        "signs": [
+          1,
+          -1,
+          1,
+          1
+        ],
+        "has_non_tie": true,
+        "sign_reversal": true,
+        "leave_one_out_checked": 4,
+        "leave_one_out_correct": 3,
+        "leave_one_out_abstained": 0,
+        "zero_ties": 0
+      }
+    ],
+    "repeat_gate": {
+      "contexts": 24,
+      "fully_matched_contexts": 24,
+      "non_tie_contexts": 24,
+      "sign_reversal_contexts": 8,
+      "sign_reversal_fraction": 0.3333333333333333,
+      "leave_one_out_checked": 84,
+      "leave_one_out_correct": 73,
+      "leave_one_out_abstained": 4,
+      "leave_one_out_agreement": 0.8690476190476191,
+      "leave_one_out_coverage": 0.9545454545454546,
+      "passed": false
+    }
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 39168,
+      "simulation_attempts": 4014624,
+      "simulation_frames_attempted": 20073120,
+      "simulation_completed": 4014624,
+      "simulation_frames_completed": 20073120,
+      "reset_completed": 39168
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 38400,
+        "simulation_attempts": 3840000,
+        "simulation_frames_attempted": 19200000,
+        "simulation_completed": 3840000,
+        "simulation_frames_completed": 19200000,
+        "reset_completed": 38400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 768,
+        "simulation_attempts": 76800,
+        "simulation_frames_attempted": 384000,
+        "simulation_completed": 76800,
+        "simulation_frames_completed": 384000,
+        "reset_completed": 768
+      },
+      "CONTROL": {
+        "simulation_attempts": 97824,
+        "simulation_frames_attempted": 489120,
+        "simulation_completed": 97824,
+        "simulation_frames_completed": 489120
+      }
+    }
+  },
+  "events_checked": 278688,
+  "clock_units": {
+    "push-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_push_v3.xml",
+      "model_xml_sha256": "8c4bf7169be4f3c666811930aa13682e755b43a8e6e8186265a0a8e9815ae502",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "reach-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_reach_v3.xml",
+      "model_xml_sha256": "bc0427293317164af71c82e9fd41a5fa568c3185a97d92da8e57e4e39254361c",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "door-open-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_door_pull.xml",
+      "model_xml_sha256": "f14cdb95f214dc13959351585b8a41b77f8876b112405d05f3e927ecac74513a",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    }
+  },
+  "frozen_git_inputs_checked": 636,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "artifact_sha256": {
+    "episodes_00.jsonl.gz": "8bf035f5ed0a44ea0ca3e2242f3dce5e5ca1d53b6716db3da59be4376ac3e86f",
+    "episodes_01.jsonl.gz": "fd2fa8f7e8661c333eacac04dcd851315e1a0bfa33f19274d5fb71b7b686ba39",
+    "episodes_02.jsonl.gz": "9186dc389c0437c1816130a34cfd502dcbc6056d54dce5be978a5852b3c5dd6e",
+    "episodes_03.jsonl.gz": "63d4d23d706b0a651b93bdf3981407f36dffcf84d3fcbb91d8ed0e96f95ffebb",
+    "episodes_04.jsonl.gz": "1f236ca13da9496340facfc570ca952e26ff9feda0bb48827491b97b3cc2ad49",
+    "episodes_05.jsonl.gz": "e4e457a679745ccef28a6cf61d32011e1716dbae276da51bc50c0ce15e0677c8",
+    "episodes_06.jsonl.gz": "6ac62bedbe950fa00736699068be461a5c895097e8741a21b18630b8a958e7bb",
+    "episodes_07.jsonl.gz": "c1a93d2718e4b9f5061fd8017af46a3d367619ed6525d2026aa387c36e13cfee",
+    "events_00.jsonl.gz": "772e4bbc0db29b7715388566fea215d04228faf39216aaf64f7ac958fb6ba131",
+    "events_01.jsonl.gz": "3938789eaa4e10ab9259fdf486ddc8162732f723b25119fdc79768b196f58c85",
+    "events_02.jsonl.gz": "f9182be0d3fd323b6885ee9989e5e4e1c57e71435fd875167ffc77ad2a898685",
+    "events_03.jsonl.gz": "33b0785ebe4b1d82bdcf1e631f98af9c665d92cb325c227ceec5e10373ee92e4",
+    "events_04.jsonl.gz": "fdaff2002c9b6d12d2975301203110770dc6d89e3890fd51893c5e40cad6a0f8",
+    "events_05.jsonl.gz": "342f51518036911d13713ce090993c8179b5169e48625aa6fce5940c46ca57ae",
+    "events_06.jsonl.gz": "fd3ac3353c001cbe13207551542a551a3c968f66ca029450a8f305ed2ec2b917",
+    "events_07.jsonl.gz": "82851b1b8ceee5200b3ef56d38c110960d807222e19cdc9ac44e8073a0cd4092",
+    "manifest.json": "a398b64d99dab576ddb8a76096f90769d6d918ffccba19a8edd9673b90d1cd5a",
+    "status.json": "f7e621a66a4ad1e679ebbd73d917ad70425c7c44fdd9526f33af7489a75e12d7",
+    "summary.json": "288f26ec68d267c45139c6e2e2fa47b48b95491d7edfac606736b8523c61a1d9"
+  },
+  "scope": "Recorded-action/RNG/program/choice and full lifecycle replay; Gaussian/point mathematical helpers, state pairing and repeat formulas explicitly reused. No robot resimulation, complete hidden-state or physical/probability qualification."
+}

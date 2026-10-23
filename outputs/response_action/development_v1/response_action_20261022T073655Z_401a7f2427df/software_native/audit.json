@@ -1,0 +1,91 @@
+{
+  "experiment_run_id": "response_action_20261022T073655Z_401a7f2427df",
+  "manifest_id": "0b6b3aa25edcb8922942be05e0749040c6b9815d1938fa3c6450a26aa6cfaf16",
+  "source_git_commit": "401a7f2427df7ab6b7c23a84561a1491f661fe72",
+  "cohort": "SOFTWARE_NATIVE",
+  "integrity": "PASSED",
+  "native_software_contract": "PASSED",
+  "executions": 36,
+  "costs": {
+    "policy_queries": 8416,
+    "control_steps": 8888,
+    "successes": 23,
+    "independent_c4_c8_refits": 60,
+    "independent_c4_c8_nfev": 60,
+    "pi_plans": 1043,
+    "pi_changed_command_steps": 1025,
+    "pi_send_limit_steps": 349,
+    "pi_integral_limit_steps": 0,
+    "independent_response_model_forward_evaluations": 28220,
+    "independent_kinematic_proxy_evaluations": 10580,
+    "rank_plans": 3880,
+    "rank_changed_command_steps": 379,
+    "independent_rank_score_fields": 58200,
+    "independent_rank_raw_coefficient_forecasts": 14110
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 1836,
+      "simulation_attempts": 192488,
+      "simulation_completed": 192488,
+      "simulation_frames_attempted": 962440,
+      "simulation_frames_completed": 962440,
+      "reset_completed": 1836
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 1800,
+        "simulation_attempts": 180000,
+        "simulation_completed": 180000,
+        "simulation_frames_attempted": 900000,
+        "simulation_frames_completed": 900000,
+        "reset_completed": 1800
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 36,
+        "simulation_attempts": 3600,
+        "simulation_completed": 3600,
+        "simulation_frames_attempted": 18000,
+        "simulation_frames_completed": 18000,
+        "reset_completed": 36
+      },
+      "CONTROL": {
+        "simulation_attempts": 8888,
+        "simulation_completed": 8888,
+        "simulation_frames_attempted": 44440,
+        "simulation_frames_completed": 44440
+      }
+    }
+  },
+  "common_prefix_checks": {
+    "initial_pairs": 33,
+    "c8_prefix_pairs": 27,
+    "movement_pairs": 9
+  },
+  "pi_actual_effect_coverage": {
+    "RAW_TASK_PI_T0.5": 3,
+    "DIRECT_TASK_PI_T0.5": 3,
+    "MOVE_KEEP_TASK_PI_T0.5": 3,
+    "MOVE_INTEGRAL_TASK_PI_T2.0": 3,
+    "F20_RANK_W0.1/push-v3": 1,
+    "F20_RANK_W1.0/push-v3": 1,
+    "F20_RANK_W10.0/push-v3": 1,
+    "KINEMATIC_RANK_W1.0/push-v3": 1,
+    "F20_RANK_W0.1/reach-v3": 1,
+    "F20_RANK_W1.0/reach-v3": 1,
+    "F20_RANK_W10.0/reach-v3": 1,
+    "KINEMATIC_RANK_W1.0/reach-v3": 1,
+    "F20_RANK_W0.1/door-open-v3": 1,
+    "F20_RANK_W1.0/door-open-v3": 1,
+    "F20_RANK_W10.0/door-open-v3": 1,
+    "KINEMATIC_RANK_W1.0/door-open-v3": 1
+  },
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_predictor_training": 0,
+  "completion_sha256": "40bd18eecc05515293f1046c19fdf4d6e574278bb1d2246d47a8eb83c76209ad",
+  "auditor_sha256": "006f3f44ad1c54e43fc918acde9ffdf0f32a47c315f7bc4a17765c0dcbdcdae6",
+  "rank_auditor_sha256": "159e2bbba5feaccf8e68d718a934c08844e64ea76826a08d1b3e605a60f33ece",
+  "wall_ns": 65557188300,
+  "scope": "Read-only program replay and independent raw-coefficient rank/PI/actuator/cost reconstruction; source-generated witnesses, not physics reproduction or safety proof"
+}

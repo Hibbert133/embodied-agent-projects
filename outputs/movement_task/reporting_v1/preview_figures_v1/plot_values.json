@@ -1,0 +1,98 @@
+{
+  "methods": {
+    "DIRECT_C8": {
+      "cases": 324,
+      "successes": 322,
+      "mean_deadline_loss": 158.8827160493827,
+      "mean_total_steps": 155.84567901234567,
+      "historical_source_environment_steps": 3840,
+      "mean_amortized_actual_steps": 167.69753086419752
+    },
+    "MOVE_KEEP_C8": {
+      "cases": 324,
+      "successes": 322,
+      "mean_deadline_loss": 163.820987654321,
+      "mean_total_steps": 160.78395061728395,
+      "historical_source_environment_steps": 3840,
+      "mean_amortized_actual_steps": 172.6358024691358
+    },
+    "MOVE_INTEGRAL": {
+      "cases": 324,
+      "successes": 322,
+      "mean_deadline_loss": 139.12962962962962,
+      "mean_total_steps": 136.09259259259258,
+      "historical_source_environment_steps": 3840,
+      "mean_amortized_actual_steps": 147.94444444444446
+    },
+    "MOVE_ARX_KEEP": {
+      "cases": 324,
+      "successes": 318,
+      "mean_deadline_loss": 138.73456790123456,
+      "mean_total_steps": 135.69753086419752,
+      "historical_source_environment_steps": 27154,
+      "mean_amortized_actual_steps": 219.50617283950618
+    }
+  },
+  "paired_loss_intervals": [
+    {
+      "method": "MOVE_ARX_KEEP",
+      "reference": "MOVE_INTEGRAL",
+      "role": "PRIMARY",
+      "difference": -0.3950617283950617,
+      "interval": [
+        -3.8580246913580245,
+        4.148148148148148
+      ]
+    },
+    {
+      "method": "MOVE_ARX_KEEP",
+      "reference": "MOVE_KEEP_C8",
+      "role": "SECONDARY_UNADJUSTED",
+      "difference": -25.08641975308642,
+      "interval": [
+        -28.858024691358025,
+        -20.54320987654321
+      ]
+    },
+    {
+      "method": "MOVE_INTEGRAL",
+      "reference": "MOVE_KEEP_C8",
+      "role": "SECONDARY_UNADJUSTED",
+      "difference": -24.691358024691358,
+      "interval": [
+        -25.0,
+        -24.074074074074073
+      ]
+    },
+    {
+      "method": "MOVE_KEEP_C8",
+      "reference": "DIRECT_C8",
+      "role": "SECONDARY_UNADJUSTED",
+      "difference": 4.938271604938271,
+      "interval": [
+        4.814814814814815,
+        5.0
+      ]
+    },
+    {
+      "method": "MOVE_ARX_KEEP",
+      "reference": "DIRECT_C8",
+      "role": "SECONDARY_UNADJUSTED",
+      "difference": -20.14814814814815,
+      "interval": [
+        -23.858024691358025,
+        -15.604938271604938
+      ]
+    },
+    {
+      "method": "MOVE_INTEGRAL",
+      "reference": "DIRECT_C8",
+      "role": "SECONDARY_UNADJUSTED",
+      "difference": -19.753086419753085,
+      "interval": [
+        -20.0,
+        -19.25925925925926
+      ]
+    }
+  ]
+}

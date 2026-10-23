@@ -1,0 +1,146 @@
+{
+  "experiment_run_id": "online_calibrated_agent_20261014T022239Z_e40d3b2b2c24",
+  "manifest_id": "94bc28f3a27ded943de468a0a5c02301d76f6d495600d7ab169a3aae740a8bc4",
+  "source_git_commit": "e40d3b2b2c2407a190fe9d148b63ea5212a3d9eb",
+  "status": "COMPLETED_INTERFACE_PASS",
+  "complete_units": 16,
+  "episodes": 96,
+  "physical_steps": 21680,
+  "environment_resets": 96,
+  "api_attempts": 35,
+  "memory_writes": 0,
+  "statistics": {
+    "methods": {
+      "NO_PROBE": {
+        "successful": 6,
+        "units": 16,
+        "abstained": 0,
+        "mean_online_steps": 345.625,
+        "probe_steps": 0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 345.625,
+        "mean_amortized_resets": 1.0
+      },
+      "CONT_NO_CORRECTION": {
+        "successful": 5,
+        "units": 16,
+        "abstained": 0,
+        "mean_online_steps": 374.375,
+        "probe_steps": 256,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 374.375,
+        "mean_amortized_resets": 1.0
+      },
+      "CONT_DYNAMIC": {
+        "successful": 5,
+        "units": 16,
+        "abstained": 0,
+        "mean_online_steps": 371.375,
+        "probe_steps": 256,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 371.375,
+        "mean_amortized_resets": 1.0
+      },
+      "PRIOR_AFFINE": {
+        "successful": 16,
+        "units": 16,
+        "abstained": 0,
+        "mean_online_steps": 81.3125,
+        "probe_steps": 256,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 225.3125,
+        "mean_amortized_resets": 10.0
+      },
+      "PRIOR_NEAREST": {
+        "successful": 16,
+        "units": 16,
+        "abstained": 0,
+        "mean_online_steps": 80.4375,
+        "probe_steps": 256,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 224.4375,
+        "mean_amortized_resets": 10.0
+      },
+      "LLM_AGENT": {
+        "successful": 14,
+        "units": 16,
+        "abstained": 1,
+        "mean_online_steps": 101.875,
+        "probe_steps": 240,
+        "offline_steps": 2304,
+        "offline_resets": 144,
+        "mean_amortized_steps": 245.875,
+        "mean_amortized_resets": 10.0
+      }
+    },
+    "logical_decisions": 31,
+    "valid_logical_decisions": 30,
+    "logical_valid_rate": 0.967741935483871,
+    "complete_correction_chains": 15,
+    "pre_probe_valid": 15,
+    "post_probe_valid": 15,
+    "llm_minus_baseline_per_seed": {
+      "NO_PROBE": [
+        0.5,
+        0.75,
+        0.75,
+        0.0
+      ],
+      "CONT_NO_CORRECTION": [
+        0.75,
+        0.5,
+        0.5,
+        0.5
+      ],
+      "CONT_DYNAMIC": [
+        0.75,
+        0.25,
+        0.75,
+        0.5
+      ],
+      "PRIOR_AFFINE": [
+        0.0,
+        -0.25,
+        0.0,
+        -0.25
+      ],
+      "PRIOR_NEAREST": [
+        0.0,
+        -0.25,
+        0.0,
+        -0.25
+      ]
+    },
+    "independent_seed_clusters": 4,
+    "gates": {
+      "logical_valid_rate": true,
+      "complete_correction_chain": true,
+      "call_budget": true,
+      "integrity": true
+    },
+    "gate_passed": true,
+    "integrity_violations": 0
+  },
+  "api": {
+    "attempts": 35,
+    "health_primary": 1,
+    "decision_primary": 31,
+    "repairs": 3,
+    "timeouts": 1,
+    "transport_errors": 0,
+    "invalid_responses": 3,
+    "input_tokens_known": 69026,
+    "output_tokens_known": 83019,
+    "unknown_usage_attempts": 1,
+    "latency_p50_seconds": 51.40333910001209,
+    "latency_p90_seconds": 134.50663108000882,
+    "latency_max_seconds": 210.00470060002408,
+    "intentional_abstentions": 0,
+    "circuit_open_decisions": 0
+  }
+}

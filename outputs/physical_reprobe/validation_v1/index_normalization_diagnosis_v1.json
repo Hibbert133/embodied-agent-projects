@@ -1,0 +1,18 @@
+{
+  "status": "EXACT_INDEX_CHECK_REJECTED",
+  "mismatches": [
+    {
+      "path": "outputs/physical_reprobe/validation_v1/pip_check.txt",
+      "working_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+      "index_sha256": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+      "reason": "Git automatic CRLF-to-LF normalization"
+    },
+    {
+      "path": "outputs/physical_reprobe/validation_v1/tracked_secret_scan.txt",
+      "working_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+      "index_sha256": "600d3d4d96736b20d8b52eaa0f28da99c6467d6cd332b0e37b44b9c3e3fceb1d",
+      "reason": "Git automatic CRLF-to-LF normalization"
+    }
+  ],
+  "remedy": "Preserve original hashed log bytes with directory-local -text attributes; do not edit logs or receipts."
+}

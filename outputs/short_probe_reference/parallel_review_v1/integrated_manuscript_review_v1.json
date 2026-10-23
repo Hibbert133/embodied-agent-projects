@@ -1,0 +1,477 @@
+{
+  "review": "paired_probe_integrated_manuscript_review_v1",
+  "created_utc": "2026-10-19T05:19:31.035819+00:00",
+  "status": "PASSED",
+  "manuscript_stage": "Integrated Chinese mechanism-study draft; novel acquisition method and independent policy validation remain incomplete.",
+  "checks": [
+    {
+      "claim": "R 直接复用 table column 1",
+      "source": "statistics.methods.REUSE_OLD"
+    },
+    {
+      "claim": "R 直接复用 table column 2",
+      "source": "statistics.methods.REUSE_OLD"
+    },
+    {
+      "claim": "R 直接复用 table column 3",
+      "source": "statistics.methods.REUSE_OLD"
+    },
+    {
+      "claim": "R 直接复用 table column 4",
+      "source": "statistics.methods.REUSE_OLD"
+    },
+    {
+      "claim": "R 直接复用 table column 5",
+      "source": "statistics.methods.REUSE_OLD"
+    },
+    {
+      "claim": "P 补测保留 table column 1",
+      "source": "statistics.methods.PROBE_KEEP"
+    },
+    {
+      "claim": "P 补测保留 table column 2",
+      "source": "statistics.methods.PROBE_KEEP"
+    },
+    {
+      "claim": "P 补测保留 table column 3",
+      "source": "statistics.methods.PROBE_KEEP"
+    },
+    {
+      "claim": "P 补测保留 table column 4",
+      "source": "statistics.methods.PROBE_KEEP"
+    },
+    {
+      "claim": "P 补测保留 table column 5",
+      "source": "statistics.methods.PROBE_KEEP"
+    },
+    {
+      "claim": "U 严格更新 table column 1",
+      "source": "statistics.methods.PROBE_UPDATE"
+    },
+    {
+      "claim": "U 严格更新 table column 2",
+      "source": "statistics.methods.PROBE_UPDATE"
+    },
+    {
+      "claim": "U 严格更新 table column 3",
+      "source": "statistics.methods.PROBE_UPDATE"
+    },
+    {
+      "claim": "U 严格更新 table column 4",
+      "source": "statistics.methods.PROBE_UPDATE"
+    },
+    {
+      "claim": "U 严格更新 table column 5",
+      "source": "statistics.methods.PROBE_UPDATE"
+    },
+    {
+      "claim": "K 更新并回退 table column 1",
+      "source": "statistics.methods.PROBE_UPDATE_KEEP"
+    },
+    {
+      "claim": "K 更新并回退 table column 2",
+      "source": "statistics.methods.PROBE_UPDATE_KEEP"
+    },
+    {
+      "claim": "K 更新并回退 table column 3",
+      "source": "statistics.methods.PROBE_UPDATE_KEEP"
+    },
+    {
+      "claim": "K 更新并回退 table column 4",
+      "source": "statistics.methods.PROBE_UPDATE_KEEP"
+    },
+    {
+      "claim": "K 更新并回退 table column 5",
+      "source": "statistics.methods.PROBE_UPDATE_KEEP"
+    },
+    {
+      "claim": "主比较 R−K point",
+      "source": "statistics.stream_bootstrap.point"
+    },
+    {
+      "claim": "主比较 R−K interval",
+      "source": "statistics.stream_bootstrap.percentile_95"
+    },
+    {
+      "claim": "补测运动与费用 R−P point",
+      "source": "statistics.stream_bootstrap.point"
+    },
+    {
+      "claim": "补测运动与费用 R−P interval",
+      "source": "statistics.stream_bootstrap.percentile_95"
+    },
+    {
+      "claim": "共同额外前缀后的更新 P−K point",
+      "source": "statistics.stream_bootstrap.point"
+    },
+    {
+      "claim": "共同额外前缀后的更新 P−K interval",
+      "source": "statistics.stream_bootstrap.percentile_95"
+    },
+    {
+      "claim": "严格更新总效果 R−U point",
+      "source": "statistics.stream_bootstrap.point"
+    },
+    {
+      "claim": "严格更新总效果 R−U interval",
+      "source": "statistics.stream_bootstrap.percentile_95"
+    },
+    {
+      "claim": "无效回退 U−K point",
+      "source": "statistics.stream_bootstrap.point"
+    },
+    {
+      "claim": "无效回退 U−K interval",
+      "source": "statistics.stream_bootstrap.percentile_95"
+    },
+    {
+      "claim": "主采集 cost 0",
+      "source": "costs.json"
+    },
+    {
+      "claim": "主采集 cost 1",
+      "source": "costs.json"
+    },
+    {
+      "claim": "主采集 cost 2",
+      "source": "costs.json"
+    },
+    {
+      "claim": "主采集 cost 3",
+      "source": "costs.json"
+    },
+    {
+      "claim": "单列流程预检 cost 0",
+      "source": "costs.json"
+    },
+    {
+      "claim": "单列流程预检 cost 1",
+      "source": "costs.json"
+    },
+    {
+      "claim": "单列流程预检 cost 2",
+      "source": "costs.json"
+    },
+    {
+      "claim": "单列流程预检 cost 3",
+      "source": "costs.json"
+    },
+    {
+      "claim": "完整名义模型来源 cost 0",
+      "source": "costs.json"
+    },
+    {
+      "claim": "完整名义模型来源 cost 1",
+      "source": "costs.json"
+    },
+    {
+      "claim": "完整名义模型来源 cost 2",
+      "source": "costs.json"
+    },
+    {
+      "claim": "完整名义模型来源 cost 3",
+      "source": "costs.json"
+    },
+    {
+      "claim": "恢复工具资格两版本 cost 0",
+      "source": "costs.json"
+    },
+    {
+      "claim": "恢复工具资格两版本 cost 1",
+      "source": "costs.json"
+    },
+    {
+      "claim": "恢复工具资格两版本 cost 2",
+      "source": "costs.json"
+    },
+    {
+      "claim": "恢复工具资格两版本 cost 3",
+      "source": "costs.json"
+    },
+    {
+      "claim": "来源总量",
+      "source": "statistics.json"
+    },
+    {
+      "claim": "暖状态",
+      "source": "statistics.json"
+    },
+    {
+      "claim": "冷源",
+      "source": "statistics.json"
+    },
+    {
+      "claim": "完整流",
+      "source": "statistics.json"
+    },
+    {
+      "claim": "重抽次数",
+      "source": "statistics.json"
+    },
+    {
+      "claim": "no undefined bootstrap",
+      "source": "statistics.stream_bootstrap.undefined_draws"
+    },
+    {
+      "claim": "8 futures",
+      "source": "statistics.fresh_futures_per_context"
+    },
+    {
+      "claim": "group door-open-v3",
+      "source": "statistics.groups"
+    },
+    {
+      "claim": "group push-v3",
+      "source": "statistics.groups"
+    },
+    {
+      "claim": "group reach-v3",
+      "source": "statistics.groups"
+    },
+    {
+      "claim": "group ABRUPT",
+      "source": "statistics.groups"
+    },
+    {
+      "claim": "group GRADUAL",
+      "source": "statistics.groups"
+    },
+    {
+      "claim": "group UNCHANGED",
+      "source": "statistics.groups"
+    },
+    {
+      "claim": "来源控制步",
+      "source": "costs.json / audit receipts"
+    },
+    {
+      "claim": "评价后缀步",
+      "source": "costs.json / audit receipts"
+    },
+    {
+      "claim": "拟合数",
+      "source": "costs.json / audit receipts"
+    },
+    {
+      "claim": "策略查询",
+      "source": "costs.json / audit receipts"
+    },
+    {
+      "claim": "审计事件",
+      "source": "costs.json / audit receipts"
+    },
+    {
+      "claim": "审计字段",
+      "source": "costs.json / audit receipts"
+    },
+    {
+      "claim": "主体墙钟",
+      "source": "costs.json"
+    },
+    {
+      "claim": "状态捕获",
+      "source": "costs.json"
+    },
+    {
+      "claim": "状态恢复",
+      "source": "costs.json"
+    },
+    {
+      "claim": "amortization",
+      "source": "costs.nominal_steps_per_source_unit"
+    },
+    {
+      "claim": "API and learning zero",
+      "source": "costs.json"
+    },
+    {
+      "claim": "audit max difference",
+      "source": "main_statistics_audit.json"
+    },
+    {
+      "claim": "status passed",
+      "source": "record and numeric audits"
+    },
+    {
+      "claim": "contribution 0",
+      "source": "figure_data.json"
+    },
+    {
+      "claim": "contribution 1",
+      "source": "figure_data.json"
+    },
+    {
+      "claim": "state descriptive count 276",
+      "source": "figure_data.json"
+    },
+    {
+      "claim": "state descriptive count 104",
+      "source": "figure_data.json"
+    },
+    {
+      "claim": "state descriptive count 86",
+      "source": "figure_data.json"
+    },
+    {
+      "claim": "source outcomes",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "all evaluation failures",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 REUSE_OLD success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 REUSE_OLD mean",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 PROBE_KEEP success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 PROBE_KEEP mean",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 PROBE_UPDATE success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 PROBE_UPDATE mean",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 PROBE_UPDATE_KEEP success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19218 PROBE_UPDATE_KEEP mean",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19493 REUSE_OLD success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19493 REUSE_OLD mean",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19493 PROBE_KEEP success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19493 PROBE_UPDATE success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19493 PROBE_UPDATE_KEEP success",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "19493 PROBE_UPDATE_KEEP mean",
+      "source": "all_program_executions.csv"
+    },
+    {
+      "claim": "local link paired_probe_measurement_methods_draft_zh.md",
+      "source": "filesystem"
+    },
+    {
+      "claim": "local link ../../outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/figures/effects.png",
+      "source": "filesystem"
+    },
+    {
+      "claim": "local link ../../outputs/reproduction_reviews/paired_probe_v1/heterogeneity_figures_v1/heterogeneity_zh.png",
+      "source": "filesystem"
+    },
+    {
+      "claim": "local link probe_evidence_references_20261019.bib",
+      "source": "filesystem"
+    },
+    {
+      "claim": "local link paired_probe_reproduction_20261019_zh.md",
+      "source": "filesystem"
+    },
+    {
+      "claim": "local link paired_probe_measurement_results_20261019_zh.md",
+      "source": "filesystem"
+    },
+    {
+      "claim": "local link paired_probe_heterogeneity_20261019_zh.md",
+      "source": "filesystem"
+    },
+    {
+      "claim": "previously reviewed primary source https://arxiv.org/html/2204.02059v1",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "previously reviewed primary source https://arxiv.org/html/2609.32154v1",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "previously reviewed primary source https://proceedings.mlr.press/v120/arcari20a.html",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "previously reviewed primary source https://proceedings.mlr.press/v139/wagenmaker21a.html",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "previously reviewed primary source https://proceedings.mlr.press/v206/mutny23a.html",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "previously reviewed primary source https://proceedings.mlr.press/v270/dass25a.html",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "previously reviewed primary source https://proceedings.mlr.press/v305/aoyama25a.html",
+      "source": "paired_probe_related_work_20261019_zh.md; prior bibliographic receipt"
+    },
+    {
+      "claim": "references cardinality",
+      "source": "manuscript links"
+    },
+    {
+      "claim": "fenced code balanced",
+      "source": "manuscript structure"
+    },
+    {
+      "claim": "line whitespace",
+      "source": "manuscript bytes"
+    },
+    {
+      "claim": "new manuscript secret scan",
+      "source": "repository secret rules"
+    }
+  ],
+  "check_count": 111,
+  "artifact_sha256": {
+    "docs/paper/paired_probe_manuscript_20261019_zh.md": "86b4079689ccfda112f4623c872d0b7dd43f47093d9f1873bb463201a68af4f0",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/statistics.json": "70191c61d79a02718253e38b6499c179f15e113995343ae36ef0d58c0372de89",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/costs.json": "385a8524bb0ea8077e8a960c96ffd93480434d484c64edd58f88af5cc2ee912f",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_analysis_v1/all_program_executions.csv": "4c4323910411cdd614f226745b9a4d0b52d6714776169fe2e5768f0c99a1a4de",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_audit.json": "a39d3e7564dd551c70cd9362db458708a55f9652e6e2f4b99219ac4674a437e4",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/main_statistics_audit.json": "136d37065f74f9ad55e4bb2995ef0d12c5bc025ba1e18fb052c1488d2a4e28b5",
+    "outputs/reproduction_reviews/paired_probe_v1/heterogeneity_figures_v1/figure_data.json": "5d00eab4166079188267342331ca9692a4b64f7449e38f50a4a398c96c506760",
+    "docs/paper/probe_evidence_references_20261019.bib": "31361ff6932c70bf1e6c12dac8f5540f85879f9727841b47c62b4675d3fcda6c",
+    "docs/paper/paired_probe_measurement_methods_draft_zh.md": "23c7850aa57983bf0e4a30138c633d04837121eadbab52a8ed20a38693a91fc9",
+    "docs/paper/paired_probe_measurement_results_20261019_zh.md": "dc54e5552745429a1e57fd7635a044fe51abdeaadc2cacafa7d210f98d1f4df5",
+    "docs/paper/paired_probe_related_work_20261019_zh.md": "ef844c3618749556fabe1c7f40ec1bb9a079ec0541d49b02161394c62024d4cd"
+  },
+  "frozen_main_inputs_unchanged": 810,
+  "source_git_commit_unchanged": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "current_main_partial_performance_read": false,
+  "tracked_tree_and_index_clean": true,
+  "line_ending_attribute": "\"docs\\\\paper\\\\paired_probe_manuscript_20261019_zh.md\": text: unset",
+  "new_simulation_steps": 0,
+  "new_api_calls": 0,
+  "new_model_fits": 0,
+  "new_confidence_intervals": 0,
+  "editorial_review": "Population, counterfactual boundary, finite-future uncertainty, descriptive subgroups, shared audit components, negative cases and incomplete method claims checked against source protocol and appendices.",
+  "scope": "Transcription, arithmetic and links review using already audited outcomes, not a new statistical analysis or novelty certification."
+}

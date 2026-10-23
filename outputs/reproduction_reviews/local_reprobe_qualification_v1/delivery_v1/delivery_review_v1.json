@@ -1,0 +1,142 @@
+{
+  "status": "PASSED_RECORD_DELIVERY_LOCAL_EXECUTION_QUALIFIED_ONLY",
+  "created_utc": "2026-10-19T14:19:07.467054+00:00",
+  "source_commit": "7bf2aa94b5ab35df7bfdcd6e482e052cd83ba57e",
+  "manifest_id": "c796817f1058edf54901c0ff00d9b771847c16325bfa9998c51470baa1d3b123",
+  "integrity": "PASSED",
+  "qualification": "QUALIFIED",
+  "executions": 72,
+  "paired_units": 9,
+  "complete_windows": {
+    "UNCHANGED_FIXED_PD": 5,
+    "UNCHANGED_FIXED_PID": 5,
+    "UNCHANGED_LOCAL_PD": 8,
+    "UNCHANGED_LOCAL_PID": 7,
+    "CHANGED_FIXED_PD": 0,
+    "CHANGED_FIXED_PID": 5,
+    "CHANGED_LOCAL_PD": 0,
+    "CHANGED_LOCAL_PID": 7
+  },
+  "new_control_steps": 5939,
+  "new_api_calls": 0,
+  "tests_reused": {
+    "passed": 1276,
+    "reason": "All frozen scientific source, configuration, protocol, tests and report generator verified unchanged; delivery adds recorded outputs only",
+    "receipt": {
+      "check": "unittest",
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "returncode": 0,
+      "wall_ns": 462852822300,
+      "output_sha256": "6473f158efddbd2aae96ae271ee1888facf1cdb087795dca4544213b069861b6",
+      "created_utc": "2026-10-19T14:01:06.178707+00:00",
+      "source_sha256": "0b940e7fb4a7550112aacff71d153d98181b4c4475fc9bfba76610c8fa89c358"
+    }
+  },
+  "checks": {
+    "cached_diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 110359200,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "compileall": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "compileall",
+        "-q",
+        "src",
+        "scripts",
+        "tests"
+      ],
+      "returncode": 0,
+      "wall_ns": 1033904900,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "diff_check": {
+      "argv": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "returncode": 0,
+      "wall_ns": 37188600,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "pip_check": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "returncode": 0,
+      "wall_ns": 871461200,
+      "output_sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    "report_compile": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-m",
+        "py_compile",
+        "docs/paper/report_local_reprobe_qualification_20261019.py"
+      ],
+      "returncode": 0,
+      "wall_ns": 88950200,
+      "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "tracked_secret_scan": {
+      "argv": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "scripts/check_tracked_secrets.py",
+        "--staged"
+      ],
+      "returncode": 0,
+      "wall_ns": 56336345600,
+      "output_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308"
+    }
+  },
+  "verified_analysis_inputs": 1135,
+  "verified_frozen_review_files": 32,
+  "visual_review": "Chinese 2x2 plot inspected: eight counts, all72 case costs including stops, common axes, labels and legends visible without clipping",
+  "strict_scan_sha256": "81adb63dea033a56abbfdbc2bca8d512ac8b08b27af1d4500a0b71e7ca4ea51f",
+  "analysis_receipt_sha256": "4e2862026ccb843cb72739a1bbb1d65d650569231fca4e976b07ea6f2720fd0e",
+  "software_fixture_cost_subtotals": {
+    "targeted_01": {
+      "receipt_sha256": "2e9b3ad606523f528e018cafca909a5f9a0da76d84a17cda4ea5d25f4526af9e",
+      "pipeline_receipts": 5,
+      "native_frames": 1131740,
+      "tiny_envs": 44,
+      "all_reset_calls": 2244,
+      "new_scientific_seeds": 0,
+      "scope": "New module instrumented pipeline fixtures only; other repository fixtures are recorded separately, not included in these subtotals"
+    },
+    "unittest": {
+      "receipt_sha256": "eb77b84f7596579818a17ede962e4bb6a81b550bc63e32e8a191a02ec73da940",
+      "pipeline_receipts": 5,
+      "native_frames": 1131740,
+      "tiny_envs": 44,
+      "all_reset_calls": 2244,
+      "new_scientific_seeds": 0,
+      "scope": "New module instrumented pipeline fixtures only; other repository fixtures are recorded separately, not included in these subtotals"
+    }
+  },
+  "new_simulation_during_delivery": 0,
+  "measurement_model_qualified": false,
+  "task_utility_demonstrated": false,
+  "publication_goal_complete": false,
+  "next_required_evidence": "Independently trained selected-anchor response model and held-out identification qualification; keep this population frozen, do not retune PID gains or gates on it"
+}

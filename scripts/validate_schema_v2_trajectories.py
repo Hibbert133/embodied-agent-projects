@@ -1,6 +1,7 @@
 """Validate committed representative trajectories as strict schema-v2 Agent input."""
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 from pathlib import Path
@@ -13,6 +14,12 @@ if str(PROJECT_ROOT) not in sys.path:
 from src.trajectory_views import FORBIDDEN_AGENT_FIELDS, build_agent_view
 
 TRAJECTORY_DIR = PROJECT_ROOT / "outputs" / "representative_trajectories"
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--trajectory-dir", type=Path, default=TRAJECTORY_DIR)
+    return parser.parse_args()
 
 
 def load_jsonl(path: Path) -> list[dict[str, Any]]:
@@ -58,9 +65,11 @@ def validate_trajectory(path: Path) -> int:
 
 
 def main() -> int:
-    paths = sorted(TRAJECTORY_DIR.glob("*.jsonl"))
+    args = parse_args()
+    trajectory_dir = args.trajectory_dir.expanduser().resolve()
+    paths = sorted(trajectory_dir.glob("*.jsonl"))
     if not paths:
-        print(f"[FAIL] no JSONL files found in {TRAJECTORY_DIR}", file=sys.stderr)
+        print(f"[FAIL] no JSONL files found in {trajectory_dir}", file=sys.stderr)
         return 1
     try:
         total = sum(validate_trajectory(path) for path in paths)

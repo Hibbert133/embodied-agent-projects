@@ -1,0 +1,28 @@
+{
+  "protocol_id": "candidate_micro_evidence_development_v1",
+  "protocol_version": 1,
+  "split": "development",
+  "source_run": "outputs/intervention_identifiability/runs/development_20260731T035004Z_ed696b94484e",
+  "source_run_commit": "ed696b94484ee10b7cb2ad633c5c9d2fa9d8bbf7",
+  "expected_cases": 20,
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy with registered bounded candidate correction",
+  "candidates": ["probe_grounded_compensation", "stochastic_retry"],
+  "prefix_horizons": [16, 32, 64, 128],
+  "maximum_prefix_steps": 128,
+  "prefix_perturbation_seed_namespace": 5004,
+  "selection_rule": "probe success first; otherwise minimum prefix final object-goal distance; then fewer steps and candidate ID",
+  "final_outcome_source": "immutable matched candidate_results.csv from source run",
+  "cost_definition": "sum of observed prefix steps for both candidates",
+  "analysis": {
+    "fit_threshold": false,
+    "report_each_horizon": true,
+    "report_oracle_agreement": true,
+    "report_selected_recovery": true,
+    "report_environment_steps": true
+  },
+  "claim_boundary": "Development-only simulator branching study; not the fixed-probe v1 claim or real-time control",
+  "rendering": false,
+  "api_calls": 0,
+  "overwrite_existing_run": false
+}

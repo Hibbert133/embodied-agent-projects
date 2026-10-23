@@ -1,0 +1,57 @@
+{
+  "source_git_commit": "461483a516112ccf298b90c8b96320fd075f1459",
+  "analysis_git_commit": "784e61976859fd4611c8d678d1d923ec937a9a78",
+  "original_source_git_commit": "1c37985444816ad9cca434d2fe38825678fc82dd",
+  "branch": "codex/response-acquisition-utility-audit-v1",
+  "integrity": "PASSED",
+  "tests": {
+    "freeze": 738,
+    "verifier": 742,
+    "freeze_elapsed_seconds": 122.27,
+    "verifier_elapsed_seconds": 119.942,
+    "result": "PASSED"
+  },
+  "compileall": "PASSED",
+  "pip_check": "PASSED",
+  "source_secret_scan": "PASSED",
+  "source_diff_check": "PASSED",
+  "report_local_links_checked": 4,
+  "unique_matched_units": 55,
+  "shared_matched_units": 48,
+  "repetitions_per_recorded_branch": 1,
+  "new_robot_steps": 0,
+  "new_environment_resets": 0,
+  "new_api_calls": 0,
+  "new_models_or_thresholds_fitted": 0,
+  "independent_confirmatory_experiment": false,
+  "publication_ready": false,
+  "logs": [
+    {
+      "artifact": "outputs/response_acquisition_utility/validation_v1/freeze_tests.log.gz",
+      "source_sha256": "999b25b337a8bc3e6da82662676a1f8a9191f417762009fe67f451b3f07c3c96",
+      "gzip_sha256": "c98149932a7dd3805279e457c49b523296a12445122632e35cb87d8d80a20091"
+    },
+    {
+      "artifact": "outputs/response_acquisition_utility/validation_v1/verifier_tests.log.gz",
+      "source_sha256": "0fe2c7a624f78f91cfcdee1a3bcfafb90c05d2d42a57541092adeba91f64fe58",
+      "gzip_sha256": "8b927b94c3117a1d9bb7b9f8604ff09c81dbbf8186e09b3eb73fc4032fb19062"
+    },
+    {
+      "artifact": "outputs/response_acquisition_utility/validation_v1/analysis_stdout.log.gz",
+      "source_sha256": "867787018403a8cbfb7c2f7100d71013f0204e09258e0264ba3baef5e47e753f",
+      "gzip_sha256": "b6add50ac7eb17dcfb21828f6b9fc88d0746e16ec34bbf9b157b37c0cacbb474"
+    }
+  ],
+  "artifact_sha256": {
+    "outputs/response_acquisition_utility/audit_v1/audit.json": "fdab92256df5e3aab588ab76159dac9c97a89af79a4ec6ff16adf598fe6188ef",
+    "outputs/response_acquisition_utility/stop_forensics_v1/forensics.json": "335ae59273f6c80280cb4b81a08c4ececad6d3b8d41af531458ac2ca59535129",
+    "outputs/response_acquisition_utility/stop_forensics_v1/reproduce.py": "8602e789c1d5e467708edf028de255e88441704c29b6018f2706d4b7bd25c17c",
+    "outputs/response_acquisition_utility/validation_v1/analysis_stdout.log.gz": "b6add50ac7eb17dcfb21828f6b9fc88d0746e16ec34bbf9b157b37c0cacbb474",
+    "outputs/response_acquisition_utility/validation_v1/freeze_tests.log.gz": "c98149932a7dd3805279e457c49b523296a12445122632e35cb87d8d80a20091",
+    "outputs/response_acquisition_utility/validation_v1/verifier_tests.log.gz": "8b927b94c3117a1d9bb7b9f8604ff09c81dbbf8186e09b3eb73fc4032fb19062",
+    "outputs/response_acquisition_utility/verification_v1/verification.json": "16f5efa4fee007e9fd231927d1bc44df1ebfae9b621807b7236ca97bace035ea",
+    "reports/response_acquisition_utility_v1.md": "ae261029944318ee3af37feea5238581060ee42b10bfe4679148f660943e59d8",
+    "docs/research/decision_acquisition_target_v1.md": "ac006414a583b80257090f797f66cfb03631b0af2f7c7275de4feceff3516e23"
+  },
+  "scope": "Read-only matched-branch population, independent point arithmetic and four stop-domain reasons; no new physical experiment or algorithm claim. Staged result secret/diff checks are additionally required before the local result commit."
+}

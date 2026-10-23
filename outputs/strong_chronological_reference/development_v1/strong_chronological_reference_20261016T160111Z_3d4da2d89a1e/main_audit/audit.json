@@ -1,0 +1,62 @@
+{
+  "experiment_run_id": "strong_chronological_reference_20261016T160111Z_3d4da2d89a1e",
+  "manifest_id": "bfa575c8ec6049a90fb21f9be41433c9ccbcfb8ab65105b01a611a9599104c08",
+  "source_git_commit": "3d4da2d89a1e2b3e28ffc605151e5c206200040f",
+  "phase": "MAIN",
+  "integrity": "PASSED",
+  "executions": 1944,
+  "events_checked": 867841,
+  "coverage": {
+    "passive_rejection_continued": true,
+    "passive_valid_update_applied": true,
+    "passive_actual_cache_written": true,
+    "passive_actual_cache_reused": true,
+    "history_nonempty_measure_used": true
+  },
+  "required_integrity_coverage": true,
+  "matched_initial_comparisons": 1728,
+  "matched_physical_prefix_steps": 42967,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 99144,
+      "simulation_attempts": 10148397,
+      "simulation_frames_attempted": 50741985,
+      "simulation_completed": 10148397,
+      "simulation_frames_completed": 50741985,
+      "reset_completed": 99144
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 97200,
+        "simulation_attempts": 9720000,
+        "simulation_frames_attempted": 48600000,
+        "simulation_completed": 9720000,
+        "simulation_frames_completed": 48600000,
+        "reset_completed": 97200
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 1944,
+        "simulation_attempts": 194400,
+        "simulation_frames_attempted": 972000,
+        "simulation_completed": 194400,
+        "simulation_frames_completed": 972000,
+        "reset_completed": 1944
+      },
+      "CONTROL": {
+        "simulation_attempts": 233997,
+        "simulation_frames_attempted": 1169985,
+        "simulation_completed": 233997,
+        "simulation_frames_completed": 1169985
+      }
+    }
+  },
+  "summary_sha256": "3ef44d611e4d577616db1cf85714a62a28fd186e85404bc5662a3bab58c35f5e",
+  "audit_policy_queries": 224991,
+  "audit_shared_fitter_attempts": 2729,
+  "audit_shared_optimizer_nfev": 13735,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "script_sha256": "cba1202217f81e7fc5bedfd4a527eb4575f0149d82a6abe60781af3b8d6b5154",
+  "complete_hidden_state_qualified": false,
+  "scope": "Independent physical/noise/journal and saved-control replay; shared legacy actor/fit math, passive numerical fitter, cache/encoder and query provenance store. Independent Woodbury/normal-CDF task-IVR moments. Separate statistics audit required."
+}

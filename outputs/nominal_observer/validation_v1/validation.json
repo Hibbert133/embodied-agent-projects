@@ -1,0 +1,75 @@
+{
+  "experiment_run_id": "nominal_observer_20261014T055743Z_9e6c6e63cc35",
+  "manifest_id": "e56e9442c5c01a081262d156158106b5946f0b52c855edf22fb34785bb72df23",
+  "source_git_commit": "9e6c6e63cc35ca4510e0021821f5a45fb9ad4f58",
+  "validation_phase": "post-results local commit",
+  "created_at_utc": "2026-10-14T06:21:43.551928+00:00",
+  "branch": "codex/nominal-response-qualification-v1",
+  "unit_tests": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m unittest discover -s tests -v",
+    "passed": true,
+    "count": 671,
+    "duration_seconds": 63.667,
+    "log": "unit_tests.log",
+    "log_sha256": "302258ae6847fd27096b1c55185022f8882d6c58a62da9d73c7d6f02d9c0ac82"
+  },
+  "compileall": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m compileall -q src scripts tests",
+    "exit_code": 0
+  },
+  "pip_check": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m pip check",
+    "exit_code": 0,
+    "result": "No broken requirements found."
+  },
+  "staged_secret_scan": {
+    "command": ".venv/Scripts/python.exe -X utf8 scripts/check_tracked_secrets.py --staged",
+    "exit_code": 0
+  },
+  "working_diff_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  },
+  "staged_diff_check": {
+    "command": "git diff --cached --check",
+    "exit_code": 0
+  },
+  "frozen_git_inputs_verified": 573,
+  "crlf_restorations_needed": 0,
+  "working_core_inputs_unchanged": true,
+  "raw_artifacts_verified": {
+    "episodes.jsonl.gz": "076e1431f9495ddd0f2109c4b3f52dd9d7997c707721052c56ef07eb05fe3717",
+    "manifest.json": "645a2c41a9060de9271d37207387c5e18047e79e46ba72a16ef07571cd9688df",
+    "snapshots.jsonl": "0583df2affe8eb3d89ec50a473d1d922e779c9e5d9ea1bcaf61021f930040645",
+    "status.json": "cddf90c77f8c68dd9e91015ed00dd1d5f542a5f571d08f84986ea4b73aee7dec",
+    "summary.json": "310346d78d5a6c22628bec5e3fd4ec2d0a263246c926fc2af71b81dadc91ef65"
+  },
+  "independent_audit_sha256": "5e6c73a9e8893b32cc9e609102768701d1830def4c6a9ea0209016131e506e37",
+  "figure_versions_verified": [
+    "figure_v1",
+    "figure_v2"
+  ],
+  "figure_v1_source_snapshot": "../figure_v1/render_tool_source.py",
+  "figure_v2_source": "scripts/render_nominal_observer.py",
+  "diagnostic_source_verified": true,
+  "physical_collection_rerun": false,
+  "additional_api_attempts": 0,
+  "frozen_model_or_threshold_changes": 0,
+  "physical_observation_contract_qualified": false,
+  "probability_guarantee": false,
+  "experiment_status": "COMPLETED_FEASIBILITY_FAILED",
+  "nominal_task_successes": 96,
+  "episodes": 96,
+  "new_collection_cost": {
+    "physical_steps": 6933,
+    "probe_steps": 768,
+    "policy_steps": 6165,
+    "environment_resets": 96,
+    "max_episode_steps": 109
+  },
+  "old_offline_cost": {
+    "physical_steps": 2304,
+    "environment_resets": 144
+  },
+  "scope": "Repository validation and artifact integrity do not promote the failed frozen precision gate or establish publication readiness."
+}

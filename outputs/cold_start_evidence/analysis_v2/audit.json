@@ -1,0 +1,65 @@
+{
+  "experiment_run_id": "cold_start_evidence_20261015T170124Z_c5b76fb5ddb6",
+  "manifest_id": "efd4ecacfbbcdb36cbe8c2399d45a5d6ee2154aa263d0bb49b040c2448521715",
+  "source_git_commit": "c5b76fb5ddb6602a7f632aa6193a025790e52df3",
+  "integrity": "PASSED",
+  "prefixes_checked": 480,
+  "environment_steps_checked": 3840,
+  "events_checked": 58657,
+  "frozen_git_inputs_checked": 686,
+  "training_mean_models_checked": 27,
+  "max_normal_equation_residual": 6.661338147750939e-16,
+  "parameter_numbers_checked": 1209,
+  "models_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 24480,
+      "simulation_attempts": 2451840,
+      "simulation_frames_attempted": 12259200,
+      "simulation_completed": 2451840,
+      "simulation_frames_completed": 12259200,
+      "reset_completed": 24480
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 24000,
+        "simulation_attempts": 2400000,
+        "simulation_frames_attempted": 12000000,
+        "simulation_completed": 2400000,
+        "simulation_frames_completed": 12000000,
+        "reset_completed": 24000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 480,
+        "simulation_attempts": 48000,
+        "simulation_frames_attempted": 240000,
+        "simulation_completed": 48000,
+        "simulation_frames_completed": 240000,
+        "reset_completed": 480
+      },
+      "CONTROL": {
+        "simulation_attempts": 3840,
+        "simulation_frames_attempted": 19200,
+        "simulation_completed": 3840,
+        "simulation_frames_completed": 19200
+      }
+    }
+  },
+  "artifact_sha256": {
+    "events.jsonl.gz": "26f300b10b40d19a39906ec25251a6e14a5a9ea267b625de67512b25721766ee",
+    "manifest.json": "c0734dd84e99e136ae645d382bec7f1ac5a5b4d2f1d99f81d443df7c9eb2de64",
+    "models.json": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+    "QUALIFY.jsonl.gz": "5831034d150c767266503d03daaa18971ca664ef52b867d7bf27ef9a35ac727a",
+    "status.json": "f3e156c1185cb6a3e397d925010dfe2335735425f543e825f277966f41c2fbd3",
+    "summary.json": "8c5f1961d2984bad4952d2ecbf205d255b80d8d122d3338ba4e5e9c0af397c24",
+    "TRAIN.jsonl.gz": "4466d90da55ebbb195831cf842e1edd6b7856cd5c288e68db9ec7b4e3f4daea9"
+  },
+  "new_environment_steps": 0,
+  "shared_helpers": [
+    "visible prefix schema",
+    "clipped working mean",
+    "response fitting/point optimizers",
+    "lifecycle parser",
+    "NumPy"
+  ]
+}

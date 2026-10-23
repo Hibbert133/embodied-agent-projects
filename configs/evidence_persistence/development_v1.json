@@ -1,0 +1,21 @@
+{
+  "protocol_id": "evidence_persistence_crossed_development_v1",
+  "seed_start": 8000,
+  "num_seeds": 16,
+  "reserved_seed_range": [8016, 8199],
+  "conditions": ["fault_01", "fault_02", "fault_03", "fault_04"],
+  "methods": ["PROBE_COMPENSATION", "UNCORRECTED"],
+  "probe_max_steps": 64,
+  "verification_max_steps": 500,
+  "case_max_steps": 564,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261013,
+  "minimum_interaction": 0.10,
+  "minimum_aligned_benefit": 0.10,
+  "require_positive_cluster_interval": true,
+  "recovery_config": "configs/autoresearch/default_recovery_config.json",
+  "output_root": "outputs/evidence_persistence/development_v1",
+  "api_calls": 0,
+  "memory_writes": 0,
+  "all_states_included": true
+}

@@ -1,0 +1,91 @@
+# Scientific artifact hashes bind exact bytes, including Windows line endings.
+outputs/evidence_persistence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/evidence_refresh/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/probe_support/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/continuous_probe/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/response_calibration/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/calibrated_tasks/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/online_calibrated_agent/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/frame_evidence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/action_support/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/nominal_observer/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/forward_prediction/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/forward_operator/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/input_model_error/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/action_response/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/acquisition_value/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Generated SVG is retained as an exact scientific artifact, including path whitespace.
+outputs/acquisition_value/figure_v*/figure.svg -diff
+outputs/task_value_learner/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/early_evidence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/early_evidence/figure_v*/figure.svg -diff
+outputs/executable_support/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/executable_support/figure_v*/figure.svg -diff
+outputs/conditional_continuation/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/conditional_continuation/figure_v*/figure.svg -diff
+outputs/continuation_selector/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/continuation_selector/figure_v*/figure.svg -diff
+outputs/inverse_error_attribution/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/inverse_error_attribution/figure_v*/figure.svg -diff
+outputs/relative_update_evidence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/post_probe_identity/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/post_probe_identity/figure_v*/figure.svg -diff
+outputs/controller_tail_value/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/controller_tail_value/figure_v*/figure.svg -diff
+outputs/point8_baseline/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/point8_baseline/figure_v*/figure.svg -diff
+outputs/cold_start_evidence/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/cold_start_evidence/figure_v*/figure.svg -diff
+outputs/cold_start_task_bridge/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/cold_start_task_bridge/figure_v*/figure.svg -diff
+outputs/command_contrast/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/command_contrast_qualification_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/command_contrast/qualification_v1/command_contrast_20261022T015501Z_339de06a3036/result_delivery/figures/*.svg -diff
+outputs/task_passive/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/task_passive_qualification_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/task_passive/development_v1/*/result_delivery/figures/*.svg -diff
+outputs/task_passive_diagnosis/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/task_passive_diagnosis_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/task_passive_diagnosis/analysis_v1/*/result_delivery/figures/*.svg -diff
+outputs/response_action/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/response_action_reference_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/response_action/development_v1/*/result_delivery/figures/*.svg -diff
+outputs/acquisition_support/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/acquisition_support_audit_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/acquisition_support/analysis_v1/*/figures/*.svg -diff
+outputs/memory_terminal_reference/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/memory_terminal_reference_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/memory_acquisition/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/memory_acquisition_native_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/acquisition_anchor_diagnosis/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/acquisition_anchor_diagnosis_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/acquisition_anchor_diagnosis/analysis_v1/*/figures/*.svg -diff
+outputs/acquisition_reference/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/acquisition_reference_qualification_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/acquisition_reference/qualification_v1/*/figures/*.svg -diff
+outputs/acquisition_reference/qualification_v1/*/figures_v2/*.svg -diff
+outputs/acquisition_reference/qualification_v1/*/process_logs/*_whitespace_failed.log -diff
+# Preserve the exact pre-freeze EOF defect as evidence; executable source is checked.
+outputs/acquisition_reference/validation_v1/audit_before_EOF_cleanup_v1.py.saved -diff whitespace=blank-at-eol,space-before-tab,cr-at-eol
+outputs/command_target_diagnostic/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/command_target_diagnostic_v2_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/native_command_witness/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/native_command_witness_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/latent_response/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/latent_response_qualification_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/latent_response/qualification_v1/*/archives/**/*.bin binary
+docs/research/latent_response_decision_v*_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/latent_response_qualification_appendix_v*_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/latent_response_diagnosis/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/latent_response_diagnosis/**/archives/**/*.bin binary
+reports/latent_response_diagnosis_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/research/latent_response_diagnosis_decision_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/information_scope/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/information_scope_reference_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+
+outputs/memory_reset/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+reports/memory_reset_qualification_v1_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+outputs/memory_reset/**/archives/**/*.bin binary
+outputs/information_release/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/research/information_release*_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+docs/protocols/information_release*_zh.md -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

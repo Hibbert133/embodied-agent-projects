@@ -1,0 +1,843 @@
+{
+  "experiment_run_id": "short_probe_reference_20261019T042309Z_39300e556379",
+  "manifest_id": "470c763b64db660ba5f0f075508f625bda894cbadd597aab8ae7cc84cb84576f",
+  "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "phase": "SMOKE",
+  "integrity": "PASSED",
+  "executions_checked": 63,
+  "events_checked": 31827,
+  "units_checked": 9,
+  "actual_lifecycle": {
+    "counts": {
+      "reset_attempts": 3213,
+      "simulation_attempts": 329515,
+      "simulation_completed": 329515,
+      "simulation_frames_attempted": 1647575,
+      "simulation_frames_completed": 1647575,
+      "reset_completed": 3213
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 3150,
+        "simulation_attempts": 315000,
+        "simulation_completed": 315000,
+        "simulation_frames_attempted": 1575000,
+        "simulation_frames_completed": 1575000,
+        "reset_completed": 3150
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 63,
+        "simulation_attempts": 6300,
+        "simulation_completed": 6300,
+        "simulation_frames_attempted": 31500,
+        "simulation_frames_completed": 31500,
+        "reset_completed": 63
+      },
+      "CONTROL": {
+        "simulation_attempts": 8215,
+        "simulation_completed": 8215,
+        "simulation_frames_attempted": 41075,
+        "simulation_frames_completed": 41075
+      }
+    }
+  },
+  "online_computation": {
+    "total_steps": 8215,
+    "fixed_probe_steps": 324,
+    "policy_steps": 7891,
+    "online_parameter_fits": 54,
+    "optimizer_nfev": 54,
+    "policy_queries": 7891,
+    "design_verification_candidates": 5184
+  },
+  "audit_recomputation": {
+    "policy_queries": 7891,
+    "parameter_fits": 54,
+    "optimizer_nfev": 54,
+    "design_candidates": 5184
+  },
+  "required_four_step_policy_chain": true,
+  "four_step_policy_chains": [
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 0,
+      "task": "reach-v3",
+      "seed": 21200,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 0,
+      "task": "reach-v3",
+      "seed": 21200,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 0,
+      "task": "reach-v3",
+      "seed": 21200,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 0,
+      "task": "reach-v3",
+      "seed": 21200,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 1,
+      "task": "door-open-v3",
+      "seed": 21201,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 1,
+      "task": "door-open-v3",
+      "seed": 21201,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 1,
+      "task": "door-open-v3",
+      "seed": 21201,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 1,
+      "task": "door-open-v3",
+      "seed": 21201,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 2,
+      "task": "push-v3",
+      "seed": 21202,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 2,
+      "task": "push-v3",
+      "seed": 21202,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 2,
+      "task": "push-v3",
+      "seed": 21202,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 2,
+      "task": "push-v3",
+      "seed": 21202,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 3,
+      "task": "reach-v3",
+      "seed": 21203,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 3,
+      "task": "reach-v3",
+      "seed": 21203,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 3,
+      "task": "reach-v3",
+      "seed": 21203,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 3,
+      "task": "reach-v3",
+      "seed": 21203,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 4,
+      "task": "door-open-v3",
+      "seed": 21204,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 4,
+      "task": "door-open-v3",
+      "seed": 21204,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 4,
+      "task": "door-open-v3",
+      "seed": 21204,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 4,
+      "task": "door-open-v3",
+      "seed": 21204,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 5,
+      "task": "push-v3",
+      "seed": 21205,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 5,
+      "task": "push-v3",
+      "seed": 21205,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 5,
+      "task": "push-v3",
+      "seed": 21205,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 5,
+      "task": "push-v3",
+      "seed": 21205,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 6,
+      "task": "reach-v3",
+      "seed": 21206,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 6,
+      "task": "reach-v3",
+      "seed": 21206,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 6,
+      "task": "reach-v3",
+      "seed": 21206,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 6,
+      "task": "reach-v3",
+      "seed": 21206,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 7,
+      "task": "door-open-v3",
+      "seed": 21207,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 7,
+      "task": "door-open-v3",
+      "seed": 21207,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 7,
+      "task": "door-open-v3",
+      "seed": 21207,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 7,
+      "task": "door-open-v3",
+      "seed": 21207,
+      "method": "DOPT4_FALLBACK8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 8,
+      "task": "push-v3",
+      "seed": 21208,
+      "method": "BALANCED4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 8,
+      "task": "push-v3",
+      "seed": 21208,
+      "method": "DOPT4_UPDATE"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 8,
+      "task": "push-v3",
+      "seed": 21208,
+      "method": "DOPT4_KEEP_AT8"
+    },
+    {
+      "study_phase": "SMOKE",
+      "stream": 0,
+      "episode": 8,
+      "task": "push-v3",
+      "seed": 21208,
+      "method": "DOPT4_FALLBACK8"
+    }
+  ],
+  "matched_units": [
+    {
+      "stream": 0,
+      "episode": 0,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 1,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 2,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 3,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 4,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 5,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 6,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 7,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    },
+    {
+      "stream": 0,
+      "episode": 8,
+      "integrity": "REGISTERED_PREFIXES_CONSISTENT",
+      "initial_native_and_observation_matches": 6,
+      "pairs": [
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_UPDATE"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_FALLBACK8"
+          ],
+          "required_prefix_steps": 4,
+          "observed_common_steps": 4,
+          "complete": true,
+          "incomplete_reason": null
+        },
+        {
+          "methods": [
+            "DOPT8_UPDATE",
+            "DOPT4_KEEP_AT8"
+          ],
+          "required_prefix_steps": 8,
+          "observed_common_steps": 8,
+          "complete": true,
+          "incomplete_reason": null
+        }
+      ],
+      "fallback_probe_extension_observed": false,
+      "complete_prefix_pairs": 4,
+      "incomplete_prefix_pairs": 0,
+      "universal_complete_hidden_state_qualification": false,
+      "population_ownership_authenticated": false
+    }
+  ],
+  "new_environment_steps_during_audit": 0,
+  "new_reset_calls_during_audit": 0,
+  "new_api_calls_during_audit": 0,
+  "independent_physics_execution": false,
+  "universal_complete_hidden_state_qualification": false,
+  "shared_helpers": [
+    "frozen fault states/blend/fraction",
+    "journal/public numerical estimators/design/controller",
+    "fixed policy get_action",
+    "normalization/digest",
+    "NumPy noise generator"
+  ],
+  "summary_sha256": "e9e258ad6bc62bbf4eddceab73ac403ee5f1c6bd68ecffc8e88a2c61c4b85e46",
+  "completion_sha256": "242db31400f1274de0d34c7a6b384feedb46ac43a297292f3ea6ff3cb899baac"
+}

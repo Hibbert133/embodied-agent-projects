@@ -1,0 +1,61 @@
+{
+  "experiment_run_id": "observable_history_20261021T154956Z_d256a0cf6753",
+  "manifest_id": "210833e32b9ae18d9ad6f08eab55a4a2db9adebb00fc000686ea3e20a776ae5e",
+  "source_git_commit": "d256a0cf675377e1895e323648276a5309c0416b",
+  "integrity": "PASSED",
+  "split": "CAL",
+  "executions": 108,
+  "events_checked": 53794,
+  "witness_records_checked": 540,
+  "common_pre_measurement_pairs": 54,
+  "common_pre_context_change_pairs": 0,
+  "post_measurement_diverged_pairs": 44,
+  "costs": {
+    "steps": 9570,
+    "measurement_steps": 704,
+    "policy_queries": 6054,
+    "independent_cold_fit_recomputations": 216,
+    "independent_cold_fit_nfev": 216
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 5508,
+      "simulation_attempts": 560370,
+      "simulation_completed": 560370,
+      "simulation_frames_attempted": 2801850,
+      "simulation_frames_completed": 2801850,
+      "reset_completed": 5508
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 5400,
+        "simulation_attempts": 540000,
+        "simulation_completed": 540000,
+        "simulation_frames_attempted": 2700000,
+        "simulation_frames_completed": 2700000,
+        "reset_completed": 5400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 108,
+        "simulation_attempts": 10800,
+        "simulation_completed": 10800,
+        "simulation_frames_attempted": 54000,
+        "simulation_frames_completed": 54000,
+        "reset_completed": 108
+      },
+      "CONTROL": {
+        "simulation_attempts": 9570,
+        "simulation_completed": 9570,
+        "simulation_frames_attempted": 47850,
+        "simulation_frames_completed": 47850
+      }
+    }
+  },
+  "completion_sha256": "fae477dc36841bf9d1e7b83eb3533d9218caa76f6ea192fd982afdcf5cfca8fa",
+  "source_sha256": "8a3e9e36004ca95ff9b262098786c86bf18d733fa6a8e0371a1ba0cba56c9b9d",
+  "wall_ns": 46258632600,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_response_model_fits": 0,
+  "scope": "Source-generated native/Python witnesses, not independent physics reproduction."
+}

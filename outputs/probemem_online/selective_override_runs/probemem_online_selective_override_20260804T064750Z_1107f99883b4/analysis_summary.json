@@ -1,0 +1,91 @@
+{
+  "run_status": "INCOMPLETE_POPULATION",
+  "operational_cases": 40,
+  "ambiguous_cases": 3,
+  "methods": {
+    "AMBIGUITY_GATED_MEMORY_ABSTAIN": {
+      "cases": 40,
+      "accepted": 33,
+      "abstentions": 1,
+      "harmful_selections": 1,
+      "api_decisions": 3
+    },
+    "AMBIGUITY_GATED_MEMORY_FALLBACK": {
+      "cases": 40,
+      "accepted": 34,
+      "abstentions": 0,
+      "harmful_selections": 1,
+      "api_decisions": 3
+    },
+    "AMBIGUITY_GATED_STATELESS_GLM": {
+      "cases": 40,
+      "accepted": 33,
+      "abstentions": 0,
+      "harmful_selections": 2,
+      "api_decisions": 3
+    },
+    "EVALUATOR_ONLY_ORACLE": {
+      "cases": 40,
+      "accepted": 35,
+      "abstentions": 0,
+      "harmful_selections": 0,
+      "api_decisions": 0
+    },
+    "FROZEN_VARIANCE_RULE": {
+      "cases": 40,
+      "accepted": 34,
+      "abstentions": 0,
+      "harmful_selections": 1,
+      "api_decisions": 0
+    }
+  },
+  "primary_vs_frozen_changes": {
+    "changed": 2,
+    "helpful": 0,
+    "harmful": 0,
+    "tie": 2
+  },
+  "primary_vs_frozen_paired": {
+    "cases": 40,
+    "accepted_rate_difference": 0.0,
+    "bootstrap_95_ci": [
+      0.0,
+      0.0
+    ],
+    "bootstrap_samples": 10000
+  },
+  "api": {
+    "calls": 9,
+    "repairs": 0,
+    "valid": 9,
+    "all_case_three_method_call_budget": 120,
+    "call_reduction": 0.925,
+    "input_tokens": 16119,
+    "output_tokens": 22956,
+    "latency_ms": {
+      "median": 56984.44509999899,
+      "p90": 137985.9359000002,
+      "max": 137985.9359000002
+    }
+  },
+  "integrity": {
+    "chronology_violations": 0,
+    "oracle_leakage_events": 0,
+    "budget_violations": 0,
+    "random_namespace_violations": 0,
+    "future_memory_access": 0,
+    "counterfactual_memory_writes": 0,
+    "invalid_memory_ids": 0,
+    "invalid_skill_executions": 0,
+    "high_confidence_api_calls": 0
+  },
+  "promotion_gate": {
+    "evaluated": false,
+    "passed": false,
+    "checks": {},
+    "reasons": [
+      "run_incomplete_or_integrity_not_satisfied"
+    ]
+  },
+  "claim_boundary": "fresh development selective-override result; no validation, held-out, or principle claim"
+}

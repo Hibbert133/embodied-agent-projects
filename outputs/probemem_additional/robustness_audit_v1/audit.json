@@ -1,0 +1,463 @@
+{
+  "experiment_run_id": "probemem_additional_ablation_20260901T031926Z_4f9fd0b4556c",
+  "manifest_id": "759c9586f88d5bff43380b67e2bdae1931cd24e3bd57c726643e95510c6fc80f",
+  "source_git_commit": "4f9fd0b4556c11c0b730ccef787bff4beee977d1",
+  "source_status": "COMPLETED_WITH_POPULATION_IMBALANCE",
+  "audit_kind": "POST_HOC_NO_NEW_ROLLOUT_NO_PROMOTION",
+  "input_sha256": {
+    "run_status.json": "7ac04f99408bf48c245e85444b6f931b98f5818355916c85026ab597350ab21c",
+    "immutable_manifest.json": "82a5f76caf8a0645bafecbf965a7e1d47d2bc73875002a337cb6f54d6b1ee28d",
+    "population.csv": "89f3bafb533a1dc2ecf2489cee55f01e7b251f37529ebd382db40763b4402adf",
+    "decisions.csv": "bce822b160f5f72491e5b5c217fefacdfd909450c9b7373758936877b95c1927",
+    "candidate_outcomes.csv": "54819a0aba284cad49a32fc324e0f8438cc5325e12605bd7ac27b885032c5e61",
+    "analysis_summary.json": "85054e527e5102168886949d5e0567977c6a871e62d6e4d0006cd0a4dc958810"
+  },
+  "comparisons": [
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "all",
+      "n": 60,
+      "wins": 4,
+      "ties": 56,
+      "losses": 0,
+      "difference": 0.06666666666666667,
+      "exact_discordance_p_reference": 0.125
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "stable_bias",
+      "n": 52,
+      "wins": 1,
+      "ties": 51,
+      "losses": 0,
+      "difference": 0.019230769230769232,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "stochastic_noise",
+      "n": 8,
+      "wins": 3,
+      "ties": 5,
+      "losses": 0,
+      "difference": 0.375,
+      "exact_discordance_p_reference": 0.25
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "fault_01",
+      "n": 9,
+      "wins": 1,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.1111111111111111,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "fault_02",
+      "n": 9,
+      "wins": 0,
+      "ties": 9,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "fault_03",
+      "n": 15,
+      "wins": 0,
+      "ties": 15,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "fault_04",
+      "n": 19,
+      "wins": 0,
+      "ties": 19,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "EVIDENCE_ACQUISITION_ENABLED",
+      "right": "BASELINE",
+      "stratum": "fault_05",
+      "n": 8,
+      "wins": 3,
+      "ties": 5,
+      "losses": 0,
+      "difference": 0.375,
+      "exact_discordance_p_reference": 0.25
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "all",
+      "n": 60,
+      "wins": 1,
+      "ties": 59,
+      "losses": 0,
+      "difference": 0.016666666666666666,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "stable_bias",
+      "n": 52,
+      "wins": 1,
+      "ties": 51,
+      "losses": 0,
+      "difference": 0.019230769230769232,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "stochastic_noise",
+      "n": 8,
+      "wins": 0,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "fault_01",
+      "n": 9,
+      "wins": 1,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.1111111111111111,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "fault_02",
+      "n": 9,
+      "wins": 0,
+      "ties": 9,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "fault_03",
+      "n": 15,
+      "wins": 0,
+      "ties": 15,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "fault_04",
+      "n": 19,
+      "wins": 0,
+      "ties": 19,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "MEMORY_ONLY",
+      "right": "BASELINE",
+      "stratum": "fault_05",
+      "n": 8,
+      "wins": 0,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "all",
+      "n": 60,
+      "wins": 1,
+      "ties": 55,
+      "losses": 4,
+      "difference": -0.05,
+      "exact_discordance_p_reference": 0.375
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "stable_bias",
+      "n": 52,
+      "wins": 1,
+      "ties": 51,
+      "losses": 0,
+      "difference": 0.019230769230769232,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "stochastic_noise",
+      "n": 8,
+      "wins": 0,
+      "ties": 4,
+      "losses": 4,
+      "difference": -0.5,
+      "exact_discordance_p_reference": 0.125
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "fault_01",
+      "n": 9,
+      "wins": 1,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.1111111111111111,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "fault_02",
+      "n": 9,
+      "wins": 0,
+      "ties": 9,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "fault_03",
+      "n": 15,
+      "wins": 0,
+      "ties": 15,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "fault_04",
+      "n": 19,
+      "wins": 0,
+      "ties": 19,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "PROBE_MEMORY",
+      "right": "EVIDENCE_ACQUISITION_ENABLED",
+      "stratum": "fault_05",
+      "n": 8,
+      "wins": 0,
+      "ties": 4,
+      "losses": 4,
+      "difference": -0.5,
+      "exact_discordance_p_reference": 0.125
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "all",
+      "n": 60,
+      "wins": 0,
+      "ties": 60,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "stable_bias",
+      "n": 52,
+      "wins": 0,
+      "ties": 52,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "stochastic_noise",
+      "n": 8,
+      "wins": 0,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "fault_01",
+      "n": 9,
+      "wins": 0,
+      "ties": 9,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "fault_02",
+      "n": 9,
+      "wins": 0,
+      "ties": 9,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "fault_03",
+      "n": 15,
+      "wins": 0,
+      "ties": 15,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "fault_04",
+      "n": 19,
+      "wins": 0,
+      "ties": 19,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    },
+    {
+      "left": "FULL_PROBEMEM",
+      "right": "PROBE_MEMORY",
+      "stratum": "fault_05",
+      "n": 8,
+      "wins": 0,
+      "ties": 8,
+      "losses": 0,
+      "difference": 0.0,
+      "exact_discordance_p_reference": 1.0
+    }
+  ],
+  "frozen_decision_sensitivity": [
+    {
+      "method": "BASELINE",
+      "n_states": 60,
+      "accepted_by_realization": [
+        51,
+        54,
+        52,
+        51
+      ],
+      "nonexecuted_failure_states": 2,
+      "frozen_action_mean_acceptance": 0.8666666666666667
+    },
+    {
+      "method": "MEMORY_ONLY",
+      "n_states": 60,
+      "accepted_by_realization": [
+        52,
+        54,
+        53,
+        53
+      ],
+      "nonexecuted_failure_states": 3,
+      "frozen_action_mean_acceptance": 0.8833333333333333
+    },
+    {
+      "method": "EVIDENCE_ACQUISITION_ENABLED",
+      "n_states": 60,
+      "accepted_by_realization": [
+        55,
+        57,
+        53,
+        52
+      ],
+      "nonexecuted_failure_states": 1,
+      "frozen_action_mean_acceptance": 0.9041666666666667
+    },
+    {
+      "method": "PROBE_MEMORY",
+      "n_states": 60,
+      "accepted_by_realization": [
+        52,
+        55,
+        56,
+        55
+      ],
+      "nonexecuted_failure_states": 1,
+      "frozen_action_mean_acceptance": 0.9083333333333333
+    },
+    {
+      "method": "FULL_PROBEMEM",
+      "n_states": 60,
+      "accepted_by_realization": [
+        52,
+        55,
+        56,
+        55
+      ],
+      "nonexecuted_failure_states": 1,
+      "frozen_action_mean_acceptance": 0.9083333333333333
+    }
+  ],
+  "historical_paired_bootstrap": {
+    "MEMORY_ONLY_MINUS_BASELINE": {
+      "difference": 0.01666666666666672,
+      "lower": 0.0,
+      "upper": 0.05
+    },
+    "PROBE_MEMORY_MINUS_EVIDENCE_ACQUISITION": {
+      "difference": -0.04999999999999993,
+      "lower": -0.11666666666666667,
+      "upper": 0.016666666666666666
+    },
+    "FULL_MINUS_PROBE_MEMORY": {
+      "difference": 0.0,
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    "EVIDENCE_ACQUISITION_MINUS_BASELINE": {
+      "difference": 0.06666666666666665,
+      "lower": 0.016666666666666666,
+      "upper": 0.13333333333333333
+    }
+  },
+  "limitations": [
+    "Exact discordance p-values are exploratory reference calculations, not new promotion gates.",
+    "Chronological memory induces dependence; episode-wise bootstrap and binomial references do not establish policy-level uncertainty.",
+    "Four realizations reuse fixed decisions from the original memory history; this is not a replay of four online policies or 240 independent states.",
+    "Blank-skill, zero-step REJECTED records are nonexecuted plan failures, retained in the denominator, not physical verification trials.",
+    "Zero observed paired differences do not establish equivalence or a zero population effect.",
+    "Strata are evaluator-only, post-hoc, small, and unadjusted for multiple comparisons."
+  ],
+  "audit_code_sha256": "903f61080c9f6c2c6aeafede37e1b18c814c797a3818301acd72d331cf7b67df",
+  "audit_base_git_commit": "30649dfc6df267d9177cc6b78b6a653cc2b79315"
+}

@@ -1,0 +1,1619 @@
+{
+  "experiment_run_id": "delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55",
+  "manifest_id": "ae549ee2e9cfdcac76a8f565db1f04321c22f6ebaac93d18694eec783aee6b6a",
+  "source_git_commit": "1ba6b7b81e559f3a4de55189e61ef579f4920b9c",
+  "integrity": "PASSED",
+  "qualification": "QUALIFIED",
+  "failure": null,
+  "task_checks": [
+    {
+      "task": "push-v3",
+      "seed": 21600,
+      "all_boundaries_ready": true,
+      "matched_prefixes": true,
+      "direct_loop_equal": true,
+      "three_distinct_first_commands": true,
+      "stop_has_zero_suffix": true
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601,
+      "all_boundaries_ready": true,
+      "matched_prefixes": true,
+      "direct_loop_equal": true,
+      "three_distinct_first_commands": true,
+      "stop_has_zero_suffix": true
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602,
+      "all_boundaries_ready": true,
+      "matched_prefixes": true,
+      "direct_loop_equal": true,
+      "three_distinct_first_commands": true,
+      "stop_has_zero_suffix": true
+    }
+  ],
+  "legacy_full_fingerprint_checks": [
+    {
+      "task": "push-v3",
+      "seed": 21600,
+      "all_boundaries_ready": true,
+      "matched_prefixes": false,
+      "direct_loop_equal": false,
+      "three_distinct_first_commands": true,
+      "stop_has_zero_suffix": true
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601,
+      "all_boundaries_ready": true,
+      "matched_prefixes": false,
+      "direct_loop_equal": false,
+      "three_distinct_first_commands": true,
+      "stop_has_zero_suffix": true
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602,
+      "all_boundaries_ready": true,
+      "matched_prefixes": false,
+      "direct_loop_equal": false,
+      "three_distinct_first_commands": true,
+      "stop_has_zero_suffix": true
+    }
+  ],
+  "witness_pair_diagnostics": [
+    {
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "SWITCH_SAVED",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "7251e4095b2a9dbd27f38f5553c98fbd366ab6df7c4c5980c1503231c2c2dc83",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "7251e4095b2a9dbd27f38f5553c98fbd366ab6df7c4c5980c1503231c2c2dc83",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "RUN_UNCORRECTED",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "8137d1255763770d78948c73bb7d0299360e4407da2868c1d794339bb23948df",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "8137d1255763770d78948c73bb7d0299360e4407da2868c1d794339bb23948df",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "STOP",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "122e804bc65065f2af7d724706234711f70e4395bc4bcd784a842a4507a778a8",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "122e804bc65065f2af7d724706234711f70e4395bc4bcd784a842a4507a778a8",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "DIRECT_CURRENT",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "407638f74a977283812e2f9b2aa5b9ad3ebada2bb5b110d8b60b646f84f67f1c",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "407638f74a977283812e2f9b2aa5b9ad3ebada2bb5b110d8b60b646f84f67f1c",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true,
+      "ending": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "bd86eb880a037f8e8314fa224d691ff96a6c03391625774af3f2255173b5d5cc",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "407638f74a977283812e2f9b2aa5b9ad3ebada2bb5b110d8b60b646f84f67f1c",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "complete_physical_trajectory_equal": true,
+      "final_observation_and_counts_equal": true
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "SWITCH_SAVED",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "855db79edc505914173ebdcdd6cd7e9a7e3194aa24cb38e3c73988702ac3f9a9",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "855db79edc505914173ebdcdd6cd7e9a7e3194aa24cb38e3c73988702ac3f9a9",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "RUN_UNCORRECTED",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "ac390ef4a41f59a3dad2b802ebaa7555788d14007469fe304ae9ae9934a173b8",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "ac390ef4a41f59a3dad2b802ebaa7555788d14007469fe304ae9ae9934a173b8",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "STOP",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "f8d46123796113753e0330c73a5ea5e22f2d8435268422f7e29648e0e30f7b52",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "f8d46123796113753e0330c73a5ea5e22f2d8435268422f7e29648e0e30f7b52",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "DIRECT_CURRENT",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "0b29f48491fa7984aaa0e7ab82ab745cb843a869a047923d1ca69d66e568bee2",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "0b29f48491fa7984aaa0e7ab82ab745cb843a869a047923d1ca69d66e568bee2",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true,
+      "ending": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2c903b631ffaa8d58967fe921b3c1d76bc4097e70c47aa0df40630ee9d01db10",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "0b29f48491fa7984aaa0e7ab82ab745cb843a869a047923d1ca69d66e568bee2",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "complete_physical_trajectory_equal": true,
+      "final_observation_and_counts_equal": true
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "SWITCH_SAVED",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "3f6febd62b97116a9188cd22935e68c4a40bc3d181eee5fbfc29722f78fd3974",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "3f6febd62b97116a9188cd22935e68c4a40bc3d181eee5fbfc29722f78fd3974",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "RUN_UNCORRECTED",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2f0d304ed9e631092c96c3723d94d3dbcf29f2cdb4c0a0013281839ea49c02f8",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "2f0d304ed9e631092c96c3723d94d3dbcf29f2cdb4c0a0013281839ea49c02f8",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "STOP",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "6c76fe84bed7978d4c0addea1c8088eaeec96ce6485294edf481619f14f19884",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "6c76fe84bed7978d4c0addea1c8088eaeec96ce6485294edf481619f14f19884",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true
+    },
+    {
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "DIRECT_CURRENT",
+      "initial": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "7e615f25874503ea19dd27f02221384f310490600970f4c8ebf8dac5f684e9c9",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "boundary": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "7e615f25874503ea19dd27f02221384f310490600970f4c8ebf8dac5f684e9c9",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "initial_observation_equal": true,
+      "physical_prefix16_equal": true,
+      "ending": {
+        "same_native": true,
+        "same_full_python": false,
+        "same_comparison_python": true,
+        "comparison_equal": true,
+        "component_differences": [
+          {
+            "path": [
+              "layers",
+              4,
+              "episode_start_time"
+            ],
+            "left": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "50f8c8060218f5653ebe9ab74905182ea46bbe6ecb699d98ef4109a3339f8f64",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            },
+            "right": {
+              "path": [
+                "layers",
+                4,
+                "episode_start_time"
+              ],
+              "raw_sha256": "7e615f25874503ea19dd27f02221384f310490600970f4c8ebf8dac5f684e9c9",
+              "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+            }
+          }
+        ],
+        "only_registered_timing_components_differ": true
+      },
+      "complete_physical_trajectory_equal": true,
+      "final_observation_and_counts_equal": true
+    }
+  ],
+  "methods": [
+    {
+      "variant": "CONTINUE_CURRENT",
+      "executions": 3,
+      "successes": 3,
+      "failures": 0,
+      "stops": 0,
+      "unavailable_boundaries": 0,
+      "control_steps": 234,
+      "deadline_loss_total": 234,
+      "historical_nominal_cost": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "historical_steps_amortized_per_unit": 1280.0
+    },
+    {
+      "variant": "SWITCH_SAVED",
+      "executions": 3,
+      "successes": 3,
+      "failures": 0,
+      "stops": 0,
+      "unavailable_boundaries": 0,
+      "control_steps": 237,
+      "deadline_loss_total": 237,
+      "historical_nominal_cost": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "historical_steps_amortized_per_unit": 1280.0
+    },
+    {
+      "variant": "RUN_UNCORRECTED",
+      "executions": 3,
+      "successes": 2,
+      "failures": 1,
+      "stops": 0,
+      "unavailable_boundaries": 0,
+      "control_steps": 672,
+      "deadline_loss_total": 672,
+      "historical_nominal_cost": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "historical_steps_amortized_per_unit": 1280.0
+    },
+    {
+      "variant": "STOP",
+      "executions": 3,
+      "successes": 0,
+      "failures": 3,
+      "stops": 3,
+      "unavailable_boundaries": 0,
+      "control_steps": 48,
+      "deadline_loss_total": 1500,
+      "historical_nominal_cost": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "historical_steps_amortized_per_unit": 1280.0
+    },
+    {
+      "variant": "DIRECT_CURRENT",
+      "executions": 3,
+      "successes": 3,
+      "failures": 0,
+      "stops": 0,
+      "unavailable_boundaries": 0,
+      "control_steps": 234,
+      "deadline_loss_total": 234,
+      "historical_nominal_cost": {
+        "environment_steps": 3840,
+        "controlled_resets": 480,
+        "all_reset_calls": 24480,
+        "simulation_frames": 12259200
+      },
+      "historical_steps_amortized_per_unit": 1280.0
+    }
+  ],
+  "execution_rows": [
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "CONTINUE_CURRENT",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 83,
+      "deadline_loss": 83,
+      "boundary_ready": true,
+      "host_attempts": 83,
+      "host_returned": 83,
+      "policy_queries": 75,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "SWITCH_SAVED",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 86,
+      "deadline_loss": 86,
+      "boundary_ready": true,
+      "host_attempts": 86,
+      "host_returned": 86,
+      "policy_queries": 78,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "RUN_UNCORRECTED",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 85,
+      "deadline_loss": 85,
+      "boundary_ready": true,
+      "host_attempts": 85,
+      "host_returned": 85,
+      "policy_queries": 77,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "STOP",
+      "completed": true,
+      "success": false,
+      "stopped": true,
+      "total_steps": 16,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 16,
+      "host_returned": 16,
+      "policy_queries": 8,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "DIRECT_CURRENT",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 83,
+      "deadline_loss": 83,
+      "boundary_ready": true,
+      "host_attempts": 83,
+      "host_returned": 83,
+      "policy_queries": 75,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "CONTINUE_CURRENT",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 65,
+      "deadline_loss": 65,
+      "boundary_ready": true,
+      "host_attempts": 65,
+      "host_returned": 65,
+      "policy_queries": 57,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "SWITCH_SAVED",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 65,
+      "deadline_loss": 65,
+      "boundary_ready": true,
+      "host_attempts": 65,
+      "host_returned": 65,
+      "policy_queries": 57,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "RUN_UNCORRECTED",
+      "completed": true,
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 500,
+      "host_returned": 500,
+      "policy_queries": 492,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "STOP",
+      "completed": true,
+      "success": false,
+      "stopped": true,
+      "total_steps": 16,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 16,
+      "host_returned": 16,
+      "policy_queries": 8,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "DIRECT_CURRENT",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 65,
+      "deadline_loss": 65,
+      "boundary_ready": true,
+      "host_attempts": 65,
+      "host_returned": 65,
+      "policy_queries": 57,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "CONTINUE_CURRENT",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 86,
+      "deadline_loss": 86,
+      "boundary_ready": true,
+      "host_attempts": 86,
+      "host_returned": 86,
+      "policy_queries": 78,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "SWITCH_SAVED",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 86,
+      "deadline_loss": 86,
+      "boundary_ready": true,
+      "host_attempts": 86,
+      "host_returned": 86,
+      "policy_queries": 78,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "RUN_UNCORRECTED",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 87,
+      "deadline_loss": 87,
+      "boundary_ready": true,
+      "host_attempts": 87,
+      "host_returned": 87,
+      "policy_queries": 79,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "STOP",
+      "completed": true,
+      "success": false,
+      "stopped": true,
+      "total_steps": 16,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 16,
+      "host_returned": 16,
+      "policy_queries": 8,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "DIRECT_CURRENT",
+      "completed": true,
+      "success": true,
+      "stopped": false,
+      "total_steps": 86,
+      "deadline_loss": 86,
+      "boundary_ready": true,
+      "host_attempts": 86,
+      "host_returned": 86,
+      "policy_queries": 78,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    }
+  ],
+  "failures": [
+    {
+      "unit": 0,
+      "task": "push-v3",
+      "seed": 21600,
+      "variant": "STOP",
+      "completed": true,
+      "success": false,
+      "stopped": true,
+      "total_steps": 16,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 16,
+      "host_returned": 16,
+      "policy_queries": 8,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "RUN_UNCORRECTED",
+      "completed": true,
+      "success": false,
+      "stopped": false,
+      "total_steps": 500,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 500,
+      "host_returned": 500,
+      "policy_queries": 492,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 1,
+      "task": "reach-v3",
+      "seed": 21601,
+      "variant": "STOP",
+      "completed": true,
+      "success": false,
+      "stopped": true,
+      "total_steps": 16,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 16,
+      "host_returned": 16,
+      "policy_queries": 8,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    },
+    {
+      "unit": 2,
+      "task": "door-open-v3",
+      "seed": 21602,
+      "variant": "STOP",
+      "completed": true,
+      "success": false,
+      "stopped": true,
+      "total_steps": 16,
+      "deadline_loss": 500,
+      "boundary_ready": true,
+      "host_attempts": 16,
+      "host_returned": 16,
+      "policy_queries": 8,
+      "parameter_fit_attempts": 2,
+      "parameter_fit_results": 2,
+      "optimizer_nfev": 2,
+      "optimizer_nfev_complete": true
+    }
+  ],
+  "unavailable_boundaries": [],
+  "event_count": 7341,
+  "executions": 15,
+  "costs": {
+    "new_control_steps": 1425,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 765,
+        "simulation_attempts": 77925,
+        "simulation_completed": 77925,
+        "simulation_frames_attempted": 389625,
+        "simulation_frames_completed": 389625,
+        "reset_completed": 765
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 750,
+          "simulation_attempts": 75000,
+          "simulation_completed": 75000,
+          "simulation_frames_attempted": 375000,
+          "simulation_frames_completed": 375000,
+          "reset_completed": 750
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 15,
+          "simulation_attempts": 1500,
+          "simulation_completed": 1500,
+          "simulation_frames_attempted": 7500,
+          "simulation_frames_completed": 7500,
+          "reset_completed": 15
+        },
+        "CONTROL": {
+          "simulation_attempts": 1425,
+          "simulation_completed": 1425,
+          "simulation_frames_attempted": 7125,
+          "simulation_frames_completed": 7125
+        }
+      }
+    },
+    "collection_wall_ns": 58832919300,
+    "host_attempts": 1425,
+    "host_returned": 1425,
+    "policy_queries": 1305,
+    "parameter_fit_attempts": 30,
+    "parameter_fit_results": 30,
+    "optimizer_nfev": 30,
+    "private_witness_records": 45,
+    "witness_construction_wall_ns": 19272858300,
+    "historical_nominal_cost_paid_once": {
+      "environment_steps": 3840,
+      "controlled_resets": 480,
+      "all_reset_calls": 24480,
+      "simulation_frames": 12259200
+    },
+    "historical_design_preparation": {
+      "enumerations": 3,
+      "candidate_rows": 432
+    },
+    "historical_qualification_v1_cost": {
+      "environment_steps": 1377,
+      "controlled_resets": 15,
+      "all_reset_calls": 765,
+      "simulation_frames": 389385
+    },
+    "new_api_calls": 0,
+    "new_nominal_training": 0,
+    "new_selector_fits": 0,
+    "policy_updates": 0
+  },
+  "audit_computations": {
+    "recomputed_policy_queries": 1305,
+    "recomputed_parameter_fits": 30,
+    "recomputed_optimizer_nfev": 30
+  },
+  "collection_artifact_sha256": {
+    "cases.jsonl.gz": "d9265cdd157f25ce2e2d20ed02e562fbc7fb39097b955731d2019d0298954020",
+    "events.jsonl.gz": "49481894ca9d5f384caa5a0630f06577d40075084a7df02d5d1161370e69f132",
+    "state_witnesses.jsonl.gz": "77405c651955264a7374df4066d2ade3ff7cad7754bf3117fbfd0b35944b8bac",
+    "status.json": "e769ff9aa012ba19d26f87564e0fbdbec277b224eaa097d51c52e8cd9eea3977",
+    "summary.json": "12545b17415b79c995dbb61afef7cc38b6f287f63dcf66b83855b6f3c0aab9af",
+    "completion.json": "9f499f048b5d58624db040de99607cb18914c8f69c062037a6aef9d2162fcf86"
+  },
+  "source_v1_qualification_unchanged": "NOT_QUALIFIED",
+  "comparison_contract": "EXACT_STATISTICS_TIMING_VALUES_ONLY",
+  "limitations": [
+    "SOURCE_GENERATED_STATE_WITNESSES_NOT_EXTERNAL_PHYSICS",
+    "SHARED_GRAPH_SERIALIZER_AND_PROJECTION",
+    "ONLY_THREE_QUALIFICATION_STATES_NOT_ALGORITHM_UTILITY",
+    "NO_RETROSPECTIVE_PROMOTION_OF_V1"
+  ],
+  "audit_wall_ns": 6335757600
+}

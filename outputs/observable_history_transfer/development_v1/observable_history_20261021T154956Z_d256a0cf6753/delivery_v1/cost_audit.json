@@ -1,0 +1,52 @@
+{
+  "integrity": "PASSED",
+  "actual_scientific_costs": {
+    "executions": 756,
+    "control_steps": 71773,
+    "all_resets": 38556,
+    "physical_frames": 19636865,
+    "controlled_resets": 756,
+    "factory_resets": 37800,
+    "c4_c8_fit_attempts": 1512,
+    "measurement_steps": 5159
+  },
+  "scientific_response_fits": 30,
+  "gru_optimizer_updates": 60000,
+  "audit_only_computations": {
+    "independent_cold_fit_recomputations": 1512,
+    "independent_cold_fit_nfev": 1518,
+    "augmented_ridge_reconstructions": 18,
+    "gru_optimizer_replays": 0
+  },
+  "source_completions_sha256": {
+    "TRAIN": "8020f39ed2a717f610a316c35d8af5381491fba55b71572e2d2daf5c4237d0dd",
+    "CAL": "fae477dc36841bf9d1e7b83eb3533d9218caa76f6ea192fd982afdcf5cfca8fa",
+    "TEST": "a05af72b3f288409e8412a2e3fe9509cc64be9e145b2780d79150582c1e7cdba"
+  },
+  "source_fees_separate": {
+    "previous_response_qualification": {
+      "executions": 270,
+      "control_steps": 23716,
+      "all_resets": 13770,
+      "physical_frames": 7003580,
+      "c4_c8_fits": 540,
+      "response_fits": 6
+    },
+    "nominal_c8_bank": {
+      "source_summary": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/summary.json",
+      "source_summary_sha256": "8c5f1961d2984bad4952d2ecbf205d255b80d8d122d3338ba4e5e9c0af397c24",
+      "model_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad",
+      "training_episodes": 384,
+      "qualification_episodes": 96,
+      "control_steps": 3840,
+      "controlled_resets": 480,
+      "all_resets": 24480,
+      "physical_frames": 12259200,
+      "new_this_study": false
+    }
+  },
+  "software_cost_scope": "Full-suite instrumented native fixtures are separately recorded in freeze_validation_v1/unittest_native_costs.json. Preliminary console software attempts are outside that receipt; no scientific population or API calls occurred in them.",
+  "new_api_calls": 0,
+  "delivery_new_environment_steps": 0,
+  "delivery_new_model_fits": 0
+}

@@ -1,0 +1,2724 @@
+{
+  "scope": "Instrumented native fixtures only; earlier unrecorded test attempts and other repository fixtures are not covered.",
+  "modules": {
+    "test_physical_reprobe_qualification_v1": {
+      "PIPELINE_RECEIPTS": [
+        {
+          "completed": true,
+          "partial_requested": false,
+          "rows": [
+            {
+              "unit": 0,
+              "task": "push-v3",
+              "seed": 700111,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 1,
+              "task": "reach-v3",
+              "seed": 700112,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 32,
+              "completed": true,
+              "boundary_ready": false,
+              "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+              "complete_window": false,
+              "success": true,
+              "total_steps": 24,
+              "reposition_steps": 0,
+              "probe_steps": 0,
+              "host_attempts": 24,
+              "host_returned": 24,
+              "policy_queries": 16,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 2,
+              "task": "door-open-v3",
+              "seed": 700113,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 64,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "ANCHOR_NOT_REACHED",
+              "complete_window": false,
+              "success": false,
+              "total_steps": 128,
+              "reposition_steps": 64,
+              "probe_steps": 0,
+              "host_attempts": 128,
+              "host_returned": 128,
+              "policy_queries": 56,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 3,
+              "task": "reach-v3",
+              "seed": 700114,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            },
+            {
+              "unit": 4,
+              "task": "door-open-v3",
+              "seed": 700115,
+              "variant": "PHYSICAL_REPROBE",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3
+            }
+          ],
+          "audit": {
+            "experiment_run_id": "PHYSICAL_REPROBE_TINY_SOFTWARE_ONLY",
+            "manifest_id": "SOFTWARE_MANIFEST",
+            "source_git_commit": "SOFTWARE_COMMIT",
+            "integrity": "PASSED",
+            "computations_complete": true,
+            "qualification": "QUALIFIED",
+            "executions": 5,
+            "event_count": 1500,
+            "task_rows": [
+              {
+                "task": "push-v3",
+                "executions": 1,
+                "available_boundaries": 1,
+                "complete_windows": 1
+              },
+              {
+                "task": "reach-v3",
+                "executions": 2,
+                "available_boundaries": 1,
+                "complete_windows": 1
+              },
+              {
+                "task": "door-open-v3",
+                "executions": 2,
+                "available_boundaries": 2,
+                "complete_windows": 1
+              }
+            ],
+            "rows": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700111,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 1,
+                "task": "reach-v3",
+                "seed": 700112,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 32,
+                "completed": true,
+                "boundary_ready": false,
+                "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+                "complete_window": false,
+                "success": true,
+                "total_steps": 24,
+                "reposition_steps": 0,
+                "probe_steps": 0,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 2,
+                "task": "door-open-v3",
+                "seed": 700113,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 64,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "ANCHOR_NOT_REACHED",
+                "complete_window": false,
+                "success": false,
+                "total_steps": 128,
+                "reposition_steps": 64,
+                "probe_steps": 0,
+                "host_attempts": 128,
+                "host_returned": 128,
+                "policy_queries": 56,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 3,
+                "task": "reach-v3",
+                "seed": 700114,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              },
+              {
+                "unit": 4,
+                "task": "door-open-v3",
+                "seed": 700115,
+                "variant": "PHYSICAL_REPROBE",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3
+              }
+            ],
+            "private_witness_records": 15,
+            "witness_construction_wall_ns": 427666500,
+            "context_arrays_and_counters_reconstructed": true,
+            "measurement_model_qualified": false,
+            "task_utility_demonstrated": false,
+            "costs": {
+              "new_control_steps": 233,
+              "lifecycle": {
+                "counts": {
+                  "reset_attempts": 255,
+                  "simulation_attempts": 25733,
+                  "simulation_completed": 25733,
+                  "simulation_frames_attempted": 128665,
+                  "simulation_frames_completed": 128665,
+                  "reset_completed": 255
+                },
+                "by_phase": {
+                  "GOAL_GENERATION": {
+                    "reset_attempts": 250,
+                    "simulation_attempts": 25000,
+                    "simulation_completed": 25000,
+                    "simulation_frames_attempted": 125000,
+                    "simulation_frames_completed": 125000,
+                    "reset_completed": 250
+                  },
+                  "CONTROLLED_RESET": {
+                    "reset_attempts": 5,
+                    "simulation_attempts": 500,
+                    "simulation_completed": 500,
+                    "simulation_frames_attempted": 2500,
+                    "simulation_frames_completed": 2500,
+                    "reset_completed": 5
+                  },
+                  "CONTROL": {
+                    "simulation_attempts": 233,
+                    "simulation_completed": 233,
+                    "simulation_frames_attempted": 1165,
+                    "simulation_frames_completed": 1165
+                  }
+                }
+              },
+              "collection_wall_ns": 2027595900,
+              "host_attempts": 233,
+              "host_returned": 233,
+              "policy_queries": 96,
+              "parameter_fit_attempts": 10,
+              "parameter_fit_results": 10,
+              "optimizer_nfev": 15,
+              "historical_nominal_cost": {
+                "environment_steps": 3840,
+                "controlled_resets": 480,
+                "all_reset_calls": 24480,
+                "simulation_frames": 12259200
+              },
+              "new_api_calls": 0
+            },
+            "audit_computations": {
+              "recomputed_policy_queries": 96,
+              "recomputed_parameter_fits": 10,
+              "recomputed_optimizer_nfev": 15
+            },
+            "collection_artifact_sha256": {
+              "cases.jsonl.gz": "f6ecd8682b787a632c2eb71da969e1ae4692449fe8216b464d9d24ebbf78f4fa",
+              "events.jsonl.gz": "88d10cb4225f41668980977252a12f4fd1496b029856e4defa245bfc15f4423c",
+              "state_witnesses.jsonl.gz": "89acbd646e6bda04f616873d73881ca69ebb675403b10dfe3019b3f260d028da",
+              "status.json": "3bbc9ea3e0535779eb38d89b12b02c9a71759a4c5cae69905aecce4ffc624b8b",
+              "summary.json": "d8bb5a0356a48018b150ee3475457129d1efafed0c9413a986993a51579482b6"
+            },
+            "audit_wall_ns": 1136044500
+          },
+          "native_frames": 128665,
+          "actual_policy_queries": 96,
+          "constructed_tiny_envs": 5,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 255,
+              "simulation_attempts": 25733,
+              "simulation_frames_attempted": 128665,
+              "simulation_completed": 25733,
+              "simulation_frames_completed": 128665,
+              "reset_completed": 255
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 250,
+                "simulation_attempts": 25000,
+                "simulation_frames_attempted": 125000,
+                "simulation_completed": 25000,
+                "simulation_frames_completed": 125000,
+                "reset_completed": 250
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 5,
+                "simulation_attempts": 500,
+                "simulation_frames_attempted": 2500,
+                "simulation_completed": 500,
+                "simulation_frames_completed": 2500,
+                "reset_completed": 5
+              },
+              "CONTROL": {
+                "simulation_attempts": 233,
+                "simulation_frames_attempted": 1165,
+                "simulation_completed": 233,
+                "simulation_frames_completed": 1165
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "completed": true,
+          "partial_requested": true,
+          "rows": [],
+          "audit": null,
+          "native_frames": 25600,
+          "actual_policy_queries": 8,
+          "constructed_tiny_envs": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5120,
+              "simulation_frames_attempted": 25600,
+              "simulation_completed": 5120,
+              "simulation_frames_completed": 25600,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        }
+      ]
+    },
+    "test_physical_reprobe_host_v1": {
+      "SOFTWARE_RECEIPTS": [
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_additional_native_frames_are_detected_immediately",
+          "native_frames": 55,
+          "native_resets": 1,
+          "host_control_steps": 10,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 11,
+              "simulation_frames_attempted": 55,
+              "simulation_completed": 11,
+              "simulation_frames_completed": 55
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 11,
+                "simulation_frames_attempted": 55,
+                "simulation_completed": 11,
+                "simulation_frames_completed": 55
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_equal_valued_replacement_noise_tape_is_rejected",
+          "native_frames": 50,
+          "native_resets": 1,
+          "host_control_steps": 10,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 10,
+              "simulation_frames_attempted": 50,
+              "simulation_completed": 10,
+              "simulation_frames_completed": 50
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 10,
+                "simulation_frames_attempted": 50,
+                "simulation_completed": 10,
+                "simulation_frames_completed": 50
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_last_command_must_apply_saved_controller_to_its_raw_policy",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_missing_whole_study_budget_does_not_start",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_prior_restore_or_copy_is_not_admitted",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_real_mid_operation_reset_is_detected",
+          "native_frames": 50,
+          "native_resets": 2,
+          "host_control_steps": 10,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 2,
+              "reset_completed": 2,
+              "simulation_attempts": 10,
+              "simulation_frames_attempted": 50,
+              "simulation_completed": 10,
+              "simulation_frames_completed": 50
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 2,
+                "reset_completed": 2
+              },
+              "CONTROL": {
+                "simulation_attempts": 10,
+                "simulation_frames_attempted": 50,
+                "simulation_completed": 10,
+                "simulation_frames_completed": 50
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_repeated_acquisition_is_rejected_without_more_physics",
+          "native_frames": 100,
+          "native_resets": 1,
+          "host_control_steps": 20,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 20,
+              "simulation_frames_attempted": 100,
+              "simulation_completed": 20,
+              "simulation_frames_completed": 100
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_saved_operation_physically_executes_without_reset_or_new_fit",
+          "native_frames": 100,
+          "native_resets": 1,
+          "host_control_steps": 20,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 20,
+              "simulation_frames_attempted": 100,
+              "simulation_completed": 20,
+              "simulation_frames_completed": 100
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_source_correction_must_match_saved_fit",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_source_fit_saved_after_command_is_rejected",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_source_must_be_the_last_actually_applied_correction",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        },
+        {
+          "test": "test_physical_reprobe_host_v1.PhysicalReprobeHostTests.test_stale_or_changed_initial_public_observation_is_rejected",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture with a synthetic known correction; no qualified identification."
+        }
+      ]
+    },
+    "test_delayed_switch_effects_v1": {
+      "SOFTWARE_RECEIPTS": [
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_allocation_fault_missing_and_extra_records_rejected",
+          "policy_queries": 843,
+          "fit_calls": 22,
+          "optimizer_nfev": 22,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_collector_dispatches_each_saved_fault_and_refuses_overwrite",
+          "policy_queries": 0,
+          "fit_calls": 0,
+          "optimizer_nfev": 0,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_collector_preserves_partial_failure_and_stops_allocation",
+          "policy_queries": 0,
+          "fit_calls": 0,
+          "optimizer_nfev": 0,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_complete_generator_allocation_and_exact_config",
+          "policy_queries": 0,
+          "fit_calls": 0,
+          "optimizer_nfev": 0,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_independent_statistic_check_rejects_changed_result",
+          "policy_queries": 0,
+          "fit_calls": 0,
+          "optimizer_nfev": 0,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_physical_cost_and_summary_mutations_rejected",
+          "policy_queries": 920,
+          "fit_calls": 24,
+          "optimizer_nfev": 24,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_private_timing_state_and_public_leak_rejected",
+          "policy_queries": 225,
+          "fit_calls": 6,
+          "optimizer_nfev": 6,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_real_saved_first_three_cases_stream_replay",
+          "policy_queries": 230,
+          "fit_calls": 6,
+          "optimizer_nfev": 6,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        },
+        {
+          "test": "test_delayed_switch_effects_v1.DelayedSwitchEffectsTests.test_statistics_preserve_denominator_and_whole_group_ci",
+          "policy_queries": 0,
+          "fit_calls": 0,
+          "optimizer_nfev": 0,
+          "new_environment_steps": 0,
+          "new_resets": 0,
+          "new_api_calls": 0,
+          "new_scientific_seeds": 0,
+          "scope": "Read-only committed v2 cases and synthetic statistics; no factory."
+        }
+      ]
+    },
+    "test_continuous_state_witness_v1": {
+      "SOFTWARE_RECEIPTS": [
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_actual_native_steps_are_counted_and_witness_reads_add_none",
+          "native_frames": 10,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 2,
+          "policy_queries": 2,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_alias_topology_and_future_noise_remain_in_comparison",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_all_random_states_are_preserved",
+          "native_frames": 0,
+          "native_forward_calls": 6,
+          "constructed_tiny_envs": 6,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_comparison_does_not_accept_different_wrapper_identity",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_independent_wrapped_instances_keep_only_timing_difference",
+          "native_frames": 0,
+          "native_forward_calls": 2,
+          "constructed_tiny_envs": 2,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_invalid_timing_values_fail_closed",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_live_method_changes_rejected",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_matches_frozen_hash_and_survives_json_roundtrip",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_only_exact_statistics_class_and_fields_are_reviewed",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_raw_graph_edits_components_and_source_bindings_are_checked",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_task_counters_rewards_policy_context_and_native_differences_remain",
+          "native_frames": 0,
+          "native_forward_calls": 12,
+          "constructed_tiny_envs": 12,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_timing_queue_alias_cannot_be_silently_projected",
+          "native_frames": 0,
+          "native_forward_calls": 1,
+          "constructed_tiny_envs": 1,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "test": "test_continuous_state_witness_v1.ContinuousStateWitnessTest.test_uninitialized_timer_and_queue_structure_are_not_erased",
+          "native_frames": 0,
+          "native_forward_calls": 4,
+          "constructed_tiny_envs": 4,
+          "environment_step_attempts": 0,
+          "policy_queries": 0,
+          "environment_reset_attempts": 0,
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        }
+      ]
+    },
+    "test_delayed_intervention_qualification_v2": {
+      "PIPELINE_RECEIPTS": [
+        {
+          "completed": true,
+          "native_frames": 384180,
+          "actual_policy_queries": 216,
+          "constructed_tiny_envs": 15,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 765,
+              "simulation_attempts": 76836,
+              "simulation_frames_attempted": 384180,
+              "simulation_completed": 76836,
+              "simulation_frames_completed": 384180,
+              "reset_completed": 765
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 750,
+                "simulation_attempts": 75000,
+                "simulation_frames_attempted": 375000,
+                "simulation_completed": 75000,
+                "simulation_frames_completed": 375000,
+                "reset_completed": 750
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 15,
+                "simulation_attempts": 1500,
+                "simulation_frames_attempted": 7500,
+                "simulation_completed": 1500,
+                "simulation_frames_completed": 7500,
+                "reset_completed": 15
+              },
+              "CONTROL": {
+                "simulation_attempts": 336,
+                "simulation_frames_attempted": 1680,
+                "simulation_completed": 336,
+                "simulation_frames_completed": 1680
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        }
+      ]
+    },
+    "test_delayed_intervention_qualification_v1": {
+      "FIXTURE_RECEIPTS": [
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 24,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25620,
+          "actual_policy_calls": 16,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5124,
+              "simulation_frames_attempted": 25620,
+              "simulation_completed": 5124,
+              "simulation_frames_completed": 25620,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 24,
+                "simulation_frames_attempted": 120,
+                "simulation_completed": 24,
+                "simulation_frames_completed": 120
+              }
+            }
+          },
+          "host_attempts": 24,
+          "host_returned": 24,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "SWITCH_SAVED",
+          "finish": 24,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25620,
+          "actual_policy_calls": 16,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5124,
+              "simulation_frames_attempted": 25620,
+              "simulation_completed": 5124,
+              "simulation_frames_completed": 25620,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 24,
+                "simulation_frames_attempted": 120,
+                "simulation_completed": 24,
+                "simulation_frames_completed": 120
+              }
+            }
+          },
+          "host_attempts": 24,
+          "host_returned": 24,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "RUN_UNCORRECTED",
+          "finish": 24,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25620,
+          "actual_policy_calls": 16,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5124,
+              "simulation_frames_attempted": 25620,
+              "simulation_completed": 5124,
+              "simulation_frames_completed": 25620,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 24,
+                "simulation_frames_attempted": 120,
+                "simulation_completed": 24,
+                "simulation_frames_completed": 120
+              }
+            }
+          },
+          "host_attempts": 24,
+          "host_returned": 24,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "STOP",
+          "finish": 24,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25580,
+          "actual_policy_calls": 8,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5116,
+              "simulation_frames_attempted": 25580,
+              "simulation_completed": 5116,
+              "simulation_frames_completed": 25580,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 16,
+                "simulation_frames_attempted": 80,
+                "simulation_completed": 16,
+                "simulation_frames_completed": 80
+              }
+            }
+          },
+          "host_attempts": 16,
+          "host_returned": 16,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "DIRECT_CURRENT",
+          "finish": 24,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25620,
+          "actual_policy_calls": 16,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5124,
+              "simulation_frames_attempted": 25620,
+              "simulation_completed": 5124,
+              "simulation_frames_completed": 25620,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 24,
+                "simulation_frames_attempted": 120,
+                "simulation_completed": 24,
+                "simulation_frames_completed": 120
+              }
+            }
+          },
+          "host_attempts": 24,
+          "host_returned": 24,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 24,
+          "ending": "success",
+          "invalid": 4,
+          "failure_step": null,
+          "native_frames": 25520,
+          "actual_policy_calls": 0,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5104,
+              "simulation_frames_attempted": 25520,
+              "simulation_completed": 5104,
+              "simulation_frames_completed": 25520,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 4,
+                "simulation_frames_attempted": 20,
+                "simulation_completed": 4,
+                "simulation_frames_completed": 20
+              }
+            }
+          },
+          "host_attempts": 4,
+          "host_returned": 4,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 24,
+          "ending": "success",
+          "invalid": 8,
+          "failure_step": null,
+          "native_frames": 25540,
+          "actual_policy_calls": 0,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5108,
+              "simulation_frames_attempted": 25540,
+              "simulation_completed": 5108,
+              "simulation_frames_completed": 25540,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 8,
+                "simulation_frames_attempted": 40,
+                "simulation_completed": 8,
+                "simulation_frames_completed": 40
+              }
+            }
+          },
+          "host_attempts": 8,
+          "host_returned": 8,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 2,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25510,
+          "actual_policy_calls": 0,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5102,
+              "simulation_frames_attempted": 25510,
+              "simulation_completed": 5102,
+              "simulation_frames_completed": 25510,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 2,
+                "simulation_frames_attempted": 10,
+                "simulation_completed": 2,
+                "simulation_frames_completed": 10
+              }
+            }
+          },
+          "host_attempts": 2,
+          "host_returned": 2,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 6,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25530,
+          "actual_policy_calls": 0,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5106,
+              "simulation_frames_attempted": 25530,
+              "simulation_completed": 5106,
+              "simulation_frames_completed": 25530,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 6,
+                "simulation_frames_attempted": 30,
+                "simulation_completed": 6,
+                "simulation_frames_completed": 30
+              }
+            }
+          },
+          "host_attempts": 6,
+          "host_returned": 6,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 12,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25560,
+          "actual_policy_calls": 4,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5112,
+              "simulation_frames_attempted": 25560,
+              "simulation_completed": 5112,
+              "simulation_frames_completed": 25560,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 12,
+                "simulation_frames_attempted": 60,
+                "simulation_completed": 12,
+                "simulation_frames_completed": 60
+              }
+            }
+          },
+          "host_attempts": 12,
+          "host_returned": 12,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 16,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25580,
+          "actual_policy_calls": 8,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5116,
+              "simulation_frames_attempted": 25580,
+              "simulation_completed": 5116,
+              "simulation_frames_completed": 25580,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 16,
+                "simulation_frames_attempted": 80,
+                "simulation_completed": 16,
+                "simulation_frames_completed": 80
+              }
+            }
+          },
+          "host_attempts": 16,
+          "host_returned": 16,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 24,
+          "ending": "terminated",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25620,
+          "actual_policy_calls": 16,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5124,
+              "simulation_frames_attempted": 25620,
+              "simulation_completed": 5124,
+              "simulation_frames_completed": 25620,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 24,
+                "simulation_frames_attempted": 120,
+                "simulation_completed": 24,
+                "simulation_frames_completed": 120
+              }
+            }
+          },
+          "host_attempts": 24,
+          "host_returned": 24,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 24,
+          "ending": "truncated",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 25620,
+          "actual_policy_calls": 16,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5124,
+              "simulation_frames_attempted": 25620,
+              "simulation_completed": 5124,
+              "simulation_frames_completed": 25620,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 24,
+                "simulation_frames_attempted": 120,
+                "simulation_completed": 24,
+                "simulation_frames_completed": 120
+              }
+            }
+          },
+          "host_attempts": 24,
+          "host_returned": 24,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 501,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": null,
+          "native_frames": 28000,
+          "actual_policy_calls": 492,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5600,
+              "simulation_frames_attempted": 28000,
+              "simulation_completed": 5600,
+              "simulation_frames_completed": 28000,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 500,
+                "simulation_frames_attempted": 2500,
+                "simulation_completed": 500,
+                "simulation_frames_completed": 2500
+              }
+            }
+          },
+          "host_attempts": 500,
+          "host_returned": 500,
+          "captures": 0,
+          "restores": 0
+        },
+        {
+          "variant": "CONTINUE_CURRENT",
+          "finish": 24,
+          "ending": "success",
+          "invalid": null,
+          "failure_step": 17,
+          "native_frames": 25585,
+          "actual_policy_calls": 9,
+          "ledger": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5117,
+              "simulation_frames_attempted": 25585,
+              "simulation_completed": 5117,
+              "simulation_frames_completed": 25585,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 17,
+                "simulation_frames_attempted": 85,
+                "simulation_completed": 17,
+                "simulation_frames_completed": 85
+              }
+            }
+          },
+          "host_attempts": 17,
+          "host_returned": 16,
+          "captures": 0,
+          "restores": 0
+        }
+      ],
+      "PIPELINE_RECEIPTS": [
+        {
+          "status": "PASSED",
+          "native_frames": 384180,
+          "actual_policy_calls": 216,
+          "audit": {
+            "experiment_run_id": "TINY_PIPELINE_ONLY",
+            "manifest_id": "SOFTWARE_MANIFEST",
+            "source_git_commit": "SOFTWARE_FIXTURE",
+            "integrity": "PASSED",
+            "qualification": "QUALIFIED",
+            "failure": null,
+            "task_checks": [
+              {
+                "task": "push-v3",
+                "seed": 700021,
+                "all_boundaries_ready": true,
+                "matched_prefixes": true,
+                "direct_loop_equal": true,
+                "three_distinct_first_commands": true,
+                "stop_has_zero_suffix": true
+              },
+              {
+                "task": "push-v3",
+                "seed": 700021,
+                "all_boundaries_ready": true,
+                "matched_prefixes": true,
+                "direct_loop_equal": true,
+                "three_distinct_first_commands": true,
+                "stop_has_zero_suffix": true
+              },
+              {
+                "task": "push-v3",
+                "seed": 700021,
+                "all_boundaries_ready": true,
+                "matched_prefixes": true,
+                "direct_loop_equal": true,
+                "three_distinct_first_commands": true,
+                "stop_has_zero_suffix": true
+              }
+            ],
+            "methods": [
+              {
+                "variant": "CONTINUE_CURRENT",
+                "executions": 3,
+                "successes": 3,
+                "failures": 0,
+                "stops": 0,
+                "unavailable_boundaries": 0,
+                "control_steps": 72,
+                "deadline_loss_total": 72,
+                "historical_nominal_cost": {
+                  "environment_steps": 3840,
+                  "controlled_resets": 480,
+                  "all_reset_calls": 24480,
+                  "simulation_frames": 12259200
+                },
+                "historical_steps_amortized_per_unit": 1280.0
+              },
+              {
+                "variant": "SWITCH_SAVED",
+                "executions": 3,
+                "successes": 3,
+                "failures": 0,
+                "stops": 0,
+                "unavailable_boundaries": 0,
+                "control_steps": 72,
+                "deadline_loss_total": 72,
+                "historical_nominal_cost": {
+                  "environment_steps": 3840,
+                  "controlled_resets": 480,
+                  "all_reset_calls": 24480,
+                  "simulation_frames": 12259200
+                },
+                "historical_steps_amortized_per_unit": 1280.0
+              },
+              {
+                "variant": "RUN_UNCORRECTED",
+                "executions": 3,
+                "successes": 3,
+                "failures": 0,
+                "stops": 0,
+                "unavailable_boundaries": 0,
+                "control_steps": 72,
+                "deadline_loss_total": 72,
+                "historical_nominal_cost": {
+                  "environment_steps": 3840,
+                  "controlled_resets": 480,
+                  "all_reset_calls": 24480,
+                  "simulation_frames": 12259200
+                },
+                "historical_steps_amortized_per_unit": 1280.0
+              },
+              {
+                "variant": "STOP",
+                "executions": 3,
+                "successes": 0,
+                "failures": 3,
+                "stops": 3,
+                "unavailable_boundaries": 0,
+                "control_steps": 48,
+                "deadline_loss_total": 1500,
+                "historical_nominal_cost": {
+                  "environment_steps": 3840,
+                  "controlled_resets": 480,
+                  "all_reset_calls": 24480,
+                  "simulation_frames": 12259200
+                },
+                "historical_steps_amortized_per_unit": 1280.0
+              },
+              {
+                "variant": "DIRECT_CURRENT",
+                "executions": 3,
+                "successes": 3,
+                "failures": 0,
+                "stops": 0,
+                "unavailable_boundaries": 0,
+                "control_steps": 72,
+                "deadline_loss_total": 72,
+                "historical_nominal_cost": {
+                  "environment_steps": 3840,
+                  "controlled_resets": 480,
+                  "all_reset_calls": 24480,
+                  "simulation_frames": 12259200
+                },
+                "historical_steps_amortized_per_unit": 1280.0
+              }
+            ],
+            "execution_rows": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "CONTINUE_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "SWITCH_SAVED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "RUN_UNCORRECTED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "DIRECT_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "CONTINUE_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "SWITCH_SAVED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "RUN_UNCORRECTED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "DIRECT_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "CONTINUE_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "SWITCH_SAVED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "RUN_UNCORRECTED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "DIRECT_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              }
+            ],
+            "failures": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              }
+            ],
+            "unavailable_boundaries": [],
+            "event_count": 3147,
+            "executions": 15,
+            "costs": {
+              "new_control_steps": 336,
+              "lifecycle": {
+                "counts": {
+                  "reset_attempts": 765,
+                  "simulation_attempts": 76836,
+                  "simulation_completed": 76836,
+                  "simulation_frames_attempted": 384180,
+                  "simulation_frames_completed": 384180,
+                  "reset_completed": 765
+                },
+                "by_phase": {
+                  "GOAL_GENERATION": {
+                    "reset_attempts": 750,
+                    "simulation_attempts": 75000,
+                    "simulation_completed": 75000,
+                    "simulation_frames_attempted": 375000,
+                    "simulation_frames_completed": 375000,
+                    "reset_completed": 750
+                  },
+                  "CONTROLLED_RESET": {
+                    "reset_attempts": 15,
+                    "simulation_attempts": 1500,
+                    "simulation_completed": 1500,
+                    "simulation_frames_attempted": 7500,
+                    "simulation_frames_completed": 7500,
+                    "reset_completed": 15
+                  },
+                  "CONTROL": {
+                    "simulation_attempts": 336,
+                    "simulation_completed": 336,
+                    "simulation_frames_attempted": 1680,
+                    "simulation_frames_completed": 1680
+                  }
+                }
+              },
+              "collection_wall_ns": 2963605700,
+              "host_attempts": 336,
+              "host_returned": 336,
+              "policy_queries": 216,
+              "parameter_fit_attempts": 30,
+              "parameter_fit_results": 30,
+              "optimizer_nfev": 45,
+              "historical_nominal_cost_paid_once": {
+                "environment_steps": 3840,
+                "controlled_resets": 480,
+                "all_reset_calls": 24480,
+                "simulation_frames": 12259200
+              },
+              "historical_design_preparation": {
+                "enumerations": 3,
+                "candidate_rows": 432
+              },
+              "new_api_calls": 0,
+              "new_nominal_training": 0,
+              "new_selector_fits": 0,
+              "policy_updates": 0
+            },
+            "audit_computations": {
+              "recomputed_policy_queries": 216,
+              "recomputed_parameter_fits": 30,
+              "recomputed_optimizer_nfev": 45
+            },
+            "collection_artifact_sha256": {
+              "cases.jsonl.gz": "26371615e1cddee50b638230d56355bb80b3c812c2cf0ea2248e6c75e29fb38a",
+              "events.jsonl.gz": "3c4c9971e0ecbdef6ec43f0d9e08e5960240a47fec9782aaf19688ad3ac47baf",
+              "status.json": "a184d3726179c79006449a5e62e935988010e82cb485e6ae52926bda876c2545",
+              "summary.json": "42402832ce746e148288439d33f2b4ac4b91cd055a0d38a1054237eaad972e89",
+              "completion.json": "2c635a76a976f7f80ab9b3964bcde74575850b18487904730dcaace3a3d1d707"
+            },
+            "limitations": [
+              "NATIVE_HASHES_ARE_HOST_WITNESSES",
+              "SHARED_FIXED_POLICY_ESTIMATORS_AND_ENCODING",
+              "ONLY_THREE_QUALIFICATION_STATES_NOT_METHOD_UTILITY",
+              "C4_WAS_UNUSED_CANDIDATE_NOT_PREVIOUSLY_ACCEPTED_MEMORY"
+            ],
+            "audit_wall_ns": 1322041000
+          },
+          "collection_summary": {
+            "experiment_run_id": "TINY_PIPELINE_ONLY",
+            "manifest_id": "SOFTWARE_MANIFEST",
+            "source_git_commit": "SOFTWARE_FIXTURE",
+            "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+            "completed_executions": 15,
+            "controlled_steps": 336,
+            "lifecycle": {
+              "counts": {
+                "reset_attempts": 765,
+                "simulation_attempts": 76836,
+                "simulation_frames_attempted": 384180,
+                "simulation_completed": 76836,
+                "simulation_frames_completed": 384180,
+                "reset_completed": 765
+              },
+              "by_phase": {
+                "GOAL_GENERATION": {
+                  "reset_attempts": 750,
+                  "simulation_attempts": 75000,
+                  "simulation_frames_attempted": 375000,
+                  "simulation_completed": 75000,
+                  "simulation_frames_completed": 375000,
+                  "reset_completed": 750
+                },
+                "CONTROLLED_RESET": {
+                  "reset_attempts": 15,
+                  "simulation_attempts": 1500,
+                  "simulation_frames_attempted": 7500,
+                  "simulation_completed": 1500,
+                  "simulation_frames_completed": 7500,
+                  "reset_completed": 15
+                },
+                "CONTROL": {
+                  "simulation_attempts": 336,
+                  "simulation_frames_attempted": 1680,
+                  "simulation_completed": 336,
+                  "simulation_frames_completed": 1680
+                }
+              }
+            },
+            "failure": null,
+            "rows": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "CONTINUE_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "SWITCH_SAVED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "RUN_UNCORRECTED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "DIRECT_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "CONTINUE_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "SWITCH_SAVED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "RUN_UNCORRECTED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 1,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "DIRECT_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "CONTINUE_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "SWITCH_SAVED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "RUN_UNCORRECTED",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "STOP",
+                "completed": true,
+                "success": false,
+                "stopped": true,
+                "total_steps": 16,
+                "deadline_loss": 500,
+                "boundary_ready": true,
+                "host_attempts": 16,
+                "host_returned": 16,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              },
+              {
+                "unit": 2,
+                "task": "push-v3",
+                "seed": 700021,
+                "variant": "DIRECT_CURRENT",
+                "completed": true,
+                "success": true,
+                "stopped": false,
+                "total_steps": 24,
+                "deadline_loss": 24,
+                "boundary_ready": true,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "optimizer_nfev_complete": true
+              }
+            ],
+            "wall_ns": 2963605700,
+            "new_api_calls": 0,
+            "new_nominal_training": 0,
+            "new_selector_fits": 0,
+            "policy_updates": 0
+          },
+          "allocation_scope": "THREE_SYNTHETIC_PUSH_UNITS_SEED700021_NO_METAWORLD"
+        }
+      ]
+    }
+  }
+}

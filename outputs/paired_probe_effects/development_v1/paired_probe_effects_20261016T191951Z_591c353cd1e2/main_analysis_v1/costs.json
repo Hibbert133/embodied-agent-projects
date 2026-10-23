@@ -1,0 +1,154 @@
+{
+  "experiment_run_id": "paired_probe_effects_20261016T191951Z_591c353cd1e2",
+  "manifest_id": "758755b6e0b07419c631f6c8cc83696de4d05a9be8ca1d66f334b8fd6cb7f1f7",
+  "source_git_commit": "591c353cd1e2a8c940be82fbcb1af97ce3f531da",
+  "phase": "MAIN",
+  "actual_controlled_steps": 1169939,
+  "actual_controlled_resets": 432,
+  "actual_source_steps": 41105,
+  "actual_evaluator_suffix_steps": 1128834,
+  "actual_sentinel_suffix_steps": 0,
+  "physical_lifecycle": {
+    "counts": {
+      "reset_attempts": 22032,
+      "simulation_attempts": 3373139,
+      "simulation_frames_attempted": 16865695,
+      "simulation_completed": 3373139,
+      "simulation_frames_completed": 16865695,
+      "reset_completed": 22032
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 21600,
+        "simulation_attempts": 2160000,
+        "simulation_frames_attempted": 10800000,
+        "simulation_completed": 2160000,
+        "simulation_frames_completed": 10800000,
+        "reset_completed": 21600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 432,
+        "simulation_attempts": 43200,
+        "simulation_frames_attempted": 216000,
+        "simulation_completed": 43200,
+        "simulation_frames_completed": 216000,
+        "reset_completed": 432
+      },
+      "CONTROL": {
+        "simulation_attempts": 1169939,
+        "simulation_frames_attempted": 5849695,
+        "simulation_completed": 1169939,
+        "simulation_frames_completed": 5849695
+      }
+    }
+  },
+  "recorded_computation": {
+    "captures": 766,
+    "restores": 12639,
+    "policy_queries": 1131534,
+    "capture_ns": 110483071500,
+    "restore_ns": 3231094005300,
+    "fits": 6201,
+    "nfev": 6201
+  },
+  "collection_body_wall_ns": 14997959252800,
+  "audit_policy_queries": 1131534,
+  "audit_shared_fitter_attempts": 6201,
+  "audit_shared_optimizer_nfev": 6201,
+  "audit_wall_ns": 623673592200,
+  "modern_nominal_steps_full": 3840,
+  "modern_nominal_controlled_resets_full": 480,
+  "modern_nominal_lifecycle_full": {
+    "counts": {
+      "reset_attempts": 24480,
+      "simulation_attempts": 2451840,
+      "simulation_frames_attempted": 12259200,
+      "simulation_completed": 2451840,
+      "simulation_frames_completed": 12259200,
+      "reset_completed": 24480
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 24000,
+        "simulation_attempts": 2400000,
+        "simulation_frames_attempted": 12000000,
+        "simulation_completed": 2400000,
+        "simulation_frames_completed": 12000000,
+        "reset_completed": 24000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 480,
+        "simulation_attempts": 48000,
+        "simulation_frames_attempted": 240000,
+        "simulation_completed": 48000,
+        "simulation_frames_completed": 240000,
+        "reset_completed": 480
+      },
+      "CONTROL": {
+        "simulation_attempts": 3840,
+        "simulation_frames_attempted": 19200,
+        "simulation_completed": 3840,
+        "simulation_frames_completed": 19200
+      }
+    }
+  },
+  "nominal_steps_per_source_unit": 8.88888888888889,
+  "restore_qualification_prior_steps": 4032,
+  "restore_qualification_prior_controlled_resets": 13,
+  "restore_qualification_prior_all_resets": 663,
+  "restore_qualification_prior_requested_frames": 351660,
+  "nominal_model_fits": 0,
+  "selector_fits": 0,
+  "policy_weight_updates": 0,
+  "api_calls": 0,
+  "scope": "Common physical prefix charged once; every actually executed counterfactual suffix/sentinel is charged. Full nominal source separate, not divided by four programs or fresh futures. Capture/restore times are subsets of collection wall time, not additive. Earlier qualification is disclosed separately, not new training data.",
+  "separate_smoke": {
+    "actual_controlled_steps": 6964,
+    "actual_controlled_resets": 9,
+    "physical_lifecycle": {
+      "counts": {
+        "reset_attempts": 459,
+        "simulation_attempts": 52864,
+        "simulation_frames_attempted": 264320,
+        "simulation_completed": 52864,
+        "simulation_frames_completed": 264320,
+        "reset_completed": 459
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 450,
+          "simulation_attempts": 45000,
+          "simulation_frames_attempted": 225000,
+          "simulation_completed": 45000,
+          "simulation_frames_completed": 225000,
+          "reset_completed": 450
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 9,
+          "simulation_attempts": 900,
+          "simulation_frames_attempted": 4500,
+          "simulation_completed": 900,
+          "simulation_frames_completed": 4500,
+          "reset_completed": 9
+        },
+        "CONTROL": {
+          "simulation_attempts": 6964,
+          "simulation_frames_attempted": 34820,
+          "simulation_completed": 6964,
+          "simulation_frames_completed": 34820
+        }
+      }
+    },
+    "recorded_computation": {
+      "captures": 16,
+      "restores": 73,
+      "policy_queries": 6736,
+      "capture_ns": 2369610300,
+      "restore_ns": 19028786100,
+      "fits": 34,
+      "nfev": 34
+    },
+    "collection_body_wall_ns": 98507951900
+  },
+  "analysis_body_wall_ns": 9068336100
+}

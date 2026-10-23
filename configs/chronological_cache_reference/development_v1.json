@@ -1,0 +1,63 @@
+{
+  "protocol_id": "chronological_cache_reference_development_v1",
+  "source_bridge_manifest": "outputs/cold_start_task_bridge/development_v1/cold_start_task_bridge_20261015T175406Z_44d3e6864ac1/manifest.json",
+  "source_bridge_manifest_sha256": "8ba276726e35b107a52c53d0b6864c93eee6dc48bc2b5f1e21cd9afda97a4633",
+  "source_bridge_audit": "outputs/cold_start_task_bridge/analysis_v1/audit.json",
+  "source_bridge_audit_sha256": "387c38de20ab93b0a6133355831aae9cd34e1c57062807165d650f5fbcc60414",
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "methods": [
+    "NO_PROBE",
+    "ALWAYS8",
+    "ALWAYS16_OLD",
+    "STALE",
+    "PERIODIC4",
+    "PASSIVE_RECENT8",
+    "CUSUM4",
+    "PLUGIN4",
+    "UNCERTAINTY4",
+    "BALANCED4",
+    "TASK_IVR4"
+  ],
+  "noise_std": 0.05,
+  "noise_namespace": 47001,
+  "total_steps": 500,
+  "minimum_policy_reserve": 32,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261019,
+  "api_calls": 0,
+  "policy_weight_updates": 0,
+  "nominal_model_fits": 0,
+  "smoke": {
+    "seed_start": 16000,
+    "seed_end": 16005,
+    "reserved": [
+      16006,
+      16999
+    ],
+    "streams": 1,
+    "units": 6,
+    "executions": 66,
+    "maximum_environment_steps": 33000,
+    "maximum_controlled_resets": 66,
+    "maximum_simulation_frames": 4000000
+  },
+  "main": {
+    "seed_start": 17000,
+    "seed_end": 17431,
+    "reserved": [
+      17432,
+      17999
+    ],
+    "streams": 36,
+    "units": 432,
+    "executions": 4752,
+    "maximum_environment_steps": 2376000,
+    "maximum_controlled_resets": 4752,
+    "maximum_simulation_frames": 140000000
+  },
+  "output_root": "outputs/chronological_cache_reference/development_v1"
+}

@@ -3,6 +3,14 @@
 本项目使用 Python 3.10、CPU 和 MuJoCo。无需 CUDA，也无需单独安装 FFmpeg；
 `imageio-ffmpeg` 会提供保存 MP4 所需的可执行文件。
 
+`openai` Python SDK 用于可选的高层恢复 planner。普通 demo、扰动扫描、规则 Agent 和
+Oracle 实验均不需要 API key；只有 `--planner openai` 需要通过环境变量设置
+`OPENAI_API_KEY`。
+
+Anthropic 协议兼容 planner 使用 `anthropic` SDK。推荐执行
+`.\scripts\run_anthropic_recovery.ps1`，在隐藏输入提示中临时提供密钥；脚本结束后会清除
+进程环境变量。
+
 ## Windows PowerShell
 
 确认已安装 64 位 Python 3.10，然后在项目根目录运行：

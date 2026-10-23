@@ -1,0 +1,1327 @@
+{
+  "scope": "Instrumented native fixtures only; earlier unrecorded test attempts and other repository fixtures are not covered.",
+  "modules": {
+    "test_selected_response_pipeline_v1": {
+      "PIPELINE_RECEIPTS": [
+        {
+          "completed": true,
+          "partial_requested": false,
+          "rows": [
+            {
+              "unit": 0,
+              "task": "push-v3",
+              "seed": 700111,
+              "variant": "TRAIN",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_NOMINAL_TRAIN",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            },
+            {
+              "unit": 1,
+              "task": "reach-v3",
+              "seed": 700112,
+              "variant": "TRAIN",
+              "planned_boundary": 32,
+              "completed": true,
+              "boundary_ready": false,
+              "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+              "complete_window": false,
+              "success": true,
+              "total_steps": 24,
+              "reposition_steps": 0,
+              "probe_steps": 0,
+              "host_attempts": 24,
+              "host_returned": 24,
+              "policy_queries": 16,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            },
+            {
+              "unit": 2,
+              "task": "door-open-v3",
+              "seed": 700113,
+              "variant": "TRAIN",
+              "planned_boundary": 64,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "ANCHOR_NOT_REACHED",
+              "complete_window": false,
+              "success": false,
+              "total_steps": 128,
+              "reposition_steps": 64,
+              "probe_steps": 0,
+              "host_attempts": 128,
+              "host_returned": 128,
+              "policy_queries": 56,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            },
+            {
+              "unit": 3,
+              "task": "reach-v3",
+              "seed": 700114,
+              "variant": "TRAIN",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_NOMINAL_TRAIN",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            },
+            {
+              "unit": 4,
+              "task": "door-open-v3",
+              "seed": 700115,
+              "variant": "TRAIN",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_NOMINAL_TRAIN",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            }
+          ],
+          "audit": {
+            "experiment_run_id": "SELECTED_RESPONSE_TINY_SOFTWARE_ONLY",
+            "manifest_id": "SOFTWARE_MANIFEST",
+            "source_git_commit": "SOFTWARE_COMMIT",
+            "integrity": "PASSED",
+            "stage": "train",
+            "executions": 5,
+            "rows": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700111,
+                "variant": "TRAIN",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_NOMINAL_TRAIN",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              },
+              {
+                "unit": 1,
+                "task": "reach-v3",
+                "seed": 700112,
+                "variant": "TRAIN",
+                "planned_boundary": 32,
+                "completed": true,
+                "boundary_ready": false,
+                "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+                "complete_window": false,
+                "success": true,
+                "total_steps": 24,
+                "reposition_steps": 0,
+                "probe_steps": 0,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              },
+              {
+                "unit": 2,
+                "task": "door-open-v3",
+                "seed": 700113,
+                "variant": "TRAIN",
+                "planned_boundary": 64,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "ANCHOR_NOT_REACHED",
+                "complete_window": false,
+                "success": false,
+                "total_steps": 128,
+                "reposition_steps": 64,
+                "probe_steps": 0,
+                "host_attempts": 128,
+                "host_returned": 128,
+                "policy_queries": 56,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              },
+              {
+                "unit": 3,
+                "task": "reach-v3",
+                "seed": 700114,
+                "variant": "TRAIN",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_NOMINAL_TRAIN",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              },
+              {
+                "unit": 4,
+                "task": "door-open-v3",
+                "seed": 700115,
+                "variant": "TRAIN",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_NOMINAL_TRAIN",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              }
+            ],
+            "event_count": 1582,
+            "matched_pairs": [],
+            "private_witness_records": 15,
+            "witness_construction_wall_ns": 444446600,
+            "audit_computations": {
+              "recomputed_policy_queries": 96,
+              "recomputed_parameter_fits": 10,
+              "recomputed_optimizer_nfev": 15
+            },
+            "context_arrays_and_counters_reconstructed": true,
+            "costs": {
+              "total_steps": 233,
+              "reposition_steps": 73,
+              "probe_steps": 24,
+              "host_attempts": 233,
+              "host_returned": 233,
+              "policy_queries": 96,
+              "parameter_fit_attempts": 10,
+              "parameter_fit_results": 10,
+              "optimizer_nfev": 15,
+              "new_control_steps": 233,
+              "lifecycle": {
+                "counts": {
+                  "reset_attempts": 255,
+                  "simulation_attempts": 25733,
+                  "simulation_completed": 25733,
+                  "simulation_frames_attempted": 128665,
+                  "simulation_frames_completed": 128665,
+                  "reset_completed": 255
+                },
+                "by_phase": {
+                  "GOAL_GENERATION": {
+                    "reset_attempts": 250,
+                    "simulation_attempts": 25000,
+                    "simulation_completed": 25000,
+                    "simulation_frames_attempted": 125000,
+                    "simulation_frames_completed": 125000,
+                    "reset_completed": 250
+                  },
+                  "CONTROLLED_RESET": {
+                    "reset_attempts": 5,
+                    "simulation_attempts": 500,
+                    "simulation_completed": 500,
+                    "simulation_frames_attempted": 2500,
+                    "simulation_frames_completed": 2500,
+                    "reset_completed": 5
+                  },
+                  "CONTROL": {
+                    "simulation_attempts": 233,
+                    "simulation_completed": 233,
+                    "simulation_frames_attempted": 1165,
+                    "simulation_frames_completed": 1165
+                  }
+                }
+              },
+              "collection_wall_ns": 2191558400,
+              "new_api_calls": 0
+            },
+            "collection_artifact_sha256": {
+              "cases.jsonl.gz": "eea7ca4756478dd42320532a24484860a886ccf5e107713111a8a459420e5795",
+              "events.jsonl.gz": "77842f627cb9fab9060c5bb872aad461e6ebbdf76a5b3baec8a0062d3ca0fad1",
+              "state_witnesses.jsonl.gz": "2c9550d5ee035884c15200b061fdb7c650e9132a80fe56854527b4ce7c712df7",
+              "status.json": "39c5d2d72a275e8037ba408179011ce954b84466174fd6afd6df2521757f4fff",
+              "summary.json": "29280b9da60dfb2761cdf72e11eb24eb76c99a370aee6ef59dc6a9a2e9173d04"
+            },
+            "physical_response_qualified": false,
+            "task_utility_demonstrated": false,
+            "audit_wall_ns": 900449800
+          },
+          "native_frames": 128665,
+          "actual_policy_queries": 96,
+          "constructed_tiny_envs": 5,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 255,
+              "simulation_attempts": 25733,
+              "simulation_frames_attempted": 128665,
+              "simulation_completed": 25733,
+              "simulation_frames_completed": 128665,
+              "reset_completed": 255
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 250,
+                "simulation_attempts": 25000,
+                "simulation_frames_attempted": 125000,
+                "simulation_completed": 25000,
+                "simulation_frames_completed": 125000,
+                "reset_completed": 250
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 5,
+                "simulation_attempts": 500,
+                "simulation_frames_attempted": 2500,
+                "simulation_completed": 500,
+                "simulation_frames_completed": 2500,
+                "reset_completed": 5
+              },
+              "CONTROL": {
+                "simulation_attempts": 233,
+                "simulation_frames_attempted": 1165,
+                "simulation_completed": 233,
+                "simulation_frames_completed": 1165
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "completed": true,
+          "partial_requested": false,
+          "rows": [
+            {
+              "unit": 0,
+              "task": "push-v3",
+              "seed": 700111,
+              "variant": "UNCHANGED",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 0,
+              "task": "push-v3",
+              "seed": 700111,
+              "variant": "CHANGED",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 1,
+              "task": "reach-v3",
+              "seed": 700112,
+              "variant": "UNCHANGED",
+              "planned_boundary": 32,
+              "completed": true,
+              "boundary_ready": false,
+              "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+              "complete_window": false,
+              "success": true,
+              "total_steps": 24,
+              "reposition_steps": 0,
+              "probe_steps": 0,
+              "host_attempts": 24,
+              "host_returned": 24,
+              "policy_queries": 16,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            },
+            {
+              "unit": 1,
+              "task": "reach-v3",
+              "seed": 700112,
+              "variant": "CHANGED",
+              "planned_boundary": 32,
+              "completed": true,
+              "boundary_ready": false,
+              "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+              "complete_window": false,
+              "success": true,
+              "total_steps": 24,
+              "reposition_steps": 0,
+              "probe_steps": 0,
+              "host_attempts": 24,
+              "host_returned": 24,
+              "policy_queries": 16,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": false
+            },
+            {
+              "unit": 2,
+              "task": "door-open-v3",
+              "seed": 700113,
+              "variant": "UNCHANGED",
+              "planned_boundary": 64,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "ANCHOR_NOT_REACHED",
+              "complete_window": false,
+              "success": false,
+              "total_steps": 128,
+              "reposition_steps": 64,
+              "probe_steps": 0,
+              "host_attempts": 128,
+              "host_returned": 128,
+              "policy_queries": 56,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 2,
+              "task": "door-open-v3",
+              "seed": 700113,
+              "variant": "CHANGED",
+              "planned_boundary": 64,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "ANCHOR_NOT_REACHED",
+              "complete_window": false,
+              "success": false,
+              "total_steps": 128,
+              "reposition_steps": 64,
+              "probe_steps": 0,
+              "host_attempts": 128,
+              "host_returned": 128,
+              "policy_queries": 56,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 3,
+              "task": "reach-v3",
+              "seed": 700114,
+              "variant": "UNCHANGED",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 3,
+              "task": "reach-v3",
+              "seed": 700114,
+              "variant": "CHANGED",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 4,
+              "task": "door-open-v3",
+              "seed": 700115,
+              "variant": "UNCHANGED",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            },
+            {
+              "unit": 4,
+              "task": "door-open-v3",
+              "seed": 700115,
+              "variant": "CHANGED",
+              "planned_boundary": 16,
+              "completed": true,
+              "boundary_ready": true,
+              "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+              "complete_window": true,
+              "success": false,
+              "total_steps": 27,
+              "reposition_steps": 3,
+              "probe_steps": 8,
+              "host_attempts": 27,
+              "host_returned": 27,
+              "policy_queries": 8,
+              "parameter_fit_attempts": 2,
+              "parameter_fit_results": 2,
+              "optimizer_nfev": 3,
+              "context_applied": true
+            }
+          ],
+          "audit": {
+            "experiment_run_id": "SELECTED_RESPONSE_TINY_SOFTWARE_ONLY",
+            "manifest_id": "SOFTWARE_MANIFEST",
+            "source_git_commit": "SOFTWARE_COMMIT",
+            "integrity": "PASSED",
+            "stage": "qualify",
+            "executions": 10,
+            "rows": [
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700111,
+                "variant": "UNCHANGED",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 0,
+                "task": "push-v3",
+                "seed": 700111,
+                "variant": "CHANGED",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 1,
+                "task": "reach-v3",
+                "seed": 700112,
+                "variant": "UNCHANGED",
+                "planned_boundary": 32,
+                "completed": true,
+                "boundary_ready": false,
+                "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+                "complete_window": false,
+                "success": true,
+                "total_steps": 24,
+                "reposition_steps": 0,
+                "probe_steps": 0,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              },
+              {
+                "unit": 1,
+                "task": "reach-v3",
+                "seed": 700112,
+                "variant": "CHANGED",
+                "planned_boundary": 32,
+                "completed": true,
+                "boundary_ready": false,
+                "collection_stop_reason": "ENDED_BEFORE_BOUNDARY",
+                "complete_window": false,
+                "success": true,
+                "total_steps": 24,
+                "reposition_steps": 0,
+                "probe_steps": 0,
+                "host_attempts": 24,
+                "host_returned": 24,
+                "policy_queries": 16,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": false
+              },
+              {
+                "unit": 2,
+                "task": "door-open-v3",
+                "seed": 700113,
+                "variant": "UNCHANGED",
+                "planned_boundary": 64,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "ANCHOR_NOT_REACHED",
+                "complete_window": false,
+                "success": false,
+                "total_steps": 128,
+                "reposition_steps": 64,
+                "probe_steps": 0,
+                "host_attempts": 128,
+                "host_returned": 128,
+                "policy_queries": 56,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 2,
+                "task": "door-open-v3",
+                "seed": 700113,
+                "variant": "CHANGED",
+                "planned_boundary": 64,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "ANCHOR_NOT_REACHED",
+                "complete_window": false,
+                "success": false,
+                "total_steps": 128,
+                "reposition_steps": 64,
+                "probe_steps": 0,
+                "host_attempts": 128,
+                "host_returned": 128,
+                "policy_queries": 56,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 3,
+                "task": "reach-v3",
+                "seed": 700114,
+                "variant": "UNCHANGED",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 3,
+                "task": "reach-v3",
+                "seed": 700114,
+                "variant": "CHANGED",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 4,
+                "task": "door-open-v3",
+                "seed": 700115,
+                "variant": "UNCHANGED",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              },
+              {
+                "unit": 4,
+                "task": "door-open-v3",
+                "seed": 700115,
+                "variant": "CHANGED",
+                "planned_boundary": 16,
+                "completed": true,
+                "boundary_ready": true,
+                "collection_stop_reason": "COMPLETE_UNQUALIFIED",
+                "complete_window": true,
+                "success": false,
+                "total_steps": 27,
+                "reposition_steps": 3,
+                "probe_steps": 8,
+                "host_attempts": 27,
+                "host_returned": 27,
+                "policy_queries": 8,
+                "parameter_fit_attempts": 2,
+                "parameter_fit_results": 2,
+                "optimizer_nfev": 3,
+                "context_applied": true
+              }
+            ],
+            "event_count": 3180,
+            "matched_pairs": [
+              {
+                "unit": 0,
+                "matched_steps": 16,
+                "initial": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "5e93463fb44a52205cc871d935e9a2f1cd90b7ba6bd8e49e43b4ce037e78c5e2",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "782719e0c6c44d0d9d4670f98a83136ab74fb90ff45cf3c976b9f20196ae835a",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                },
+                "boundary": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "5e93463fb44a52205cc871d935e9a2f1cd90b7ba6bd8e49e43b4ce037e78c5e2",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "782719e0c6c44d0d9d4670f98a83136ab74fb90ff45cf3c976b9f20196ae835a",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                }
+              },
+              {
+                "unit": 1,
+                "matched_steps": 24,
+                "initial": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "75c7c79a7a0a7781630d994e55020898d59cb477e699a083960bf0945342e389",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "1d1f1c544f50d1adad02594b6f67ae6c58d6a397082ccf3e15839211c50549ce",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                },
+                "boundary": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "75c7c79a7a0a7781630d994e55020898d59cb477e699a083960bf0945342e389",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "1d1f1c544f50d1adad02594b6f67ae6c58d6a397082ccf3e15839211c50549ce",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                }
+              },
+              {
+                "unit": 2,
+                "matched_steps": 64,
+                "initial": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "b08b94539e3169b576fdd34b6b2e34b8781a4a25630bb7a148fe801b72be1e94",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "275dbef283016f851355f2b1e98aa3976bdbad82cb08c8d2186bcf787affcc3a",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                },
+                "boundary": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "b08b94539e3169b576fdd34b6b2e34b8781a4a25630bb7a148fe801b72be1e94",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "275dbef283016f851355f2b1e98aa3976bdbad82cb08c8d2186bcf787affcc3a",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                }
+              },
+              {
+                "unit": 3,
+                "matched_steps": 16,
+                "initial": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "0adb0df7da6711f0a8bc5dc77152dbb09944f230fd2e9ff4c062024e99cf4cab",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "e0e8b2a00348b208e1913e6cda4e49593ac5d31cf6a2f3c82656e177bc6497f2",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                },
+                "boundary": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "0adb0df7da6711f0a8bc5dc77152dbb09944f230fd2e9ff4c062024e99cf4cab",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "e0e8b2a00348b208e1913e6cda4e49593ac5d31cf6a2f3c82656e177bc6497f2",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                }
+              },
+              {
+                "unit": 4,
+                "matched_steps": 16,
+                "initial": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "9c779055e82d41bf8740c2955add0eb4bce451e53915be13b8b4d0881bba2235",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "2951288f6359e447f03f37cfd7ea77635e2ea3ca7df9cfe7860ffe8345994d4b",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                },
+                "boundary": {
+                  "same_native": true,
+                  "same_full_python": false,
+                  "same_comparison_python": true,
+                  "comparison_equal": true,
+                  "component_differences": [
+                    {
+                      "path": [
+                        "layers",
+                        0,
+                        "episode_start_time"
+                      ],
+                      "left": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "9c779055e82d41bf8740c2955add0eb4bce451e53915be13b8b4d0881bba2235",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      },
+                      "right": {
+                        "path": [
+                          "layers",
+                          0,
+                          "episode_start_time"
+                        ],
+                        "raw_sha256": "2951288f6359e447f03f37cfd7ea77635e2ea3ca7df9cfe7860ffe8345994d4b",
+                        "comparison_sha256": "6e7d121b1419ad4c150ff2d3445fdc7c8e4a2ff2cb3cc1e2e6290a4ddf83dadb"
+                      }
+                    }
+                  ],
+                  "only_registered_timing_components_differ": true
+                }
+              }
+            ],
+            "private_witness_records": 30,
+            "witness_construction_wall_ns": 897456500,
+            "audit_computations": {
+              "recomputed_policy_queries": 192,
+              "recomputed_parameter_fits": 20,
+              "recomputed_optimizer_nfev": 30
+            },
+            "context_arrays_and_counters_reconstructed": true,
+            "costs": {
+              "total_steps": 466,
+              "reposition_steps": 146,
+              "probe_steps": 48,
+              "host_attempts": 466,
+              "host_returned": 466,
+              "policy_queries": 192,
+              "parameter_fit_attempts": 20,
+              "parameter_fit_results": 20,
+              "optimizer_nfev": 30,
+              "new_control_steps": 466,
+              "lifecycle": {
+                "counts": {
+                  "reset_attempts": 510,
+                  "simulation_attempts": 51466,
+                  "simulation_completed": 51466,
+                  "simulation_frames_attempted": 257330,
+                  "simulation_frames_completed": 257330,
+                  "reset_completed": 510
+                },
+                "by_phase": {
+                  "GOAL_GENERATION": {
+                    "reset_attempts": 500,
+                    "simulation_attempts": 50000,
+                    "simulation_completed": 50000,
+                    "simulation_frames_attempted": 250000,
+                    "simulation_frames_completed": 250000,
+                    "reset_completed": 500
+                  },
+                  "CONTROLLED_RESET": {
+                    "reset_attempts": 10,
+                    "simulation_attempts": 1000,
+                    "simulation_completed": 1000,
+                    "simulation_frames_attempted": 5000,
+                    "simulation_frames_completed": 5000,
+                    "reset_completed": 10
+                  },
+                  "CONTROL": {
+                    "simulation_attempts": 466,
+                    "simulation_completed": 466,
+                    "simulation_frames_attempted": 2330,
+                    "simulation_frames_completed": 2330
+                  }
+                }
+              },
+              "collection_wall_ns": 4322576300,
+              "new_api_calls": 0
+            },
+            "collection_artifact_sha256": {
+              "cases.jsonl.gz": "fb6a1b823ac52a0a8a9230f4e4d1ac3645f9307441daa11e55f4ebb6da282a5a",
+              "events.jsonl.gz": "8083ea304957a846f10c4efb21120e9d36a3946419019b7cd82266e1f1b7fcf6",
+              "state_witnesses.jsonl.gz": "f47b91badeefefdc4effccf91d8ae4a186dfd7ae74dd67d3f3ac12cd98f150d8",
+              "status.json": "32033c9267f5255cbacfe56b0ae81b70b53c71f74f7b1c0179424e1eb4de1f4f",
+              "summary.json": "d74f1cf3637b27b501a57c918c5fe1e811e9c1579fa8ca8ff978061949da63bc"
+            },
+            "physical_response_qualified": false,
+            "task_utility_demonstrated": false,
+            "audit_wall_ns": 2171798700
+          },
+          "native_frames": 257330,
+          "actual_policy_queries": 192,
+          "constructed_tiny_envs": 10,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 510,
+              "simulation_attempts": 51466,
+              "simulation_frames_attempted": 257330,
+              "simulation_completed": 51466,
+              "simulation_frames_completed": 257330,
+              "reset_completed": 510
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 500,
+                "simulation_attempts": 50000,
+                "simulation_frames_attempted": 250000,
+                "simulation_completed": 50000,
+                "simulation_frames_completed": 250000,
+                "reset_completed": 500
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 10,
+                "simulation_attempts": 1000,
+                "simulation_frames_attempted": 5000,
+                "simulation_completed": 1000,
+                "simulation_frames_completed": 5000,
+                "reset_completed": 10
+              },
+              "CONTROL": {
+                "simulation_attempts": 466,
+                "simulation_frames_attempted": 2330,
+                "simulation_completed": 466,
+                "simulation_frames_completed": 2330
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        },
+        {
+          "completed": true,
+          "partial_requested": true,
+          "rows": [],
+          "audit": null,
+          "native_frames": 25600,
+          "actual_policy_queries": 8,
+          "constructed_tiny_envs": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 51,
+              "simulation_attempts": 5120,
+              "simulation_frames_attempted": 25600,
+              "simulation_completed": 5120,
+              "simulation_frames_completed": 25600,
+              "reset_completed": 51
+            },
+            "by_phase": {
+              "GOAL_GENERATION": {
+                "reset_attempts": 50,
+                "simulation_attempts": 5000,
+                "simulation_frames_attempted": 25000,
+                "simulation_completed": 5000,
+                "simulation_frames_completed": 25000,
+                "reset_completed": 50
+              },
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "simulation_attempts": 100,
+                "simulation_frames_attempted": 500,
+                "simulation_completed": 100,
+                "simulation_frames_completed": 500,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0
+        }
+      ]
+    },
+    "test_local_reprobe_qualification_v1": {
+      "PIPELINE_RECEIPTS": []
+    }
+  }
+}

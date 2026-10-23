@@ -1,0 +1,19 @@
+{
+  "experiment_id": "temporal_evidence_development_v1",
+  "split": "development",
+  "seed_start": 320,
+  "num_seeds": 10,
+  "max_steps": 500,
+  "task": "MetaWorld push-v3",
+  "policy": "SawyerPushV3Policy",
+  "trajectory_view": "schema-v2 Agent View",
+  "temporal_model": "gripper_delta = response_gain * commanded_action + execution_drift",
+  "temporal_score": "one minus mean per-axis confidence",
+  "probe_rule_direction": "request when temporal_uncertainty >= threshold",
+  "repeated_probe_mechanism_threshold": 0.11560838098372882,
+  "repeated_probe_threshold_source": "outputs/autoresearch/probe_consistency_tuning/threshold_selection.json",
+  "raw_trajectories_retained": false,
+  "rendering": false,
+  "api_calls": 0,
+  "future_heldout_status": "not run unless development evidence is selective"
+}

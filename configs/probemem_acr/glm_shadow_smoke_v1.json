@@ -1,0 +1,22 @@
+{
+  "protocol": "probemem_acr_glm_shadow_smoke_v1",
+  "status": "FROZEN_QUALITATIVE_INTERFACE_SMOKE",
+  "claim_scope": "tool-grounded GLM-5.2 shadow integration only; no action execution or performance claim",
+  "model": "glm-5.2",
+  "source_cases": "outputs/probemem_acr/conditional_retry_audit_v1/conditional_retry_cases.csv",
+  "case_selection": "first three rows in episode_id, realization_index order",
+  "maximum_cases": 3,
+  "maximum_api_calls": 6,
+  "schema_repair_attempts_per_case": 1,
+  "remaining_second_attempt_budget": 500,
+  "allowed_decisions": ["REPEAT_STOCHASTIC_RETRY", "SWITCH_TO_BOUNDED_COMPENSATION", "ABSTAIN"],
+  "candidate_actions": ["BOUNDED_PLANAR_COMPENSATION", "INDEPENDENT_STOCHASTIC_RETRY"],
+  "prohibitions": {
+    "execute_model_action": true,
+    "use_evaluator_outcome_in_payload": true,
+    "performance_claim": true,
+    "write_memory": true,
+    "run_validation": true,
+    "run_heldout": true
+  }
+}

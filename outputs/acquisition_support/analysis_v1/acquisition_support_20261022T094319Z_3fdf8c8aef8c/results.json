@@ -1,0 +1,1469 @@
+{
+  "classification": "POST_HOC_DESCRIPTIVE_ACTION_SUPPORT_ONLY",
+  "banks": [
+    {
+      "bank": "PI_DEV",
+      "executions": 720,
+      "groups": 6,
+      "units": 36,
+      "programs": 20,
+      "actual_saved_control_steps": 90626,
+      "full_program_results": [
+        {
+          "program": "NO_PROBE",
+          "n": 36,
+          "successes": 29,
+          "mean_deadline_loss": 164.55555555555554
+        },
+        {
+          "program": "DIRECT_C8",
+          "n": 36,
+          "successes": 30,
+          "mean_deadline_loss": 149.0
+        },
+        {
+          "program": "MOVE_KEEP_C8",
+          "n": 36,
+          "successes": 30,
+          "mean_deadline_loss": 181.11111111111111
+        },
+        {
+          "program": "MOVE_INTEGRAL",
+          "n": 36,
+          "successes": 34,
+          "mean_deadline_loss": 140.33333333333334
+        },
+        {
+          "program": "RAW_TASK_PI_T0.125",
+          "n": 36,
+          "successes": 34,
+          "mean_deadline_loss": 96.52777777777777
+        },
+        {
+          "program": "RAW_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 80.69444444444444
+        },
+        {
+          "program": "RAW_TASK_PI_T2.0",
+          "n": 36,
+          "successes": 34,
+          "mean_deadline_loss": 101.27777777777777
+        },
+        {
+          "program": "RAW_TASK_PI_T8.0",
+          "n": 36,
+          "successes": 32,
+          "mean_deadline_loss": 140.69444444444446
+        },
+        {
+          "program": "DIRECT_TASK_PI_T0.125",
+          "n": 36,
+          "successes": 34,
+          "mean_deadline_loss": 111.08333333333333
+        },
+        {
+          "program": "DIRECT_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 78.66666666666667
+        },
+        {
+          "program": "DIRECT_TASK_PI_T2.0",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 102.08333333333333
+        },
+        {
+          "program": "DIRECT_TASK_PI_T8.0",
+          "n": 36,
+          "successes": 32,
+          "mean_deadline_loss": 134.16666666666666
+        },
+        {
+          "program": "MOVE_KEEP_TASK_PI_T0.125",
+          "n": 36,
+          "successes": 34,
+          "mean_deadline_loss": 139.19444444444446
+        },
+        {
+          "program": "MOVE_KEEP_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 112.75
+        },
+        {
+          "program": "MOVE_KEEP_TASK_PI_T2.0",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 139.77777777777777
+        },
+        {
+          "program": "MOVE_KEEP_TASK_PI_T8.0",
+          "n": 36,
+          "successes": 32,
+          "mean_deadline_loss": 167.25
+        },
+        {
+          "program": "MOVE_INTEGRAL_TASK_PI_T0.125",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 130.19444444444446
+        },
+        {
+          "program": "MOVE_INTEGRAL_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 114.5
+        },
+        {
+          "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 114.38888888888889
+        },
+        {
+          "program": "MOVE_INTEGRAL_TASK_PI_T8.0",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 119.13888888888889
+        }
+      ],
+      "all_task_context_cells": [
+        {
+          "task": "push-v3",
+          "context": "UNCHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 170.0,
+          "all_program_clairvoyant_min_mean": 62.333333333333336,
+          "best_MOVE_mean_loss": 106.0,
+          "MOVE_better_than_RAW_PI": 2,
+          "MOVE_worse_than_RAW_PI": 4
+        },
+        {
+          "task": "push-v3",
+          "context": "CHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 69.0,
+          "all_program_clairvoyant_min_mean": 61.5,
+          "best_MOVE_mean_loss": 112.16666666666667,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "reach-v3",
+          "context": "UNCHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 37.833333333333336,
+          "all_program_clairvoyant_min_mean": 33.666666666666664,
+          "best_MOVE_mean_loss": 61.166666666666664,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "reach-v3",
+          "context": "CHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 38.5,
+          "all_program_clairvoyant_min_mean": 33.666666666666664,
+          "best_MOVE_mean_loss": 67.66666666666667,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "door-open-v3",
+          "context": "UNCHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 85.5,
+          "all_program_clairvoyant_min_mean": 85.5,
+          "best_MOVE_mean_loss": 146.0,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "door-open-v3",
+          "context": "CHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 83.33333333333333,
+          "all_program_clairvoyant_min_mean": 82.66666666666667,
+          "best_MOVE_mean_loss": 158.5,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        }
+      ],
+      "complete_group_room": [
+        {
+          "group": 0,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 73.33333333333333,
+          "mean_best_MOVE_minus_RAW_PI": -37.833333333333336
+        },
+        {
+          "group": 1,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 2.0,
+          "mean_best_MOVE_minus_RAW_PI": 49.0
+        },
+        {
+          "group": 2,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 1.0,
+          "mean_best_MOVE_minus_RAW_PI": 45.0
+        },
+        {
+          "group": 3,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 10.0,
+          "mean_best_MOVE_minus_RAW_PI": 34.166666666666664
+        },
+        {
+          "group": 4,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 36.833333333333336,
+          "mean_best_MOVE_minus_RAW_PI": 4.0
+        },
+        {
+          "group": 5,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 1.6666666666666667,
+          "mean_best_MOVE_minus_RAW_PI": 73.0
+        }
+      ],
+      "node_missing_counts": {
+        "DIFFERENT_PHYSICAL_PREFIX": 1196,
+        "SOURCE_TRAJECTORY_ENDED_BEFORE_NODE": 275,
+        "SOURCE_ALREADY_ENDED_AT_NODE": 29,
+        "CANONICAL_SOURCE_ALREADY_ENDED_AT_NODE": 40,
+        "CANONICAL_SOURCE_TRAJECTORY_ENDED_BEFORE_NODE": 40,
+        "CANONICAL_MOVEMENT_NOT_EXECUTED": 80
+      },
+      "support_counts": [
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 32
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 32
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 32
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 30
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 30
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 30,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 28
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 28,
+          "supported_units": 0
+        }
+      ]
+    },
+    {
+      "bank": "PI_QUAL",
+      "executions": 432,
+      "groups": 9,
+      "units": 54,
+      "programs": 8,
+      "actual_saved_control_steps": 55513,
+      "full_program_results": [
+        {
+          "program": "NO_PROBE",
+          "n": 54,
+          "successes": 41,
+          "mean_deadline_loss": 196.57407407407408
+        },
+        {
+          "program": "DIRECT_C8",
+          "n": 54,
+          "successes": 46,
+          "mean_deadline_loss": 138.87037037037038
+        },
+        {
+          "program": "MOVE_KEEP_C8",
+          "n": 54,
+          "successes": 46,
+          "mean_deadline_loss": 167.5
+        },
+        {
+          "program": "MOVE_INTEGRAL",
+          "n": 54,
+          "successes": 54,
+          "mean_deadline_loss": 114.92592592592592
+        },
+        {
+          "program": "RAW_TASK_PI_T0.5",
+          "n": 54,
+          "successes": 53,
+          "mean_deadline_loss": 83.03703703703704
+        },
+        {
+          "program": "DIRECT_TASK_PI_T0.5",
+          "n": 54,
+          "successes": 53,
+          "mean_deadline_loss": 101.96296296296296
+        },
+        {
+          "program": "MOVE_KEEP_TASK_PI_T0.5",
+          "n": 54,
+          "successes": 54,
+          "mean_deadline_loss": 113.4074074074074
+        },
+        {
+          "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+          "n": 54,
+          "successes": 54,
+          "mean_deadline_loss": 111.74074074074075
+        }
+      ],
+      "all_task_context_cells": [
+        {
+          "task": "push-v3",
+          "context": "UNCHANGED",
+          "n": 9,
+          "RAW_PI_mean_loss": 75.66666666666667,
+          "all_program_clairvoyant_min_mean": 63.111111111111114,
+          "best_MOVE_mean_loss": 99.66666666666667,
+          "MOVE_better_than_RAW_PI": 3,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "push-v3",
+          "context": "CHANGED",
+          "n": 9,
+          "RAW_PI_mean_loss": 130.22222222222223,
+          "all_program_clairvoyant_min_mean": 64.88888888888889,
+          "best_MOVE_mean_loss": 110.55555555555556,
+          "MOVE_better_than_RAW_PI": 4,
+          "MOVE_worse_than_RAW_PI": 5
+        },
+        {
+          "task": "reach-v3",
+          "context": "UNCHANGED",
+          "n": 9,
+          "RAW_PI_mean_loss": 66.66666666666667,
+          "all_program_clairvoyant_min_mean": 45.77777777777778,
+          "best_MOVE_mean_loss": 62.55555555555556,
+          "MOVE_better_than_RAW_PI": 3,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "reach-v3",
+          "context": "CHANGED",
+          "n": 9,
+          "RAW_PI_mean_loss": 54.666666666666664,
+          "all_program_clairvoyant_min_mean": 38.77777777777778,
+          "best_MOVE_mean_loss": 71.0,
+          "MOVE_better_than_RAW_PI": 2,
+          "MOVE_worse_than_RAW_PI": 7
+        },
+        {
+          "task": "door-open-v3",
+          "context": "UNCHANGED",
+          "n": 9,
+          "RAW_PI_mean_loss": 85.55555555555556,
+          "all_program_clairvoyant_min_mean": 85.44444444444444,
+          "best_MOVE_mean_loss": 142.88888888888889,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 9
+        },
+        {
+          "task": "door-open-v3",
+          "context": "CHANGED",
+          "n": 9,
+          "RAW_PI_mean_loss": 85.44444444444444,
+          "all_program_clairvoyant_min_mean": 84.55555555555556,
+          "best_MOVE_mean_loss": 153.0,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 9
+        }
+      ],
+      "complete_group_room": [
+        {
+          "group": 0,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 20.833333333333332,
+          "mean_best_MOVE_minus_RAW_PI": -2.5
+        },
+        {
+          "group": 1,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 21.833333333333332,
+          "mean_best_MOVE_minus_RAW_PI": 19.666666666666668
+        },
+        {
+          "group": 2,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 7.833333333333333,
+          "mean_best_MOVE_minus_RAW_PI": 20.0
+        },
+        {
+          "group": 3,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 18.666666666666668,
+          "mean_best_MOVE_minus_RAW_PI": 14.666666666666666
+        },
+        {
+          "group": 4,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 19.5,
+          "mean_best_MOVE_minus_RAW_PI": 31.0
+        },
+        {
+          "group": 5,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 7.833333333333333,
+          "mean_best_MOVE_minus_RAW_PI": 33.333333333333336
+        },
+        {
+          "group": 6,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 76.83333333333333,
+          "mean_best_MOVE_minus_RAW_PI": -38.166666666666664
+        },
+        {
+          "group": 7,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 0.16666666666666666,
+          "mean_best_MOVE_minus_RAW_PI": 64.33333333333333
+        },
+        {
+          "group": 8,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 0.0,
+          "mean_best_MOVE_minus_RAW_PI": 69.83333333333333
+        }
+      ],
+      "node_missing_counts": {
+        "DIFFERENT_PHYSICAL_PREFIX": 695,
+        "SOURCE_TRAJECTORY_ENDED_BEFORE_NODE": 125,
+        "SOURCE_ALREADY_ENDED_AT_NODE": 38,
+        "CANONICAL_SOURCE_ALREADY_ENDED_AT_NODE": 10,
+        "CANONICAL_MOVEMENT_NOT_EXECUTED": 48,
+        "CANONICAL_SOURCE_TRAJECTORY_ENDED_BEFORE_NODE": 24
+      },
+      "support_counts": [
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 54
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 54
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 54,
+          "canonical_live_units": 54,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 48
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 48
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 48
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 54,
+          "canonical_live_units": 48,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 44
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 44
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 54,
+          "canonical_live_units": 44,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 46
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 54,
+          "canonical_live_units": 46,
+          "supported_units": 0
+        }
+      ]
+    },
+    {
+      "bank": "RANK_DEV",
+      "executions": 432,
+      "groups": 6,
+      "units": 36,
+      "programs": 12,
+      "actual_saved_control_steps": 58685,
+      "full_program_results": [
+        {
+          "program": "NO_PROBE",
+          "n": 36,
+          "successes": 30,
+          "mean_deadline_loss": 161.0
+        },
+        {
+          "program": "DIRECT_C8",
+          "n": 36,
+          "successes": 31,
+          "mean_deadline_loss": 138.38888888888889
+        },
+        {
+          "program": "MOVE_KEEP_C8",
+          "n": 36,
+          "successes": 28,
+          "mean_deadline_loss": 210.38888888888889
+        },
+        {
+          "program": "MOVE_INTEGRAL",
+          "n": 36,
+          "successes": 32,
+          "mean_deadline_loss": 168.27777777777777
+        },
+        {
+          "program": "RAW_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 75.91666666666667
+        },
+        {
+          "program": "DIRECT_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 36,
+          "mean_deadline_loss": 82.97222222222223
+        },
+        {
+          "program": "MOVE_KEEP_TASK_PI_T0.5",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 136.58333333333334
+        },
+        {
+          "program": "MOVE_INTEGRAL_TASK_PI_T2.0",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 144.69444444444446
+        },
+        {
+          "program": "F20_RANK_W0.1",
+          "n": 36,
+          "successes": 35,
+          "mean_deadline_loss": 96.58333333333333
+        },
+        {
+          "program": "F20_RANK_W1.0",
+          "n": 36,
+          "successes": 31,
+          "mean_deadline_loss": 138.69444444444446
+        },
+        {
+          "program": "F20_RANK_W10.0",
+          "n": 36,
+          "successes": 31,
+          "mean_deadline_loss": 138.36111111111111
+        },
+        {
+          "program": "KINEMATIC_RANK_W1.0",
+          "n": 36,
+          "successes": 31,
+          "mean_deadline_loss": 138.27777777777777
+        }
+      ],
+      "all_task_context_cells": [
+        {
+          "task": "push-v3",
+          "context": "UNCHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 78.83333333333333,
+          "all_program_clairvoyant_min_mean": 65.0,
+          "best_MOVE_mean_loss": 105.83333333333333,
+          "MOVE_better_than_RAW_PI": 2,
+          "MOVE_worse_than_RAW_PI": 4
+        },
+        {
+          "task": "push-v3",
+          "context": "CHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 77.33333333333333,
+          "all_program_clairvoyant_min_mean": 64.66666666666667,
+          "best_MOVE_mean_loss": 114.33333333333333,
+          "MOVE_better_than_RAW_PI": 1,
+          "MOVE_worse_than_RAW_PI": 5
+        },
+        {
+          "task": "reach-v3",
+          "context": "UNCHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 59.333333333333336,
+          "all_program_clairvoyant_min_mean": 42.833333333333336,
+          "best_MOVE_mean_loss": 83.83333333333333,
+          "MOVE_better_than_RAW_PI": 1,
+          "MOVE_worse_than_RAW_PI": 5
+        },
+        {
+          "task": "reach-v3",
+          "context": "CHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 62.666666666666664,
+          "all_program_clairvoyant_min_mean": 40.5,
+          "best_MOVE_mean_loss": 111.66666666666667,
+          "MOVE_better_than_RAW_PI": 1,
+          "MOVE_worse_than_RAW_PI": 5
+        },
+        {
+          "task": "door-open-v3",
+          "context": "UNCHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 88.16666666666667,
+          "all_program_clairvoyant_min_mean": 87.83333333333333,
+          "best_MOVE_mean_loss": 162.0,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        },
+        {
+          "task": "door-open-v3",
+          "context": "CHANGED",
+          "n": 6,
+          "RAW_PI_mean_loss": 89.16666666666667,
+          "all_program_clairvoyant_min_mean": 88.33333333333333,
+          "best_MOVE_mean_loss": 215.66666666666666,
+          "MOVE_better_than_RAW_PI": 0,
+          "MOVE_worse_than_RAW_PI": 6
+        }
+      ],
+      "complete_group_room": [
+        {
+          "group": 0,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 6.166666666666667,
+          "mean_best_MOVE_minus_RAW_PI": 38.833333333333336
+        },
+        {
+          "group": 1,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 0.16666666666666666,
+          "mean_best_MOVE_minus_RAW_PI": 58.666666666666664
+        },
+        {
+          "group": 2,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 38.666666666666664,
+          "mean_best_MOVE_minus_RAW_PI": 44.333333333333336
+        },
+        {
+          "group": 3,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 3.0,
+          "mean_best_MOVE_minus_RAW_PI": 101.33333333333333
+        },
+        {
+          "group": 4,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 18.333333333333332,
+          "mean_best_MOVE_minus_RAW_PI": 31.5
+        },
+        {
+          "group": 5,
+          "n": 6,
+          "mean_clairvoyant_gap_vs_RAW_PI": 0.0,
+          "mean_best_MOVE_minus_RAW_PI": 63.166666666666664
+        }
+      ],
+      "node_missing_counts": {
+        "DIFFERENT_PHYSICAL_PREFIX": 770,
+        "SOURCE_TRAJECTORY_ENDED_BEFORE_NODE": 120,
+        "CANONICAL_SOURCE_ALREADY_ENDED_AT_NODE": 2,
+        "SOURCE_ALREADY_ENDED_AT_NODE": 8,
+        "CANONICAL_SOURCE_TRAJECTORY_ENDED_BEFORE_NODE": 44
+      },
+      "support_counts": [
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER8",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 36
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "BEFORE_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 36,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 34
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 34
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "AFTER_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 34,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "KEEP_C8",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "BEGIN_C8_PI_0.5_NOW",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_KEEP_C8_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_THEN_INTEGRAL_PI_2.0",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REJECT_KEEP_C8_PI_0.5_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "REIDENTIFY_AFTER_MOVE",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "SHORT_VALIDATION_RETURN_OLD",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "CONTINUE_RAW_PI_0.5",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 32
+        },
+        {
+          "stage": "RAW_PI_BEFORE_MOVE",
+          "requested_suffix": "MOVE_FROM_RAW_PI_PREFIX_KEEP_PI_MEMORY",
+          "complete_denominator": 36,
+          "canonical_live_units": 32,
+          "supported_units": 0
+        }
+      ]
+    }
+  ],
+  "new_environment_steps": 0,
+  "new_resets": 0,
+  "new_model_fits": 0,
+  "new_online_LLM_API_calls": 0,
+  "uses_future_outcomes_only_in_evaluation": true,
+  "clairvoyant_realized_minimum_is_a_population_bound": false,
+  "new_method_or_gate_promoted": false
+}

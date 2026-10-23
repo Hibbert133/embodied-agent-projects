@@ -1,0 +1,46 @@
+{
+  "integrity": "PASSED",
+  "native_software_contract": "PASSED",
+  "executions": 54,
+  "counts": {
+    "fixed_policy_requeries": 7975,
+    "pi_plans": 7975,
+    "pi_changed_command_steps": 7648,
+    "pi_send_limit_steps": 4171,
+    "pi_integral_limit_steps": 0,
+    "returns": 42,
+    "tail_choices": 42,
+    "control_steps": 8836,
+    "common_prefix_pairs": 36
+  },
+  "complete_warm_windows": 3,
+  "coverage": {
+    "push-v3": {
+      "movement": 4,
+      "post_move_task": 4
+    },
+    "reach-v3": {
+      "movement": 4,
+      "post_move_task": 4
+    },
+    "door-open-v3": {
+      "movement": 6,
+      "post_move_task": 6
+    }
+  },
+  "collection_completion_sha256": "fa40a5ecaabe84064168a25f4b87e7602e495f652cce8ff11bdc78c4a6623071",
+  "artifact_sha256": {
+    "cases.jsonl.gz": "fa56ff129492b125ce81f1f0e27d91a0b86f44939a00f1cf9b60b74d137479e6",
+    "events.jsonl.gz": "d21bf285ed2235716a8abca35be23fd79b8fd2cdcb0661c6af101c6e987748d3",
+    "status.json": "88d43fb3efd613a69f049072c127d1a44262b4d79f49869a90b422051a921c76",
+    "summary.json": "d1d17bb7dd64564dc250ef1cd314eb7a879008d98536a995616c092ed9f2e9dd",
+    "witnesses.jsonl.gz": "5547c30a2c8ba1e3717dc2dedc13ad0c7fca42c0b417d7a43b356d2d8a95c339"
+  },
+  "wall_ns": 54573183700,
+  "new_environment_steps": 0,
+  "new_parameter_fits": 0,
+  "new_model_fits": 0,
+  "new_online_LLM_API_calls": 0,
+  "not_robot_safety_or_task_gain_qualification": true,
+  "publication_goal_complete": false
+}

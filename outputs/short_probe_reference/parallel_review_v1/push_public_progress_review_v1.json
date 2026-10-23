@@ -1,0 +1,40 @@
+{
+  "review": "paired_push_public_progress_review_v1",
+  "status": "PASSED",
+  "created_utc": "2026-10-19T05:56:23.671512+00:00",
+  "row_fields_independently_checked": 67584,
+  "maximum_absolute_numeric_error": 5.551115123125783e-17,
+  "program_rows": 2048,
+  "endpoint_aligned_descend_rows": 77,
+  "success_rows": 3,
+  "failure_rows": 74,
+  "failed_with_positive_goal_distance_reduction": 29,
+  "failed_with_positive_goal_and_z_gap_reduction": 12,
+  "report_links_checked": 9,
+  "new_text_secret_and_whitespace_scan": "passed",
+  "syntax_compilation": "passed",
+  "git_diff_check": "passed",
+  "frozen_main_inputs_unchanged": 810,
+  "source_git_commit_unchanged": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "tracked_tree_and_index_clean": true,
+  "new_environment_steps": 0,
+  "new_api_calls": 0,
+  "new_fits": 0,
+  "new_full_policy_queries": 0,
+  "current_main_partial_performance_read": false,
+  "initial_extractor_launch_failure": {
+    "reason": "duplicated paired_probe_v1 path component",
+    "failure_before_output_creation": true,
+    "repair": "analysis-only input path corrected; raw experiment was not rerun"
+  },
+  "artifact_sha256": {
+    "docs/paper/paired_push_public_progress_20261019_zh.md": "b769914596ce8214dbd3684dcde7467bfefd5d23b658c29b41e6ef49d6fea5e0",
+    "docs/paper/extract_paired_push_progress_20261019.py": "5ab79fdcb7af3de13cb1e8f12cb16ec11890d2c2e79322e0b4e0627ee742c205",
+    "docs/paper/audit_paired_push_progress_20261019.py": "2da434d368501e3c3f0cb9d9c47dcfcd3aa3d15a3cad0b0d638d86411af49bc8",
+    "outputs/reproduction_reviews/paired_probe_v1/push_public_progress_v1/independent_numeric_audit.json": "664261bc9c5e21056da5b5266e88829081b5d66ad277a14c4bd154eab374cb67",
+    "outputs/reproduction_reviews/paired_probe_v1/push_public_progress_v1/receipt.json": "8ec154437565d12ca4f6a84848c3a6207efed075c4e3837ddf2c44968bd88169",
+    "outputs/reproduction_reviews/paired_probe_v1/push_public_progress_v1/summary.json": "cff1b167c9f92f59c32aa8354a6712fe02617bd0c27911d408207a90bc980288",
+    "outputs/reproduction_reviews/paired_probe_v1/push_public_progress_v1/tail_progress.csv": "210c8b663c57ca537e47b675dc552573c0f8e26445ca9c60c1c925e883d5aa05"
+  },
+  "scope": "Descriptive source reuse with a separate numerical recomputation; no detector threshold, intervention performance or new-algorithm claim."
+}

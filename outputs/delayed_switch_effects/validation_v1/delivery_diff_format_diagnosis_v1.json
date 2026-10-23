@@ -1,0 +1,15 @@
+{
+  "status": "GENERATED_SVG_FORMAT_ONLY",
+  "diff_returncode": 2,
+  "output_sha256": "d5f97b7fc9d59f8a04b334716d13037704010eaa2961a29729fe673b78651bc4",
+  "diagnostic_line_count": 6751,
+  "paths": {
+    "outputs/reproduction_reviews/delayed_switch_effects_v1/main_figures_v1/fixed_switch_en.svg": 1162,
+    "outputs/reproduction_reviews/delayed_switch_effects_v1/main_figures_v1/fixed_switch_zh.svg": 5589
+  },
+  "source_sha256": {
+    "outputs/reproduction_reviews/delayed_switch_effects_v1/main_figures_v1/fixed_switch_en.svg": "a72a3258901158fec78bea4eebffc99f6c0e39215a39654d040c8c1f3c589db4",
+    "outputs/reproduction_reviews/delayed_switch_effects_v1/main_figures_v1/fixed_switch_zh.svg": "b53e1501a479f95593f426682fac4c463e3a82004423cdfe6869f3242328e809"
+  },
+  "diagnosis": "All staged whitespace diagnostics occur in Matplotlib SVG path-data attributes. Existing paired-probe and short-probe artifact directories use *.svg -diff; apply the same directory-local treatment while retaining UTF-8 secret scanning and artifact hashes. Scientific source and result bytes are unchanged."
+}

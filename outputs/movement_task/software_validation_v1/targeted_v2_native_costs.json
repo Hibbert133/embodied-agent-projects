@@ -1,0 +1,318 @@
+{
+  "scope": "Instrumented native fixtures in this invocation only; preliminary console test attempts and uninstrumented fixtures are not covered.",
+  "modules": {
+    "tests.test_movement_task_host_v1": {
+      "SOFTWARE_RECEIPTS": [
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_actual_mid_operation_reset_is_detected_and_counted",
+          "native_frames": 50,
+          "native_resets": 2,
+          "host_control_steps": 10,
+          "host_attempted_control_steps": 10,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 2,
+              "reset_completed": 2,
+              "simulation_attempts": 10,
+              "simulation_frames_attempted": 50,
+              "simulation_completed": 10,
+              "simulation_frames_completed": 50
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 2,
+                "reset_completed": 2
+              },
+              "CONTROL": {
+                "simulation_attempts": 10,
+                "simulation_frames_attempted": 50,
+                "simulation_completed": 10,
+                "simulation_frames_completed": 50
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_bound_arx_result_drives_actual_native_task_commands",
+          "native_frames": 100,
+          "native_resets": 1,
+          "host_control_steps": 20,
+          "host_attempted_control_steps": 20,
+          "host_policy_queries": 9,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 20,
+              "simulation_frames_attempted": 100,
+              "simulation_completed": 20,
+              "simulation_frames_completed": 100
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_budget_or_rewound_prefix_fails_before_any_new_physics",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_attempted_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_changed_command_rejected_before_physics",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_attempted_control_steps": 9,
+          "host_policy_queries": 2,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_extra_native_work_preserved_in_failure_cost_not_hidden_by_actor_counter",
+          "native_frames": 55,
+          "native_resets": 1,
+          "host_control_steps": 10,
+          "host_attempted_control_steps": 10,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 11,
+              "simulation_frames_attempted": 55,
+              "simulation_completed": 11,
+              "simulation_frames_completed": 55
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 11,
+                "simulation_frames_attempted": 55,
+                "simulation_completed": 11,
+                "simulation_frames_completed": 55
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_original_source_fit_and_physical_use_are_required",
+          "native_frames": 45,
+          "native_resets": 1,
+          "host_control_steps": 9,
+          "host_attempted_control_steps": 9,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 9,
+              "simulation_frames_attempted": 45,
+              "simulation_completed": 9,
+              "simulation_frames_completed": 45
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 9,
+                "simulation_frames_attempted": 45,
+                "simulation_completed": 9,
+                "simulation_frames_completed": 45
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_real_commands_use_saved_choices_in_one_continuous_world",
+          "native_frames": 100,
+          "native_resets": 1,
+          "host_control_steps": 20,
+          "host_attempted_control_steps": 20,
+          "host_policy_queries": 9,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 20,
+              "simulation_frames_attempted": 100,
+              "simulation_completed": 20,
+              "simulation_frames_completed": 100
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_repeated_operation_is_rejected",
+          "native_frames": 100,
+          "native_resets": 1,
+          "host_control_steps": 20,
+          "host_attempted_control_steps": 20,
+          "host_policy_queries": 12,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 20,
+              "simulation_frames_attempted": 100,
+              "simulation_completed": 20,
+              "simulation_frames_completed": 100
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 20,
+                "simulation_frames_attempted": 100,
+                "simulation_completed": 20,
+                "simulation_frames_completed": 100
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        },
+        {
+          "test": "tests.test_movement_task_host_v1.MovementTaskHostTests.test_reset_and_equal_valued_noise_replacement_are_detected",
+          "native_frames": 50,
+          "native_resets": 1,
+          "host_control_steps": 10,
+          "host_attempted_control_steps": 10,
+          "host_policy_queries": 1,
+          "lifecycle": {
+            "counts": {
+              "reset_attempts": 1,
+              "reset_completed": 1,
+              "simulation_attempts": 10,
+              "simulation_frames_attempted": 50,
+              "simulation_completed": 10,
+              "simulation_frames_completed": 50
+            },
+            "by_phase": {
+              "CONTROLLED_RESET": {
+                "reset_attempts": 1,
+                "reset_completed": 1
+              },
+              "CONTROL": {
+                "simulation_attempts": 10,
+                "simulation_frames_attempted": 50,
+                "simulation_completed": 10,
+                "simulation_frames_completed": 50
+              }
+            }
+          },
+          "new_metaworld_steps": 0,
+          "new_scientific_seeds": 0,
+          "new_api_calls": 0,
+          "scope": "One-axis native fixture; synthetic initial correction and optional synthetic fit, no scientific task benefit."
+        }
+      ]
+    },
+    "tests.test_physical_reprobe_host_v1": {
+      "SOFTWARE_RECEIPTS": []
+    }
+  }
+}

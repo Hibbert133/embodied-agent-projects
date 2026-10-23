@@ -1,0 +1,59 @@
+{
+  "protocol": "probemem_noise_intervention_utility_coverage_v1",
+  "stage": "pre_phase_d_noise_action_discrimination",
+  "status": "development",
+  "seed_range": [760, 839],
+  "heldout_seed_range": [900, 979],
+  "task": "push-v3",
+  "low_level_policy": "SawyerPushV3Policy",
+  "condition_cycle": ["fault_05"],
+  "candidates": [
+    "BOUNDED_PLANAR_COMPENSATION",
+    "INDEPENDENT_STOCHASTIC_RETRY"
+  ],
+  "stopping_rule": {
+    "target_paired_operational_units": 20,
+    "maximum_initial_units": 80,
+    "may_read_candidate_outcome": false,
+    "may_read_winner_label": false,
+    "stop_signal": "paired candidate executability only"
+  },
+  "budget": {
+    "initial_rollout_max_steps": 500,
+    "registered_probe_max_steps": 64,
+    "fresh_verification_max_steps_per_candidate": 500,
+    "online_single_candidate_max_steps": 1064,
+    "evaluator_paired_collection_max_steps": 1564
+  },
+  "registered_probe": {
+    "protocol": "repeated_symmetric_world_frame_xy_v1",
+    "repeats": 4,
+    "steps_per_direction": 4,
+    "magnitude": 0.2
+  },
+  "random_seed_namespaces": {
+    "initial_rollout": 7401,
+    "diagnostic_probe": 7402,
+    "shared_paired_verification": 7403
+  },
+  "recovery_policy_config": "configs/autoresearch/default_recovery_config.json",
+  "noise_selection": "outputs/autoresearch/noise_calibration/selected.json",
+  "utility_order": {
+    "primary": "ACCEPTED > INCONCLUSIVE > REJECTED",
+    "accepted_tie_break": "fewer steps, then lower final object-goal distance",
+    "failed_tie_break": "lower final object-goal distance, then fewer steps"
+  },
+  "paired_execution": {
+    "same_initial_rollout": true,
+    "same_probe_evidence": true,
+    "common_verification_random_numbers": true,
+    "counterfactual_outcomes_evaluator_only": true
+  },
+  "scope": {
+    "api_calls": 0,
+    "rendering": false,
+    "principle_generation": false,
+    "actionable_memory_write": false,
+    "heldout_claim": false
+  }
+}

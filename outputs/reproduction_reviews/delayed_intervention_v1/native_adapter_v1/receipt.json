@@ -1,0 +1,59 @@
+{
+  "schema": "delayed_intervention_native_software_qualification_v1",
+  "status": "PASSED_NATIVE_SOFTWARE_TESTS",
+  "tests_run": 12,
+  "test_failures": 0,
+  "test_errors": 0,
+  "native_fixture_instances": 19,
+  "completed_adapter_cases": 6,
+  "native_software_costs_this_persisted_run": {
+    "native_successful_requested_frames": 1015,
+    "host_step_attempts": 202,
+    "host_returned_steps": 201,
+    "actual_tiny_policy_calls": 204,
+    "captures": 0,
+    "restores": 0,
+    "reset_completed": 20,
+    "ledger_simulation_frames_completed": 1015
+  },
+  "previous_development_run": {
+    "test_count": 12,
+    "tests_passed": true,
+    "native_cost_receipts_persisted": false,
+    "actual_native_cost_totals": null,
+    "scope": "An earlier successful developer test invocation used the same tiny fixture. Its counters were not exported; these unrecorded prior software-test costs are unknown, not zero, and are not silently included in the measured totals above."
+  },
+  "new_metaworld_task_steps": 0,
+  "new_metaworld_task_resets": 0,
+  "new_scientific_task_seeds": 0,
+  "new_api_calls": 0,
+  "new_parameter_fits": 0,
+  "metaworld_physical_qualification": false,
+  "task_benefit_tested": false,
+  "source_sha256": {
+    "docs/prototypes/delayed_intervention_v1/controller.py": "5c107ac655f20355d864297dcc94351ea4e10f85bfe6454f4852209c87398097",
+    "docs/prototypes/delayed_intervention_v1/qualify.py": "555490af524b405be330b5ef4f67639ab3fcea5fcd4d3cbe46e6cab11d58fc12",
+    "docs/prototypes/delayed_intervention_v1/qualify_adapter.py": "e60af557feb300f5d4dc32e44ac6481ceeb5536f44f764d408ff6a5a46e0af8c",
+    "docs/prototypes/delayed_intervention_v1/session_adapter.py": "7496604bbb866f278cd80481c0042eb7f72447f011ec15eee564dc93492cd5db",
+    "docs/prototypes/delayed_intervention_v1/test_controller.py": "e1d034e4464b181290513785f260473df2169c7963ac5c7ea4d2bf4ffab916b9",
+    "docs/prototypes/delayed_intervention_v1/test_session_adapter.py": "04a4685d191e728961093c5ce75e3db8d46aaff1ff0641f24fcc265d0f5607b6"
+  },
+  "frozen_dependency_sha256": {
+    "tests/test_short_probe_reference_host_v1.py": "50f9ba940fabd0b7066a36ec05d5878636567d0c0fff6c62be79112a179c3b5a",
+    "tests/test_paired_probe_host_v1.py": "6b4efda2fbcca1aaaa6d89968e073931cfa4e6cfe0c1a90b10aac70f0ea8ce5f",
+    "src/analysis/paired_probe_host_v1.py": "8149aafa0430fca5e4442e23a862abadd6bb984d97254bd3a04abd9bb467afc1",
+    "src/analysis/capsule_record_json_v2.py": "0a4b5aa6e9d81adcdbfa6fd2f3dd266c71c90f2d37585e3657e56d34909d95e3",
+    "src/analysis/state_capsule_v1.py": "71f376a7c343534cc5742a366aeebfd1302e800bd72d0d62f08e1cc5e0c0fe68",
+    "src/probe/lifecycle_ledger.py": "31b0bf99f657e3319dcb81cd4f3d85c60a6ddba4549241fc3d266125bd95de33",
+    "src/rollout/chronological_faults.py": "21e58285c6af138be586c9cc55b1a8373e6d53aadf1ad79e27b229c40c74608f"
+  },
+  "source_git_commit": "39300e55637971c8426effd20b49d3f0644fecd3",
+  "artifact_sha256": {
+    "completed_adapter_cases.json": "1fe71dfb53c95a2fe710fead82f24d2f665c3806c8a6bf0f583604a125e40c42",
+    "native_cost_receipts.json": "f96d73752d937de217417d44f842c72df1f7f67f6c1c7402c769b7361e847572",
+    "native_journals.jsonl.gz": "682b7f842dfb7e12d686d9f16655f7fab080ed81cb3f89c458cc20acaddf4876",
+    "tests.txt": "3545bf3cb84d7cc60d663b21cbe311487ba43bae810bbb8d2f908db7387fa58b"
+  },
+  "qualification_wall_ns": 657272700,
+  "scope": "Real MuJoCo steps in a small software fixture, including deliberate faults; not robot-task dynamics qualification or an independent intervention study."
+}

@@ -1,0 +1,5602 @@
+{
+  "experiment_run_id": "conditional_continuation_20261015T094531Z_784d65befd08",
+  "manifest_id": "61d70c7c4fc14b2f0841bb8a549b2d2d320c828e14bd1c5328273b307dbdb46f",
+  "source_git_commit": "784d65befd089da29f002869c38c9936b9b6ee02",
+  "integrity": "PASSED",
+  "status": "COMPLETED_CONDITIONAL_CONTINUATION",
+  "episodes": 672,
+  "controlled_steps": 101069,
+  "controlled_resets": 672,
+  "statistics": {
+    "methods": {
+      "DIRECT_G8": {
+        "cases": 96,
+        "successes": 85,
+        "stops": 0,
+        "total_steps": 12368,
+        "mean_steps": 128.83333333333334,
+        "mean_deadline_loss": 128.83333333333334,
+        "mean_probe_steps": 8.0,
+        "mean_policy_measure_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 347.6875
+      },
+      "KEEP_G8_AFTER16": {
+        "cases": 96,
+        "successes": 86,
+        "stops": 0,
+        "total_steps": 12677,
+        "mean_steps": 132.05208333333334,
+        "mean_deadline_loss": 132.05208333333334,
+        "mean_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 350.90625
+      },
+      "UPDATE_G16": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "total_steps": 9964,
+        "mean_steps": 103.79166666666667,
+        "mean_deadline_loss": 103.79166666666667,
+        "mean_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 322.6458333333333
+      },
+      "POINT16_CYCLE": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "total_steps": 9955,
+        "mean_steps": 103.69791666666667,
+        "mean_deadline_loss": 103.69791666666667,
+        "mean_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 322.5520833333333
+      },
+      "PASSIVE_G16": {
+        "cases": 96,
+        "successes": 88,
+        "stops": 0,
+        "total_steps": 10869,
+        "mean_steps": 113.21875,
+        "mean_deadline_loss": 113.21875,
+        "mean_probe_steps": 8.0,
+        "mean_policy_measure_steps": 8.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 332.0729166666667
+      },
+      "POINT16_WIDE": {
+        "cases": 96,
+        "successes": 92,
+        "stops": 0,
+        "total_steps": 10237,
+        "mean_steps": 106.63541666666667,
+        "mean_deadline_loss": 106.63541666666667,
+        "mean_probe_steps": 16.0,
+        "mean_policy_measure_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 21010,
+        "offline_resets": 288,
+        "mean_amortized_steps": 325.4895833333333
+      },
+      "NO_PROBE": {
+        "cases": 96,
+        "successes": 33,
+        "stops": 0,
+        "total_steps": 34999,
+        "mean_steps": 364.5729166666667,
+        "mean_deadline_loss": 364.5729166666667,
+        "mean_probe_steps": 0.0,
+        "mean_policy_measure_steps": 0.0,
+        "point_fit_failures": 0,
+        "offline_steps": 0,
+        "offline_resets": 0,
+        "mean_amortized_steps": 364.5729166666667
+      }
+    },
+    "conditional_contexts": [
+      {
+        "stream": 0,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              78,
+              79,
+              77,
+              79
+            ],
+            "mean_loss": 78.25,
+            "range": [
+              77,
+              79
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              88,
+              90,
+              90,
+              88
+            ],
+            "mean_loss": 89.0,
+            "range": [
+              88,
+              90
+            ],
+            "mean_loss_minus_direct": 10.75,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              89,
+              90,
+              91,
+              87
+            ],
+            "mean_loss": 89.25,
+            "range": [
+              87,
+              91
+            ],
+            "mean_loss_minus_direct": 11.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              89,
+              90,
+              90,
+              86
+            ],
+            "mean_loss": 88.75,
+            "range": [
+              86,
+              90
+            ],
+            "mean_loss_minus_direct": 10.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              78,
+              79,
+              78,
+              79
+            ],
+            "mean_loss": 78.5,
+            "range": [
+              78,
+              79
+            ],
+            "mean_loss_minus_direct": 0.25,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              88,
+              89,
+              91,
+              91
+            ],
+            "mean_loss": 89.75,
+            "range": [
+              88,
+              91
+            ],
+            "mean_loss_minus_direct": 11.5,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 421.75,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 0,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              75,
+              83,
+              83,
+              77
+            ],
+            "mean_loss": 79.5,
+            "range": [
+              75,
+              83
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              79,
+              87,
+              88,
+              81
+            ],
+            "mean_loss": 83.75,
+            "range": [
+              79,
+              88
+            ],
+            "mean_loss_minus_direct": 4.25,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              77,
+              79,
+              81,
+              77
+            ],
+            "mean_loss": 78.5,
+            "range": [
+              77,
+              81
+            ],
+            "mean_loss_minus_direct": -1.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              77,
+              79,
+              81,
+              77
+            ],
+            "mean_loss": 78.5,
+            "range": [
+              77,
+              81
+            ],
+            "mean_loss_minus_direct": -1.0,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              68,
+              75,
+              68,
+              67
+            ],
+            "mean_loss": 69.5,
+            "range": [
+              67,
+              75
+            ],
+            "mean_loss_minus_direct": -10.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              78,
+              80,
+              83,
+              77
+            ],
+            "mean_loss": 79.5,
+            "range": [
+              77,
+              83
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 420.5,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 0,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              101,
+              101,
+              101,
+              101
+            ],
+            "mean_loss": 101.0,
+            "range": [
+              101,
+              101
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              108,
+              106,
+              107,
+              109
+            ],
+            "mean_loss": 107.5,
+            "range": [
+              106,
+              109
+            ],
+            "mean_loss_minus_direct": 6.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              108,
+              105,
+              108,
+              109
+            ],
+            "mean_loss": 107.5,
+            "range": [
+              105,
+              109
+            ],
+            "mean_loss_minus_direct": 6.5,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              108,
+              105,
+              108,
+              109
+            ],
+            "mean_loss": 107.5,
+            "range": [
+              105,
+              109
+            ],
+            "mean_loss_minus_direct": 6.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              101,
+              101,
+              101,
+              101
+            ],
+            "mean_loss": 101.0,
+            "range": [
+              101,
+              101
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              110,
+              107,
+              107,
+              108
+            ],
+            "mean_loss": 108.0,
+            "range": [
+              107,
+              110
+            ],
+            "mean_loss_minus_direct": 7.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              98,
+              98,
+              98,
+              98
+            ],
+            "mean_loss": 98.0,
+            "range": [
+              98,
+              98
+            ],
+            "mean_loss_minus_direct": -3.0,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 1,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              74,
+              75,
+              75,
+              75
+            ],
+            "mean_loss": 74.75,
+            "range": [
+              74,
+              75
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              83,
+              83,
+              83,
+              83
+            ],
+            "mean_loss": 83.0,
+            "range": [
+              83,
+              83
+            ],
+            "mean_loss_minus_direct": 8.25,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              81,
+              83,
+              84,
+              83
+            ],
+            "mean_loss": 82.75,
+            "range": [
+              81,
+              84
+            ],
+            "mean_loss_minus_direct": 8.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              81,
+              83,
+              84,
+              82
+            ],
+            "mean_loss": 82.5,
+            "range": [
+              81,
+              84
+            ],
+            "mean_loss_minus_direct": 7.75,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              75,
+              76,
+              76,
+              75
+            ],
+            "mean_loss": 75.5,
+            "range": [
+              75,
+              76
+            ],
+            "mean_loss_minus_direct": 0.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              86,
+              87,
+              87,
+              87
+            ],
+            "mean_loss": 86.75,
+            "range": [
+              86,
+              87
+            ],
+            "mean_loss_minus_direct": 12.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 425.25,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 1,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              48,
+              47,
+              49,
+              48
+            ],
+            "mean_loss": 48.0,
+            "range": [
+              47,
+              49
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              56,
+              57,
+              56,
+              57
+            ],
+            "mean_loss": 56.5,
+            "range": [
+              56,
+              57
+            ],
+            "mean_loss_minus_direct": 8.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              58,
+              59,
+              59,
+              59
+            ],
+            "mean_loss": 58.75,
+            "range": [
+              58,
+              59
+            ],
+            "mean_loss_minus_direct": 10.75,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              57,
+              57,
+              58,
+              58
+            ],
+            "mean_loss": 57.5,
+            "range": [
+              57,
+              58
+            ],
+            "mean_loss_minus_direct": 9.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              40,
+              40,
+              40,
+              40
+            ],
+            "mean_loss": 40.0,
+            "range": [
+              40,
+              40
+            ],
+            "mean_loss_minus_direct": -8.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              54,
+              53,
+              53,
+              58
+            ],
+            "mean_loss": 54.5,
+            "range": [
+              53,
+              58
+            ],
+            "mean_loss_minus_direct": 6.5,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 452.0,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 1,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              98,
+              98,
+              98,
+              98
+            ],
+            "mean_loss": 98.0,
+            "range": [
+              98,
+              98
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              107,
+              107,
+              107,
+              107
+            ],
+            "mean_loss": 107.0,
+            "range": [
+              107,
+              107
+            ],
+            "mean_loss_minus_direct": 9.0,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              108,
+              108,
+              109,
+              107
+            ],
+            "mean_loss": 108.0,
+            "range": [
+              107,
+              109
+            ],
+            "mean_loss_minus_direct": 10.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              108,
+              107,
+              109,
+              107
+            ],
+            "mean_loss": 107.75,
+            "range": [
+              107,
+              109
+            ],
+            "mean_loss_minus_direct": 9.75,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              98,
+              99,
+              99,
+              99
+            ],
+            "mean_loss": 98.75,
+            "range": [
+              98,
+              99
+            ],
+            "mean_loss_minus_direct": 0.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              118,
+              116,
+              117,
+              117
+            ],
+            "mean_loss": 117.0,
+            "range": [
+              116,
+              118
+            ],
+            "mean_loss_minus_direct": 19.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 402.0,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 2,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              79,
+              80,
+              81,
+              82
+            ],
+            "mean_loss": 80.5,
+            "range": [
+              79,
+              82
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              90,
+              91,
+              89,
+              90
+            ],
+            "mean_loss": 90.0,
+            "range": [
+              89,
+              91
+            ],
+            "mean_loss_minus_direct": 9.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              84,
+              84,
+              83,
+              83
+            ],
+            "mean_loss": 83.5,
+            "range": [
+              83,
+              84
+            ],
+            "mean_loss_minus_direct": 3.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              84,
+              83,
+              82,
+              83
+            ],
+            "mean_loss": 83.0,
+            "range": [
+              82,
+              84
+            ],
+            "mean_loss_minus_direct": 2.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              77,
+              78,
+              78,
+              78
+            ],
+            "mean_loss": 77.75,
+            "range": [
+              77,
+              78
+            ],
+            "mean_loss_minus_direct": -2.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              84,
+              84,
+              83,
+              82
+            ],
+            "mean_loss": 83.25,
+            "range": [
+              82,
+              84
+            ],
+            "mean_loss_minus_direct": 2.75,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 419.5,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 2,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              75,
+              78,
+              116,
+              83
+            ],
+            "mean_loss": 88.0,
+            "range": [
+              75,
+              116
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              94,
+              95,
+              117,
+              84
+            ],
+            "mean_loss": 97.5,
+            "range": [
+              84,
+              117
+            ],
+            "mean_loss_minus_direct": 9.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              71,
+              71,
+              74,
+              73
+            ],
+            "mean_loss": 72.25,
+            "range": [
+              71,
+              74
+            ],
+            "mean_loss_minus_direct": -15.75,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              70,
+              71,
+              74,
+              72
+            ],
+            "mean_loss": 71.75,
+            "range": [
+              70,
+              74
+            ],
+            "mean_loss_minus_direct": -16.25,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              66,
+              69,
+              71,
+              62
+            ],
+            "mean_loss": 67.0,
+            "range": [
+              62,
+              71
+            ],
+            "mean_loss_minus_direct": -21.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              75,
+              74,
+              96,
+              80
+            ],
+            "mean_loss": 81.25,
+            "range": [
+              74,
+              96
+            ],
+            "mean_loss_minus_direct": -6.75,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              131,
+              105,
+              106,
+              128
+            ],
+            "mean_loss": 117.5,
+            "range": [
+              105,
+              131
+            ],
+            "mean_loss_minus_direct": 29.5,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 2,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              104,
+              107,
+              108,
+              103
+            ],
+            "mean_loss": 105.5,
+            "range": [
+              103,
+              108
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              113,
+              114,
+              114,
+              112
+            ],
+            "mean_loss": 113.25,
+            "range": [
+              112,
+              114
+            ],
+            "mean_loss_minus_direct": 7.75,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              115,
+              112,
+              115,
+              109
+            ],
+            "mean_loss": 112.75,
+            "range": [
+              109,
+              115
+            ],
+            "mean_loss_minus_direct": 7.25,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              115,
+              113,
+              115,
+              113
+            ],
+            "mean_loss": 114.0,
+            "range": [
+              113,
+              115
+            ],
+            "mean_loss_minus_direct": 8.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              106,
+              106,
+              107,
+              106
+            ],
+            "mean_loss": 106.25,
+            "range": [
+              106,
+              107
+            ],
+            "mean_loss_minus_direct": 0.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              117,
+              115,
+              118,
+              116
+            ],
+            "mean_loss": 116.5,
+            "range": [
+              115,
+              118
+            ],
+            "mean_loss_minus_direct": 11.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              100,
+              99,
+              100,
+              99
+            ],
+            "mean_loss": 99.5,
+            "range": [
+              99,
+              100
+            ],
+            "mean_loss_minus_direct": -6.0,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 3,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              90
+            ],
+            "mean_loss": 397.5,
+            "range": [
+              90,
+              500
+            ],
+            "mean_loss_minus_direct": -102.5,
+            "successes": 1
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              84,
+              85,
+              85,
+              85
+            ],
+            "mean_loss": 84.75,
+            "range": [
+              84,
+              85
+            ],
+            "mean_loss_minus_direct": -415.25,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              83,
+              84,
+              85,
+              84
+            ],
+            "mean_loss": 84.0,
+            "range": [
+              83,
+              85
+            ],
+            "mean_loss_minus_direct": -416.0,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              78,
+              77,
+              78,
+              78
+            ],
+            "mean_loss": 77.75,
+            "range": [
+              77,
+              78
+            ],
+            "mean_loss_minus_direct": -422.25,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              86,
+              87,
+              87,
+              88
+            ],
+            "mean_loss": 87.0,
+            "range": [
+              86,
+              88
+            ],
+            "mean_loss_minus_direct": -413.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 3,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              69,
+              72,
+              64,
+              64
+            ],
+            "mean_loss": 67.25,
+            "range": [
+              64,
+              72
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              74,
+              76,
+              70,
+              76
+            ],
+            "mean_loss": 74.0,
+            "range": [
+              70,
+              76
+            ],
+            "mean_loss_minus_direct": 6.75,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              75,
+              81,
+              82,
+              78
+            ],
+            "mean_loss": 79.0,
+            "range": [
+              75,
+              82
+            ],
+            "mean_loss_minus_direct": 11.75,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              75,
+              80,
+              82,
+              78
+            ],
+            "mean_loss": 78.75,
+            "range": [
+              75,
+              82
+            ],
+            "mean_loss_minus_direct": 11.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              67,
+              67,
+              62,
+              60
+            ],
+            "mean_loss": 64.0,
+            "range": [
+              60,
+              67
+            ],
+            "mean_loss_minus_direct": -3.25,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              76,
+              76,
+              68,
+              76
+            ],
+            "mean_loss": 74.0,
+            "range": [
+              68,
+              76
+            ],
+            "mean_loss_minus_direct": 6.75,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 432.75,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 3,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 4,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              500,
+              92,
+              500,
+              500
+            ],
+            "mean_loss": 398.0,
+            "range": [
+              92,
+              500
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 1
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              99,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 399.75,
+            "range": [
+              99,
+              500
+            ],
+            "mean_loss_minus_direct": 1.75,
+            "successes": 1
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              91,
+              92,
+              90,
+              92
+            ],
+            "mean_loss": 91.25,
+            "range": [
+              90,
+              92
+            ],
+            "mean_loss_minus_direct": -306.75,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              91,
+              92,
+              91,
+              92
+            ],
+            "mean_loss": 91.5,
+            "range": [
+              91,
+              92
+            ],
+            "mean_loss_minus_direct": -306.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              84,
+              86,
+              86,
+              85
+            ],
+            "mean_loss": 85.25,
+            "range": [
+              84,
+              86
+            ],
+            "mean_loss_minus_direct": -312.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              91,
+              92,
+              94,
+              93
+            ],
+            "mean_loss": 92.5,
+            "range": [
+              91,
+              94
+            ],
+            "mean_loss_minus_direct": -305.5,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              111,
+              197,
+              292,
+              500
+            ],
+            "mean_loss": 275.0,
+            "range": [
+              111,
+              500
+            ],
+            "mean_loss_minus_direct": -123.0,
+            "successes": 3
+          }
+        }
+      },
+      {
+        "stream": 4,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              56,
+              57,
+              55,
+              59
+            ],
+            "mean_loss": 56.75,
+            "range": [
+              55,
+              59
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              64,
+              66,
+              64,
+              67
+            ],
+            "mean_loss": 65.25,
+            "range": [
+              64,
+              67
+            ],
+            "mean_loss_minus_direct": 8.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              66,
+              62,
+              60,
+              67
+            ],
+            "mean_loss": 63.75,
+            "range": [
+              60,
+              67
+            ],
+            "mean_loss_minus_direct": 7.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              65,
+              61,
+              59,
+              65
+            ],
+            "mean_loss": 62.5,
+            "range": [
+              59,
+              65
+            ],
+            "mean_loss_minus_direct": 5.75,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              53,
+              52,
+              51,
+              55
+            ],
+            "mean_loss": 52.75,
+            "range": [
+              51,
+              55
+            ],
+            "mean_loss_minus_direct": -4.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              71,
+              62,
+              57,
+              70
+            ],
+            "mean_loss": 65.0,
+            "range": [
+              57,
+              71
+            ],
+            "mean_loss_minus_direct": 8.25,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 443.25,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 4,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              125,
+              117,
+              130,
+              122
+            ],
+            "mean_loss": 123.5,
+            "range": [
+              117,
+              130
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              133,
+              121,
+              127,
+              132
+            ],
+            "mean_loss": 128.25,
+            "range": [
+              121,
+              133
+            ],
+            "mean_loss_minus_direct": 4.75,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              131,
+              152,
+              162,
+              134
+            ],
+            "mean_loss": 144.75,
+            "range": [
+              131,
+              162
+            ],
+            "mean_loss_minus_direct": 21.25,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              133,
+              123,
+              134,
+              148
+            ],
+            "mean_loss": 134.5,
+            "range": [
+              123,
+              148
+            ],
+            "mean_loss_minus_direct": 11.0,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              126,
+              116,
+              118,
+              124
+            ],
+            "mean_loss": 121.0,
+            "range": [
+              116,
+              126
+            ],
+            "mean_loss_minus_direct": -2.5,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              131,
+              122,
+              126,
+              132
+            ],
+            "mean_loss": 127.75,
+            "range": [
+              122,
+              132
+            ],
+            "mean_loss_minus_direct": 4.25,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              116,
+              120,
+              122,
+              123
+            ],
+            "mean_loss": 120.25,
+            "range": [
+              116,
+              123
+            ],
+            "mean_loss_minus_direct": -3.25,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 5,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              77,
+              76,
+              77,
+              77
+            ],
+            "mean_loss": 76.75,
+            "range": [
+              76,
+              77
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              85,
+              85,
+              86,
+              86
+            ],
+            "mean_loss": 85.5,
+            "range": [
+              85,
+              86
+            ],
+            "mean_loss_minus_direct": 8.75,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              81,
+              82,
+              85,
+              81
+            ],
+            "mean_loss": 82.25,
+            "range": [
+              81,
+              85
+            ],
+            "mean_loss_minus_direct": 5.5,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              81,
+              82,
+              85,
+              80
+            ],
+            "mean_loss": 82.0,
+            "range": [
+              80,
+              85
+            ],
+            "mean_loss_minus_direct": 5.25,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              78,
+              76,
+              78,
+              77
+            ],
+            "mean_loss": 77.25,
+            "range": [
+              76,
+              78
+            ],
+            "mean_loss_minus_direct": 0.5,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              88,
+              86,
+              88,
+              92
+            ],
+            "mean_loss": 88.5,
+            "range": [
+              86,
+              92
+            ],
+            "mean_loss_minus_direct": 11.75,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 423.25,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 5,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              84,
+              83,
+              87,
+              84
+            ],
+            "mean_loss": 84.5,
+            "range": [
+              83,
+              87
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              90,
+              103,
+              96,
+              149
+            ],
+            "mean_loss": 109.5,
+            "range": [
+              90,
+              149
+            ],
+            "mean_loss_minus_direct": 25.0,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              76,
+              70,
+              73,
+              74
+            ],
+            "mean_loss": 73.25,
+            "range": [
+              70,
+              76
+            ],
+            "mean_loss_minus_direct": -11.25,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              74,
+              69,
+              72,
+              73
+            ],
+            "mean_loss": 72.0,
+            "range": [
+              69,
+              74
+            ],
+            "mean_loss_minus_direct": -12.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              54,
+              53,
+              55,
+              55
+            ],
+            "mean_loss": 54.25,
+            "range": [
+              53,
+              55
+            ],
+            "mean_loss_minus_direct": -30.25,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              67,
+              62,
+              68,
+              67
+            ],
+            "mean_loss": 66.0,
+            "range": [
+              62,
+              68
+            ],
+            "mean_loss_minus_direct": -18.5,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 415.5,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 5,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              89,
+              89,
+              89,
+              89
+            ],
+            "mean_loss": 89.0,
+            "range": [
+              89,
+              89
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              99,
+              99,
+              99,
+              99
+            ],
+            "mean_loss": 99.0,
+            "range": [
+              99,
+              99
+            ],
+            "mean_loss_minus_direct": 10.0,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              100,
+              98,
+              99,
+              100
+            ],
+            "mean_loss": 99.25,
+            "range": [
+              98,
+              100
+            ],
+            "mean_loss_minus_direct": 10.25,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              108,
+              125,
+              104,
+              104
+            ],
+            "mean_loss": 110.25,
+            "range": [
+              104,
+              125
+            ],
+            "mean_loss_minus_direct": 21.25,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              93,
+              93,
+              93,
+              92
+            ],
+            "mean_loss": 92.75,
+            "range": [
+              92,
+              93
+            ],
+            "mean_loss_minus_direct": 3.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              106,
+              107,
+              110,
+              105
+            ],
+            "mean_loss": 107.0,
+            "range": [
+              105,
+              110
+            ],
+            "mean_loss_minus_direct": 18.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 411.0,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 6,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              67,
+              68,
+              68,
+              69
+            ],
+            "mean_loss": 68.0,
+            "range": [
+              67,
+              69
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              78,
+              78,
+              78,
+              79
+            ],
+            "mean_loss": 78.25,
+            "range": [
+              78,
+              79
+            ],
+            "mean_loss_minus_direct": 10.25,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              72,
+              74,
+              73,
+              74
+            ],
+            "mean_loss": 73.25,
+            "range": [
+              72,
+              74
+            ],
+            "mean_loss_minus_direct": 5.25,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              72,
+              74,
+              72,
+              74
+            ],
+            "mean_loss": 73.0,
+            "range": [
+              72,
+              74
+            ],
+            "mean_loss_minus_direct": 5.0,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              67,
+              66,
+              67,
+              68
+            ],
+            "mean_loss": 67.0,
+            "range": [
+              66,
+              68
+            ],
+            "mean_loss_minus_direct": -1.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              76,
+              80,
+              77,
+              79
+            ],
+            "mean_loss": 78.0,
+            "range": [
+              76,
+              80
+            ],
+            "mean_loss_minus_direct": 10.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              76,
+              67,
+              66,
+              189
+            ],
+            "mean_loss": 99.5,
+            "range": [
+              66,
+              189
+            ],
+            "mean_loss_minus_direct": 31.5,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 6,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              52,
+              53,
+              52,
+              50
+            ],
+            "mean_loss": 51.75,
+            "range": [
+              50,
+              53
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              63,
+              61,
+              60,
+              61
+            ],
+            "mean_loss": 61.25,
+            "range": [
+              60,
+              63
+            ],
+            "mean_loss_minus_direct": 9.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              74,
+              66,
+              62,
+              73
+            ],
+            "mean_loss": 68.75,
+            "range": [
+              62,
+              74
+            ],
+            "mean_loss_minus_direct": 17.0,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              73,
+              66,
+              62,
+              72
+            ],
+            "mean_loss": 68.25,
+            "range": [
+              62,
+              73
+            ],
+            "mean_loss_minus_direct": 16.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 448.25,
+            "successes": 0
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              84,
+              79,
+              77,
+              93
+            ],
+            "mean_loss": 83.25,
+            "range": [
+              77,
+              93
+            ],
+            "mean_loss_minus_direct": 31.5,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              82,
+              69,
+              65,
+              74
+            ],
+            "mean_loss": 72.5,
+            "range": [
+              65,
+              82
+            ],
+            "mean_loss_minus_direct": 20.75,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 6,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              92,
+              92,
+              91,
+              91
+            ],
+            "mean_loss": 91.5,
+            "range": [
+              91,
+              92
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              101,
+              101,
+              101,
+              100
+            ],
+            "mean_loss": 100.75,
+            "range": [
+              100,
+              101
+            ],
+            "mean_loss_minus_direct": 9.25,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              100,
+              99,
+              100,
+              98
+            ],
+            "mean_loss": 99.25,
+            "range": [
+              98,
+              100
+            ],
+            "mean_loss_minus_direct": 7.75,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              100,
+              99,
+              100,
+              98
+            ],
+            "mean_loss": 99.25,
+            "range": [
+              98,
+              100
+            ],
+            "mean_loss_minus_direct": 7.75,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              98,
+              98,
+              97,
+              98
+            ],
+            "mean_loss": 97.75,
+            "range": [
+              97,
+              98
+            ],
+            "mean_loss_minus_direct": 6.25,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              108,
+              108,
+              108,
+              108
+            ],
+            "mean_loss": 108.0,
+            "range": [
+              108,
+              108
+            ],
+            "mean_loss_minus_direct": 16.5,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              97,
+              97,
+              96,
+              96
+            ],
+            "mean_loss": 96.5,
+            "range": [
+              96,
+              97
+            ],
+            "mean_loss_minus_direct": 5.0,
+            "successes": 4
+          }
+        }
+      },
+      {
+        "stream": 7,
+        "task": "push-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              64,
+              65,
+              66,
+              65
+            ],
+            "mean_loss": 65.0,
+            "range": [
+              64,
+              66
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              71,
+              72,
+              74,
+              73
+            ],
+            "mean_loss": 72.5,
+            "range": [
+              71,
+              74
+            ],
+            "mean_loss_minus_direct": 7.5,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              74,
+              73,
+              75,
+              73
+            ],
+            "mean_loss": 73.75,
+            "range": [
+              73,
+              75
+            ],
+            "mean_loss_minus_direct": 8.75,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              74,
+              72,
+              75,
+              72
+            ],
+            "mean_loss": 73.25,
+            "range": [
+              72,
+              75
+            ],
+            "mean_loss_minus_direct": 8.25,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              64,
+              66,
+              67,
+              65
+            ],
+            "mean_loss": 65.5,
+            "range": [
+              64,
+              67
+            ],
+            "mean_loss_minus_direct": 0.5,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              76,
+              73,
+              77,
+              74
+            ],
+            "mean_loss": 75.0,
+            "range": [
+              73,
+              77
+            ],
+            "mean_loss_minus_direct": 10.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 435.0,
+            "successes": 0
+          }
+        }
+      },
+      {
+        "stream": 7,
+        "task": "reach-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              77,
+              65,
+              67,
+              67
+            ],
+            "mean_loss": 69.0,
+            "range": [
+              65,
+              77
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              80,
+              73,
+              73,
+              73
+            ],
+            "mean_loss": 74.75,
+            "range": [
+              73,
+              80
+            ],
+            "mean_loss_minus_direct": 5.75,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              78,
+              71,
+              73,
+              72
+            ],
+            "mean_loss": 73.5,
+            "range": [
+              71,
+              78
+            ],
+            "mean_loss_minus_direct": 4.5,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              78,
+              70,
+              73,
+              72
+            ],
+            "mean_loss": 73.25,
+            "range": [
+              70,
+              78
+            ],
+            "mean_loss_minus_direct": 4.25,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              59,
+              52,
+              53,
+              56
+            ],
+            "mean_loss": 55.0,
+            "range": [
+              52,
+              59
+            ],
+            "mean_loss_minus_direct": -14.0,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              73,
+              64,
+              71,
+              65
+            ],
+            "mean_loss": 68.25,
+            "range": [
+              64,
+              73
+            ],
+            "mean_loss_minus_direct": -0.75,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              40,
+              500,
+              44
+            ],
+            "mean_loss": 271.0,
+            "range": [
+              40,
+              500
+            ],
+            "mean_loss_minus_direct": 202.0,
+            "successes": 2
+          }
+        }
+      },
+      {
+        "stream": 7,
+        "task": "door-open-v3",
+        "prefix_reason": "MATCHED_ACTIVE_PREFIX",
+        "decision_required": true,
+        "methods": {
+          "DIRECT_G8": {
+            "four_losses": [
+              85,
+              126,
+              90,
+              89
+            ],
+            "mean_loss": 97.5,
+            "range": [
+              85,
+              126
+            ],
+            "mean_loss_minus_direct": 0.0,
+            "successes": 4
+          },
+          "KEEP_G8_AFTER16": {
+            "four_losses": [
+              93,
+              95,
+              98,
+              96
+            ],
+            "mean_loss": 95.5,
+            "range": [
+              93,
+              98
+            ],
+            "mean_loss_minus_direct": -2.0,
+            "successes": 4
+          },
+          "UPDATE_G16": {
+            "four_losses": [
+              95,
+              90,
+              89,
+              90
+            ],
+            "mean_loss": 91.0,
+            "range": [
+              89,
+              95
+            ],
+            "mean_loss_minus_direct": -6.5,
+            "successes": 4
+          },
+          "POINT16_CYCLE": {
+            "four_losses": [
+              95,
+              98,
+              98,
+              89
+            ],
+            "mean_loss": 95.0,
+            "range": [
+              89,
+              98
+            ],
+            "mean_loss_minus_direct": -2.5,
+            "successes": 4
+          },
+          "PASSIVE_G16": {
+            "four_losses": [
+              90,
+              92,
+              95,
+              94
+            ],
+            "mean_loss": 92.75,
+            "range": [
+              90,
+              95
+            ],
+            "mean_loss_minus_direct": -4.75,
+            "successes": 4
+          },
+          "POINT16_WIDE": {
+            "four_losses": [
+              123,
+              119,
+              122,
+              126
+            ],
+            "mean_loss": 122.5,
+            "range": [
+              119,
+              126
+            ],
+            "mean_loss_minus_direct": 25.0,
+            "successes": 4
+          },
+          "NO_PROBE": {
+            "four_losses": [
+              500,
+              500,
+              500,
+              500
+            ],
+            "mean_loss": 500.0,
+            "range": [
+              500,
+              500
+            ],
+            "mean_loss_minus_direct": 402.5,
+            "successes": 0
+          }
+        }
+      }
+    ],
+    "lookup_decisions": [
+      {
+        "stream": 0,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.33333333333333,
+          "PASSIVE_G16": 78.66666666666667,
+          "POINT16_CYCLE": 88.66666666666667,
+          "UPDATE_G16": 89.33333333333333,
+          "KEEP_G8_AFTER16": 89.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.0,
+          "PASSIVE_G16": 78.33333333333333,
+          "POINT16_CYCLE": 88.33333333333333,
+          "UPDATE_G16": 89.0,
+          "KEEP_G8_AFTER16": 88.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 79,
+        "selected_deadline_loss": 79,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.66666666666667,
+          "PASSIVE_G16": 78.66666666666667,
+          "POINT16_CYCLE": 88.33333333333333,
+          "UPDATE_G16": 88.66666666666667,
+          "KEEP_G8_AFTER16": 88.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 77,
+        "selected_deadline_loss": 77,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.0,
+          "PASSIVE_G16": 78.33333333333333,
+          "POINT16_CYCLE": 89.66666666666667,
+          "UPDATE_G16": 90.0,
+          "KEEP_G8_AFTER16": 89.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 79,
+        "selected_deadline_loss": 79,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 81.0,
+          "PASSIVE_G16": 70.0,
+          "POINT16_CYCLE": 79.0,
+          "UPDATE_G16": 79.0,
+          "KEEP_G8_AFTER16": 85.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 68,
+        "selected_deadline_loss": 68,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -7,
+        "steps_minus_direct": -7
+      },
+      {
+        "stream": 0,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.33333333333333,
+          "PASSIVE_G16": 67.66666666666667,
+          "POINT16_CYCLE": 78.33333333333333,
+          "UPDATE_G16": 78.33333333333333,
+          "KEEP_G8_AFTER16": 82.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 75,
+        "selected_deadline_loss": 75,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -8,
+        "steps_minus_direct": -8
+      },
+      {
+        "stream": 0,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.33333333333333,
+          "PASSIVE_G16": 70.0,
+          "POINT16_CYCLE": 77.66666666666667,
+          "UPDATE_G16": 77.66666666666667,
+          "KEEP_G8_AFTER16": 82.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 68,
+        "selected_deadline_loss": 68,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -15,
+        "steps_minus_direct": -15
+      },
+      {
+        "stream": 0,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 80.33333333333333,
+          "PASSIVE_G16": 70.33333333333333,
+          "POINT16_CYCLE": 79.0,
+          "UPDATE_G16": 79.0,
+          "KEEP_G8_AFTER16": 84.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 67,
+        "selected_deadline_loss": 67,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -10,
+        "steps_minus_direct": -10
+      },
+      {
+        "stream": 0,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 101.0,
+          "PASSIVE_G16": 101.0,
+          "POINT16_CYCLE": 107.33333333333333,
+          "UPDATE_G16": 107.33333333333333,
+          "KEEP_G8_AFTER16": 107.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 101,
+        "selected_deadline_loss": 101,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 101.0,
+          "PASSIVE_G16": 101.0,
+          "POINT16_CYCLE": 108.33333333333333,
+          "UPDATE_G16": 108.33333333333333,
+          "KEEP_G8_AFTER16": 108.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 101,
+        "selected_deadline_loss": 101,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 101.0,
+          "PASSIVE_G16": 101.0,
+          "POINT16_CYCLE": 107.33333333333333,
+          "UPDATE_G16": 107.33333333333333,
+          "KEEP_G8_AFTER16": 107.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 101,
+        "selected_deadline_loss": 101,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 0,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 101.0,
+          "PASSIVE_G16": 101.0,
+          "POINT16_CYCLE": 107.0,
+          "UPDATE_G16": 107.0,
+          "KEEP_G8_AFTER16": 107.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 101,
+        "selected_deadline_loss": 101,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 75.0,
+          "PASSIVE_G16": 75.66666666666667,
+          "POINT16_CYCLE": 83.0,
+          "UPDATE_G16": 83.33333333333333,
+          "KEEP_G8_AFTER16": 83.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 74,
+        "selected_deadline_loss": 74,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 74.66666666666667,
+          "PASSIVE_G16": 75.33333333333333,
+          "POINT16_CYCLE": 82.33333333333333,
+          "UPDATE_G16": 82.66666666666667,
+          "KEEP_G8_AFTER16": 83.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 75,
+        "selected_deadline_loss": 75,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 74.66666666666667,
+          "PASSIVE_G16": 75.33333333333333,
+          "POINT16_CYCLE": 82.0,
+          "UPDATE_G16": 82.33333333333333,
+          "KEEP_G8_AFTER16": 83.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 75,
+        "selected_deadline_loss": 75,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 74.66666666666667,
+          "PASSIVE_G16": 75.66666666666667,
+          "POINT16_CYCLE": 82.66666666666667,
+          "UPDATE_G16": 82.66666666666667,
+          "KEEP_G8_AFTER16": 83.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 75,
+        "selected_deadline_loss": 75,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 48.0,
+          "PASSIVE_G16": 40.0,
+          "POINT16_CYCLE": 57.666666666666664,
+          "UPDATE_G16": 59.0,
+          "KEEP_G8_AFTER16": 56.666666666666664
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 40,
+        "selected_deadline_loss": 40,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -8,
+        "steps_minus_direct": -8
+      },
+      {
+        "stream": 1,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 48.333333333333336,
+          "PASSIVE_G16": 40.0,
+          "POINT16_CYCLE": 57.666666666666664,
+          "UPDATE_G16": 58.666666666666664,
+          "KEEP_G8_AFTER16": 56.333333333333336
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 40,
+        "selected_deadline_loss": 40,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -7,
+        "steps_minus_direct": -7
+      },
+      {
+        "stream": 1,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 47.666666666666664,
+          "PASSIVE_G16": 40.0,
+          "POINT16_CYCLE": 57.333333333333336,
+          "UPDATE_G16": 58.666666666666664,
+          "KEEP_G8_AFTER16": 56.666666666666664
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 40,
+        "selected_deadline_loss": 40,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -9,
+        "steps_minus_direct": -9
+      },
+      {
+        "stream": 1,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 48.0,
+          "PASSIVE_G16": 40.0,
+          "POINT16_CYCLE": 57.333333333333336,
+          "UPDATE_G16": 58.666666666666664,
+          "KEEP_G8_AFTER16": 56.333333333333336
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 40,
+        "selected_deadline_loss": 40,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -8,
+        "steps_minus_direct": -8
+      },
+      {
+        "stream": 1,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 98.0,
+          "PASSIVE_G16": 99.0,
+          "POINT16_CYCLE": 107.66666666666667,
+          "UPDATE_G16": 108.0,
+          "KEEP_G8_AFTER16": 107.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 98,
+        "selected_deadline_loss": 98,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 98.0,
+          "PASSIVE_G16": 98.66666666666667,
+          "POINT16_CYCLE": 108.0,
+          "UPDATE_G16": 108.0,
+          "KEEP_G8_AFTER16": 107.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 98,
+        "selected_deadline_loss": 98,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 98.0,
+          "PASSIVE_G16": 98.66666666666667,
+          "POINT16_CYCLE": 107.33333333333333,
+          "UPDATE_G16": 107.66666666666667,
+          "KEEP_G8_AFTER16": 107.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 98,
+        "selected_deadline_loss": 98,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 1,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 98.0,
+          "PASSIVE_G16": 98.66666666666667,
+          "POINT16_CYCLE": 108.0,
+          "UPDATE_G16": 108.33333333333333,
+          "KEEP_G8_AFTER16": 107.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 98,
+        "selected_deadline_loss": 98,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 2,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 81.0,
+          "PASSIVE_G16": 78.0,
+          "POINT16_CYCLE": 82.66666666666667,
+          "UPDATE_G16": 83.33333333333333,
+          "KEEP_G8_AFTER16": 90.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 77,
+        "selected_deadline_loss": 77,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -2,
+        "steps_minus_direct": -2
+      },
+      {
+        "stream": 2,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 80.66666666666667,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 83.0,
+          "UPDATE_G16": 83.33333333333333,
+          "KEEP_G8_AFTER16": 89.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -2,
+        "steps_minus_direct": -2
+      },
+      {
+        "stream": 2,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 80.33333333333333,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 83.33333333333333,
+          "UPDATE_G16": 83.66666666666667,
+          "KEEP_G8_AFTER16": 90.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -3,
+        "steps_minus_direct": -3
+      },
+      {
+        "stream": 2,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 80.0,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 83.0,
+          "UPDATE_G16": 83.66666666666667,
+          "KEEP_G8_AFTER16": 90.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -4,
+        "steps_minus_direct": -4
+      },
+      {
+        "stream": 2,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 92.33333333333333,
+          "PASSIVE_G16": 67.33333333333333,
+          "POINT16_CYCLE": 72.33333333333333,
+          "UPDATE_G16": 72.66666666666667,
+          "KEEP_G8_AFTER16": 98.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 66,
+        "selected_deadline_loss": 66,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -9,
+        "steps_minus_direct": -9
+      },
+      {
+        "stream": 2,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 91.33333333333333,
+          "PASSIVE_G16": 66.33333333333333,
+          "POINT16_CYCLE": 72.0,
+          "UPDATE_G16": 72.66666666666667,
+          "KEEP_G8_AFTER16": 98.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 69,
+        "selected_deadline_loss": 69,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -9,
+        "steps_minus_direct": -9
+      },
+      {
+        "stream": 2,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 78.66666666666667,
+          "PASSIVE_G16": 65.66666666666667,
+          "POINT16_CYCLE": 71.0,
+          "UPDATE_G16": 71.66666666666667,
+          "KEEP_G8_AFTER16": 91.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 71,
+        "selected_deadline_loss": 71,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -45,
+        "steps_minus_direct": -45
+      },
+      {
+        "stream": 2,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 89.66666666666667,
+          "PASSIVE_G16": 68.66666666666667,
+          "POINT16_CYCLE": 71.66666666666667,
+          "UPDATE_G16": 72.0,
+          "KEEP_G8_AFTER16": 102.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 62,
+        "selected_deadline_loss": 62,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -21,
+        "steps_minus_direct": -21
+      },
+      {
+        "stream": 2,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 106.0,
+          "PASSIVE_G16": 106.33333333333333,
+          "POINT16_CYCLE": 113.66666666666667,
+          "UPDATE_G16": 112.0,
+          "KEEP_G8_AFTER16": 113.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 104,
+        "selected_deadline_loss": 104,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 2,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 105.0,
+          "PASSIVE_G16": 106.33333333333333,
+          "POINT16_CYCLE": 114.33333333333333,
+          "UPDATE_G16": 113.0,
+          "KEEP_G8_AFTER16": 113.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 107,
+        "selected_deadline_loss": 107,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 2,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 104.66666666666667,
+          "PASSIVE_G16": 106.0,
+          "POINT16_CYCLE": 113.66666666666667,
+          "UPDATE_G16": 112.0,
+          "KEEP_G8_AFTER16": 113.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 108,
+        "selected_deadline_loss": 108,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 2,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 106.33333333333333,
+          "PASSIVE_G16": 106.33333333333333,
+          "POINT16_CYCLE": 114.33333333333333,
+          "UPDATE_G16": 114.0,
+          "KEEP_G8_AFTER16": 113.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 103,
+        "selected_deadline_loss": 103,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 3,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 84.33333333333333,
+          "UPDATE_G16": 85.0,
+          "KEEP_G8_AFTER16": 363.3333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -422,
+        "steps_minus_direct": -422
+      },
+      {
+        "stream": 3,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 78.0,
+          "POINT16_CYCLE": 84.0,
+          "UPDATE_G16": 84.66666666666667,
+          "KEEP_G8_AFTER16": 363.3333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 77,
+        "selected_deadline_loss": 77,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -423,
+        "steps_minus_direct": -423
+      },
+      {
+        "stream": 3,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 83.66666666666667,
+          "UPDATE_G16": 84.66666666666667,
+          "KEEP_G8_AFTER16": 363.3333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -422,
+        "steps_minus_direct": -422
+      },
+      {
+        "stream": 3,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 84.0,
+          "UPDATE_G16": 84.66666666666667,
+          "KEEP_G8_AFTER16": 500.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 78,
+        "selected_deadline_loss": 78,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -422,
+        "steps_minus_direct": -422
+      },
+      {
+        "stream": 3,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 66.66666666666667,
+          "PASSIVE_G16": 63.0,
+          "POINT16_CYCLE": 80.0,
+          "UPDATE_G16": 80.33333333333333,
+          "KEEP_G8_AFTER16": 74.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 67,
+        "selected_deadline_loss": 67,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -2,
+        "steps_minus_direct": -2
+      },
+      {
+        "stream": 3,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 65.66666666666667,
+          "PASSIVE_G16": 63.0,
+          "POINT16_CYCLE": 78.33333333333333,
+          "UPDATE_G16": 78.33333333333333,
+          "KEEP_G8_AFTER16": 73.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 67,
+        "selected_deadline_loss": 67,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -5,
+        "steps_minus_direct": -5
+      },
+      {
+        "stream": 3,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 68.33333333333333,
+          "PASSIVE_G16": 64.66666666666667,
+          "POINT16_CYCLE": 77.66666666666667,
+          "UPDATE_G16": 78.0,
+          "KEEP_G8_AFTER16": 75.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 62,
+        "selected_deadline_loss": 62,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -2,
+        "steps_minus_direct": -2
+      },
+      {
+        "stream": 3,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 68.33333333333333,
+          "PASSIVE_G16": 65.33333333333333,
+          "POINT16_CYCLE": 79.0,
+          "UPDATE_G16": 79.33333333333333,
+          "KEEP_G8_AFTER16": 73.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 60,
+        "selected_deadline_loss": 60,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -4,
+        "steps_minus_direct": -4
+      },
+      {
+        "stream": 3,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 500.0,
+          "UPDATE_G16": 500.0,
+          "KEEP_G8_AFTER16": 500.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": false,
+        "selected_steps": 500,
+        "selected_deadline_loss": 500,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 3,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 500.0,
+          "UPDATE_G16": 500.0,
+          "KEEP_G8_AFTER16": 500.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": false,
+        "selected_steps": 500,
+        "selected_deadline_loss": 500,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 3,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 500.0,
+          "UPDATE_G16": 500.0,
+          "KEEP_G8_AFTER16": 500.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": false,
+        "selected_steps": 500,
+        "selected_deadline_loss": 500,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 3,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 500.0,
+          "UPDATE_G16": 500.0,
+          "KEEP_G8_AFTER16": 500.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": false,
+        "selected_steps": 500,
+        "selected_deadline_loss": 500,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 4,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 364.0,
+          "PASSIVE_G16": 85.66666666666667,
+          "POINT16_CYCLE": 91.66666666666667,
+          "UPDATE_G16": 91.33333333333333,
+          "KEEP_G8_AFTER16": 500.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 84,
+        "selected_deadline_loss": 84,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -416,
+        "steps_minus_direct": -416
+      },
+      {
+        "stream": 4,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 500.0,
+          "PASSIVE_G16": 85.0,
+          "POINT16_CYCLE": 91.33333333333333,
+          "UPDATE_G16": 91.0,
+          "KEEP_G8_AFTER16": 366.3333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 86,
+        "selected_deadline_loss": 86,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -6,
+        "steps_minus_direct": -6
+      },
+      {
+        "stream": 4,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 364.0,
+          "PASSIVE_G16": 85.0,
+          "POINT16_CYCLE": 91.66666666666667,
+          "UPDATE_G16": 91.66666666666667,
+          "KEEP_G8_AFTER16": 366.3333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 86,
+        "selected_deadline_loss": 86,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -414,
+        "steps_minus_direct": -414
+      },
+      {
+        "stream": 4,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 364.0,
+          "PASSIVE_G16": 85.33333333333333,
+          "POINT16_CYCLE": 91.33333333333333,
+          "UPDATE_G16": 91.0,
+          "KEEP_G8_AFTER16": 366.3333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 85,
+        "selected_deadline_loss": 85,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 1,
+        "loss_minus_direct": -415,
+        "steps_minus_direct": -415
+      },
+      {
+        "stream": 4,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 57.0,
+          "PASSIVE_G16": 52.666666666666664,
+          "POINT16_CYCLE": 61.666666666666664,
+          "UPDATE_G16": 63.0,
+          "KEEP_G8_AFTER16": 65.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 53,
+        "selected_deadline_loss": 53,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -3,
+        "steps_minus_direct": -3
+      },
+      {
+        "stream": 4,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 56.666666666666664,
+          "PASSIVE_G16": 53.0,
+          "POINT16_CYCLE": 63.0,
+          "UPDATE_G16": 64.33333333333333,
+          "KEEP_G8_AFTER16": 65.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 52,
+        "selected_deadline_loss": 52,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -5,
+        "steps_minus_direct": -5
+      },
+      {
+        "stream": 4,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 57.333333333333336,
+          "PASSIVE_G16": 53.333333333333336,
+          "POINT16_CYCLE": 63.666666666666664,
+          "UPDATE_G16": 65.0,
+          "KEEP_G8_AFTER16": 65.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 51,
+        "selected_deadline_loss": 51,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -4,
+        "steps_minus_direct": -4
+      },
+      {
+        "stream": 4,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 56.0,
+          "PASSIVE_G16": 52.0,
+          "POINT16_CYCLE": 61.666666666666664,
+          "UPDATE_G16": 62.666666666666664,
+          "KEEP_G8_AFTER16": 64.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 55,
+        "selected_deadline_loss": 55,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -4,
+        "steps_minus_direct": -4
+      },
+      {
+        "stream": 4,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 123.0,
+          "PASSIVE_G16": 119.33333333333333,
+          "POINT16_CYCLE": 135.0,
+          "UPDATE_G16": 149.33333333333334,
+          "KEEP_G8_AFTER16": 126.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 126,
+        "selected_deadline_loss": 126,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 1,
+        "steps_minus_direct": 1
+      },
+      {
+        "stream": 4,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 125.66666666666667,
+          "PASSIVE_G16": 122.66666666666667,
+          "POINT16_CYCLE": 138.33333333333334,
+          "UPDATE_G16": 142.33333333333334,
+          "KEEP_G8_AFTER16": 130.66666666666666
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 116,
+        "selected_deadline_loss": 116,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -1,
+        "steps_minus_direct": -1
+      },
+      {
+        "stream": 4,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 121.33333333333333,
+          "PASSIVE_G16": 122.0,
+          "POINT16_CYCLE": 134.66666666666666,
+          "UPDATE_G16": 139.0,
+          "KEEP_G8_AFTER16": 128.66666666666666
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 130,
+        "selected_deadline_loss": 130,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 4,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 124.0,
+          "PASSIVE_G16": 120.0,
+          "POINT16_CYCLE": 130.0,
+          "UPDATE_G16": 148.33333333333334,
+          "KEEP_G8_AFTER16": 127.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 124,
+        "selected_deadline_loss": 124,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 2,
+        "steps_minus_direct": 2
+      },
+      {
+        "stream": 5,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 76.66666666666667,
+          "PASSIVE_G16": 77.0,
+          "POINT16_CYCLE": 82.33333333333333,
+          "UPDATE_G16": 82.66666666666667,
+          "KEEP_G8_AFTER16": 85.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 77,
+        "selected_deadline_loss": 77,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 77.0,
+          "PASSIVE_G16": 77.66666666666667,
+          "POINT16_CYCLE": 82.0,
+          "UPDATE_G16": 82.33333333333333,
+          "KEEP_G8_AFTER16": 85.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 76,
+        "selected_deadline_loss": 76,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 76.66666666666667,
+          "PASSIVE_G16": 77.0,
+          "POINT16_CYCLE": 81.0,
+          "UPDATE_G16": 81.33333333333333,
+          "KEEP_G8_AFTER16": 85.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 77,
+        "selected_deadline_loss": 77,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 76.66666666666667,
+          "PASSIVE_G16": 77.33333333333333,
+          "POINT16_CYCLE": 82.66666666666667,
+          "UPDATE_G16": 82.66666666666667,
+          "KEEP_G8_AFTER16": 85.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 77,
+        "selected_deadline_loss": 77,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 84.66666666666667,
+          "PASSIVE_G16": 54.333333333333336,
+          "POINT16_CYCLE": 71.33333333333333,
+          "UPDATE_G16": 72.33333333333333,
+          "KEEP_G8_AFTER16": 116.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 54,
+        "selected_deadline_loss": 54,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -30,
+        "steps_minus_direct": -30
+      },
+      {
+        "stream": 5,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 85.0,
+          "PASSIVE_G16": 54.666666666666664,
+          "POINT16_CYCLE": 73.0,
+          "UPDATE_G16": 74.33333333333333,
+          "KEEP_G8_AFTER16": 111.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 53,
+        "selected_deadline_loss": 53,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -30,
+        "steps_minus_direct": -30
+      },
+      {
+        "stream": 5,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 83.66666666666667,
+          "PASSIVE_G16": 54.0,
+          "POINT16_CYCLE": 72.0,
+          "UPDATE_G16": 73.33333333333333,
+          "KEEP_G8_AFTER16": 114.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 55,
+        "selected_deadline_loss": 55,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -32,
+        "steps_minus_direct": -32
+      },
+      {
+        "stream": 5,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 84.66666666666667,
+          "PASSIVE_G16": 54.0,
+          "POINT16_CYCLE": 71.66666666666667,
+          "UPDATE_G16": 73.0,
+          "KEEP_G8_AFTER16": 96.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 55,
+        "selected_deadline_loss": 55,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -29,
+        "steps_minus_direct": -29
+      },
+      {
+        "stream": 5,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 89.0,
+          "PASSIVE_G16": 92.66666666666667,
+          "POINT16_CYCLE": 111.0,
+          "UPDATE_G16": 99.0,
+          "KEEP_G8_AFTER16": 99.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 89,
+        "selected_deadline_loss": 89,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 89.0,
+          "PASSIVE_G16": 92.66666666666667,
+          "POINT16_CYCLE": 105.33333333333333,
+          "UPDATE_G16": 99.66666666666667,
+          "KEEP_G8_AFTER16": 99.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 89,
+        "selected_deadline_loss": 89,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 89.0,
+          "PASSIVE_G16": 92.66666666666667,
+          "POINT16_CYCLE": 112.33333333333333,
+          "UPDATE_G16": 99.33333333333333,
+          "KEEP_G8_AFTER16": 99.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 89,
+        "selected_deadline_loss": 89,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 5,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 89.0,
+          "PASSIVE_G16": 93.0,
+          "POINT16_CYCLE": 112.33333333333333,
+          "UPDATE_G16": 99.0,
+          "KEEP_G8_AFTER16": 99.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 89,
+        "selected_deadline_loss": 89,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 68.33333333333333,
+          "PASSIVE_G16": 67.0,
+          "POINT16_CYCLE": 73.33333333333333,
+          "UPDATE_G16": 73.66666666666667,
+          "KEEP_G8_AFTER16": 78.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 67,
+        "selected_deadline_loss": 67,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 68.0,
+          "PASSIVE_G16": 67.33333333333333,
+          "POINT16_CYCLE": 72.66666666666667,
+          "UPDATE_G16": 73.0,
+          "KEEP_G8_AFTER16": 78.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 66,
+        "selected_deadline_loss": 66,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -2,
+        "steps_minus_direct": -2
+      },
+      {
+        "stream": 6,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 68.0,
+          "PASSIVE_G16": 67.0,
+          "POINT16_CYCLE": 73.33333333333333,
+          "UPDATE_G16": 73.33333333333333,
+          "KEEP_G8_AFTER16": 78.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 67,
+        "selected_deadline_loss": 67,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -1,
+        "steps_minus_direct": -1
+      },
+      {
+        "stream": 6,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 67.66666666666667,
+          "PASSIVE_G16": 66.66666666666667,
+          "POINT16_CYCLE": 72.66666666666667,
+          "UPDATE_G16": 73.0,
+          "KEEP_G8_AFTER16": 78.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 68,
+        "selected_deadline_loss": 68,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -1,
+        "steps_minus_direct": -1
+      },
+      {
+        "stream": 6,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 51.666666666666664,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 66.66666666666667,
+          "UPDATE_G16": 67.0,
+          "KEEP_G8_AFTER16": 60.666666666666664
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 52,
+        "selected_deadline_loss": 52,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 51.333333333333336,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 69.0,
+          "UPDATE_G16": 69.66666666666667,
+          "KEEP_G8_AFTER16": 61.333333333333336
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 53,
+        "selected_deadline_loss": 53,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 51.666666666666664,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 70.33333333333333,
+          "UPDATE_G16": 71.0,
+          "KEEP_G8_AFTER16": 61.666666666666664
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 52,
+        "selected_deadline_loss": 52,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 52.333333333333336,
+          "PASSIVE_G16": 500.0,
+          "POINT16_CYCLE": 67.0,
+          "UPDATE_G16": 67.33333333333333,
+          "KEEP_G8_AFTER16": 61.333333333333336
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 50,
+        "selected_deadline_loss": 50,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 91.33333333333333,
+          "PASSIVE_G16": 97.66666666666667,
+          "POINT16_CYCLE": 99.0,
+          "UPDATE_G16": 99.0,
+          "KEEP_G8_AFTER16": 100.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 92,
+        "selected_deadline_loss": 92,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 91.33333333333333,
+          "PASSIVE_G16": 97.66666666666667,
+          "POINT16_CYCLE": 99.33333333333333,
+          "UPDATE_G16": 99.33333333333333,
+          "KEEP_G8_AFTER16": 100.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 92,
+        "selected_deadline_loss": 92,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 91.66666666666667,
+          "PASSIVE_G16": 98.0,
+          "POINT16_CYCLE": 99.0,
+          "UPDATE_G16": 99.0,
+          "KEEP_G8_AFTER16": 100.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 91,
+        "selected_deadline_loss": 91,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 6,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 91.66666666666667,
+          "PASSIVE_G16": 97.66666666666667,
+          "POINT16_CYCLE": 99.66666666666667,
+          "UPDATE_G16": 99.66666666666667,
+          "KEEP_G8_AFTER16": 101.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 91,
+        "selected_deadline_loss": 91,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 7,
+        "task": "push-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 65.33333333333333,
+          "PASSIVE_G16": 66.0,
+          "POINT16_CYCLE": 73.0,
+          "UPDATE_G16": 73.66666666666667,
+          "KEEP_G8_AFTER16": 73.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 64,
+        "selected_deadline_loss": 64,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 7,
+        "task": "push-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 65.0,
+          "PASSIVE_G16": 65.33333333333333,
+          "POINT16_CYCLE": 73.66666666666667,
+          "UPDATE_G16": 74.0,
+          "KEEP_G8_AFTER16": 72.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 65,
+        "selected_deadline_loss": 65,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 7,
+        "task": "push-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 64.66666666666667,
+          "PASSIVE_G16": 65.0,
+          "POINT16_CYCLE": 72.66666666666667,
+          "UPDATE_G16": 73.33333333333333,
+          "KEEP_G8_AFTER16": 72.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 66,
+        "selected_deadline_loss": 66,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 7,
+        "task": "push-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 65.0,
+          "PASSIVE_G16": 65.66666666666667,
+          "POINT16_CYCLE": 73.66666666666667,
+          "UPDATE_G16": 74.0,
+          "KEEP_G8_AFTER16": 72.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 65,
+        "selected_deadline_loss": 65,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 7,
+        "task": "reach-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 66.33333333333333,
+          "PASSIVE_G16": 53.666666666666664,
+          "POINT16_CYCLE": 71.66666666666667,
+          "UPDATE_G16": 72.0,
+          "KEEP_G8_AFTER16": 73.0
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 59,
+        "selected_deadline_loss": 59,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -18,
+        "steps_minus_direct": -18
+      },
+      {
+        "stream": 7,
+        "task": "reach-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 70.33333333333333,
+          "PASSIVE_G16": 56.0,
+          "POINT16_CYCLE": 74.33333333333333,
+          "UPDATE_G16": 74.33333333333333,
+          "KEEP_G8_AFTER16": 75.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 52,
+        "selected_deadline_loss": 52,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -13,
+        "steps_minus_direct": -13
+      },
+      {
+        "stream": 7,
+        "task": "reach-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 69.66666666666667,
+          "PASSIVE_G16": 55.666666666666664,
+          "POINT16_CYCLE": 73.33333333333333,
+          "UPDATE_G16": 73.66666666666667,
+          "KEEP_G8_AFTER16": 75.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 53,
+        "selected_deadline_loss": 53,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -14,
+        "steps_minus_direct": -14
+      },
+      {
+        "stream": 7,
+        "task": "reach-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "PASSIVE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 69.66666666666667,
+          "PASSIVE_G16": 54.666666666666664,
+          "POINT16_CYCLE": 73.66666666666667,
+          "UPDATE_G16": 74.0,
+          "KEEP_G8_AFTER16": 75.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 56,
+        "selected_deadline_loss": 56,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -11,
+        "steps_minus_direct": -11
+      },
+      {
+        "stream": 7,
+        "task": "door-open-v3",
+        "held_out_future": 0,
+        "training_futures": [
+          1,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "UPDATE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 101.66666666666667,
+          "PASSIVE_G16": 93.66666666666667,
+          "POINT16_CYCLE": 95.0,
+          "UPDATE_G16": 89.66666666666667,
+          "KEEP_G8_AFTER16": 96.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 95,
+        "selected_deadline_loss": 95,
+        "selected_probe_steps": 16,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 10,
+        "steps_minus_direct": 10
+      },
+      {
+        "stream": 7,
+        "task": "door-open-v3",
+        "held_out_future": 1,
+        "training_futures": [
+          0,
+          2,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "DIRECT_G8",
+        "training_mean_losses": {
+          "DIRECT_G8": 88.0,
+          "PASSIVE_G16": 93.0,
+          "POINT16_CYCLE": 94.0,
+          "UPDATE_G16": 91.33333333333333,
+          "KEEP_G8_AFTER16": 95.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 126,
+        "selected_deadline_loss": 126,
+        "selected_probe_steps": 8,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 0,
+        "steps_minus_direct": 0
+      },
+      {
+        "stream": 7,
+        "task": "door-open-v3",
+        "held_out_future": 2,
+        "training_futures": [
+          0,
+          1,
+          3
+        ],
+        "decision_required": true,
+        "selected_branch": "UPDATE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 100.0,
+          "PASSIVE_G16": 92.0,
+          "POINT16_CYCLE": 94.0,
+          "UPDATE_G16": 91.66666666666667,
+          "KEEP_G8_AFTER16": 94.66666666666667
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 89,
+        "selected_deadline_loss": 89,
+        "selected_probe_steps": 16,
+        "success_minus_direct": 0,
+        "loss_minus_direct": -1,
+        "steps_minus_direct": -1
+      },
+      {
+        "stream": 7,
+        "task": "door-open-v3",
+        "held_out_future": 3,
+        "training_futures": [
+          0,
+          1,
+          2
+        ],
+        "decision_required": true,
+        "selected_branch": "UPDATE_G16",
+        "training_mean_losses": {
+          "DIRECT_G8": 100.33333333333333,
+          "PASSIVE_G16": 92.33333333333333,
+          "POINT16_CYCLE": 97.0,
+          "UPDATE_G16": 91.33333333333333,
+          "KEEP_G8_AFTER16": 95.33333333333333
+        },
+        "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+        "selected_success": true,
+        "selected_steps": 90,
+        "selected_deadline_loss": 90,
+        "selected_probe_steps": 16,
+        "success_minus_direct": 0,
+        "loss_minus_direct": 1,
+        "steps_minus_direct": 1
+      }
+    ],
+    "lookup": {
+      "role": "EVALUATOR_ONLY_CROSS_FUTURE_LOOKUP",
+      "cases": 96,
+      "decision_required_cases": 96,
+      "successes": 92,
+      "mean_steps": 94.40625,
+      "mean_deadline_loss": 94.40625,
+      "mean_probe_steps": 8.25,
+      "selected_counts": {
+        "DIRECT_G8": 46,
+        "PASSIVE_G16": 47,
+        "POINT16_CYCLE": 0,
+        "UPDATE_G16": 3,
+        "KEEP_G8_AFTER16": 0
+      },
+      "operator_streams": 8,
+      "strata_streams": [
+        4,
+        4
+      ],
+      "stream_contrast_values": [
+        [
+          0.0,
+          -3.3333333333333335,
+          -3.3333333333333335
+        ],
+        [
+          0.0,
+          -2.6666666666666665,
+          -2.6666666666666665
+        ],
+        [
+          0.0,
+          -7.916666666666667,
+          -7.916666666666667
+        ],
+        [
+          0.3333333333333333,
+          -141.83333333333334,
+          -141.83333333333334
+        ],
+        [
+          0.25,
+          -105.41666666666667,
+          -105.41666666666667
+        ],
+        [
+          0.0,
+          -10.083333333333334,
+          -10.083333333333334
+        ],
+        [
+          0.0,
+          -0.3333333333333333,
+          -0.3333333333333333
+        ],
+        [
+          0.0,
+          -3.8333333333333335,
+          -3.8333333333333335
+        ]
+      ],
+      "contrast_minus_direct": {
+        "success_rate": {
+          "difference": 0.07291666666666666,
+          "paired_cluster_percentile_95": [
+            0.0,
+            0.16666666666666666
+          ]
+        },
+        "deadline_loss": {
+          "difference": -34.427083333333336,
+          "paired_cluster_percentile_95": [
+            -72.65625,
+            -3.926822916666671
+          ]
+        },
+        "actual_steps": {
+          "difference": -34.427083333333336,
+          "paired_cluster_percentile_95": [
+            -72.65625,
+            -3.926822916666671
+          ]
+        }
+      },
+      "entire_counterfactual_study_steps": 101069,
+      "entire_counterfactual_study_resets": 672,
+      "portfolio_required_source_steps": 55833,
+      "new_online_lookup_executions": 0,
+      "deployable_agent": false,
+      "true_optimal_policy_bound": false
+    },
+    "prefix_checks": {
+      "cross_method_pairs": 480,
+      "across_future_pairs": 504,
+      "contexts": 24,
+      "active_contexts": 24
+    },
+    "scope": "Conditional fixed-continuation and evaluator-only held-out-future lookup measurement, not a learned online method or realization-winner stability gate."
+  },
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 34272,
+      "simulation_attempts": 3528269,
+      "simulation_frames_attempted": 17641345,
+      "simulation_completed": 3528269,
+      "simulation_frames_completed": 17641345,
+      "reset_completed": 34272
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 33600,
+        "simulation_attempts": 3360000,
+        "simulation_frames_attempted": 16800000,
+        "simulation_completed": 3360000,
+        "simulation_frames_completed": 16800000,
+        "reset_completed": 33600
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 672,
+        "simulation_attempts": 67200,
+        "simulation_frames_attempted": 336000,
+        "simulation_completed": 67200,
+        "simulation_frames_completed": 336000,
+        "reset_completed": 672
+      },
+      "CONTROL": {
+        "simulation_attempts": 101069,
+        "simulation_frames_attempted": 505345,
+        "simulation_completed": 101069,
+        "simulation_frames_completed": 505345
+      }
+    }
+  },
+  "events_checked": 274522,
+  "clock_units": {
+    "push-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_push_v3.xml",
+      "model_xml_sha256": "8c4bf7169be4f3c666811930aa13682e755b43a8e6e8186265a0a8e9815ae502",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "reach-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_reach_v3.xml",
+      "model_xml_sha256": "bc0427293317164af71c82e9fd41a5fa568c3185a97d92da8e57e4e39254361c",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    },
+    "door-open-v3": {
+      "model_xml": "metaworld/assets/sawyer_xyz/sawyer_door_pull.xml",
+      "model_xml_sha256": "f14cdb95f214dc13959351585b8a41b77f8876b112405d05f3e927ecac74513a",
+      "compiled_timestep_seconds": 0.0025,
+      "env_step_frames": 5,
+      "env_step_seconds": 0.0125
+    }
+  },
+  "frozen_git_inputs_checked": 650,
+  "api_calls": 0,
+  "memory_writes": 0,
+  "artifact_sha256": {
+    "episodes_00.jsonl.gz": "6a0c312e645334182b4746ffab8b5b4c3b80e8c58549ca0dc3d98f9187c54246",
+    "episodes_01.jsonl.gz": "369f5bc845f892db8deeb18eecbf2005ac7499f19ed35072674885d2e8adfd34",
+    "episodes_02.jsonl.gz": "d9df0219dca3c0d830cd33b4c761d64316c939d03f072026b885553762b9c18e",
+    "episodes_03.jsonl.gz": "46daf4d0f96597c855e648c26b1fd7cd5a421262638d510a3b1a3ea6f93e06f7",
+    "episodes_04.jsonl.gz": "81f71105c126fdf220a9304de317f1fe96f9ac216582d025c23cb760a3f5e73f",
+    "episodes_05.jsonl.gz": "322d5c00569bc805a3a7280755c6b197362c1fdff556e8063658ab3c4cea0037",
+    "episodes_06.jsonl.gz": "e8554688e956edfc4245868bf85de6178448c2fed374a84a784dff207ea38a21",
+    "episodes_07.jsonl.gz": "20ccce1e0de429331af854ac85ebdd694c1043fdaf19367a14696c5ec45e3f3e",
+    "events_00.jsonl.gz": "d5418a335eb1ea03eec1bd25c28d1cdadce4944cc55c4a4b93d6baa8432e7c0f",
+    "events_01.jsonl.gz": "d090c6d25c2289d6ed4a28867753aff571c0df5bb09f68571e018fae1635f60e",
+    "events_02.jsonl.gz": "7fd0e3485bf62ed9831daa8c4e3df7262a25376712b34ed47a4c76ff58f4b3e7",
+    "events_03.jsonl.gz": "2de2a5f9b0d77b5e4d4afbea1b6a6a6e33493cf2f46fee075841951083a74167",
+    "events_04.jsonl.gz": "63ef6b8efdffb2a40fd3aefc63a9179a4acdba40ef8311d86f18f8185863b7f5",
+    "events_05.jsonl.gz": "9f6bea81d227008d14963116ba9bab27a35c430464faf5a435edaccdaa6a63cb",
+    "events_06.jsonl.gz": "f8699fcb2ccfa82cd500cf95d245916815ba4be20d01c0735b66486880896aae",
+    "events_07.jsonl.gz": "f0b66819b93f56a6d16bbdcfb2628ffa275b9737879ef6a4ef7eb2a35efadaa6",
+    "manifest.json": "17b492ef82127ec5a35926966c8ce72560f2e4a20ba8124201e7cf453a6b2208",
+    "status.json": "f590d5d90b46bfef11be5d2b00e20abdc35c3c013151dd2624ab7e45e6b25454",
+    "summary.json": "e2b2ff239e64de49d1a41262b820437c8d7470f1344cf7e05eeb94ead41fa02d"
+  },
+  "scope": "Recorded-action/noise/program/choice and full lifecycle replay; noise independently reconstructed; Gaussian/point mathematical helpers, declared-prefix pairing and evaluator-lookup statistics explicitly reused. No robot resimulation, complete hidden-state or physical/probability qualification."
+}

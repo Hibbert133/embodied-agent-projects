@@ -1,0 +1,3641 @@
+{
+  "experiment_run_id": "cold_start_evidence_20261015T170124Z_c5b76fb5ddb6",
+  "manifest_id": "efd4ecacfbbcdb36cbe8c2399d45a5d6ee2154aa263d0bb49b040c2448521715",
+  "source_git_commit": "c5b76fb5ddb6602a7f632aa6193a025790e52df3",
+  "status": "COMPLETED_COMPONENT_PASSED",
+  "training_episodes": 384,
+  "qualification_episodes": 96,
+  "controlled_steps": 3840,
+  "controlled_resets": 480,
+  "api_calls": 0,
+  "task_policy_executions": 0,
+  "memory_writes": 0,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 24480,
+      "simulation_attempts": 2451840,
+      "simulation_frames_attempted": 12259200,
+      "simulation_completed": 2451840,
+      "simulation_frames_completed": 12259200,
+      "reset_completed": 24480
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 24000,
+        "simulation_attempts": 2400000,
+        "simulation_frames_attempted": 12000000,
+        "simulation_completed": 2400000,
+        "simulation_frames_completed": 12000000,
+        "reset_completed": 24000
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 480,
+        "simulation_attempts": 48000,
+        "simulation_frames_attempted": 240000,
+        "simulation_completed": 48000,
+        "simulation_frames_completed": 240000,
+        "reset_completed": 480
+      },
+      "CONTROL": {
+        "simulation_attempts": 3840,
+        "simulation_frames_attempted": 19200,
+        "simulation_completed": 3840,
+        "simulation_frames_completed": 19200
+      }
+    }
+  },
+  "statistics": {
+    "models": {
+      "JOINT_FULL8": {
+        "cases": 96,
+        "valid": 96,
+        "mean_matrix_error": 0.14520067148912286,
+        "mean_bias_error": 0.02283964647046242,
+        "mean_score": 0.20229978766527892,
+        "details": [
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1979474100973601,
+            "bias_error": 0.04225362589898056,
+            "score": 0.3035814748448115
+          },
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18554393117248166,
+            "bias_error": 0.026633179588177253,
+            "score": 0.2521268801429248
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1448335770721738,
+            "bias_error": 0.023475231058770578,
+            "score": 0.20352165471910025
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.11867233999358438,
+            "bias_error": 0.020001976787948655,
+            "score": 0.16867728196345602
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15974366776568216,
+            "bias_error": 0.03220660569208871,
+            "score": 0.24026018199590393
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12799740738327509,
+            "bias_error": 0.04450444444510417,
+            "score": 0.23925851849603552
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.07839568076434943,
+            "bias_error": 0.027327475885818374,
+            "score": 0.14671437047889535
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1829010753449174,
+            "bias_error": 0.013254916722580548,
+            "score": 0.21603836715136876
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.24944306675127514,
+            "bias_error": 0.02432386473403847,
+            "score": 0.3102527285863713
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.07130563342512633,
+            "bias_error": 0.033847614456122076,
+            "score": 0.1559246695654315
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.14462693086056705,
+            "bias_error": 0.017202490990707735,
+            "score": 0.18763315833733638
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.2245009018104056,
+            "bias_error": 0.011590884242626458,
+            "score": 0.25347811241697177
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15797681660479546,
+            "bias_error": 0.01678112630266563,
+            "score": 0.19992963236145952
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.10258940395874946,
+            "bias_error": 0.029343417932606315,
+            "score": 0.17594794879026526
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13133472759516887,
+            "bias_error": 0.02939713764708541,
+            "score": 0.2048275717128824
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1084589252664595,
+            "bias_error": 0.02570464170273729,
+            "score": 0.17272052952330272
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13687819763179104,
+            "bias_error": 0.024706484961854198,
+            "score": 0.19864441003642652
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.17817008831617479,
+            "bias_error": 0.03772834240914951,
+            "score": 0.2724909443390485
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10074576530345956,
+            "bias_error": 0.017991280219049825,
+            "score": 0.14572396585108413
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.08246469591452431,
+            "bias_error": 0.02348965901323323,
+            "score": 0.14118884344760738
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.09357862835916164,
+            "bias_error": 0.0054787349621724145,
+            "score": 0.10727546576459268
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1224619896147026,
+            "bias_error": 0.022099439614336122,
+            "score": 0.1777105886505429
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1470865264555405,
+            "bias_error": 0.009638748919413232,
+            "score": 0.17118339875407357
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.13207740708998114,
+            "bias_error": 0.02501818439833356,
+            "score": 0.19462286808581503
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.03668350039285986,
+            "bias_error": 0.015765496662717923,
+            "score": 0.07609724204965465
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.127554704170118,
+            "bias_error": 0.04516540825232093,
+            "score": 0.24046822480092034
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2009856451192448,
+            "bias_error": 0.014128908338281959,
+            "score": 0.2363079159649497
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.23528753443914094,
+            "bias_error": 0.014403914061233185,
+            "score": 0.2712973195922239
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.20903383567742903,
+            "bias_error": 0.021894739606368657,
+            "score": 0.2637706846933507
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.11964272864543717,
+            "bias_error": 0.047174620743402666,
+            "score": 0.23757928050394383
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1274275308016226,
+            "bias_error": 0.0304264744870751,
+            "score": 0.20349371701931035
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.06957776110172115,
+            "bias_error": 0.02075045328618221,
+            "score": 0.12145389431717667
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.06668190134351915,
+            "bias_error": 0.011233664199769816,
+            "score": 0.09476606184294369
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.07381941775510542,
+            "bias_error": 0.025775141735818498,
+            "score": 0.13825727209465166
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.16504470253331946,
+            "bias_error": 0.02745747651457893,
+            "score": 0.23368839381976678
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12870965494914102,
+            "bias_error": 0.012779884871091432,
+            "score": 0.1606593671268696
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.16188221036937236,
+            "bias_error": 0.007734563790876328,
+            "score": 0.18121861984656318
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1226166759231679,
+            "bias_error": 0.016053521241310566,
+            "score": 0.1627504790264443
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.11115204065609827,
+            "bias_error": 0.014375465475810128,
+            "score": 0.14709070434562357
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.13951098755231567,
+            "bias_error": 0.006942845985997975,
+            "score": 0.1568681025173106
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15013991403286084,
+            "bias_error": 0.009502973043437014,
+            "score": 0.17389734664145337
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.16886185701964362,
+            "bias_error": 0.028312591446067417,
+            "score": 0.23964333563481216
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.20896297798522206,
+            "bias_error": 0.026998767550644138,
+            "score": 0.2764598968618324
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.17632189544298768,
+            "bias_error": 0.02650806196850512,
+            "score": 0.24259205036425047
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.06668726537832864,
+            "bias_error": 0.039838166606074324,
+            "score": 0.16628268189351444
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.16008313527027226,
+            "bias_error": 0.044386258054006325,
+            "score": 0.27104878040528807
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1761897558389249,
+            "bias_error": 0.0011192068807680071,
+            "score": 0.17898777304084493
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.24828713938748634,
+            "bias_error": 0.022462432420989102,
+            "score": 0.3044432204399591
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.09789849267405873,
+            "bias_error": 0.023653296257920862,
+            "score": 0.1570317333188609
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.105994330889539,
+            "bias_error": 0.013668406693115772,
+            "score": 0.14016534762232843
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2303493095121699,
+            "bias_error": 0.02646832537440567,
+            "score": 0.2965201229481841
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.029508202237284967,
+            "bias_error": 0.021456266391451758,
+            "score": 0.08314886821591436
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.19068183164388325,
+            "bias_error": 0.029127217896144583,
+            "score": 0.2634998763842447
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1713285593742018,
+            "bias_error": 0.037370523610033575,
+            "score": 0.26475486839928575
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.129446546981599,
+            "bias_error": 0.032794505832457604,
+            "score": 0.21143281156274302
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.06780060055202572,
+            "bias_error": 0.012222544990064992,
+            "score": 0.0983569630271882
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13265875317449058,
+            "bias_error": 0.017268682195742093,
+            "score": 0.1758304586638458
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.25668825742734164,
+            "bias_error": 0.02129270292878137,
+            "score": 0.3099200147492951
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.11220368211120836,
+            "bias_error": 0.013857665057046584,
+            "score": 0.1468478447538248
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1281438269700081,
+            "bias_error": 0.021230389620897044,
+            "score": 0.18121980102225071
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1444896039621378,
+            "bias_error": 0.022743240211824417,
+            "score": 0.20134770449169886
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14121949796424868,
+            "bias_error": 0.008233678779045423,
+            "score": 0.16180369491186225
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15317768168325982,
+            "bias_error": 0.02211468995357346,
+            "score": 0.20846440656719345
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1354623800330798,
+            "bias_error": 0.026006369027315252,
+            "score": 0.20047830260136795
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.16159652266582425,
+            "bias_error": 0.026541540177316653,
+            "score": 0.22795037310911587
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.10043617616772471,
+            "bias_error": 0.027069292191818316,
+            "score": 0.1681094066472705
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1086585701661686,
+            "bias_error": 0.00993923399989039,
+            "score": 0.13350665516589458
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18761172949218075,
+            "bias_error": 0.013731005620852709,
+            "score": 0.22193924354431252
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.11388521136572195,
+            "bias_error": 0.004234360954377449,
+            "score": 0.12447111375166557
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.13782305369634532,
+            "bias_error": 0.025473012905977196,
+            "score": 0.2015055859612883
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.12130760484907399,
+            "bias_error": 0.010820467722383348,
+            "score": 0.14835877415503235
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.0872067081997839,
+            "bias_error": 0.012051219035798772,
+            "score": 0.11733475578928083
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15241018437781353,
+            "bias_error": 0.015406132661807426,
+            "score": 0.1909255160323321
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.15079449801485187,
+            "bias_error": 0.0061000503538441025,
+            "score": 0.16604462389946212
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10224294608362473,
+            "bias_error": 0.026057939188198667,
+            "score": 0.1673877940541214
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12143698640093757,
+            "bias_error": 0.010322458713108183,
+            "score": 0.14724313318370802
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13698932333394767,
+            "bias_error": 0.024795130420734827,
+            "score": 0.19897714938578473
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.11118143444140882,
+            "bias_error": 0.02850895727070663,
+            "score": 0.18245382761817538
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10116499273277306,
+            "bias_error": 0.02064284342715446,
+            "score": 0.1527721013006592
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.09537532134120089,
+            "bias_error": 0.011868188974134858,
+            "score": 0.12504579377653802
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.19810414984809807,
+            "bias_error": 0.035906989737129184,
+            "score": 0.28787162419092105
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.13023629836397807,
+            "bias_error": 0.01276494831360749,
+            "score": 0.1621486691479968
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.16810977767046797,
+            "bias_error": 0.025269225413711953,
+            "score": 0.23128284120474785
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.13653677888779925,
+            "bias_error": 0.011857834654635021,
+            "score": 0.1661813655243868
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2259026737016582,
+            "bias_error": 0.0286779889635934,
+            "score": 0.2975976461106417
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18367520747515698,
+            "bias_error": 0.01135938308646479,
+            "score": 0.21207366519131896
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10658773112361006,
+            "bias_error": 0.05263645834966121,
+            "score": 0.23817887699776308
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.31807446296824926,
+            "bias_error": 0.028832069956228907,
+            "score": 0.39015463785882154
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.25075848245340443,
+            "bias_error": 0.016772408961022597,
+            "score": 0.2926895048559609
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1493648419944654,
+            "bias_error": 0.04097669467755111,
+            "score": 0.25180657868834316
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.17421638845887605,
+            "bias_error": 0.0310375971508545,
+            "score": 0.2518103813360123
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1930016690384613,
+            "bias_error": 0.015129436282232877,
+            "score": 0.2308252597440435
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.08647531237828261,
+            "bias_error": 0.041870547949841005,
+            "score": 0.19115168225288512
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14752356577225664,
+            "bias_error": 0.028044634271144984,
+            "score": 0.21763515145011908
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.19402081754351327,
+            "bias_error": 0.04552973155669867,
+            "score": 0.30784514643525995
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.22862391842055274,
+            "bias_error": 0.027679227593162176,
+            "score": 0.29782198740345817
+          }
+        ]
+      },
+      "JOINT_DROP2": {
+        "cases": 96,
+        "valid": 96,
+        "mean_matrix_error": 0.14766494043496156,
+        "mean_bias_error": 0.022894365364305277,
+        "mean_score": 0.20490085384572473,
+        "details": [
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.20217770767435417,
+            "bias_error": 0.046284003547406895,
+            "score": 0.3178877165428714
+          },
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14981878074724847,
+            "bias_error": 0.027904702549230036,
+            "score": 0.21958053712032355
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.12790988220416033,
+            "bias_error": 0.021808597837497896,
+            "score": 0.18243137679790505
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.11437212156789414,
+            "bias_error": 0.018503314801970955,
+            "score": 0.16063040857282151
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1601071920205648,
+            "bias_error": 0.0319240183726009,
+            "score": 0.23991723795206704
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12966260677275945,
+            "bias_error": 0.04725063357046673,
+            "score": 0.24778919069892627
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10423827691648889,
+            "bias_error": 0.02545494938504707,
+            "score": 0.16787565037910657
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1656474221582169,
+            "bias_error": 0.011520702928410285,
+            "score": 0.19444917947924262
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.26614502177636806,
+            "bias_error": 0.024864313613680536,
+            "score": 0.3283058058105694
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.07189220408863829,
+            "bias_error": 0.03830666348851378,
+            "score": 0.16765886280992276
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.14767016748447825,
+            "bias_error": 0.014866774437432402,
+            "score": 0.18483710357805927
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.25603714841426883,
+            "bias_error": 0.012318424145378409,
+            "score": 0.28683320877771484
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1621908166502267,
+            "bias_error": 0.017507423241570643,
+            "score": 0.2059593747541533
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.0929312022354685,
+            "bias_error": 0.028409844819509002,
+            "score": 0.163955814284241
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15517498467936539,
+            "bias_error": 0.0282874285664682,
+            "score": 0.22589355609553588
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1237443117625368,
+            "bias_error": 0.02645690834463655,
+            "score": 0.18988658262412816
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15162652693222892,
+            "bias_error": 0.022825257865086962,
+            "score": 0.20868967159494634
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.2063060921115882,
+            "bias_error": 0.03654872398358399,
+            "score": 0.2976779020705482
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.12335206993633245,
+            "bias_error": 0.017586565949336018,
+            "score": 0.16731848480967249
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.0664112614066672,
+            "bias_error": 0.024028979940017868,
+            "score": 0.12648371125671187
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.08605292844816873,
+            "bias_error": 0.006150314634628345,
+            "score": 0.10142871503473959
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.11240778260466389,
+            "bias_error": 0.02245664580554187,
+            "score": 0.16854939711851857
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13746005108671633,
+            "bias_error": 0.012047887695447419,
+            "score": 0.1675797703253349
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12623220593433068,
+            "bias_error": 0.026924562534766702,
+            "score": 0.19354361227124744
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.04210208896668445,
+            "bias_error": 0.01785299409647383,
+            "score": 0.08673457420786902
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12878487441013065,
+            "bias_error": 0.04267843571783837,
+            "score": 0.23548096370472657
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2028648571123599,
+            "bias_error": 0.014779782174815903,
+            "score": 0.23981431254939967
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.23329370588355727,
+            "bias_error": 0.012401470038029216,
+            "score": 0.2642973809786303
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1914178407780574,
+            "bias_error": 0.01997167905126295,
+            "score": 0.24134703840621477
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.09169199240774085,
+            "bias_error": 0.04895788469692294,
+            "score": 0.2140867041500482
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.130022519283703,
+            "bias_error": 0.029409385702249307,
+            "score": 0.2035459835393263
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.09179874820821812,
+            "bias_error": 0.017259845186404277,
+            "score": 0.13494836117422881
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.0744366865184665,
+            "bias_error": 0.011723803210784743,
+            "score": 0.10374619454542836
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.07144606544276973,
+            "bias_error": 0.02562986643345186,
+            "score": 0.13552073152639937
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1723617072993403,
+            "bias_error": 0.02932896135995936,
+            "score": 0.2456841106992387
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12138192029858991,
+            "bias_error": 0.011355824250858125,
+            "score": 0.14977148092573522
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.190211257170341,
+            "bias_error": 0.007695064595424928,
+            "score": 0.20944891865890333
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1136686810616428,
+            "bias_error": 0.014685916283407843,
+            "score": 0.1503834717701624
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10271041223636108,
+            "bias_error": 0.014036350583940352,
+            "score": 0.13780128869621197
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18234222157614371,
+            "bias_error": 0.00492867461122052,
+            "score": 0.194663908104195
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.16353322055353584,
+            "bias_error": 0.009587597218540755,
+            "score": 0.18750221359988772
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18108904300269793,
+            "bias_error": 0.028866164982058407,
+            "score": 0.253254455457844
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.22495022227772002,
+            "bias_error": 0.025277244005694467,
+            "score": 0.2881433322919562
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1850197336893981,
+            "bias_error": 0.027066897051539696,
+            "score": 0.2526869763182473
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.09117084720659946,
+            "bias_error": 0.042449077644306936,
+            "score": 0.1972935413173668
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14996507260443104,
+            "bias_error": 0.048185925298541515,
+            "score": 0.2704298858507848
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.19342166657989074,
+            "bias_error": 0.00168777827704711,
+            "score": 0.19764111227250852
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.24527935711608959,
+            "bias_error": 0.023211698423032442,
+            "score": 0.3033086031736707
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1193293227599884,
+            "bias_error": 0.026052303559401187,
+            "score": 0.18446008165849137
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.0861940105076103,
+            "bias_error": 0.014180285139520589,
+            "score": 0.12164472335641177
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2212269924708685,
+            "bias_error": 0.026263016877834423,
+            "score": 0.28688453466545455
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.022140979776244366,
+            "bias_error": 0.023556865284921097,
+            "score": 0.08103314298854711
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1901568695387618,
+            "bias_error": 0.026983234180937916,
+            "score": 0.2576149549911066
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.17653475629938659,
+            "bias_error": 0.0326172969681984,
+            "score": 0.2580779987198826
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.12044759822454248,
+            "bias_error": 0.0331414309847981,
+            "score": 0.20330117568653772
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.05408774947464181,
+            "bias_error": 0.013186245525727426,
+            "score": 0.08705336328896038
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.11568475398047058,
+            "bias_error": 0.020190693888361522,
+            "score": 0.16616148870137437
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.2565951872609355,
+            "bias_error": 0.025697265058796406,
+            "score": 0.3208383499079265
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.11300315687028001,
+            "bias_error": 0.010783910590441793,
+            "score": 0.1399629333463845
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12803746745757175,
+            "bias_error": 0.018752920419643954,
+            "score": 0.17491976850668162
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13174132388482143,
+            "bias_error": 0.019404962040364442,
+            "score": 0.18025372898573253
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14796485284055622,
+            "bias_error": 0.007563154260504849,
+            "score": 0.16687273849181833
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.15754572357637206,
+            "bias_error": 0.019840121485719998,
+            "score": 0.20714602729067205
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14378221665068075,
+            "bias_error": 0.027048592787987283,
+            "score": 0.21140369862064895
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.16605179959530447,
+            "bias_error": 0.026719823817477433,
+            "score": 0.23285135913899807
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.10727209093884853,
+            "bias_error": 0.024844630456126386,
+            "score": 0.1693836670791645
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.11688155398801585,
+            "bias_error": 0.01107932773952956,
+            "score": 0.14457987333683975
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.17191402867891709,
+            "bias_error": 0.0119846524300773,
+            "score": 0.20187565975411034
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.12447430419857156,
+            "bias_error": 0.008516200156783704,
+            "score": 0.14576480459053082
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1456905736108694,
+            "bias_error": 0.024448498557951753,
+            "score": 0.20681182000574877
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1326880901554256,
+            "bias_error": 0.007569167067124154,
+            "score": 0.15161100782323597
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.09228854579450224,
+            "bias_error": 0.013861884586226508,
+            "score": 0.1269432572600685
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1744001467890738,
+            "bias_error": 0.016889529700242704,
+            "score": 0.21662397103968056
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.11253538645815875,
+            "bias_error": 0.0056458676369109595,
+            "score": 0.12665005555043615
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10795515370952823,
+            "bias_error": 0.02634275456544379,
+            "score": 0.1738120401231377
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1397972340569225,
+            "bias_error": 0.012452950057463505,
+            "score": 0.17092960920058126
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1572151713324751,
+            "bias_error": 0.025669996061563075,
+            "score": 0.22139016148638277
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.1299297254233535,
+            "bias_error": 0.02799674993156469,
+            "score": 0.1999216002522652
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.13270221818709557,
+            "bias_error": 0.021850707615725818,
+            "score": 0.18732898722641012
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.08007619491136789,
+            "bias_error": 0.011654125120598654,
+            "score": 0.10921150771286452
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1845465990495466,
+            "bias_error": 0.030881873644655826,
+            "score": 0.2617512831611861
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.13816816056902953,
+            "bias_error": 0.015221686398387932,
+            "score": 0.17622237656499937
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2007054088202081,
+            "bias_error": 0.028308411902311793,
+            "score": 0.2714764385759876
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.12304769845448756,
+            "bias_error": 0.012371757350630863,
+            "score": 0.15397709183106473
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2533116603508341,
+            "bias_error": 0.03286574224826036,
+            "score": 0.33547601597148496
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.19777134619034442,
+            "bias_error": 0.011343983976241048,
+            "score": 0.22613130613094704
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.10871371098639267,
+            "bias_error": 0.05025324383438204,
+            "score": 0.23434682057234774
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.29623444973962554,
+            "bias_error": 0.02710072737138586,
+            "score": 0.3639862681680902
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.26311083593141554,
+            "bias_error": 0.01767729710985927,
+            "score": 0.3073040787060637
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.14523282426109496,
+            "bias_error": 0.03975890708713863,
+            "score": 0.24463009197894153
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1622595704945565,
+            "bias_error": 0.029708488154845777,
+            "score": 0.23653079088167095
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.19439019144663267,
+            "bias_error": 0.013987793907449234,
+            "score": 0.22935967621525574
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.07414865820539251,
+            "bias_error": 0.0425111869278926,
+            "score": 0.180426625525124
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.15813018931340617,
+            "bias_error": 0.03307006251875838,
+            "score": 0.24080534561030212
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.18237424659775617,
+            "bias_error": 0.04514416149566682,
+            "score": 0.2952346503369232
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.20281004464521896,
+            "bias_error": 0.025598623539435216,
+            "score": 0.266806603493807
+          }
+        ]
+      },
+      "SAME_DATA_ARX8": {
+        "cases": 96,
+        "valid": 96,
+        "mean_matrix_error": 0.5271440567892305,
+        "mean_bias_error": 0.09594174037509662,
+        "mean_score": 0.7669984077269719,
+        "details": [
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5607390441913347,
+            "bias_error": 0.0149998578025771,
+            "score": 0.5982386886977774
+          },
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7848763463805775,
+            "bias_error": 0.1768437775455321,
+            "score": 1.2269857902444077
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7220661406597931,
+            "bias_error": 0.15862878915341447,
+            "score": 1.1186381135433292
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.653757884256506,
+            "bias_error": 0.11959074413642833,
+            "score": 0.9527347445975769
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6704260533288313,
+            "bias_error": 0.1459816583038219,
+            "score": 1.035380199088386
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5990573842020486,
+            "bias_error": 0.12836093072396432,
+            "score": 0.9199597110119593
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5606600653404368,
+            "bias_error": 0.14955403229152095,
+            "score": 0.9345451460692391
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7812221691895489,
+            "bias_error": 0.17050689485604995,
+            "score": 1.2074894063296737
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5451162198003014,
+            "bias_error": 0.10853066920338575,
+            "score": 0.8164428928087658
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.46315591501095305,
+            "bias_error": 0.13088868809556606,
+            "score": 0.7903776352498681
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5623087545933679,
+            "bias_error": 0.0863227651865323,
+            "score": 0.7781156675596986
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6667112730893588,
+            "bias_error": 0.12300026063745421,
+            "score": 0.9742119246829943
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3403667299872799,
+            "bias_error": 0.05100459767723218,
+            "score": 0.46787822418036035
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.46469326325786464,
+            "bias_error": 0.10496526418526352,
+            "score": 0.7271064237210234
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.409837584230934,
+            "bias_error": 0.05355806741824369,
+            "score": 0.5437327527765432
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5566829290001859,
+            "bias_error": 0.11078753159754196,
+            "score": 0.8336517579940408
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.38904738156377777,
+            "bias_error": 0.08821129373401126,
+            "score": 0.6095756158988059
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.25356947853225104,
+            "bias_error": 0.014868341414775828,
+            "score": 0.2907403320691906
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5010930071913762,
+            "bias_error": 0.11553009945217489,
+            "score": 0.7899182558218134
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5253572406549881,
+            "bias_error": 0.09810847519605706,
+            "score": 0.7706284286451308
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.33842291159802534,
+            "bias_error": 0.07023970260169253,
+            "score": 0.5140221681022566
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5250491456354314,
+            "bias_error": 0.1294559418780631,
+            "score": 0.8486890003305891
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.42727753610799335,
+            "bias_error": 0.11780936042241796,
+            "score": 0.7218009371640383
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5581486274371033,
+            "bias_error": 0.11799917247724308,
+            "score": 0.8531465586302109
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.35401187091699404,
+            "bias_error": 0.09487475986283485,
+            "score": 0.5911987705740811
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5720538346921269,
+            "bias_error": 0.14599521542660268,
+            "score": 0.9370418732586336
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.540933299592706,
+            "bias_error": 0.07875764017797403,
+            "score": 0.737827400037641
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5082301757248401,
+            "bias_error": 0.05316762024798499,
+            "score": 0.6411492263448025
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5103492817338323,
+            "bias_error": 0.06021084009033724,
+            "score": 0.6608763819596755
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3954352761944753,
+            "bias_error": 0.12322588068799198,
+            "score": 0.7034999779144553
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.49122807452073214,
+            "bias_error": 0.07511173092292286,
+            "score": 0.6790074018280393
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6637049645132069,
+            "bias_error": 0.16308102155520982,
+            "score": 1.0714075184012315
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3073474214270596,
+            "bias_error": 0.07794794831581277,
+            "score": 0.5022172922165915
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6432661161329353,
+            "bias_error": 0.10556140549409268,
+            "score": 0.907169629868167
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.452649465186398,
+            "bias_error": 0.13102709671558924,
+            "score": 0.780217206975371
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6545977508597612,
+            "bias_error": 0.1129059231190534,
+            "score": 0.9368625586573947
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.37738198831360664,
+            "bias_error": 0.01411504182907616,
+            "score": 0.412669592886297
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.42985671311273194,
+            "bias_error": 0.0322723514502416,
+            "score": 0.5105375917383359
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4508530595505824,
+            "bias_error": 0.045206141864424974,
+            "score": 0.5638684142116448
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.38328245434761543,
+            "bias_error": 0.0451834952852566,
+            "score": 0.49624119256075694
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6578570920667711,
+            "bias_error": 0.08951839760010508,
+            "score": 0.8816530860670337
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5467855566805957,
+            "bias_error": 0.08990099419805747,
+            "score": 0.7715380421757394
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5616366015172716,
+            "bias_error": 0.0816293699956429,
+            "score": 0.7657100265063788
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.4442047060462589,
+            "bias_error": 0.13563137354413676,
+            "score": 0.7832831399066007
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.42815383902523063,
+            "bias_error": 0.13507122511508246,
+            "score": 0.7658319018129367
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.743438091219925,
+            "bias_error": 0.11388591925958827,
+            "score": 1.0281528893688956
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6087466555631323,
+            "bias_error": 0.08778289256796304,
+            "score": 0.8282038869830399
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7722465391000859,
+            "bias_error": 0.17418133358990692,
+            "score": 1.2076998730748532
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6835839917461902,
+            "bias_error": 0.1380261620532914,
+            "score": 1.0286493968794188
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.4850105752061146,
+            "bias_error": 0.11688132426303115,
+            "score": 0.7772138858636926
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.8853268158582782,
+            "bias_error": 0.2060029524306694,
+            "score": 1.4003341969349516
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5096727418421044,
+            "bias_error": 0.10043981606545879,
+            "score": 0.7607722820057514
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6648616082564595,
+            "bias_error": 0.17295124905802975,
+            "score": 1.0972397309015338
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6620331071828504,
+            "bias_error": 0.10771810409324664,
+            "score": 0.9313283674159669
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7920197616483898,
+            "bias_error": 0.18135116178315674,
+            "score": 1.2453976661062818
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.48239433789195857,
+            "bias_error": 0.06143014993292808,
+            "score": 0.6359697127242787
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6024665645308507,
+            "bias_error": 0.06964949434856427,
+            "score": 0.7765903004022614
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5269770445546129,
+            "bias_error": 0.055049086384675,
+            "score": 0.6645997605163004
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.35389097811619513,
+            "bias_error": 0.05159775656533903,
+            "score": 0.4828853695295427
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5154239824171286,
+            "bias_error": 0.11235530041932773,
+            "score": 0.796312233465448
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5606741817945442,
+            "bias_error": 0.0708085122242683,
+            "score": 0.737695462355215
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.26975730511773927,
+            "bias_error": 0.06722873278555559,
+            "score": 0.43782913708162824
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.521397943981307,
+            "bias_error": 0.13268184849431672,
+            "score": 0.8531025652170987
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3617684606338339,
+            "bias_error": 0.11155362967326476,
+            "score": 0.6406525348169958
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4707909049023293,
+            "bias_error": 0.07076764715902693,
+            "score": 0.6477100227998966
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5884438817169879,
+            "bias_error": 0.045552946136971674,
+            "score": 0.7023262470594172
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5372666126009347,
+            "bias_error": 0.12978489006454036,
+            "score": 0.8617288377622856
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.4886093907246505,
+            "bias_error": 0.0988878794857461,
+            "score": 0.7358290894390157
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.33530404158436106,
+            "bias_error": 0.05804489260054091,
+            "score": 0.48041627308571333
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.34403701149696386,
+            "bias_error": 0.03782377659054974,
+            "score": 0.4385964529733382
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6137156984701583,
+            "bias_error": 0.10842057936269232,
+            "score": 0.8847671468768891
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.36661580498384305,
+            "bias_error": 0.04514959443532882,
+            "score": 0.4794897910721651
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7302609252761286,
+            "bias_error": 0.1456691517881569,
+            "score": 1.094433804746521
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.48856091041633487,
+            "bias_error": 0.0548705786257735,
+            "score": 0.6257373569807686
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.44952826550944586,
+            "bias_error": 0.04157570976145102,
+            "score": 0.5534675399130734
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3495748103452292,
+            "bias_error": 0.08663849877597164,
+            "score": 0.5661710572851583
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3799588033257698,
+            "bias_error": 0.07249722737576783,
+            "score": 0.5612018717651894
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5763697889141992,
+            "bias_error": 0.10262337821750397,
+            "score": 0.8329282344579592
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5978972892718133,
+            "bias_error": 0.08838833034536414,
+            "score": 0.8188681151352236
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5101605835823559,
+            "bias_error": 0.13623405711483,
+            "score": 0.8507457263694309
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4523693407959087,
+            "bias_error": 0.04016530312806482,
+            "score": 0.5527825986160707
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6611398205411763,
+            "bias_error": 0.06929701035101134,
+            "score": 0.8343823464187046
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5487219799510628,
+            "bias_error": 0.10481266819111011,
+            "score": 0.810753650428838
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5194311857224801,
+            "bias_error": 0.062964363846696,
+            "score": 0.6768420953392201
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2777232532652405,
+            "bias_error": 0.06310530689412275,
+            "score": 0.43548652050054737
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5245850724562746,
+            "bias_error": 0.059376982824246416,
+            "score": 0.6730275295168906
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7403482680710627,
+            "bias_error": 0.10442228309765884,
+            "score": 1.0014039758152098
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7827056401320425,
+            "bias_error": 0.031308385006932296,
+            "score": 0.8609766026493733
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6073301279108538,
+            "bias_error": 0.09767543269947017,
+            "score": 0.8515187096595292
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3755699492841184,
+            "bias_error": 0.07975671521595094,
+            "score": 0.5749617373239957
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.476061457003993,
+            "bias_error": 0.09239094386262527,
+            "score": 0.7070388166605561
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5215204157373571,
+            "bias_error": 0.08130339423941352,
+            "score": 0.7247789013358908
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4192640346175889,
+            "bias_error": 0.025638433021148793,
+            "score": 0.48336011717046085
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.527847092204302,
+            "bias_error": 0.13282529124910214,
+            "score": 0.8599103203270574
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.317946326208656,
+            "bias_error": 0.08245967370150352,
+            "score": 0.5240955104624148
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7910174506848031,
+            "bias_error": 0.15225793535802493,
+            "score": 1.1716622890798654
+          }
+        ]
+      },
+      "OLD_ARX8": {
+        "cases": 96,
+        "valid": 96,
+        "mean_matrix_error": 0.5572870476250311,
+        "mean_bias_error": 0.06437914117007121,
+        "mean_score": 0.718234900550209,
+        "details": [
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.33113132108928967,
+            "bias_error": 0.11175169002726429,
+            "score": 0.6105105461574504
+          },
+          {
+            "stream": 0,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.27686544415379694,
+            "bias_error": 0.056057513134216246,
+            "score": 0.4170092269893375
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.33335663405174387,
+            "bias_error": 0.12717630089773407,
+            "score": 0.651297386296079
+          },
+          {
+            "stream": 0,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18699845380664246,
+            "bias_error": 0.024175490773743483,
+            "score": 0.24743718074100116
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5296413282471784,
+            "bias_error": 0.018702290425945102,
+            "score": 0.5763970543120411
+          },
+          {
+            "stream": 0,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5112130330348321,
+            "bias_error": 0.0031982923485785824,
+            "score": 0.5192087639062786
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3614601338890665,
+            "bias_error": 0.008766956057356279,
+            "score": 0.3833775240324572
+          },
+          {
+            "stream": 1,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.40584168129611586,
+            "bias_error": 0.07983050578114789,
+            "score": 0.6054179457489856
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7971629433412732,
+            "bias_error": 0.03180084553296613,
+            "score": 0.8766650571736886
+          },
+          {
+            "stream": 1,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.4191195559530119,
+            "bias_error": 0.0449198493902153,
+            "score": 0.5314191794285502
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.720178492088657,
+            "bias_error": 0.021355323251418323,
+            "score": 0.7735668002172028
+          },
+          {
+            "stream": 1,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7527350973862873,
+            "bias_error": 0.06022165739286631,
+            "score": 0.9032892408684531
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3934422657520389,
+            "bias_error": 0.0953588891878534,
+            "score": 0.6318394887216724
+          },
+          {
+            "stream": 2,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.32488870263154135,
+            "bias_error": 0.06015324955034367,
+            "score": 0.4752718265074005
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3267092142660941,
+            "bias_error": 0.05606306541770563,
+            "score": 0.4668668778103582
+          },
+          {
+            "stream": 2,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.10896457194468287,
+            "bias_error": 0.032301551149586744,
+            "score": 0.18971844981864971
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.9722280338821451,
+            "bias_error": 0.11791651380460857,
+            "score": 1.2670193183936664
+          },
+          {
+            "stream": 2,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 1.1089578544113787,
+            "bias_error": 0.1737264828952087,
+            "score": 1.5432740616494005
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.17394793102109998,
+            "bias_error": 0.06538085666329796,
+            "score": 0.3374000726793449
+          },
+          {
+            "stream": 3,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3008929701760194,
+            "bias_error": 0.05643220438592488,
+            "score": 0.44197348114083157
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4719861605517019,
+            "bias_error": 0.03740768539159758,
+            "score": 0.5655053740306958
+          },
+          {
+            "stream": 3,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.30410950908987683,
+            "bias_error": 0.06853604262787535,
+            "score": 0.47544961565956523
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6842402162955937,
+            "bias_error": 0.09254970950164292,
+            "score": 0.915614490049701
+          },
+          {
+            "stream": 3,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6145992665668097,
+            "bias_error": 0.0838476078856391,
+            "score": 0.8242182862809074
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4970103691534343,
+            "bias_error": 0.05311136701505794,
+            "score": 0.6297887866910792
+          },
+          {
+            "stream": 4,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.31800592865859184,
+            "bias_error": 0.0067782071866821815,
+            "score": 0.3349514466252973
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5237026578004425,
+            "bias_error": 0.04985323204724798,
+            "score": 0.6483357379185624
+          },
+          {
+            "stream": 4,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6945526892833713,
+            "bias_error": 0.14201055794660963,
+            "score": 1.0495790841498953
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 1.4033176457528438,
+            "bias_error": 0.09952881490703616,
+            "score": 1.6521396830204342
+          },
+          {
+            "stream": 4,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 1.2147882957604756,
+            "bias_error": 0.08615020803366087,
+            "score": 1.4301638158446277
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2885396281704226,
+            "bias_error": 0.03866087129516494,
+            "score": 0.38519180640833495
+          },
+          {
+            "stream": 5,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.2218409804978981,
+            "bias_error": 0.00639843345319748,
+            "score": 0.2378370641308918
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5572595449694644,
+            "bias_error": 0.040535395545479525,
+            "score": 0.6585980338331632
+          },
+          {
+            "stream": 5,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.23703707819554448,
+            "bias_error": 0.0035491829309185993,
+            "score": 0.245910035522841
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6661792851147564,
+            "bias_error": 0.0582761254982412,
+            "score": 0.8118695988603595
+          },
+          {
+            "stream": 5,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7850113452145192,
+            "bias_error": 0.006329965919374803,
+            "score": 0.8008362600129562
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.46465694001781976,
+            "bias_error": 0.09671377570201294,
+            "score": 0.7064413792728521
+          },
+          {
+            "stream": 6,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.24506204945670673,
+            "bias_error": 0.0850684553453226,
+            "score": 0.45773318782001327
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.30587067649546584,
+            "bias_error": 0.07454893507411278,
+            "score": 0.4922430141807478
+          },
+          {
+            "stream": 6,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5277458846759034,
+            "bias_error": 0.06804563933445802,
+            "score": 0.6978599830120484
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7311084092794378,
+            "bias_error": 0.14890159664960492,
+            "score": 1.1033624009034502
+          },
+          {
+            "stream": 6,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.832672957824653,
+            "bias_error": 0.09702192669403895,
+            "score": 1.0752277745597503
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3591699786083649,
+            "bias_error": 0.04596828675637292,
+            "score": 0.4740906954992972
+          },
+          {
+            "stream": 7,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.34184161103601224,
+            "bias_error": 0.0611995619691279,
+            "score": 0.494840515958832
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7851153810480581,
+            "bias_error": 0.07001188560756597,
+            "score": 0.960145095066973
+          },
+          {
+            "stream": 7,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.6325769910452788,
+            "bias_error": 0.025806214069110194,
+            "score": 0.6970925262180543
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.8758572385545612,
+            "bias_error": 0.010887635021929685,
+            "score": 0.9030763261093854
+          },
+          {
+            "stream": 7,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5826616063163443,
+            "bias_error": 0.05798923647130243,
+            "score": 0.7276346974946004
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4194277778875006,
+            "bias_error": 0.12899521432130207,
+            "score": 0.7419158136907558
+          },
+          {
+            "stream": 8,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3118380449236121,
+            "bias_error": 0.08492533331830672,
+            "score": 0.524151378219379
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.26809936431520975,
+            "bias_error": 0.10189076768778656,
+            "score": 0.5228262835346762
+          },
+          {
+            "stream": 8,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3780561328542685,
+            "bias_error": 0.039286083595952564,
+            "score": 0.4762713418441499
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.9781949188519152,
+            "bias_error": 0.10498586840336266,
+            "score": 1.2406595898603219
+          },
+          {
+            "stream": 8,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 1.1195114782719602,
+            "bias_error": 0.1635628394692525,
+            "score": 1.5284185769450915
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2244765492961433,
+            "bias_error": 0.06776688244572693,
+            "score": 0.3938937554104606
+          },
+          {
+            "stream": 9,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3955362045998946,
+            "bias_error": 0.06554991009694104,
+            "score": 0.5594109798422472
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.6798457257697362,
+            "bias_error": 0.05979215801008962,
+            "score": 0.8293261207949603
+          },
+          {
+            "stream": 9,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.35922382236122175,
+            "bias_error": 0.00821735880213893,
+            "score": 0.37976721936656904
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.9963817773390246,
+            "bias_error": 0.08386871278423734,
+            "score": 1.206053559299618
+          },
+          {
+            "stream": 9,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.9968420272992136,
+            "bias_error": 0.01785179150149247,
+            "score": 1.0414715060529447
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.149830609561969,
+            "bias_error": 0.05421343857894364,
+            "score": 0.2853642060093281
+          },
+          {
+            "stream": 10,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.36696937224925474,
+            "bias_error": 0.06242223825994122,
+            "score": 0.5230249678991078
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4938007423162009,
+            "bias_error": 0.10406658844226715,
+            "score": 0.7539672134218688
+          },
+          {
+            "stream": 10,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.5423178193184345,
+            "bias_error": 0.1330026285524064,
+            "score": 0.8748243906994505
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.7570176604090005,
+            "bias_error": 0.02683069970917087,
+            "score": 0.8240944096819277
+          },
+          {
+            "stream": 10,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.8644035024909357,
+            "bias_error": 0.0599784853005086,
+            "score": 1.0143497157422072
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.30678635450604647,
+            "bias_error": 0.002105513964839361,
+            "score": 0.31205013941814486
+          },
+          {
+            "stream": 11,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.30002503284310583,
+            "bias_error": 0.025628819838302657,
+            "score": 0.36409708243886246
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.38968248052500326,
+            "bias_error": 0.014613252464875728,
+            "score": 0.4262156116871926
+          },
+          {
+            "stream": 11,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.627678407942424,
+            "bias_error": 0.053818231943231924,
+            "score": 0.7622239878005038
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 1.1706637417065233,
+            "bias_error": 0.06244637044917983,
+            "score": 1.326779667829473
+          },
+          {
+            "stream": 11,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.8480086936746571,
+            "bias_error": 0.09852263856033895,
+            "score": 1.0943152900755044
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.3468309075576217,
+            "bias_error": 0.02774789821431423,
+            "score": 0.41620065309340726
+          },
+          {
+            "stream": 12,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.3614921804810155,
+            "bias_error": 0.051227691877380944,
+            "score": 0.48956141017446786
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5933676811963832,
+            "bias_error": 0.07968520266238248,
+            "score": 0.7925806878523394
+          },
+          {
+            "stream": 12,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.7342230081547978,
+            "bias_error": 0.14563006704824272,
+            "score": 1.0982981757754047
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 1.1451589466454684,
+            "bias_error": 0.06861464271012463,
+            "score": 1.31669555342078
+          },
+          {
+            "stream": 12,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 1.162476940475948,
+            "bias_error": 0.12221423046876143,
+            "score": 1.4680125166478515
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.29631322748352557,
+            "bias_error": 0.08819337183537741,
+            "score": 0.5167966570719691
+          },
+          {
+            "stream": 13,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.38229962766350634,
+            "bias_error": 0.02666269859713607,
+            "score": 0.4489563741563465
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.5431104546333423,
+            "bias_error": 0.06470849841353396,
+            "score": 0.7048817006671771
+          },
+          {
+            "stream": 13,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.4233689663444963,
+            "bias_error": 0.024725736478156755,
+            "score": 0.48518330753988814
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 1.0123756168247329,
+            "bias_error": 0.03914231791519127,
+            "score": 1.110231411612711
+          },
+          {
+            "stream": 13,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.8329846837404193,
+            "bias_error": 0.07205206512381271,
+            "score": 1.013114846549951
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.4415621229660334,
+            "bias_error": 0.056512712174032975,
+            "score": 0.5828439034011159
+          },
+          {
+            "stream": 14,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.22017899553725417,
+            "bias_error": 0.06058613160704349,
+            "score": 0.3716443245548629
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.25443285448559894,
+            "bias_error": 0.05834909262339175,
+            "score": 0.4003055860440783
+          },
+          {
+            "stream": 14,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.18038558752944225,
+            "bias_error": 0.060112171465604956,
+            "score": 0.33066601619345465
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.9726773495280178,
+            "bias_error": 0.0954052076533726,
+            "score": 1.2111903686614491
+          },
+          {
+            "stream": 14,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 1.1284453918935278,
+            "bias_error": 0.12328621983906483,
+            "score": 1.4366609414911897
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.1087060777081692,
+            "bias_error": 0.019124716568278608,
+            "score": 0.15651786912886573
+          },
+          {
+            "stream": 15,
+            "task": "push-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.4954470860485699,
+            "bias_error": 0.07889772161415202,
+            "score": 0.69269139008395
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.2962175650109705,
+            "bias_error": 0.057726499162742646,
+            "score": 0.4405338129178271
+          },
+          {
+            "stream": 15,
+            "task": "reach-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.42214182486409063,
+            "bias_error": 0.061163058877016105,
+            "score": 0.5750494720566308
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 0,
+            "valid": true,
+            "matrix_error": 0.8785717265958277,
+            "bias_error": 0.07042557649782837,
+            "score": 1.0546356678403985
+          },
+          {
+            "stream": 15,
+            "task": "door-open-v3",
+            "replicate": 1,
+            "valid": true,
+            "matrix_error": 0.8199135194637176,
+            "bias_error": 0.04288611245092975,
+            "score": 0.927128800591042
+          }
+        ]
+      }
+    },
+    "contrasts": [
+      {
+        "method": "JOINT_FULL8",
+        "reference": "SAME_DATA_ARX8",
+        "mean_score_difference": -0.564698620061693,
+        "paired_stream_percentile_95": [
+          -0.6247293864366927,
+          -0.5107060938117651
+        ],
+        "stream_values": [
+          -0.7407518758368674,
+          -0.7051902110273108,
+          -0.3746873449794299,
+          -0.5934167030233873,
+          -0.491012160414041,
+          -0.654093816954346,
+          -0.4291732219379334,
+          -0.6565112191078358,
+          -0.7984028405187495,
+          -0.5796911914941609,
+          -0.4751936801669571,
+          -0.4889519104736555,
+          -0.5301513034958476,
+          -0.5698453561937064,
+          -0.45247902762711606,
+          -0.4956260577357446
+        ],
+        "role": "PRIMARY"
+      },
+      {
+        "method": "JOINT_FULL8",
+        "reference": "JOINT_DROP2",
+        "mean_score_difference": -0.002601066180445811,
+        "paired_stream_percentile_95": [
+          -0.006002540302997871,
+          0.0008445508642508352
+        ],
+        "stream_values": [
+          0.0065315874128861985,
+          -0.009986400716373398,
+          -0.011250310776694647,
+          0.002133573289581805,
+          0.007293282268025764,
+          -0.003483026031606338,
+          -0.01193094471249954,
+          -0.011614841369807491,
+          0.002567563418154043,
+          0.005228469056880433,
+          4.0444786912410824e-05,
+          -0.005078382400509997,
+          -0.009382565579816649,
+          -0.0057775483212104475,
+          -0.004895611970837636,
+          0.007987652759782513
+        ],
+        "role": "SECONDARY_UNADJUSTED"
+      },
+      {
+        "method": "JOINT_FULL8",
+        "reference": "OLD_ARX8",
+        "mean_score_difference": -0.5159351128849301,
+        "paired_stream_percentile_95": [
+          -0.5762606666112593,
+          -0.45618866786708534
+        ],
+        "stream_values": [
+          -0.2690723610399926,
+          -0.46728239015549367,
+          -0.5582381643562938,
+          -0.4370760315478884,
+          -0.7365729811074755,
+          -0.364654015424638,
+          -0.5785665252894424,
+          -0.4695109088902421,
+          -0.6381870278675926,
+          -0.5477192078312753,
+          -0.5179118358542302,
+          -0.5564276084803678,
+          -0.7547194921317778,
+          -0.5256436504087989,
+          -0.4418017051072169,
+          -0.391577900666156
+        ],
+        "role": "SECONDARY_UNADJUSTED"
+      }
+    ],
+    "qualification": {
+      "requirements": {
+        "valid_fraction": true,
+        "primary_upper_below_zero": true,
+        "full_better_than_drop_two_mean": true
+      },
+      "passed": true
+    },
+    "task_performance_established": false,
+    "probability_qualification": false,
+    "algorithm_novelty_established": false
+  },
+  "models_sha256": "08d2f6a7451e8e6f63aed9bf5bd15ce34158b2c219025547a483f6d925b423ad"
+}

@@ -1,0 +1,598 @@
+{
+  "source_identity": {
+    "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+    "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+    "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758"
+  },
+  "source_audit_sha256": "403c394dbb6abfffe811ed6c3354e5b78557d5af4bcbf541571441e057a562c2",
+  "source_calibration_sha256": "ca3af58383284c81e5ff2b75e602a8a3c255318227e646657ea0a29c866d56d5",
+  "source_predictions_sha256": "76efc211afc9015ee06b74dbd67c11088476ed067878cfa24235ee586266d1b4",
+  "procedure": "Initial six steps; real history warmup two; paired-program max squared RMS within each nominal calibration seed, then RMS over sixteen seed clusters.",
+  "rms_m": {
+    "push-v3": 0.00010142802046062178,
+    "reach-v3": 9.722469857198475e-05,
+    "door-open-v3": 9.261682837818421e-05
+  },
+  "included_prefixes": [
+    {
+      "seed": 10300,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.6582840489318263e-08
+    },
+    {
+      "seed": 10300,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.753705535409426e-09
+    },
+    {
+      "seed": 10300,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 6.257333339550695e-09
+    },
+    {
+      "seed": 10300,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.0314113024764532e-08
+    },
+    {
+      "seed": 10300,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.820823341024856e-09
+    },
+    {
+      "seed": 10300,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 8.431217666316285e-09
+    },
+    {
+      "seed": 10301,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 2.661535906561133e-09
+    },
+    {
+      "seed": 10301,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 5.496163705586512e-09
+    },
+    {
+      "seed": 10301,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.0690446702315464e-08
+    },
+    {
+      "seed": 10301,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.0951645565018294e-08
+    },
+    {
+      "seed": 10301,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.7015084068006035e-09
+    },
+    {
+      "seed": 10301,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.296738540032332e-09
+    },
+    {
+      "seed": 10302,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 8.89125142233132e-09
+    },
+    {
+      "seed": 10302,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.940004586622312e-09
+    },
+    {
+      "seed": 10302,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 8.586627775280338e-09
+    },
+    {
+      "seed": 10302,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.259951382126061e-08
+    },
+    {
+      "seed": 10302,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 2.2517461773340003e-09
+    },
+    {
+      "seed": 10302,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.649226344358762e-09
+    },
+    {
+      "seed": 10303,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 5.700604316550561e-09
+    },
+    {
+      "seed": 10303,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.5258853171915373e-09
+    },
+    {
+      "seed": 10303,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 6.712078955125916e-09
+    },
+    {
+      "seed": 10303,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 5.090598559471876e-09
+    },
+    {
+      "seed": 10303,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.145287863290617e-09
+    },
+    {
+      "seed": 10303,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 5.2861323216502475e-09
+    },
+    {
+      "seed": 10304,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.3056860307487518e-09
+    },
+    {
+      "seed": 10304,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.752919066136092e-09
+    },
+    {
+      "seed": 10304,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.30591140599016e-09
+    },
+    {
+      "seed": 10304,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 7.475997067276379e-09
+    },
+    {
+      "seed": 10304,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 5.4841510783356044e-09
+    },
+    {
+      "seed": 10304,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 8.675579291979385e-09
+    },
+    {
+      "seed": 10305,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.3713283446782495e-09
+    },
+    {
+      "seed": 10305,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.2230656512737646e-09
+    },
+    {
+      "seed": 10305,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.185482378589511e-09
+    },
+    {
+      "seed": 10305,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.661952174395579e-09
+    },
+    {
+      "seed": 10305,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.960759642916914e-09
+    },
+    {
+      "seed": 10305,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 6.8178408756108675e-09
+    },
+    {
+      "seed": 10306,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.6353264527321548e-08
+    },
+    {
+      "seed": 10306,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.4396369497170523e-09
+    },
+    {
+      "seed": 10306,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 5.126477595958725e-09
+    },
+    {
+      "seed": 10306,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.941739214685225e-09
+    },
+    {
+      "seed": 10306,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.59920359189576e-09
+    },
+    {
+      "seed": 10306,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.0627752391285404e-08
+    },
+    {
+      "seed": 10307,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.531002880145863e-08
+    },
+    {
+      "seed": 10307,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 7.585133416905429e-09
+    },
+    {
+      "seed": 10307,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 8.336620447763245e-09
+    },
+    {
+      "seed": 10307,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 5.851285612121975e-09
+    },
+    {
+      "seed": 10307,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 6.239809535132515e-09
+    },
+    {
+      "seed": 10307,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.092454638660687e-09
+    },
+    {
+      "seed": 10308,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 8.482749136203413e-10
+    },
+    {
+      "seed": 10308,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.953811125663992e-09
+    },
+    {
+      "seed": 10308,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.010048580532516e-08
+    },
+    {
+      "seed": 10308,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.2143352635332717e-08
+    },
+    {
+      "seed": 10308,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.85223634114923e-09
+    },
+    {
+      "seed": 10308,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 7.339210872252373e-09
+    },
+    {
+      "seed": 10309,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 8.113490709481284e-09
+    },
+    {
+      "seed": 10309,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 6.9234833951267726e-09
+    },
+    {
+      "seed": 10309,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 6.921438233296396e-09
+    },
+    {
+      "seed": 10309,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 7.24220200332287e-09
+    },
+    {
+      "seed": 10309,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.5097029742584914e-09
+    },
+    {
+      "seed": 10309,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 6.719268038309545e-09
+    },
+    {
+      "seed": 10310,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 2.9204360354954113e-08
+    },
+    {
+      "seed": 10310,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.009368397866927e-09
+    },
+    {
+      "seed": 10310,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.4104197428226114e-08
+    },
+    {
+      "seed": 10310,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.0583849971191529e-08
+    },
+    {
+      "seed": 10310,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.8520617054066893e-09
+    },
+    {
+      "seed": 10310,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 9.867699549081765e-09
+    },
+    {
+      "seed": 10311,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.0838934395683823e-09
+    },
+    {
+      "seed": 10311,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 5.3394387222903055e-09
+    },
+    {
+      "seed": 10311,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.3411327650565731e-08
+    },
+    {
+      "seed": 10311,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 6.059566185865022e-09
+    },
+    {
+      "seed": 10311,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.771591032402682e-09
+    },
+    {
+      "seed": 10311,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.0093951309547211e-08
+    },
+    {
+      "seed": 10312,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.7312045882860212e-08
+    },
+    {
+      "seed": 10312,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.417949137473847e-09
+    },
+    {
+      "seed": 10312,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 5.031325811641284e-09
+    },
+    {
+      "seed": 10312,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.265057575503226e-09
+    },
+    {
+      "seed": 10312,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 7.357295572328136e-09
+    },
+    {
+      "seed": 10312,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.1474262595507604e-08
+    },
+    {
+      "seed": 10313,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 8.131975291147149e-09
+    },
+    {
+      "seed": 10313,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 5.911053859598337e-09
+    },
+    {
+      "seed": 10313,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 2.0712261125775096e-08
+    },
+    {
+      "seed": 10313,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.4155342271391335e-09
+    },
+    {
+      "seed": 10313,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.313708428592781e-09
+    },
+    {
+      "seed": 10313,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 8.947265179178048e-09
+    },
+    {
+      "seed": 10314,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.119936713518671e-09
+    },
+    {
+      "seed": 10314,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 4.169443635666511e-09
+    },
+    {
+      "seed": 10314,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 6.214891553819084e-09
+    },
+    {
+      "seed": 10314,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 7.720547138862103e-09
+    },
+    {
+      "seed": 10314,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.49539903376266e-09
+    },
+    {
+      "seed": 10314,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.0635681819572587e-08
+    },
+    {
+      "seed": 10315,
+      "task": "push-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 1.3067589650924716e-08
+    },
+    {
+      "seed": 10315,
+      "task": "push-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 6.9012617140012254e-09
+    },
+    {
+      "seed": 10315,
+      "task": "reach-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 4.698659753323484e-09
+    },
+    {
+      "seed": 10315,
+      "task": "reach-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 3.457567351047895e-09
+    },
+    {
+      "seed": 10315,
+      "task": "door-open-v3",
+      "program": "POLICY_ONLY",
+      "prefix_residual_squared_mean": 3.757009094535461e-09
+    },
+    {
+      "seed": 10315,
+      "task": "door-open-v3",
+      "program": "PROBE_THEN_POLICY",
+      "prefix_residual_squared_mean": 1.773962418476126e-08
+    }
+  ],
+  "confidence_qualified": false,
+  "probability_guarantee": false,
+  "scale_is_not_a_verified_error_bound": true,
+  "new_environment_steps": 0
+}

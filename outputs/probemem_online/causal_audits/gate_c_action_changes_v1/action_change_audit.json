@@ -1,0 +1,2958 @@
+{
+  "action_change_cases": [
+    {
+      "change_effect": "HELPFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 28,
+        "maximum_retrieved_episode_id": 27
+      },
+      "episode_id": 28,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.06117979265566187,
+        "score": 0.05442858832806695,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.57,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.82,
+            "confidence": 0.78,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.25,
+            "confidence": 0.72,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "bootstrap_episode015_independent_stochastic_retry",
+          "bootstrap_episode003_independent_stochastic_retry",
+          "bootstrap_episode005_independent_stochastic_retry",
+          "bootstrap_episode001_independent_stochastic_retry",
+          "bootstrap_episode007_independent_stochastic_retry",
+          "bootstrap_episode011_independent_stochastic_retry"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": false,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode22",
+          "glm_online_memory_resonance_episode25",
+          "glm_online_memory_resonance_episode23",
+          "bootstrap_episode009_bounded_planar_compensation",
+          "bootstrap_episode017_bounded_planar_compensation",
+          "bootstrap_episode006_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode27",
+          "bootstrap_episode014_bounded_planar_compensation",
+          "bootstrap_episode019_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode24"
+        ]
+      },
+      "memory_reason": "Current probe shows small non-zero drift [0.000417, -0.000331] with low estimation residual (3.19e-07), but dominant_axis_sign_agreement of 0.5 and relative_bias_std of 0.36 indicate noisy direction stability. Memory overwhelmingly supports BOUNDED_PLANAR_COMPENSATION: 10 supporting instances, 0 contradictions, accepted_probability 1.0, coverage 0.90. INDEPENDENT_STOCHASTIC_RETRY has 6 contradictions and accepted_probability 0.25. Despite current probe ambiguity, strong historical evidence from 10 verified episodes with no contradictions favors bounded compensation over stochastic retry.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 1.0,
+              "contradiction_count": 0,
+              "coverage_score": 0.9026843339243379,
+              "history_count": 16,
+              "mean_progress": 0.18507282779489873,
+              "recent_contradiction_ids": [],
+              "representative_verified_episode_ids": [
+                22,
+                25,
+                23,
+                9,
+                17,
+                6,
+                27,
+                14,
+                19,
+                24
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode23",
+                "bootstrap_episode009_bounded_planar_compensation",
+                "bootstrap_episode017_bounded_planar_compensation",
+                "bootstrap_episode006_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode27",
+                "bootstrap_episode014_bounded_planar_compensation",
+                "bootstrap_episode019_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode24"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 10,
+              "unresolved_count": 0
+            },
+            "global_recent_acceptance_delta": 0.0,
+            "recent": {
+              "accepted_probability": 1.0,
+              "contradiction_count": 0,
+              "coverage_score": 0.9026843339243379,
+              "history_count": 16,
+              "mean_progress": 0.1666644138526841,
+              "recent_contradiction_ids": [],
+              "representative_verified_episode_ids": [
+                16,
+                17,
+                19,
+                20,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode016_bounded_planar_compensation",
+                "bootstrap_episode017_bounded_planar_compensation",
+                "bootstrap_episode019_bounded_planar_compensation",
+                "bootstrap_episode020_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode23",
+                "glm_online_memory_resonance_episode24",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode26",
+                "glm_online_memory_resonance_episode27"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 10,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.24463928368151994,
+              "contradiction_count": 6,
+              "coverage_score": 0.7405996884166909,
+              "history_count": 11,
+              "mean_progress": 0.07468118440300434,
+              "recent_contradiction_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                18,
+                13
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.009987260120381425,
+            "recent": {
+              "accepted_probability": 0.25462654380190136,
+              "contradiction_count": 5,
+              "coverage_score": 0.7405996884166909,
+              "history_count": 11,
+              "mean_progress": 0.08287012749803872,
+              "recent_contradiction_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                13,
+                18
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 28
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.05442858832806695,
+        "estimated_drift_norm": 0.0005323928024921627,
+        "estimated_drift_x": 0.0004167463820529407,
+        "estimated_drift_y": -0.00033130733344018115,
+        "final_object_goal_distance": 0.22124807874085428,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.0130265098367017,
+        "repeat_response_consistency": 0.7353329179881012
+      },
+      "regime_evaluator_only": "A_bias_low_noise",
+      "seed": 4312,
+      "segment_evaluator_only": "bias_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.15,
+            "confidence": 0.7,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.7,
+            "confidence": 0.65,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "INCONCLUSIVE"
+    },
+    {
+      "change_effect": "TIE",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 29,
+        "maximum_retrieved_episode_id": 28
+      },
+      "episode_id": 29,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.089638733196263,
+        "score": 0.025969647787465817,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.62,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.85,
+            "confidence": 0.75,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.23,
+            "confidence": 0.82,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "bootstrap_episode001_independent_stochastic_retry",
+          "bootstrap_episode003_independent_stochastic_retry",
+          "bootstrap_episode015_independent_stochastic_retry",
+          "bootstrap_episode005_independent_stochastic_retry",
+          "bootstrap_episode011_independent_stochastic_retry",
+          "bootstrap_episode007_independent_stochastic_retry"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": false,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode26",
+          "bootstrap_episode014_bounded_planar_compensation",
+          "bootstrap_episode019_bounded_planar_compensation",
+          "bootstrap_episode017_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode28",
+          "bootstrap_episode006_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode25",
+          "glm_online_memory_resonance_episode22",
+          "bootstrap_episode009_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode23"
+        ]
+      },
+      "memory_reason": "Current probe shows small but nonzero drift (xy ~3e-4) with low bias std norm (0.026) and tiny estimation residual (3.19e-7), indicating reliable magnitude estimation. Sign agreement of 0.5 with only 4 samples is expected given the very small drift magnitude where measurement noise can flip signs. Memory strongly supports BOUNDED_PLANAR_COMPENSATION with 10 supporting records, 0 contradictions, and 1.0 acceptance probability across episodes 6-28. INDEPENDENT_STOCHASTIC_RETRY has 6 contradictions and low acceptance probability (0.23). Sufficient budget remains (500).",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 1.0,
+              "contradiction_count": 0,
+              "coverage_score": 0.8742366242070326,
+              "history_count": 17,
+              "mean_progress": 0.1548974814885246,
+              "recent_contradiction_ids": [],
+              "representative_verified_episode_ids": [
+                26,
+                14,
+                19,
+                17,
+                28,
+                6,
+                25,
+                22,
+                9,
+                23
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode26",
+                "bootstrap_episode014_bounded_planar_compensation",
+                "bootstrap_episode019_bounded_planar_compensation",
+                "bootstrap_episode017_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode28",
+                "bootstrap_episode006_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode22",
+                "bootstrap_episode009_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode23"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 10,
+              "unresolved_count": 0
+            },
+            "global_recent_acceptance_delta": 0.0,
+            "recent": {
+              "accepted_probability": 1.0,
+              "contradiction_count": 0,
+              "coverage_score": 0.8742366242070326,
+              "history_count": 17,
+              "mean_progress": 0.15859850193823127,
+              "recent_contradiction_ids": [],
+              "representative_verified_episode_ids": [
+                17,
+                19,
+                20,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode017_bounded_planar_compensation",
+                "bootstrap_episode019_bounded_planar_compensation",
+                "bootstrap_episode020_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode23",
+                "glm_online_memory_resonance_episode24",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode26",
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode28"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 10,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.2260829510335973,
+              "contradiction_count": 6,
+              "coverage_score": 0.8354245166065757,
+              "history_count": 11,
+              "mean_progress": 0.06872939703515792,
+              "recent_contradiction_ids": [
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                18,
+                13
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.027113499462559615,
+            "recent": {
+              "accepted_probability": 0.2531964504961569,
+              "contradiction_count": 5,
+              "coverage_score": 0.6715702917340699,
+              "history_count": 11,
+              "mean_progress": 0.08202597159411522,
+              "recent_contradiction_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                13,
+                18
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 29
+      },
+      "memory_status": "REJECTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.025969647787465817,
+        "estimated_drift_norm": 0.000500822225734904,
+        "estimated_drift_x": 0.0003924150186043714,
+        "estimated_drift_y": -0.00031118058256227044,
+        "final_object_goal_distance": 0.10515083502049588,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.1426506181024295,
+        "repeat_response_consistency": 0.8456046034542446
+      },
+      "regime_evaluator_only": "A_bias_low_noise",
+      "seed": 4314,
+      "segment_evaluator_only": "bias_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.15,
+            "confidence": 0.65,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.7,
+            "confidence": 0.6,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "REJECTED"
+    },
+    {
+      "change_effect": "TIE",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 32,
+        "maximum_retrieved_episode_id": 31
+      },
+      "episode_id": 32,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.08238660773073939,
+        "score": 0.03322177325298944,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.41000000000000003,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.65,
+            "confidence": 0.58,
+            "predicted_status": "INCONCLUSIVE"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.24,
+            "confidence": 0.72,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode31",
+          "glm_online_memory_resonance_episode29",
+          "bootstrap_episode015_independent_stochastic_retry",
+          "bootstrap_episode003_independent_stochastic_retry",
+          "bootstrap_episode001_independent_stochastic_retry",
+          "bootstrap_episode005_independent_stochastic_retry",
+          "bootstrap_episode007_independent_stochastic_retry",
+          "bootstrap_episode011_independent_stochastic_retry"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode30",
+          "glm_online_memory_resonance_episode28",
+          "glm_online_memory_resonance_episode22",
+          "bootstrap_episode017_bounded_planar_compensation",
+          "bootstrap_episode006_bounded_planar_compensation",
+          "bootstrap_episode014_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode25",
+          "bootstrap_episode009_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode23"
+        ]
+      },
+      "memory_reason": "Current evidence shows weak directional stability (dominant_axis_sign_agreement=0.5, only 4 probes) and very small drift magnitude, which alone would not strongly support BPC. However, the estimated drift is non-zero with near-zero estimation residual (3.19e-07) and moderate relative_bias_std (0.2446), not high variance. Memory strongly supports BPC (global accepted_probability=0.891, recent=0.798, 9 supporting vs 1 contradicting) while ISR is strongly contradicted by memory (6 global contradictions, accepted_probability=0.232). With sufficient budget (500) remaining, memory-weighted evidence favors BPC over abstention.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.8914500590139641,
+              "contradiction_count": 1,
+              "coverage_score": 0.892651859165379,
+              "history_count": 20,
+              "mean_progress": 0.1340023800253026,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                30,
+                28,
+                22,
+                17,
+                6,
+                14,
+                25,
+                9,
+                23
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode22",
+                "bootstrap_episode017_bounded_planar_compensation",
+                "bootstrap_episode006_bounded_planar_compensation",
+                "bootstrap_episode014_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode25",
+                "bootstrap_episode009_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode23"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 9,
+              "unresolved_count": 0
+            },
+            "global_recent_acceptance_delta": -0.09344575812404232,
+            "recent": {
+              "accepted_probability": 0.7980043008899218,
+              "contradiction_count": 2,
+              "coverage_score": 0.892651859165379,
+              "history_count": 20,
+              "mean_progress": 0.09541757781133763,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                30
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode23",
+                "glm_online_memory_resonance_episode24",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode26",
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.23236733501959722,
+              "contradiction_count": 6,
+              "coverage_score": 0.7758713228074491,
+              "history_count": 11,
+              "mean_progress": 0.07101706084622872,
+              "recent_contradiction_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                18,
+                13
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.012077175081775804,
+            "recent": {
+              "accepted_probability": 0.24444451010137302,
+              "contradiction_count": 5,
+              "coverage_score": 0.7758713228074491,
+              "history_count": 11,
+              "mean_progress": 0.07965899010776216,
+              "recent_contradiction_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                13,
+                18
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 32
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.03322177325298944,
+        "estimated_drift_norm": 0.00047637902521188274,
+        "estimated_drift_x": 0.00035885615167230065,
+        "estimated_drift_y": -0.00031330374729449106,
+        "final_object_goal_distance": 0.21870551544821115,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.03842328008827184,
+        "repeat_response_consistency": 0.8034733369486355
+      },
+      "regime_evaluator_only": "A_bias_low_noise",
+      "seed": 4324,
+      "segment_evaluator_only": "bias_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.15,
+            "confidence": 0.8,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.75,
+            "confidence": 0.7,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    },
+    {
+      "change_effect": "HELPFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 36,
+        "maximum_retrieved_episode_id": 35
+      },
+      "episode_id": 36,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.07303775800018827,
+        "score": 0.042570622983540536,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.51,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.76,
+            "confidence": 0.68,
+            "predicted_status": "INCONCLUSIVE"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.25,
+            "confidence": 0.6,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode29",
+          "glm_online_memory_resonance_episode31"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode26",
+          "glm_online_memory_resonance_episode30",
+          "bootstrap_episode014_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode32",
+          "bootstrap_episode019_bounded_planar_compensation",
+          "bootstrap_episode017_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode28",
+          "glm_online_memory_resonance_episode33"
+        ]
+      },
+      "memory_reason": "Current evidence shows very small drift magnitude (~0.0004) with sign agreement 0.5 across only 4 probes\u2014inconclusive for stable direction but not definitive rejection. Mean estimation residual is near-zero (3.19e-07), suggesting estimable bias. Memory strongly supports BOUNDED_PLANAR_COMPENSATION (8 support, 2 contradictions, 0.78 acceptance, 0.85 coverage) while INDEPENDENT_STOCHASTIC_RETRY has weak support (3 support, 6 contradictions, 0.23 acceptance). Select BOUNDED_PLANAR_COMPENSATION based on dominant memory evidence and small, precisely estimated drift.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.7791136814434967,
+              "contradiction_count": 2,
+              "coverage_score": 0.8461736540789411,
+              "history_count": 24,
+              "mean_progress": 0.05637640713024305,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                26,
+                30,
+                14,
+                32,
+                19,
+                17,
+                28,
+                33
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode26",
+                "glm_online_memory_resonance_episode30",
+                "bootstrap_episode014_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode32",
+                "bootstrap_episode019_bounded_planar_compensation",
+                "bootstrap_episode017_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode33"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 0
+            },
+            "global_recent_acceptance_delta": -0.018078909482199923,
+            "recent": {
+              "accepted_probability": 0.7610347719612968,
+              "contradiction_count": 2,
+              "coverage_score": 0.8461736540789411,
+              "history_count": 24,
+              "mean_progress": 0.07947405511750087,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                26,
+                27,
+                28,
+                30,
+                32,
+                33,
+                34,
+                35
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode26",
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.2332504762899182,
+              "contradiction_count": 6,
+              "coverage_score": 0.7362109894875882,
+              "history_count": 11,
+              "mean_progress": 0.07106214688213067,
+              "recent_contradiction_ids": [
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                18,
+                13
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.02460530172960443,
+            "recent": {
+              "accepted_probability": 0.25785577801952264,
+              "contradiction_count": 5,
+              "coverage_score": 0.6039104167928095,
+              "history_count": 11,
+              "mean_progress": 0.0837211316408812,
+              "recent_contradiction_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                4,
+                13,
+                18
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 36
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.042570622983540536,
+        "estimated_drift_norm": 0.0004696596690374334,
+        "estimated_drift_x": 0.0003632069121558005,
+        "estimated_drift_y": -0.00029775987587752663,
+        "final_object_goal_distance": 0.07982769871628939,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.16892012675329598,
+        "repeat_response_consistency": 0.7583061588172563
+      },
+      "regime_evaluator_only": "A_bias_low_noise",
+      "seed": 4334,
+      "segment_evaluator_only": "bias_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.05,
+            "confidence": 0.8,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.75,
+            "confidence": 0.7,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "REJECTED"
+    },
+    {
+      "change_effect": "HELPFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 39,
+        "maximum_retrieved_episode_id": 38
+      },
+      "episode_id": 39,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.0816093534163624,
+        "score": 0.03399902756736642,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.54,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.8,
+            "confidence": 0.76,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.26,
+            "confidence": 0.72,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode29",
+          "glm_online_memory_resonance_episode31",
+          "bootstrap_episode015_independent_stochastic_retry",
+          "bootstrap_episode003_independent_stochastic_retry",
+          "bootstrap_episode005_independent_stochastic_retry",
+          "bootstrap_episode001_independent_stochastic_retry",
+          "glm_online_memory_resonance_episode37",
+          "bootstrap_episode007_independent_stochastic_retry"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode33",
+          "glm_online_memory_resonance_episode22",
+          "glm_online_memory_resonance_episode32",
+          "glm_online_memory_resonance_episode28",
+          "glm_online_memory_resonance_episode30",
+          "bootstrap_episode009_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode23",
+          "bootstrap_episode006_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode25",
+          "glm_online_memory_resonance_episode27",
+          "glm_online_memory_resonance_episode34",
+          "glm_online_memory_resonance_episode35",
+          "glm_online_memory_resonance_episode36"
+        ]
+      },
+      "memory_reason": "Probe responses show a stable directional drift: dominant_axis_sign_agreement=0.75, mean_estimation_residual~3.2e-7, and a consistent signed drift vector [0.00034, -0.00028]. Relative bias std (0.27) is moderate, not high enough to invalidate compensation. Memory strongly supports BPC (global accepted_probability=0.899, recent=0.805, 8-9 supporting episodes) while ISR is heavily contradicted (6 contradictions, accepted_probability~0.26). Sufficient budget (500) and probe samples (4) remain.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.8987821313184383,
+              "contradiction_count": 1,
+              "coverage_score": 0.8856656443345666,
+              "history_count": 25,
+              "mean_progress": 0.14407908274458187,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                33,
+                22,
+                32,
+                28,
+                30,
+                9,
+                23,
+                6,
+                25
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode30",
+                "bootstrap_episode009_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode23",
+                "bootstrap_episode006_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode25"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 9,
+              "unresolved_count": 0
+            },
+            "global_recent_acceptance_delta": -0.09389524434235696,
+            "recent": {
+              "accepted_probability": 0.8048868869760814,
+              "contradiction_count": 2,
+              "coverage_score": 0.8856656443345666,
+              "history_count": 25,
+              "mean_progress": 0.1103798806361241,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                27,
+                28,
+                30,
+                32,
+                33,
+                34,
+                35,
+                36
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode36"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.257018931877137,
+              "contradiction_count": 6,
+              "coverage_score": 0.7547360731939109,
+              "history_count": 13,
+              "mean_progress": 0.04189575609831906,
+              "recent_contradiction_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "bootstrap_episode007_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                38,
+                4,
+                13
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode38",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.008055270560567651,
+            "recent": {
+              "accepted_probability": 0.26507420243770463,
+              "contradiction_count": 5,
+              "coverage_score": 0.7547360731939109,
+              "history_count": 13,
+              "mean_progress": 0.040739838902853924,
+              "recent_contradiction_ids": [
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37"
+              ],
+              "representative_verified_episode_ids": [
+                13,
+                18,
+                38
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode38"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 39
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.03399902756736642,
+        "estimated_drift_norm": 0.00043883563967681504,
+        "estimated_drift_x": 0.000340849169787392,
+        "estimated_drift_y": -0.0002764028981501552,
+        "final_object_goal_distance": 0.2649050753998977,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": -0.003660413770380677,
+        "repeat_response_consistency": 0.7858220773930293
+      },
+      "regime_evaluator_only": "A_bias_low_noise",
+      "seed": 4338,
+      "segment_evaluator_only": "bias_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.25,
+            "confidence": 0.6,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.7,
+            "confidence": 0.6,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "REJECTED"
+    },
+    {
+      "change_effect": "HELPFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 41,
+        "maximum_retrieved_episode_id": 40
+      },
+      "episode_id": 41,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.02454123163757059,
+        "score": 0.1401496126212994,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.49000000000000005,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.79,
+            "confidence": 0.75,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.3,
+            "confidence": 0.65,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "bootstrap_episode012_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode31"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode27",
+          "glm_online_memory_resonance_episode25",
+          "glm_online_memory_resonance_episode28",
+          "glm_online_memory_resonance_episode22",
+          "glm_online_memory_resonance_episode23",
+          "glm_online_memory_resonance_episode40",
+          "glm_online_memory_resonance_episode32",
+          "glm_online_memory_resonance_episode35"
+        ]
+      },
+      "memory_reason": "Dominant-axis sign agreement of 0.75 indicates a stable directional drift across probe responses, and the mean estimation residual is negligible (~3e-7), supporting a bounded compensation. The relative_bias_std of 0.61 is moderate, not high enough to invalidate the stable-direction assumption. Memory strongly supports BOUNDED_PLANAR_COMPENSATION (accepted_probability ~0.79, 8 supporting records, mean_progress 0.125) over INDEPENDENT_STOCHASTIC_RETRY (accepted_probability ~0.30, 6 contradictions). Sufficient budget remains (500).",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.8036780423833289,
+              "contradiction_count": 2,
+              "coverage_score": 0.6491783629125293,
+              "history_count": 27,
+              "mean_progress": 0.1253624404755597,
+              "recent_contradiction_ids": [
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                27,
+                25,
+                28,
+                22,
+                23,
+                40,
+                32,
+                35
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode23",
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode40",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode35"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 0
+            },
+            "global_recent_acceptance_delta": -0.010647529249366294,
+            "recent": {
+              "accepted_probability": 0.7930305131339626,
+              "contradiction_count": 2,
+              "coverage_score": 0.5985697056574483,
+              "history_count": 27,
+              "mean_progress": 0.10860204387325657,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                30,
+                32,
+                33,
+                34,
+                35,
+                36,
+                39,
+                40
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode29",
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode36",
+                "glm_online_memory_resonance_episode39",
+                "glm_online_memory_resonance_episode40"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.29669174795423514,
+              "contradiction_count": 6,
+              "coverage_score": 0.5882397793205594,
+              "history_count": 13,
+              "mean_progress": 0.042982120204069184,
+              "recent_contradiction_ids": [
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "bootstrap_episode007_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                38,
+                4,
+                18
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode38",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "bootstrap_episode001_independent_stochastic_retry",
+                "bootstrap_episode005_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.005854031937609749,
+            "recent": {
+              "accepted_probability": 0.3025457798918449,
+              "contradiction_count": 5,
+              "coverage_score": 0.5882397793205594,
+              "history_count": 13,
+              "mean_progress": 0.04583658469247263,
+              "recent_contradiction_ids": [
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37"
+              ],
+              "representative_verified_episode_ids": [
+                13,
+                18,
+                38
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode005_independent_stochastic_retry",
+                "bootstrap_episode007_independent_stochastic_retry",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode38"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 41
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.1401496126212994,
+        "estimated_drift_norm": 0.0008128449898872617,
+        "estimated_drift_x": 0.000686059423655123,
+        "estimated_drift_y": -0.0004359351382933283,
+        "final_object_goal_distance": 0.17446355272306507,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.0016523523489137548,
+        "repeat_response_consistency": 0.6202782395238575
+      },
+      "regime_evaluator_only": "C_bias_dominant_mixed",
+      "seed": 4349,
+      "segment_evaluator_only": "bias_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.25,
+            "confidence": 0.6,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.65,
+            "confidence": 0.6,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "REJECTED"
+    },
+    {
+      "change_effect": "TIE",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 46,
+        "maximum_retrieved_episode_id": 45
+      },
+      "episode_id": 46,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.3624250009897194,
+        "score": 0.47803338197344825,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.26999999999999996,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.72,
+            "confidence": 0.68,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.45,
+            "confidence": 0.5,
+            "predicted_status": "INCONCLUSIVE"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode31"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": false,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode30",
+          "glm_online_memory_resonance_episode32",
+          "glm_online_memory_resonance_episode33",
+          "glm_online_memory_resonance_episode34",
+          "glm_online_memory_resonance_episode35",
+          "glm_online_memory_resonance_episode36",
+          "glm_online_memory_resonance_episode39",
+          "glm_online_memory_resonance_episode40",
+          "glm_online_memory_resonance_episode41"
+        ]
+      },
+      "memory_reason": "Dominant-axis sign agreement of 0.75 across 4 probes indicates moderate directional stability, and mean estimation residual is very small (4.4e-05), suggesting the drift model fits well. Although relative_bias_std (1.822) is elevated\u2014likely inflated by the small drift magnitude (~7.6e-4) and limited sample size\u2014the recent memory strongly supports BOUNDED_PLANAR_COMPENSATION with 9 supports vs 1 contradiction, accepted_probability 0.897, and positive global-recent acceptance delta (+0.224). INDEPENDENT_STOCHASTIC_RETRY has weaker memory support (5 supports, 3 contradictions) and lower mean progress. Budget remains sufficient (500 steps).",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.6729659725854938,
+              "contradiction_count": 1,
+              "coverage_score": 0.6662640417250941,
+              "history_count": 28,
+              "mean_progress": 0.13065815834690103,
+              "recent_contradiction_ids": [
+                "bootstrap_episode012_bounded_planar_compensation"
+              ],
+              "representative_verified_episode_ids": [
+                27,
+                41,
+                35,
+                28,
+                23,
+                22,
+                25
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode002_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode27",
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode41",
+                "bootstrap_episode008_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode23",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode25"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 7,
+              "unresolved_count": 2
+            },
+            "global_recent_acceptance_delta": 0.22363408422206466,
+            "recent": {
+              "accepted_probability": 0.8966000568075585,
+              "contradiction_count": 1,
+              "coverage_score": 0.5069901089176978,
+              "history_count": 28,
+              "mean_progress": 0.153269235944002,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                30,
+                32,
+                33,
+                34,
+                35,
+                36,
+                39,
+                40,
+                41
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode36",
+                "glm_online_memory_resonance_episode39",
+                "glm_online_memory_resonance_episode40",
+                "glm_online_memory_resonance_episode41"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 9,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.5550761880320559,
+              "contradiction_count": 3,
+              "coverage_score": 0.678805685378804,
+              "history_count": 17,
+              "mean_progress": 0.11113695057504683,
+              "recent_contradiction_ids": [
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode45"
+              ],
+              "representative_verified_episode_ids": [
+                44,
+                18,
+                43,
+                4,
+                38
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode44",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode43",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode38",
+                "bootstrap_episode010_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode45"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 2
+            },
+            "global_recent_acceptance_delta": 0.0032560250668379753,
+            "recent": {
+              "accepted_probability": 0.5583322130988939,
+              "contradiction_count": 3,
+              "coverage_score": 0.678805685378804,
+              "history_count": 17,
+              "mean_progress": 0.12464739599368589,
+              "recent_contradiction_ids": [
+                "bootstrap_episode015_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode45"
+              ],
+              "representative_verified_episode_ids": [
+                13,
+                18,
+                38,
+                43,
+                44
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode013_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode38",
+                "glm_online_memory_resonance_episode42",
+                "glm_online_memory_resonance_episode43",
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode45"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 2
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 46
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.47803338197344825,
+        "estimated_drift_norm": 0.0007644838080458941,
+        "estimated_drift_x": -4.918821393212652e-05,
+        "estimated_drift_y": -0.0007628997393986439,
+        "final_object_goal_distance": 0.2335386960670951,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": -0.056398187049319676,
+        "repeat_response_consistency": 0.3543455210396701
+      },
+      "regime_evaluator_only": "D_noise_dominant_mixed",
+      "seed": 4355,
+      "segment_evaluator_only": "noise_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.15,
+            "confidence": 0.7,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.75,
+            "confidence": 0.7,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    },
+    {
+      "change_effect": "TIE",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 51,
+        "maximum_retrieved_episode_id": 50
+      },
+      "episode_id": 51,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.2751950899817334,
+        "score": 0.39080347096546225,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.37,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.72,
+            "confidence": 0.62,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.35,
+            "confidence": 0.48,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode31",
+          "glm_online_memory_resonance_episode37",
+          "glm_online_memory_resonance_episode45",
+          "glm_online_memory_resonance_episode47"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode32",
+          "glm_online_memory_resonance_episode33",
+          "glm_online_memory_resonance_episode34",
+          "glm_online_memory_resonance_episode35",
+          "glm_online_memory_resonance_episode36",
+          "glm_online_memory_resonance_episode39",
+          "glm_online_memory_resonance_episode40",
+          "glm_online_memory_resonance_episode41",
+          "glm_online_memory_resonance_episode46"
+        ]
+      },
+      "memory_reason": "Dominant axis sign agreement of 0.75 across 4 probes indicates a stable directional tendency, and the mean estimation residual is negligible (2.3e-05). Although relative_bias_std (1.627) signals elevated variance, the directional consistency combined with strong recent memory support (9 supports, 0.899 accepted probability) favors bounded planar compensation over stochastic retry, which is contradicted by the repeatable drift direction.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.8048892834698198,
+              "contradiction_count": 1,
+              "coverage_score": 0.4459825136599077,
+              "history_count": 29,
+              "mean_progress": 0.14336104231704452,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                33,
+                28,
+                39,
+                32,
+                30,
+                22,
+                25,
+                40
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode39",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode30",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode25",
+                "glm_online_memory_resonance_episode40",
+                "bootstrap_episode008_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode31"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.0937119334557206,
+            "recent": {
+              "accepted_probability": 0.8986012169255404,
+              "contradiction_count": 1,
+              "coverage_score": 0.4459825136599077,
+              "history_count": 29,
+              "mean_progress": 0.15529330312490752,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode31"
+              ],
+              "representative_verified_episode_ids": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                39,
+                40,
+                41,
+                46
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode31",
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode36",
+                "glm_online_memory_resonance_episode39",
+                "glm_online_memory_resonance_episode40",
+                "glm_online_memory_resonance_episode41",
+                "glm_online_memory_resonance_episode46"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 9,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.30371821370829427,
+              "contradiction_count": 5,
+              "coverage_score": 0.5086266215875243,
+              "history_count": 21,
+              "mean_progress": 0.06456779717928997,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode47",
+                "glm_online_memory_resonance_episode37",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                13,
+                38,
+                4
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode47",
+                "bootstrap_episode013_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode42",
+                "glm_online_memory_resonance_episode38",
+                "glm_online_memory_resonance_episode37",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode015_independent_stochastic_retry",
+                "bootstrap_episode003_independent_stochastic_retry",
+                "bootstrap_episode001_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 3,
+              "unresolved_count": 2
+            },
+            "global_recent_acceptance_delta": 0.26640061285235345,
+            "recent": {
+              "accepted_probability": 0.5701188265606477,
+              "contradiction_count": 3,
+              "coverage_score": 0.5086266215875243,
+              "history_count": 21,
+              "mean_progress": 0.10152579126126957,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode45",
+                "glm_online_memory_resonance_episode47"
+              ],
+              "representative_verified_episode_ids": [
+                38,
+                43,
+                44,
+                48,
+                49,
+                50
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode38",
+                "glm_online_memory_resonance_episode42",
+                "glm_online_memory_resonance_episode43",
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode45",
+                "glm_online_memory_resonance_episode47",
+                "glm_online_memory_resonance_episode48",
+                "glm_online_memory_resonance_episode49",
+                "glm_online_memory_resonance_episode50"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 6,
+              "unresolved_count": 1
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 51
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.39080347096546225,
+        "estimated_drift_norm": 0.0005950818171757611,
+        "estimated_drift_x": 0.000264284583218445,
+        "estimated_drift_y": 0.0005331754197318728,
+        "final_object_goal_distance": 0.2152291524902591,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.01978663575619527,
+        "repeat_response_consistency": 0.380627461438936
+      },
+      "regime_evaluator_only": "D_noise_dominant_mixed",
+      "seed": 4367,
+      "segment_evaluator_only": "noise_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.22,
+            "confidence": 0.62,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.68,
+            "confidence": 0.6,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    },
+    {
+      "change_effect": "HARMFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 53,
+        "maximum_retrieved_episode_id": 52
+      },
+      "episode_id": 53,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.590995813692747,
+        "score": 0.7066041946764758,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.43999999999999995,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.82,
+            "confidence": 0.74,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.38,
+            "confidence": 0.61,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode45",
+          "glm_online_memory_resonance_episode47",
+          "glm_online_memory_resonance_episode52"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": false,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode32",
+          "glm_online_memory_resonance_episode33",
+          "glm_online_memory_resonance_episode34",
+          "glm_online_memory_resonance_episode35",
+          "glm_online_memory_resonance_episode36",
+          "glm_online_memory_resonance_episode39",
+          "glm_online_memory_resonance_episode40",
+          "glm_online_memory_resonance_episode41",
+          "glm_online_memory_resonance_episode46",
+          "glm_online_memory_resonance_episode51"
+        ]
+      },
+      "memory_reason": "Current evidence shows 75% dominant-axis sign agreement and very small mean estimation residual (3.14e-05), indicating a moderately stable directional drift despite elevated relative_bias_std. Recent memory for BOUNDED_PLANAR_COMPENSATION is unanimously supportive (10/10 accepted, 0 contradictions, accepted_probability 1.0 across episodes 32-51), while INDEPENDENT_STOCHASTIC_RETRY carries 3 recent contradictions. The combination of directional consistency and strong recent memory support favors bounded compensation over stochastic retry.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.6869997925134307,
+              "contradiction_count": 1,
+              "coverage_score": 0.6148342165963147,
+              "history_count": 30,
+              "mean_progress": 0.12196392125850254,
+              "recent_contradiction_ids": [
+                "bootstrap_episode012_bounded_planar_compensation"
+              ],
+              "representative_verified_episode_ids": [
+                46,
+                41,
+                27,
+                28,
+                22,
+                25,
+                32
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode41",
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode28",
+                "bootstrap_episode002_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode22",
+                "glm_online_memory_resonance_episode25",
+                "bootstrap_episode008_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode32"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 7,
+              "unresolved_count": 2
+            },
+            "global_recent_acceptance_delta": 0.3130002074865693,
+            "recent": {
+              "accepted_probability": 1.0,
+              "contradiction_count": 0,
+              "coverage_score": 0.548978331906845,
+              "history_count": 30,
+              "mean_progress": 0.19099787763170067,
+              "recent_contradiction_ids": [],
+              "representative_verified_episode_ids": [
+                32,
+                33,
+                34,
+                35,
+                36,
+                39,
+                40,
+                41,
+                46,
+                51
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode32",
+                "glm_online_memory_resonance_episode33",
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode36",
+                "glm_online_memory_resonance_episode39",
+                "glm_online_memory_resonance_episode40",
+                "glm_online_memory_resonance_episode41",
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode51"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 10,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.6227152833073358,
+              "contradiction_count": 3,
+              "coverage_score": 0.6765995861388187,
+              "history_count": 22,
+              "mean_progress": 0.100369412329453,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode52",
+                "glm_online_memory_resonance_episode45"
+              ],
+              "representative_verified_episode_ids": [
+                44,
+                48,
+                38,
+                4,
+                18,
+                43
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode48",
+                "glm_online_memory_resonance_episode38",
+                "glm_online_memory_resonance_episode21",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode52",
+                "bootstrap_episode004_independent_stochastic_retry",
+                "bootstrap_episode018_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode43",
+                "glm_online_memory_resonance_episode45"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 6,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.008782544418585503,
+            "recent": {
+              "accepted_probability": 0.6314978277259213,
+              "contradiction_count": 3,
+              "coverage_score": 0.6765995861388187,
+              "history_count": 22,
+              "mean_progress": 0.1171231451985349,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode45",
+                "glm_online_memory_resonance_episode47",
+                "glm_online_memory_resonance_episode52"
+              ],
+              "representative_verified_episode_ids": [
+                38,
+                43,
+                44,
+                48,
+                49,
+                50
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode38",
+                "glm_online_memory_resonance_episode42",
+                "glm_online_memory_resonance_episode43",
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode45",
+                "glm_online_memory_resonance_episode47",
+                "glm_online_memory_resonance_episode48",
+                "glm_online_memory_resonance_episode49",
+                "glm_online_memory_resonance_episode50",
+                "glm_online_memory_resonance_episode52"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 6,
+              "unresolved_count": 1
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 53
+      },
+      "memory_status": "REJECTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.7066041946764758,
+        "estimated_drift_norm": 0.0007247387107770092,
+        "estimated_drift_x": 0.0005400373053413693,
+        "estimated_drift_y": -0.00048332795050395547,
+        "final_object_goal_distance": 0.16683893454080212,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.05980852967060976,
+        "repeat_response_consistency": 0.19401743330774474
+      },
+      "regime_evaluator_only": "B_zero_mean_noise",
+      "seed": 4370,
+      "segment_evaluator_only": "noise_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.2,
+            "confidence": 0.6,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.72,
+            "confidence": 0.65,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    },
+    {
+      "change_effect": "TIE",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 57,
+        "maximum_retrieved_episode_id": 56
+      },
+      "episode_id": 57,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.26800278261689636,
+        "score": 0.3836111636006252,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.16999999999999993,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.72,
+            "confidence": 0.62,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.55,
+            "confidence": 0.48,
+            "predicted_status": "INCONCLUSIVE"
+          }
+        },
+        "contradicting_memory_ids": [
+          "bootstrap_episode012_bounded_planar_compensation",
+          "glm_online_memory_resonance_episode53"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode46",
+          "glm_online_memory_resonance_episode54",
+          "glm_online_memory_resonance_episode41",
+          "glm_online_memory_resonance_episode34",
+          "glm_online_memory_resonance_episode35",
+          "glm_online_memory_resonance_episode36",
+          "glm_online_memory_resonance_episode39",
+          "glm_online_memory_resonance_episode40",
+          "glm_online_memory_resonance_episode51",
+          "glm_online_memory_resonance_episode27",
+          "glm_online_memory_resonance_episode28",
+          "glm_online_memory_resonance_episode26"
+        ]
+      },
+      "memory_reason": "Dominant-axis sign agreement of 0.75 and very small mean estimation residual (3.97e-06) indicate moderate directional consistency in the drift estimate. Although relative_bias_std (1.41) signals elevated variance, the drift direction is stable enough (both components negative, 75% sign agreement) to support a bounded correction. Recent memory strongly supports BPC (accepted_probability 0.885, 9 supporting records, only 1 recent contradiction), outweighing ISR which has more contradictions (3 recent) and lower acceptance. Sufficient budget (500) and 4 probe samples provide adequate evidence for selection.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.686336127478798,
+              "contradiction_count": 2,
+              "coverage_score": 0.5942856669329707,
+              "history_count": 32,
+              "mean_progress": 0.08136469393657605,
+              "recent_contradiction_ids": [
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode53"
+              ],
+              "representative_verified_episode_ids": [
+                46,
+                54,
+                41,
+                27,
+                28,
+                26,
+                36
+              ],
+              "retrieved_record_ids": [
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode54",
+                "glm_online_memory_resonance_episode53",
+                "glm_online_memory_resonance_episode41",
+                "bootstrap_episode002_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode28",
+                "glm_online_memory_resonance_episode26",
+                "glm_online_memory_resonance_episode36"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 7,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.19893863378802512,
+            "recent": {
+              "accepted_probability": 0.8852747612668231,
+              "contradiction_count": 1,
+              "coverage_score": 0.5845012784463264,
+              "history_count": 32,
+              "mean_progress": 0.1585045501792266,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode53"
+              ],
+              "representative_verified_episode_ids": [
+                34,
+                35,
+                36,
+                39,
+                40,
+                41,
+                46,
+                51,
+                54
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode34",
+                "glm_online_memory_resonance_episode35",
+                "glm_online_memory_resonance_episode36",
+                "glm_online_memory_resonance_episode39",
+                "glm_online_memory_resonance_episode40",
+                "glm_online_memory_resonance_episode41",
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode51",
+                "glm_online_memory_resonance_episode53",
+                "glm_online_memory_resonance_episode54"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 9,
+              "unresolved_count": 0
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.5420810400873278,
+              "contradiction_count": 4,
+              "coverage_score": 0.6780101096528706,
+              "history_count": 24,
+              "mean_progress": 0.05541898132990663,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode45",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode52"
+              ],
+              "representative_verified_episode_ids": [
+                44,
+                48,
+                50,
+                38,
+                18
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode48",
+                "glm_online_memory_resonance_episode50",
+                "glm_online_memory_resonance_episode38",
+                "glm_online_memory_resonance_episode37",
+                "glm_online_memory_resonance_episode45",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode52",
+                "glm_online_memory_resonance_episode21",
+                "bootstrap_episode018_independent_stochastic_retry"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": 0.17696874739268542,
+            "recent": {
+              "accepted_probability": 0.7190497874800132,
+              "contradiction_count": 3,
+              "coverage_score": 0.6780101096528706,
+              "history_count": 24,
+              "mean_progress": 0.14592344765092666,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode45",
+                "glm_online_memory_resonance_episode47",
+                "glm_online_memory_resonance_episode52"
+              ],
+              "representative_verified_episode_ids": [
+                43,
+                44,
+                48,
+                49,
+                50,
+                55,
+                56
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode43",
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode45",
+                "glm_online_memory_resonance_episode47",
+                "glm_online_memory_resonance_episode48",
+                "glm_online_memory_resonance_episode49",
+                "glm_online_memory_resonance_episode50",
+                "glm_online_memory_resonance_episode52",
+                "glm_online_memory_resonance_episode55",
+                "glm_online_memory_resonance_episode56"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 7,
+              "unresolved_count": 0
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 57
+      },
+      "memory_status": "ACCEPTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.3836111636006252,
+        "estimated_drift_norm": 0.0008940053687493339,
+        "estimated_drift_x": -7.870790466163409e-05,
+        "estimated_drift_y": -0.0008905339213620151,
+        "final_object_goal_distance": 0.119531337753626,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.08650196101150644,
+        "repeat_response_consistency": 0.4145402666671235
+      },
+      "regime_evaluator_only": "B_zero_mean_noise",
+      "seed": 4380,
+      "segment_evaluator_only": "noise_dominant",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.15,
+            "confidence": 0.7,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.75,
+            "confidence": 0.7,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    },
+    {
+      "change_effect": "HARMFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 76,
+        "maximum_retrieved_episode_id": 75
+      },
+      "episode_id": 76,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.15185024770900524,
+        "score": 0.26745862869273407,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.37,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.72,
+            "confidence": 0.68,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.35,
+            "confidence": 0.55,
+            "predicted_status": "REJECTED"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode53"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode41",
+          "glm_online_memory_resonance_episode46",
+          "glm_online_memory_resonance_episode54",
+          "glm_online_memory_resonance_episode57",
+          "glm_online_memory_resonance_episode69",
+          "glm_online_memory_resonance_episode70",
+          "glm_online_memory_resonance_episode74"
+        ]
+      },
+      "memory_reason": "Dominant axis sign agreement of 0.75 indicates moderate directional consistency in probe responses, and both drift components share the same (negative) sign. Although relative_bias_std (1.01) signals notable variance, the mean estimation residual is negligible (1.16e-05), suggesting the drift estimate is reliable. Memory strongly supports BPC with recent accepted_probability 0.834, 8 supports vs 1 contradiction, and a positive acceptance delta (+0.11). INDEPENDENT_STOCHASTIC_RETRY has weaker memory support (0.46 acceptance, 4 global contradictions) and declining trend. Sufficient budget (500) remains.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.7242146935524254,
+              "contradiction_count": 1,
+              "coverage_score": 0.7272559263437777,
+              "history_count": 37,
+              "mean_progress": 0.1178948887344026,
+              "recent_contradiction_ids": [
+                "bootstrap_episode012_bounded_planar_compensation"
+              ],
+              "representative_verified_episode_ids": [
+                54,
+                57,
+                46,
+                27,
+                41,
+                28,
+                22
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode54",
+                "glm_online_memory_resonance_episode57",
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode27",
+                "bootstrap_episode002_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode41",
+                "bootstrap_episode012_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode28",
+                "bootstrap_episode008_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode22"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 7,
+              "unresolved_count": 2
+            },
+            "global_recent_acceptance_delta": 0.11025516171642624,
+            "recent": {
+              "accepted_probability": 0.8344698552688516,
+              "contradiction_count": 1,
+              "coverage_score": 0.7272559263437777,
+              "history_count": 37,
+              "mean_progress": 0.12448550555417118,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode53"
+              ],
+              "representative_verified_episode_ids": [
+                41,
+                46,
+                51,
+                54,
+                57,
+                69,
+                70,
+                74
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode41",
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode51",
+                "glm_online_memory_resonance_episode53",
+                "glm_online_memory_resonance_episode54",
+                "glm_online_memory_resonance_episode57",
+                "glm_online_memory_resonance_episode61",
+                "glm_online_memory_resonance_episode69",
+                "glm_online_memory_resonance_episode70",
+                "glm_online_memory_resonance_episode74"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 8,
+              "unresolved_count": 1
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.49777487785658786,
+              "contradiction_count": 4,
+              "coverage_score": 0.7234136500604231,
+              "history_count": 38,
+              "mean_progress": 0.022416463728307457,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode67",
+                "glm_online_memory_resonance_episode58",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode52"
+              ],
+              "representative_verified_episode_ids": [
+                50,
+                44,
+                48,
+                59,
+                60
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode67",
+                "glm_online_memory_resonance_episode50",
+                "glm_online_memory_resonance_episode58",
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode48",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode52",
+                "glm_online_memory_resonance_episode75",
+                "glm_online_memory_resonance_episode59",
+                "glm_online_memory_resonance_episode60"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": -0.03689675177006724,
+            "recent": {
+              "accepted_probability": 0.4608781260865206,
+              "contradiction_count": 2,
+              "coverage_score": 0.7234136500604231,
+              "history_count": 38,
+              "mean_progress": 0.04724979417746582,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode64",
+                "glm_online_memory_resonance_episode67"
+              ],
+              "representative_verified_episode_ids": [
+                63,
+                66,
+                71,
+                72,
+                73
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode63",
+                "glm_online_memory_resonance_episode64",
+                "glm_online_memory_resonance_episode65",
+                "glm_online_memory_resonance_episode66",
+                "glm_online_memory_resonance_episode67",
+                "glm_online_memory_resonance_episode68",
+                "glm_online_memory_resonance_episode71",
+                "glm_online_memory_resonance_episode72",
+                "glm_online_memory_resonance_episode73",
+                "glm_online_memory_resonance_episode75"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 3
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 76
+      },
+      "memory_status": "REJECTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.26745862869273407,
+        "estimated_drift_norm": 0.0008981805752845626,
+        "estimated_drift_x": -0.0005484428079409766,
+        "estimated_drift_y": -0.0007112937735115673,
+        "final_object_goal_distance": 0.17471467655381767,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": 0.03473769826800446,
+        "repeat_response_consistency": 0.49749980074162214
+      },
+      "regime_evaluator_only": "D_noise_dominant_mixed",
+      "seed": 4435,
+      "segment_evaluator_only": "mixed",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.35,
+            "confidence": 0.4,
+            "predicted_status": "INCONCLUSIVE"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.6,
+            "confidence": 0.55,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    },
+    {
+      "change_effect": "HARMFUL",
+      "chronology_audit": {
+        "current_or_future_record_visible": false,
+        "cutoff_episode_id": 79,
+        "maximum_retrieved_episode_id": 78
+      },
+      "episode_id": 79,
+      "frozen_variance_rule": {
+        "absolute_margin": 0.13454660221494114,
+        "score": 0.25015498319866997,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "threshold": 0.11560838098372882
+      },
+      "memory_accept_probability_margin": 0.21999999999999997,
+      "memory_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.7,
+            "confidence": 0.64,
+            "predicted_status": "ACCEPTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.48,
+            "confidence": 0.42,
+            "predicted_status": "INCONCLUSIVE"
+          }
+        },
+        "contradicting_memory_ids": [
+          "glm_online_memory_resonance_episode53",
+          "glm_online_memory_resonance_episode76"
+        ],
+        "memory_applicable": true,
+        "memory_conflict_detected": true,
+        "memory_used": true,
+        "selected_skill": "BOUNDED_PLANAR_COMPENSATION",
+        "supporting_memory_ids": [
+          "glm_online_memory_resonance_episode54",
+          "glm_online_memory_resonance_episode46",
+          "glm_online_memory_resonance_episode27",
+          "glm_online_memory_resonance_episode57",
+          "glm_online_memory_resonance_episode28",
+          "glm_online_memory_resonance_episode70",
+          "glm_online_memory_resonance_episode22",
+          "glm_online_memory_resonance_episode51",
+          "glm_online_memory_resonance_episode69",
+          "glm_online_memory_resonance_episode74"
+        ]
+      },
+      "memory_reason": "Dominant axis sign agreement of 0.75 across 4 probes indicates a stable directional drift despite moderate variance (relative_bias_std=1.11). Memory strongly favors BOUNDED_PLANAR_COMPENSATION with accepted_probability ~0.70 and mean_progress 0.12 versus INDEPENDENT_STOCHASTIC_RETRY at ~0.48 and 0.03. Two recent contradictions exist but are outweighed by 7 supporting episodes. Sufficient budget (500) remains.",
+      "memory_skill": "BOUNDED_PLANAR_COMPENSATION",
+      "memory_snapshot": {
+        "candidate_actions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "global": {
+              "accepted_probability": 0.6858525797755181,
+              "contradiction_count": 1,
+              "coverage_score": 0.7034453943215107,
+              "history_count": 38,
+              "mean_progress": 0.12122291097864785,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode76"
+              ],
+              "representative_verified_episode_ids": [
+                54,
+                46,
+                27,
+                57,
+                28,
+                70,
+                22
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode76",
+                "glm_online_memory_resonance_episode54",
+                "glm_online_memory_resonance_episode46",
+                "bootstrap_episode008_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode27",
+                "glm_online_memory_resonance_episode57",
+                "glm_online_memory_resonance_episode28",
+                "bootstrap_episode002_bounded_planar_compensation",
+                "glm_online_memory_resonance_episode70",
+                "glm_online_memory_resonance_episode22"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 7,
+              "unresolved_count": 2
+            },
+            "global_recent_acceptance_delta": 0.017156424349162536,
+            "recent": {
+              "accepted_probability": 0.7030090041246806,
+              "contradiction_count": 2,
+              "coverage_score": 0.7034453943215107,
+              "history_count": 38,
+              "mean_progress": 0.10273484028169697,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode53",
+                "glm_online_memory_resonance_episode76"
+              ],
+              "representative_verified_episode_ids": [
+                46,
+                51,
+                54,
+                57,
+                69,
+                70,
+                74
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode46",
+                "glm_online_memory_resonance_episode51",
+                "glm_online_memory_resonance_episode53",
+                "glm_online_memory_resonance_episode54",
+                "glm_online_memory_resonance_episode57",
+                "glm_online_memory_resonance_episode61",
+                "glm_online_memory_resonance_episode69",
+                "glm_online_memory_resonance_episode70",
+                "glm_online_memory_resonance_episode74",
+                "glm_online_memory_resonance_episode76"
+              ],
+              "skill": "BOUNDED_PLANAR_COMPENSATION",
+              "support_count": 7,
+              "unresolved_count": 1
+            }
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "global": {
+              "accepted_probability": 0.49205355002305284,
+              "contradiction_count": 4,
+              "coverage_score": 0.674427936534071,
+              "history_count": 40,
+              "mean_progress": 0.029449409018158505,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode58",
+                "glm_online_memory_resonance_episode52",
+                "glm_online_memory_resonance_episode67",
+                "bootstrap_episode011_independent_stochastic_retry"
+              ],
+              "representative_verified_episode_ids": [
+                50,
+                60,
+                59,
+                48,
+                44
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode58",
+                "glm_online_memory_resonance_episode50",
+                "glm_online_memory_resonance_episode52",
+                "glm_online_memory_resonance_episode60",
+                "glm_online_memory_resonance_episode67",
+                "bootstrap_episode011_independent_stochastic_retry",
+                "glm_online_memory_resonance_episode59",
+                "glm_online_memory_resonance_episode48",
+                "glm_online_memory_resonance_episode44",
+                "glm_online_memory_resonance_episode75"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 1
+            },
+            "global_recent_acceptance_delta": -0.012263839892109718,
+            "recent": {
+              "accepted_probability": 0.4797897101309431,
+              "contradiction_count": 1,
+              "coverage_score": 0.6229023629722155,
+              "history_count": 40,
+              "mean_progress": 0.07946484238991627,
+              "recent_contradiction_ids": [
+                "glm_online_memory_resonance_episode67"
+              ],
+              "representative_verified_episode_ids": [
+                66,
+                71,
+                72,
+                73,
+                78
+              ],
+              "retrieved_record_ids": [
+                "glm_online_memory_resonance_episode65",
+                "glm_online_memory_resonance_episode66",
+                "glm_online_memory_resonance_episode67",
+                "glm_online_memory_resonance_episode68",
+                "glm_online_memory_resonance_episode71",
+                "glm_online_memory_resonance_episode72",
+                "glm_online_memory_resonance_episode73",
+                "glm_online_memory_resonance_episode75",
+                "glm_online_memory_resonance_episode77",
+                "glm_online_memory_resonance_episode78"
+              ],
+              "skill": "INDEPENDENT_STOCHASTIC_RETRY",
+              "support_count": 5,
+              "unresolved_count": 4
+            }
+          }
+        },
+        "memory_cutoff_episode_id": 79
+      },
+      "memory_status": "REJECTED",
+      "probe_signature": {
+        "estimated_bias_std_norm": 0.25015498319866997,
+        "estimated_drift_norm": 0.0007547937313099958,
+        "estimated_drift_x": -0.0006007500246747952,
+        "estimated_drift_y": -0.0004569605942289761,
+        "final_object_goal_distance": 0.19816787849534334,
+        "phase_inconsistency": 0.0,
+        "progress_to_goal": -0.0299215923947862,
+        "repeat_response_consistency": 0.4742465855809291
+      },
+      "regime_evaluator_only": "D_noise_dominant_mixed",
+      "seed": 4443,
+      "segment_evaluator_only": "mixed",
+      "stateless_prediction": {
+        "action_predictions": {
+          "BOUNDED_PLANAR_COMPENSATION": {
+            "accept_probability": 0.15,
+            "confidence": 0.7,
+            "predicted_status": "REJECTED"
+          },
+          "INDEPENDENT_STOCHASTIC_RETRY": {
+            "accept_probability": 0.7,
+            "confidence": 0.65,
+            "predicted_status": "ACCEPTED"
+          }
+        },
+        "contradicting_memory_ids": [],
+        "memory_applicable": false,
+        "memory_conflict_detected": false,
+        "memory_used": false,
+        "selected_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+        "supporting_memory_ids": []
+      },
+      "stateless_skill": "INDEPENDENT_STOCHASTIC_RETRY",
+      "stateless_status": "ACCEPTED"
+    }
+  ],
+  "audit_scope": "offline_existing_artifacts_only_no_rollout_no_api",
+  "schema_version": 1,
+  "source_run_id": "probemem_online_gate_c_20260803T095434Z_f346d23912a9",
+  "summary": {
+    "all_change_directions": [
+      "INDEPENDENT_STOCHASTIC_RETRY->BOUNDED_PLANAR_COMPENSATION"
+    ],
+    "by_segment_evaluator_only": {
+      "bias_dominant": {
+        "HELPFUL": 4,
+        "TIE": 2
+      },
+      "mixed": {
+        "HARMFUL": 2
+      },
+      "noise_dominant": {
+        "HARMFUL": 1,
+        "TIE": 3
+      }
+    },
+    "cases": 12,
+    "chronology_violations": 0,
+    "claim_boundary": "Descriptive causal audit of decisions and matched outcomes. Small post-hoc groups do not identify a deployable ambiguity threshold or establish a memory benefit.",
+    "effects": {
+      "HARMFUL": 3,
+      "HELPFUL": 4,
+      "TIE": 5
+    },
+    "feature_medians_by_effect": {
+      "estimated_bias_std_norm": {
+        "harmful_median": 0.26745862869273407,
+        "helpful_median": 0.048499605655803746,
+        "tie_median": 0.3836111636006252
+      },
+      "estimated_drift_norm": {
+        "harmful_median": 0.0007547937313099958,
+        "helpful_median": 0.000501026235764798,
+        "tie_median": 0.0005950818171757611
+      },
+      "estimated_drift_x": {
+        "harmful_median": -0.0005484428079409766,
+        "helpful_median": 0.0003899766471043706,
+        "tie_median": 0.000264284583218445
+      },
+      "estimated_drift_y": {
+        "harmful_median": -0.00048332795050395547,
+        "helpful_median": -0.0003145336046588539,
+        "tie_median": -0.00031330374729449106
+      },
+      "final_object_goal_distance": {
+        "harmful_median": 0.17471467655381767,
+        "helpful_median": 0.19785581573195968,
+        "tie_median": 0.2152291524902591
+      },
+      "phase_inconsistency": {
+        "harmful_median": 0.0,
+        "helpful_median": 0.0,
+        "tie_median": 0.0
+      },
+      "progress_to_goal": {
+        "harmful_median": 0.03473769826800446,
+        "helpful_median": 0.007339431092807727,
+        "tie_median": 0.03842328008827184
+      },
+      "repeat_response_consistency": {
+        "harmful_median": 0.4742465855809291,
+        "helpful_median": 0.7468195384026788,
+        "tie_median": 0.4145402666671235
+      }
+    },
+    "memory_prediction_margin_by_effect": {
+      "harmful_median": 0.37,
+      "helpful_median": 0.525,
+      "tie_median": 0.37
+    }
+  }
+}

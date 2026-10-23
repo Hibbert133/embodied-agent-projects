@@ -1,0 +1,103 @@
+{
+  "experiment_run_id": "forward_prediction_20261014T064233Z_bb812df15401",
+  "manifest_id": "d657fa9c3d0d6582f02a0dc7f346fdf7dbd013da977e93355bbacc7477a6868f",
+  "source_git_commit": "bb812df15401fdaa702659294be1e457dd309758",
+  "branch": "codex/forward-prediction-baselines-v1",
+  "created_at_utc": "2026-10-14T07:02:56.237906+00:00",
+  "unit_tests": {
+    "freeze": {
+      "count": 677,
+      "seconds": 111.406,
+      "passed": true,
+      "log": "freeze_unit_tests.log",
+      "sha256": "457190272422032955aede8c46d7bb1b4b5b8bdc153bc552d8aa7dc8bad5b672"
+    },
+    "post_results": {
+      "count": 677,
+      "seconds": 112.289,
+      "passed": true,
+      "log": "post_results_unit_tests.log",
+      "sha256": "6f89e102cfc1db3a17e65d5779308240083357fc8379292d6189ee7c94c8839b"
+    }
+  },
+  "compileall": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m compileall -q src scripts tests",
+    "exit_code": 0
+  },
+  "pip_check": {
+    "command": ".venv/Scripts/python.exe -X utf8 -m pip check",
+    "exit_code": 0,
+    "result": "No broken requirements found."
+  },
+  "staged_secret_scan": {
+    "command": ".venv/Scripts/python.exe -X utf8 scripts/check_tracked_secrets.py --staged",
+    "exit_code": 0
+  },
+  "working_diff_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  },
+  "staged_diff_check": {
+    "command": "git diff --cached --check",
+    "exit_code": 0
+  },
+  "frozen_git_inputs_verified": 580,
+  "working_core_inputs_unchanged": true,
+  "raw_artifacts_verified": {
+    "calibration.json": "f62819791d95a31ae95320a594206d6050ea9e68b7c5f0fc4f374fde900e69df",
+    "CALIBRATION.jsonl.gz": "ca3af58383284c81e5ff2b75e602a8a3c255318227e646657ea0a29c866d56d5",
+    "manifest.json": "0e959783ba08e7982f037e2abbd6a6502e80f6e86fcddb83dc74aa5c44aec788",
+    "models.json": "b3f2d7e69316dba65e722d74d49df25c7d651043e78bf4c0f6e1d37f1e599c80",
+    "predictions.jsonl": "76efc211afc9015ee06b74dbd67c11088476ed067878cfa24235ee586266d1b4",
+    "QUALIFICATION.jsonl.gz": "b95a00e88cc389ff64716a06a43ea73bd35bcac98e471d1942f01ca2ad963a05",
+    "status.json": "e8330859534ad78abe99b1508afbcf56800dce06b55694fcb2996b00dccfd2e4",
+    "summary.json": "8fbcb6740af82c9bd4cbbd93bc26a39c0d8d2a27be9338f8846e549217073db6",
+    "TRAIN.jsonl.gz": "db2c3186d7065bb66f3605cee66f9be5e03d623915b19efe9812dde2cfe3f6bc"
+  },
+  "audit_sha256": "403c394dbb6abfffe811ed6c3354e5b78557d5af4bcbf541571441e057a562c2",
+  "figure_versions_verified": [
+    "figure_v1",
+    "figure_v2"
+  ],
+  "figure_v1_source_snapshot": "../figure_v1/render_tool_source.py",
+  "figure_v2_source": "scripts/render_forward_prediction.py",
+  "visual_qa": "PASSED",
+  "plot_runtime": "bundled Codex Python with Matplotlib and Microsoft YaHei",
+  "collection_log_sha256": "4f69e56f018df481fee9690d603cf5a8dda438e441c4358f105e3ace51aebdb2",
+  "experiment_status": "COMPLETED_FEASIBILITY_FAILED",
+  "model_sha256": "b3f2d7e69316dba65e722d74d49df25c7d651043e78bf4c0f6e1d37f1e599c80",
+  "calibration_sha256": "f62819791d95a31ae95320a594206d6050ea9e68b7c5f0fc4f374fde900e69df",
+  "stage_costs": {
+    "TRAIN": {
+      "physical_steps": 6763,
+      "environment_resets": 96,
+      "successes": 96,
+      "probe_steps": 768
+    },
+    "CALIBRATION": {
+      "physical_steps": 7250,
+      "environment_resets": 96,
+      "successes": 95,
+      "probe_steps": 768
+    },
+    "QUALIFICATION": {
+      "physical_steps": 6997,
+      "environment_resets": 96,
+      "successes": 96,
+      "probe_steps": 768
+    }
+  },
+  "total_new_physical_steps": 21010,
+  "total_new_environment_resets": 288,
+  "old_offline_steps": 2304,
+  "old_offline_resets": 144,
+  "predictions_before_execution_checked": 21010,
+  "continuous_handoffs_checked": 144,
+  "physical_collection_rerun": false,
+  "additional_api_attempts": 0,
+  "frozen_model_or_threshold_retunes": 0,
+  "physical_response_qualified": false,
+  "probability_guarantee": false,
+  "control_gain_evaluated": false,
+  "scope": "Verified standard prediction baseline study and immutable nominal results, not algorithm novelty or publication readiness."
+}

@@ -1,0 +1,41 @@
+{
+  "integrity": "PASSED",
+  "tests": 20,
+  "output": "test_jump_after_end_and_budget_receipts_rejected (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_modified_command_and_stale_memory_rejected (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_move_resume_preserves_memory_and_uses_new_actual_state (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_private_future_or_oracle_controller_memory_fields_rejected (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_rate_change_carries_or_explicitly_resets_and_changes_send (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_task_plan_matches_original_PI_exactly_for_all_tasks (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_task_validation_steps_commit_integral_instead_of_freezing_it (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_zero_length_resume_and_token_single_use (tests.test_memory_terminal_reference_v1.MemoryTests) ... ok\ntest_DR_values_outside_loss_range_are_not_clipped (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_all_40_stagewise_correct_mean_identities (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_behavior_marginal_is_not_the_poststate_adoption_policy_value (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_both_wrong_bias_is_retained_not_silently_passed (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_complete_finite_model_has_44_atoms_and_unit_probability (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_failure_penalty_and_actual_cost_are_distinct (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_invalid_nonfinite_and_incomplete_probabilities_rejected (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_predictions_do_not_take_the_future_tail_result (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_private_future_query_fields_rejected (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_terminal_option_has_no_fake_tail_action_or_probability (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_unsupported_target_and_zero_chosen_probability_rejected (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\ntest_wrong_parent_and_future_clock_cannot_form_a_branch (tests.test_memory_terminal_reference_v1.TerminalValueTests) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 0.335s\n\nOK\n",
+  "interaction_guard": {
+    "integrity": "PASSED",
+    "blocked_operations": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "fits": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "numerical_DR_arithmetic_calls": {
+    "attempted": 1851,
+    "completed": 1849,
+    "rejected": 2
+  },
+  "source_sha256": {
+    "src/probe/task_memory_option_v1.py": "c60ce1f746bd525e1a61795a8e2204c7e84b3496b832fb647a81ac637d2ffe20",
+    "src/analysis/two_stage_terminal_dr_v1.py": "e998953a596a3ad98e9fd40018419769208b5078b71f31bb83da35951585b184",
+    "src/analysis/memory_terminal_world_v1.py": "e291bc2317e5d486b184d8174e20725c1ad04de3cf73bfe309fb0e9f08f88024",
+    "src/analysis/memory_terminal_qualification_v1.py": "b03620f1ba197ef1fd07593fda1cbe9812e541a6ae60e5d4ab0671305cd43de1",
+    "src/analysis/memory_terminal_audit_v1.py": "e651a14d0071ed8ffaaf37471e8f1b95b29a00c4b06096904d71e5bce018f6df",
+    "scripts/run_memory_terminal_reference_v1.py": "ae99488b8eeea66c908b37edb99949c096bf9a3c8927c80ea434d0f99110176a",
+    "scripts/audit_memory_terminal_reference_v1.py": "41ebbdb3378dce440e1a520db3499435fab1cdefc5e5347e44e4af8584c1e791",
+    "scripts/report_memory_terminal_reference_v1.py": "a172bf9867f18bbaea77d90241d97bcd045c35e234ae787d0ce271a95f4ecd6a",
+    "tests/test_memory_terminal_reference_v1.py": "0103694607f61a5df0a8ca1664a05f1b12335c18ba6e1051bd72a988aebf0b07",
+    "configs/movement_task/memory_terminal_reference_v1.json": "7289e90ad528eb82827fac6987f345a4cb14d1e1546dbaea3c75493ed21faec7",
+    "docs/protocols/memory_terminal_reference_v1_zh.md": "50713df14e8955814d9827464f98098fa43a04823dad83bb073ef0aa9e28a245",
+    "docs/research/memory_terminal_reference_prior_art_v1_zh.md": "57a3670845fe9f72a449eba7b3050d1dbe97b34c106113c9562919153d994dc6"
+  },
+  "wall_ns": 698431700,
+  "known_fixture_development_tests_disclosed_separately": true
+}

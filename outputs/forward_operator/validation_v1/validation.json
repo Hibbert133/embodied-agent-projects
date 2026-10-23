@@ -1,0 +1,70 @@
+{
+  "experiment_run_id": "forward_operator_20261014T081128Z_37eee13f9943",
+  "manifest_id": "ecb45ac298f8ad6608fef95413a8e1d191791827e694207ba0527701d4b9ecc4",
+  "source_git_commit": "37eee13f9943e26e2d15a81b9d3e6dd86e73f015",
+  "validated_at_utc": "2026-10-14T08:57:43.263912+00:00",
+  "scope": "Frozen-source and immutable-result verification only; no collection, API calls, retuning or dynamics resimulation.",
+  "unit_tests": {
+    "unittest_freeze.log": {
+      "tests": 686,
+      "elapsed_seconds": 127.658,
+      "result": "PASSED"
+    },
+    "unittest_results.log": {
+      "tests": 686,
+      "elapsed_seconds": 117.847,
+      "result": "PASSED"
+    }
+  },
+  "checks": {
+    "compileall_src_scripts_tests": "PASSED",
+    "pip_check": "PASSED",
+    "staged_tracked_secret_scan": "PASSED",
+    "git_diff_check": "PASSED",
+    "git_diff_cached_check": "PASSED",
+    "frozen_git_and_current_input_hashes": {
+      "status": "PASSED",
+      "inputs": 591
+    },
+    "raw_result_hashes": {
+      "status": "PASSED",
+      "files": 16
+    },
+    "figure_output_hashes": {
+      "status": "PASSED",
+      "files": 5
+    }
+  },
+  "independent_audit": {
+    "integrity": "PASSED",
+    "sha256": "cef41058d1053bc4d59e0cfafab07a6bd5fc2eff06bb5fcaf673f2d6d3ff5b69",
+    "saved_choices_checked": 1891,
+    "visible_steps_checked": 235479,
+    "continuous_probe_handoffs": 960,
+    "scope": "Independent histories, visible fit inputs/losses, execution arithmetic, state/RNG and cost replay; registered optimizers/statistical summaries reused. No dynamics resimulation. Point utility is not physical confidence or algorithm novelty."
+  },
+  "costs": {
+    "physical_steps": 235479,
+    "environment_resets": 1152,
+    "forward_prior_steps": 21010,
+    "forward_prior_resets": 288,
+    "legacy_prior_steps": 2304,
+    "legacy_prior_resets": 144,
+    "api_calls": 0,
+    "memory_writes": 0
+  },
+  "postcollection_new_api_calls": 0,
+  "postcollection_new_environment_steps": 0,
+  "physical_response_qualified": false,
+  "probability_guarantee": false,
+  "algorithm_novelty_established": false,
+  "publication_goal_complete": false,
+  "artifact_sha256": {
+    "unittest_freeze.log": "5cda317cf1d2d784a70bbcd6416434530798d604a310a15a288a1de72e18662a",
+    "unittest_results.log": "466dac697f8f6c723da2c4d1963a8a9006b72c596a4a40dbb08020747eb3eb83",
+    "collector_stdout.log": "0ad0b634ec558b6e13d03545096befd90b21858fdfbe3f1fc89bf01e6fcfd64e"
+  },
+  "figure_metadata_sha256": "f147d094b53e1489f89ef422aecb6ef2126e800e2679dab08ea993991859ef33",
+  "render_source_sha256": "f40d729a0ff713dc70a904bcae9ab93d3e8ab7376e6af07b3d18692a061b89b2",
+  "report_sha256": "f9930f79827a0a034d579d49fe470576b27701e3a27f8b06be0e12a3e61ed126"
+}

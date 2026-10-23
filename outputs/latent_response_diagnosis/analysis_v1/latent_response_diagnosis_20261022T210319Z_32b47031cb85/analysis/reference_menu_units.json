@@ -1,0 +1,2402 @@
+[
+  {
+    "group": 0,
+    "task": "push-v3",
+    "seed": 67000,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 61,
+      "FIXED_PD_KEEP": 151,
+      "FIXED_PID_KEEP": 147,
+      "LOCAL_PD_KEEP": 92,
+      "LOCAL_PID_KEEP": 92,
+      "LOCAL_PID_REFERENCE_RESET": 96,
+      "LOCAL_PID_REFERENCE_CARRY": 89,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 107
+    },
+    "oracle_recorded_minimum_loss": 61,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 61,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 69,
+    "integral_external_whole_program_loss": 85,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 35,
+        "acquisition_keep_minus_raw": 31,
+        "reference_minus_keep": 4
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 28,
+        "acquisition_keep_minus_raw": 31,
+        "reference_minus_keep": -3
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 0,
+    "task": "push-v3",
+    "seed": 67000,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 110,
+      "FIXED_PD_KEEP": 181,
+      "FIXED_PID_KEEP": 185,
+      "LOCAL_PD_KEEP": 166,
+      "LOCAL_PID_KEEP": 146,
+      "LOCAL_PID_REFERENCE_RESET": 107,
+      "LOCAL_PID_REFERENCE_CARRY": 134,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 98
+    },
+    "oracle_recorded_minimum_loss": 98,
+    "all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 12,
+    "same_acquisition_submenu_minimum_loss": 107,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET"
+    ],
+    "same_acquisition_optimistic_raw_saving": 3,
+    "direct_C8_external_whole_program_loss": 500,
+    "integral_external_whole_program_loss": 120,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -3,
+        "acquisition_keep_minus_raw": 36,
+        "reference_minus_keep": -39
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 24,
+        "acquisition_keep_minus_raw": 36,
+        "reference_minus_keep": -12
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 0,
+    "task": "reach-v3",
+    "seed": 67001,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 48,
+      "FIXED_PD_KEEP": 112,
+      "FIXED_PID_KEEP": 119,
+      "LOCAL_PD_KEEP": 71,
+      "LOCAL_PID_KEEP": 72,
+      "LOCAL_PID_REFERENCE_RESET": 74,
+      "LOCAL_PID_REFERENCE_CARRY": 73,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 67
+    },
+    "oracle_recorded_minimum_loss": 48,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 48,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 71,
+    "integral_external_whole_program_loss": 107,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 26,
+        "acquisition_keep_minus_raw": 24,
+        "reference_minus_keep": 2
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 25,
+        "acquisition_keep_minus_raw": 24,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 0,
+    "task": "reach-v3",
+    "seed": 67001,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 42,
+      "FIXED_PD_KEEP": 117,
+      "FIXED_PID_KEEP": 119,
+      "LOCAL_PD_KEEP": 104,
+      "LOCAL_PID_KEEP": 82,
+      "LOCAL_PID_REFERENCE_RESET": 88,
+      "LOCAL_PID_REFERENCE_CARRY": 90,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 81
+    },
+    "oracle_recorded_minimum_loss": 42,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 42,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 62,
+    "integral_external_whole_program_loss": 124,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 46,
+        "acquisition_keep_minus_raw": 40,
+        "reference_minus_keep": 6
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 48,
+        "acquisition_keep_minus_raw": 40,
+        "reference_minus_keep": 8
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 0,
+    "task": "door-open-v3",
+    "seed": 67002,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 114,
+      "FIXED_PD_KEEP": 159,
+      "FIXED_PID_KEEP": 165,
+      "LOCAL_PD_KEEP": 145,
+      "LOCAL_PID_KEEP": 166,
+      "LOCAL_PID_REFERENCE_RESET": 173,
+      "LOCAL_PID_REFERENCE_CARRY": 166,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 163
+    },
+    "oracle_recorded_minimum_loss": 114,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 114,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 106,
+    "integral_external_whole_program_loss": 500,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 59,
+        "acquisition_keep_minus_raw": 52,
+        "reference_minus_keep": 7
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 52,
+        "acquisition_keep_minus_raw": 52,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 0,
+    "task": "door-open-v3",
+    "seed": 67002,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 128,
+      "FIXED_PD_KEEP": 152,
+      "FIXED_PID_KEEP": 156,
+      "LOCAL_PD_KEEP": 151,
+      "LOCAL_PID_KEEP": 172,
+      "LOCAL_PID_REFERENCE_RESET": 190,
+      "LOCAL_PID_REFERENCE_CARRY": 189,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 184
+    },
+    "oracle_recorded_minimum_loss": 128,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 128,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 137,
+    "integral_external_whole_program_loss": 126,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 62,
+        "acquisition_keep_minus_raw": 44,
+        "reference_minus_keep": 18
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 61,
+        "acquisition_keep_minus_raw": 44,
+        "reference_minus_keep": 17
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 1,
+    "task": "push-v3",
+    "seed": 67003,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 67,
+      "FIXED_PD_KEEP": 193,
+      "FIXED_PID_KEEP": 190,
+      "LOCAL_PD_KEEP": 142,
+      "LOCAL_PID_KEEP": 140,
+      "LOCAL_PID_REFERENCE_RESET": 141,
+      "LOCAL_PID_REFERENCE_CARRY": 139,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 132
+    },
+    "oracle_recorded_minimum_loss": 67,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 67,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 74,
+    "integral_external_whole_program_loss": 116,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 74,
+        "acquisition_keep_minus_raw": 73,
+        "reference_minus_keep": 1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 72,
+        "acquisition_keep_minus_raw": 73,
+        "reference_minus_keep": -1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 1,
+    "task": "push-v3",
+    "seed": 67003,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 500,
+      "FIXED_PD_KEEP": 199,
+      "FIXED_PID_KEEP": 201,
+      "LOCAL_PD_KEEP": 183,
+      "LOCAL_PID_KEEP": 163,
+      "LOCAL_PID_REFERENCE_RESET": 145,
+      "LOCAL_PID_REFERENCE_CARRY": 150,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 132
+    },
+    "oracle_recorded_minimum_loss": 132,
+    "all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 368,
+    "same_acquisition_submenu_minimum_loss": 145,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET"
+    ],
+    "same_acquisition_optimistic_raw_saving": 355,
+    "direct_C8_external_whole_program_loss": 94,
+    "integral_external_whole_program_loss": 135,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -355,
+        "acquisition_keep_minus_raw": -337,
+        "reference_minus_keep": -18
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": -350,
+        "acquisition_keep_minus_raw": -337,
+        "reference_minus_keep": -13
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 1,
+    "task": "reach-v3",
+    "seed": 67004,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 140,
+      "FIXED_PD_KEEP": 234,
+      "FIXED_PID_KEEP": 233,
+      "LOCAL_PD_KEEP": 152,
+      "LOCAL_PID_KEEP": 152,
+      "LOCAL_PID_REFERENCE_RESET": 76,
+      "LOCAL_PID_REFERENCE_CARRY": 152,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 67
+    },
+    "oracle_recorded_minimum_loss": 67,
+    "all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 73,
+    "same_acquisition_submenu_minimum_loss": 76,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET"
+    ],
+    "same_acquisition_optimistic_raw_saving": 64,
+    "direct_C8_external_whole_program_loss": 65,
+    "integral_external_whole_program_loss": 69,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -64,
+        "acquisition_keep_minus_raw": 12,
+        "reference_minus_keep": -76
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 12,
+        "acquisition_keep_minus_raw": 12,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 1,
+    "task": "reach-v3",
+    "seed": 67004,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 155,
+      "FIXED_PD_KEEP": 124,
+      "FIXED_PID_KEEP": 124,
+      "LOCAL_PD_KEEP": 164,
+      "LOCAL_PID_KEEP": 164,
+      "LOCAL_PID_REFERENCE_RESET": 66,
+      "LOCAL_PID_REFERENCE_CARRY": 164,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 55
+    },
+    "oracle_recorded_minimum_loss": 55,
+    "all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 100,
+    "same_acquisition_submenu_minimum_loss": 66,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET"
+    ],
+    "same_acquisition_optimistic_raw_saving": 89,
+    "direct_C8_external_whole_program_loss": 500,
+    "integral_external_whole_program_loss": 142,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -89,
+        "acquisition_keep_minus_raw": 9,
+        "reference_minus_keep": -98
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 9,
+        "acquisition_keep_minus_raw": 9,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 1,
+    "task": "door-open-v3",
+    "seed": 67005,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 88,
+      "FIXED_PD_KEEP": 500,
+      "FIXED_PID_KEEP": 240,
+      "LOCAL_PD_KEEP": 174,
+      "LOCAL_PID_KEEP": 137,
+      "LOCAL_PID_REFERENCE_RESET": 142,
+      "LOCAL_PID_REFERENCE_CARRY": 138,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 141
+    },
+    "oracle_recorded_minimum_loss": 88,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 88,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 99,
+    "integral_external_whole_program_loss": 185,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 54,
+        "acquisition_keep_minus_raw": 49,
+        "reference_minus_keep": 5
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 50,
+        "acquisition_keep_minus_raw": 49,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 1,
+    "task": "door-open-v3",
+    "seed": 67005,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 82,
+      "FIXED_PD_KEEP": 117,
+      "FIXED_PID_KEEP": 116,
+      "LOCAL_PD_KEEP": 155,
+      "LOCAL_PID_KEEP": 147,
+      "LOCAL_PID_REFERENCE_RESET": 154,
+      "LOCAL_PID_REFERENCE_CARRY": 151,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 149
+    },
+    "oracle_recorded_minimum_loss": 82,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 82,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 93,
+    "integral_external_whole_program_loss": 214,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 72,
+        "acquisition_keep_minus_raw": 65,
+        "reference_minus_keep": 7
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 69,
+        "acquisition_keep_minus_raw": 65,
+        "reference_minus_keep": 4
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 2,
+    "task": "push-v3",
+    "seed": 67006,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 74,
+      "FIXED_PD_KEEP": 189,
+      "FIXED_PID_KEEP": 191,
+      "LOCAL_PD_KEEP": 166,
+      "LOCAL_PID_KEEP": 174,
+      "LOCAL_PID_REFERENCE_RESET": 174,
+      "LOCAL_PID_REFERENCE_CARRY": 174,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 174
+    },
+    "oracle_recorded_minimum_loss": 74,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 74,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 86,
+    "integral_external_whole_program_loss": 221,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 100,
+        "acquisition_keep_minus_raw": 100,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 100,
+        "acquisition_keep_minus_raw": 100,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 2,
+    "task": "push-v3",
+    "seed": 67006,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 74,
+      "FIXED_PD_KEEP": 78,
+      "FIXED_PID_KEEP": 78,
+      "LOCAL_PD_KEEP": 78,
+      "LOCAL_PID_KEEP": 78,
+      "LOCAL_PID_REFERENCE_RESET": 78,
+      "LOCAL_PID_REFERENCE_CARRY": 78,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 78
+    },
+    "oracle_recorded_minimum_loss": 74,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 74,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 86,
+    "integral_external_whole_program_loss": 500,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 4,
+        "acquisition_keep_minus_raw": 4,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 4,
+        "acquisition_keep_minus_raw": 4,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 2,
+    "task": "reach-v3",
+    "seed": 67007,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 34,
+      "FIXED_PD_KEEP": 34,
+      "FIXED_PID_KEEP": 34,
+      "LOCAL_PD_KEEP": 34,
+      "LOCAL_PID_KEEP": 34,
+      "LOCAL_PID_REFERENCE_RESET": 34,
+      "LOCAL_PID_REFERENCE_CARRY": 34,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 34
+    },
+    "oracle_recorded_minimum_loss": 34,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 34,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 51,
+    "integral_external_whole_program_loss": 51,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 2,
+    "task": "reach-v3",
+    "seed": 67007,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 34,
+      "FIXED_PD_KEEP": 34,
+      "FIXED_PID_KEEP": 34,
+      "LOCAL_PD_KEEP": 34,
+      "LOCAL_PID_KEEP": 34,
+      "LOCAL_PID_REFERENCE_RESET": 34,
+      "LOCAL_PID_REFERENCE_CARRY": 34,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 34
+    },
+    "oracle_recorded_minimum_loss": 34,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 34,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 51,
+    "integral_external_whole_program_loss": 51,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 2,
+    "task": "door-open-v3",
+    "seed": 67008,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 79,
+      "FIXED_PD_KEEP": 262,
+      "FIXED_PID_KEEP": 181,
+      "LOCAL_PD_KEEP": 177,
+      "LOCAL_PID_KEEP": 159,
+      "LOCAL_PID_REFERENCE_RESET": 147,
+      "LOCAL_PID_REFERENCE_CARRY": 153,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 149
+    },
+    "oracle_recorded_minimum_loss": 79,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 79,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 87,
+    "integral_external_whole_program_loss": 194,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 68,
+        "acquisition_keep_minus_raw": 80,
+        "reference_minus_keep": -12
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 74,
+        "acquisition_keep_minus_raw": 80,
+        "reference_minus_keep": -6
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 2,
+    "task": "door-open-v3",
+    "seed": 67008,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 79,
+      "FIXED_PD_KEEP": 248,
+      "FIXED_PID_KEEP": 240,
+      "LOCAL_PD_KEEP": 149,
+      "LOCAL_PID_KEEP": 151,
+      "LOCAL_PID_REFERENCE_RESET": 132,
+      "LOCAL_PID_REFERENCE_CARRY": 141,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 122
+    },
+    "oracle_recorded_minimum_loss": 79,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 79,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 87,
+    "integral_external_whole_program_loss": 183,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 53,
+        "acquisition_keep_minus_raw": 72,
+        "reference_minus_keep": -19
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 62,
+        "acquisition_keep_minus_raw": 72,
+        "reference_minus_keep": -10
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 3,
+    "task": "push-v3",
+    "seed": 67009,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 89,
+      "FIXED_PD_KEEP": 166,
+      "FIXED_PID_KEEP": 156,
+      "LOCAL_PD_KEEP": 126,
+      "LOCAL_PID_KEEP": 121,
+      "LOCAL_PID_REFERENCE_RESET": 109,
+      "LOCAL_PID_REFERENCE_CARRY": 110,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 98
+    },
+    "oracle_recorded_minimum_loss": 89,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 89,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 71,
+    "integral_external_whole_program_loss": 91,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 20,
+        "acquisition_keep_minus_raw": 32,
+        "reference_minus_keep": -12
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 21,
+        "acquisition_keep_minus_raw": 32,
+        "reference_minus_keep": -11
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 3,
+    "task": "push-v3",
+    "seed": 67009,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 59,
+      "FIXED_PD_KEEP": 142,
+      "FIXED_PID_KEEP": 145,
+      "LOCAL_PD_KEEP": 100,
+      "LOCAL_PID_KEEP": 100,
+      "LOCAL_PID_REFERENCE_RESET": 101,
+      "LOCAL_PID_REFERENCE_CARRY": 101,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 93
+    },
+    "oracle_recorded_minimum_loss": 59,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 59,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 500,
+    "integral_external_whole_program_loss": 500,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 42,
+        "acquisition_keep_minus_raw": 41,
+        "reference_minus_keep": 1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 42,
+        "acquisition_keep_minus_raw": 41,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 3,
+    "task": "reach-v3",
+    "seed": 67010,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 27,
+      "FIXED_PD_KEEP": 106,
+      "FIXED_PID_KEEP": 111,
+      "LOCAL_PD_KEEP": 77,
+      "LOCAL_PID_KEEP": 77,
+      "LOCAL_PID_REFERENCE_RESET": 81,
+      "LOCAL_PID_REFERENCE_CARRY": 77,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 72
+    },
+    "oracle_recorded_minimum_loss": 27,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 27,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 43,
+    "integral_external_whole_program_loss": 77,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 54,
+        "acquisition_keep_minus_raw": 50,
+        "reference_minus_keep": 4
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 50,
+        "acquisition_keep_minus_raw": 50,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 3,
+    "task": "reach-v3",
+    "seed": 67010,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 24,
+      "FIXED_PD_KEEP": 101,
+      "FIXED_PID_KEEP": 107,
+      "LOCAL_PD_KEEP": 74,
+      "LOCAL_PID_KEEP": 73,
+      "LOCAL_PID_REFERENCE_RESET": 76,
+      "LOCAL_PID_REFERENCE_CARRY": 74,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 69
+    },
+    "oracle_recorded_minimum_loss": 24,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 24,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 35,
+    "integral_external_whole_program_loss": 76,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 52,
+        "acquisition_keep_minus_raw": 49,
+        "reference_minus_keep": 3
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 50,
+        "acquisition_keep_minus_raw": 49,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 3,
+    "task": "door-open-v3",
+    "seed": 67011,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 91,
+      "FIXED_PD_KEEP": 169,
+      "FIXED_PID_KEEP": 178,
+      "LOCAL_PD_KEEP": 500,
+      "LOCAL_PID_KEEP": 166,
+      "LOCAL_PID_REFERENCE_RESET": 174,
+      "LOCAL_PID_REFERENCE_CARRY": 154,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 500
+    },
+    "oracle_recorded_minimum_loss": 91,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 91,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 95,
+    "integral_external_whole_program_loss": 110,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 83,
+        "acquisition_keep_minus_raw": 75,
+        "reference_minus_keep": 8
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 63,
+        "acquisition_keep_minus_raw": 75,
+        "reference_minus_keep": -12
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 3,
+    "task": "door-open-v3",
+    "seed": 67011,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 83,
+      "FIXED_PD_KEEP": 137,
+      "FIXED_PID_KEEP": 142,
+      "LOCAL_PD_KEEP": 500,
+      "LOCAL_PID_KEEP": 121,
+      "LOCAL_PID_REFERENCE_RESET": 121,
+      "LOCAL_PID_REFERENCE_CARRY": 121,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 135
+    },
+    "oracle_recorded_minimum_loss": 83,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 83,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 89,
+    "integral_external_whole_program_loss": 112,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 38,
+        "acquisition_keep_minus_raw": 38,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 38,
+        "acquisition_keep_minus_raw": 38,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 4,
+    "task": "push-v3",
+    "seed": 67012,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 253,
+      "FIXED_PD_KEEP": 208,
+      "FIXED_PID_KEEP": 197,
+      "LOCAL_PD_KEEP": 142,
+      "LOCAL_PID_KEEP": 142,
+      "LOCAL_PID_REFERENCE_RESET": 143,
+      "LOCAL_PID_REFERENCE_CARRY": 142,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 160
+    },
+    "oracle_recorded_minimum_loss": 142,
+    "all_tied_minimizers": [
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "optimistic_raw_saving": 111,
+    "same_acquisition_submenu_minimum_loss": 142,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 111,
+    "direct_C8_external_whole_program_loss": 82,
+    "integral_external_whole_program_loss": 116,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -110,
+        "acquisition_keep_minus_raw": -111,
+        "reference_minus_keep": 1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": -111,
+        "acquisition_keep_minus_raw": -111,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 4,
+    "task": "push-v3",
+    "seed": 67012,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 308,
+      "FIXED_PD_KEEP": 206,
+      "FIXED_PID_KEEP": 208,
+      "LOCAL_PD_KEEP": 176,
+      "LOCAL_PID_KEEP": 167,
+      "LOCAL_PID_REFERENCE_RESET": 154,
+      "LOCAL_PID_REFERENCE_CARRY": 165,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 228
+    },
+    "oracle_recorded_minimum_loss": 154,
+    "all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET"
+    ],
+    "optimistic_raw_saving": 154,
+    "same_acquisition_submenu_minimum_loss": 154,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET"
+    ],
+    "same_acquisition_optimistic_raw_saving": 154,
+    "direct_C8_external_whole_program_loss": 84,
+    "integral_external_whole_program_loss": 117,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -154,
+        "acquisition_keep_minus_raw": -141,
+        "reference_minus_keep": -13
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": -143,
+        "acquisition_keep_minus_raw": -141,
+        "reference_minus_keep": -2
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 4,
+    "task": "reach-v3",
+    "seed": 67013,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 130,
+      "FIXED_PD_KEEP": 130,
+      "FIXED_PID_KEEP": 132,
+      "LOCAL_PD_KEEP": 56,
+      "LOCAL_PID_KEEP": 56,
+      "LOCAL_PID_REFERENCE_RESET": 70,
+      "LOCAL_PID_REFERENCE_CARRY": 56,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 45
+    },
+    "oracle_recorded_minimum_loss": 45,
+    "all_tied_minimizers": [
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 85,
+    "same_acquisition_submenu_minimum_loss": 56,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 74,
+    "direct_C8_external_whole_program_loss": 59,
+    "integral_external_whole_program_loss": 71,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -60,
+        "acquisition_keep_minus_raw": -74,
+        "reference_minus_keep": 14
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": -74,
+        "acquisition_keep_minus_raw": -74,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 4,
+    "task": "reach-v3",
+    "seed": 67013,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 142,
+      "FIXED_PD_KEEP": 43,
+      "FIXED_PID_KEEP": 43,
+      "LOCAL_PD_KEEP": 43,
+      "LOCAL_PID_KEEP": 43,
+      "LOCAL_PID_REFERENCE_RESET": 43,
+      "LOCAL_PID_REFERENCE_CARRY": 43,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 43
+    },
+    "oracle_recorded_minimum_loss": 43,
+    "all_tied_minimizers": [
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 99,
+    "same_acquisition_submenu_minimum_loss": 43,
+    "same_acquisition_all_tied_minimizers": [
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 99,
+    "direct_C8_external_whole_program_loss": 54,
+    "integral_external_whole_program_loss": 108,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": -99,
+        "acquisition_keep_minus_raw": -99,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": -99,
+        "acquisition_keep_minus_raw": -99,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 4,
+    "task": "door-open-v3",
+    "seed": 67014,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 88,
+      "FIXED_PD_KEEP": 500,
+      "FIXED_PID_KEEP": 500,
+      "LOCAL_PD_KEEP": 172,
+      "LOCAL_PID_KEEP": 145,
+      "LOCAL_PID_REFERENCE_RESET": 146,
+      "LOCAL_PID_REFERENCE_CARRY": 144,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 140
+    },
+    "oracle_recorded_minimum_loss": 88,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 88,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 95,
+    "integral_external_whole_program_loss": 166,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 58,
+        "acquisition_keep_minus_raw": 57,
+        "reference_minus_keep": 1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 56,
+        "acquisition_keep_minus_raw": 57,
+        "reference_minus_keep": -1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 4,
+    "task": "door-open-v3",
+    "seed": 67014,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 80,
+      "FIXED_PD_KEEP": 500,
+      "FIXED_PID_KEEP": 500,
+      "LOCAL_PD_KEEP": 157,
+      "LOCAL_PID_KEEP": 123,
+      "LOCAL_PID_REFERENCE_RESET": 125,
+      "LOCAL_PID_REFERENCE_CARRY": 124,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 125
+    },
+    "oracle_recorded_minimum_loss": 80,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 80,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 88,
+    "integral_external_whole_program_loss": 209,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 45,
+        "acquisition_keep_minus_raw": 43,
+        "reference_minus_keep": 2
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 44,
+        "acquisition_keep_minus_raw": 43,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 5,
+    "task": "push-v3",
+    "seed": 67015,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 61,
+      "FIXED_PD_KEEP": 61,
+      "FIXED_PID_KEEP": 61,
+      "LOCAL_PD_KEEP": 61,
+      "LOCAL_PID_KEEP": 61,
+      "LOCAL_PID_REFERENCE_RESET": 61,
+      "LOCAL_PID_REFERENCE_CARRY": 61,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 61
+    },
+    "oracle_recorded_minimum_loss": 61,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 61,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 71,
+    "integral_external_whole_program_loss": 73,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 5,
+    "task": "push-v3",
+    "seed": 67015,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 61,
+      "FIXED_PD_KEEP": 61,
+      "FIXED_PID_KEEP": 61,
+      "LOCAL_PD_KEEP": 61,
+      "LOCAL_PID_KEEP": 61,
+      "LOCAL_PID_REFERENCE_RESET": 61,
+      "LOCAL_PID_REFERENCE_CARRY": 61,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 61
+    },
+    "oracle_recorded_minimum_loss": 61,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 61,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 71,
+    "integral_external_whole_program_loss": 72,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 5,
+    "task": "reach-v3",
+    "seed": 67016,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 42,
+      "FIXED_PD_KEEP": 42,
+      "FIXED_PID_KEEP": 42,
+      "LOCAL_PD_KEEP": 42,
+      "LOCAL_PID_KEEP": 42,
+      "LOCAL_PID_REFERENCE_RESET": 42,
+      "LOCAL_PID_REFERENCE_CARRY": 42,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 42
+    },
+    "oracle_recorded_minimum_loss": 42,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 42,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 62,
+    "integral_external_whole_program_loss": 62,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 5,
+    "task": "reach-v3",
+    "seed": 67016,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 42,
+      "FIXED_PD_KEEP": 42,
+      "FIXED_PID_KEEP": 42,
+      "LOCAL_PD_KEEP": 42,
+      "LOCAL_PID_KEEP": 42,
+      "LOCAL_PID_REFERENCE_RESET": 42,
+      "LOCAL_PID_REFERENCE_CARRY": 42,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 42
+    },
+    "oracle_recorded_minimum_loss": 42,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 42,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 62,
+    "integral_external_whole_program_loss": 62,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 5,
+    "task": "door-open-v3",
+    "seed": 67017,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 79,
+      "FIXED_PD_KEEP": 182,
+      "FIXED_PID_KEEP": 198,
+      "LOCAL_PD_KEEP": 126,
+      "LOCAL_PID_KEEP": 134,
+      "LOCAL_PID_REFERENCE_RESET": 128,
+      "LOCAL_PID_REFERENCE_CARRY": 130,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 118
+    },
+    "oracle_recorded_minimum_loss": 79,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 79,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 89,
+    "integral_external_whole_program_loss": 188,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 49,
+        "acquisition_keep_minus_raw": 55,
+        "reference_minus_keep": -6
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 51,
+        "acquisition_keep_minus_raw": 55,
+        "reference_minus_keep": -4
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 5,
+    "task": "door-open-v3",
+    "seed": 67017,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 80,
+      "FIXED_PD_KEEP": 221,
+      "FIXED_PID_KEEP": 226,
+      "LOCAL_PD_KEEP": 129,
+      "LOCAL_PID_KEEP": 154,
+      "LOCAL_PID_REFERENCE_RESET": 154,
+      "LOCAL_PID_REFERENCE_CARRY": 155,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 146
+    },
+    "oracle_recorded_minimum_loss": 80,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 80,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 87,
+    "integral_external_whole_program_loss": 189,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 74,
+        "acquisition_keep_minus_raw": 74,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 75,
+        "acquisition_keep_minus_raw": 74,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 6,
+    "task": "push-v3",
+    "seed": 67018,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 76,
+      "FIXED_PD_KEEP": 137,
+      "FIXED_PID_KEEP": 142,
+      "LOCAL_PD_KEEP": 111,
+      "LOCAL_PID_KEEP": 111,
+      "LOCAL_PID_REFERENCE_RESET": 116,
+      "LOCAL_PID_REFERENCE_CARRY": 111,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 102
+    },
+    "oracle_recorded_minimum_loss": 76,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 76,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 85,
+    "integral_external_whole_program_loss": 106,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 40,
+        "acquisition_keep_minus_raw": 35,
+        "reference_minus_keep": 5
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 35,
+        "acquisition_keep_minus_raw": 35,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 6,
+    "task": "push-v3",
+    "seed": 67018,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 80,
+      "FIXED_PD_KEEP": 172,
+      "FIXED_PID_KEEP": 149,
+      "LOCAL_PD_KEEP": 121,
+      "LOCAL_PID_KEEP": 121,
+      "LOCAL_PID_REFERENCE_RESET": 111,
+      "LOCAL_PID_REFERENCE_CARRY": 113,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 97
+    },
+    "oracle_recorded_minimum_loss": 80,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 80,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 87,
+    "integral_external_whole_program_loss": 105,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 31,
+        "acquisition_keep_minus_raw": 41,
+        "reference_minus_keep": -10
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 33,
+        "acquisition_keep_minus_raw": 41,
+        "reference_minus_keep": -8
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 6,
+    "task": "reach-v3",
+    "seed": 67019,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 34,
+      "FIXED_PD_KEEP": 114,
+      "FIXED_PID_KEEP": 116,
+      "LOCAL_PD_KEEP": 65,
+      "LOCAL_PID_KEEP": 65,
+      "LOCAL_PID_REFERENCE_RESET": 72,
+      "LOCAL_PID_REFERENCE_CARRY": 66,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 63
+    },
+    "oracle_recorded_minimum_loss": 34,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 34,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 52,
+    "integral_external_whole_program_loss": 85,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 38,
+        "acquisition_keep_minus_raw": 31,
+        "reference_minus_keep": 7
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 32,
+        "acquisition_keep_minus_raw": 31,
+        "reference_minus_keep": 1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 6,
+    "task": "reach-v3",
+    "seed": 67019,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 32,
+      "FIXED_PD_KEEP": 101,
+      "FIXED_PID_KEEP": 113,
+      "LOCAL_PD_KEEP": 63,
+      "LOCAL_PID_KEEP": 63,
+      "LOCAL_PID_REFERENCE_RESET": 71,
+      "LOCAL_PID_REFERENCE_CARRY": 65,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 63
+    },
+    "oracle_recorded_minimum_loss": 32,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 32,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 412,
+    "integral_external_whole_program_loss": 500,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 39,
+        "acquisition_keep_minus_raw": 31,
+        "reference_minus_keep": 8
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 33,
+        "acquisition_keep_minus_raw": 31,
+        "reference_minus_keep": 2
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 6,
+    "task": "door-open-v3",
+    "seed": 67020,
+    "context": "UNCHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 78,
+      "FIXED_PD_KEEP": 163,
+      "FIXED_PID_KEEP": 165,
+      "LOCAL_PD_KEEP": 165,
+      "LOCAL_PID_KEEP": 135,
+      "LOCAL_PID_REFERENCE_RESET": 137,
+      "LOCAL_PID_REFERENCE_CARRY": 137,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 202
+    },
+    "oracle_recorded_minimum_loss": 78,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 78,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 86,
+    "integral_external_whole_program_loss": 167,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 59,
+        "acquisition_keep_minus_raw": 57,
+        "reference_minus_keep": 2
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 59,
+        "acquisition_keep_minus_raw": 57,
+        "reference_minus_keep": 2
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 6,
+    "task": "door-open-v3",
+    "seed": 67020,
+    "context": "CHANGED",
+    "planned_boundary": 16,
+    "menu_losses": {
+      "RAW_CONTINUE": 72,
+      "FIXED_PD_KEEP": 140,
+      "FIXED_PID_KEEP": 160,
+      "LOCAL_PD_KEEP": 123,
+      "LOCAL_PID_KEEP": 171,
+      "LOCAL_PID_REFERENCE_RESET": 170,
+      "LOCAL_PID_REFERENCE_CARRY": 170,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 206
+    },
+    "oracle_recorded_minimum_loss": 72,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 72,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 81,
+    "integral_external_whole_program_loss": 128,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 98,
+        "acquisition_keep_minus_raw": 99,
+        "reference_minus_keep": -1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 98,
+        "acquisition_keep_minus_raw": 99,
+        "reference_minus_keep": -1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 7,
+    "task": "push-v3",
+    "seed": 67021,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 51,
+      "FIXED_PD_KEEP": 141,
+      "FIXED_PID_KEEP": 141,
+      "LOCAL_PD_KEEP": 150,
+      "LOCAL_PID_KEEP": 141,
+      "LOCAL_PID_REFERENCE_RESET": 139,
+      "LOCAL_PID_REFERENCE_CARRY": 138,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 130
+    },
+    "oracle_recorded_minimum_loss": 51,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 51,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 61,
+    "integral_external_whole_program_loss": 125,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 88,
+        "acquisition_keep_minus_raw": 90,
+        "reference_minus_keep": -2
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 87,
+        "acquisition_keep_minus_raw": 90,
+        "reference_minus_keep": -3
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 7,
+    "task": "push-v3",
+    "seed": 67021,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 50,
+      "FIXED_PD_KEEP": 148,
+      "FIXED_PID_KEEP": 142,
+      "LOCAL_PD_KEEP": 147,
+      "LOCAL_PID_KEEP": 139,
+      "LOCAL_PID_REFERENCE_RESET": 138,
+      "LOCAL_PID_REFERENCE_CARRY": 137,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 127
+    },
+    "oracle_recorded_minimum_loss": 50,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 50,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 58,
+    "integral_external_whole_program_loss": 123,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 88,
+        "acquisition_keep_minus_raw": 89,
+        "reference_minus_keep": -1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 87,
+        "acquisition_keep_minus_raw": 89,
+        "reference_minus_keep": -2
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 7,
+    "task": "reach-v3",
+    "seed": 67022,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 26,
+      "FIXED_PD_KEEP": 26,
+      "FIXED_PID_KEEP": 26,
+      "LOCAL_PD_KEEP": 26,
+      "LOCAL_PID_KEEP": 26,
+      "LOCAL_PID_REFERENCE_RESET": 26,
+      "LOCAL_PID_REFERENCE_CARRY": 26,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 26
+    },
+    "oracle_recorded_minimum_loss": 26,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 26,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 43,
+    "integral_external_whole_program_loss": 84,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 7,
+    "task": "reach-v3",
+    "seed": 67022,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 26,
+      "FIXED_PD_KEEP": 26,
+      "FIXED_PID_KEEP": 26,
+      "LOCAL_PD_KEEP": 26,
+      "LOCAL_PID_KEEP": 26,
+      "LOCAL_PID_REFERENCE_RESET": 26,
+      "LOCAL_PID_REFERENCE_CARRY": 26,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 26
+    },
+    "oracle_recorded_minimum_loss": 26,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 26,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 40,
+    "integral_external_whole_program_loss": 42,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 7,
+    "task": "door-open-v3",
+    "seed": 67023,
+    "context": "UNCHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 80,
+      "FIXED_PD_KEEP": 224,
+      "FIXED_PID_KEEP": 218,
+      "LOCAL_PD_KEEP": 146,
+      "LOCAL_PID_KEEP": 150,
+      "LOCAL_PID_REFERENCE_RESET": 150,
+      "LOCAL_PID_REFERENCE_CARRY": 150,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 142
+    },
+    "oracle_recorded_minimum_loss": 80,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 80,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 89,
+    "integral_external_whole_program_loss": 140,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 70,
+        "acquisition_keep_minus_raw": 70,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 70,
+        "acquisition_keep_minus_raw": 70,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 7,
+    "task": "door-open-v3",
+    "seed": 67023,
+    "context": "CHANGED",
+    "planned_boundary": 32,
+    "menu_losses": {
+      "RAW_CONTINUE": 102,
+      "FIXED_PD_KEEP": 213,
+      "FIXED_PID_KEEP": 228,
+      "LOCAL_PD_KEEP": 190,
+      "LOCAL_PID_KEEP": 193,
+      "LOCAL_PID_REFERENCE_RESET": 193,
+      "LOCAL_PID_REFERENCE_CARRY": 193,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 191
+    },
+    "oracle_recorded_minimum_loss": 102,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 102,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 113,
+    "integral_external_whole_program_loss": 156,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 91,
+        "acquisition_keep_minus_raw": 91,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 91,
+        "acquisition_keep_minus_raw": 91,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 8,
+    "task": "push-v3",
+    "seed": 67024,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 57,
+      "FIXED_PD_KEEP": 57,
+      "FIXED_PID_KEEP": 57,
+      "LOCAL_PD_KEEP": 57,
+      "LOCAL_PID_KEEP": 57,
+      "LOCAL_PID_REFERENCE_RESET": 57,
+      "LOCAL_PID_REFERENCE_CARRY": 57,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 57
+    },
+    "oracle_recorded_minimum_loss": 57,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 57,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 65,
+    "integral_external_whole_program_loss": 65,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 8,
+    "task": "push-v3",
+    "seed": 67024,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 57,
+      "FIXED_PD_KEEP": 57,
+      "FIXED_PID_KEEP": 57,
+      "LOCAL_PD_KEEP": 57,
+      "LOCAL_PID_KEEP": 57,
+      "LOCAL_PID_REFERENCE_RESET": 57,
+      "LOCAL_PID_REFERENCE_CARRY": 57,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 57
+    },
+    "oracle_recorded_minimum_loss": 57,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 57,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 65,
+    "integral_external_whole_program_loss": 65,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 8,
+    "task": "reach-v3",
+    "seed": 67025,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 33,
+      "FIXED_PD_KEEP": 33,
+      "FIXED_PID_KEEP": 33,
+      "LOCAL_PD_KEEP": 33,
+      "LOCAL_PID_KEEP": 33,
+      "LOCAL_PID_REFERENCE_RESET": 33,
+      "LOCAL_PID_REFERENCE_CARRY": 33,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 33
+    },
+    "oracle_recorded_minimum_loss": 33,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 33,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 48,
+    "integral_external_whole_program_loss": 48,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 8,
+    "task": "reach-v3",
+    "seed": 67025,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 33,
+      "FIXED_PD_KEEP": 33,
+      "FIXED_PID_KEEP": 33,
+      "LOCAL_PD_KEEP": 33,
+      "LOCAL_PID_KEEP": 33,
+      "LOCAL_PID_REFERENCE_RESET": 33,
+      "LOCAL_PID_REFERENCE_CARRY": 33,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 33
+    },
+    "oracle_recorded_minimum_loss": 33,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "FIXED_PD_KEEP",
+      "FIXED_PID_KEEP",
+      "LOCAL_PD_KEEP",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY",
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 33,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE",
+      "LOCAL_PID_KEEP",
+      "LOCAL_PID_REFERENCE_RESET",
+      "LOCAL_PID_REFERENCE_CARRY"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 48,
+    "integral_external_whole_program_loss": 48,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 0,
+        "acquisition_keep_minus_raw": 0,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 8,
+    "task": "door-open-v3",
+    "seed": 67026,
+    "context": "UNCHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 87,
+      "FIXED_PD_KEEP": 279,
+      "FIXED_PID_KEEP": 500,
+      "LOCAL_PD_KEEP": 191,
+      "LOCAL_PID_KEEP": 187,
+      "LOCAL_PID_REFERENCE_RESET": 186,
+      "LOCAL_PID_REFERENCE_CARRY": 186,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 181
+    },
+    "oracle_recorded_minimum_loss": 87,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 87,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 93,
+    "integral_external_whole_program_loss": 201,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 99,
+        "acquisition_keep_minus_raw": 100,
+        "reference_minus_keep": -1
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 99,
+        "acquisition_keep_minus_raw": 100,
+        "reference_minus_keep": -1
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  },
+  {
+    "group": 8,
+    "task": "door-open-v3",
+    "seed": 67026,
+    "context": "CHANGED",
+    "planned_boundary": 64,
+    "menu_losses": {
+      "RAW_CONTINUE": 85,
+      "FIXED_PD_KEEP": 500,
+      "FIXED_PID_KEEP": 218,
+      "LOCAL_PD_KEEP": 176,
+      "LOCAL_PID_KEEP": 194,
+      "LOCAL_PID_REFERENCE_RESET": 194,
+      "LOCAL_PID_REFERENCE_CARRY": 194,
+      "LOCAL_PID_REFERENCE_RESET_NO_PROBE": 180
+    },
+    "oracle_recorded_minimum_loss": 85,
+    "all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "optimistic_raw_saving": 0,
+    "same_acquisition_submenu_minimum_loss": 85,
+    "same_acquisition_all_tied_minimizers": [
+      "RAW_CONTINUE"
+    ],
+    "same_acquisition_optimistic_raw_saving": 0,
+    "direct_C8_external_whole_program_loss": 90,
+    "integral_external_whole_program_loss": 186,
+    "decompositions": {
+      "LOCAL_PID_REFERENCE_RESET": {
+        "whole_minus_raw": 109,
+        "acquisition_keep_minus_raw": 109,
+        "reference_minus_keep": 0
+      },
+      "LOCAL_PID_REFERENCE_CARRY": {
+        "whole_minus_raw": 109,
+        "acquisition_keep_minus_raw": 109,
+        "reference_minus_keep": 0
+      }
+    },
+    "counterfactual_policy_or_learnability_claim": false
+  }
+]

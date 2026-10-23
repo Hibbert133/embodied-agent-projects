@@ -1,0 +1,33 @@
+{
+  "status": "FROZEN_BEFORE_READ_ONLY_V2_REPLAY",
+  "utc": "2026-10-22T08:37:49.043349+00:00",
+  "additional_C4_C8_refits_max": 720,
+  "additional_F20_program_forwards_max": 531360,
+  "additional_kinematic_proxy_evals_max": 177120,
+  "additional_raw_coefficient_forecasts_max": 265680,
+  "new_environment_steps": 0,
+  "new_resets": 0,
+  "new_online_LLM_API_calls": 0,
+  "new_response_predictor_training": 0,
+  "original_failed_v1_costs": {
+    "status": "FAILED_V1_PRESERVED",
+    "compute_reconstructed_from_recorded_replay_prefix": {
+      "independent_c4_c8_refits": 340,
+      "independent_c4_c8_nfev": 340,
+      "rank_plans_visited_including_first_failure": 9232,
+      "raw_coefficient_forecasts": 33990,
+      "response_model_forward_evaluations": 67980,
+      "kinematic_proxy_evaluations": 24340
+    },
+    "completed_cases_before_error": 203,
+    "first_failed_case": "DEV/02/door-open-v3/UNCHANGED/KINEMATIC_RANK_W1.0",
+    "first_failed_step": 64,
+    "wall_ns": null,
+    "wall_missing_reason": "Original failed wrapper did not persist a monotonic elapsed-time receipt",
+    "new_environment_steps": 0,
+    "new_online_LLM_API_calls": 0
+  },
+  "effective_v2_wrapper_sha256": "650016144a4272e1380fb321bbf7c477ade88f5a6248d7ec0c7986226b7bdf10",
+  "regression_receipt_sha256": "3524cdfd484c05ed72364ef0f1f6c2da9b12b158f09c9a51a075816a7d84b275",
+  "scope": "Additional engineering audit-repair overhead; not hidden inside one successful replay budget or physical task loss"
+}

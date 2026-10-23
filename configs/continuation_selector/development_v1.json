@@ -1,0 +1,58 @@
+{
+  "protocol_id": "causal_continuation_selector_development_v1",
+  "seed_start": 12600,
+  "streams": 16,
+  "tasks": [
+    "push-v3",
+    "reach-v3",
+    "door-open-v3"
+  ],
+  "replicates": 2,
+  "reserved_seeds": [
+    12648,
+    12999
+  ],
+  "methods": [
+    "DIRECT_G8",
+    "KEEP_G8_AFTER16",
+    "UPDATE_G16",
+    "POINT16_CYCLE",
+    "PASSIVE_G16",
+    "POINT16_WIDE",
+    "NO_PROBE",
+    "MEAN_COST_RBF",
+    "MEAN_COST_NEAREST",
+    "TASK_MEAN",
+    "SINGLE_FUTURE_RBF",
+    "TASK_FULL_PORTFOLIO"
+  ],
+  "noise_std": 0.05,
+  "prefix_noise_namespace": 46003,
+  "future_noise_namespace": 46005,
+  "operator_generation_seeds": [
+    47001,
+    47002
+  ],
+  "total_steps": 500,
+  "maximum_controlled_steps": 576000,
+  "maximum_controlled_resets": 1152,
+  "maximum_do_simulation_frames": 33000000,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 20261015,
+  "forward_offline_steps": 21010,
+  "forward_offline_resets": 288,
+  "training_source_steps": 101069,
+  "training_source_resets": 672,
+  "training_source_manifest": "outputs/conditional_continuation/development_v1/conditional_continuation_20261015T094531Z_784d65befd08/manifest.json",
+  "training_source_manifest_sha256": "17b492ef82127ec5a35926966c8ce72560f2e4a20ba8124201e7cf453a6b2208",
+  "training_source_audit": "outputs/conditional_continuation/analysis_v1/audit.json",
+  "training_source_audit_sha256": "97d02d280cf378ca8479a3c4864bd27c56a4ce00f27a10cc0659cc087307e303",
+  "training_output": "outputs/continuation_selector/training_v1",
+  "forward_model_path": "outputs/forward_prediction/baselines_v1/forward_prediction_20261014T064233Z_bb812df15401/models.json",
+  "forward_model_sha256": "b3f2d7e69316dba65e722d74d49df25c7d651043e78bf4c0f6e1d37f1e599c80",
+  "forward_audit_path": "outputs/forward_prediction/analysis_v1/audit.json",
+  "nominal_profile_path": "outputs/action_response/development_v1/action_response_20261014T104928Z_1c3798544481/nominal_profile.json",
+  "output_root": "outputs/continuation_selector/development_v1",
+  "api_calls": 0,
+  "memory_writes": 0
+}
