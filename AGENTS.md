@@ -2016,3 +2016,32 @@ rehashed unchanged. See reports/information_release_prototype_v1_zh.md.
 Next implement the native host and an independently frozen learning/data/cost
 protocol; do not substitute more constructed examples for the required trained
 mechanism, genuine randomization and independent own-history task gains.
+
+## Authorized repository archival habit
+
+The user explicitly authorized appropriate periodic pushes on2026-10-23.
+Archive completed, checked phases without merging; this supersedes earlier
+session-level no-push preferences, not the integrity or secret-scan rules.
+The first verified remote snapshot is codex/archive-20261023-information-release-v2,
+commit8de95c9, sourced from completed2b91c1f. Original local history contains
+oversized blobs and remains intact; use separate compact snapshots with full
+SHA-256/size catalogs for omitted local data, no force-push or history deletion.
+Do not publish unfrozen learning code, imply that omitted records are remotely
+available, or call an archival operation a scientific result. Verify remote
+refs after each push; keep the original raw data, failures and restorations.
+
+## Closed information-release learning draft
+
+The implemented release_learning_v1 draft was rejected BEFORE collection:
+same-feature/weight/ridge M and D heads with D=F-M reparameterize standard DR
+complete-program risks M and F. Do not start its5940-run population, bypass
+CLOSED_BEFORE_COLLECTION, call factual-Y DIRECT_RISK a sufficient DR control,
+or present array checks as native/trained/robot task-benefit evidence. The
+source-bound25 new checks reuse1984 unchanged prior checks; no new physics,
+scientific training or online LLM. Preserve all draft code/budgets/negatives.
+See reports/release_learning_precollection_review_v1_zh.md and the closed
+draft protocol. This is a learning-structure rejection, not a negative robot
+experiment or a proof against all post-return release designs. A successor
+needs a falsifiable distinction over same-privilege standard DR, VoSI/task
+acquisition and applicability methods before a fresh independent protocol;
+changing ridge to a network or numerical tie behavior alone is insufficient.

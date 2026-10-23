@@ -1,0 +1,337 @@
+{
+  "protocol": "INFORMATION_RELEASE_LEARNING_V1",
+  "classification": "FRESH_LEARNED_MECHANISM_DEVELOPMENT_AND_CONDITIONAL_OWN_HISTORY_QUAL",
+  "collection_status": "CLOSED_BEFORE_COLLECTION",
+  "algorithm_distinction": "FAILED_STANDARD_DR_HEAD_REPARAMETERIZATION",
+  "groups": {
+    "SOFTWARE_NATIVE": 3,
+    "TAIL_TRAIN": 18,
+    "TAIL_SELECT": 9,
+    "GATE_TRAIN": 18,
+    "CAL": 9,
+    "DEV": 9,
+    "QUAL": 18
+  },
+  "programs": {
+    "SOFTWARE_NATIVE": [
+      "N_CONT_KEEP",
+      "N_CONT_0125",
+      "N_CONT_05",
+      "N_CONT_2",
+      "N_CONT_8",
+      "N_VALIDATE_RANDOM",
+      "N_MOVE_MASK",
+      "N_MOVE_FULL",
+      "N_MOVE_RANDOM"
+    ],
+    "TAIL_TRAIN": [
+      "TAIL_CONTINUE_0",
+      "TAIL_CONTINUE_1",
+      "TAIL_CONTINUE_2",
+      "TAIL_CONTINUE_3",
+      "TAIL_VALIDATE8_0",
+      "TAIL_VALIDATE8_1",
+      "TAIL_VALIDATE8_2",
+      "TAIL_VALIDATE8_3",
+      "TAIL_MOVE_MEASURE_0",
+      "TAIL_MOVE_MEASURE_1",
+      "TAIL_MOVE_MEASURE_2",
+      "TAIL_MOVE_MEASURE_3"
+    ],
+    "TAIL_SELECT": [
+      "TAIL_CONTINUE_0",
+      "TAIL_CONTINUE_1",
+      "TAIL_CONTINUE_2",
+      "TAIL_CONTINUE_3",
+      "TAIL_VALIDATE8_0",
+      "TAIL_VALIDATE8_1",
+      "TAIL_VALIDATE8_2",
+      "TAIL_VALIDATE8_3",
+      "TAIL_MOVE_MEASURE_0",
+      "TAIL_MOVE_MEASURE_1",
+      "TAIL_MOVE_MEASURE_2",
+      "TAIL_MOVE_MEASURE_3"
+    ],
+    "GATE_TRAIN": [
+      "GATE_CONTINUE",
+      "GATE_VALIDATE8",
+      "GATE_MOVE_MEASURE"
+    ],
+    "CAL": [
+      "CAL_CONTINUE_MASK",
+      "CAL_VALIDATE8_MASK",
+      "CAL_VALIDATE8_FULL",
+      "CAL_MOVE_MEASURE_MASK",
+      "CAL_MOVE_MEASURE_FULL"
+    ],
+    "DEV": [
+      "LEARNED_EFFECT",
+      "DIRECT_RISK",
+      "EFFECT_DISABLED",
+      "RELEASE_ALWAYS",
+      "FORCE_MASKED",
+      "ALWAYS_MOVE_FULL",
+      "ALWAYS_MOVE_MASK",
+      "MOVE_NO_UPDATE",
+      "REFERENCE_NO_PROBE",
+      "PURE_MOVE_KEEP",
+      "RAW",
+      "RAW_T0125",
+      "RAW_T2",
+      "RAW_T8",
+      "DIRECT_C8",
+      "MOVE_INTEGRAL",
+      "VALIDATE_FULL",
+      "VALIDATE_MASK",
+      "VALIDATE_NO_UPDATE",
+      "TRAIN_BEST_PROGRAM"
+    ],
+    "QUAL": [
+      "LEARNED_EFFECT",
+      "DIRECT_RISK",
+      "EFFECT_DISABLED",
+      "RELEASE_ALWAYS",
+      "FORCE_MASKED",
+      "ALWAYS_MOVE_FULL",
+      "ALWAYS_MOVE_MASK",
+      "MOVE_NO_UPDATE",
+      "REFERENCE_NO_PROBE",
+      "PURE_MOVE_KEEP",
+      "RAW",
+      "RAW_T0125",
+      "RAW_T2",
+      "RAW_T8",
+      "DIRECT_C8",
+      "MOVE_INTEGRAL",
+      "VALIDATE_FULL",
+      "VALIDATE_MASK",
+      "VALIDATE_NO_UPDATE",
+      "TRAIN_BEST_PROGRAM"
+    ]
+  },
+  "limits": {
+    "SOFTWARE_NATIVE": {
+      "executions": 162,
+      "control_steps": 81000,
+      "controlled_resets": 162,
+      "factory_resets": 8100,
+      "all_resets": 8262,
+      "physical_frames": 4536000,
+      "c4_c8_fit_attempts": 0,
+      "audit_c4_c8_refits": 0
+    },
+    "TAIL_TRAIN": {
+      "executions": 1296,
+      "control_steps": 648000,
+      "controlled_resets": 1296,
+      "factory_resets": 64800,
+      "all_resets": 66096,
+      "physical_frames": 36288000,
+      "c4_c8_fit_attempts": 0,
+      "audit_c4_c8_refits": 0
+    },
+    "TAIL_SELECT": {
+      "executions": 648,
+      "control_steps": 324000,
+      "controlled_resets": 648,
+      "factory_resets": 32400,
+      "all_resets": 33048,
+      "physical_frames": 18144000,
+      "c4_c8_fit_attempts": 0,
+      "audit_c4_c8_refits": 0
+    },
+    "GATE_TRAIN": {
+      "executions": 324,
+      "control_steps": 162000,
+      "controlled_resets": 324,
+      "factory_resets": 16200,
+      "all_resets": 16524,
+      "physical_frames": 9072000,
+      "c4_c8_fit_attempts": 0,
+      "audit_c4_c8_refits": 0
+    },
+    "CAL": {
+      "executions": 270,
+      "control_steps": 135000,
+      "controlled_resets": 270,
+      "factory_resets": 13500,
+      "all_resets": 13770,
+      "physical_frames": 7560000,
+      "c4_c8_fit_attempts": 0,
+      "audit_c4_c8_refits": 0
+    },
+    "DEV": {
+      "executions": 1080,
+      "control_steps": 540000,
+      "controlled_resets": 1080,
+      "factory_resets": 54000,
+      "all_resets": 55080,
+      "physical_frames": 30240000,
+      "c4_c8_fit_attempts": 216,
+      "audit_c4_c8_refits": 216
+    },
+    "QUAL": {
+      "executions": 2160,
+      "control_steps": 1080000,
+      "controlled_resets": 2160,
+      "factory_resets": 108000,
+      "all_resets": 110160,
+      "physical_frames": 60480000,
+      "c4_c8_fit_attempts": 432,
+      "audit_c4_c8_refits": 432
+    }
+  },
+  "combined_limits": {
+    "executions": 5940,
+    "control_steps": 2970000,
+    "controlled_resets": 5940,
+    "factory_resets": 297000,
+    "all_resets": 302940,
+    "physical_frames": 166320000,
+    "c4_c8_fit_attempts": 648,
+    "audit_c4_c8_refits": 648
+  },
+  "noise_sigma": 0.05,
+  "control_period_s": 0.0125,
+  "per_execution_steps": 500,
+  "source_prefix": "RAW_PI_T0.5; legacy C8/INTEGRAL have their original independent C8 prefix",
+  "common_information": "same entire public prefix, endpoint, task memory, elapsed cost, phase counts, exit reason; no release bit as a feature",
+  "post_features": {
+    "common": 159,
+    "full": 213
+  },
+  "pre_features": 93,
+  "predicted_risk_decimal_places": 6,
+  "group_weight": "each eligible independent group equal; each factual execution equal within group",
+  "receiver": {
+    "width_ridge_grid": [
+      [
+        0.5,
+        0.001
+      ],
+      [
+        0.5,
+        0.01
+      ],
+      [
+        0.5,
+        0.1
+      ],
+      [
+        1.0,
+        0.001
+      ],
+      [
+        1.0,
+        0.01
+      ],
+      [
+        1.0,
+        0.1
+      ],
+      [
+        2.0,
+        0.001
+      ],
+      [
+        2.0,
+        0.01
+      ],
+      [
+        2.0,
+        0.1
+      ]
+    ],
+    "centers": 64,
+    "common_models_per_setting": 4,
+    "matched_common_residual_models_per_setting": 4,
+    "signal_residual_models_per_setting": 4,
+    "main_closed_form_fits": 108,
+    "independent_refits": 108,
+    "capacity": "same shared base plus one64-center residual in either nonempty view; common residual uses same factual rows",
+    "selection": "whole TAIL_SELECT paired-view factual prediction MSE; first grid index within1e-6 of minimum",
+    "selection_tolerance": 1e-06
+  },
+  "precritic": {
+    "width_ridge_grid": [
+      [
+        0.5,
+        0.001
+      ],
+      [
+        0.5,
+        0.01
+      ],
+      [
+        0.5,
+        0.1
+      ],
+      [
+        1.0,
+        0.001
+      ],
+      [
+        1.0,
+        0.01
+      ],
+      [
+        1.0,
+        0.1
+      ],
+      [
+        2.0,
+        0.001
+      ],
+      [
+        2.0,
+        0.01
+      ],
+      [
+        2.0,
+        0.1
+      ]
+    ],
+    "centers": 32,
+    "main_closed_form_fits": 90,
+    "independent_refits": 90,
+    "nuisance": "fixed TAIL-only receiver risks; GATE groups excluded by construction; no GATE nuisance fitting",
+    "effect_targets": "standard AIPW M,D signed and unclipped; known terminal/empty structural equality",
+    "direct_control": "same GATE factual Y, same public H, same RBF capacity and CAL selection budget"
+  },
+  "release": {
+    "probability": 0.5,
+    "host_rng": "PCG64 separate private namespace; consume once after durable SIGNAL_SEAL; never before acquisition",
+    "case_failure": "stop scientific phase and retain incomplete run; no recollection, unseen-data tuning or population extension"
+  },
+  "CAL": "five actually executed complete arms; bank recommendations saved before CAL outcomes; selection is evaluator-only, not final deployment",
+  "primary_comparators": [
+    "RAW",
+    "DIRECT_C8",
+    "MOVE_INTEGRAL",
+    "DIRECT_RISK",
+    "TRAIN_BEST_PROGRAM",
+    "REFERENCE_NO_PROBE",
+    "FORCE_MASKED",
+    "RELEASE_ALWAYS"
+  ],
+  "DEV_gate": "full-population mean LEARNED_EFFECT strictly below all eight primary comparators and no greater than every other registered comparator; actual use of both nonempty exposure choices and different executed post-gains needed",
+  "QUAL_gate": "same eight full-population paired loss contrasts; all one-sided whole-group stratified bootstrap upper quantile159/160 strictly below0; no secondary replacement, no worse full-population mean than other registered controls",
+  "bootstrap": {
+    "replicates": 10000,
+    "seed": 2026102370,
+    "unit": "whole independent group, stratified by16/32/64",
+    "upper_quantile": [
+      159,
+      160
+    ],
+    "nominal_familywise_alpha": 0.05
+  },
+  "primary_loss": "actual full control steps if success, otherwise500, all acquisition included exactly once",
+  "success": "fully disclose every paired change, no hidden noninferiority threshold",
+  "new_response_model_training": 0,
+  "new_low_level_policy_training": 0,
+  "new_online_LLM_API_calls": 0,
+  "publication_goal_complete": false,
+  "novelty_established": false,
+  "no_physical_safety_guarantee": true
+}

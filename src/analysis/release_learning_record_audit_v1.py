@@ -1,0 +1,293 @@
+"""Independent physical ledger/transcript audit, forked from immutable reader v2.
+
+New numerical memory, real post-return randomization and model-input audits are
+separate below. Transcript replay is explicitly not independent physics replay.
+"""
+from copy import deepcopy
+from dataclasses import asdict
+from collections import Counter
+import numpy as np
+from src.analysis import release_learning_io_v1 as allocation
+from src.analysis.response_action_audit_v1 import same,audit_pi
+from src.analysis.capsule_record_json_v2 import normalize
+from src.probe.continuous import StepObservation
+from src.probe.physical_reprobe_v1 import StepReceipt
+from src.probe import release_learning_actor_v1 as actor
+from src.probe import release_learning_programs_v1 as programs
+io=allocation.io
+
+def physical_audit(spec,case,events,private,ledger_before):
+    from src.analysis.short_probe_journal_audit_v1 import applied,check_ledger,ledger_add,simulation,check_observation
+    from src.analysis.continuous_state_witness_v1 import verify_witness,compare_witnesses
+    for k,v in spec.items(): same(case[k],v,'allocation mismatch')
+    io.require(case['completed'] and case['environment_closed'] and case['error'] is None and case['close_error'] is None,'incomplete execution retained but cannot pass')
+    same(case['ledger_before'],ledger_before); same(case['initial_fault_oracle'],allocation.initial_fault()); same(case['destination_oracle'],allocation.destination(spec))
+    same(case['captures'],0); same(case['restores'],0)
+    ledger=deepcopy(ledger_before); current=initial=clock=command=intent=reset=None; first_clock=None
+    steps=[]; public=[]; local={}; factories=0; resets=Counter(); tape=allocation.noise(spec); fault=allocation.initial_fault(); boundary=None
+    allowed={'CASE_ALLOCATION','FACTORY_INTENT','FACTORY_COMPLETE','LIFECYCLE_RESET_INTENT','LIFECYCLE_RESET_COMPLETE','CONTROLLED_INITIAL',
+        'NOISE_COMMITMENT','EXPOSURE_RNG_COMMITMENT_ORACLE','RELEASE_RANDOM_ORACLE','AGENT_EVENT','STEP_INTENT','STEP_COMPLETE','PHYSICAL_BOUNDARY','FAULT_BOUNDARY'}
+    for e in events:
+        kind=e['event']; io.require(kind in allowed,'unknown host mutation: '+kind)
+        if kind=='CASE_ALLOCATION':
+            io.require(current is None and factories==0,'late/repeat allocation');same(e['assignment'],'FIXED_COMPLETE_PROCEDURE_WITH_REGISTERED_INTERNAL_DECISION');same(e['no_online_method_selection'],spec['program'] not in ('LEARNED_EFFECT','DIRECT_RISK','EFFECT_DISABLED','RELEASE_ALWAYS','FORCE_MASKED'))
+        elif kind=='FACTORY_INTENT':
+            io.require(factories==0 and current is None,'repeat factory'); same(e['ledger'],ledger); factories=1
+        elif kind=='LIFECYCLE_RESET_INTENT':
+            phase=e['phase']; io.require(reset is None and current is None,'nested or mid-task reset')
+            io.require((factories==1 and phase=='GOAL_GENERATION' and resets[phase]<50) or
+                (factories==2 and phase=='CONTROLLED_RESET' and resets[phase]==0),'unallocated reset')
+            same(e['before'],ledger); ledger=ledger_add(ledger,phase,'reset_attempts',1); reset=e
+        elif kind=='LIFECYCLE_RESET_COMPLETE':
+            io.require(reset is not None and e['intent_sequence']==reset['sequence'] and e['phase']==reset['phase'],'orphan reset')
+            ledger=simulation(ledger,e['phase'],100,500); ledger=ledger_add(ledger,e['phase'],'reset_completed',1)
+            same(e['after'],ledger); resets[e['phase']]+=1; reset=None
+        elif kind=='FACTORY_COMPLETE':
+            io.require(factories==1 and resets['GOAL_GENERATION']==50 and reset is None,'factory accounting'); same(e['ledger'],ledger); factories=2
+        elif kind=='CONTROLLED_INITIAL':
+            io.require(current is None and factories==2 and resets['CONTROLLED_RESET']==1,'exactly one controlled reset')
+            same(e['ledger'],ledger); same(e['task'],spec['task']); same(e['observation'],case['initial']['observation'])
+            initial=current=deepcopy(case['initial']); check_observation(current); first_clock=clock=e['simulation_time']
+        elif kind=='NOISE_COMMITMENT':
+            io.require(current is not None and not public and e['at_calls']==0,'late replacement of noise')
+            same(e['noise_namespace_oracle'],allocation.namespace(spec)); same(e['tape_sha256_oracle'],io.digest(tape.tolist()))
+        elif kind=='AGENT_EVENT':
+            io.require(current is not None and command is None and intent is None,'public event inside a pending action')
+            p=e['public_payload']; io.require(p['sequence']==len(public) and p['at_calls']==len(steps) and p['saved_ns']<=e['saved_ns'],'public chronology')
+            public.append(e); local[p['sequence']]=e
+            if e['agent_event']=='COMMAND':
+                io.require(not any(current[k] for k in ('success','terminated','truncated')) and len(steps)<500,'step after end/cap')
+                same(p['before'],current); io.require(p['decision_sequence']<p['sequence'] and p['decision_sequence'] in local,'future/unsaved decision')
+                sent=np.asarray(p['command'],np.float32); io.require(sent.shape==(4,) and np.isfinite(sent).all() and np.all(abs(sent)<=1),'invalid send')
+                same(p['command'],sent.tolist()); command=e
+        elif kind=='STEP_INTENT':
+            io.require(command is not None and intent is None and e['logical_step']==len(steps),'unsaved/duplicate action')
+            if len(steps)>=spec['planned_boundary']: io.require(boundary is not None,'missed hidden boundary')
+            same(e['global_command_sequence'],command['sequence']); same(e['command'],command['public_payload']['command'])
+            same(e['phase'],command['public_payload']['phase']); same(e['ledger_before'],ledger); intent=e
+        elif kind=='STEP_COMPLETE':
+            io.require(command is not None and intent is not None and e['logical_step']==len(steps) and e['noise_cursor_after']==len(steps)+1,'response/noise cursor')
+            same(e['intent_sequence'],intent['sequence']); same(e['global_command_sequence'],command['sequence'])
+            for k in ('command','phase','raw_policy'): same(e[k],command['public_payload'][k])
+            io.require(command['saved_ns']<=intent['saved_ns']<=e['execution_started_ns']<=e['completed_ns']<=e['saved_ns'],'choice saved after physical outcome')
+            same(e['ledger_before'],ledger); ledger=simulation(ledger,'CONTROL',1,5); same(e['ledger_after'],ledger)
+            io.require(np.isclose(e['simulation_time_before'],clock,atol=1e-10,rtol=0) and np.isclose(e['simulation_time_after']-clock,.0125,atol=1e-10,rtol=0),'physical clock discontinuity')
+            same(e['executed_action_oracle'],applied(e['command'],fault,tape[len(steps)]),'float32 transform/noise/final-clip order')
+            check_observation(e['after']); same(e['after']['success'],bool(e['info'].get('success',False)))
+            io.require(np.isfinite(e['reward']),'nonfinite reward'); steps.append(e); current=e['after']; clock=e['simulation_time_after']; command=intent=None
+        elif kind=='PHYSICAL_BOUNDARY':
+            io.require(len(steps) in (4,8) and e['logical_step']==len(steps),'invalid physical boundary')
+            same(e['noise_past_sha256'],io.digest(tape[:len(steps)].tolist())); same(e['simulation_time'],clock)
+        elif kind=='FAULT_BOUNDARY':
+            io.require(boundary is None and command is None and intent is None and len(steps)==spec['planned_boundary']==e['logical_step']
+                and not any(current[k] for k in ('success','terminated','truncated')),'repeat/late/nonlive boundary')
+            same(e['old_fault_oracle'],fault); fault=allocation.destination(spec); same(e['new_fault_oracle'],fault)
+            same(e['changed_oracle'],spec['context']=='CHANGED'); same(e['before'],e['after'],'boundary changed state/RNG/time'); boundary=e
+    io.require(command is None and intent is None and reset is None,'unfinished physical action')
+    same(case['final'],current); same(case['ledger_before_close'],ledger); same(case['ledger_after_close'],ledger); check_ledger(ledger)
+    same(case['boundary_applied'],boundary is not None)
+    missing=None if boundary is not None else 'EARLY_SUCCESS' if current['success'] else 'ENVIRONMENT_ENDED' if current['terminated'] or current['truncated'] else case['stop_reason']
+    same(case['boundary_missing_reason'],missing)
+    io.require(len(steps)==case['total_steps']==case['host_attempts']==case['host_returned']==case['physical_rows_count']<=500,'step costs differ')
+    labels=['INITIAL']+(['INTERVENTION_PRE','INTERVENTION_POST'] if boundary is not None else [])
+    relocated=[e for e in public if e['agent_event']=='RELOCATION_EVIDENCE']
+    if relocated:labels+=['POST_RELOCATION']
+    moved=[e for e in public if e['agent_event'] in ('TASK_MEMORY_RETURN','POST_MOVE_TASK_ENTRY')]
+    if moved: labels+=['POST_ACQUISITION']
+    memory_plans=[e for e in public if e['agent_event']=='MEMORY_TRANSITION_PLAN']
+    memory_commits=[e for e in public if e['agent_event']=='MEMORY_TRANSITION_COMMIT']
+    same(len(memory_plans),int(case['memory_transition_applied']));same(len(memory_commits),len(memory_plans))
+    if memory_plans:labels+=['MEMORY_TRANSITION_PRE','MEMORY_TRANSITION_POST']
+    labels+=['FINAL']; same([p['label'] for p in private],labels,'missing/extra private witness')
+    refs=[]
+    for p in private:
+        io.require(p['event']=='STATE_WITNESS','unknown private event'); same(p['ledger_before'],p['ledger_after'],'witness advanced physics')
+        anchor=next((e for e in events if e['sequence']==p['source_anchor_sequence']),None)
+        io.require(anchor is not None and anchor['saved_ns']==p['source_anchor_saved_ns']<=p['started_ns']<=p['completed_ns']<=p['saved_ns'],'private chronology')
+        verify_witness(p['witness'],full_sha256=p['source_witness']['python_semantic_sha256'],native_sha256=p['source_witness']['native_sha256'])
+        at=0 if p['label']=='INITIAL' else spec['planned_boundary'] if p['label'].startswith('INTERVENTION_') else relocated[0]['public_payload']['at_calls'] if p['label']=='POST_RELOCATION' else moved[0]['public_payload']['at_calls'] if p['label']=='POST_ACQUISITION' else memory_plans[0]['public_payload']['at_calls'] if p['label'].startswith('MEMORY_TRANSITION_') else len(steps)
+        same(p['logical_step'],at); same(p['source_witness']['noise_past_sha256'],io.digest(tape[:at].tolist()))
+        same(p['source_witness']['simulation_time'],first_clock if at==0 else steps[at-1]['simulation_time_after'])
+        expected=next(e['ledger'] for e in events if e['event']=='CONTROLLED_INITIAL') if at==0 else steps[at-1]['ledger_after']
+        same(p['ledger_before'],expected,'private physical ledger')
+        refs.append({'label':p['label'],'sequence':p['sequence'],'logical_step':at,'native_sha256':p['witness']['native_sha256'],
+            'comparison_python_sha256':p['witness']['comparison_python_sha256']})
+    same(case['state_witness_refs'],refs)
+    if boundary is not None:
+        pair=[p for p in private if p['label'].startswith('INTERVENTION_')]
+        io.require(compare_witnesses(pair[0]['witness'],pair[1]['witness'])['comparison_equal'],'boundary state witness mismatch')
+        io.require(pair[0]['saved_ns']<boundary['saved_ns']<pair[1]['saved_ns'],'boundary witness order')
+    if memory_plans:
+        pair=[p for p in private if p['label'].startswith('MEMORY_TRANSITION_')]
+        io.require(compare_witnesses(pair[0]['witness'],pair[1]['witness'])['comparison_equal'],'memory-only transition changed physical state/RNG')
+        same(pair[0]['source_witness'],pair[1]['source_witness'],'memory-only world witness equality')
+        io.require(memory_plans[0]['saved_ns']<pair[0]['saved_ns']<memory_commits[0]['saved_ns']<pair[1]['saved_ns'],'memory plan/commit witness order')
+    return ledger,steps,public
+
+
+def replay(spec,case,public,steps,nominal,runtime,events):
+    from src.rollout.task_registry import create_task_policy
+    policy=create_task_policy(spec['task']);cursor=event_cursor=0;current=deepcopy(case['initial']);counts=Counter()
+    def query(observation):
+        same(observation,current['observation'],'fixed policy current observation');counts['independent_policy_queries']+=1
+        return np.asarray(policy.get_action(np.asarray(observation).copy()),np.float32)
+    def emit(kind,payload):
+        nonlocal event_cursor
+        e=public[event_cursor];event_cursor+=1;p=e['public_payload'];same(kind,e['agent_event'])
+        same(normalize(payload),{k:v for k,v in p.items() if k not in ('sequence','saved_ns')},'full saved transcript '+kind)
+        if kind=='FIT_INTENT':counts['independent_c4_c8_refits']+=1
+        if kind=='FIT_RESULT':counts['independent_c4_c8_nfev']+=int(p['fit'].get('nfev',0))
+        return deepcopy(p)
+    def step(saved):
+        nonlocal cursor,current
+        e=steps[cursor];same(saved['sequence'],next(v['public_payload']['sequence'] for v in public if v['sequence']==e['global_command_sequence']))
+        same(saved['command'],e['command']);same(saved['before'],current);same(saved['raw_policy'],e['raw_policy']);cursor+=1;current=deepcopy(e['after'])
+        return StepReceipt(StepObservation(**current),cursor)
+    draws=[e for e in events if e['event']=='RELEASE_RANDOM_ORACLE'];draw_cursor=0
+    def draw_exposure(seal_sequence):
+        nonlocal draw_cursor
+        io.require(draw_cursor<len(draws) and event_cursor and public[event_cursor-1]['agent_event']=='SIGNAL_SEAL','replay draw before actual return seal')
+        e=draws[draw_cursor];same(e['seal_local_sequence'],seal_sequence);draw_cursor+=1
+        return e['uniform_oracle']
+    r=actor.run(spec['task'],StepObservation(**case['initial']),spec['planned_boundary'],spec['program'],nominal if programs.calibrated_prefix(spec['program']) else None,query,step,emit,runtime=runtime,draw_exposure=draw_exposure)
+    same(draw_cursor,len(draws))
+    same(cursor,len(steps));same(event_cursor,len(public))
+    for k,v in r['outcome'].items():same(case[k],v,'outcome mismatch '+k)
+    same(case['c4_c8_fit_attempts'],counts.get('independent_c4_c8_refits',0));same(case['c4_c8_fit_results'],case['c4_c8_fit_attempts'])
+    same(case['c4_c8_optimizer_nfev'],counts.get('independent_c4_c8_nfev',0));return counts
+
+
+def randomness(spec,case,events,public,private):
+    """Independently regenerate the separate PCG64 stream and causal ordering."""
+    commits=[e for e in events if e['event']=='EXPOSURE_RNG_COMMITMENT_ORACLE'];draws=[e for e in events if e['event']=='RELEASE_RANDOM_ORACLE']
+    same(len(commits),1);commit=commits[0];same(commit['at_calls'],0)
+    io.require(commit['saved_ns']<public[0]['saved_ns'],'randomizer commitment after the public program started')
+    cohorts=('SOFTWARE_NATIVE','TAIL_TRAIN','TAIL_SELECT','GATE_TRAIN','CAL','DEV','QUAL')
+    seed=[spec['seed'],2026102363+100*cohorts.index(spec['cohort']),allocation.programs(spec['cohort']).index(spec['program'])]
+    rng=np.random.default_rng(np.random.SeedSequence(seed));same(commit['seed_vector_oracle'],seed);same(commit['initial_state_oracle'],rng.bit_generator.state)
+    same(len(draws),case['exposure_draws']);io.require(len(draws)<=1,'repeat exposure draw')
+    for e in draws:
+        seal=next(v for v in public if v['public_payload']['sequence']==e['seal_local_sequence'])
+        same(seal['agent_event'],'SIGNAL_SEAL');same(seal['sequence'],e['seal_global_sequence'])
+        p=seal['public_payload'];same(e['at_calls'],p['at_calls']);same(e['probability'],.5)
+        io.require(seal['saved_ns']<e['saved_ns'],'randomization before durable physical-return seal')
+        same(e['rng_before_oracle'],rng.bit_generator.state);same(e['uniform_oracle'],float(rng.random()));same(e['rng_after_oracle'],rng.bit_generator.state)
+        same(e['physical_before'],e['physical_after'],'randomization changes the physical state/RNG/time')
+        returned=next(v for v in private if v['label']=='POST_ACQUISITION')
+        same(e['physical_before'],returned['source_witness'],'draw does not follow the actual acquisition endpoint')
+        released=next(v for v in public if v['agent_event']=='INFORMATION_RELEASE')
+        io.require(e['saved_ns']<released['public_payload']['saved_ns'],'release saved before actual draw')
+        b=released['public_payload']['receipt']['binding'];same(b['random_uniform'],e['uniform_oracle']);same(b['assignment_probability'],.5)
+        same(b['assigned_exposure'],e['uniform_oracle']<.5)
+    return Counter(actual_exposure_draws=len(draws))
+
+
+def numerical(spec,case,public,steps,runtime):
+    """Separate state machine, PI arithmetic, trace/masking and rate-only mapping."""
+    from src.analysis.memory_reset_audit_v1 import pid_numbers,readiness
+    if programs.legacy(spec['program']):
+        if spec['program'] in ('REFERENCE_NO_PROBE','PURE_MOVE_KEEP'):
+            from src.analysis.memory_reset_audit_v1 import independent_raw
+            return independent_raw({**spec,'program':programs.legacy_name(spec['program'])},case,public,steps)
+        return Counter()
+    current=deepcopy(case['initial']);at=0;integral=[0.,0.];rate=.5;counts=Counter();plan=next_integral=None;suspended=False
+    controller=dict(source='UNCORRECTED',matrix_xy=[[1.,0.],[0.,1.]],offset=[0.,0.,0.,0.])
+    pre=prefix=acquisition=returned=sealed=receipt=decision=gain=None;history=[];anchor=None;lifted=False;move_integral=[0.,0.];updated=None;probe_entered=False
+    def memory():return dict(schema='TASK_MEMORY_OPTION_V1',task=spec['task'],completed_steps=at,current=current,
+        controller=controller,integral_xy=integral,time_constant_s=rate)
+    def actual_history(end):
+        result=[];before=case['initial']
+        for j,s in enumerate(steps[:end]):
+            result.append(dict(at_calls=j,command=s['command'],before=before,after=s['after']));before=s['after']
+        return result
+    for event in public:
+        kind=event['agent_event'];p=event['public_payload'];same(p['at_calls'],at,'numerical public clock')
+        if kind=='PI_PLAN':
+            io.require(plan is None and not suspended,'outstanding/suspended task PI plan');plan=p['saved_plan']
+            same(plan['before_memory_sha256'],io.digest(memory()));same(plan['pi_plan_sha256'],io.digest(plan['pi_plan']))
+            same(plan['pi_plan']['query']['controller'],controller);same(plan['pi_plan']['query']['time_constant_s'],rate)
+        elif kind=='COMMAND':
+            s=steps[at];same(p['before'],current)
+            if p['raw_policy'] is not None:
+                io.require(plan is not None and not suspended,'task command without saved current PI plan')
+                next_integral,c=audit_pi(plan['pi_plan'],p['command'],integral,spec['task'],at,current,p['raw_policy']);counts.update(c)
+            else:
+                io.require(suspended and plan is None,'non-task command outside a real acquisition')
+                if p['phase']=='REPOSITION':
+                    io.require(updated is not None and not probe_entered,'missing movement update or movement repeated after measurement')
+                    want,command=pid_numbers(history,anchor,lifted,move_integral,'LOCAL_PID');same(updated,want);same(p['command'],command)
+                    move_integral=list(updated);updated=None;counts['relocation_steps']+=1
+                else:
+                    same(p['phase'],'WARM_PROBE');j=counts['probe_steps'];io.require(probe_entered and j<8,'before-entry or repeated probe')
+                    directions=((.4,0,0,0),(0,.4,0,0),(-.4,0,0,0),(0,-.4,0,0));same(p['command'],np.asarray(directions[j%4],np.float32).tolist());counts['probe_steps']+=1
+                history.append(s['after']['observation']);lifted=lifted or history[-1][2]>=anchor[2]-.015
+            current=deepcopy(s['after']);at+=1
+        elif kind=='TASK_MEMORY_COMMIT':
+            io.require(plan is not None and next_integral is not None,'memory commit before actual receipt')
+            integral=list(next_integral);same(p['memory'],memory());plan=next_integral=None
+        elif kind=='ACQUISITION_CHOICE':
+            io.require(pre is None and at==spec['planned_boundary'],'repeat/late acquisition')
+            pre=deepcopy(memory());prefix=actual_history(at);same(p['before_memory'],pre);same(p['prefix_history'],prefix);acquisition=p['action']
+        elif kind=='TASK_MEMORY_SUSPEND':
+            io.require(not suspended and plan is None and receipt is None,'repeat/task-pending/after-release acquisition');same(p['memory'],memory())
+            same(p['token'],dict(schema='TASK_MEMORY_SUSPEND_V1',memory_sha256=io.digest(memory()),at_completed_steps=at));suspended=True;history=[list(current['observation'])]
+        elif kind=='REACQUIRE_CHOICE':
+            io.require(suspended,'acquisition without actual suspension');o=history[0]
+            anchor=[min(.45,max(-.45,o[0])),min(.95,max(.45,o[1])),min(.45,max(.25,o[6]+.12))]
+            same(p['anchor'],anchor);same(p['relocation_method'],'LOCAL_PID');lifted=o[2]>=anchor[2]-.015
+        elif kind=='INTEGRAL_UPDATE':
+            io.require(suspended and updated is None and counts['relocation_steps']<64 and not readiness(history,anchor),'invalid movement update')
+            same(p['integral_before'],move_integral);updated=pid_numbers(history,anchor,lifted,move_integral,'LOCAL_PID')[0];same(p['integral_after'],updated)
+        elif kind=='RELOCATION_EVIDENCE':
+            ready=readiness(history,anchor);same(p['at_anchor'],ready,'actual relocation admission')
+            io.require(ready or any(current[k] for k in ('success','terminated','truncated')) or counts['relocation_steps']==64,'unregistered premature movement stop')
+        elif kind=='PROBE_ENTRY':
+            io.require(not probe_entered and readiness(history,anchor),'measurement before actual readiness or repeated entry');same(p['entry_history'],history[-4:]);probe_entered=True
+        elif kind=='TASK_MEMORY_RETURN':
+            io.require(plan is None and pre is not None,'return before acquisition');suspended=False;same(p['memory'],memory());returned=p
+        elif kind=='SIGNAL_SEAL':
+            io.require(returned is not None and sealed is None,'repeated/missing actual return')
+            sealed=p['saved_return'];r=sealed['record'];same(r['before_memory'],pre);same(r['post_memory'],memory());same(r['action'],acquisition)
+            trace=[]
+            for j in range(pre['completed_steps'],at):
+                s=steps[j];trace.append(dict(at_calls=j,phase='MEASUREMENT' if s['phase']=='WARM_PROBE' else s['phase'],command=s['command'],
+                    before=case['initial'] if j==0 else steps[j-1]['after'],after=s['after']))
+            same(r['steps'],trace,'fabricated/shifted/missing acquisition trace');same(sealed['record_sha256'],io.digest(r))
+            if acquisition=='VALIDATE8':io.require(len(trace)==8 or any(current[k] for k in ('success','terminated','truncated')),'premature validation stopping')
+            same(sealed['physical_finished_sequence'],returned['sequence']);io.require(returned['sequence']<p['sequence'],'seal before saved physical return')
+            if acquisition=='MOVE_MEASURE':same(pre['integral_xy'],memory()['integral_xy'],'movement changed suspended task integral')
+            if r['reason']=='EARLY_END':io.require(any(current[k] for k in ('success','terminated','truncated')),'false early-end label')
+        elif kind=='INFORMATION_RELEASE':
+            io.require(sealed is not None and receipt is None,'repeat/before-seal release');receipt=p['receipt'];b=receipt['binding'];view=receipt['model_view'];r=sealed['record']
+            phases=() if acquisition=='CONTINUE' else ('VALIDATION_TASK',) if acquisition=='VALIDATE8' else ('REPOSITION','MEASUREMENT')
+            common=dict(schema='INFORMATION_RELEASE_COMMON_V1',before_memory=pre,post_memory=memory(),action=acquisition,
+                paid_acquisition_steps=len(r['steps']),reason=r['reason'],phase_counts={phase:sum(s['phase']==phase for s in r['steps']) for phase in phases})
+            same(view,dict(common=common,signal=r['steps'] if b['assigned_exposure'] and r['steps'] else None),'masking changed common information or invented signal')
+            same(b['record_sha256'],io.digest(r));same(b['view_sha256'],io.digest(view));same(b['physical_finished_sequence'],returned['sequence']);same(b['release_sequence'],p['sequence'])
+            same(receipt['new_environment_steps'],0);same(receipt['new_policy_queries'],0);same(receipt['new_model_fits'],0);same(receipt['physical_safety_guarantee'],False)
+        elif kind=='RECEIVER_CHOICE':
+            io.require(receipt is not None and decision is None and not any(current[k] for k in ('success','terminated','truncated')),'receiver before release/after task end')
+            decision=p['decision'];same(decision['release_receipt_sha256'],io.digest(receipt));same(decision['receiver_version'],receipt['binding']['receiver_version'])
+            same(p['receiver_input_sha256'],io.digest(dict(model_view=receipt['model_view'],prefix_history=prefix)))
+            risks=decision['base_risks'] if receipt['model_view']['signal'] is None else decision['full_risks']
+            io.require(type(risks) is list and len(risks)==4 and all(type(v) in (int,float) and np.isfinite(v) and 0<=v<=500 for v in risks),'actual finite complete-task risk bank')
+            if receipt['model_view']['signal'] is None:same(decision['full_risks'],None)
+            rates=(.125,.5,2.,8.);j=min(range(4),key=lambda i:(risks[i],rates[i]!=.5,i));same(decision['choice']['time_constant_s'],rates[j])
+            same(decision['choice']['risk_vector'],risks);same(decision['choice']['input_view_sha256'],io.digest(receipt['model_view']))
+        elif kind=='MEMORY_TRANSITION_PLAN':
+            io.require(decision is not None and gain is None and not suspended and plan is None,'gain before chosen/returned memory')
+            gain=p['plan'];after=deepcopy(memory());after['time_constant_s']=decision['choice']['time_constant_s']
+            expected=dict(schema='CARRIED_INTEGRAL_RATE_PLAN_V1',before_memory_sha256=io.digest(memory()),after_memory=after,new_environment_steps=0,
+                new_policy_queries=0,integral_reset=False,controller_mapping_changed=False,physical_safety_guarantee=False,task_benefit_established=False)
+            same(gain,expected,'rate plan changes another memory/controller component');same(decision['gain_plan'],gain)
+        elif kind=='MEMORY_TRANSITION_COMMIT':
+            io.require(gain is not None,'gain commit without saved plan');before=deepcopy(memory());rate=gain['after_memory']['time_constant_s']
+            same(p['memory'],memory());same(p['receipt'],dict(schema='CARRIED_INTEGRAL_RATE_COMMIT_V1',plan_sha256=io.digest(gain),before_memory_sha256=io.digest(before),
+                after_memory_sha256=io.digest(memory()),integral_unchanged=True,new_environment_steps=0,new_policy_queries=0));gain=None;counts['rate_transitions']+=1
+    io.require(plan is None and gain is None and updated is None and not suspended,'unconsumed numerical operation')
+    same(case['final_memory'],memory());same(bool(counts['rate_transitions']),case['rate_transition_applied']);same(counts['pi_plans'],case['policy_queries'])
+    same(case['deadline_loss'],at if case['success'] else 500);same(at,case['total_steps'])
+    if case['learning'] is not None:
+        same(case['learning']['pre_memory'],pre);same(case['learning']['prefix_history'],prefix);same(case['learning']['saved_return'],sealed)
+        same(case['learning']['release_receipt'],receipt);same(case['learning']['receiver_decision'],decision)
+    return counts

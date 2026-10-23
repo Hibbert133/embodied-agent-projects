@@ -959,3 +959,22 @@ the concrete native collector and separately frozen learning/qualification
 protocol, not another toy census. Actual receiver training, truthful random
 release, strong complete-task comparisons and independent own-history gains
 remain essential; the CCF A goal is active and unachieved.
+
+The user added appropriate periodic repository pushes to the continuing goal.
+The completed2b91c1f source/report snapshot is now remotely archived as
+codex/archive-20261023-information-release-v2 at8de95c9, with per-file hashes
+for all locally retained large data. The archive is a separate snapshot rather
+than a merge or rewrite of the oversized local history. Continue publishing
+only completed, checked stages; preserve all negative results and do not
+substitute archival, synthetic checks or unfinished code for actual research.
+
+The next native/learning draft was closed before collection: M/D ridge heads
+with shared features/weights/penalty and D=F-M equal standard DR M/F risk
+regression. The5940-run cap remains entirely unexecuted. Preserve collector,
+array checks and this rejection; do not label it robot task failure, native
+qualification or innovation. Report release_learning_precollection_review_v1_zh.md
+records25 new/1984 source-reused checks and zero new physics/scientific fits/API.
+Proceed by establishing a real distinction from matched DR and task-information
+methods, then freeze an independent own-history study; do not solve this issue
+by weakening controls, switching regressors alone, another toy census or
+reviving failed ARX/SS/timer-reset. The CCF A objective remains unachieved.
