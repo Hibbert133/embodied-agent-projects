@@ -1,0 +1,28 @@
+{
+  "integrity": "FAILED",
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\correction_scope_risk_reference_v1.py\", line 35, in recorded_guard\n    with read_only(receipt,**limits):yield\n  File \"C:\\Users\\Administrator\\Documents\\ChatGPT\\robotic agent\\diagnose_trace_value_choices.py\", line 26, in diagnose\n    events = list(io.rows(base / 'replay.jsonl'))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 127, in rows\n    for line in f:yield json.loads(line)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\gzip.py\", line 314, in read1\n    return self._buffer.read1(size)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\_compression.py\", line 68, in readinto\n    data = self.read(len(byte_view))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\gzip.py\", line 488, in read\n    if not self._read_gzip_header():\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\gzip.py\", line 436, in _read_gzip_header\n    raise BadGzipFile('Not a gzipped file (%r)' % magic)\ngzip.BadGzipFile: Not a gzipped file (b'{\"')\n",
+  "no_automatic_retry": true
+}

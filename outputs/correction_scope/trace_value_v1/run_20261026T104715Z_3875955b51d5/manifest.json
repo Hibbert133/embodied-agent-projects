@@ -1,0 +1,93 @@
+{
+  "protocol": "CORRECTION_TRACE_VALUE_V1",
+  "source_git_commit": "3875955b51d532d2812a123c32bef28c78a61aa1",
+  "config": {
+    "protocol": "CORRECTION_TRACE_VALUE_V1",
+    "classification": "POST_HOC_TRAIN_ONLY_FIXED_RECEIVER_INFORMATION_DEVELOPMENT",
+    "source_result_commit": "89667f78bfc253527ffc3e81c19b8b5b4770b6a5",
+    "source_reference_run": "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b",
+    "source_A1_run": "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2",
+    "allowed_numeric_cohorts": [
+      "TRAIN"
+    ],
+    "heldout_groups": [
+      [
+        0,
+        1,
+        2
+      ],
+      [
+        3,
+        4,
+        5
+      ],
+      [
+        6,
+        7,
+        8
+      ]
+    ],
+    "kernels": [
+      "LINEAR",
+      "RBF"
+    ],
+    "scientific_model_fits": 6,
+    "independent_refits": 6,
+    "source_units": 54,
+    "source_executions": 648,
+    "offline_selectors": 10,
+    "offline_replays": 540,
+    "masked_action_only": "MOVE_MEASURE",
+    "full_free_prefix_always_available": true,
+    "actual_return_state_integral_clock_always_available": true,
+    "same_receiver_for_FULL_and_MASK": true,
+    "original_node_weight_preserved_when_view_is_duplicated": true,
+    "history_slots": 500,
+    "ridge": 0.01,
+    "normalization_floor": 0.05,
+    "z_clip": 10,
+    "risk_clip": [
+      0,
+      1
+    ],
+    "numerical_tie_tolerance": 1e-10,
+    "new_environment_interactions": 0,
+    "new_policy_queries": 0,
+    "new_robot_seeds": 0,
+    "online_LLM_API_calls": 0,
+    "CAL_TEST_used": false,
+    "qualification_or_novelty_claim": false,
+    "publication_goal_complete": false
+  },
+  "source_sha256": {
+    "src/analysis/correction_trace_value_v1.py": "d62e41297c60422420f3537633826eca18886d5e2769c62f3e55474667661a45",
+    "src/analysis/correction_trace_value_independent_v1.py": "89eec77821313ac22f831e721ced887604d730f3eead3bf23d7eb9d83bc7315d",
+    "scripts/run_correction_trace_value_v1.py": "3146f25d4f99c1f24264715260419bd662cfb50052eea8c902acfecf7160722f",
+    "tests/test_correction_trace_value_v1.py": "61cc57bc46995bdccaff77e9f19ba309ff5110d99200358aa57d05b964ddc365",
+    "configs/movement_task/correction_trace_value_v1.json": "d9a79fceaf1d0479d52eaa36f46e0bf538789cb8235c8154de4948612162f7d9",
+    "docs/protocols/correction_trace_value_v1_zh.md": "110b6c5c33625299b54c2336a244fd8130c5daa951aead3312873e4f58049136",
+    "docs/research/correction_trace_value_decision_v1_zh.md": "d5f5a56500b78165bce31dbb5cceb408337e8d1bf4c7a34ba5cbc53b56bd6434",
+    "outputs/correction_scope/trace_value_v1/validate_freeze.py": "e58399e7b5c30e0cb9c2e9e582e7ac8163b33e0d97515d3f13ad87a53d6770b9",
+    "outputs/correction_scope/trace_value_v1/run_pipeline.py": "fae5d6084a8af8ca8a93dee4b79af6331194c7b3991b33e123f9eb801602458f"
+  },
+  "input_sha256": {
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/train_graphs.jsonl.gz": "15d226d79658ed75c246ccbff940ddbb343e9d224186e6ece6de5e12b7af13c7",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/fit_receipt.json": "ef9dcc6cb42dc15ae7f5dd68b907496b16140db0f7b4dccecab1772a01507371",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/model_audit.json": "d6803d984e0333a57a4c22f0671327f6c8f3f0ade64d874049f3b86a760a0a85",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/audit.json": "d7dbbf9c4c19e8ee4d24c5e7eca2830b4c886f6f5e831298f035bf9ded641eb2",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/manifest.json": "b0fda6e14035c66db1f33f1024a067db224889aa56cc5998bb11f8ec36e4aa82",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/results/statistics.json": "d567b1a827b11edb1237b20f59d554fc1cf1a91733adc58b8b614e370c7826a4",
+    "outputs/correction_scope/common_state_audit_v1/train.json": "8cb2f53791324c7b98be06e28ff1f8699051d775ffa41bc981609bcb464757c0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/examples.jsonl.gz": "92d8e85828a73a974b2a10b81b84e41c25decfa7a4f2b96a9e770277add86b1d"
+  },
+  "CAL_TEST_numeric_data_used": false,
+  "old_TEST_statistics_bytes_only_for_immutability": true,
+  "new_physics": 0,
+  "online_LLM_API_calls": 0,
+  "manifest_id": "918aa8ae3a658831ae7d16f4aa530235b35dd2ad78af615026e43850a27aa1c2"
+}

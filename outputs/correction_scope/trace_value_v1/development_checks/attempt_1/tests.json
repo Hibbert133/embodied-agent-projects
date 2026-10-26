@@ -1,0 +1,47 @@
+{
+  "integrity": "PASSED",
+  "tests_run": 20,
+  "failures": 0,
+  "errors": 0,
+  "log": "test_all_ordinary_prefix_is_preserved (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_complete_synthetic_flow_and_second_implementation (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_duplicate_views_preserve_original_group_weight (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_empty_acquisition_trace_has_identical_inputs (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_float32_execution_boundary_enforced (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_future_extra_rows_rejected (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_held_groups_cannot_enter_training (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_identical_view_duplication_does_not_change_regularization (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_literal_feature_coordinates (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_literal_full_and_masked_queries (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_model_bytes_must_remain_fixed_for_both_views (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_nested_private_noise_rejected (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_no_registry_or_future_field (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_no_release_flag_feature (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_normal_task_feedback_cannot_be_hidden (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_same_actual_return_prefix_integral_and_clock (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_terminal_return_is_not_imputed (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_trace_discontinuity_rejected (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_unavailable_trace_not_zero_valued_observation (test_correction_trace_value_v1.TraceValueTests) ... ok\ntest_zero_step_continue_has_no_extra_observation (test_correction_trace_value_v1.TraceValueTests) ... ok\n\n----------------------------------------------------------------------\nRan 20 tests in 42.647s\n\nOK\n",
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 10,
+      "lstsq_attempts": 6,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 10,
+      "lstsq": 6,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/correction_trace_value_v1.py": "d62e41297c60422420f3537633826eca18886d5e2769c62f3e55474667661a45",
+    "src/analysis/correction_trace_value_independent_v1.py": "89eec77821313ac22f831e721ced887604d730f3eead3bf23d7eb9d83bc7315d",
+    "scripts/run_correction_trace_value_v1.py": "3146f25d4f99c1f24264715260419bd662cfb50052eea8c902acfecf7160722f",
+    "tests/test_correction_trace_value_v1.py": "61cc57bc46995bdccaff77e9f19ba309ff5110d99200358aa57d05b964ddc365",
+    "configs/movement_task/correction_trace_value_v1.json": "d9a79fceaf1d0479d52eaa36f46e0bf538789cb8235c8154de4948612162f7d9",
+    "docs/protocols/correction_trace_value_v1_zh.md": "110b6c5c33625299b54c2336a244fd8130c5daa951aead3312873e4f58049136",
+    "docs/research/correction_trace_value_decision_v1_zh.md": "d5f5a56500b78165bce31dbb5cceb408337e8d1bf4c7a34ba5cbc53b56bd6434",
+    "outputs/correction_scope/trace_value_v1/validate_freeze.py": "e58399e7b5c30e0cb9c2e9e582e7ac8163b33e0d97515d3f13ad87a53d6770b9",
+    "outputs/correction_scope/trace_value_v1/run_pipeline.py": "fae5d6084a8af8ca8a93dee4b79af6331194c7b3991b33e123f9eb801602458f"
+  },
+  "wall_ns": 43615485500,
+  "synthetic_numerical_solves_separate": true,
+  "new_real_model_fits": 0,
+  "new_physics": 0,
+  "new_policy_queries": 0,
+  "online_LLM_API_calls": 0
+}
