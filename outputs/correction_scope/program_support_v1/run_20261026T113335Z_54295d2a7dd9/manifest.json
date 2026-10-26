@@ -1,0 +1,90 @@
+{
+  "protocol": "CORRECTION_PROGRAM_SUPPORT_V1",
+  "classification": "POST_HOC_TRAIN_ONLY_FINITE_FACTUAL_SUPPORT_AUDIT",
+  "source_git_commit": "54295d2a7dd9e13c575a5f27f5e474c2f2e33a12",
+  "config": {
+    "protocol": "CORRECTION_PROGRAM_SUPPORT_V1",
+    "classification": "POST_HOC_TRAIN_ONLY_FINITE_FACTUAL_SUPPORT_AUDIT",
+    "source_result_commit": "34ac29d2298fbcabcdf69720bfd6ad13334c547a",
+    "source_trace_run": "outputs/correction_scope/trace_value_v1/run_20261026T104715Z_3875955b51d5",
+    "source_reference_run": "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b",
+    "source_A1_run": "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2",
+    "allowed_numeric_cohorts": [
+      "TRAIN"
+    ],
+    "source_groups": 9,
+    "source_units": 54,
+    "source_executions": 648,
+    "actions": [
+      "CONTINUE",
+      "VALIDATE8",
+      "MOVE_MEASURE"
+    ],
+    "rates": [
+      0.125,
+      0.5,
+      2.0,
+      8.0
+    ],
+    "free_family_leaf_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "paid_family_leaf_indices": [
+      8,
+      9,
+      10,
+      11
+    ],
+    "fixed_baseline_leaf_index": 1,
+    "full_cutoff_loss_cap": 500,
+    "group_weighting": "EQUAL_GROUP_THEN_EQUAL_UNIT",
+    "numeric_or_significance_promotion_threshold": null,
+    "new_environment_interactions": 0,
+    "new_policy_queries": 0,
+    "new_robot_seeds": 0,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0,
+    "CAL_TEST_used": false,
+    "qualification_or_novelty_claim": false,
+    "publication_goal_complete": false
+  },
+  "source_sha256": {
+    "src/analysis/correction_program_support_v1.py": "3675d788c4e283fe4b14c6eb28550465c99a7a2bdce95acfe7fe818cc6323432",
+    "src/analysis/correction_program_support_independent_v1.py": "271ed8bb81835914d2b71fcbff569ea30039909bebdeccc5b14943002523f532",
+    "scripts/run_correction_program_support_v1.py": "edf5e4dc8f53ee9af6d922161a1c4f8fcf9df0b6d20558917c840d15edbdc6e7",
+    "tests/test_correction_program_support_v1.py": "c6f543d8ab5b2978a4fed1499ba3db5556d2d4ed0e6b01c64f9946a3da153280",
+    "configs/movement_task/correction_program_support_v1.json": "c634447691bb6a7f3d4d0cf8545c9f1aa9a387dae151ac75d1845600175e8748",
+    "docs/protocols/correction_program_support_v1_zh.md": "37e8ad5e0f98acc568bf85a0bb893df51aee67b1620baff1d4e748f4f459caf5",
+    "docs/research/correction_program_support_decision_v1_zh.md": "d7edd10dc15fc893ee33c17f2bcc0ac389532e0c0b11aa94dece7d17529c5f8d",
+    "outputs/correction_scope/program_support_v1/validate_freeze.py": "680eba1ac4115c6a8596dca637047a5c941c05019226776326ed66cff28cd720"
+  },
+  "input_sha256": {
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/train_graphs.jsonl.gz": "15d226d79658ed75c246ccbff940ddbb343e9d224186e6ece6de5e12b7af13c7",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/model_audit.json": "d6803d984e0333a57a4c22f0671327f6c8f3f0ade64d874049f3b86a760a0a85",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/manifest.json": "b0fda6e14035c66db1f33f1024a067db224889aa56cc5998bb11f8ec36e4aa82",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/audit.json": "d7dbbf9c4c19e8ee4d24c5e7eca2830b4c886f6f5e831298f035bf9ded641eb2",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/examples.jsonl.gz": "92d8e85828a73a974b2a10b81b84e41c25decfa7a4f2b96a9e770277add86b1d",
+    "outputs/correction_scope/common_state_audit_v1/train.json": "8cb2f53791324c7b98be06e28ff1f8699051d775ffa41bc981609bcb464757c0",
+    "outputs/correction_scope/trace_value_v1/run_20261026T104715Z_3875955b51d5/results.json": "0f1d41e0a618b2f6f992f599df31d9cfe0687dd3531a0fb6d0def5e6162ef3af",
+    "outputs/correction_scope/trace_value_v1/run_20261026T104715Z_3875955b51d5/replay_audit.json": "ab2a92c3cc787a78a2d683c6b281d5d9e56172698047306bb23d6ee12760459c",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/results/statistics.json": "d567b1a827b11edb1237b20f59d554fc1cf1a91733adc58b8b614e370c7826a4",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320"
+  },
+  "CAL_TEST_numeric_data_used": false,
+  "old_TEST_statistics_bytes_only": true,
+  "new_physics": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "manifest_id": "8f7211aea1ec5a0ff451ef371ac599531feb4136f333322ed37eefed26b76f71"
+}
