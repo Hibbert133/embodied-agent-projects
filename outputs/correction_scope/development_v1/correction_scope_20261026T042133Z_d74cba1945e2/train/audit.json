@@ -1,0 +1,89 @@
+{
+  "integrity": "PASSED",
+  "cohort": "TRAIN",
+  "manifest_id": "1509f474dc7c84de0081b6aa66124027b2502128d42e44fb9410b202a538825a",
+  "executions": 648,
+  "control_steps": 77563,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 33048,
+      "simulation_attempts": 3382363,
+      "simulation_completed": 3382363,
+      "simulation_frames_attempted": 16911815,
+      "simulation_frames_completed": 16911815,
+      "reset_completed": 33048
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 32400,
+        "simulation_attempts": 3240000,
+        "simulation_completed": 3240000,
+        "simulation_frames_attempted": 16200000,
+        "simulation_frames_completed": 16200000,
+        "reset_completed": 32400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 648,
+        "simulation_attempts": 64800,
+        "simulation_completed": 64800,
+        "simulation_frames_attempted": 324000,
+        "simulation_frames_completed": 324000,
+        "reset_completed": 648
+      },
+      "CONTROL": {
+        "simulation_attempts": 77563,
+        "simulation_completed": 77563,
+        "simulation_frames_attempted": 387815,
+        "simulation_frames_completed": 387815
+      }
+    }
+  },
+  "counters": {
+    "common_prefix_pairs": 648,
+    "PRE/FACTUAL_TARGET": 536,
+    "POST/FACTUAL_TARGET": 536,
+    "common_acquisition_pairs": 486,
+    "PRE/NO_EXECUTED_TAIL": 40,
+    "POST/EARLY_END_DURING_ACQUISITION": 40,
+    "PRE/EARLY_END_BEFORE_BOUNDARY": 72,
+    "POST/EARLY_END_BEFORE_BOUNDARY": 72
+  },
+  "independent_literal_PI_commands": 70527,
+  "replay_fixed_policy_queries": 70527,
+  "new_physics": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 584563192800,
+  "examples_sha256": "92d8e85828a73a974b2a10b81b84e41c25decfa7a4f2b96a9e770277add86b1d",
+  "collection_sha256": {
+    "cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+    "events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+    "status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+    "summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+    "witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320"
+  },
+  "limitations": "No independent physics; macro replay shares unchanged primitive; literal PI/host/actuator/lifecycle are separate"
+}

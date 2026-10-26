@@ -1,0 +1,65 @@
+"""Standard Matplotlib figures from verified JSON, in a separate plot runtime."""
+from pathlib import Path
+from time import perf_counter_ns
+import hashlib,json,os,sys
+manifest=Path(sys.argv[1]).resolve()
+if len(sys.argv)>2:
+    packages=Path(sys.argv[2]).resolve();sys.path.insert(0,str(packages));os.environ['MPLCONFIGDIR']=str(packages.parent/'mpl_cache')
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib import font_manager
+import numpy as np
+base=manifest.parent;data=json.loads((base/'results/statistics.json').read_text(encoding='utf8'))
+proof=json.loads((base/'results/statistics_audit.json').read_text(encoding='utf8'))
+actual=hashlib.sha256((base/'results/statistics.json').read_bytes()).hexdigest()
+assert proof['integrity']=='PASSED' and proof['statistics_sha256']==actual
+out=base/'presentation/figures';out.mkdir(exist_ok=False);start=perf_counter_ns()
+for font in ('Microsoft YaHei','SimHei','SimSun'):
+    try:font_manager.findfont(font,fallback_to_default=False);plt.rcParams['font.family']=font;break
+    except ValueError:pass
+plt.rcParams.update({'axes.unicode_minus':False,'font.size':10,'axes.spines.top':False,'axes.spines.right':False,'svg.fonttype':'path'})
+titles={'occupancy_32':'24箱查询频率','error_32':'平均误差统计','joint_32':'误差加权频率'}
+names={'PERSISTENCE':'最近历史','COMMAND_RBF':'命令历史核岭','RATE_BLIND_RBF':'不看速率核岭','FULL_LINEAR':'完整入口线性','MARGINAL_PRODUCT':'同模型边际乘积'}
+fig,axes=plt.subplots(1,3,figsize=(15.5,5.3),layout='constrained')
+for ax,(family,title) in zip(axes,titles.items()):
+    rows=[r for r in data['comparisons'] if r['family']==family]
+    for i,r in enumerate(rows):
+        color='#17665b' if r['upper_strictly_below_zero'] else '#9d3d2b'
+        ax.hlines(i,*r['CI95'],color=color,linewidth=2);ax.scatter(r['mean'],i,color=color,s=30,zorder=3)
+    ax.axvline(0,color='#666666',linestyle='--',linewidth=1)
+    ax.set_yticks(range(len(rows)),[names[r['comparator']] for r in rows]);ax.invert_yaxis()
+    ax.set_title(title);ax.set_xlabel('预测MSE差：FULL_RBF减参考');ax.ticklabel_format(axis='x',style='sci',scilimits=(-2,2));ax.grid(axis='x',alpha=.15)
+fig.suptitle('A1移动前32步预测：固定13项比较与组自助95%区间\n左侧表示本组件预测误差更低；不是任务收益或安全证据',fontsize=12)
+fig.savefig(out/'primary_comparisons.png',dpi=170);fig.savefig(out/'primary_comparisons.svg');plt.close(fig)
+
+rows=data['complete_factual_program_results'];labels=[{'CONTINUE':'直接','VALIDATE8':'正常8步','MOVE_MEASURE':'移动测量'}[r['action']]+'\nτ='+str(r['rate']) for r in rows]
+colors=[{'CONTINUE':'#276b95','VALIDATE8':'#5b886f','MOVE_MEASURE':'#ad7546'}[r['action']] for r in rows]
+fig,axes=plt.subplots(2,1,figsize=(13,7.6),layout='constrained')
+axes[0].bar(range(len(rows)),[r['mean_deadline_loss'] for r in rows],color=colors,width=.7);axes[0].set_ylabel('平均完整截止损失（步）');axes[0].set_ylim(bottom=0)
+axes[1].bar(range(len(rows)),[100*r['success']/r['executions'] for r in rows],color=colors,width=.7);axes[1].set_ylabel('成功率（%）');axes[1].set_ylim(0,105)
+for ax in axes:ax.set_xticks(range(len(rows)),labels);ax.grid(axis='y',alpha=.15)
+fig.suptitle('独立TEST全部12个事实程序（每个54单元）\n固定程序结果；未执行最终学习获取/采用算法，不据此选TEST最优速率',fontsize=12)
+fig.savefig(out/'all_factual_programs.png',dpi=170);fig.savefig(out/'all_factual_programs.svg');plt.close(fig)
+
+fig,axes=plt.subplots(1,2,figsize=(11.5,4.6),layout='constrained')
+tasks=('push-v3','reach-v3','door-open-v3');conditions=('UNCHANGED','CHANGED')
+labels=[t+' / '+('不变' if c=='UNCHANGED' else '变化') for t in tasks for c in conditions]
+for ax,stage in zip(axes,('PRE','POST')):
+    panels={(p['task'],p['context'],p['boundary']):p for p in data['panels'] if p['stage']==stage}
+    counts=np.array([[panels[(t,c,b)]['targets']/panels[(t,c,b)]['allocated'] for b in (16,32,64)] for t in tasks for c in conditions])
+    ax.imshow(counts,vmin=0,vmax=1,cmap='Blues',aspect='auto')
+    for i,(t,c) in enumerate((t,c) for t in tasks for c in conditions):
+        for j,b in enumerate((16,32,64)):
+            p=panels[(t,c,b)];ax.text(j,i,str(p['targets'])+'/'+str(p['allocated']),ha='center',va='center',color='white' if counts[i,j]>.65 else 'black')
+    ax.set_xticks((0,1,2),('16步','32步','64步'));ax.set_yticks(range(6),labels);ax.set_title('移动前' if stage=='PRE' else '真实返回后');ax.set_xlabel('干预时点')
+fig.suptitle('全部任务/条件/时点的事实预测目标可用性\n提前结束保留为缺失；图中0表示真实数量，不是用0填补预测误差',fontsize=12)
+fig.savefig(out/'all_availability.png',dpi=170);fig.savefig(out/'all_availability.svg');plt.close(fig)
+for source in out.glob('*.svg'):
+    source.write_text('\n'.join(line.rstrip(' \t\r') for line in source.read_text(encoding='utf8').splitlines())+'\n',encoding='utf8',newline='\n')
+receipt=dict(integrity='GENERATED_FOR_VISUAL_REVIEW',statistics_sha256=actual,script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+    matplotlib_version=matplotlib.__version__,numpy_version=np.__version__,python_version=sys.version,font=plt.rcParams['font.family'],
+    artifact_sha256={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in out.iterdir() if p.is_file()},wall_ns=perf_counter_ns()-start,
+    scientific_statistics_recomputed=False,new_physics=0,new_fits=0,online_LLM_API_calls=0)
+(out/'plot_receipt.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+print(dict(integrity=receipt['integrity'],out=str(out),figures=len(receipt['artifact_sha256'])))

@@ -1,0 +1,24 @@
+{
+  "manifest_id": "1509f474dc7c84de0081b6aa66124027b2502128d42e44fb9410b202a538825a",
+  "source_git_commit": "d74cba1945e283a6c9c2c92b43d400813a8df404",
+  "driver_sha256": "7a9518def0b45a3545484f4aa3bf4581eef1ecec289a0717742bedd2f764742e",
+  "steps": [
+    "native_record_audit",
+    "train_collection",
+    "train_record_audit",
+    "forecast_training",
+    "independent_model_audit",
+    "cal_collection",
+    "cal_record_audit",
+    "cal_prediction_audit",
+    "calibration_lock",
+    "test_collection",
+    "test_record_audit",
+    "test_prediction_audit",
+    "test_statistics",
+    "independent_statistics_audit"
+  ],
+  "started_ns": 941660460655100,
+  "no_new_scientific_choices": true,
+  "new_online_LLM_API_calls": 0
+}

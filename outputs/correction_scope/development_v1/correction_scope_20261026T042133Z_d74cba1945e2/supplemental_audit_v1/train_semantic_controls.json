@@ -1,0 +1,44 @@
+{
+  "integrity": "PASSED",
+  "cohort": "TRAIN",
+  "pre_condition_pairs": 324,
+  "post_acquisition_condition_pairs": 216,
+  "post_input_changed_pairs": 176,
+  "complete_noop_physical_pairs": 54,
+  "physical_projection_omissions": [
+    "logical phase",
+    "info.episode.t wall duration",
+    "host references/timers/whole-run ledger"
+  ],
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 23851288500,
+  "new_physics": 0,
+  "new_fits": 0,
+  "new_policy_queries": 0,
+  "online_LLM_API_calls": 0,
+  "post_hoc_additional_integrity_only": true,
+  "source_git_commit": "d74cba1945e283a6c9c2c92b43d400813a8df404",
+  "script_sha256": "02bbbc6459f2d9eead205573d8a1b7f2129f8b537cbfa11f8d96587cec9fa5f7"
+}
