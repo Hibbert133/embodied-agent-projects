@@ -1,0 +1,229 @@
+{
+  "phase": "audit-models",
+  "integrity": "PASSED",
+  "wall_ns": 52908458100,
+  "result": {
+    "integrity": "PASSED",
+    "bank_sha256": "1912579773ddf0b20269d6098f7c199ed1f50432a4817435439474a202af0749",
+    "independent_neural_ledger": {
+      "fit_attempts": 9,
+      "optimizer_steps": 9000
+    },
+    "independent_ridge_refits": 9,
+    "scalar_fields": 3415296,
+    "maximum_parameter_absolute_gap": 6.619704784327496e-15,
+    "models": [
+      {
+        "fold": 0,
+        "kind": "FUTURE_MARGINAL_PRODUCT",
+        "parameter_gap": 5.918876500032866e-15,
+        "groups": [
+          3,
+          4,
+          5
+        ],
+        "pre_groups": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "fold": 0,
+        "kind": "FUTURE_RATE_MEAN",
+        "parameter_gap": 6.078471059822732e-15,
+        "groups": [
+          3,
+          4,
+          5
+        ],
+        "pre_groups": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "fold": 0,
+        "kind": "HISTORY_RECONSTRUCT",
+        "parameter_gap": 5.898059818321144e-15,
+        "groups": [
+          3,
+          4,
+          5
+        ],
+        "pre_groups": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "fold": 1,
+        "kind": "FUTURE_MARGINAL_PRODUCT",
+        "parameter_gap": 6.557254739192331e-15,
+        "groups": [
+          0,
+          1,
+          2
+        ],
+        "pre_groups": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "fold": 1,
+        "kind": "FUTURE_RATE_MEAN",
+        "parameter_gap": 6.619704784327496e-15,
+        "groups": [
+          0,
+          1,
+          2
+        ],
+        "pre_groups": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "fold": 1,
+        "kind": "HISTORY_RECONSTRUCT",
+        "parameter_gap": 5.88418203051333e-15,
+        "groups": [
+          0,
+          1,
+          2
+        ],
+        "pre_groups": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "fold": 2,
+        "kind": "FUTURE_MARGINAL_PRODUCT",
+        "parameter_gap": 5.7592819402429996e-15,
+        "groups": [
+          0,
+          1,
+          2
+        ],
+        "pre_groups": [
+          3,
+          4,
+          5
+        ],
+        "heldout": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "fold": 2,
+        "kind": "FUTURE_RATE_MEAN",
+        "parameter_gap": 5.745404152435185e-15,
+        "groups": [
+          0,
+          1,
+          2
+        ],
+        "pre_groups": [
+          3,
+          4,
+          5
+        ],
+        "heldout": [
+          6,
+          7,
+          8
+        ]
+      },
+      {
+        "fold": 2,
+        "kind": "HISTORY_RECONSTRUCT",
+        "parameter_gap": 5.009881398621019e-15,
+        "groups": [
+          0,
+          1,
+          2
+        ],
+        "pre_groups": [
+          3,
+          4,
+          5
+        ],
+        "heldout": [
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 0,
+        "lstsq_attempts": 9,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 0,
+        "lstsq": 9,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "wall_ns": 52560687900,
+    "original_literal_TRAIN_labels_reused_sha256": "a63ef33cd23b21250a792af652750db5c2b37c92a91558726d1e99b304383de7",
+    "original_literal_TRAIN_label_fields_reused": 152224,
+    "main_target_network_feature_math_disabled": true,
+    "new_physics": 0,
+    "new_policy_queries": 0,
+    "online_LLM_API_calls": 0
+  },
+  "stdout_stderr": ""
+}

@@ -1,0 +1,46 @@
+{
+  "phase": "audit-replay",
+  "integrity": "PASSED",
+  "wall_ns": 18581440900,
+  "result": {
+    "integrity": "PASSED",
+    "all_rows": 2376,
+    "original_rows_exactly_reused": 1728,
+    "new_offline_choices_checked": 648,
+    "all_selectors": 44,
+    "panels_per_selector": 18,
+    "original_replay_audit_sha256": "1d4d4c6ff91be62661699bb979dde9101c1e78a6116c42095e68db83487f5b2d",
+    "new_decisions_precede_factual_leaf_lookup": true,
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 0,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 0,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "results_sha256": "ff0be997225dcbbd4ffdcbac72b4ca3df262cc7603b17851236e72349b210cf1",
+    "replay_sha256": "8c2425e74514b78f077e468c9c70ff6dc24368022f7b583dbd592ecf20e8c626",
+    "wall_ns": 18287635100,
+    "new_physics": 0,
+    "new_fits": 0,
+    "new_policy_queries": 0,
+    "online_LLM_API_calls": 0
+  },
+  "stdout_stderr": ""
+}

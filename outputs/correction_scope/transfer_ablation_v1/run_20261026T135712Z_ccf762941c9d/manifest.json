@@ -1,0 +1,220 @@
+{
+  "protocol": "CORRECTION_TRANSFER_ABLATION_V1",
+  "source_git_commit": "ccf762941c9dfb0ca2b8be6573215f6c7e3c5f3f",
+  "config": {
+    "protocol": "CORRECTION_TRANSFER_ABLATION_V1",
+    "classification": "TRAIN_ONLY_POSTHOC_MATCHED_SUPERVISION_ABLATION",
+    "source_result_commit": "bb19bd7b2e9eabd668bda9266601e2c843bd1ca9",
+    "source_run": "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2",
+    "source_graph": "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/train_graphs.jsonl.gz",
+    "source_learning_run": "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420",
+    "source_candidate": "JOINT_SPO/TWO_STAGE",
+    "source_candidate_refits": 0,
+    "allowed_data_cohorts": [
+      "TRAIN"
+    ],
+    "controls": [
+      "FUTURE_MARGINAL_PRODUCT",
+      "FUTURE_RATE_MEAN",
+      "HISTORY_RECONSTRUCT"
+    ],
+    "model_variant_for_all_controls": "JOINT_SPO",
+    "supervision": {
+      "FUTURE_MARGINAL_PRODUCT": "keep per-rate future p,g,length; replace j by p*g, zero within-query-error covariance",
+      "FUTURE_RATE_MEAN": "mean the four factual future 50-vectors at same real RETURN, replicate to all4 heads",
+      "HISTORY_RECONSTRUCT": "reconstruct last at most32 real public historical transitions; same label for all4 heads"
+    },
+    "gamma": "same original factual-future receiver-TRAIN-only global mean as source candidate; controls do not change normalization",
+    "architecture_loss_initialization_basis_unchanged": true,
+    "model_rng_seed": 2026102701,
+    "steps": 1000,
+    "learning_rate": 0.01,
+    "gradient_norm_clip": 10,
+    "ridge": 0.01,
+    "auxiliary_loss_weight": 1,
+    "folds": [
+      {
+        "receiver": [
+          3,
+          4,
+          5
+        ],
+        "precritic": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          0,
+          1,
+          2
+        ]
+      },
+      {
+        "receiver": [
+          0,
+          1,
+          2
+        ],
+        "precritic": [
+          6,
+          7,
+          8
+        ],
+        "heldout": [
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "receiver": [
+          0,
+          1,
+          2
+        ],
+        "precritic": [
+          3,
+          4,
+          5
+        ],
+        "heldout": [
+          6,
+          7,
+          8
+        ]
+      }
+    ],
+    "scientific_neural_fits": 9,
+    "scientific_neural_updates": 9000,
+    "scientific_ridge_fits": 9,
+    "independent_neural_refits": 9,
+    "independent_neural_updates": 9000,
+    "independent_ridge_refits": 9,
+    "independent_parameter_absolute_tolerance": 5e-08,
+    "all_actual_choices_must_agree": true,
+    "new_offline_selectors": 12,
+    "source_selectors_immutable": 32,
+    "total_selectors": 44,
+    "units": 54,
+    "source_offline_selections_reused": 1728,
+    "new_offline_selections": 648,
+    "total_offline_selections": 2376,
+    "primary": "fixed source JOINT_SPO/TWO_STAGE integer total loss below each3 new TWO_STAGE control totals over all54 units",
+    "failed_primary_consequence": "close this joint-specific auxiliary claim/version; no retune, extra sample or favorable secondary rescue; broader A question remains open",
+    "passed_primary_consequence": "descriptive distinction in this finite learning setup only; not necessity theorem, independent robot qualification or novelty",
+    "failure_handling": "retain failure and partial counters; no automatic retry/refit or hyperparameter/checkpoint selection",
+    "old_CAL_TEST_used": false,
+    "new_environment_steps": 0,
+    "new_all_resets": 0,
+    "new_physical_frames": 0,
+    "new_policy_queries": 0,
+    "new_robot_seeds": [],
+    "new_response_or_inverse_models": 0,
+    "new_low_level_policy_training": 0,
+    "online_LLM_API_calls": 0,
+    "source_TRAIN_cost": {
+      "executions": 648,
+      "control_steps": 77563,
+      "all_resets": 33048,
+      "physical_frames": 16911815
+    },
+    "source_learning_cost": {
+      "neural_fits": 15,
+      "neural_updates": 15000,
+      "ridge_fits": 15,
+      "independent_neural_refits": 15,
+      "independent_neural_updates": 15000,
+      "independent_ridge_refits": 15
+    },
+    "new_physical_collection_authorized_by_result": false,
+    "algorithm_novelty_established": false,
+    "publication_goal_complete": false
+  },
+  "source_sha256": {
+    "src/analysis/correction_auxiliary_targets_v1.py": "849621c0be4442186861a2df15071bf9896b431938503a0f7f160227a1dc3872",
+    "src/analysis/correction_transfer_ablation_v1.py": "86ca1a8134ccf18893b04b8c3d043a6eee6cd7fefe0df39b260c173dc288c9eb",
+    "src/analysis/correction_transfer_ablation_independent_v1.py": "e6c6674665dd3bbba0b6913d06a3799103853f85c06498b75f262ed016cb8bf9",
+    "scripts/run_correction_transfer_ablation_v1.py": "d68d2e501049ea75f646c6323a7ca47bbefc5e99324f4b3bc71eb15a551f27ad",
+    "tests/test_correction_transfer_ablation_v1.py": "7a419aff3625895570da0f09ae304f9716bd49d13955f035d75d9f30e4c51a3f",
+    "configs/movement_task/correction_transfer_ablation_v1.json": "55120cec9d595219a61c5cbdb69e16cfbce89ac458a5dd829e0b8a649ba34756",
+    "docs/protocols/correction_transfer_ablation_v1_zh.md": "80baa930d59f8f61a9bb557bdedcb4d8ac3f5cada257ac1bd29d7f0de3a41451",
+    "docs/research/correction_transfer_ablation_decision_v1_zh.md": "1c88e9fe6c0bd91443af27cbb78533d01151f4dcd97b0b812adfc9ef18fd5803",
+    "outputs/correction_scope/transfer_ablation_v1/validate_freeze.py": "b3a03db900b817d35fef42b5a7b437635697a150cb32994f8fb58c23745c4592",
+    "src/analysis/correction_scope_risk_reference_v1.py": "53160956e586f6050738c65b32027811b6907695611b39c421cf4bf54250f4bf",
+    "src/analysis/correction_scope_risk_reference_independent_v1.py": "6916bc6d280a21ccbf74686da3c18b307c71581acfe61c5774cc699629c7182b",
+    "src/analysis/correction_scope_learning_v1.py": "837f8f2dab162059dcc97130400a9611ef909b2405b4855ccc98a6f7058aff81",
+    "src/analysis/correction_scope_independent_v1.py": "4caff49aea58b62d921b0cd8c29563318270a2b45fcb25fbf4d90122528f68b3",
+    "src/analysis/correction_scope_io_v1.py": "c128d8ea9e36e7c4535939b7f538f0dac33d8d7d81c0855aa2b994b5361678dc",
+    "src/analysis/response_qualification_io_v1.py": "035a31658a2420286acfa47b01365dc623f820eab6d57badc3e54da44ba06e17",
+    "src/analysis/release_learning_guard_v1.py": "3ab9ff178783caed37e9128e7fc7b82e2e86a58fc0b8a442bcafc3c3391ae4f4",
+    "src/probe/correction_scope_model_v1.py": "4bee69b0990908551d657ede017d303b2084bc448ec9db7d87c2c2d2bdc7cf1c",
+    "src/analysis/correction_transfer_learning_v1.py": "96a2f0cc8609ce36c8cfc1268230ab2fa068612497daab9c34e788d3e896e237",
+    "src/analysis/correction_transfer_independent_v1.py": "2e958646bcfe7c7d6df3d2ec6c7fefd1c4664d14c4ea469f97cf925b4948022f",
+    "src/analysis/transfer_risk_math_v1.py": "7c40bcb49433276ccd3fe28e9849cde9397564ddfd815637ac8354e217ed6358",
+    "src/analysis/transfer_risk_independent_math_v1.py": "311f6a790a4a6a0837b2070b28a135bf35d3a1937e61e690d02bf1f0dee6eb1e"
+  },
+  "input_sha256": {
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/manifest.json": "b0fda6e14035c66db1f33f1024a067db224889aa56cc5998bb11f8ec36e4aa82",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/audit.json": "d7dbbf9c4c19e8ee4d24c5e7eca2830b4c886f6f5e831298f035bf9ded641eb2",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/examples.jsonl.gz": "92d8e85828a73a974b2a10b81b84e41c25decfa7a4f2b96a9e770277add86b1d",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/learning/model_audit.json": "be5a67de201ce6c74a6a5d690ecbb8c6e194a6858b23490b88293aa79f9b0409",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/results/statistics.json": "d567b1a827b11edb1237b20f59d554fc1cf1a91733adc58b8b614e370c7826a4",
+    "outputs/correction_scope/common_state_audit_v1/train.json": "8cb2f53791324c7b98be06e28ff1f8699051d775ffa41bc981609bcb464757c0",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/train_graphs.jsonl.gz": "15d226d79658ed75c246ccbff940ddbb343e9d224186e6ece6de5e12b7af13c7",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/model_audit.json": "d6803d984e0333a57a4c22f0671327f6c8f3f0ade64d874049f3b86a760a0a85",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/manifest.json": "8dce7f66ae2462e5297838786c30259914030b97f0917f6edb66dc1536c0ab10",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/manifest.json": "a91b19a005de7ff654a1546e5f9be9405fcc66464e88ed56f7ef393d4005576d",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/bank.json": "3126c95c9377b9e201bb5b0a2fbef28b51e8c6f547fdab0ed4b4bfcf6e92c0eb",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/model_audit.json": "a63ef33cd23b21250a792af652750db5c2b37c92a91558726d1e99b304383de7",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/replay_audit.json": "1d4d4c6ff91be62661699bb979dde9101c1e78a6116c42095e68db83487f5b2d",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/fit_receipt.json": "b9d70f3aec579c1430b14e83d795dd2715f7bda31c977573faf313c8f64fdfc5",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/results.json": "586637a855823e8fdfe8b292afeab9fb2d79abeeda10899fc5a76513e7ff337d",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/selected_rows.json": "20a3b5329a19d7fc7197ee71a81343a7ccb0c67b0d559f190a24ac0704c70c5b",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/replay.jsonl": "1d64564b38e8bf404d36324dd7f48f2a9ac590778ee122429f4bfebd980676d4",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/development_decision.json": "050b7993328cb0a9dc7944f50ff729ca9bdde2d4101215aecf93a297e2e18d93",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_0_DIRECT_MSE.npz": "e6885e3163b55df94b0fdb1dea9e998543772efa4b6e107d73aa921c38994a01",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_0_DIRECT_MSE.npz": "07e4751217f9c1d952f891989b0be64ac7c2c12f239a7c47c42689a18ba85a88",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_0_DIRECT_SPO.npz": "f7ad0e028d224548867a642cf023c2edfd60cbfc1a307a3bab76bc3880a1f7a4",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_0_DIRECT_SPO.npz": "e3cdc02b67cc4779bd3f604d8023c58830931dac6e70f4fa9e8ca558d98ef527",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_0_EMPIRICAL_REWEIGHT_SPO.npz": "3db836aa6acc0db479f82d1f451aaf93a02f7ed8faee8dedf07caf389b46f369",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_0_EMPIRICAL_REWEIGHT_SPO.npz": "e3cdc02b67cc4779bd3f604d8023c58830931dac6e70f4fa9e8ca558d98ef527",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_0_CONDITIONAL_SPO.npz": "8e104118b6ef431fd713b2ff07d2161404795c91ea880a03264be617ebb71e48",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_0_CONDITIONAL_SPO.npz": "f1166194e585e5cacfe8aed57e6a62cb4ca69a2015c165ec29a7a32c32f5e4af",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_0_JOINT_SPO.npz": "7fe7cc14b7c502895f09012ff4a980b71d9286dd22da6e0b8da1302436bee576",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_0_JOINT_SPO.npz": "92a7778e06a66eeb5eff2a67463d424c179615e9509dfd266694d0c2eaca45a1",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_1_DIRECT_MSE.npz": "df2866227759b6f96d531626136b2000c52012ce102f3062a1f7d00defe2876a",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_1_DIRECT_MSE.npz": "e61b78c2a5b3334d6f97519de3f5ef29104f85828105d3bd311cc60d2b79947e",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_1_DIRECT_SPO.npz": "c54186a4bda01c773fd0b5d75d9ac16de95560f900a7a035cfdeed17505f0704",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_1_DIRECT_SPO.npz": "c750d505fd4e317a84ca09c3fd695a8cb0dfb691583eac952232452841edb932",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_1_EMPIRICAL_REWEIGHT_SPO.npz": "5581480da1950aaaa82c8ec71a2bdee6f3870a4682acf716142c684a9da1d882",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_1_EMPIRICAL_REWEIGHT_SPO.npz": "e3cdc02b67cc4779bd3f604d8023c58830931dac6e70f4fa9e8ca558d98ef527",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_1_CONDITIONAL_SPO.npz": "8b07ca86cdc7f7bc984a303a5ba7bbad994441b55b9c78a193d866b857150298",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_1_CONDITIONAL_SPO.npz": "b040bdc8799159b44d6b5909fdb5e41068042b04c22443d7e028ba2e57037fee",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_1_JOINT_SPO.npz": "782522d094712e66af2ecb23665c9f4b5d3085597cce3e36493c2646bd342882",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_1_JOINT_SPO.npz": "ccf89e553da0310c5437826dd76841e7e3501c5e5e50f98642f05f714058ac7c",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_2_DIRECT_MSE.npz": "43172a7a2f8f84e86fdf508083488468481e05b46132fcf79d6cd046f3db8008",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_2_DIRECT_MSE.npz": "d7c1260dfd58f18fcbcfad4b13d6bc3d352b50037bad3c3f6bcdf91c304f517b",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_2_DIRECT_SPO.npz": "3e0d02013a251fcd652749103cb490b1fe4a24e99a470e4d127e07d13be35bc7",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_2_DIRECT_SPO.npz": "579e636094e428f6f4679c294e24ec474c547ee4879937a58a10d4fc3b61ca7c",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_2_EMPIRICAL_REWEIGHT_SPO.npz": "eece295c36e0f5c2eb2e588fb0e83b17010c50700defddc5eb501c9355202302",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_2_EMPIRICAL_REWEIGHT_SPO.npz": "3e7e45f738b2d63702306bcf7fdafccada7a747a900c659f7c384e958e04871a",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_2_CONDITIONAL_SPO.npz": "4637d86aff8e2a6038769de1e1f5786fd1bf9ccad800d06cbcaa35ec31988b7f",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_2_CONDITIONAL_SPO.npz": "c56b963621c400073f3de296113d936d7d9cc7d7ef586cf60a948a201c523251",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_2_JOINT_SPO.npz": "9254bfb926b7a65176d06412dd08ebda55cce1bd407025bcc6f5ff115d6e9ec7",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_2_JOINT_SPO.npz": "4b7c1da17a142f24ad80ded9655039f3b1320159bd525fb829e819e058cf7dc5",
+    "configs/movement_task/correction_transfer_learning_v1.json": "54eb1f4d67a8e3a4d5d05d79d80ca9df603fbbbb36c3ca5aaa07df82bd4ce9b9",
+    "outputs/correction_scope/transfer_learning_v1/freeze_validation/complete.json": "fabf3074889a50d80d37f2ebb8cd91ab1d119f42e231bfd16e2aafcf8d5164d3"
+  },
+  "classification": "TRAIN_ONLY_POSTHOC_MATCHED_SUPERVISION_ABLATION",
+  "source_candidate_unchanged": true,
+  "CAL_TEST_training_or_evaluation": false,
+  "new_physics": 0,
+  "online_LLM_API_calls": 0,
+  "manifest_id": "a46ab426a2db62b3c044ed0c2385205e8b844db0a9a531b667486283fd744df0"
+}
