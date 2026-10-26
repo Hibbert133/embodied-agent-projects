@@ -1,0 +1,29 @@
+{
+  "protocol": "STATE_COUPLED_ACTUATION_DESIGN_V1",
+  "status": "DESIGN_ONLY_NO_ROBOT_ALLOCATION",
+  "classification": "CONSTRUCTED_OPERATOR_AND_MECHANISM_REVIEW_NOT_ROBOT_EVIDENCE",
+  "kinds": ["FLAT_LEFT", "FLAT_RIGHT", "SMOOTH_STATE"],
+  "positions": [-0.2, -0.05, 0.0, 0.05, 0.2],
+  "xy_commands": [-1.0, -0.25, 0.25, 1.0],
+  "z_commands": [-1.0, 0.0, 1.0],
+  "gripper_commands": [-1.0, 1.0],
+  "noise_rows_for_arithmetic_only": [[0.0, 0.0, 0.0], [0.05, -0.05, 0.05], [-0.2, 0.2, -0.2]],
+  "fixture_spec": {
+    "kind": "SMOOTH_STATE", "axis": 0, "center": 0.0, "half_width": 0.1,
+    "left": {"matrix_xy": [[1.0, 0.12], [-0.08, 0.9]], "bias_xy": [0.12, -0.08], "deadzone_xy": [0.0, 0.0]},
+    "right": {"matrix_xy": [[0.8, -0.17], [0.15, 1.1]], "bias_xy": [-0.12, 0.08], "deadzone_xy": [0.0, 0.0]}
+  },
+  "constructed_rows": 4320,
+  "independent_scalar_absolute_tolerance": 0.0000005,
+  "legacy_flat_comparison": "FLOAT32_BYTE_EXACT",
+  "real_workspace_axis_center_width": null,
+  "actual_robot_episode_seeds": [],
+  "native_collector": null,
+  "TRAIN_CAL_TEST_allocation": null,
+  "new_environment_interactions": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "algorithm_novelty_established": false,
+  "task_gain_qualified": false,
+  "publication_goal_complete": false
+}

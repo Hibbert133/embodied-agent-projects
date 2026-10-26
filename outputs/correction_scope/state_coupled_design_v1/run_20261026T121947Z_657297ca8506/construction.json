@@ -1,0 +1,66 @@
+{
+  "integrity": "FOR_INDEPENDENT_CONSTRUCTED_AUDIT",
+  "manifest_id": "cb748659b408b545602a34b205885b56d2b68db0c779f5e6511e72a20e199579",
+  "constructed_rows": 4320,
+  "records_sha256": "d5ddade149f02e5a6dc9688b3499869bffdc2a4bf41e6eff7ae5619281349497",
+  "adoption_counterexample": [
+    {
+      "label": "SMALL",
+      "initial_x": -0.4,
+      "command_x": 0.01,
+      "initial_weight": 0.0,
+      "initial_prediction_error": 0.0,
+      "invented_kinematic_next_x": -0.2700000047683716,
+      "next_weight": 0.0,
+      "next_prediction_error": 0.0,
+      "endpoint_matrix_determinants": [
+        1.0,
+        1.0
+      ],
+      "not_a_robot_or_task_result": true
+    },
+    {
+      "label": "LARGE",
+      "initial_x": -0.4,
+      "command_x": 0.5,
+      "initial_weight": 0.0,
+      "initial_prediction_error": 0.0,
+      "invented_kinematic_next_x": 0.22000000476837156,
+      "next_weight": 1.0,
+      "next_prediction_error": -0.24000000953674316,
+      "endpoint_matrix_determinants": [
+        1.0,
+        1.0
+      ],
+      "not_a_robot_or_task_result": true
+    }
+  ],
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 3290665800,
+  "not_MetaWorld_or_task_outcomes": true,
+  "new_physics": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0
+}

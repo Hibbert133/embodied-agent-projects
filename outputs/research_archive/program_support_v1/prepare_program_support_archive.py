@@ -1,0 +1,58 @@
+from pathlib import Path
+import json,subprocess
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects')
+def git(*args):return subprocess.check_output(['git','-c','maintenance.auto=false','-c','gc.auto=0',*args],cwd=ROOT).decode().strip()
+source=git('rev-parse','HEAD');assert source=='f61b539f5f6a0617120811eebb6f378f835b4a54'
+assert json.loads((ROOT/'outputs/correction_scope/program_support_v1/result_validation/complete.json').read_text(encoding='utf8'))['integrity']=='PASSED'
+out=ROOT/'outputs/research_archive/program_support_v1';out.mkdir(exist_ok=False)
+text=(ROOT/'outputs/research_archive/trace_value_v1/archive_checkpoint.py').read_text(encoding='utf8')
+replacements={
+    "PARENT='993bb1d78c9b1948c591be36eaaa90d9a12ced54'":"PARENT='8840aed22cf94967ea1478b36aefd9f4cba9db76'",
+    "SOURCE='34ac29d2298fbcabcdf69720bfd6ad13334c547a'":f"SOURCE='{source}'",
+    'outputs/research_archive/risk_reference_v1/catalog.json':'outputs/research_archive/trace_value_v1/catalog.json',
+    'research_archive_build_trace_value_20261026_34ac29d':'research_archive_build_program_support_20261026_'+source[:7],
+    'ARCHIVE_FILE_CATALOG_TRACE_VALUE_20261026.json':'ARCHIVE_FILE_CATALOG_PROGRAM_SUPPORT_20261026.json',
+    'Archive audited fixed-receiver trace ablation 34ac29d; negative result, no new physics':
+        'Archive complete factual acquisition support '+source[:7]+'; no new physics or fits'
+}
+for a,b in replacements.items():assert a in text;text=text.replace(a,b)
+start=text.index("    note=f'''");end=text.index('    extras=',start)
+note="""    note=f'''# 最新阶段存档：A线完整事实程序支持空间审计
+
+来源为已检查本地结果 {SOURCE}，父存档 {PARENT}；普通快进，无强推/合并。
+本轮先在54295d2冻结实现、配置、数组检查及独立审计，再计算真实TRAIN统计。
+全部新增内容是事后描述性分析，不是新策略部署、算法资格或CCF A贡献完成。
+新增环境创建/重置/控制步/物理帧、底层政策查询、机器人种子、模型拟合和在线
+LLM API均为零。只解析TRAIN，不以CAL/TEST调参；旧13项比较与所有失败保留。
+
+完整人口9组54单元648事实叶，12个固定程序、144程序对、18任务条件时点格，
+另核对旧540行选择。第二实现从原始TRAIN案例/输入重建，主函数禁用，20227
+字段整数/Fraction复算通过。字段/7776配对不是新测试或独立样本。
+
+付费家族的事后最小P优于免费家族事后最小F为4/54，差于为42/54，相同8/54。
+固定继续0.5平均99.425926步；免费包络F80.907407，付费包络P119.259259，
+全部包络H72.888889。F减H仅8.018519步，433正向实现步数中415来自同一组。
+一个免费全部失败案例贡献352步。不能把事后选出的4例当可提前识别的收益。
+
+F/P/H都是保存有限表的包络，不是可实现控制器、总体期望界或纯信息价值。
+全部正负/平局、39个来源任务失败、提前结束和并列成功歧义均登记；不筛任务。
+没有据此训练新门控、换头救回前轮接收者、复活旧ARX/SS或自动开启新采集。
+来源648次/77563控制步/33048全部重置/16911815物理帧单列，未再次发生。
+
+10项新数组检查通过，2093项源码绑定复用，共2103项独特检查，旧六组张量另列。
+首次5个测试错误是异常类型断言问题，失败/日志/源码快照保留；无真实新采集。
+编译、依赖、秘密、普通/暂存差异和实际Git对象/磁盘字节检查通过。
+中文报告：reports/correction_program_support_v1_zh.md。
+查新补充SPO、CPC及unfalsified control定位，明确部分阅读和无法获取原PDF。
+后续仍缺具体机制区别、强组合参考、独立自身时序任务优势及消融。
+
+来源树共{len(catalog)}文件，发布{sum(r['published'] for r in catalog)}个。
+ARCHIVE_FILE_CATALOG_PROGRAM_SUPPORT_20261026.json列出全部已提交来源路径、
+大小、Git对象和SHA-256。原始大记录、二进制分片、恢复副本和完整历史留在
+本地；克隆本分支不含全部原始记录。按类型/大小排除，不按成败；本地索引保留。
+相同Git对象复用此前哈希/秘密检查，新增发布对象实际读取扫描。没有推送含
+超大历史对象的普通研究分支，没有删除或改写本地历史。
+'''
+"""
+text=text[:start]+note+text[end:];compile(text,str(out/'archive_checkpoint.py'),'exec')
+(out/'archive_checkpoint.py').write_text(text,encoding='utf8',newline='\n');print(out/'archive_checkpoint.py')

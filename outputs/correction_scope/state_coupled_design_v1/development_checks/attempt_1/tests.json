@@ -1,0 +1,45 @@
+{
+  "integrity": "PASSED",
+  "tests_run": 12,
+  "failures": 0,
+  "errors": 0,
+  "log": "test_adoption_changes_future_model_applicability (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_collection_is_not_allocated (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_flat_modes_match_legacy_float32_bytes (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_legal_matrix_does_not_prevent_saturation_collapse (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_parameter_palette_and_invalid_scale (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_private_and_future_fields_rejected (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_pure_function_does_not_mutate_inputs (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_separate_scalar_stage_calculation (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_smoothstep_known_interior_and_plateaus (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_terminal_and_budget_rejected (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_transform_then_noise_then_clip (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\ntest_xyz_noise_and_gripper_semantics (test_state_coupled_actuation_design_v1.SpatialDesignTests) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.041s\n\nOK\n",
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/state_coupled_actuation_design_v1.py": "4fb5e10acc3ec295ea714fa9854c9927b50c124ddf1f1bc3245df199f6d56473",
+    "src/analysis/state_coupled_actuation_independent_v1.py": "c2ff16d1cef2f1c7cb68a157d673750ac84a11eda0a0ab7dd34635a1dfde851c",
+    "tests/test_state_coupled_actuation_design_v1.py": "4f03d4c3b5a712d57c47bef9a1663eda699dbba455c3d820d115b979ae08ad72",
+    "scripts/verify_state_coupled_actuation_design_v1.py": "b692e7fc3bc9ee6d8ef56a8db009e8ede08b6b6b022ba6bb5c3e3f1f4b78f1a1",
+    "configs/movement_task/state_coupled_actuation_design_v1.json": "0489443ebd76fb887371f8003832c9d8ce938cccf209d0984056799039fc1b71",
+    "docs/protocols/state_coupled_actuation_design_v1_zh.md": "28dbdfff26f5a47a5ba1f27cb24878d34f8c0791ad017c155ef81ed0fcf40603",
+    "docs/research/state_coupled_validity_decision_v1_zh.md": "862fdaccbd1a6910c343d4a972d1a27756327982d1b3acc00208b77d84aa3d96",
+    "outputs/correction_scope/state_coupled_design_v1/validate_freeze.py": "0af0c3387e29d0cd1cfc7e10349b83264341fec72f193ca47a815b4a4f3a6e76",
+    "src/rollout/chronological_faults.py": "21e58285c6af138be586c9cc55b1a8373e6d53aadf1ad79e27b229c40c74608f"
+  },
+  "wall_ns": 1019482300,
+  "new_physics": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0
+}

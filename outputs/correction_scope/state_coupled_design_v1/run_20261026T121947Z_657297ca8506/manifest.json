@@ -1,0 +1,130 @@
+{
+  "protocol": "STATE_COUPLED_ACTUATION_DESIGN_V1",
+  "status": "DESIGN_ONLY_NO_ROBOT_ALLOCATION",
+  "source_git_commit": "657297ca850693fcdca0efabca8973c4cd3bcb18",
+  "config": {
+    "protocol": "STATE_COUPLED_ACTUATION_DESIGN_V1",
+    "status": "DESIGN_ONLY_NO_ROBOT_ALLOCATION",
+    "classification": "CONSTRUCTED_OPERATOR_AND_MECHANISM_REVIEW_NOT_ROBOT_EVIDENCE",
+    "kinds": [
+      "FLAT_LEFT",
+      "FLAT_RIGHT",
+      "SMOOTH_STATE"
+    ],
+    "positions": [
+      -0.2,
+      -0.05,
+      0.0,
+      0.05,
+      0.2
+    ],
+    "xy_commands": [
+      -1.0,
+      -0.25,
+      0.25,
+      1.0
+    ],
+    "z_commands": [
+      -1.0,
+      0.0,
+      1.0
+    ],
+    "gripper_commands": [
+      -1.0,
+      1.0
+    ],
+    "noise_rows_for_arithmetic_only": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.05,
+        -0.05,
+        0.05
+      ],
+      [
+        -0.2,
+        0.2,
+        -0.2
+      ]
+    ],
+    "fixture_spec": {
+      "kind": "SMOOTH_STATE",
+      "axis": 0,
+      "center": 0.0,
+      "half_width": 0.1,
+      "left": {
+        "matrix_xy": [
+          [
+            1.0,
+            0.12
+          ],
+          [
+            -0.08,
+            0.9
+          ]
+        ],
+        "bias_xy": [
+          0.12,
+          -0.08
+        ],
+        "deadzone_xy": [
+          0.0,
+          0.0
+        ]
+      },
+      "right": {
+        "matrix_xy": [
+          [
+            0.8,
+            -0.17
+          ],
+          [
+            0.15,
+            1.1
+          ]
+        ],
+        "bias_xy": [
+          -0.12,
+          0.08
+        ],
+        "deadzone_xy": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "constructed_rows": 4320,
+    "independent_scalar_absolute_tolerance": 5e-07,
+    "legacy_flat_comparison": "FLOAT32_BYTE_EXACT",
+    "real_workspace_axis_center_width": null,
+    "actual_robot_episode_seeds": [],
+    "native_collector": null,
+    "TRAIN_CAL_TEST_allocation": null,
+    "new_environment_interactions": 0,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0,
+    "algorithm_novelty_established": false,
+    "task_gain_qualified": false,
+    "publication_goal_complete": false
+  },
+  "source_sha256": {
+    "src/analysis/state_coupled_actuation_design_v1.py": "4fb5e10acc3ec295ea714fa9854c9927b50c124ddf1f1bc3245df199f6d56473",
+    "src/analysis/state_coupled_actuation_independent_v1.py": "c2ff16d1cef2f1c7cb68a157d673750ac84a11eda0a0ab7dd34635a1dfde851c",
+    "tests/test_state_coupled_actuation_design_v1.py": "4f03d4c3b5a712d57c47bef9a1663eda699dbba455c3d820d115b979ae08ad72",
+    "scripts/verify_state_coupled_actuation_design_v1.py": "b692e7fc3bc9ee6d8ef56a8db009e8ede08b6b6b022ba6bb5c3e3f1f4b78f1a1",
+    "configs/movement_task/state_coupled_actuation_design_v1.json": "0489443ebd76fb887371f8003832c9d8ce938cccf209d0984056799039fc1b71",
+    "docs/protocols/state_coupled_actuation_design_v1_zh.md": "28dbdfff26f5a47a5ba1f27cb24878d34f8c0791ad017c155ef81ed0fcf40603",
+    "docs/research/state_coupled_validity_decision_v1_zh.md": "862fdaccbd1a6910c343d4a972d1a27756327982d1b3acc00208b77d84aa3d96",
+    "outputs/correction_scope/state_coupled_design_v1/validate_freeze.py": "0af0c3387e29d0cd1cfc7e10349b83264341fec72f193ca47a815b4a4f3a6e76",
+    "src/rollout/chronological_faults.py": "21e58285c6af138be586c9cc55b1a8373e6d53aadf1ad79e27b229c40c74608f"
+  },
+  "source_legacy_math_sha256": "21e58285c6af138be586c9cc55b1a8373e6d53aadf1ad79e27b229c40c74608f",
+  "robot_data_read": false,
+  "new_physics": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "manifest_id": "cb748659b408b545602a34b205885b56d2b68db0c779f5e6511e72a20e199579"
+}
