@@ -1,0 +1,41 @@
+from pathlib import Path
+from time import perf_counter_ns
+import os,sys
+HERE=Path(__file__).parent;os.environ['MPLCONFIGDIR']=str(HERE/'mpl_cache')
+sys.path.insert(0,str(HERE/'correction_scope_plotting_v1/packages'))
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import numpy as np
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects');sys.path.insert(0,str(ROOT))
+from src.analysis import correction_transfer_learning_v1 as m
+io=m.io;path=Path(sys.argv[1]).resolve();out=path.parent/'presentation/figures_v2';out.mkdir(parents=True,exist_ok=False)
+r=io.read(path.parent/'results.json');assert io.read(path.parent/'replay_audit.json')['integrity']=='PASSED';start=perf_counter_ns()
+plt.rcParams.update({'font.family':'Microsoft YaHei','font.size':10,'axes.unicode_minus':False,'svg.fonttype':'none'})
+colors=['#3979ae','#f1a340','#6c9b67','#9c77b5','#cf625c'];fig,ax=plt.subplots(1,2,figsize=(14,9),gridspec_kw={'width_ratios':[1.5,1]})
+labels=[];loss=[];success=[];barcolors=[]
+names=dict(CONTINUE='直接继续',VALIDATE8='8步继续验证',MOVE_MEASURE='移动后测量',TWO_STAGE='两阶段选择')
+for i,v in enumerate(m.VARIANTS):
+    for action in (*m.ACTIONS,'TWO_STAGE'):
+        s=r['selectors'][v+'/'+action];labels.append(v+' / '+names[action]);loss.append(s['mean_loss']);success.append(s['success']);barcolors.append(colors[i])
+y=np.arange(20);ax[0].barh(y,loss,color=barcolors);ax[0].set_yticks(y,labels);ax[0].invert_yaxis();ax[0].set_xlabel('完整截止损失（步，越低越好）')
+base=r['selectors']['FIXED/CONTINUE/0.5']['mean_loss'];best=min(r['selectors'][k]['mean_loss'] for k in r['selectors'] if k.startswith('FIXED/'))
+ax[0].axvline(base,color='#444',ls='--',label='固定CONTINUE0.5');ax[0].axvline(best,color='#19714f',ls=':',label='全部12固定程序中的最低均值（事后描述）')
+handles,legend_labels=ax[0].get_legend_handles_labels();fig.legend(handles,legend_labels,fontsize=9,loc='upper center',bbox_to_anchor=(.5,.95),ncol=2)
+ax[0].set_xlim(0,max(loss)*1.24)
+for i,(l,s) in enumerate(zip(loss,success)):ax[0].text(l+1,i,f'{l:.1f}；{s}/54',va='center',fontsize=8)
+for i,v in enumerate(m.VARIANTS):
+    s=r['selectors'][v+'/TWO_STAGE'];d=[s['groups'][str(g)]-r['selectors']['FIXED/CONTINUE/0.5']['groups'][str(g)] for g in range(9)]
+    ax[1].plot(range(9),d,'o-',ms=4,lw=1,color=colors[i],label=v)
+ax[1].axhline(0,color='#333',lw=1);ax[1].set_xticks(range(9));ax[1].set_xlabel('完整独立来源组编号（每组6单元）');ax[1].set_ylabel('两阶段方法 − 固定CONTINUE0.5损失（步）')
+ax[1].legend(fontsize=8,loc='best');ax[1].grid(alpha=.15)
+fig.suptitle('旧TRAIN上的组留出开发：辅助预测是否改善完整任务决策？',fontsize=15)
+fig.text(.5,.012,'事后描述性分析；三折训练重叠；零新环境/API；不是独立部署、统计显著性或新颖性证据。',ha='center',fontsize=10)
+fig.tight_layout(rect=(0,.04,1,.90))
+for ext in ('png','svg'):fig.savefig(out/('learning_comparison.'+ext),dpi=160)
+plt.close(fig)
+p=out/'learning_comparison.svg';p.write_text('\n'.join(line.rstrip() for line in p.read_text(encoding='utf8').splitlines())+'\n',encoding='utf8',newline='\n')
+io.write(out/'plot_receipt.json',dict(integrity='FOR_ACTUAL_VISUAL_REVIEW',result_sha256=io.sha(path.parent/'results.json'),
+    artifact_sha256={p.name:io.sha(p) for p in out.iterdir() if p.suffix in ('.png','.svg')},matplotlib_version=matplotlib.__version__,
+    numpy_version=np.__version__,wall_ns=perf_counter_ns()-start,new_physics=0,new_fits=0,online_LLM_API_calls=0))
+print(str(out/'learning_comparison.png'))

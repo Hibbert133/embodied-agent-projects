@@ -1,0 +1,132 @@
+"""Synthetic arrays and saved-node fixtures only; zero physics/API."""
+from copy import deepcopy
+from importlib.util import spec_from_file_location,module_from_spec
+from pathlib import Path
+from unittest.mock import patch
+import unittest
+import numpy as np
+from src.analysis import correction_transfer_learning_v1 as m
+from src.analysis import correction_transfer_independent_v1 as q
+from src.analysis import transfer_risk_math_v1 as n
+from src.analysis import transfer_risk_independent_math_v1 as independent
+
+spec=spec_from_file_location('transfer_public_fixture',Path(__file__).parent/'test_correction_scope_risk_reference_v1.py')
+fixture=module_from_spec(spec);spec.loader.exec_module(fixture)
+SYNTHETIC_LEDGER={}
+
+
+def data():
+    r=np.random.default_rng(823);p=r.uniform(.1,1,(3,4,24));p/=p.sum(2,keepdims=True)
+    err=r.uniform(.05,2,(3,4,24));j=p*err;y=np.concatenate((p,j,j.sum(2,keepdims=True),np.ones((3,4,1))*.75),axis=2)
+    return dict(phi=r.normal(0,.2,(3,5)),historical=r.uniform(.05,2,(3,24)),known=r.integers(0,2,(3,24)).astype(float),
+        cost=np.array([[.11,.7,.4,.5],[.6,.1,.9,.5],[.8,.7,.2,.6]]),target=y,weights=np.array([.25,.25,.5]),gamma=.9)
+
+
+def compare(variant):
+    d=data();a=n.initialize(5,78);loss,g,z=n.objective(a,d,variant);expected,h,t=independent.evaluate(a,d,variant)
+    np.testing.assert_allclose(loss,expected,atol=2e-12,rtol=2e-12)
+    for k in n.PARAMS:np.testing.assert_allclose(g[k],h[k],atol=2e-12,rtol=2e-12)
+    for k in ('scores','p','j','g','length','missing'):np.testing.assert_allclose(z[k],t[k],atol=2e-12,rtol=2e-12)
+
+
+class TransferTests(unittest.TestCase):
+    def test_direct_mse_independent_derivative(self):compare('DIRECT_MSE')
+    def test_spo_independent_derivative(self):compare('DIRECT_SPO')
+    def test_empirical_independent_derivative(self):compare('EMPIRICAL_REWEIGHT_SPO')
+    def test_conditional_independent_derivative(self):compare('CONDITIONAL_SPO')
+    def test_joint_independent_derivative(self):compare('JOINT_SPO')
+
+    def test_all_objectives_finite_difference(self):
+        coordinates=(('w1',(1,3)),('w2',(2,4)),('b2',(25,)),('b2',(48,)),('b2',(49,)),('wr',(6,2)),('br',(3,)))
+        for v in n.VARIANTS:
+            d=data();a=n.initialize(5,78);_,g,_=n.objective(a,d,v)
+            for key,index in coordinates:
+                value=a[key][index];a[key][index]=value+1e-6;plus=n.objective(a,d,v,gradient=False)[0]
+                a[key][index]=value-1e-6;minus=n.objective(a,d,v,gradient=False)[0];a[key][index]=value
+                self.assertAlmostEqual(g[key][index],(plus-minus)/2e-6,places=7,msg=v+'/'+key)
+
+    def test_independent_sgd_recovery(self):
+        for v in n.VARIANTS:
+            d=data();a,receipt=n.fit(d,v,78,3,ledger=SYNTHETIC_LEDGER)
+            count={};b=independent.refit(d,v,78,3,count)
+            SYNTHETIC_LEDGER['independent_fit_attempts']=SYNTHETIC_LEDGER.get('independent_fit_attempts',0)+count['fit_attempts']
+            SYNTHETIC_LEDGER['independent_optimizer_steps']=SYNTHETIC_LEDGER.get('independent_optimizer_steps',0)+count['optimizer_steps']
+            for k in n.PARAMS:np.testing.assert_allclose(a[k],b[k],atol=2e-12,rtol=2e-12)
+            self.assertEqual(receipt['optimizer_steps'],3)
+
+    def test_explicit_fit_ledger_is_required(self):
+        with self.assertRaises(ValueError):n.fit(data(),'JOINT_SPO',1,1)
+
+    def test_known_minimum_spo_plus_is_zero(self):
+        d=data();a=n.initialize(5,4);a={k:np.zeros_like(v) for k,v in a.items()};d['cost']=np.tile([.1,.4,.8,.6],(3,1));a['br']=np.array([.1,.4,.8,.6])
+        self.assertAlmostEqual(n.objective(a,d,'DIRECT_SPO',ridge=0,gradient=False)[0],0)
+
+    def test_conditional_zero_mass_has_no_error_label(self):
+        d=data();d['target'][:,:,0]=0;d2=deepcopy(d);d2['target'][:,:,24]=9999
+        a=n.initialize(5,9)
+        self.assertEqual(n.objective(a,d,'CONDITIONAL_SPO',gradient=False)[0],n.objective(a,d2,'CONDITIONAL_SPO',gradient=False)[0])
+
+    def test_unseen_bins_remain_explicitly_unknown(self):
+        d=data();d['known'][:]=0;d['historical'][:]=0;a=n.initialize(5,8)
+        z=n.forward(a,d['phi'],d['historical'],d['known'],d['gamma'],'EMPIRICAL_REWEIGHT_SPO')
+        np.testing.assert_allclose(z['missing'],1);np.testing.assert_array_equal(z['j'],0)
+
+    def test_complete_history_including_initial_transition(self):
+        node=m.old.node_from_view(fixture.view(n=2,stage='POST'));a,b=m.historical(node);x,y=q.past_errors(node)
+        np.testing.assert_array_equal(a,x);np.testing.assert_array_equal(b,y);self.assertEqual(sum(b),1)
+
+    def test_public_noise_and_future_rejected(self):
+        node=m.old.node_from_view(fixture.view(stage='POST'));node['current']['noise_oracle']=[0,0,0]
+        with self.assertRaises(ValueError):m.historical(node)
+
+    def test_registry_is_not_a_public_query(self):
+        node=m.old.node_from_view(fixture.view(stage='POST'));node['group']=3
+        with self.assertRaises(ValueError):m.historical(node)
+
+    def test_future_history_length_rejected(self):
+        node=m.old.node_from_view(fixture.view(stage='POST'));node['history'].append(deepcopy(node['history'][0]))
+        with self.assertRaises(ValueError):m.historical(node)
+
+    def test_three_disjoint_roles_each_fold(self):
+        for fold in range(3):
+            s=m.split(fold);r,p,h=q.fold_groups(fold);self.assertEqual(s,dict(receiver=r,precritic=p,heldout=h))
+            self.assertEqual(set(r)|set(p)|set(h),set(range(9)));self.assertFalse(set(r)&set(p));self.assertFalse(set(r)&set(h));self.assertFalse(set(p)&set(h))
+
+    def test_group_weight_prevents_more_nodes_extra_weight(self):
+        w=m.weights([1,1,2]);np.testing.assert_array_equal(w,[.25,.25,.5]);np.testing.assert_array_equal(w,q.mass([1,1,2]))
+
+    def test_short_actual_window_fraction_not_padded(self):
+        d=data();d['target'][:,:,49]=1/32;a=n.initialize(5,8)
+        _,g,_=n.objective(a,d,'JOINT_SPO');d['target'][:,:,49]=1;_,h,_=n.objective(a,d,'JOINT_SPO')
+        self.assertGreater(np.max(abs(g['b2']-h['b2'])),.01)
+
+    def test_no_labels_read_by_public_forward(self):
+        d=data();a=n.initialize(5,8);z=n.forward(a,d['phi'],d['historical'],d['known'],d['gamma'],'JOINT_SPO')
+        d['cost'][:]=999;d['target'][:]=777
+        t=n.forward(a,d['phi'],d['historical'],d['known'],d['gamma'],'JOINT_SPO');np.testing.assert_array_equal(z['scores'],t['scores'])
+
+    def test_unbounded_scores_not_hidden_probability_clip(self):
+        d=data();a=n.initialize(5,8);a['br']+=20
+        z=n.forward(a,d['phi'],d['historical'],d['known'],d['gamma'],'DIRECT_SPO');self.assertGreater(z['scores'].min(),1)
+
+    def test_terminal_receiver_not_fabricated(self):
+        graph=fixture.graph(0);graph['returns']=[None,None,None]
+        nodes,*_=m.receiver_rows([graph],[],[0]);self.assertEqual(nodes,[])
+
+    def test_fixed_selector_inventory_complete(self):
+        self.assertEqual(len(m.SELECTORS),32);self.assertEqual(len(set(m.SELECTORS)),32)
+        self.assertEqual(sum(v.startswith('FIXED/') for v in m.SELECTORS),12)
+
+    def test_executable_configuration_matches_frozen_math(self):
+        c=m.io.read(m.CONFIG)
+        self.assertEqual(c['variants'],list(n.VARIANTS));self.assertEqual(c['steps'],1000)
+        self.assertEqual(c['folds'],[{k:list(v) for k,v in m.split(i).items()} for i in range(3)])
+        for k,value in (('learning_rate',.01),('ridge',.01),('gradient_norm_clip',10),('hidden_width',16),('auxiliary_loss_weight',1)):
+            self.assertEqual(c[k],value)
+
+    def test_precritic_targets_use_frozen_receiver_not_minimum(self):
+        graph=fixture.graph(0)
+        for leaf in graph['leaves']:leaf['source_case_sha256']='synthetic'
+        with patch.object(m,'receiver_decision',return_value=dict(rate=3)):
+            nodes,y,groups,ledger=m.pre_rows([graph],[0],{'sha256':'frozen'},'.')
+        self.assertEqual(y,[[103/500,113/500,123/500]]);self.assertEqual(groups,[0]);self.assertEqual(ledger[0]['fixed_receiver_sha256'],'frozen')

@@ -1,0 +1,239 @@
+"""Literal TRAIN labels/features, independent autodiff refits and factual audit."""
+from collections import Counter
+from contextlib import ExitStack
+from pathlib import Path
+from time import perf_counter_ns
+from unittest.mock import patch
+import json
+import numpy as np
+from src.analysis import correction_transfer_learning_v1 as main
+from src.analysis import correction_scope_risk_reference_independent_v1 as prior
+from src.analysis import correction_scope_learning_v1 as original_labels
+from src.analysis import transfer_risk_independent_math_v1 as numbers
+
+io=main.io;A=('CONTINUE','VALIDATE8','MOVE_MEASURE');R=(.125,.5,2.,8.)
+V=('DIRECT_MSE','DIRECT_SPO','EMPIRICAL_REWEIGHT_SPO','CONDITIONAL_SPO','JOINT_SPO')
+P=('w1','b1','w2','b2','wr','br')
+
+
+def denied(*args,**kwargs):raise RuntimeError('main transfer-learning implementation disabled in independent audit')
+
+
+def fold_groups(fold):
+    held=tuple(range(3*fold,3*fold+3));others=[tuple(range(3*i,3*i+3)) for i in range(3) if i!=fold]
+    return others[0],others[1],held
+
+
+def mass(groups):
+    unique=set(groups);return np.array([1/(len(unique)*sum(v==g for v in groups)) for g in groups])
+
+
+def past_errors(node):
+    count=[0]*24;error=[0.]*24
+    for row in node['history']:
+        u=row['command'];b=row['before']['observation'];after=row['after']['observation']
+        amplitude=min(2,int(3*max(abs(u[0]),abs(u[1]))));near=int(sum((b[4+i]-b[i])**2 for i in range(3))**.5<=.1)
+        j=((int(u[0]>=0)+2*int(u[1]>=0))*3+amplitude)*2+near
+        error[j]+=sum(((after[i]-b[i])/.01-u[i])**2 for i in range(2));count[j]+=1
+    return np.array([s/n if n else 0. for s,n in zip(error,count)]),np.array([float(n>0) for n in count])
+
+
+def rows(graphs,examples,groups):
+    keys=('cohort','group','task','seed','context','planned_boundary','acquisition_action','time_constant_s')
+    lookup={(tuple(r['spec'][k] for k in keys),r['stage']):r for r in examples};nodes=[];cost=[];target=[];gs=[];ids=[]
+    for graph in graphs:
+        assert graph['unit'][0]=='TRAIN'
+        if graph['unit'][1] not in groups:continue
+        for ai in range(3):
+            node=graph['returns'][ai]
+            if node is None:continue
+            values=[]
+            for ri in range(4):
+                r=lookup[(tuple(graph['leaves'][4*ai+ri]['source_case_key']),'POST')]
+                assert prior.literal_node(r['view'])==node and r['target'] is not None;values.append(r['target'][50:100])
+            nodes.append(node);cost.append([graph['leaves'][4*ai+ri]['loss']/500 for ri in range(4)]);target.append(values);gs.append(graph['unit'][1])
+            ids.append(dict(unit=graph['unit'],action=A[ai],query_sha256=io.digest(node)))
+    return nodes,np.asarray(cost),np.asarray(target),gs,ids
+
+
+def basis_for(nodes,groups):
+    x=np.asarray([prior.literal_features(n) for n in nodes]);w=mass(groups);mu=np.sum(x*w[:,None],axis=0)
+    active=np.asarray([i for i in range(x.shape[1]) if np.any(x[:,i]!=x[0,i])],int)
+    mean=mu[active];scale=np.sqrt(np.sum(w[:,None]*(x[:,active]-mean)**2,axis=0));scale=np.maximum(scale,.05)
+    z=np.minimum(10,np.maximum(-10,(x[:,active]-mean)/scale));return dict(active=active,mean=mean,scale=scale,centers=z)
+
+
+def design(nodes,basis):
+    result=[]
+    for n in nodes:
+        f=np.asarray(prior.literal_features(n));z=np.maximum(-10,np.minimum(10,(f[basis['active']]-basis['mean'])/basis['scale']))
+        result.append([1.,*prior.literal_kernel(z,basis['centers'],'RBF')])
+    return np.asarray(result)
+
+
+def pack(nodes,cost,target,groups,basis,gamma):
+    h=[past_errors(n) for n in nodes]
+    return dict(phi=design(nodes,basis),cost=np.asarray(cost),target=np.asarray(target),weights=mass(groups),gamma=float(gamma),
+        historical=np.asarray([a for a,b in h]),known=np.asarray([b for a,b in h]))
+
+
+def saved(path):
+    with np.load(path,allow_pickle=False) as file:return {k:file[k] for k in file.files}
+
+
+def receiver(model,folder,node):
+    b=saved(Path(folder)/model['file']);hist,known=past_errors(node)
+    d=dict(phi=design([node],b),historical=hist[None,:],known=known[None,:],gamma=float(b['gamma']),
+        target=np.zeros((1,4,50)),cost=np.zeros((1,4)),weights=np.ones(1))
+    _,_,p=numbers.evaluate({k:b[k] for k in P},d,model['variant'],derivatives=False)
+    return p
+
+
+def audit_models(path):
+    path=Path(path).resolve();m=main.checked(path);out=path.parent;start=perf_counter_ns();guard={};ledger={};fields=0;maximum=0.;proof=[]
+    bank=io.read(out/'bank.json');assert io.sha(out/'bank.json')==io.read(out/'fit_receipt.json')['bank_sha256']
+    io.write(out/'model_audit_intent.json',dict(independent_neural_refits=15,independent_ridge_refits=15,optimizer_updates=15000,no_automatic_retry=True))
+    disabled=('receiver_rows','historical','weights','make_basis','design','dataset','receiver_prediction','receiver_decision','pre_rows','fit')
+    with main.old.recorded_guard(guard,out/'model_audit_failure.json',max_lstsq=15),ExitStack() as stack:
+        for name in disabled:stack.enter_context(patch.object(main,name,denied))
+        for name in ('forward','objective','initialize','fit'):stack.enter_context(patch.object(main.network,name,denied))
+        for name in ('features','kernel','fit_model','predict','assemble_graphs'):stack.enter_context(patch.object(main.old,name,denied))
+        base=io.ROOT/m['config']['source_run'];graphs=prior.literal_graphs(base,'TRAIN')
+        assert graphs==list(io.rows(io.ROOT/m['config']['source_graph']))
+        examples=list(io.rows(base/'train/examples.jsonl.gz'))
+        literal_fields=original_labels.literal_labels(base/'manifest.json','TRAIN',examples)
+        labels={}
+        for fold in range(3):
+            rgroup,pgroup,held=fold_groups(fold);nodes,cost,y,groups,ids=rows(graphs,examples,rgroup)
+            basis=basis_for(nodes,groups);gamma=max(.05,float(np.sum(mass(groups)*np.mean(y[:,:,48],axis=1))))
+            data=pack(nodes,cost,y,groups,basis,gamma)
+            for variant in V:
+                key=str(fold)+'/'+variant;model=bank['models'][str(fold)][variant]['receiver'];b=saved(out/'models'/model['file'])
+                assert io.sha(out/'models'/model['file'])==model['sha256'] and model['training_nodes']==ids and model['training_groups']==list(rgroup)
+                assert np.array_equal(basis['active'],b['active']) and abs(float(b['gamma'])-gamma)<2e-12
+                for name in ('mean','scale','centers'):assert np.allclose(basis[name],b[name],atol=2e-11,rtol=2e-11);fields+=basis[name].size
+                assert main.old.digest_array(cost)==model['cost_sha256'] and main.old.digest_array(y)==model['target_sha256']
+                assert np.allclose(data['phi'],design(nodes,b),atol=2e-11,rtol=2e-11)
+                p=numbers.refit(data,variant,m['config']['model_rng_seed']+fold,m['config']['steps'],ledger)
+                gap=max(float(np.max(abs(p[k]-b[k]))) for k in P);maximum=max(gap,maximum)
+                assert gap<=m['config']['independent_parameter_absolute_tolerance'],'independent SGD numerical mismatch '+key
+                fields+=sum(v.size for v in p.values())
+                # Require the heldout choices from independently refitted
+                # parameters to agree, not just a small parameter distance.
+                hn,hc,hy,hg,_=rows(graphs,examples,held);hd=pack(hn,hc,hy,hg,basis,gamma)
+                _,_,ind=numbers.evaluate(p,hd,variant,derivatives=False)
+                _,_,actual=numbers.evaluate({k:b[k] for k in P},pack(hn,hc,hy,hg,b,gamma),variant,derivatives=False)
+                assert [prior.first_minimum(v) for v in ind['scores']]==[prior.first_minimum(v) for v in actual['scores']]
+                # Exact receiver-bound precritic labels, from disjoint groups.
+                ns=[];ys=[];gs=[];binding=[]
+                for graph in graphs:
+                    if graph['unit'][1] not in pgroup or graph['pre'] is None:continue
+                    choices=[];targets=[]
+                    for ai,node in enumerate(graph['returns']):
+                        if node is None:choice=dict(rate=1,model_sha256=model['sha256'],terminal=True)
+                        else:
+                            scores=receiver(model,out/'models',node)['scores'][0].tolist()
+                            choice=dict(rate=prior.first_minimum(scores),scores=scores,model_sha256=model['sha256'],query_sha256=io.digest(node))
+                        choices.append(choice);targets.append(graph['leaves'][4*ai+choice['rate']]['loss']/500)
+                    ns.append(graph['pre']);ys.append(targets);gs.append(graph['unit'][1])
+                    binding.append(dict(unit=graph['unit'],fixed_receiver_sha256=model['sha256'],saved_choices_before_label_selection=choices,
+                        target=targets,source_case_sha256=[graph['leaves'][4*ai+c['rate']]['source_case_sha256'] for ai,c in enumerate(choices)]))
+                labels[key]=binding;pre=bank['models'][str(fold)][variant]['precritic'];pb=saved(out/'models'/pre['file']);x=np.asarray([prior.literal_features(n) for n in ns])
+                prep=basis_for(ns,gs);z=prep['centers'];w=mass(gs)*len(gs);n=len(ns)
+                kernel=np.asarray([prior.literal_kernel(v,z,'RBF') for v in z]);system=np.zeros((n+1,n+1));system[:n,:n]=kernel+np.diag(.01/w)
+                system[n,:n]=1;system[:n,n]=1;rhs=np.vstack((ys,np.zeros((1,3))));coef=np.linalg.lstsq(system,rhs,rcond=None)[0]
+                assert np.allclose(coef,np.vstack((pb['coefficients'],pb['intercept'])),atol=2e-7,rtol=2e-7)
+                assert pre['fixed_receiver_sha256']==model['sha256'] and io.sha(out/'models'/pre['file'])==pre['sha256']
+                for name in ('active','mean','scale','centers'):assert np.allclose(prep[name],pb[name],atol=2e-11,rtol=2e-11);fields+=prep[name].size
+                assert main.old.digest_array(x)==pre['input_sha256'] and main.old.digest_array(ys)==pre['target_sha256'];fields+=coef.size
+                proof.append(dict(fold=fold,variant=variant,parameter_gap=gap,receiver_groups=list(rgroup),precritic_groups=list(pgroup),heldout_groups=list(held)))
+        # Score arithmetic may differ at roundoff, but saved target choices,
+        # source cases and target costs must match exactly.
+        actual=io.read(out/'fixed_receiver_labels.json')
+        for key,values in labels.items():
+            assert len(values)==len(actual[key])
+            for a,b in zip(values,actual[key]):
+                for c,d in zip(a['saved_choices_before_label_selection'],b['saved_choices_before_label_selection']):
+                    if 'scores' in c:assert np.allclose(c.pop('scores'),d['scores'],atol=5e-9,rtol=5e-9)
+                    d=dict(d);d.pop('scores',None);assert c==d
+                a=dict(a);b=dict(b);a.pop('saved_choices_before_label_selection');b.pop('saved_choices_before_label_selection');assert a==b
+        assert ledger==dict(fit_attempts=15,optimizer_steps=15000)
+    result=dict(integrity='PASSED',bank_sha256=io.sha(out/'bank.json'),independent_neural_ledger=ledger,independent_ridge_refits=15,
+        scalar_fields=fields,literal_factual_target_fields=literal_fields,maximum_parameter_absolute_gap=maximum,models=proof,
+        main_network_and_source_math_disabled=list(disabled),independent_engine='separate_reverse_mode_NumPy_shared_library',
+        guard=guard,wall_ns=perf_counter_ns()-start,new_physics=0,new_policy_queries=0,online_LLM_API_calls=0)
+    io.write(out/'model_audit.json',result);return result
+
+
+def equal_tree(a,b,path=''):
+    if isinstance(a,dict):
+        assert set(a)==set(b),path
+        for k in a:equal_tree(a[k],b[k],path+'/'+k)
+    elif isinstance(a,list):
+        assert len(a)==len(b),path
+        for i,(x,y) in enumerate(zip(a,b)):equal_tree(x,y,path+'/'+str(i))
+    elif isinstance(a,float):assert abs(a-b)<=1e-8*max(1.,abs(a)),path
+    else:assert a==b,path
+
+
+def audit_replay(path):
+    path=Path(path).resolve();m=main.checked(path);out=path.parent;start=perf_counter_ns();guard={};bank=io.read(out/'bank.json')
+    proof=io.read(out/'replay_receipt.json');assert proof['selected_sha256']==io.sha(out/'selected_rows.json') and proof['replay_sha256']==io.sha(out/'replay.jsonl')
+    selected=io.read(out/'selected_rows.json');results=io.read(out/'results.json');graphs=prior.literal_graphs(io.ROOT/m['config']['source_run'],'TRAIN')
+    byunit={tuple(g['unit']):g for g in graphs};events=[json.loads(line) for line in (out/'replay.jsonl').read_text(encoding='utf8').splitlines()]
+    io.write(out/'replay_audit_intent.json',dict(no_automatic_retry=True,all_selections=1728))
+    with main.old.recorded_guard(guard,out/'replay_audit_failure.json'),ExitStack() as stack:
+        for name in ('receiver_prediction','receiver_decision','historical','design','summarize','evaluate'):stack.enter_context(patch.object(main,name,denied))
+        for name in ('forward','objective','fit'):stack.enter_context(patch.object(main.network,name,denied))
+        for name in ('features','predict','kernel'):stack.enter_context(patch.object(main.old,name,denied))
+        assert len(selected)==1728 and len({(tuple(r['unit']),r['selector']) for r in selected})==1728
+        stream=iter(events);last=-1
+        for actual in selected:
+            graph=byunit[tuple(actual['unit'])];selector=actual['selector'];fold=graph['unit'][1]//3;ai=0;ri=1
+            related=[]
+            while True:
+                e=next(stream);assert e['sequence']==last+1 and e['saved_ns']>last;last=e['sequence']
+                assert e['unit']==actual['unit'] and e['selector']==selector;related.append(e)
+                if e['kind']=='FACTUAL_OUTCOME':break
+            assert [r['saved_ns'] for r in related]==sorted(r['saved_ns'] for r in related)
+            if selector.startswith('FIXED/'):
+                _,action,rate=selector.split('/');ai=A.index(action);ri=R.index(float(rate));assert related[0]['kind']=='FIXED_PROGRAM_SAVED'
+            elif graph['pre'] is None:assert related[0]['kind']=='ALREADY_TERMINAL'
+            else:
+                variant,action=selector.split('/');models=bank['models'][str(fold)][variant]
+                assert related[0]['query_sha256']==io.digest(graph['pre'])
+                if action=='TWO_STAGE':
+                    scores=prior.literal_predict(models['precritic'],out/'models',graph['pre']);ai=prior.first_minimum(scores)
+                    assert related[0]['kind']=='PRE_DECISION' and related[0]['action']==ai and np.allclose(scores,related[0]['scores'],atol=5e-9,rtol=5e-9)
+                else:ai=A.index(action);assert related[0]['kind']=='PRE_FIXED_ACTION' and related[0]['action']==ai
+                node=graph['returns'][ai]
+                if node is None:assert related[1]['kind']=='ACQUISITION_TERMINAL'
+                else:
+                    scores=receiver(models['receiver'],out/'models',node)['scores'][0];ri=prior.first_minimum(scores)
+                    e=related[1];assert e['kind']=='RETURN_DECISION' and e['decision']['rate']==ri and e['decision']['query_sha256']==io.digest(node)
+                    assert np.allclose(scores,e['decision']['scores'],atol=5e-9,rtol=5e-9)
+            assert actual['action']==A[ai] and actual['rate']==R[ri] and actual['fold']==fold
+            assert actual['leaf']==graph['leaves'][4*ai+ri] and actual['baseline']==graph['leaves'][1] and actual['same_acquisition']==graph['leaves'][4*ai+1]
+            assert {k:v for k,v in related[-1].items() if k not in ('sequence','saved_ns','kind')}==actual
+        assert next(stream,None) is None
+        # Rebuild all summaries without the main statistics implementation.
+        for selector in main.SELECTORS:
+            r=[v for v in selected if v['selector']==selector];s=results['selectors'][selector];assert len(r)==54
+            loss=np.asarray([v['leaf']['loss'] for v in r]);base=np.asarray([v['baseline']['loss'] for v in r]);d=loss-base
+            expected=dict(n=54,success=sum(v['leaf']['success'] for v in r),mean_loss=float(sum(loss)/54),
+                total_executed_steps=sum(v['leaf']['steps'] for v in r),acquisition_steps=sum(v['leaf']['measurement_steps']+v['leaf']['movement_steps'] for v in r),
+                harm=int(sum(d>0)),help=int(sum(d<0)),tie=int(sum(d==0)),harm_severity=int(sum(d[d>0])),
+                success_to_failure=sum(v['baseline']['success'] and not v['leaf']['success'] for v in r),
+                failure_to_success=sum(not v['baseline']['success'] and v['leaf']['success'] for v in r),
+                same_acquisition_harm=sum(v['leaf']['loss']>v['same_acquisition']['loss'] for v in r),same_acquisition_help=sum(v['leaf']['loss']<v['same_acquisition']['loss'] for v in r),
+                chosen_actions=dict(Counter(v['action'] for v in r)),chosen_rates=dict(Counter(str(v['rate']) for v in r)))
+            for name,value in expected.items():equal_tree(value,s[name],selector+'/'+name)
+            for group in range(9):assert abs(s['groups'][str(group)]-sum(v['leaf']['loss'] for v in r if v['unit'][1]==group)/6)<1e-10
+            assert len(s['panels'])==18
+            for key,value in s['panels'].items():
+                task,condition,boundary=key.split('/');rr=[v for v in r if v['unit'][2]==task and v['unit'][3]==condition and v['boundary']==int(boundary)]
+                assert len(rr)==value['n']==3 and value['success']==sum(v['leaf']['success'] for v in rr) and abs(value['mean_loss']-sum(v['leaf']['loss'] for v in rr)/3)<1e-10
+    receipt=dict(integrity='PASSED',all_selections=1728,all_selectors=32,all_groups=9,all_panels_per_selector=18,
+        decision_events_precede_factual_outcome=True,replay_sha256=io.sha(out/'replay.jsonl'),results_sha256=io.sha(out/'results.json'),
+        guard=guard,wall_ns=perf_counter_ns()-start,new_physics=0,new_fits=0,new_policy_queries=0,online_LLM_API_calls=0)
+    io.write(out/'replay_audit.json',receipt);return receipt
