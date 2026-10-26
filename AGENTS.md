@@ -2070,3 +2070,22 @@ exists in the closed20-program design and is the delayed passive-history
 reference; do not invent a missing control, duplicate it under DEFER8, or
 claim unchanged-gain replay proves learned-gain task benefit. Preserve all
 source costs/failures, window missingness and the complete Chinese report.
+
+## Accepted correction-induced applicability direction
+
+On2026-10-26 the user explicitly selected A. Follow
+docs/research/correction_scope_decision_v1_zh.md and the separately frozen
+docs/protocols/correction_scope_development_v1_zh.md on
+codex/correction-applicability-v1. A1 is a new TRAIN/CAL/TEST predictive-substrate
+study, not a new full acquisition algorithm or publication/task-benefit gate.
+Freeze collector, tests, independent audits,1620-case cap and seed inventory
+before sampling. Preserve failures/partial data; no retry/extension, old QUAL
+tuning, new forward/inverse/policy training or online LLM. The working response
+dXY=.01sentXY is explicitly unqualified and never inverted. Forecasts precede
+actual assigned outcomes; no future commands as input or trajectory restoration.
+Retain three tasks/conditions/times, early ends and actual short windows.
+TOM/performative prediction, corrected-command reweighting, MDE and performance
+prediction remain direct neighbors. A1 success is not novelty; A1 failure closes
+this predictor without TEST-based gates. Full acquisition/acceptance mechanisms,
+strong controls, independent own-history complete-cost task superiority and
+ablations remain necessary for the unachieved CCF A goal.

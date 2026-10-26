@@ -1,0 +1,312 @@
+test_actual_host_array_adapter_continuity (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_correlated_joint_not_product (test_correction_scope_v1.CorrectionScopeContracts) ... ok
+test_direction_allocation_and_exact_costs (test_correction_scope_v1.CorrectionScopeContracts) ... ok
+test_early_end_retains_no_fabricated_forecasts (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_fit_independent_augmented_refit (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_future_missing_reversed_history_rejected (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_illegal_action_rate_budget_rejected (test_correction_scope_v1.CorrectionScopeContracts) ... ok
+test_independent_feature_math (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_known_model_and_noise_algebra (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_mismatched_model_leaves_error (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_pre_prediction_precedes_acquisition_and_tail (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_private_nested_and_future_fields_fail_closed (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_projection_same_constraints_all_models (test_correction_scope_v1.CorrectionScopeContracts) ... ok
+test_rate_blind_cannot_recover_memory_rate (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_rate_changes_actual_commands_carry_same_integral (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_readonly_guard_denies_network (test_correction_scope_v1.CorrectionScopeContracts) ... ok
+test_saved_records_literal_targets_compatible (test_correction_scope_v1.CorrectionScopeContracts) ... ok
+test_short_and_zero_length_not_padded (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_statistics_quantile_literal_order (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+test_validation_eight_is_actual_task_history (test_correction_scope_v1.CorrectionScopeContracts) ... ERROR
+
+======================================================================
+ERROR: test_actual_host_array_adapter_continuity (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 147, in test_actual_host_array_adapter_continuity
+    r=host.run_live(s,session,lambda name:w.append((name,session.ctx['calls'])),lambda:syncs.append(session.ctx['calls']),None)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\correction_scope_host_v1.py", line 79, in run_live
+    result=actor.run(spec['task'],session.public(),spec['planned_boundary'],spec['acquisition_action'],spec['time_constant_s'],policy,step,emit,bank=bank)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_early_end_retains_no_fabricated_forecasts (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 69, in test_early_end_retains_no_fabricated_forecasts
+    r,e,s=fixture('VALIDATE8',end_at=18);self.assertIsNotNone(r['outcome']['pre_forecast']);self.assertIsNone(r['outcome']['post_forecast'])
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_fit_independent_augmented_refit (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 119, in test_fit_independent_augmented_refit
+    v=input_view();rows=[]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_future_missing_reversed_history_rejected (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 78, in test_future_missing_reversed_history_rejected
+    v=input_view()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_independent_feature_math (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 90, in test_independent_feature_math
+    v=input_view()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_known_model_and_noise_algebra (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 94, in test_known_model_and_noise_algebra
+    r=deepcopy(input_view()['history'][0]);b=r['before']['observation'];r['command']=[.25,-.5,0.,0.]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_mismatched_model_leaves_error (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 100, in test_mismatched_model_leaves_error
+    r=deepcopy(input_view()['history'][0]);r['after']=deepcopy(r['before']);r['command']=[1.,0.,0.,0.];self.assertEqual(model.query_vector(r)[1],1.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_pre_prediction_precedes_acquisition_and_tail (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 50, in test_pre_prediction_precedes_acquisition_and_tail
+    r,events,steps=fixture('MOVE_MEASURE',end_at=120)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_private_nested_and_future_fields_fail_closed (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 72, in test_private_nested_and_future_fields_fail_closed
+    v=input_view()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_rate_blind_cannot_recover_memory_rate (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 84, in test_rate_blind_cannot_recover_memory_rate
+    v=input_view();v['stage']='POST';v['memory']['time_constant_s']=.125;v['time_constant_s']=.125
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_rate_changes_actual_commands_carry_same_integral (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 57, in test_rate_changes_actual_commands_carry_same_integral
+    one=fixture(rate=.125);two=fixture(rate=8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_short_and_zero_length_not_padded (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 103, in test_short_and_zero_length_not_padded
+    v=input_view();m=v['memory'];y,reason=model.target(v['history'],len(v['history'])-2,m)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 40, in input_view
+    _,events,_=fixture();return next(e['payload']['value'] for e in events if e['kind']=='FORECAST_INPUT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+======================================================================
+ERROR: test_statistics_quantile_literal_order (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 152, in test_statistics_quantile_literal_order
+    from src.analysis.correction_scope_statistics_v1 import quantile
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\correction_scope_statistics_v1.py", line 40
+    rng=np.random.default_rng(202610263);draws=np.c_[*[rng.choice([b,b+3,b+6],size=(10000,3)) for b in range(3)]].tolist()
+                                                     ^
+SyntaxError: invalid syntax
+
+======================================================================
+ERROR: test_validation_eight_is_actual_task_history (test_correction_scope_v1.CorrectionScopeContracts)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 64, in test_validation_eight_is_actual_task_history
+    r,events,steps=fixture('VALIDATE8');self.assertEqual(r['outcome']['measurement_steps'],8)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_correction_scope_v1.py", line 35, in fixture
+    result=actor.run('push-v3',current,16,action,rate,policy,step,emit)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 49, in run
+    pre=forecast('PRE');before=machine.memory
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_program_v1.py", line 40, in forecast
+    value=model.view(stage,machine.memory,history,action,rate)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 50, in view
+    validate(v);return v
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\correction_scope_model_v1.py", line 43, in validate
+    if h:require(h[-1]['after']==v['memory']['current'],'history includes future or stale memory')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_pi_v1.py", line 21, in require
+    if not ok: raise ValueError(message)
+ValueError: history includes future or stale memory
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.687s
+
+FAILED (errors=14)
