@@ -1,0 +1,150 @@
+{
+  "integrity": "PASSED",
+  "independent_refits": 8,
+  "scalar_fields": 3641126,
+  "model_checks": [
+    {
+      "model": "static_LINEAR",
+      "rows": 48,
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_KKT_refit_difference": 8.870681966755001e-14
+    },
+    {
+      "model": "static_RBF",
+      "rows": 48,
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_KKT_refit_difference": 3.941291737419306e-14
+    },
+    {
+      "model": "post_all_LINEAR",
+      "rows": 134,
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_KKT_refit_difference": 1.1368683772161603e-13
+    },
+    {
+      "model": "post_all_RBF",
+      "rows": 134,
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "maximum_KKT_refit_difference": 8.025247133502944e-13
+    },
+    {
+      "model": "receiver_LINEAR",
+      "rows": 86,
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "maximum_KKT_refit_difference": 5.1181281435219717e-14
+    },
+    {
+      "model": "receiver_RBF",
+      "rows": 86,
+      "groups": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "maximum_KKT_refit_difference": 1.2026490914252008e-13
+    },
+    {
+      "model": "sequential_LINEAR",
+      "rows": 16,
+      "groups": [
+        6,
+        7,
+        8
+      ],
+      "maximum_KKT_refit_difference": 3.907985046680551e-14
+    },
+    {
+      "model": "sequential_RBF",
+      "rows": 16,
+      "groups": [
+        6,
+        7,
+        8
+      ],
+      "maximum_KKT_refit_difference": 2.3189783426857957e-14
+    }
+  ],
+  "bank_sha256": "b57efc5174da4b8e80573deff0530a907ee0d0d53c94637750c5c4069b74e0f0",
+  "graph_sha256": {
+    "TRAIN": "15d226d79658ed75c246ccbff940ddbb343e9d224186e6ece6de5e12b7af13c7",
+    "CAL": "e41eb4e8d057b6636ea67da16deb7da6a97138e4d9fc783c077b196221f28bfd"
+  },
+  "main_math_and_graph_builder_disabled": true,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 8,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 8,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 14271494000,
+  "new_physics": 0,
+  "new_policy_queries": 0,
+  "online_LLM_API_calls": 0
+}

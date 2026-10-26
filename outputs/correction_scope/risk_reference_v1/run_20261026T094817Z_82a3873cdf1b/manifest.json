@@ -1,0 +1,110 @@
+{
+  "protocol": "CORRECTION_SCOPE_RISK_REFERENCE_V1",
+  "classification": "STANDARD_REFERENCES_OFFLINE_DEVELOPMENT_ONLY",
+  "source_git_commit": "82a3873cdf1ba0de59cf359c98db996202d60b5c",
+  "config": {
+    "protocol": "CORRECTION_SCOPE_RISK_REFERENCE_V1",
+    "source_result_commit": "9dbfece19324cf96cf08576f210ab08b9fbb7a78",
+    "source_run": "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2",
+    "allowed_data_cohorts": [
+      "TRAIN",
+      "CAL"
+    ],
+    "classification": "STANDARD_REFERENCES_OFFLINE_DEVELOPMENT_ONLY",
+    "tasks": [
+      "push-v3",
+      "reach-v3",
+      "door-open-v3"
+    ],
+    "actions": [
+      "CONTINUE",
+      "VALIDATE8",
+      "MOVE_MEASURE"
+    ],
+    "rates": [
+      0.125,
+      0.5,
+      2.0,
+      8.0
+    ],
+    "receiver_training_groups": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "acquisition_training_groups": [
+      6,
+      7,
+      8
+    ],
+    "history_slots": 500,
+    "history_row_features": 83,
+    "normalization_floor": 0.05,
+    "normalized_feature_clip": 10,
+    "ridge": 0.01,
+    "kernel_distance_scale": "mean over nonconstant TRAIN coordinates",
+    "target": "actual complete deadline loss divided by500",
+    "risk_output_clip": [
+      0,
+      1
+    ],
+    "ties": "first fixed action/rate order within numerical tolerance1e-10; not a statistical threshold",
+    "numerical_tie_tolerance": 1e-10,
+    "scientific_model_fits": 8,
+    "independent_model_refits": 8,
+    "empirical_mean_tables": 1,
+    "CAL_development_units": 18,
+    "offline_selectors": 12,
+    "new_environment_interactions": 0,
+    "new_policy_queries": 0,
+    "new_online_LLM_API_calls": 0,
+    "new_robot_seeds": 0,
+    "no_TEST_data_training_or_evaluation": true,
+    "old_A1_gate_unchanged": true,
+    "task_benefit_qualified": false,
+    "algorithm_novelty_established": false,
+    "publication_goal_complete": false
+  },
+  "source_sha256": {
+    "src/analysis/correction_scope_risk_reference_v1.py": "53160956e586f6050738c65b32027811b6907695611b39c421cf4bf54250f4bf",
+    "src/analysis/correction_scope_risk_reference_independent_v1.py": "6916bc6d280a21ccbf74686da3c18b307c71581acfe61c5774cc699629c7182b",
+    "scripts/run_correction_scope_risk_reference_v1.py": "22f5079e8767a4b2c63b0afb1b2af89a0231a9c95c1be6bf29fafc491992dc39",
+    "tests/test_correction_scope_risk_reference_v1.py": "784eec6e51d053beda2253b781322f3688ffe59fa3591ab65df1e0e5233c8289",
+    "configs/movement_task/correction_scope_risk_reference_v1.json": "0c0dbf94143d16d5c77a19760725aa71f958ae9c5e9aa7bbd55fad01042577c9",
+    "docs/protocols/correction_scope_risk_reference_v1_zh.md": "ba6e553665dc112a26db60a560e21441bdb33e21fd6af2cd0382f5d2f7a18377",
+    "docs/research/correction_scope_reference_decision_v1_zh.md": "e2fb1e0eacb6d610680a728779e9157072742288a1644361503c3f5635a9242b",
+    "outputs/correction_scope/risk_reference_v1/validate_freeze.py": "cb7a74a3a41a1274c2d78cb94e314353c681066a72d8f256d3eb5e80d6823e5f",
+    "outputs/correction_scope/risk_reference_v1/run_pipeline.py": "5cecb30744e43b0514265e8d885942c605928a28dca3bea3f3c0e941cb0358a2"
+  },
+  "input_sha256": {
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/manifest.json": "b0fda6e14035c66db1f33f1024a067db224889aa56cc5998bb11f8ec36e4aa82",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/results/statistics.json": "d567b1a827b11edb1237b20f59d554fc1cf1a91733adc58b8b614e370c7826a4",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/results/statistics_audit.json": "5ecb4713042f02e07a6fc986d168cc5bb9380f06556b9a60bf1a04602bab4036",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/examples.jsonl.gz": "92d8e85828a73a974b2a10b81b84e41c25decfa7a4f2b96a9e770277add86b1d",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/audit.json": "d7dbbf9c4c19e8ee4d24c5e7eca2830b4c886f6f5e831298f035bf9ded641eb2",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+    "outputs/correction_scope/common_state_audit_v1/train.json": "8cb2f53791324c7b98be06e28ff1f8699051d775ffa41bc981609bcb464757c0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/supplemental_audit_v1/train_semantic_controls.json": "431f38e5f5af51a712d3d954f2d209577955598ada70ccad642fb0404018e41a",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/cases.jsonl.gz": "b57608d4f49e8c6546179a4cb829b6f8d50d773e45df1868289fd8414ade3342",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/examples.jsonl.gz": "714aa0546f77abe018d6f04f5c552ac1137113bd2fa3be842c7b6444c5800570",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/audit.json": "80fd45476cf5bac29ace488ada6b894d8dee67a976f081a066ed3260793cf0f9",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/summary.json": "aac7983ba5a1c0dfc3d2b5456b2edc6dee88df72614e7a5f379bc9c3378c08ec",
+    "outputs/correction_scope/common_state_audit_v1/cal.json": "c09819d9072546d3b99a3af7e405b96844d28c550a98de407a9140390580741e",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/supplemental_audit_v1/cal_semantic_controls.json": "9f20f220ec4e9bbbbf692e95b24efd8cca358ad289efdbdfc76ad6ebe44e6ce5",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/events.jsonl.gz": "dba031d0826112b4b506d8aab1e971321a1dea3a53d834285fa5a34d13823867",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/status.json": "e4ea15f8131b2abddac951960afa6d1a5ee1730ebb99e5a4009a22479d540b9d",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/cal/witnesses.jsonl.gz": "48c7227185277689af5a2a603012c46f15d3782ba56ffb959122cd0102874bc5"
+  },
+  "source_TEST_statistics_read_as_bytes_only": true,
+  "old_TEST_used_for_training_or_evaluation": false,
+  "new_environment_interactions": 0,
+  "new_online_LLM_API_calls": 0,
+  "manifest_id": "945a17214c9b2d3723b9dde3a18559600df98f326b0f4a88f53b9701af20287b"
+}

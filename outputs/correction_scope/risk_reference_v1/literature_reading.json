@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-26",
+  "purpose": "Check novelty boundaries after the closed A1 predictor; establish standard full-risk references before a new physical mechanism",
+  "primary_sources": [
+    {
+      "url": "https://www.roboticsproceedings.org/rss16/p085.pdf",
+      "title": "Learning Active Task-Oriented Exploration Policies for Bridging the Sim-to-Real Gap",
+      "read": "Abstract; section III related text, Algorithm1 and equations1-2 in extracted official PDF text; selected related-work context",
+      "restriction": "Task-regret-oriented exploration is existing work. No inference about whether reset is required from absence of that word.",
+      "not_done": "No reproduction, complete appendix/proof review, rendered figure inspection, or local PDF byte hash"
+    },
+    {
+      "url": "https://arxiv.org/html/2510.20483v1",
+      "title": "Dual Control Reference Generation for Optimal Pick-and-Place Execution under Payload Uncertainty",
+      "read": "Abstract; sectionsIV andV related text, including explicit adaptive feedback equations16, expected full-cost objective17 and optimality-loss equations21-25",
+      "restriction": "Controller adaptation inside reference generation and full task costs are existing ideas. Its assumptions are not automatically those of the black-box contact setting.",
+      "not_done": "No numerical reproduction, full stability-proof/appendix audit or hardware comparison"
+    },
+    {
+      "url": "https://arxiv.org/html/2609.32154v1",
+      "title": "GAUGE: Planner-Conditioned Active Calibration of Opaque Quadruped Velocity Interfaces",
+      "read": "Rechecked relevant sectionIII task-measure/response setting and sectionV history-dependence/support limitations",
+      "restriction": "Task-conditioned calibration and recovery remain direct neighbors; do not infer that all such methods ignore state changes.",
+      "not_done": "No implementation or independent reproduction"
+    }
+  ],
+  "exhaustive_novelty_review": false,
+  "external_success_rates_used_as_our_evidence": false,
+  "new_environment_interactions": 0,
+  "online_experiment_LLM_API_calls": 0
+}

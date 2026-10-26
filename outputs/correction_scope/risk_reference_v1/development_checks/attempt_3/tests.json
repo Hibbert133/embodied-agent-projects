@@ -1,0 +1,47 @@
+{
+  "integrity": "PASSED",
+  "tests_run": 28,
+  "failures": 0,
+  "errors": 0,
+  "log": "test_CAL_cannot_enter_training_rows (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_TEST_reader_rejected_before_access (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_all_earliest_history_is_represented (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_changed_return_state_across_rates_is_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_complete_constructed_branch_registry_and_early_ends (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_constant_targets_use_unpenalized_intercept (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_constructed_entire_pipeline_and_independent_audits (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_different_saved_legal_choices_change_supported_leaf (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_empty_active_columns_have_constant_kernels (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_future_history_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_history_discontinuity_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_journal_acknowledgements_precede_result_disclosure (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_linear_and_rbf_kernels_independently_recomputed (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_literal_feature_mapping_and_padding_mask (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_missing_factual_leaf_is_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_model_byte_changes_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_nested_oracle_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_non_float32_command_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_pre_candidate_assignments_are_not_physical_inputs (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_precision_ties_are_first_not_future_costs (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_public_private_top_level_rejected (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_receiver_and_acquisition_training_groups_are_separate (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_receiver_choice_not_clairvoyant_training_label (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_return_rate_only_projection_preserves_actual_history (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_terminal_node_not_given_fake_features (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_terminal_return_uses_existing_leaf_not_fake_prediction (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_weighted_linear_fit_and_literal_prediction (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\ntest_weighted_rbf_fit_and_literal_prediction (test_correction_scope_risk_reference_v1.RiskReferenceTests) ... ok\n\n----------------------------------------------------------------------\nRan 28 tests in 42.810s\n\nOK\n",
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 11,
+      "lstsq_attempts": 8,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 11,
+      "lstsq": 8,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/correction_scope_risk_reference_v1.py": "53160956e586f6050738c65b32027811b6907695611b39c421cf4bf54250f4bf",
+    "src/analysis/correction_scope_risk_reference_independent_v1.py": "6916bc6d280a21ccbf74686da3c18b307c71581acfe61c5774cc699629c7182b",
+    "scripts/run_correction_scope_risk_reference_v1.py": "22f5079e8767a4b2c63b0afb1b2af89a0231a9c95c1be6bf29fafc491992dc39",
+    "tests/test_correction_scope_risk_reference_v1.py": "784eec6e51d053beda2253b781322f3688ffe59fa3591ab65df1e0e5233c8289",
+    "configs/movement_task/correction_scope_risk_reference_v1.json": "0c0dbf94143d16d5c77a19760725aa71f958ae9c5e9aa7bbd55fad01042577c9",
+    "docs/protocols/correction_scope_risk_reference_v1_zh.md": "ba6e553665dc112a26db60a560e21441bdb33e21fd6af2cd0382f5d2f7a18377",
+    "docs/research/correction_scope_reference_decision_v1_zh.md": "e2fb1e0eacb6d610680a728779e9157072742288a1644361503c3f5635a9242b",
+    "outputs/correction_scope/risk_reference_v1/validate_freeze.py": "cb7a74a3a41a1274c2d78cb94e314353c681066a72d8f256d3eb5e80d6823e5f",
+    "outputs/correction_scope/risk_reference_v1/run_pipeline.py": "5cecb30744e43b0514265e8d885942c605928a28dca3bea3f3c0e941cb0358a2"
+  },
+  "wall_ns": 43090661900,
+  "synthetic_numerical_solves_separate": true,
+  "new_real_model_fits": 0,
+  "new_physics": 0,
+  "new_policy_queries": 0,
+  "online_LLM_API_calls": 0
+}
