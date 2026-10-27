@@ -1,0 +1,63 @@
+{
+  "protocol": "PACKET_STRUCTURE_DIAGNOSIS_V1",
+  "classification": "POST_HOC_DESCRIPTIVE_NOT_MODEL_OR_TASK_QUALIFICATION",
+  "source_run": "paired_packet_20261027T101154Z_bb74926c3c07",
+  "source_executions": 864,
+  "source_families": 288,
+  "splits": [
+    "SOFTWARE",
+    "TRAIN",
+    "CAL",
+    "QUAL"
+  ],
+  "horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "models": [
+    "ZERO",
+    "INSTANT",
+    "FIR",
+    "CENTERED_FIR",
+    "FREE_CAUSAL"
+  ],
+  "source_closed_result_retained": true,
+  "source_score_and_masks_unchanged": true,
+  "new_model_predictions": 0,
+  "new_environment_creations": 0,
+  "new_resets": 0,
+  "new_control_steps": 0,
+  "new_physical_frames": 0,
+  "new_model_fits": 0,
+  "new_policy_queries": 0,
+  "online_LLM_API_calls": 0,
+  "representation": "SAME_ENTRY_LINEAR_IN_WHOLE_KNOWN_COMMAND_PACKET",
+  "metric": "SQUARED_PAIR_XY_ERROR_M2_DISTINCT_FROM_ORIGINAL_CAPPED_RMSE",
+  "complete_three_role_observations_required": true,
+  "missing": "NULL_WITH_ORIGINAL_REASON_NO_ZERO_IMPUTATION",
+  "source_native_and_true_noise_evaluator_only": true,
+  "noise_regeneration": "DETERMINISTIC_SOURCE_TAPE_NOT_NEW_INDEPENDENT_SAMPLE",
+  "numerical_audit": {
+    "vector_atol_m": 2e-15,
+    "scalar_atol_m2": 2e-18,
+    "relative_tolerance": 2e-11
+  },
+  "aggregation": "FAMILY_H_OR_FIXED4_STEP_BAND_THEN_EQUAL_FAMILY_WITHIN_GROUP_THEN_EQUAL_GROUP_NO_SPLIT_POOL",
+  "new_bootstrap_replicates": 0,
+  "new_collection_unlocked": false,
+  "publication_goal_complete": false
+}

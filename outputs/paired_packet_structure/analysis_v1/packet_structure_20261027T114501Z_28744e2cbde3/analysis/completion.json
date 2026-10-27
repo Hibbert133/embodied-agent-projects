@@ -1,0 +1,81 @@
+{
+  "integrity": "ANALYZED_FOR_INDEPENDENT_AUDIT",
+  "manifest_id": "eaa20b9d5c6467c3175fa0e0254c98775ec2e08495f4220270f3e08fe7bfd170",
+  "cases": 864,
+  "families": 288,
+  "family_horizon_rows": 4608,
+  "saved_prediction_rows": 23040,
+  "counters": {
+    "deterministic_noise_tapes_regenerated": 224,
+    "deterministic_noise_scalars_regenerated": 336000,
+    "saved_packet_actions_checked": 10721,
+    "native_target_updates_checked": 10721,
+    "observed_three_role_decompositions": 3570,
+    "registered_saved_prediction_slots": 23040,
+    "saved_prediction_arithmetic_decompositions": 8950
+  },
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_costs_not_new": {
+    "executions": 864,
+    "control_steps": 56801,
+    "all_resets": 44064,
+    "physical_frames": 22316005,
+    "fixed_policy_queries": 30132,
+    "independent_policy_queries": 30132,
+    "primary_scientific_ridge_solves": 57,
+    "independent_augmented_lstsq_solves": 57,
+    "training_main_and_literal_bank_query_checks": 81,
+    "actual_online_forecast_counts": {
+      "trajectories_started": 1680,
+      "zero_rows": 5376,
+      "trajectories_completed": 1680,
+      "linear_rows": 21504
+    },
+    "online_LLM_API_calls": 0,
+    "neural_updates": 0,
+    "C4_C8_fits": 0,
+    "new_model_used_for_control": false,
+    "prefreeze_test_executions": 171,
+    "prefreeze_synthetic_ridge_solves": 15,
+    "prefreeze_synthetic_lstsq_solves": 5,
+    "prefreeze_synthetic_inverse_checks": 5,
+    "unique_new_tests": 37,
+    "old_source_bound_tests_reused": 2228,
+    "old_simulation_tests_repeated": false,
+    "primary_bootstrap_replicates": 10000,
+    "independent_bootstrap_reconstruction_replicates": 10000
+  },
+  "artifact_sha256": {
+    "case_register.json": "b9cc538b92569b9cdc6e0b1f012fba66225e32b2e2369d15b16f698b056d0656",
+    "family_horizon_rows.jsonl": "42948134bdad9a99923150a98bb11139a5b97ce3eecb0168d4b176387782769f",
+    "observed_panels.json": "a7fcb107917e08f332451f11e03aa590a9f71fa208fe0165460b1295b04101d9",
+    "prediction_panels.json": "140270ab1fe35b38ac4cce607de1a07bcfb8e03be294cbea77491cd6d11eee36",
+    "saved_prediction_rows.jsonl": "cd1a3947caca3afd9c82d7df45129313d6394dd23b6df819d3cb0a5f7411f509"
+  },
+  "wall_ns": 47713624700,
+  "new_model_fits": 0,
+  "new_model_predictions": 0,
+  "online_LLM_API_calls": 0
+}
