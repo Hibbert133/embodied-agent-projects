@@ -1,0 +1,92 @@
+from copy import deepcopy
+import unittest,warnings
+from unittest.mock import patch
+import numpy as np
+from src.analysis import policy_mode_math_v1 as main
+from src.analysis import policy_mode_independent_v1 as literal
+
+
+def obs(hand=(.5,.5,.2),obj=(.5,.5,.0),goal=(.3,.7,.1)):
+    x=[0.]*39;x[:3]=hand;x[4:7]=obj;x[-3:]=goal;return x
+
+
+class PolicyModeTests(unittest.TestCase):
+    def test_all_fixed_policies_match_installed_synthetic_queries(self):
+        from metaworld.policies import SawyerPushV3Policy,SawyerReachV3Policy,SawyerDoorOpenV3Policy
+        choices=[obs(),obs((.2,.2,.3)),obs((.5,.5,.03)),obs((.45,.5,.03)),obs((.45,.5,.1)),obs((.45,.5,.2))]
+        for task,cls in zip(main.TASKS,(SawyerPushV3Policy,SawyerReachV3Policy,SawyerDoorOpenV3Policy)):
+            for x in choices:
+                with warnings.catch_warnings():warnings.simplefilter('ignore');expected=cls().get_action(np.asarray(x,float).copy()).astype(float).tolist()
+                self.assertEqual(main.leaf(task,x,main.signature(task,x)),expected)
+                self.assertEqual(literal.action(task,x,literal.mode(task,x)),expected)
+
+    def test_push_has_three_position_leaves(self):
+        self.assertEqual([main.signature('push-v3',x)[0] for x in (obs((.1,.1,.3)),obs(),obs((.5,.5,.03)))],[0,1,2])
+
+    def test_push_gripper_uses_unshifted_object(self):
+        x=obs((.522,.5,.03))
+        self.assertEqual(main.signature('push-v3',x)[1],0)
+        x[0]=.519
+        self.assertEqual(main.signature('push-v3',x)[1],1)
+
+    def test_door_offset_and_no_observation_mutation(self):
+        x=np.asarray(obs((.45,.5,.03)));before=x.copy()
+        self.assertEqual(main.signature('door-open-v3',x),(2,1))
+        main.leaf('door-open-v3',x,(0,1));np.testing.assert_array_equal(x,before)
+
+    def test_reach_is_guard_free_negative_control(self):
+        a,b=obs(),obs((.8,.1,.6));r=main.decompose('reach-v3',a,b)
+        self.assertFalse(r['mode_changed']);self.assertEqual(r['raw']['mode_zg'],[0.,0.])
+
+    def test_scalar_full_factor_decomposition(self):
+        a,b=obs(),obs((.9,.1,.6))
+        for task in main.TASKS:self.assertEqual(main.decompose(task,a,b),literal.factors(task,a,b))
+
+    def test_identical_state_zeroes_all_components(self):
+        for task in main.TASKS:
+            r=main.decompose(task,obs(),obs())
+            for stage in ('raw','sent'):
+                self.assertEqual(r[stage]['delta_zg'],[0.,0.]);self.assertEqual(r[stage]['total_energy'],0.)
+
+    def test_continuous_within_leaf_change(self):
+        a,b=obs((.1,.1,.3)),obs((.1,.1,.31));r=main.decompose('push-v3',a,b)
+        self.assertFalse(r['mode_changed']);self.assertEqual(r['raw']['mode_energy'],0.);self.assertGreater(r['raw']['state_energy'],0.)
+
+    def test_clipping_can_remove_large_raw_mode_difference(self):
+        a,b=obs((0.,0.,-1.),(0.,0.,0.)),obs((1.,0.,-1.),(0.,0.,0.))
+        r=main.decompose('push-v3',a,b)
+        self.assertGreater(r['raw']['mode_energy'],0.)
+        self.assertEqual(r['sent']['mode_energy'],0.)
+
+    def test_nonzero_components_can_cancel(self):
+        a,b=obs((0.,0.,.1),(0.,0.,0.)),obs((1.,0.,.27),(0.,0.,0.))
+        r=main.decompose('push-v3',a,b)['raw']
+        self.assertEqual(r['total_energy'],0.);self.assertGreater(r['mode_energy'],0.);self.assertLess(r['cross_energy'],0.)
+
+    def test_reversing_pair_changes_sign_not_energy(self):
+        a,b=obs(),obs((.1,.1,.3))
+        for task in main.TASKS:
+            r,s=main.decompose(task,a,b),main.decompose(task,b,a)
+            for stage in ('raw','sent'):
+                for k in ('delta_zg','mode_zg','state_zg'):self.assertEqual(r[stage][k],[-x for x in s[stage][k]])
+                self.assertEqual(r[stage]['total_energy'],s[stage]['total_energy'])
+
+    def test_guard_boundaries_match_literal(self):
+        for task,offset,threshold in (('push-v3',.005,.02),('door-open-v3',.05,.12)):
+            for d in (np.nextafter(threshold,0.),threshold,np.nextafter(threshold,1.)):
+                x=obs((.5-offset+d,.5,.03))
+                self.assertEqual(list(main.signature(task,x)),literal.mode(task,x))
+
+    def test_independent_code_survives_main_disabled(self):
+        with patch.object(main,'signature',side_effect=AssertionError('main disabled')),patch.object(main,'leaf',side_effect=AssertionError('main disabled')):
+            self.assertIn('raw',literal.factors('push-v3',obs(),obs((.1,.1,.3))))
+
+    def test_private_extra_and_invalid_shapes_rejected(self):
+        for x in ({'observation':obs(),'seed':1},[0.]*40,[float('nan')]*39):
+            with self.assertRaises(ValueError):main.signature('push-v3',x)
+        with self.assertRaises(ValueError):main.leaf('reach-v3',obs(),(1,0))
+
+    def test_window_mean_and_empty_missingness(self):
+        r=main.decompose('reach-v3',obs(),obs((.5,.5,.3)))
+        self.assertEqual(main.summarize([r,r])['raw_total_energy'],r['raw']['total_energy'])
+        with self.assertRaises(ValueError):main.summarize([])

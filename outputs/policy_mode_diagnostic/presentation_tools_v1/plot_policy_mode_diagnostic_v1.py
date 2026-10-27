@@ -1,0 +1,37 @@
+from pathlib import Path
+import sys,os
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects')
+sys.path.insert(0,str(Path(__file__).parent/'correction_scope_plotting_v1/packages'))
+os.environ['MPLCONFIGDIR']=str(Path(__file__).parent/'policy_mode_mplconfig_v1')
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.font_manager import FontProperties
+sys.path.insert(0,str(ROOT))
+from src.analysis import response_qualification_io_v1 as io
+out=ROOT/'outputs/policy_mode_diagnostic/diagnostic_v1';panels=io.read(out/'panels.json');decision=io.read(out/'presentation/decision.json')
+all_={p['horizon']:p for p in panels if p['axes']==[]};font=FontProperties(fname=r'C:/Windows/Fonts/msyh.ttc')
+fig,axes=plt.subplots(1,3,figsize=(14.4,5.0));fig.subplots_adjust(left=.06,right=.98,top=.78,bottom=.22,wspace=.40)
+actual=100*all_[2]['metrics']['sent_any_difference_in_window'];v=[actual,0.]
+bars=axes[0].bar([0,1],v,color=['#d47742','#648fbe']);axes[0].set_ylim(0,100)
+axes[0].set_xticks([0,1],['任一发送差','模式发送项'],fontproperties=font,fontsize=10)
+axes[0].set_ylabel('H2完整窗口的组等权比例（%）',fontproperties=font);axes[0].set_title('非零字节差不等于分支差异',fontproperties=font,fontsize=11)
+for b,x in zip(bars,v):axes[0].text(b.get_x()+b.get_width()/2,x+3,f'{x:.2f}%',ha='center',fontsize=10)
+tasks=['push-v3','reach-v3','door-open-v3'];names=['推物','到达','开门'];values=[decision['task_H2'][t]['sent_total_L1']*1e6 for t in tasks]
+bars=axes[1].bar(range(3),values,color='#5f9b7b');axes[1].set_xticks(range(3),names,fontproperties=font);axes[1].set_ylim(0,7)
+axes[1].set_title('H2差异很小，模式项恒零',fontproperties=font,fontsize=11);axes[1].set_ylabel('归一化发送差L1（单位1e-6）',fontproperties=font)
+for b,x in zip(bars,values):axes[1].text(b.get_x()+b.get_width()/2,x+.15,f'{x:.2f}',ha='center',fontsize=10)
+colors=['#444d5b','#648fbe','#d47742'];labels=['实际发送差','模式项','连续项']
+for j,(key,color,label) in enumerate(zip(('sent_total_L1','sent_mode_L1','sent_state_L1'),colors,labels)):
+    axes[2].bar([i+(j-1)*.23 for i in range(3)],[all_[h]['metrics'][key] for h in (8,16,32)],width=.23,color=color,label=label)
+axes[2].set_xticks(range(3),[f'H{h}\n{all_[h]["available"]}/972' for h in (8,16,32)],fontsize=9)
+axes[2].set_ylabel('归一化发送命令L1',fontproperties=font);axes[2].set_title('后续窗口存在模式项',fontproperties=font,fontsize=11)
+axes[2].legend(prop=font,fontsize=8,loc='upper left',frameon=False)
+for ax in axes:ax.spines[['top','right']].set_visible(False)
+fig.suptitle('政策函数分解：短时连续差异与后续模式差异',fontproperties=font,fontsize=16,y=.97)
+fig.text(.5,.035,'全部为事后描述；H2有803/972完整窗口；分量可抵消；长窗人口改变，不能视作因果时间趋势',fontproperties=font,ha='center',fontsize=10)
+target=out/'presentation/policy_mode_diagnostic_v1.png';fig.savefig(target,dpi=170);plt.close(fig)
+report=ROOT/'reports/policy_mode_diagnostic_v1_zh.md';text=report.read_text('utf8')
+if '![政策函数描述图]' not in text:text=text.replace('## 六窗完整总表','![政策函数描述图](../outputs/policy_mode_diagnostic/diagnostic_v1/presentation/policy_mode_diagnostic_v1.png)\n\n## 六窗完整总表')
+if '## 后续判断' not in text:text=text.replace('## 审计、成本与限制','## 后续判断\n\n预定H2的模式解释不获支持：803个完整窗口中，两程序分支相同，模式项全零，实际发送差L1约4.07×10⁻⁶。H4同样没有配对模式项。因此不能用早期Z/夹爪字节差支持“第二步发生模式跳变”或解锁模式门控。H8及以后确有函数模式项，但可用人口改变，且模式变化可能是有益的任务推进；不能一律把它标为错误更新。当前不新训模型、不追加采集，不把长窗分量当唯一植物原因。A方向和完整CCF A目标仍保持。\n\n## 审计、成本与限制')
+report.write_text(text,encoding='utf8',newline='\n');print(target)

@@ -1,0 +1,59 @@
+{
+  "success": true,
+  "tests": 15,
+  "ids": [
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_all_fixed_policies_match_installed_synthetic_queries",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_clipping_can_remove_large_raw_mode_difference",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_continuous_within_leaf_change",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_door_offset_and_no_observation_mutation",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_guard_boundaries_match_literal",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_identical_state_zeroes_all_components",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_independent_code_survives_main_disabled",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_nonzero_components_can_cancel",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_private_extra_and_invalid_shapes_rejected",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_push_gripper_uses_unshifted_object",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_push_has_three_position_leaves",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_reach_is_guard_free_negative_control",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_reversing_pair_changes_sign_not_energy",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_scalar_full_factor_decomposition",
+    "tests.test_policy_mode_diagnostic_v1.PolicyModeTests.test_window_mean_and_empty_missingness"
+  ],
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "synthetic_policy_calls": {
+    "SawyerPushV3Policy": 6,
+    "SawyerReachV3Policy": 6,
+    "SawyerDoorOpenV3Policy": 6
+  },
+  "source_sha256": {
+    "src/analysis/policy_mode_math_v1.py": "91356800c11c9863db678b49bd85ccc6679bdc2882fab41587b3f216122531af",
+    "src/analysis/policy_mode_independent_v1.py": "f2b826377eab4b2bebab2989dae1f40742751bc5ef3dcba0e6cda2b8715a57e7",
+    "tests/test_policy_mode_diagnostic_v1.py": "b5a9f5bde984fd3e15ac4b7058604df834cb9e024b162d3b6875dfa6343fd74e",
+    "scripts/run_policy_mode_diagnostic_v1.py": "0b1b52d9442ff78d9a7d9373af0c051fecc88977e1640f97e0884efde447517a",
+    "scripts/validate_policy_mode_diagnostic_freeze_v1.py": "3ae39e592eee5a876b0c220627a2f6bda5697ced25185355ab50167df753021f",
+    "docs/protocols/policy_mode_diagnostic_v1_zh.md": "4ba0247a77e0755d075c54c9e55749db4ba87bbca3953cb4f19961b745f8cb54",
+    "docs/research/policy_mode_diagnostic_decision_v1_zh.md": "8bdc5c166f8798363df719bf7060f7b4a2bb497ba3f5e3d7fa316786bda416e2",
+    "configs/movement_task/policy_mode_diagnostic_v1.json": "8eea3aca2a94b95c228c804be59ff5c7dad2e0d1e5ae9fe0f8a564bc93cf7bfc"
+  }
+}
