@@ -1,0 +1,54 @@
+{
+  "integrity": "FAILED",
+  "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\correction_scope\\selective_coverage_v1\\run_pipeline.py\", line 14, in <module>\n    result=entry(path);io.write(out/(phase+'_receipt.json'),dict(integrity='PASSED',result=result,wall_ns=perf_counter_ns()-t))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_staggered_selective_scope_v1.py\", line 15, in independent_run\n    with patch.object(main,'generate',denied):return independent.audit(path)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\staggered_selective_independent_v1.py\", line 20, in audit\n    consume(dict(event='INITIAL',delay=p,rounds_per_thread=400,alpha=[1,20],initial_threshold=[0,1],classification='CONSTRUCTED_SCORE_SEQUENCE_NOT_PHYSICS'))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\staggered_selective_independent_v1.py\", line 19, in consume\n    actual=next(iterator);io.require(actual==dict(event_index=event_index,**expected),'literal independent event, fields and causal order');event_index+=1\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 127, in rows\n    for line in f:yield json.loads(line)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\gzip.py\", line 314, in read1\n    return self._buffer.read1(size)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\_compression.py\", line 68, in readinto\n    data = self.read(len(byte_view))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\gzip.py\", line 488, in read\n    if not self._read_gzip_header():\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.python310\\lib\\gzip.py\", line 436, in _read_gzip_header\n    raise BadGzipFile('Not a gzipped file (%r)' % magic)\ngzip.BadGzipFile: Not a gzipped file (b'{\"')\n",
+  "partial_counters": [
+    {
+      "module": "src.analysis.staggered_selective_independent_v1",
+      "function": "audit",
+      "guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 0,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 0,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "fold": null,
+      "kind": null,
+      "completed_windows": null
+    },
+    {
+      "module": "src.analysis.staggered_selective_independent_v1",
+      "function": "consume",
+      "guard": null,
+      "fold": null,
+      "kind": null,
+      "completed_windows": null
+    },
+    {
+      "module": "src.analysis.response_qualification_io_v1",
+      "function": "rows",
+      "guard": null,
+      "fold": null,
+      "kind": null,
+      "completed_windows": null
+    }
+  ],
+  "wall_ns": 109953600,
+  "no_automatic_retry": true
+}
