@@ -1,0 +1,64 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "integrity": "PASSED",
+    "split": "CAL",
+    "software_contract": "NOT_APPLICABLE",
+    "nominal_contract": "NOT_APPLICABLE",
+    "manifest_id": "f0e12745b4b7bcce4910ba95c2f2b2d2743aa25218706e8eb9cf9fc16b4c7115",
+    "executions": 108,
+    "control_steps": 7830,
+    "all_resets": 5508,
+    "physical_frames": 2793150,
+    "native_target_updates_bit_exact": true,
+    "paired_prefixes": {
+      "pre_boundary_prefix_comparisons": 99,
+      "full_entry_prefix_comparisons": 72
+    },
+    "invalid_forecasts": 0,
+    "extra_independent_policy_queries": 3768,
+    "independent_forecast_rows": 12288,
+    "artifact_sha256": {
+      "cases.jsonl.gz": "6d962a4fe19a440d6e82e9d122ebf025ed8b3790e596424c4a62aee720199b46",
+      "events.jsonl.gz": "117a4eee8ecdf39b67b634e34a62ab2ed08fcb6b49af48cfbb9db92b5ecea8a8",
+      "private_targets.jsonl.gz": "fa5f388ad24e1f97b1e2838965d6497a40c2c91b171d9a8d8c48cdd419f6f3c8",
+      "public_trajectories.jsonl.gz": "6561373aef57961db54bb3ff388ec3709abf5e6490e1ccb67d0ff378a027f15e",
+      "status.json": "cc73723541dcc7c9e255b43263d05e53ee7ed96ccdb322f2b30d28b590418139",
+      "summary.json": "9a12b8bf44d4773c16f247aa516b6c83c0cf1a75881d8cf226cd84d48479d205"
+    },
+    "trajectory_audit_sha256": "8ace850226b38ccd064f50aba358881313453983173963bc740c1364ebcd35c5",
+    "read_only_guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 64,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 72,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "independent_inference_counts": {
+      "independent_RLS_batch_solves": 64,
+      "independent_axis_predictions": 27728,
+      "independent_axis_observations": 15440
+    },
+    "wall_ns": 63596393800,
+    "new_environment_steps": 0,
+    "new_global_model_fits": 0,
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 63629647000
+}

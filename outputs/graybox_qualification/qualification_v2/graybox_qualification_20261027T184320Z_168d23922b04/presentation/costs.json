@@ -1,0 +1,155 @@
+{
+  "new_by_phase": {
+    "CAL": {
+      "executions": 108,
+      "completed_executions": 108,
+      "control_steps": 7830,
+      "all_resets": 5508,
+      "physical_frames": 2793150,
+      "fixed_policy_queries": 3768,
+      "independent_policy_queries": 3768,
+      "independent_inference_counts": {
+        "independent_RLS_batch_solves": 64,
+        "independent_axis_predictions": 27728,
+        "independent_axis_observations": 15440
+      },
+      "record_audit_guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 64,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 72,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "collection_wall_s": 323.2714453,
+      "audit_wall_s": 63.5963938,
+      "network_guard": {
+        "attempted_network_calls": 0
+      },
+      "fitting_guard": {
+        "attempted_fits": 0
+      }
+    },
+    "QUAL": {
+      "executions": 324,
+      "completed_executions": 324,
+      "control_steps": 22137,
+      "all_resets": 16524,
+      "physical_frames": 8372685,
+      "fixed_policy_queries": 11556,
+      "independent_policy_queries": 11556,
+      "independent_inference_counts": {
+        "independent_RLS_batch_solves": 178,
+        "independent_axis_predictions": 37096,
+        "independent_axis_observations": 20008
+      },
+      "record_audit_guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 178,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 216,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "collection_wall_s": 924.5796853,
+      "audit_wall_s": 145.6616605,
+      "network_guard": {
+        "attempted_network_calls": 0
+      },
+      "fitting_guard": {
+        "attempted_fits": 0
+      }
+    }
+  },
+  "new_total": {
+    "executions": 432,
+    "completed_executions": 432,
+    "control_steps": 29967,
+    "all_resets": 22032,
+    "physical_frames": 11165835,
+    "fixed_policy_queries": 15324
+  },
+  "inherited_source_costs_separate": {
+    "executions": 459,
+    "control_steps": 31017,
+    "all_resets": 23409,
+    "physical_frames": 11859585,
+    "main_ridge_solves": 9,
+    "main_nominal_grid_passes": 27,
+    "independent_training_lstsq_including_failed_and_supplemental": 18,
+    "independent_nominal_grid_passes": 54
+  },
+  "combined_actual": {
+    "executions": 891,
+    "control_steps": 60984,
+    "all_resets": 45441,
+    "physical_frames": 23025420
+  },
+  "new_primary_training": 0,
+  "new_nominal_grid_fits": 0,
+  "actual_online_inference_counts": {
+    "method_attempts": 790,
+    "zero_rows": 5808,
+    "methods_completed": 790,
+    "linear_rows": 11616,
+    "rls_updates": 6690,
+    "rls_forecast_steps": 5808,
+    "axis_predictions": 64824,
+    "axis_observations": 35448
+  },
+  "partial_failure_counters": {},
+  "online_LLM_API_calls": 0,
+  "C4_C8_fits": 0,
+  "full_task_tail_evaluated": false,
+  "new_model_used_for_control": false,
+  "new_unique_tests": 18,
+  "reused_unique_tests": 2410,
+  "unique_total": 2428,
+  "constructed_checks_separate": {
+    "final": "outputs/graybox_qualification/freeze_validation_v2/test_receipt.json",
+    "all_attempts": "outputs/graybox_qualification/development_validation_v2",
+    "attempts_not_added_to_unique_total": true
+  },
+  "stage_wall_seconds": {
+    "CAL_collect_receipt": 327.2956482,
+    "CAL_evaluate_receipt": 1.9636131,
+    "CAL_record_audit_receipt": 63.629647,
+    "CAL_statistics_audit_receipt": 1.9821854,
+    "model_lock_receipt": 0.8141139,
+    "QUAL_collect_receipt": 931.338914,
+    "QUAL_evaluate_receipt": 4.1756758,
+    "QUAL_record_audit_receipt": 145.726605,
+    "QUAL_statistics_audit_receipt": 3.9446812
+  },
+  "nested_or_parallel_times_not_additive": true
+}

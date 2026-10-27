@@ -1,28 +1,31 @@
-# 最新归档：灰箱训练流水线失败交付与只读审计修复
+# 最新归档：标准灰箱响应参考的独立资格补充
 
-来源本地 e784794ded175d35de5dea19a2ca756a68e35fe7，冻结cf2712d，失败交付5405cd4，父归档 1cae03ce34ec373675d02c1afb2d47c55697f6e3。
-实际459次执行、31017控制步、23409全部重置、11859585物理帧。
-SOFTWARE、NOMINAL和TRAIN采集/记录审计通过；主训练9次求解、27次网格。
-训练独立审计末尾在上下文退出前读取计数，触发KeyError，按冻结停止规则
-终止原流程。CAL108与QUAL324均未开始，不能称为模型预测资格负结果。
+来源本地 af2b3c6196bab83670aaf4b1304c2c31cb5cc837，冻结168d239，父归档 db378040920c006e37c118576d5f9226c36f86d4。
+状态 CLOSED_NEGATIVE。原训练审计技术失败、459条来源及只读修复保持。
+本补充仅执行原预留但未用的CAL/QUAL分配，未重采训练人口、换种子或拟合模型。
+模型SHA固定101030e545e92232b1855dc59eb77617025e56353786e4c10c2ae7922203927a；q锁定值0.01。
 
-修复v2写独立补充回执，未生成原流程的training/audit.json，不自动恢复采集。
-两个完整生命周期回归测试通过（构造LS18次）。只读重建原27条名义和324条
-训练执行及模型通过，追加独立LS9次、网格27次；连原失败审计共LS18/网格54。
-模型SHA保持101030e545e92232b1855dc59eb77617025e56353786e4c10c2ae7922203927a。
-补充数值重建不等于未知条件预测、完整任务收益、安全或算法创新。
+FIR: 177.698619113 mm full-allocation endpoint loss
+GRAY_FIXED: 177.559097029 mm full-allocation endpoint loss
+GRAY_JOINT: 178.098540943 mm full-allocation endpoint loss
+INSTANT: 179.377362846 mm full-allocation endpoint loss
+RLS_ARX: 178.708127923 mm full-allocation endpoint loss
+ZERO: 182.801975514 mm full-allocation endpoint loss
 
-32+2项新增、2376项旧源码绑定复用，共2410项唯一检查。编译、依赖、
-源码绑定完整秘密扫描与新索引BASIC/EXTRA扫描、差异/字节核对通过。
-原科学失败、开发失败以及交付日志CRLF归一化导致的一次字节检查失败保留；
-传输属性修复后保持原始日志字节。全部13份原始数据/元数据已分片并实际
-恢复，原件、分片和恢复副本均本地保留，没有重采、扩样、旧QUAL调参或API。
+新费用：{'executions': 432, 'completed_executions': 432, 'control_steps': 29967, 'all_resets': 22032, 'physical_frames': 11165835, 'fixed_policy_queries': 15324}。
+含原真实来源的累计费用：{'executions': 891, 'control_steps': 60984, 'all_resets': 45441, 'physical_frames': 23025420}。
+完整病例、缺失、失败、全部五参考区间/任务/时域门和分层见中文报告
+reports/graybox_qualification_v2_zh.md。原未启动占位条目不重复计为执行。
+这是已声明命令包上的标准输入差响应组件，不能称为绝对状态/参数/逆控制、
+完整任务收益、安全或新获取算法。CCF A目标仍未完成。
 
-中文报告 reports/graybox_response_v1_zh.md；补充 reports/graybox_audit_repair_v2_zh.md。
-A主线与CCF A目标保持；标准联合EKF/RLS/FIR不是新获取算法。后续须先独立
-冻结尚未执行的资格入口及全部成本/失败处理，不能悄悄恢复原失败流程。
+18项新增、2410项旧源码绑定复用，共2428项唯一检查；编译、依赖、全跟踪
+秘密扫描、新实际索引BASIC/EXTRA与差异/字节检查通过。Windows短路径开发
+失败及修正保留。原所有科学负结果和故障均保留，零在线LLM API，零新主拟合。
+原始大记录、分片及实际恢复副本均在本地保留；远端省略项按完整目录披露。
+补充查新保留局部有效性主动学习和PDML等直接先例，不将重加权/误差门称新颖。
 
-完整源树10696项，发布8105项；
-沿原规则省略原始jsonl.gz、.bin分片和>8MiB文件，逐项SHA、大小和发布状态
-见 ARCHIVE_FILE_CATALOG_GRAYBOX_RESULT_20261028.json，不声称全部大记录在远端。
-普通快进，无强推、合并或删历史；本轮零在线LLM API，归档不计科学贡献。
+完整源树10854项，发布8245项；沿原规则省略
+原始jsonl.gz、.bin分片和>8MiB文件，逐项SHA、大小、发布状态见
+ARCHIVE_FILE_CATALOG_GRAYBOX_QUALIFICATION_20261028.json，不声称全部大数据在远端。
+普通快进，无强推、合并或删除历史；归档不计科学贡献。

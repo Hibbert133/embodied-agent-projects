@@ -1,0 +1,67 @@
+test_actual_source_is_terminal_and_holdouts_unspent (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_binding_refuses_nesting_and_foreign_binding (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_budget_literal_and_full_source_cost_not_double_charged (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_dependency_binding_is_explicit_and_exception_restores_every_module (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_frozen_bank_forecasts_match_independent_scalar_and_batch_math (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_full_ownership_census_allows_only_exact_declared_sources (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_full_saved_cal_lock_qual_statistics_path_with_main_scoring_disabled (tests.test_graybox_qualification_v2.QualificationSupplement) ... ERROR
+test_imported_source_mutation_is_rejected (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_model_digest_includes_process_choice_without_mutating_import (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_no_training_or_repeated_software_collection_entry (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_pipeline_has_only_frozen_cal_lock_qual_stages (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_prepare_imports_exact_model_and_marks_audit_as_supplemental (tests.test_graybox_qualification_v2.QualificationSupplement) ... ERROR
+test_qual_cannot_start_without_cal_lock (tests.test_graybox_qualification_v2.QualificationSupplement) ... ERROR
+test_qual_lock_artifact_mutation_rejected (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_scientific_selection_and_qualification_rules_exact_original (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_second_prepare_rejected_without_sampling (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_unspent_check_rejects_existing_attempt_directory_or_intent_or_lock (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+test_whole_registered_assignments_and_noise_namespaces_unchanged (tests.test_graybox_qualification_v2.QualificationSupplement) ... ok
+
+======================================================================
+ERROR: test_full_saved_cal_lock_qual_statistics_path_with_main_scoring_disabled (tests.test_graybox_qualification_v2.QualificationSupplement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_graybox_qualification_v2.py", line 118, in test_full_saved_cal_lock_qual_statistics_path_with_main_scoring_disabled
+    with patch.object(command.prior.evaluation,'families',return_value=data):result=command.evaluate(path,split)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\scripts\run_graybox_qualification_v2.py", line 40, in evaluate
+    with binding():return prior.evaluation.evaluate_split(path,split)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\graybox_response_evaluation_v1.py", line 48, in evaluate_split
+    io.require(split in ('CAL','QUAL'),'saved out-of-training forecasts only');a.checked(path);start=perf_counter_ns();root=Path(path).parent;out=root/(split.lower()+'_evaluation');out.mkdir(exist_ok=False)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\graybox_qualification_io_v2.py", line 93, in checked
+    io.require(path.parent.parent==OUTPUT and mid==io.digest(value) and m['config']==config() and io.read(CONFIG)==config() and io.read(SEEDS)==registry(),'immutable supplement manifest/config/registry')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\response_qualification_io_v1.py", line 40, in require
+    if not ok:raise ValueError(message)
+ValueError: immutable supplement manifest/config/registry
+
+======================================================================
+ERROR: test_prepare_imports_exact_model_and_marks_audit_as_supplemental (tests.test_graybox_qualification_v2.QualificationSupplement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_graybox_qualification_v2.py", line 88, in test_prepare_imports_exact_model_and_marks_audit_as_supplemental
+    m=a.phase_gate(path,'CAL');self.assertTrue(m['imported_training_not_new_fitting']);self.assertTrue(io.read(path.parent/'training/audit.json')['imported_supplemental_audit'])
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\graybox_qualification_io_v2.py", line 104, in phase_gate
+    m=checked(path);population(split);root=Path(path).parent
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\graybox_qualification_io_v2.py", line 93, in checked
+    io.require(path.parent.parent==OUTPUT and mid==io.digest(value) and m['config']==config() and io.read(CONFIG)==config() and io.read(SEEDS)==registry(),'immutable supplement manifest/config/registry')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\response_qualification_io_v1.py", line 40, in require
+    if not ok:raise ValueError(message)
+ValueError: immutable supplement manifest/config/registry
+
+======================================================================
+ERROR: test_qual_cannot_start_without_cal_lock (tests.test_graybox_qualification_v2.QualificationSupplement)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_graybox_qualification_v2.py", line 99, in test_qual_cannot_start_without_cal_lock
+    with self.assertRaises(FileNotFoundError):a.phase_gate(path,'QUAL')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\graybox_qualification_io_v2.py", line 104, in phase_gate
+    m=checked(path);population(split);root=Path(path).parent
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\graybox_qualification_io_v2.py", line 93, in checked
+    io.require(path.parent.parent==OUTPUT and mid==io.digest(value) and m['config']==config() and io.read(CONFIG)==config() and io.read(SEEDS)==registry(),'immutable supplement manifest/config/registry')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\response_qualification_io_v1.py", line 40, in require
+    if not ok:raise ValueError(message)
+ValueError: immutable supplement manifest/config/registry
+
+----------------------------------------------------------------------
+Ran 18 tests in 46.278s
+
+FAILED (errors=3)
