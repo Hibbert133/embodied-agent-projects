@@ -1,0 +1,18 @@
+{
+  "mode": "READ_ONLY_SUPPLEMENT_NOT_PIPELINE_RESUME",
+  "source_commit": "5405cd4520529860dc3eeb3ddb2982ac672f34de",
+  "source_sha256": {
+    "src/analysis/graybox_response_training_audit_v2.py": "138bf0c17297c65aaa343e0278cf7b7605bf6404e2c5300ecb05efbddf5ae871",
+    "tests/test_graybox_audit_lifecycle_v2.py": "7c23e685fa3555682f1f7083f0584fc407dab51581b072c0cba3ec1f2f8593e6"
+  },
+  "input_sha256": {
+    "training/models.json": "101030e545e92232b1855dc59eb77617025e56353786e4c10c2ae7922203927a",
+    "training/completion.json": "01064a0ce15922911943c403625106c20a45e8addc71506d0ecaee4c3a15e9b0",
+    "training/public_nominal_traces.json": "8c5140d1d349e0ba7878fa44c038a688341170f7d1bf9a5f4001248abf809169",
+    "training/public_train_families.json": "347faeab16f992cd289f00c62a4940bfc45577481ff9e7f9f65fb570b8f48243",
+    "pipeline_control/training_audit_failure.json": "9f19929fbcce9d57da7eace2aa203e9c50248d583ca418f835e7f35f61b3b628"
+  },
+  "additional_independent_lstsq_budget": 9,
+  "additional_independent_grid_budget": 27,
+  "additional_physics": 0
+}

@@ -1,0 +1,60 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "integrity": "PASSED",
+    "split": "TRAIN",
+    "software_contract": "NOT_APPLICABLE",
+    "nominal_contract": "NOT_APPLICABLE",
+    "manifest_id": "2f91934d109310c2781250d275c56e1dc3bae97d8b34beee3f6e5af1c088b7a2",
+    "executions": 324,
+    "control_steps": 21693,
+    "all_resets": 16524,
+    "physical_frames": 8370465,
+    "native_target_updates_bit_exact": true,
+    "paired_prefixes": {
+      "pre_boundary_prefix_comparisons": 297,
+      "full_entry_prefix_comparisons": 216
+    },
+    "invalid_forecasts": 0,
+    "extra_independent_policy_queries": 11316,
+    "independent_forecast_rows": 0,
+    "artifact_sha256": {
+      "cases.jsonl.gz": "dfd21bdfa732beb26379361f2cde34e07fa23194da79732d10f932b66b700907",
+      "events.jsonl.gz": "887a590cb6ceb2d1dcb517d6ca1b9fd13166e59bb21d8611cc5f5fb222d2671d",
+      "private_targets.jsonl.gz": "6add1ee70ee159ac16bff96009d8842606c696ee7df40a82a02b978bee841945",
+      "public_trajectories.jsonl.gz": "ce70814dc45fda680e28a36b31530f8751d97bec128340e80701437f130eca4c",
+      "status.json": "768ec342397e9cf26e89e93569f0fbd6c55b72c59ecb5b5a064bd812218343a6",
+      "summary.json": "2aa3637247ba1bff78231c2b0b49a8ea56cc25bd232d13ea15e1a702c095bc3c"
+    },
+    "trajectory_audit_sha256": "3841ddf6fd2c815ced52760ca958d61589097b2322aa75306eae5cda44872d14",
+    "read_only_guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 0,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 0,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "independent_inference_counts": {},
+    "wall_ns": 123015929900,
+    "new_environment_steps": 0,
+    "new_global_model_fits": 0,
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 123083489500
+}

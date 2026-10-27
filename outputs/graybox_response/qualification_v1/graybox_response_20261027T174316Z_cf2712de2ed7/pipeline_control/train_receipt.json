@@ -1,0 +1,43 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "integrity": "TRAINED_FOR_INDEPENDENT_AUDIT",
+    "models_sha256": "101030e545e92232b1855dc59eb77617025e56353786e4c10c2ae7922203927a",
+    "actual_counts": {
+      "axis_predictions": 38880,
+      "axis_observations": 38880,
+      "nominal_grid_candidate_evaluations": 27,
+      "ridge_solve_attempts": 9
+    },
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 9,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 9,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "wall_ns": 28125132400,
+    "primary_ridge_systems": 9,
+    "nominal_grid_candidates": 27,
+    "neural_updates": 0,
+    "online_LLM_API_calls": 0,
+    "physical_or_control_qualification": false
+  },
+  "wall_ns": 28937492600
+}

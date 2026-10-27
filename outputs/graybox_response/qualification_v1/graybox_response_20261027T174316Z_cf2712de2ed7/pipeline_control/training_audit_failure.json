@@ -1,0 +1,49 @@
+{
+  "integrity": "FAILED",
+  "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_graybox_response_pipeline_v1.py\", line 31, in run\n    result=entry();io.write(out/(phase+'_receipt.json'),dict(integrity='PASSED',result=result,wall_ns=perf_counter_ns()-t))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_graybox_response_pipeline_v1.py\", line 15, in <lambda>\n    result.extend([('train',lambda:command.training.train(path)),('training_audit',lambda:command.audit_training(path))])\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_graybox_response_v1.py\", line 36, in audit_training\n    with production_disabled():return training.audit_training(path)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\graybox_response_training_v1.py\", line 102, in audit_training\n    return audit(path)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\graybox_response_training_audit_v1.py\", line 75, in audit\n    io.require(counter['independent_nominal_grid_passes']==27 and guard['operation_counts']['lstsq_attempts']==9,'declared independent fitting budget')\nKeyError: 'operation_counts'\n",
+  "partial_counters": [
+    {
+      "module": "src.analysis.graybox_response_training_v1",
+      "function": "audit_training",
+      "guard": null,
+      "receipt": null,
+      "counter": null,
+      "completed_cases": null
+    },
+    {
+      "module": "src.analysis.graybox_response_training_audit_v1",
+      "function": "audit",
+      "guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 0,
+          "lstsq_attempts": 9,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 0,
+          "lstsq": 9,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "receipt": null,
+      "counter": {
+        "independent_nominal_axis_predictions": 38880,
+        "independent_nominal_grid_passes": 27
+      },
+      "completed_cases": null
+    }
+  ],
+  "wall_ns": 30273143800,
+  "no_automatic_retry": true
+}

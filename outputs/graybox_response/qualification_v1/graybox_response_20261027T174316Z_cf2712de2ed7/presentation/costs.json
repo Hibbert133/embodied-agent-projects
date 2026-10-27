@@ -1,0 +1,267 @@
+{
+  "by_phase": {
+    "SOFTWARE": {
+      "executions": 108,
+      "completed_executions": 108,
+      "control_steps": 7164,
+      "all_resets": 5508,
+      "physical_frames": 2789820,
+      "fixed_policy_queries": 3804,
+      "independent_policy_queries": 3804,
+      "independent_forecast_rows": 0,
+      "independent_inference_counts": {},
+      "independent_guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 0,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 0,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "collection_wall_s": 305.2225651,
+      "record_audit_wall_s": 40.3982404,
+      "fit_guard": {
+        "attempted_fits": 0
+      },
+      "network_guard": {
+        "attempted_network_calls": 0
+      }
+    },
+    "NOMINAL": {
+      "executions": 27,
+      "completed_executions": 27,
+      "control_steps": 2160,
+      "all_resets": 1377,
+      "physical_frames": 699300,
+      "fixed_policy_queries": 0,
+      "independent_policy_queries": 0,
+      "independent_forecast_rows": 0,
+      "independent_inference_counts": {},
+      "independent_guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 0,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 0,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "collection_wall_s": 57.1249252,
+      "record_audit_wall_s": 5.650205,
+      "fit_guard": {
+        "attempted_fits": 0
+      },
+      "network_guard": {
+        "attempted_network_calls": 0
+      }
+    },
+    "TRAIN": {
+      "executions": 324,
+      "completed_executions": 324,
+      "control_steps": 21693,
+      "all_resets": 16524,
+      "physical_frames": 8370465,
+      "fixed_policy_queries": 11316,
+      "independent_policy_queries": 11316,
+      "independent_forecast_rows": 0,
+      "independent_inference_counts": {},
+      "independent_guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 0,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 0,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "collection_wall_s": 904.394515,
+      "record_audit_wall_s": 123.0159299,
+      "fit_guard": {
+        "attempted_fits": 0
+      },
+      "network_guard": {
+        "attempted_network_calls": 0
+      }
+    }
+  },
+  "total": {
+    "executions": 459,
+    "completed_executions": 459,
+    "control_steps": 31017,
+    "all_resets": 23409,
+    "physical_frames": 11859585,
+    "fixed_policy_queries": 15120
+  },
+  "main_training_receipt": {
+    "integrity": "TRAINED_FOR_INDEPENDENT_AUDIT",
+    "models_sha256": "101030e545e92232b1855dc59eb77617025e56353786e4c10c2ae7922203927a",
+    "actual_counts": {
+      "axis_predictions": 38880,
+      "axis_observations": 38880,
+      "nominal_grid_candidate_evaluations": 27,
+      "ridge_solve_attempts": 9
+    },
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 9,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 9,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "wall_ns": 28125132400,
+    "primary_ridge_systems": 9,
+    "nominal_grid_candidates": 27,
+    "neural_updates": 0,
+    "online_LLM_API_calls": 0,
+    "physical_or_control_qualification": false
+  },
+  "independent_training_audit": null,
+  "actual_online_inference_counts": {},
+  "partial_failure_counters": {
+    "training_audit_failure.json": {
+      "integrity": "FAILED",
+      "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_graybox_response_pipeline_v1.py\", line 31, in run\n    result=entry();io.write(out/(phase+'_receipt.json'),dict(integrity='PASSED',result=result,wall_ns=perf_counter_ns()-t))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_graybox_response_pipeline_v1.py\", line 15, in <lambda>\n    result.extend([('train',lambda:command.training.train(path)),('training_audit',lambda:command.audit_training(path))])\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_graybox_response_v1.py\", line 36, in audit_training\n    with production_disabled():return training.audit_training(path)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\graybox_response_training_v1.py\", line 102, in audit_training\n    return audit(path)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\graybox_response_training_audit_v1.py\", line 75, in audit\n    io.require(counter['independent_nominal_grid_passes']==27 and guard['operation_counts']['lstsq_attempts']==9,'declared independent fitting budget')\nKeyError: 'operation_counts'\n",
+      "partial_counters": [
+        {
+          "module": "src.analysis.graybox_response_training_v1",
+          "function": "audit_training",
+          "guard": null,
+          "receipt": null,
+          "counter": null,
+          "completed_cases": null
+        },
+        {
+          "module": "src.analysis.graybox_response_training_audit_v1",
+          "function": "audit",
+          "guard": {
+            "operation_counts": {
+              "environment_creations": 0,
+              "resets": 0,
+              "simulation": 0,
+              "solve_attempts": 0,
+              "lstsq_attempts": 9,
+              "cold_fit_attempts": 0,
+              "cold_estimator_entries": 0,
+              "cold_linear_solve_attempts": 0,
+              "cold_linear_lstsq_attempts": 0
+            },
+            "network": {
+              "attempted_network_calls": 0
+            },
+            "zero_new_physical_interactions": true,
+            "registered_budgets": {
+              "solve": 0,
+              "lstsq": 9,
+              "cold_fits": 0
+            },
+            "online_LLM_API_calls": 0
+          },
+          "receipt": null,
+          "counter": {
+            "independent_nominal_axis_predictions": 38880,
+            "independent_nominal_grid_passes": 27
+          },
+          "completed_cases": null
+        }
+      ],
+      "wall_ns": 30273143800,
+      "no_automatic_retry": true
+    }
+  },
+  "online_LLM_API_calls": 0,
+  "neural_updates": 0,
+  "legacy_C4_C8_fits": 0,
+  "old_training_samples_reused": 0,
+  "old_learned_weights_loaded": 0,
+  "model_used_for_control": false,
+  "full_task_tail_evaluated": false,
+  "new_unique_tests": 32,
+  "source_reused_tests": 2376,
+  "unique_total": 2408,
+  "constructed_test_and_prior_array_costs_separate": {
+    "final_receipt": "outputs/graybox_response/freeze_validation_v1/test_receipt.json",
+    "all_development_attempts": "outputs/graybox_observer/collector_development_v1",
+    "previous_array": "outputs/graybox_observer/array_implementation_v1",
+    "repeat_attempts_not_added_to_unique_total": true
+  },
+  "historical_physics_separate": {
+    "path": "outputs/history_response/development_v1/history_response_20261027T130543Z_b2f69d34b630/presentation/costs.json",
+    "training_records_or_weights_reused": false,
+    "previous_all_source_costs_retained": true
+  },
+  "stage_wall_seconds": {
+    "NOMINAL_collect_receipt": 63.625718,
+    "NOMINAL_record_audit_receipt": 5.6529646,
+    "SOFTWARE_collect_receipt": 309.1954945,
+    "SOFTWARE_record_audit_receipt": 40.4232374,
+    "TRAIN_collect_receipt": 908.427693,
+    "train_receipt": 28.9374926,
+    "TRAIN_record_audit_receipt": 123.0834895
+  },
+  "parallel_or_nested_times_not_additive": true,
+  "actual_training_numerical_costs": {
+    "primary_solves": 9,
+    "primary_nominal_grid_passes": 27,
+    "independent_lstsq": 9,
+    "independent_nominal_grid_passes": 27
+  }
+}

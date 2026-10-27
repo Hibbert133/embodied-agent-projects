@@ -1,0 +1,31 @@
+{
+  "success": true,
+  "tests": 2,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 18,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 18,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/graybox_response_training_audit_v2.py": "138bf0c17297c65aaa343e0278cf7b7605bf6404e2c5300ecb05efbddf5ae871",
+    "tests/test_graybox_audit_lifecycle_v2.py": "7c23e685fa3555682f1f7083f0584fc407dab51581b072c0cba3ec1f2f8593e6"
+  }
+}
