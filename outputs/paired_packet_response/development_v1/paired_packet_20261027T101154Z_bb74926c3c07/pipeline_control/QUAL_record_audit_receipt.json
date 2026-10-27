@@ -1,0 +1,58 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "integrity": "PASSED",
+    "split": "QUAL",
+    "software_contract": "NOT_APPLICABLE",
+    "manifest_id": "0c1464e0b814377def4650af4786401ae516a087ba8f66969f8821facb11d960",
+    "executions": 324,
+    "control_steps": 20983,
+    "all_resets": 16524,
+    "physical_frames": 8366915,
+    "native_target_updates_bit_exact": true,
+    "paired_prefixes": {
+      "pre_boundary_prefix_comparisons": 297,
+      "full_entry_prefix_comparisons": 216
+    },
+    "invalid_forecasts": 0,
+    "extra_independent_policy_queries": 11412,
+    "independent_forecast_rows": 19440,
+    "artifact_sha256": {
+      "cases.jsonl.gz": "3f0f7c9c1ab7aa16361483f977d5aeac11f87cf15f83b5241aba390e2d961393",
+      "events.jsonl.gz": "aa9872820f5884eb245d50e77ddc00d28218e271b2928ce628d1cf5bc8b95cbd",
+      "private_targets.jsonl.gz": "6aa2e783bb131cb7af893d7b389306c9621ef42cd3a71cd6062e6c180d284c26",
+      "public_trajectories.jsonl.gz": "3623a90df73b3277469324cb3d5cb495c77c9318e5c592351594eca0c5d0786f",
+      "status.json": "45b8a248e36e5000ae70be76118774567ff1fa59e5378227fe8ca1fe93d2b923",
+      "summary.json": "5d6bf8106cd5858838dbf3730065ef85c87b6bffba148a032f3575311629fa3f"
+    },
+    "trajectory_audit_sha256": "cfd07cd2c0c03759275fca9bf989016dba4738bdd1a8faf5109b84ed9c389a1d",
+    "read_only_guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 0,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 0,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "wall_ns": 103128077400,
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 103175163700
+}

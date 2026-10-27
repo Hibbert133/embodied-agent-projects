@@ -1,0 +1,54 @@
+{
+  "integrity": "PASSED",
+  "split": "TRAIN",
+  "software_contract": "NOT_APPLICABLE",
+  "manifest_id": "0c1464e0b814377def4650af4786401ae516a087ba8f66969f8821facb11d960",
+  "executions": 324,
+  "control_steps": 20734,
+  "all_resets": 16524,
+  "physical_frames": 8365670,
+  "native_target_updates_bit_exact": true,
+  "paired_prefixes": {
+    "pre_boundary_prefix_comparisons": 297,
+    "full_entry_prefix_comparisons": 216
+  },
+  "invalid_forecasts": 0,
+  "extra_independent_policy_queries": 11148,
+  "independent_forecast_rows": 0,
+  "artifact_sha256": {
+    "cases.jsonl.gz": "cd205ed94c3c279d5c213be2811c1b11e720f6075bd4d28caa097d44b10979d2",
+    "events.jsonl.gz": "cd668d72f18e5e38cdcea0822715f61442ba57b813d2d0e17338ec89a3e70fd0",
+    "private_targets.jsonl.gz": "4274ec0dbda02b7730c846780fd2fc3f7c532d9600bb4bfb14f08b1477728a15",
+    "public_trajectories.jsonl.gz": "07e25569cacaf514476048201a7e520fdff4d51aff07d03da982c3a6cf1a187b",
+    "status.json": "544af83b69bd246b47c4530b615b709a1af79373fe2fc7234668e5d4e3dcb1ba",
+    "summary.json": "63041b5e597cd4dc67adc9a7dc626e9b1332b537b719541ba65e75bf6ab1a940"
+  },
+  "trajectory_audit_sha256": "ae2d3444bb4e96314cee4d9be5a810e73f84d9add2a664d3ccdf450aed5ca23f",
+  "read_only_guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 97543839600,
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0
+}

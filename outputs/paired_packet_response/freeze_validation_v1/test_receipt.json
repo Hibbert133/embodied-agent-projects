@@ -1,0 +1,65 @@
+{
+  "tests_run": 35,
+  "unique_test_ids": [
+    "test_paired_packet_response_v1.HostRecordTests.test_independent_record_audit_detects_corrupted_noise_cursor",
+    "test_paired_packet_response_v1.HostRecordTests.test_mismatched_cached_entry_is_rejected_before_packet_response",
+    "test_paired_packet_response_v1.HostRecordTests.test_only_canonical_entry_computes_and_siblings_use_saved_forecast",
+    "test_paired_packet_response_v1.HostRecordTests.test_synthetic_host_and_literal_record_audit_agree",
+    "test_paired_packet_response_v1.HostRecordTests.test_synthetic_pi_pid_and_saved_memory_for_all_tasks_and_anchors",
+    "test_paired_packet_response_v1.PacketActorTests.test_actual_prefix_difference_is_rejected",
+    "test_paired_packet_response_v1.PacketActorTests.test_ended_before_boundary_is_retained_without_forecast",
+    "test_paired_packet_response_v1.PacketActorTests.test_ended_common_measure_is_not_complete_packet",
+    "test_paired_packet_response_v1.PacketActorTests.test_independent_query_rejects_missing_early_history",
+    "test_paired_packet_response_v1.PacketActorTests.test_saved_known_commands_drive_real_callback_order",
+    "test_paired_packet_response_v1.PacketActorTests.test_short_packet_stops_at_actual_terminal_state",
+    "test_paired_packet_response_v1.PacketActorTests.test_step_cannot_change_saved_command",
+    "test_paired_packet_response_v1.PacketMathTests.test_absent_entry_has_no_invented_zero_loss",
+    "test_paired_packet_response_v1.PacketMathTests.test_actuator_order_noise_cursor_and_mapping_mismatches_are_detectable",
+    "test_paired_packet_response_v1.PacketMathTests.test_augmented_lstsq_independently_reconstructs_ridge",
+    "test_paired_packet_response_v1.PacketMathTests.test_early_pair_missing_endpoints_keep_full_denominator",
+    "test_paired_packet_response_v1.PacketMathTests.test_endpoint_decimal_zero_cap_and_independent_reconstruction",
+    "test_paired_packet_response_v1.PacketMathTests.test_incomplete_families_cannot_be_silently_used_for_fit",
+    "test_paired_packet_response_v1.PacketMathTests.test_invalid_saved_parameters_fail_closed_with_partial_cost",
+    "test_paired_packet_response_v1.PacketMathTests.test_known_bank_antisymmetry_cycle_and_compute_cost",
+    "test_paired_packet_response_v1.PacketMathTests.test_later_known_inputs_cannot_affect_earlier_prediction",
+    "test_paired_packet_response_v1.PacketMathTests.test_lifecycle_population_caps_include_factory_reset_cost",
+    "test_paired_packet_response_v1.PacketMathTests.test_literal_and_main_causal_designs_agree",
+    "test_paired_packet_response_v1.PacketMathTests.test_model_bank_private_fields_rejected",
+    "test_paired_packet_response_v1.PacketMathTests.test_synthetic_two_lag_response_has_expected_units_and_memory",
+    "test_paired_packet_response_v1.PacketMathTests.test_weighted_fir_and_centered_fir_are_equivalent",
+    "test_paired_packet_response_v1.PacketQueryTests.test_actual_chronological_history_is_preserved",
+    "test_paired_packet_response_v1.PacketQueryTests.test_asymmetric_packet_rejected",
+    "test_paired_packet_response_v1.PacketQueryTests.test_changed_grip_and_unbounded_commands_rejected",
+    "test_paired_packet_response_v1.PacketQueryTests.test_discontinuous_history_is_not_zero_filled",
+    "test_paired_packet_response_v1.PacketQueryTests.test_future_clock_or_missing_history_rejected",
+    "test_paired_packet_response_v1.PacketQueryTests.test_nested_private_state_rejected",
+    "test_paired_packet_response_v1.PacketQueryTests.test_private_identity_and_future_response_fields_rejected",
+    "test_paired_packet_response_v1.PacketQueryTests.test_terminal_history_rejected",
+    "test_paired_packet_response_v1.PacketQueryTests.test_unrepresentable_float32_history_command_rejected"
+  ],
+  "success": true,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 3,
+      "lstsq_attempts": 1,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 3,
+      "lstsq": 1,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "earlier_prefreeze_attempts_retained": true
+}

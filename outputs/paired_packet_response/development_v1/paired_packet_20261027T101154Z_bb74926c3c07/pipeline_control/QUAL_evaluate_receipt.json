@@ -1,0 +1,132 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "split": "QUAL",
+    "status": "CLOSED_NEGATIVE",
+    "selected_model": "FIR",
+    "full_allocation_mean_m": {
+      "CENTERED_FIR": 0.25684720250771603,
+      "FIR": 0.25684720250771603,
+      "FREE_CAUSAL": 0.2603654456604938,
+      "INSTANT": 0.25687723442438276,
+      "ZERO": 0.26078910688117285
+    },
+    "co_primary": {
+      "ZERO": {
+        "group_mean_selected_minus_baseline_m": [
+          -0.007934960583333333,
+          -0.003785508638888889,
+          -0.0032139342083333335,
+          -0.006034391611111111,
+          -0.004483279361111111,
+          -0.00035974530555555554,
+          -0.009072806430555556,
+          -0.0006198875833333334,
+          2.737436111111111e-05
+        ],
+        "mean_difference_m": -0.003941904373456791,
+        "bootstrap95_m": [
+          -0.004870843712962963,
+          -0.002970166174112655
+        ]
+      },
+      "INSTANT": {
+        "group_mean_selected_minus_baseline_m": [
+          -0.0010404799166666666,
+          -0.0016583473194444445,
+          -0.0013127913055555555,
+          0.0017730535277777778,
+          0.002695030347222222,
+          -0.0006107762916666667,
+          -0.0008024357777777777,
+          -0.0009287948888888889,
+          0.001615254375
+        ],
+        "mean_difference_m": -3.0031916666666643e-05,
+        "bootstrap95_m": [
+          -0.0009397320354938273,
+          0.0009871789320987654
+        ]
+      }
+    },
+    "points": {
+      "task__push-v3": {
+        "means_m": {
+          "FIR": 0.3346425598888889,
+          "ZERO": 0.341155298125,
+          "INSTANT": 0.3364279710972222
+        },
+        "below_both": true
+      },
+      "task__reach-v3": {
+        "means_m": {
+          "FIR": 0.3777662675231482,
+          "ZERO": 0.3766252526805556,
+          "INSTANT": 0.3737506809305555
+        },
+        "below_both": false
+      },
+      "task__door-open-v3": {
+        "means_m": {
+          "FIR": 0.058132780111111115,
+          "ZERO": 0.06458676983796295,
+          "INSTANT": 0.06045305124537037
+        },
+        "below_both": true
+      },
+      "horizon__8": {
+        "means_m": {
+          "FIR": 0.2513364407561728,
+          "ZERO": 0.2553998041049383,
+          "INSTANT": 0.2531415509382716
+        },
+        "below_both": true
+      },
+      "horizon__16": {
+        "means_m": {
+          "FIR": 0.2623579642592593,
+          "ZERO": 0.2661784096574074,
+          "INSTANT": 0.26061291791049385
+        },
+        "below_both": false
+      }
+    },
+    "gates": {
+      "both_primary_CI_upper_negative": false,
+      "all_task_and_horizon_points_below_both": false,
+      "all9_groups_have_complete_family": true,
+      "minimum_complete_pairs_per_cell": true,
+      "zero_invalid_forecasts": true
+    },
+    "complete_pairs_by_task_context_anchor": {
+      "push-v3__UNCHANGED__IN_TASK": 18,
+      "push-v3__UNCHANGED__MOVE": 18,
+      "push-v3__CHANGED__IN_TASK": 18,
+      "push-v3__CHANGED__MOVE": 18,
+      "reach-v3__UNCHANGED__IN_TASK": 18,
+      "reach-v3__UNCHANGED__MOVE": 18,
+      "reach-v3__CHANGED__IN_TASK": 18,
+      "reach-v3__CHANGED__MOVE": 13,
+      "door-open-v3__UNCHANGED__IN_TASK": 27,
+      "door-open-v3__UNCHANGED__MOVE": 24,
+      "door-open-v3__CHANGED__IN_TASK": 27,
+      "door-open-v3__CHANGED__MOVE": 24
+    },
+    "invalid_forecasts": 0,
+    "manifest_id": "0c1464e0b814377def4650af4786401ae516a087ba8f66969f8821facb11d960",
+    "classification": "KNOWN_INPUT_FORWARD_CONTRAST_NOT_ABSOLUTE_RESPONSE_OR_TASK_UTILITY",
+    "allocated_families": 108,
+    "complete_three_role_H16_families": 80,
+    "endpoint_rows": 3240,
+    "artifact_sha256": {
+      "endpoint_scores.json": "d536bede8577107ba4fbe53da3bdae2ac8bd9b37b0b1dcd5ebf9a5229a247918",
+      "panels.json": "c62a8b0b726906bfbde636b72df179cbca29be700032a38f4639f62a86efc021"
+    },
+    "new_environment_steps": 0,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0,
+    "wall_ns": 2124051400,
+    "publication_goal_complete": false
+  },
+  "wall_ns": 2823821800
+}

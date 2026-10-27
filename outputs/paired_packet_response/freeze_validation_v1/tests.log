@@ -1,0 +1,40 @@
+test_independent_record_audit_detects_corrupted_noise_cursor (test_paired_packet_response_v1.HostRecordTests) ... ok
+test_mismatched_cached_entry_is_rejected_before_packet_response (test_paired_packet_response_v1.HostRecordTests) ... ok
+test_only_canonical_entry_computes_and_siblings_use_saved_forecast (test_paired_packet_response_v1.HostRecordTests) ... ok
+test_synthetic_host_and_literal_record_audit_agree (test_paired_packet_response_v1.HostRecordTests) ... ok
+test_synthetic_pi_pid_and_saved_memory_for_all_tasks_and_anchors (test_paired_packet_response_v1.HostRecordTests) ... ok
+test_actual_prefix_difference_is_rejected (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_ended_before_boundary_is_retained_without_forecast (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_ended_common_measure_is_not_complete_packet (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_independent_query_rejects_missing_early_history (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_saved_known_commands_drive_real_callback_order (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_short_packet_stops_at_actual_terminal_state (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_step_cannot_change_saved_command (test_paired_packet_response_v1.PacketActorTests) ... ok
+test_absent_entry_has_no_invented_zero_loss (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_actuator_order_noise_cursor_and_mapping_mismatches_are_detectable (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_augmented_lstsq_independently_reconstructs_ridge (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_early_pair_missing_endpoints_keep_full_denominator (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_endpoint_decimal_zero_cap_and_independent_reconstruction (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_incomplete_families_cannot_be_silently_used_for_fit (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_invalid_saved_parameters_fail_closed_with_partial_cost (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_known_bank_antisymmetry_cycle_and_compute_cost (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_later_known_inputs_cannot_affect_earlier_prediction (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_lifecycle_population_caps_include_factory_reset_cost (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_literal_and_main_causal_designs_agree (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_model_bank_private_fields_rejected (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_synthetic_two_lag_response_has_expected_units_and_memory (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_weighted_fir_and_centered_fir_are_equivalent (test_paired_packet_response_v1.PacketMathTests) ... ok
+test_actual_chronological_history_is_preserved (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_asymmetric_packet_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_changed_grip_and_unbounded_commands_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_discontinuous_history_is_not_zero_filled (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_future_clock_or_missing_history_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_nested_private_state_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_private_identity_and_future_response_fields_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_terminal_history_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+test_unrepresentable_float32_history_command_rejected (test_paired_packet_response_v1.PacketQueryTests) ... ok
+
+----------------------------------------------------------------------
+Ran 35 tests in 4.118s
+
+OK
