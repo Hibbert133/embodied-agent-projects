@@ -1,0 +1,4 @@
+** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
+# Preserve exact historical snapshots, including their pre-freeze EOF defect.
+development_checks/**/source_snapshots/*.saved -diff
+preparation/*.saved -diff

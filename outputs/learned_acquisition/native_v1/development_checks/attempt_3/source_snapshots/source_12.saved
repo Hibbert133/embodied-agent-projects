@@ -1,0 +1,11 @@
+{
+  "protocol":"LEARNED_ACQUISITION_NATIVE_V1",
+  "native_episode_seed_range":[90000,90008],
+  "reserved_episode_seed_ranges":[[90009,90999]],
+  "seed_mapping":"90000+3*group+task_index; group0/1/2 has boundary16/32/64",
+  "shared_initial_state_and_noise":"Within a task/group, unchanged/changed contexts and all3 programs share episode seed and tape; intervention occurs privately at boundary",
+  "perturbation_nonce":202610271,
+  "noise_namespace":202610272,
+  "retries_or_extension":false,
+  "source80000_80999_remains_consumed_or_reserved":true
+}

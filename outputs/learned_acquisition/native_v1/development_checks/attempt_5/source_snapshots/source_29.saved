@@ -1,0 +1,296 @@
+"""TRAIN-only development of correction-conditioned auxiliary-risk learning.
+
+Supported factual replay, not a new physical deployment or final qualification.
+Public-query functions cannot receive graphs, source registries or outcomes.
+"""
+from collections import Counter,defaultdict
+from copy import deepcopy
+from datetime import datetime,timezone
+from pathlib import Path
+from time import perf_counter_ns
+import gzip,hashlib,json,subprocess
+import numpy as np
+from src.analysis import correction_scope_risk_reference_v1 as old
+from src.analysis import transfer_risk_math_v1 as network
+
+io=old.io;ROOT=io.ROOT;BASE=ROOT/'outputs/correction_scope/transfer_learning_v1'
+CONFIG=ROOT/'configs/movement_task/correction_transfer_learning_v1.json'
+PROTOCOL='docs/protocols/correction_transfer_learning_v1_zh.md'
+DEPENDENCIES=('src/analysis/correction_scope_risk_reference_v1.py','src/analysis/correction_scope_risk_reference_independent_v1.py',
+    'src/analysis/correction_scope_learning_v1.py','src/analysis/correction_scope_independent_v1.py',
+    'src/analysis/correction_scope_io_v1.py','src/analysis/response_qualification_io_v1.py','src/analysis/release_learning_guard_v1.py',
+    'src/probe/correction_scope_model_v1.py')
+SOURCES=('src/analysis/transfer_risk_math_v1.py','src/analysis/transfer_risk_independent_math_v1.py',
+    'src/analysis/correction_transfer_learning_v1.py','src/analysis/correction_transfer_independent_v1.py',
+    'scripts/run_correction_transfer_learning_v1.py','tests/test_correction_transfer_learning_v1.py',
+    'configs/movement_task/correction_transfer_learning_v1.json',PROTOCOL,'docs/research/correction_transfer_decision_v1_zh.md',
+    'outputs/correction_scope/transfer_learning_v1/validate_freeze.py',*DEPENDENCIES)
+VARIANTS=network.VARIANTS;ACTIONS=old.ACTIONS;RATES=old.RATES
+TRIPLETS=((0,1,2),(3,4,5),(6,7,8))
+SELECTORS=tuple(v+'/'+a for v in VARIANTS for a in (*ACTIONS,'TWO_STAGE'))+tuple('FIXED/'+a+'/'+str(r) for a in ACTIONS for r in RATES)
+
+
+def split(fold):
+    assert type(fold) is int and 0<=fold<3
+    remaining=[t for i,t in enumerate(TRIPLETS) if i!=fold]
+    return dict(receiver=remaining[0],precritic=remaining[1],heldout=TRIPLETS[fold])
+
+
+def weights(groups):
+    counts=Counter(groups);return np.array([1/(len(counts)*counts[g]) for g in groups])
+
+
+def historical(node):
+    old.validate_node(node);total=np.zeros(24);count=np.zeros(24)
+    for row in node['history']:
+        b=np.asarray(row['before']['observation']);a=np.asarray(row['after']['observation']);u=np.asarray(row['command'])
+        q=int(u[0]>=0)+2*int(u[1]>=0);level=min(2,int(max(abs(u[:2]))*3));near=int(np.linalg.norm(b[4:7]-b[:3])<=.1)
+        index=(q*3+level)*2+near;count[index]+=1;total[index]+=np.sum(((a[:2]-b[:2])/.01-u[:2])**2)
+    return np.divide(total,count,out=np.zeros(24),where=count>0),np.asarray(count>0,float)
+
+
+def receiver_rows(graphs,examples,groups):
+    # Targets are evaluator-side factual labels, never attached to a query.
+    labels={(tuple(old.a.case_key(r['spec'])),r['stage']):r for r in examples}
+    nodes=[];cost=[];target=[];g=[];ids=[]
+    for graph in graphs:
+        assert graph['unit'][0]=='TRAIN'
+        if graph['unit'][1] not in groups:continue
+        for ai,node in enumerate(graph['returns']):
+            if node is None:continue
+            y=[]
+            for ri in range(4):
+                leaf=graph['leaves'][4*ai+ri];row=labels[(tuple(leaf['source_case_key']),'POST')]
+                assert row['target'] is not None and old.node_from_view(row['view'])==node
+                block=np.asarray(row['target'][50:100],float)
+                assert block.shape==(50,) and abs(block[:24].sum()-1)<1e-10 and abs(block[24:48].sum()-block[48])<1e-10
+                assert 0<block[49]<=1;y.append(block)
+            nodes.append(node);cost.append([graph['leaves'][4*ai+ri]['loss']/500 for ri in range(4)])
+            target.append(y);g.append(graph['unit'][1]);ids.append(dict(unit=graph['unit'],action=ACTIONS[ai],query_sha256=io.digest(node)))
+    assert set(g)<=set(groups)  # All-terminal groups have no fabricated rows.
+    return nodes,np.asarray(cost),np.asarray(target),g,ids
+
+
+def make_basis(nodes,groups):
+    x=np.array([old.features(n) for n in nodes]);w=weights(groups);mean=w@x
+    active=np.flatnonzero(np.ptp(x,axis=0)>0);mu=mean[active]
+    scale=np.maximum(np.sqrt(w@((x[:,active]-mu)**2)),.05);z=np.clip((x[:,active]-mu)/scale,-10,10)
+    return dict(active=active,mean=mu,scale=scale,centers=z)
+
+
+def design(nodes,basis):
+    x=np.array([old.features(n) for n in nodes]);z=np.clip((x[:,basis['active']]-basis['mean'])/basis['scale'],-10,10)
+    return np.c_[np.ones(len(x)),old.kernel(z,basis['centers'],'RBF')]
+
+
+def dataset(nodes,cost,target,groups,basis,gamma):
+    h=[historical(n) for n in nodes]
+    return dict(phi=design(nodes,basis),historical=np.array([v[0] for v in h]),known=np.array([v[1] for v in h]),
+        cost=np.asarray(cost),target=np.asarray(target),weights=weights(groups),gamma=float(gamma))
+
+
+def source_bindings(config):
+    base=ROOT/config['source_run'];commit=config['source_result_commit']
+    prior=ROOT/config['source_graph'];paths=[base/'manifest.json',base/'train/audit.json',base/'train/summary.json',
+        base/'train/cases.jsonl.gz',base/'train/examples.jsonl.gz',base/'learning/model_audit.json',
+        base/'results/statistics.json',ROOT/'outputs/correction_scope/common_state_audit_v1/train.json',prior,
+        prior.parent/'model_audit.json',prior.parent/'manifest.json']
+    result={}
+    for p in paths:
+        name=p.relative_to(ROOT).as_posix();raw=subprocess.check_output(['git','show',commit+':'+name],cwd=ROOT)
+        assert hashlib.sha256(raw).hexdigest()==io.sha(p),'Git-bound source bytes '+name;result[name]=io.sha(p)
+    audit=io.read(base/'train/audit.json');assert audit['integrity']=='PASSED'
+    assert io.read(base/'learning/model_audit.json')['integrity']=='PASSED'
+    for name,digest in audit['collection_sha256'].items():
+        p=base/'train'/name;assert io.sha(p)==digest;result[p.relative_to(ROOT).as_posix()]=digest
+    assert io.sha(base/'train/examples.jsonl.gz')==audit['examples_sha256']
+    return result
+
+
+def prepare():
+    v=io.read(BASE/'freeze_validation/complete.json');assert v['integrity']=='PASSED'
+    assert not io.git('status','--porcelain','--untracked-files=no') and not list(BASE.glob('run_*/manifest.json'))
+    for name,h in v['source_sha256'].items():assert io.sha(ROOT/name)==h
+    config=io.read(CONFIG);inputs=source_bindings(config);head=io.git('rev-parse','HEAD')
+    out=BASE/('run_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'_'+head[:12]);out.mkdir(exist_ok=False)
+    m=dict(protocol=config['protocol'],source_git_commit=head,config=config,source_sha256=v['source_sha256'],input_sha256=inputs,
+        classification='TRAIN_ONLY_POSTHOC_DEVELOPMENT_NOT_NEW_DEPLOYMENT',old_TEST_statistics_bytes_only=True,
+        old_CAL_or_TEST_used_for_learning_or_evaluation=False,zero_new_physics=True,online_LLM_API_calls=0)
+    m['manifest_id']=io.digest(m);io.write(out/'manifest.json',m);return out/'manifest.json'
+
+
+def checked(path):
+    path=Path(path).resolve();m=io.read(path);copy=dict(m);mid=copy.pop('manifest_id')
+    assert path.parent.parent==BASE.resolve() and mid==io.digest(copy) and m['config']==io.read(CONFIG)
+    for name,digest in {**m['source_sha256'],**m['input_sha256']}.items():assert io.sha(ROOT/name)==digest,'immutable source '+name
+    return m
+
+
+def save_npz(path,values):
+    with Path(path).open('xb') as stream:np.savez_compressed(stream,**values)
+
+
+def load_npz(path):
+    with np.load(path,allow_pickle=False) as z:return {k:z[k] for k in z.files}
+
+
+def receiver_prediction(model,folder,node):
+    old.validate_node(node);assert node['stage']=='RETURN'
+    assert io.sha(Path(folder)/model['file'])==model['sha256']
+    b=load_npz(Path(folder)/model['file']);hist,known=historical(node)
+    return network.forward({k:b[k] for k in network.PARAMS},design([node],b),hist[None,:],known[None,:],float(b['gamma']),model['variant'])
+
+
+def receiver_decision(model,folder,node):
+    p=receiver_prediction(model,folder,node);scores=p['scores'][0].tolist()
+    return dict(rate=old.choice(scores),scores=scores,model_sha256=model['sha256'],query_sha256=io.digest(node))
+
+
+def pre_rows(graphs,groups,receiver,folder):
+    nodes=[];targets=[];g=[];ledger=[]
+    for graph in graphs:
+        if graph['unit'][1] not in groups or graph['pre'] is None:continue
+        y=[];rates=[]
+        for ai,node in enumerate(graph['returns']):
+            choice=dict(rate=1,model_sha256=receiver['sha256'],terminal=True) if node is None else receiver_decision(receiver,folder,node)
+            ri=choice['rate'];leaf=graph['leaves'][4*ai+ri];rates.append(choice)
+            y.append(leaf['loss']/500)
+        nodes.append(graph['pre']);targets.append(y);g.append(graph['unit'][1])
+        ledger.append(dict(unit=graph['unit'],fixed_receiver_sha256=receiver['sha256'],saved_choices_before_label_selection=rates,
+            target=y,source_case_sha256=[graph['leaves'][4*ai+c['rate']]['source_case_sha256'] for ai,c in enumerate(rates)]))
+    return nodes,targets,g,ledger
+
+
+def fit(path):
+    path=Path(path).resolve();m=checked(path);out=path.parent;folder=out/'models';folder.mkdir(exist_ok=False)
+    config=m['config'];start=perf_counter_ns();guard={};ledger={};journal=old.Journal(out/'fit_attempts.jsonl');models={};labels={}
+    graphs=list(io.rows(ROOT/config['source_graph']));examples=list(io.rows(ROOT/config['source_run']/'train/examples.jsonl.gz'))
+    assert len(graphs)==54 and all(g['unit'][0]=='TRAIN' for g in graphs)
+    try:
+        with old.recorded_guard(guard,out/'fit_failure.json',max_solve=15):
+            for fold in range(3):
+                allocation=split(fold);nodes,cost,target,groups,ids=receiver_rows(graphs,examples,allocation['receiver'])
+                basis=make_basis(nodes,groups);w=weights(groups);gamma=max(.05,float(w@target[:,:,48].mean(1)))
+                data=dataset(nodes,cost,target,groups,basis,gamma);models[str(fold)]={}
+                for variant in VARIANTS:
+                    key=str(fold)+'/'+variant;journal.write('NEURAL_FIT_INTENT',dict(key=key,allocation=allocation,steps=config['steps'],source_split='TRAIN'))
+                    params,receipt=network.fit(data,variant,config['model_rng_seed']+fold,config['steps'],ledger=ledger)
+                    filename='receiver_'+str(fold)+'_'+variant+'.npz';save_npz(folder/filename,{**params,**basis,'gamma':gamma})
+                    model=dict(file=filename,sha256=io.sha(folder/filename),variant=variant,fold=fold,training_groups=list(allocation['receiver']),
+                        training_nodes=ids,feature_sha256=old.digest_array(data['phi']),target_sha256=old.digest_array(target),cost_sha256=old.digest_array(cost),
+                        weights_sha256=old.digest_array(data['weights']),gamma=gamma,seed=config['model_rng_seed']+fold,training=receipt,
+                        saved_parameter_count=sum(a.size for a in params.values()),effective_unused_heads=variant=='EMPIRICAL_REWEIGHT_SPO')
+                    journal.write('NEURAL_FIT_SAVED',dict(key=key,model_sha256=model['sha256'],final_loss=receipt['final_loss']))
+                    ns,ys,gs,binding=pre_rows(graphs,allocation['precritic'],model,folder);labels[key]=binding
+                    journal.write('PRECRITIC_FIT_INTENT',dict(key=key,groups=list(allocation['precritic']),fixed_receiver_sha256=model['sha256']))
+                    pre=old.fit_model(ns,ys,gs,'RBF',folder/('pre_'+str(fold)+'_'+variant+'.npz'));pre['fixed_receiver_sha256']=model['sha256']
+                    models[str(fold)][variant]=dict(receiver=model,precritic=pre)
+                    journal.write('PRECRITIC_FIT_SAVED',dict(key=key,model_sha256=pre['sha256']))
+        assert ledger==dict(fit_attempts=15,optimizer_steps=15000)
+        bank=dict(manifest_id=m['manifest_id'],models=models,neural_ledger=ledger,source_split='TRAIN',frozen_ns=perf_counter_ns());bank['bank_id']=io.digest(bank)
+        io.write(out/'bank.json',bank);io.write(out/'fixed_receiver_labels.json',labels)
+        result=dict(integrity='FOR_INDEPENDENT_REFIT',neural_ledger=ledger,ridge_fits=15,guard=guard,wall_ns=perf_counter_ns()-start,
+            bank_sha256=io.sha(out/'bank.json'),new_physics=0,new_policy_queries=0,online_LLM_API_calls=0)
+        io.write(out/'fit_receipt.json',result);return result
+    finally:journal.close()
+
+
+def summarize(rows):
+    result={}
+    for selector in SELECTORS:
+        selected=[r for r in rows if r['selector']==selector];assert len(selected)==54
+        losses=[r['leaf']['loss'] for r in selected]
+        panels={}
+        for key in sorted({(r['unit'][2],r['unit'][3],r['boundary']) for r in selected}):
+            values=[r for r in selected if (r['unit'][2],r['unit'][3],r['boundary'])==key]
+            assert len(values)==3;panels['/'.join(map(str,key))]=dict(n=3,success=sum(r['leaf']['success'] for r in values),mean_loss=float(np.mean([r['leaf']['loss'] for r in values])))
+        groups={str(g):float(np.mean([r['leaf']['loss'] for r in selected if r['unit'][1]==g])) for g in range(9)}
+        harmful=[r for r in selected if r['leaf']['loss']>r['baseline']['loss']];helpful=[r for r in selected if r['leaf']['loss']<r['baseline']['loss']]
+        result[selector]=dict(n=54,success=sum(r['leaf']['success'] for r in selected),mean_loss=float(np.mean(losses)),
+            total_executed_steps=sum(r['leaf']['steps'] for r in selected),acquisition_steps=sum(r['leaf']['movement_steps']+r['leaf']['measurement_steps'] for r in selected),
+            harm=len(harmful),help=len(helpful),tie=54-len(harmful)-len(helpful),harm_severity=sum(r['leaf']['loss']-r['baseline']['loss'] for r in harmful),
+            success_to_failure=sum(r['baseline']['success'] and not r['leaf']['success'] for r in selected),
+            failure_to_success=sum(not r['baseline']['success'] and r['leaf']['success'] for r in selected),
+            same_acquisition_harm=sum(r['leaf']['loss']>r['same_acquisition']['loss'] for r in selected),
+            same_acquisition_help=sum(r['leaf']['loss']<r['same_acquisition']['loss'] for r in selected),groups=groups,panels=panels,
+            chosen_actions=dict(Counter(r['action'] for r in selected)),chosen_rates=dict(Counter(str(r['rate']) for r in selected)))
+    return result
+
+
+def diagnostics(graphs,examples,bank,folder):
+    rows=[]
+    for fold in range(3):
+        groups=split(fold)['heldout'];nodes,cost,target,gs,ids=receiver_rows(graphs,examples,groups)
+        lookup={(tuple(r['unit']),r['action']):(node,c,y) for node,c,y,r in zip(nodes,cost,target,ids)}
+        for graph in graphs:
+            if graph['unit'][1] not in groups:continue
+            for ai,node in enumerate(graph['returns']):
+                for variant in VARIANTS:
+                    info=dict(unit=graph['unit'],action=ACTIONS[ai],fold=fold,variant=variant)
+                    if node is None:
+                        rows.append(dict(**info,missing_reason='ALREADY_TERMINAL' if graph['pre'] is None else 'ACQUISITION_TERMINAL',prediction=None,errors=None));continue
+                    model=bank['models'][str(fold)][variant]['receiver'];p=receiver_prediction(model,folder,node)
+                    _,c,y=lookup[(tuple(graph['unit']),ACTIONS[ai])]
+                    prediction={k:p[k][0].tolist() for k in ('scores','p','j','g','length','missing')}
+                    e=dict(full_cost_score_mse=float(np.mean((p['scores'][0]-c)**2)),
+                        occupancy_squared_l2=float(np.sum((p['p'][0]-y[:,:24])**2,axis=1).mean()),
+                        joint_squared_l2=float(np.sum((p['j'][0]-y[:,24:48])**2,axis=1).mean()),
+                        mean_error_mse=float(np.mean((p['g'][0,:,0]-y[:,48])**2)),
+                        length_mse=float(np.mean((p['length'][0,:,0]-y[:,49])**2)),
+                        unknown_historical_mass=float(np.mean(p['missing'])),actual_fraction=float(np.mean(y[:,49])))
+                    rows.append(dict(**info,missing_reason=None,query_sha256=io.digest(node),prediction=prediction,errors=e))
+    assert len(rows)==810
+    summary={}
+    for variant in VARIANTS:
+        live=[r for r in rows if r['variant']==variant and r['errors'] is not None];values={}
+        for group in range(9):
+            rr=[r for r in live if r['unit'][1]==group]
+            values[str(group)]={k:float(np.mean([r['errors'][k] for r in rr])) for k in live[0]['errors']}
+        summary[variant]=dict(available_nodes=len(live),missing_reasons=dict(Counter(r['missing_reason'] for r in rows if r['variant']==variant and r['errors'] is None)),
+            groups=values,equal_group_mean={k:float(np.mean([v[k] for v in values.values()])) for k in live[0]['errors']})
+    return rows,summary
+
+
+def evaluate(path):
+    path=Path(path).resolve();m=checked(path);out=path.parent;bank=io.read(out/'bank.json');audit=io.read(out/'model_audit.json')
+    assert audit['integrity']=='PASSED' and audit['bank_sha256']==io.sha(out/'bank.json')
+    graphs=list(io.rows(ROOT/m['config']['source_graph']));journal=old.Journal(out/'replay.jsonl');guard={};start=perf_counter_ns();rows=[]
+    try:
+        with old.recorded_guard(guard,out/'replay_failure.json'):
+            for graph in graphs:
+                fold=next(i for i,t in enumerate(TRIPLETS) if graph['unit'][1] in t)
+                for selector in SELECTORS:
+                    info=dict(unit=graph['unit'],selector=selector,fold=fold);terminal=graph['pre'] is None
+                    if selector.startswith('FIXED/'):
+                        _,action,rate=selector.split('/');ai=ACTIONS.index(action);ri=RATES.index(float(rate))
+                        journal.write('FIXED_PROGRAM_SAVED',dict(**info,action=ai,rate=ri,already_terminal=terminal))
+                    elif terminal:
+                        ai,ri=0,1;journal.write('ALREADY_TERMINAL',info)
+                    else:
+                        variant,action=selector.split('/');models=bank['models'][str(fold)][variant]
+                        if action=='TWO_STAGE':
+                            scores=old.predict(models['precritic'],out/'models',graph['pre']);ai=old.choice(scores)
+                            journal.write('PRE_DECISION',dict(**info,query_sha256=io.digest(graph['pre']),scores=scores,action=ai,model_sha256=models['precritic']['sha256']))
+                        else:ai=ACTIONS.index(action);journal.write('PRE_FIXED_ACTION',dict(**info,action=ai,query_sha256=io.digest(graph['pre'])))
+                        node=graph['returns'][ai]
+                        if node is None:ri=1;journal.write('ACQUISITION_TERMINAL',dict(**info,action=ai))
+                        else:
+                            decision=receiver_decision(models['receiver'],out/'models',node);ri=decision['rate']
+                            journal.write('RETURN_DECISION',dict(**info,action=ai,decision=decision))
+                    # Selection is persisted before a factual source leaf is disclosed.
+                    leaf=deepcopy(graph['leaves'][4*ai+ri]);baseline=deepcopy(graph['leaves'][1]);same=deepcopy(graph['leaves'][4*ai+1])
+                    row=dict(**info,boundary=graph['boundary'],action=ACTIONS[ai],rate=RATES[ri],already_terminal=terminal,
+                        return_terminal=graph['returns'][ai] is None,leaf=leaf,baseline=baseline,same_acquisition=same)
+                    journal.write('FACTUAL_OUTCOME',row);rows.append(row)
+        assert len(rows)==1728
+        examples=list(io.rows(ROOT/m['config']['source_run']/'train/examples.jsonl.gz'))
+        with old.recorded_guard(guard,out/'diagnostics_failure.json'):forecast,metrics=diagnostics(graphs,examples,bank,out/'models')
+        io.write(out/'forecast_diagnostics.json',forecast)
+        io.write(out/'selected_rows.json',rows);io.write(out/'results.json',dict(classification=m['classification'],selectors=summarize(rows),forecast_diagnostics=metrics,
+            n_units=54,n_selectors=32,n_selections=1728,nominal_CI_or_significance=False,fold_training_overlap=True,
+            old_TEST_statistics_unchanged=True,new_physics=0,new_policy_queries=0,online_LLM_API_calls=0))
+        receipt=dict(integrity='FOR_INDEPENDENT_REPLAY_AUDIT',guard=guard,wall_ns=perf_counter_ns()-start,
+            selected_sha256=io.sha(out/'selected_rows.json'),results_sha256=io.sha(out/'results.json'),replay_sha256=io.sha(out/'replay.jsonl'),
+            forecast_sha256=io.sha(out/'forecast_diagnostics.json'))
+        io.write(out/'replay_receipt.json',receipt);return receipt
+    finally:journal.close()

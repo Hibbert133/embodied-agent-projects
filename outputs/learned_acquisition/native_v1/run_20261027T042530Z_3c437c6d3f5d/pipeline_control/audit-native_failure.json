@@ -1,0 +1,96 @@
+{
+  "integrity": "FAILED",
+  "phase": "audit-native",
+  "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\learned_acquisition\\native_v1\\run_pipeline.py\", line 30, in <module>\n    with contextlib.redirect_stdout(Tee(sys.stdout,log)),contextlib.redirect_stderr(Tee(sys.stderr,log)):result=entry(path)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\learned_acquisition_native_audit_v1.py\", line 249, in audit\n    same(set(programs),set(a.PROGRAMS));left,lw,lc=programs['LEGACY_REFERENCE'];right,rw,rc=programs['DYNAMIC_FORCED_REFERENCE']\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\learned_acquisition_native_audit_v1.py\", line 27, in same\n    def same(x,y,message='independent native record mismatch'):io.require(io.digest(normalize(x))==io.digest(normalize(y)),message)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\capsule_record_json_v2.py\", line 22, in normalize\n    raise ValueError('nonfinite or unsupported record value: '+type(value).__name__)\nValueError: nonfinite or unsupported record value: set\n",
+  "partial_counters": [
+    {
+      "module": "src.analysis.learned_acquisition_native_audit_v1",
+      "function": "audit",
+      "ledger": {
+        "counts": {
+          "reset_attempts": 2754,
+          "simulation_attempts": 280607,
+          "simulation_completed": 280607,
+          "simulation_frames_attempted": 1403035,
+          "simulation_frames_completed": 1403035,
+          "reset_completed": 2754
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 2700,
+            "simulation_attempts": 270000,
+            "simulation_completed": 270000,
+            "simulation_frames_attempted": 1350000,
+            "simulation_frames_completed": 1350000,
+            "reset_completed": 2700
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 54,
+            "simulation_attempts": 5400,
+            "simulation_completed": 5400,
+            "simulation_frames_attempted": 27000,
+            "simulation_frames_completed": 27000,
+            "reset_completed": 54
+          },
+          "CONTROL": {
+            "simulation_attempts": 5207,
+            "simulation_completed": 5207,
+            "simulation_frames_attempted": 26035,
+            "simulation_frames_completed": 26035
+          }
+        }
+      },
+      "guard": {
+        "operation_counts": {
+          "environment_creations": 0,
+          "resets": 0,
+          "simulation": 0,
+          "solve_attempts": 0,
+          "lstsq_attempts": 0,
+          "cold_fit_attempts": 0,
+          "cold_estimator_entries": 0,
+          "cold_linear_solve_attempts": 0,
+          "cold_linear_lstsq_attempts": 0
+        },
+        "network": {
+          "attempted_network_calls": 0
+        },
+        "zero_new_physical_interactions": true,
+        "registered_budgets": {
+          "solve": 0,
+          "lstsq": 0,
+          "cold_fits": 0
+        },
+        "online_LLM_API_calls": 0
+      },
+      "budget": null,
+      "failed_spec": {
+        "cohort": "NATIVE",
+        "group": 2,
+        "task": "door-open-v3",
+        "seed": 90008,
+        "context": "CHANGED",
+        "planned_boundary": 64,
+        "program": "LEARNED_JOINT_BANK0"
+      }
+    },
+    {
+      "module": "src.analysis.learned_acquisition_native_audit_v1",
+      "function": "same",
+      "ledger": null,
+      "guard": null,
+      "budget": null,
+      "failed_spec": null
+    },
+    {
+      "module": "src.analysis.capsule_record_json_v2",
+      "function": "normalize",
+      "ledger": null,
+      "guard": null,
+      "budget": null,
+      "failed_spec": null
+    }
+  ],
+  "wall_ns": 36543490200,
+  "no_automatic_retry": true
+}

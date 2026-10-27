@@ -1,0 +1,99 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "integrity": "PASSED",
+    "original_frozen_audit_status": "FAILED_RETAINED",
+    "repair_not_retroactive_frozen_qualification": true,
+    "repair_source_git_commit": "33fcb953ad9f30a7975e4bde3694625322ef5472",
+    "manifest_id": "803316d56a39d474d4751a05499b5fa44e94ffa33cc837bb4a0e2f36ac008271",
+    "executions": 54,
+    "control_steps": 5207,
+    "lifecycle": {
+      "counts": {
+        "reset_attempts": 2754,
+        "simulation_attempts": 280607,
+        "simulation_completed": 280607,
+        "simulation_frames_attempted": 1403035,
+        "simulation_frames_completed": 1403035,
+        "reset_completed": 2754
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 2700,
+          "simulation_attempts": 270000,
+          "simulation_completed": 270000,
+          "simulation_frames_attempted": 1350000,
+          "simulation_frames_completed": 1350000,
+          "reset_completed": 2700
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 54,
+          "simulation_attempts": 5400,
+          "simulation_completed": 5400,
+          "simulation_frames_attempted": 27000,
+          "simulation_frames_completed": 27000,
+          "reset_completed": 54
+        },
+        "CONTROL": {
+          "simulation_attempts": 5207,
+          "simulation_completed": 5207,
+          "simulation_frames_attempted": 26035,
+          "simulation_frames_completed": 26035
+        }
+      }
+    },
+    "counters": {
+      "actual_neural_decision_calls": 28,
+      "nondefault_neural_programs": 14,
+      "forced_full_physical_pairs": 18,
+      "common_prefix_pairs": 36,
+      "hidden_context_prequery_pairs": 9,
+      "live_hidden_context_prequery_pairs": 7
+    },
+    "independent_literal_PI_commands": 4747,
+    "audit_fixed_policy_queries": 4747,
+    "source_macro_and_legacy_actor_shared": true,
+    "main_actor_and_main_risk_inference_disabled": true,
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 0,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 0,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "wall_ns": 37037982500,
+    "collection_sha256": {
+      "cases.jsonl.gz": "90cfd67363df82b827b94cf700d3a2e50c592e33148f72ead0f9738754fe803f",
+      "events.jsonl.gz": "85eb25e4d37211e6d8c86b94193c640455d0260215a94ef064d7e906287bc064",
+      "status.json": "e34013765d702c797018775bd96454a509f58ce0028bb9b175fbbf8664e5f638",
+      "summary.json": "71bdbe572b21262add2a6fbf14bc9e8868e88cc98e4a3485401c42177e37eba0",
+      "witnesses.jsonl.gz": "7308d19b872070cb2b5af8a247625ca9994f6783e5fe0ea3a3cc5d2d3a9a44ae"
+    },
+    "query_sha256": "e5c177b3eb63484871e02eb4d2dddbc78e0bd365f0b4e8b4d734ced81af2ed9f",
+    "native_gate_sha256": "1065947b3c01b8efcb6293ae13fab75297f81728644108ec05b9aef152c90508",
+    "new_physics": 0,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0,
+    "limitations": "Recorded-feedback command specification replay, no independent physics; native qualification is not task-gain qualification"
+  },
+  "original_and_repair_query_decoded_sha256": "66769b8aed818971dcd85eb576d80ec0eda6a2fcbd3e7c972bc9817d403e89b0",
+  "all_original_live_query_and_decision_values_unchanged": true,
+  "original_frozen_qualification": "FAILED_RETAINED",
+  "wall_ns": 37571499700
+}

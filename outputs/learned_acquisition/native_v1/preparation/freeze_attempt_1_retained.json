@@ -1,0 +1,23 @@
+{
+  "status": "PRESERVED_BEFORE_ANY_ALLOCATION",
+  "reason": "staged diff detected extra EOF line in live auditor and retained historical snapshots",
+  "retained_directory": "outputs\\learned_acquisition\\native_v1\\freeze_validation_attempt_1_failed",
+  "receipt_sha256": {
+    "compile.json": "b4574998e36ca17ce39253a75769a9616b9d5d77071b8eee77c01e88654c153a",
+    "dependencies.json": "32fb0f98b65b95f49eeba9ec6df78f6ff542a2455179ee6ca06b1110e25c0c6c",
+    "ordinary_diff.json": "5a5acf3bba21da205497911544912db4313bbd7d607163e5fc81ad0077c1f25f",
+    "owned_initial.nul": "d18225f76b1af2ee642f82eb9e5c24615f845960fecd6952ed2573ee07b06909",
+    "seed_scope.json": "d462ee3c02bfac529e559627a45787a6c0ff2930cf89da7fe06d14d79100411a",
+    "source_reuse.json": "f681e8cbf450b034e40f66b757a406af29380d5d36c15037ac24b50f194a8c46",
+    "staged_diff.json": "267f4ad61cdf43353acce792eb10d72bb5b0be78caedc7a43fdedc28653d42f3",
+    "tracked_secret_scan.json": "7f8c1d08e7c849f663f8792c2ff2ead584fe1b57e9c1489b187ff5a14e15c336"
+  },
+  "repairs": [
+    "remove only surplus EOF from live auditor",
+    "scoped exact-byte attributes for new assets and outputs",
+    "retain original development snapshots with their original byte hashes"
+  ],
+  "new_physics": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0
+}

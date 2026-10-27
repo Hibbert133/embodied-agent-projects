@@ -1,0 +1,39 @@
+{
+  "integrity": "PASSED",
+  "bindings": [
+    {
+      "module": "src.analysis.transfer_risk_math_v1",
+      "name": "fit",
+      "callable": true
+    },
+    {
+      "module": "src.analysis.correction_scope_risk_reference_v1",
+      "name": "fit_model",
+      "callable": true
+    },
+    {
+      "module": "src.probe.correction_scope_model_v1",
+      "name": "fit",
+      "callable": true
+    },
+    {
+      "module": "src.probe.task_passive_program_v1",
+      "name": "infer_four",
+      "callable": true
+    },
+    {
+      "module": "src.probe.task_passive_program_v1",
+      "name": "infer_operator",
+      "callable": true
+    },
+    {
+      "module": "scipy.optimize",
+      "name": "least_squares",
+      "callable": true
+    }
+  ],
+  "new_physics": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0,
+  "note": "Imported infer_four/infer_operator aliases are valid; no collector-module repair required"
+}

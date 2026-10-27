@@ -1,0 +1,21 @@
+from pathlib import Path
+import json,shutil
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects')
+import sys
+sys.path.insert(0,str(ROOT))
+from src.analysis import response_qualification_io_v1 as io
+from src.probe.frozen_risk_client_v1 import FrozenRiskClient
+base=ROOT/'outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420'
+bank=io.read(base/'bank.json');chosen=bank['models']['0']['JOINT_SPO'];out=ROOT/'assets/learned_acquisition_native_v1';out.mkdir(exist_ok=False)
+bundle=dict(schema='FROZEN_RISK_BUNDLE_V1')
+for role in ('precritic','receiver'):
+    source=chosen[role];filename=role+'.npz';shutil.copyfile(base/'models'/source['file'],out/filename)
+    assert io.sha(out/filename)==source['sha256']
+    bundle[role]=dict(file=filename,sha256=source['sha256'],**({'kind':'RBF'} if role=='precritic' else {'variant':'JOINT_SPO'}))
+bundle['bundle_id']=io.digest(bundle);io.write(out/'bundle.json',bundle)
+io.write(out/'provenance.json',dict(source_learning_run=base.relative_to(ROOT).as_posix(),source_bank_sha256=io.sha(base/'bank.json'),
+    fixed_fold=0,reason='First registered fold for integration only; not best-fold selection or task-gain qualification',
+    source_receiver_sha256=chosen['receiver']['sha256'],source_precritic_sha256=chosen['precritic']['sha256'],new_fits=0,
+    provenance_not_loaded_by_inference_client=True,online_LLM_API_calls=0))
+client=FrozenRiskClient(out/'bundle.json');assert client.calls==0
+print(dict(bundle_id=bundle['bundle_id'],new_fits=0))

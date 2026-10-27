@@ -1,0 +1,34 @@
+"""Source-frozen read-only diagnosis then one genuine learned native execution."""
+from pathlib import Path
+import argparse,sys
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from src.analysis import learned_acquisition_native_io_v1 as a
+from src.analysis import training_error_semantics_v1 as signal
+from src.analysis import learned_acquisition_native_collect_v1 as collector
+from src.analysis import learned_acquisition_native_audit_v1 as audit
+
+OWN=('src/probe/learned_acquisition_actor_v1.py','src/probe/frozen_risk_client_v1.py','src/analysis/observed_error_terms_v1.py',
+    'src/analysis/learned_acquisition_native_io_v1.py','src/analysis/learned_acquisition_native_host_v1.py',
+    'src/analysis/learned_acquisition_native_collect_v1.py','src/analysis/learned_acquisition_native_audit_v1.py',
+    'src/analysis/training_error_semantics_v1.py','scripts/run_learned_acquisition_native_v1.py','tests/test_learned_acquisition_native_v1.py',
+    'configs/movement_task/learned_acquisition_native_v1.json','docs/protocols/learned_acquisition_native_v1_zh.md',
+    'docs/protocols/learned_acquisition_native_seeds_v1.json','docs/research/learned_acquisition_native_decision_v1_zh.md',
+    'outputs/learned_acquisition/native_v1/validate_freeze.py','assets/learned_acquisition_native_v1/bundle.json',
+    'assets/learned_acquisition_native_v1/precritic.npz','assets/learned_acquisition_native_v1/receiver.npz','assets/learned_acquisition_native_v1/provenance.json')
+from src.analysis.correction_transfer_ablation_v1 import DEPENDENCIES as old_dependencies
+DEPENDENCIES=tuple(dict.fromkeys((*old_dependencies,'src/analysis/correction_scope_io_v1.py','src/analysis/correction_scope_host_v1.py',
+    'src/analysis/correction_scope_audit_v1.py','src/analysis/memory_reset_seed_scope_v1.py','src/analysis/paired_probe_host_v1.py',
+    'src/probe/correction_scope_program_v1.py','src/probe/task_memory_option_v1.py','src/probe/task_passive_pi_v1.py',
+    'src/probe/lifecycle_ledger.py','src/probe/local_reprobe_v1.py','src/probe/acquisition_reference_operation_v1.py',
+    'src/rollout/task_registry.py','src/rollout/chronological_faults.py','scripts/qualify_delayed_intervention_v2.py',
+    'src/analysis/short_probe_journal_audit_v1.py','src/analysis/task_passive_audit_v1.py','src/analysis/continuous_state_witness_v1.py')))
+SOURCES=(*OWN,*DEPENDENCIES)
+BASE=a.BASE;io=a.io
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('phase',choices=('prepare','signal','audit-signal','collect','audit-native'));p.add_argument('--manifest');args=p.parse_args()
+    if args.phase=='prepare':print(a.prepare())
+    else:
+        assert args.manifest
+        result={'signal':signal.analyze,'audit-signal':signal.audit,'collect':collector.collect,'audit-native':audit.audit}[args.phase](args.manifest)
+        print(result)

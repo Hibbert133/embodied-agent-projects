@@ -1,0 +1,191 @@
+"""Only synthetic feedback/fake clocks and stored weights; no environments."""
+from collections import Counter
+from copy import deepcopy
+from dataclasses import asdict
+from importlib.util import spec_from_file_location,module_from_spec
+from pathlib import Path
+from tempfile import TemporaryDirectory
+from types import SimpleNamespace
+from unittest.mock import patch
+import json,shutil,unittest
+import numpy as np
+from src.analysis import learned_acquisition_native_io_v1 as a
+from src.analysis import learned_acquisition_native_host_v1 as host
+from src.analysis import learned_acquisition_native_audit_v1 as audit
+from src.analysis import observed_error_terms_v1 as terms
+from src.analysis import training_error_semantics_v1 as semantics
+from src.probe import learned_acquisition_actor_v1 as adaptive
+from src.probe import correction_scope_program_v1 as legacy
+from src.probe.frozen_risk_client_v1 import FrozenRiskClient,forced_reference
+from src.probe.continuous import StepObservation
+from src.probe.physical_reprobe_v1 import StepReceipt
+from src.analysis.correction_scope_risk_reference_v1 import node_from_view
+io=a.io;SYNTHETIC_ACTIVITY=Counter()
+fixture_spec=spec_from_file_location('native_public_fixture',Path(__file__).parent/'test_correction_scope_risk_reference_v1.py')
+fixture=module_from_spec(fixture_spec);fixture_spec.loader.exec_module(fixture)
+
+
+def state():
+    o=[0.]*39;o[:3]=[.1,.8,.25];o[4:7]=[.5,.1,.05]
+    return StepObservation(tuple(o),False,False,False)
+
+
+def simulate(task='push-v3',boundary=16,action='CONTINUE',rate=.5,end=170,new=True,provider=None):
+    current=state();events=[];steps=[];policies=0
+    def emit(kind,payload):
+        ack=dict(deepcopy(payload),sequence=len(events),saved_ns=len(events)+1);events.append(dict(kind=kind,payload=ack));return ack
+    def policy(observation):
+        nonlocal policies
+        assert np.array_equal(observation,current.observation);policies+=1
+        return np.asarray([.25,-.125,.25,-1.],np.float32)
+    def step(saved):
+        nonlocal current
+        assert events[-1]['kind']=='COMMAND' and saved==events[-1]['payload']
+        n=len(steps)+1;o=list(current.observation);o[:3]=[o[i]+.005*saved['command'][i] for i in range(3)]
+        current=StepObservation(tuple(o),False,False,n>=end);steps.append(deepcopy(saved));return StepReceipt(current,n)
+    if new:r=adaptive.run(task,current,boundary,policy,step,emit,provider or forced_reference(action,rate))
+    else:r=legacy.run(task,current,boundary,action,rate,policy,step,emit,bank=None)
+    SYNTHETIC_ACTIVITY['fake_policy_queries']+=policies
+    return r,events,steps
+
+
+class FakeSession:
+    def __init__(self,end=170):
+        self.current=state();self.end=end;self.ctx={'calls':0,'noise_rows':np.zeros((500,3),np.float32)};self.ctx['noise_rows'].flags.writeable=False
+        self.attempts=self.completed=self.policy_queries=self.captures=self.restores=0;self._snapshots={};self._pending=None
+        self.last_rows=[];self.agent=[];self.outer=[];self.fault=a.initial_fault();self.run_budget={'completed':0};self.ledger=SimpleNamespace(counts=Counter())
+        self.data=SimpleNamespace(_address=2,time=0.);self.model=SimpleNamespace(_address=1);self.base=SimpleNamespace(model=self.model,data=self.data,action_scale=.01);self.env=SimpleNamespace(unwrapped=self.base)
+    def public(self):return self.current
+    def alive(self):return not any((self.current.success,self.current.terminated,self.current.truncated))
+    def witness(self):return {'calls':self.ctx['calls'],'time':self.data.time}
+    def emit(self,name,payload):self.outer.append((name,payload))
+    def policy_query(self,observation):
+        assert np.array_equal(observation,self.current.observation);self.policy_queries+=1;return np.asarray([.25,-.125,.25,-1.],np.float32)
+    def _agent_emit(self,name,payload):
+        ack=dict(deepcopy(payload),sequence=len(self.agent),saved_ns=len(self.agent)+1);self.agent.append((name,ack))
+        if name=='COMMAND':self._pending=deepcopy(ack)
+        return ack
+    def _agent_step(self,saved):
+        assert saved==self._pending;self._pending=None;self.ctx['calls']+=1;self.attempts+=1;self.completed+=1;self.run_budget['completed']+=1
+        self.ledger.counts['simulation_frames_completed']+=5;self.data.time+=.0125
+        o=list(self.current.observation);o[:3]=[o[i]+.005*saved['command'][i] for i in range(3)]
+        self.current=StepObservation(tuple(o),False,False,self.ctx['calls']>=self.end);self.last_rows.append(deepcopy(saved));return self.current
+
+
+class NativeTests(unittest.TestCase):
+    def test_all_registered_task_action_rate_paths_match_immutable_legacy_commands(self):
+        for task in ('push-v3','reach-v3','door-open-v3'):
+            for boundary in (16,32,64):
+                for action in ('CONTINUE','VALIDATE8','MOVE_MEASURE'):
+                    for rate in (.125,.5,2.,8.):
+                        left,_,ls=simulate(task,boundary,action,rate,new=False);right,_,rs=simulate(task,boundary,action,rate)
+                        self.assertEqual([(s['command'],s['raw_policy'],s['phase']) for s in ls],[(s['command'],s['raw_policy'],s['phase']) for s in rs])
+                        for k in ('deadline_loss','success','total_steps','policy_queries','movement_steps','measurement_steps','final_memory'):self.assertEqual(left['outcome'][k],right['outcome'][k])
+
+    def test_different_legal_actions_change_actual_sent_sequence(self):
+        _,_,a1=simulate(action='CONTINUE',end=80);_,_,b1=simulate(action='MOVE_MEASURE',end=80)
+        self.assertNotEqual([s['command'] for s in a1],[s['command'] for s in b1])
+
+    def test_different_legal_rates_change_actual_task_commands(self):
+        _,_,left=simulate(rate=.125,end=80);_,_,right=simulate(rate=8.,end=80)
+        self.assertNotEqual([s['command'] for s in left],[s['command'] for s in right])
+
+    def test_new_POST_decision_precedes_rate_adoption_and_real_tail(self):
+        r,events,steps=simulate(rate=.125,end=80);post=r['outcome']['post_forecast']['forecast_sequence']
+        rate_plan=next(e['payload'] for e in events if e['kind']=='RATE_PLAN');self.assertEqual(rate_plan['decision_sequence'],post)
+        self.assertLess(post,rate_plan['sequence']);self.assertTrue(all(s['decision_sequence']>post for s in steps if s['phase']=='TAIL_TASK'))
+
+    def test_early_end_before_boundary_makes_no_model_request(self):
+        def forbidden(node):raise AssertionError('model called after end')
+        r,_,_=simulate(end=8,provider=forbidden);self.assertIsNone(r['outcome']['pre_forecast']);self.assertIsNone(r['outcome']['post_forecast'])
+
+    def test_early_end_during_validation_makes_no_POST_request(self):
+        called=[];forced=forced_reference('VALIDATE8',.125)
+        def choice(node):called.append(node['stage']);return forced(node)
+        r,_,_=simulate(end=20,provider=choice);self.assertEqual(called,['PRE']);self.assertIsNone(r['outcome']['post_forecast'])
+
+    def test_unknown_action_rejected_before_any_acquisition_command(self):
+        forced=forced_reference('CONTINUE',.5)
+        def bad(node):d=forced(node);d['action']=9;return d
+        with self.assertRaises(ValueError):simulate(provider=bad)
+
+    def test_stage_ownership_and_unknown_fields_fail_closed(self):
+        node=node_from_view(fixture.view(n=16));value=forced_reference('CONTINUE',.5)(node)
+        bad=deepcopy(value);bad['rate']=1
+        with self.assertRaises(ValueError):adaptive.validate_decision(node,bad)
+        bad=deepcopy(value);bad['future_result']=0
+        with self.assertRaises(ValueError):adaptive.validate_decision(node,bad)
+
+    def test_fake_native_host_reference_paths_match_real_legacy_interface(self):
+        for group in range(3):
+            rows=[]
+            for program in ('LEGACY_REFERENCE','DYNAMIC_FORCED_REFERENCE'):
+                spec=next(s for s in a.population() if s['group']==group and s['program']==program);session=FakeSession();labels=[]
+                result=host.run_live(spec,session,labels.append,lambda:None,None);rows.append((result,session))
+                self.assertEqual(result['total_steps'],session.completed);self.assertEqual(session.ledger.counts['simulation_frames_completed'],5*session.completed)
+            self.assertEqual([s['command'] for s in rows[0][1].last_rows],[s['command'] for s in rows[1][1].last_rows])
+            self.assertEqual(rows[0][0]['final_memory'],rows[1][0]['final_memory'])
+
+    def test_host_rejects_decision_changed_after_provider_return(self):
+        forced=forced_reference('CONTINUE',.5)
+        def bad(node):value=forced(node);bad.last=dict(value,model_sha256='CHANGED_ECHO');return value
+        bad.last=None;spec=next(s for s in a.population() if s['program']=='DYNAMIC_FORCED_REFERENCE');session=FakeSession()
+        with patch.object(host,'forced_reference',return_value=bad),self.assertRaises(ValueError):host.run_live(spec,session,lambda label:None,lambda:None,None)
+        self.assertEqual(session.completed,spec['planned_boundary'])
+
+    def test_minimal_bundle_has_no_dataset_or_seed_registry(self):
+        client=FrozenRiskClient(a.ASSETS/'bundle.json')
+        self.assertEqual(set(client.bundle),{'schema','precritic','receiver','bundle_id'});self.assertEqual(client.calls,0)
+
+    def test_exact_receiver_binding_required(self):
+        with TemporaryDirectory() as folder:
+            folder=Path(folder);bundle=io.read(a.ASSETS/'bundle.json')
+            for role in ('receiver','precritic'):shutil.copyfile(a.ASSETS/bundle[role]['file'],folder/bundle[role]['file'])
+            bundle['precritic']['fixed_receiver_sha256']='0'*64;bundle.pop('bundle_id');bundle['bundle_id']=io.digest(bundle);io.write(folder/'bundle.json',bundle)
+            with self.assertRaises(ValueError):FrozenRiskClient(folder/'bundle.json')
+
+    def test_stored_weights_have_independent_live_prediction(self):
+        client=FrozenRiskClient(a.ASSETS/'bundle.json')
+        for stage in ('PRE','POST'):
+            node=node_from_view(fixture.view(n=16,stage=stage));actual=client(node);expected=audit.expected_decision({'program':'LEARNED_JOINT_BANK0'},node)
+            self.assertEqual(actual['action'],expected['action']);self.assertEqual(actual['rate'],expected['rate']);np.testing.assert_allclose(actual['scores'],expected['scores'],atol=5e-9,rtol=5e-9)
+        SYNTHETIC_ACTIVITY['main_model_inferences']+=2;SYNTHETIC_ACTIVITY['independent_model_inferences']+=2
+
+    def test_inference_budget_rejection_precedes_model_math(self):
+        client=FrozenRiskClient(a.ASSETS/'bundle.json',maximum_calls=0);node=node_from_view(fixture.view(n=16))
+        with self.assertRaises(ValueError):client(node)
+        self.assertEqual(client.calls,1);self.assertIsNone(client.last)
+
+    def test_private_noise_and_future_history_rejected(self):
+        client=FrozenRiskClient(a.ASSETS/'bundle.json');node=node_from_view(fixture.view(n=16));node['current']['noise_oracle']=[0,0,0]
+        with self.assertRaises(ValueError):client(node)
+        node=node_from_view(fixture.view(n=16));node['history'].append(deepcopy(node['history'][-1]))
+        with self.assertRaises(ValueError):client(node)
+
+    def test_registered_population_caps_all_resets_and_frames(self):
+        c=io.read(a.CONFIG);self.assertEqual(len(a.population()),54);self.assertEqual(len({s['seed'] for s in a.population()}),9)
+        limits=a.limits();self.assertEqual(limits['all_resets'],54*51);self.assertEqual(limits['physical_frames'],54*(51*500+500*5))
+        self.assertEqual(limits['physical_frames'],c['physical_frame_cap']);self.assertEqual(limits['control_steps'],c['control_step_cap'])
+
+    def test_same_tape_across_programs_but_parameter_change_stays_evaluator_only(self):
+        unit=[s for s in a.population() if s['group']==0 and s['task']=='push-v3'];reference=a.noise(unit[0])
+        for s in unit:np.testing.assert_array_equal(reference,a.noise(s))
+        self.assertFalse(reference.flags.writeable);self.assertNotEqual(a.destination(unit[0]),a.destination(next(s for s in unit if s['context']=='CHANGED')))
+
+    def test_error_identity_and_signed_alignment(self):
+        v=fixture.view(n=1);row=v['history'][0];row['command']=[.25,0,0,0];row['after']['observation'][0]=-.0025
+        actual=terms.terms(row);self.assertEqual(actual['alignment'],-.125);self.assertEqual(actual['error'],.25);self.assertEqual(actual['identity_gap'],0.)
+
+    def test_perfect_motion_is_not_command_energy_error(self):
+        row=fixture.view(n=1)['history'][0];row['command']=[.25,0,0,0];row['after']['observation'][0]=.0025
+        result=terms.window([row]);self.assertEqual(result['means']['error'],0.);self.assertGreater(result['means']['command_energy'],0.);self.assertIsNone(result['command_only_relative_l2'])
+
+    def test_missing_error_window_is_not_zero(self):
+        self.assertEqual(terms.window([])['missing_reason'],'NO_EXECUTED_WINDOW');self.assertIsNone(terms.window([])['means'])
+
+    def test_independent_literal_error_terms(self):
+        rows=fixture.view(n=4)['history']
+        for i,row in enumerate(rows):row['command']=[.25,-.125,0,0];row['after']['observation'][0]=.001*i
+        actual=terms.window(rows);expected=semantics.literal_window(rows)
+        for key in ('means','joint'):
+            for field in actual[key]:np.testing.assert_allclose(actual[key][field],expected[key][field],atol=2e-12,rtol=2e-12)

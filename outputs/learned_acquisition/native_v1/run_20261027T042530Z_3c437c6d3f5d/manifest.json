@@ -1,0 +1,719 @@
+{
+  "experiment_run_id": "run_20261027T042530Z_3c437c6d3f5d",
+  "protocol": "LEARNED_ACQUISITION_NATIVE_V1",
+  "classification": "NATIVE_INTEGRATION_AND_PUBLIC_SIGNAL_DIAGNOSIS_NOT_TASK_GAIN_QUALIFICATION",
+  "source_git_commit": "3c437c6d3f5dc9bc18cc146a8e0776c52d3ada52",
+  "config": {
+    "protocol": "LEARNED_ACQUISITION_NATIVE_V1",
+    "classification": "NATIVE_INTEGRATION_AND_PUBLIC_SIGNAL_DIAGNOSIS_NOT_TASK_GAIN_QUALIFICATION",
+    "source_result_commit": "f26a138bf271da2e112b5642985166b18d1894dd",
+    "source_learning_run": "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420",
+    "source_A1_run": "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2",
+    "source_bank_fold": 0,
+    "fold_selection": "first registered index, integration only; never best-fold selection",
+    "source_candidate": "JOINT_SPO",
+    "native_programs": [
+      "LEGACY_REFERENCE",
+      "DYNAMIC_FORCED_REFERENCE",
+      "LEARNED_JOINT_BANK0"
+    ],
+    "tasks": [
+      "push-v3",
+      "reach-v3",
+      "door-open-v3"
+    ],
+    "reference_by_boundary": {
+      "16": {
+        "action": "CONTINUE",
+        "rate": 0.5
+      },
+      "32": {
+        "action": "VALIDATE8",
+        "rate": 0.125
+      },
+      "64": {
+        "action": "MOVE_MEASURE",
+        "rate": 0.5
+      }
+    },
+    "groups": 3,
+    "task_context_units": 18,
+    "executions": 54,
+    "per_execution_max_steps": 500,
+    "control_step_cap": 27000,
+    "controlled_reset_cap": 54,
+    "all_reset_cap": 2754,
+    "physical_frame_cap": 1512000,
+    "physical_period_s": 0.0125,
+    "frames_per_control_step": 5,
+    "actual_policy_queries_max": 27000,
+    "audit_policy_queries_max": 27000,
+    "live_neural_decisions_max": 36,
+    "used_episode_seed_range": [
+      90000,
+      90008
+    ],
+    "reserved_episode_seed_range": [
+      90009,
+      90999
+    ],
+    "perturbation_nonce": 202610271,
+    "noise_namespace": 202610272,
+    "noise_sigma": 0.05,
+    "initial_fault": {
+      "matrix_xy": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "bias_xy": [
+        0.12,
+        -0.08
+      ],
+      "deadzone_xy": [
+        0.0,
+        0.0
+      ]
+    },
+    "changed_matrix_diagonal_range": [
+      0.75,
+      1.25
+    ],
+    "changed_matrix_off_diagonal_range": [
+      -0.2,
+      0.2
+    ],
+    "changed_bias_range": [
+      -0.2,
+      0.2
+    ],
+    "decision_interface": "strict current canonical public node only; no case/seed/context/oracle/future outcome",
+    "pre_actions": [
+      "CONTINUE",
+      "VALIDATE8",
+      "MOVE_MEASURE"
+    ],
+    "post_rates": [
+      0.125,
+      0.5,
+      2.0,
+      8.0
+    ],
+    "one_initial_controlled_reset": true,
+    "post_acquisition_world_RNG_clock_and_integral_continuous": true,
+    "minimum_free_disk_bytes": 2147483648,
+    "native_gate": {
+      "all54_cases_complete_and_independently_audited": true,
+      "forced_vs_legacy_full_physical_pairs": 18,
+      "all_three_program_common_prefix_pairs": 36,
+      "hidden_context_prequery_pairs": 9,
+      "at_least_one_actual_neural_nondefault_selection": true,
+      "at_least_one_actual_postboundary_command_divergence_from_reference": true,
+      "at_least_one_neural_MOVE_then_real_measurement_then_saved_postdecision_then_real_tail": true,
+      "zero_budget_continuity_leakage_and_weight_change_violations": true
+    },
+    "native_gate_does_not_require_or_prove_task_gain": true,
+    "TRAIN_signal_analysis": {
+      "cases": 648,
+      "real_future_windows": 536,
+      "canonical_past_windows": 134,
+      "horizon": 32,
+      "canonical_past_rate": 0.5,
+      "identity": "e=||d-u||^2=||u||^2+||d||^2-2*d.u; d=observedXYdelta/0.01",
+      "future_commands_are_retrospective_evaluation_only": true,
+      "private_noise_or_witness_values_used_as_signal_inputs": false,
+      "new_physics": 0,
+      "new_fits": 0,
+      "new_policy_queries": 0
+    },
+    "new_model_fits": 0,
+    "new_low_level_policy_training": 0,
+    "online_LLM_API_calls": 0,
+    "failure_handling": "one allocation; software/integrity failure stops and preserves partial data; no retry, extension, new fold, model tuning or replacement",
+    "strong_task_baselines_and_own_history_final_qualification_completed": false,
+    "algorithm_novelty_established": false,
+    "publication_goal_complete": false
+  },
+  "population": [
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "push-v3",
+      "seed": 90000,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "push-v3",
+      "seed": 90000,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "push-v3",
+      "seed": 90000,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "push-v3",
+      "seed": 90000,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "push-v3",
+      "seed": 90000,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "push-v3",
+      "seed": 90000,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 90001,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 90001,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 90001,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 90001,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 90001,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "reach-v3",
+      "seed": 90001,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 90002,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 90002,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 90002,
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 90002,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 90002,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 0,
+      "task": "door-open-v3",
+      "seed": 90002,
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "push-v3",
+      "seed": 90003,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "push-v3",
+      "seed": 90003,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "push-v3",
+      "seed": 90003,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "push-v3",
+      "seed": 90003,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "push-v3",
+      "seed": 90003,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "push-v3",
+      "seed": 90003,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 90004,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 90004,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 90004,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 90004,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 90004,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "reach-v3",
+      "seed": 90004,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 90005,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 90005,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 90005,
+      "context": "UNCHANGED",
+      "planned_boundary": 32,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 90005,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 90005,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 1,
+      "task": "door-open-v3",
+      "seed": 90005,
+      "context": "CHANGED",
+      "planned_boundary": 32,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "push-v3",
+      "seed": 90006,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "push-v3",
+      "seed": 90006,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "push-v3",
+      "seed": 90006,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "push-v3",
+      "seed": 90006,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "push-v3",
+      "seed": 90006,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "push-v3",
+      "seed": 90006,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 90007,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 90007,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 90007,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 90007,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 90007,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "reach-v3",
+      "seed": 90007,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 90008,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 90008,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 90008,
+      "context": "UNCHANGED",
+      "planned_boundary": 64,
+      "program": "LEARNED_JOINT_BANK0"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 90008,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LEGACY_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 90008,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "DYNAMIC_FORCED_REFERENCE"
+    },
+    {
+      "cohort": "NATIVE",
+      "group": 2,
+      "task": "door-open-v3",
+      "seed": 90008,
+      "context": "CHANGED",
+      "planned_boundary": 64,
+      "program": "LEARNED_JOINT_BANK0"
+    }
+  ],
+  "limits": {
+    "executions": 54,
+    "control_steps": 27000,
+    "controlled_resets": 54,
+    "all_resets": 2754,
+    "physical_frames": 1512000,
+    "actual_fixed_policy_queries_max": 27000,
+    "audit_fixed_policy_queries_max": 27000,
+    "live_model_decision_calls_max": 36,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/probe/learned_acquisition_actor_v1.py": "bee94a773d4bfa682b2b01ba7749ffb4a85460cdd721dc15a2ae35ac09301bc6",
+    "src/probe/frozen_risk_client_v1.py": "158f28ee6e80928070a30f2c02e8d61b1a2abff9c3d53879edc5e85f5bd05ca8",
+    "src/analysis/observed_error_terms_v1.py": "612d4ef56b93c0f7c3f4ab1f4166aec5ae7952c4a10d82c589833f575e974b9d",
+    "src/analysis/learned_acquisition_native_io_v1.py": "5a5eccfc0f5e22805fa3a0d2f39fbae3bbeab6ae572ab52052787a607ffbc093",
+    "src/analysis/learned_acquisition_native_host_v1.py": "f4ca0a2f80373cf1ae04664f5baaa856c20a3befbcb455f998cc969c1dcb83b6",
+    "src/analysis/learned_acquisition_native_collect_v1.py": "1f75f15ec94d8171412d7db987e04a227aa868e6a53d0d4c558337dfacb714ec",
+    "src/analysis/learned_acquisition_native_audit_v1.py": "e6b6a47f0a6c99460dd817f0a7bd18725bb987fe3cd62878f9187351b18901dd",
+    "src/analysis/training_error_semantics_v1.py": "892749d6d4ba351e493765eb814bea69052f5c83c42c43b9c54bea389faad6e2",
+    "scripts/run_learned_acquisition_native_v1.py": "26e175d373420697e2b2227b746cf50d961ff5e89b2aa0ed84db6504775d78b3",
+    "tests/test_learned_acquisition_native_v1.py": "429d4d49187a61f70c40f622150c7d08a4ea49598a457fafe0a36ebd3f7fb3d4",
+    "configs/movement_task/learned_acquisition_native_v1.json": "2265ae2da09ee44cf28ce7d9f692b2651ba280ddb0a0a0da6d87e2e3ede2e517",
+    "docs/protocols/learned_acquisition_native_v1_zh.md": "1df573564db692bb4132511e2a1892a0fdeb38910ad3a52dd7f13ad091e0957b",
+    "docs/protocols/learned_acquisition_native_seeds_v1.json": "85a5e91c3805b9d63576154226ece254cbd741aea7c890e5ac99ab6a341a7d5c",
+    "docs/research/learned_acquisition_native_decision_v1_zh.md": "3b88b09c5c8a4b733304cac08a8e9927d3a57bd0aaebf8dfbd9c3a55c05565e2",
+    "outputs/learned_acquisition/native_v1/validate_freeze.py": "c6e032a7acedd957d8d634013c9d6c34471866f19dcccde2206af94a28e283d5",
+    "outputs/learned_acquisition/native_v1/run_pipeline.py": "92c578fd5269c2976e2622583cba694c09e9eb6db6aec6971bac9e3947d1c450",
+    "outputs/learned_acquisition/native_v1/verify_commit.py": "70346f650bd36c8e51b60d47da2c12bf308cf5dc12fc5830150ba92e34015ab0",
+    "assets/learned_acquisition_native_v1/bundle.json": "049bd258539bfd0f13a9369d6b18322e13ce86af09aa5aeec52b11c323ca852d",
+    "assets/learned_acquisition_native_v1/precritic.npz": "92a7778e06a66eeb5eff2a67463d424c179615e9509dfd266694d0c2eaca45a1",
+    "assets/learned_acquisition_native_v1/receiver.npz": "7fe7cc14b7c502895f09012ff4a980b71d9286dd22da6e0b8da1302436bee576",
+    "assets/learned_acquisition_native_v1/provenance.json": "75db11087ae248f020c7c560f2b2aba1762557c81fe4c3475bc0bb4a81d60fec",
+    "assets/learned_acquisition_native_v1/.gitattributes": "bd9663d71ffce4f030fba3bf7285472e2fab87ce8f71d180d20c14060d0c42a1",
+    "outputs/learned_acquisition/native_v1/.gitattributes": "ac9bf638b126fd93a8bee7eb306ee408a18ca4b5f430b2e3b011c5b124e085f4",
+    "src/analysis/correction_scope_risk_reference_v1.py": "53160956e586f6050738c65b32027811b6907695611b39c421cf4bf54250f4bf",
+    "src/analysis/correction_scope_risk_reference_independent_v1.py": "6916bc6d280a21ccbf74686da3c18b307c71581acfe61c5774cc699629c7182b",
+    "src/analysis/correction_scope_learning_v1.py": "837f8f2dab162059dcc97130400a9611ef909b2405b4855ccc98a6f7058aff81",
+    "src/analysis/correction_scope_independent_v1.py": "4caff49aea58b62d921b0cd8c29563318270a2b45fcb25fbf4d90122528f68b3",
+    "src/analysis/correction_scope_io_v1.py": "c128d8ea9e36e7c4535939b7f538f0dac33d8d7d81c0855aa2b994b5361678dc",
+    "src/analysis/response_qualification_io_v1.py": "035a31658a2420286acfa47b01365dc623f820eab6d57badc3e54da44ba06e17",
+    "src/analysis/release_learning_guard_v1.py": "3ab9ff178783caed37e9128e7fc7b82e2e86a58fc0b8a442bcafc3c3391ae4f4",
+    "src/probe/correction_scope_model_v1.py": "4bee69b0990908551d657ede017d303b2084bc448ec9db7d87c2c2d2bdc7cf1c",
+    "src/analysis/correction_transfer_learning_v1.py": "96a2f0cc8609ce36c8cfc1268230ab2fa068612497daab9c34e788d3e896e237",
+    "src/analysis/correction_transfer_independent_v1.py": "2e958646bcfe7c7d6df3d2ec6c7fefd1c4664d14c4ea469f97cf925b4948022f",
+    "src/analysis/transfer_risk_math_v1.py": "7c40bcb49433276ccd3fe28e9849cde9397564ddfd815637ac8354e217ed6358",
+    "src/analysis/transfer_risk_independent_math_v1.py": "311f6a790a4a6a0837b2070b28a135bf35d3a1937e61e690d02bf1f0dee6eb1e",
+    "src/analysis/correction_scope_host_v1.py": "9ac314a7e6890e713fa4db9d4fe35fea9427af1824d01839d7413469f3e1ae8f",
+    "src/analysis/correction_scope_audit_v1.py": "18d77df5789dbbb085e97715f9708d3056b0daf44c7532e9dd6e8bfb74e0c6f5",
+    "src/analysis/memory_reset_seed_scope_v1.py": "6964776886d62b0d261589949143ae9d402d5eac3d8bbd32ed923f8ad742d354",
+    "src/analysis/paired_probe_host_v1.py": "8149aafa0430fca5e4442e23a862abadd6bb984d97254bd3a04abd9bb467afc1",
+    "src/probe/correction_scope_program_v1.py": "5e9877f93c52583116be35ba26b49c5ff05f3d889932950606a692ed045709fc",
+    "src/probe/task_memory_option_v1.py": "c60ce1f746bd525e1a61795a8e2204c7e84b3496b832fb647a81ac637d2ffe20",
+    "src/probe/task_passive_pi_v1.py": "3e557c38053107b52a1091f782a1604df0e5965e05bdef7830d12534cd9234a6",
+    "src/probe/lifecycle_ledger.py": "31b0bf99f657e3319dcb81cd4f3d85c60a6ddba4549241fc3d266125bd95de33",
+    "src/probe/local_reprobe_v1.py": "99d5f7830bae3673581cb0e68e88e93a9d389553133169904dfc5c640776cf13",
+    "src/probe/acquisition_reference_operation_v1.py": "e859fb6754b17755802afb0c3093f7bd199a137068c0cef0a6e8079ca362cc8a",
+    "src/rollout/task_registry.py": "798d03e98e78d8218d1ff46e04db91a462532e82210f5ac49b59130c488e3190",
+    "src/rollout/chronological_faults.py": "21e58285c6af138be586c9cc55b1a8373e6d53aadf1ad79e27b229c40c74608f",
+    "scripts/qualify_delayed_intervention_v2.py": "c7b60cd02fd5b68333a7d6a5946b91226ec0365d8a190201049e01bd063f374f",
+    "src/analysis/short_probe_journal_audit_v1.py": "bd7fa85e5b4aeb5d868ed027890b1a589ebb0741aa57af9fd5a57a215a07b1ae",
+    "src/analysis/task_passive_audit_v1.py": "71bcf806a559e255153579cafee39b8743e4345ef8040a6f24e90313633fc1ac",
+    "src/analysis/continuous_state_witness_v1.py": "d77f7c107a6f544ecb7ff6a00447024cfb3c3cba5b8a1dfaadc630a22480fdea"
+  },
+  "input_sha256": {
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/manifest.json": "a91b19a005de7ff654a1546e5f9be9405fcc66464e88ed56f7ef393d4005576d",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/bank.json": "3126c95c9377b9e201bb5b0a2fbef28b51e8c6f547fdab0ed4b4bfcf6e92c0eb",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/model_audit.json": "a63ef33cd23b21250a792af652750db5c2b37c92a91558726d1e99b304383de7",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/replay_audit.json": "1d4d4c6ff91be62661699bb979dde9101c1e78a6116c42095e68db83487f5b2d",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/results.json": "586637a855823e8fdfe8b292afeab9fb2d79abeeda10899fc5a76513e7ff337d",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/examples.jsonl.gz": "92d8e85828a73a974b2a10b81b84e41c25decfa7a4f2b96a9e770277add86b1d",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/audit.json": "d7dbbf9c4c19e8ee4d24c5e7eca2830b4c886f6f5e831298f035bf9ded641eb2",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/results/statistics.json": "d567b1a827b11edb1237b20f59d554fc1cf1a91733adc58b8b614e370c7826a4",
+    "outputs/correction_scope/common_state_audit_v1/train.json": "8cb2f53791324c7b98be06e28ff1f8699051d775ffa41bc981609bcb464757c0",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/receiver_0_JOINT_SPO.npz": "7fe7cc14b7c502895f09012ff4a980b71d9286dd22da6e0b8da1302436bee576",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/models/pre_0_JOINT_SPO.npz": "92a7778e06a66eeb5eff2a67463d424c179615e9509dfd266694d0c2eaca45a1",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320"
+  },
+  "seed_scope_sha256": "d462ee3c02bfac529e559627a45787a6c0ff2930cf89da7fe06d14d79100411a",
+  "bundle_id": "8c43004c8239b79dcab3e99bfcc9b52018adb2e9e6d5ae83f3b5736ae113dca5",
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0,
+  "task_gain_qualification": false,
+  "manifest_id": "803316d56a39d474d4751a05499b5fa44e94ffa33cc837bb4a0e2f36ac008271"
+}
