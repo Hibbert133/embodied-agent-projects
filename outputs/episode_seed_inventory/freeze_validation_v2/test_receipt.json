@@ -1,0 +1,68 @@
+{
+  "tests": 30,
+  "unique_test_ids": [
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_audit_rejects_omitted_discovery_source",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_chinese_adjacent_range_and_leading_zero_singleton",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_discovery_includes_docs_and_manifest_not_raw_data",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_empty_range_has_explicit_reason",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_empty_scope_is_not_clearance",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_escaped_json_pointer_roundtrip",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_inclusive_boundary_and_disjoint_range",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_independent_audit_detects_original_endpoint_only_bug",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_independent_audit_does_not_call_production_parser",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_input_changed_after_inventory_is_rejected",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_markdown_date_is_not_reversed_seed_range",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_markdown_singletons_and_negative_command_prose",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_metadata_boolean_flags_and_hashes",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_missing_bound_and_invalid_count_are_indeterminate",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_missing_invalid_and_escaping_reference_fail_closed",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_named_nested_ranges_and_explicit_members_differ",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_negative_or_boolean_query_rejected",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_nested_two_element_ranges_include_interior",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_registry_legacy_unlabelled_pair_is_conservative",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_registry_partitions_preserve_ranges_below_seed_container",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_registry_reference_list_closure_and_cycles",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_rng_namespace_visible_and_episode_override",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_scalar_bool_float_and_null_are_not_seed_numbers",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_start_end_and_start_count",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_start_to_reserved_hull_does_not_claim_actual_use",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_unicode_and_text_range",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_unknown_episode_range_blocks_despite_rng_collision",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_unknown_generator_is_not_broadly_ignored",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_unreadable_and_invalid_json_are_catalogued",
+    "tests.test_episode_seed_inventory_v2.SeedInventory.test_unsupported_range_fails_closed"
+  ],
+  "success": true,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 8025410800,
+  "source_sha256": {
+    "src/analysis/episode_seed_inventory_v2.py": "0aeebb0ddcdd97a64bb1b754d01862a2bf03f0a26d142dbfa6b47fa281dbd222",
+    "src/analysis/episode_seed_inventory_audit_v2.py": "4be8f2d25e0bc586f24142af8501a61415971c234d10eaa0618d66fd6cdd4a1d",
+    "scripts/check_episode_seed_scope_v2.py": "b61d90043e49ac1cc3e06907364ceebeec20971be27fea2c23f040bbf102ce6f",
+    "scripts/validate_episode_seed_inventory_v2.py": "8cac808924af7372465d4fb856b6b799374afee2b128ceddf84c37527b1cbdc0",
+    "tests/test_episode_seed_inventory_v2.py": "c40a773fd34e91fbd524171b18fd6d7803af3f8d27c504d3789ff6905dcd470d",
+    "docs/research/episode_seed_inventory_v2_zh.md": "f763db6ab66f66d50043debadb186757309a7bf620a1cb4f2397ee5bfc9c0952"
+  }
+}
