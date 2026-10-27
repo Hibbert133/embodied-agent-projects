@@ -1,0 +1,37 @@
+{
+  "experiment_run_id": "ARRAY_FIXTURE_NOT_RESEARCH",
+  "manifest_id": "array",
+  "source_git_commit": "array",
+  "status": "FAILED_PARTIAL",
+  "allocated_executions": 1,
+  "executions": 0,
+  "rows": [],
+  "control_steps": 0,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 1,
+      "reset_errors": 1
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 1,
+        "reset_errors": 1
+      }
+    }
+  },
+  "events": 3,
+  "private_records": 0,
+  "failure": {
+    "type": "RuntimeError",
+    "message": "synthetic callback failure"
+  },
+  "wall_ns": 7520400,
+  "network_guard": {
+    "attempted_network_calls": 0
+  },
+  "online_LLM_API_calls": 0,
+  "scientific_model_training": 0,
+  "training_behavior_data_not_task_qualification": true,
+  "execution_git_head": "e52741ca8f5b8eb61027dd4d1f22a1917b8636a2",
+  "publication_goal_complete": false
+}
