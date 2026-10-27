@@ -1,0 +1,212 @@
+"""TRAIN-only matched-first-command effects and standard regression feasibility.
+
+All effects compare two actually executed actions. Private values are confined
+to a separate diagnostic file; regressors receive strict public packets only.
+"""
+from collections import defaultdict,Counter
+from copy import deepcopy
+from datetime import datetime,timezone
+from itertools import combinations,groupby
+from pathlib import Path
+from time import perf_counter_ns
+import hashlib,json,subprocess
+import numpy as np
+from src.analysis import correction_scope_io_v1 as source
+from src.analysis.release_learning_guard_v1 import read_only
+from src.analysis.short_probe_journal_audit_v1 import applied
+from src.probe import correction_effect_model_v1 as model
+io=source.io;ROOT=io.ROOT;BASE=ROOT/'outputs/correction_scope/effect_learning_v1'
+CONFIG=ROOT/'configs/movement_task/correction_effect_learning_v1.json'
+SOURCE=ROOT/'outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2'
+RATES=(.125,.5,2.,8.);PAIRS=tuple(combinations(range(4),2));RIDGE=.01
+
+
+def bits(u):return np.asarray(u,dtype='<f4').tobytes()
+def node_key(spec):return tuple(spec[k] for k in ('cohort','group','task','context','acquisition_action'))
+def compact(path,value):
+    with Path(path).open('x',encoding='utf8',newline='\n') as stream:json.dump(value,stream,separators=(',',':'),ensure_ascii=False,allow_nan=False);stream.write('\n')
+
+
+def first_difference(initial_a,steps_a,initial_b,steps_b):
+    io.require(initial_a==initial_b,'common factual initial observation')
+    current=initial_a;history=[]
+    for i in range(min(len(steps_a),len(steps_b))):
+        left,right=steps_a[i],steps_b[i]
+        if bits(left['command'])!=bits(right['command']):
+            io.require(i>=2,'no fabricated first two public displacements')
+            packet=dict(completed_steps=i,current=deepcopy(current),history2=deepcopy(history[-2:]),command_a=left['command'],command_b=right['command'])
+            model.features(packet)
+            a=(np.asarray(left['after']['observation'][:2])-np.asarray(current['observation'][:2]))/.01
+            b=(np.asarray(right['after']['observation'][:2])-np.asarray(current['observation'][:2]))/.01
+            return i,packet,dict(displacement_a=a.tolist(),displacement_b=b.tolist(),effect=(b-a).tolist())
+        io.require(left['after']==right['after'],'same sent prefix must have same actual response under source coupling')
+        history.append(dict(at_calls=i,before=deepcopy(current),command=left['command'],after=left['after']));current=left['after']
+    io.require(len(steps_a)==len(steps_b),'one source continued after shared physical endpoint')
+    return None,None,None
+
+
+def source_nodes():
+    outer=iter(groupby(io.rows(SOURCE/'train/events.jsonl.gz'),source.case_key));cases=list(io.rows(SOURCE/'train/cases.jsonl.gz'))
+    io.require(len(cases)==648,'all sourceTRAIN648')
+    for _,siblings in groupby(cases,node_key):
+        family=[]
+        for case in siblings:
+            key,it=next(outer);io.require(key==source.case_key(case),'source case event order');steps=[];commit=None
+            for event in it:
+                if event['event']=='STEP_COMPLETE':
+                    io.require(event['logical_step']==len(steps) and event['noise_cursor_after']==len(steps)+1,'source noise cursor/order')
+                    steps.append(event)
+                elif event['event']=='NOISE_COMMITMENT':commit=event['tape_sha256_oracle']
+            io.require(len(steps)==case['total_steps'] and case['completed'] and case['error'] is None,'complete source case')
+            family.append((case,steps,commit))
+        io.require(len(family)==4 and [c['time_constant_s'] for c,_,_ in family]==list(RATES),'all four factual rates')
+        yield family
+    io.require(next(outer,None) is None,'no additional source records')
+
+
+def extract(path):
+    path=Path(path);m=checked(path);out=path.parent/'pairs';out.mkdir(exist_ok=False);start=perf_counter_ns();guard={};register=[];public=[];private=[]
+    with read_only(guard):
+        for family in source_nodes():
+            initial_hashes=[];post=[]
+            for case,_,_ in family:
+                w=case['state_witness_refs'][0];io.require(w['label']=='INITIAL','initial witness')
+                initial_hashes.append((w['native_sha256'],w['comparison_python_sha256']));post.append(None if case['post_forecast'] is None else case['post_forecast']['at_calls'])
+            io.require(initial_hashes[0]==initial_hashes[1]==initial_hashes[2]==initial_hashes[3] and len(set(post))==1,'native/RNG and returned node coupling')
+            io.require(all(c['initial_fault_oracle']==family[0][0]['initial_fault_oracle'] and c['destination_oracle']==family[0][0]['destination_oracle'] for c,_,_ in family),'same evaluator fault family across rates')
+            spec={k:family[0][0][k] for k in source.KEYS};tape=source.noise(spec)
+            io.require(all(commit==io.digest(tape.tolist()) for _,_,commit in family),'same actual source noise tape')
+            for ia,ib in PAIRS:
+                ca,sa,_=family[ia];cb,sb,_=family[ib];identity=io.digest([node_key(ca),ia,ib]);at,packet,target=first_difference(ca['initial'],sa,cb['initial'],sb)
+                row=dict(pair_id=identity,group=ca['group'],task=ca['task'],context=ca['context'],boundary=ca['planned_boundary'],
+                    acquisition_action=ca['acquisition_action'],rates=[RATES[ia],RATES[ib]],first_difference=at,
+                    source_case_sha256=[io.digest(ca),io.digest(cb)],loss_difference=cb['deadline_loss']-ca['deadline_loss'],
+                    success_a=ca['success'],success_b=cb['success'])
+                if at is None:
+                    row['status']='BEFORE_DECISION_TERMINAL' if ca['pre_forecast'] is None else 'ACQUISITION_TERMINAL' if post[0] is None else 'NO_SENT_DIFFERENCE'
+                else:
+                    io.require(post[0] is not None and at>=post[0] and sa[at]['phase']==sb[at]['phase']=='TAIL_TASK','actual after-adoption divergence only')
+                    io.require(sa[at]['simulation_time_before']==sb[at]['simulation_time_before'],'same physical clock at divergence')
+                    io.require(bits(sa[at]['raw_policy'])==bits(sb[at]['raw_policy']),'same current observation/raw policy')
+                    row['status']='ACTUAL_DIVERGENCE';public.append({k:row[k] for k in ('pair_id','group','task','context','boundary','acquisition_action','rates')}|dict(input=packet,target=target))
+                    u=np.asarray(packet['command_b'][:2])-np.asarray(packet['command_a'][:2]);effect=np.asarray(target['effect']);actions=[]
+                    for case,steps,_ in (family[ia],family[ib]):
+                        event=steps[at];fault=case['destination_oracle'] if at>=case['planned_boundary'] else case['initial_fault_oracle']
+                        actual=applied(event['command'],fault,tape[at]);io.require(actual==event['executed_action_oracle'],'actual float32 transform/noise/final clipping')
+                        actions.append(actual)
+                    v=np.asarray(actions[1][:2])-np.asarray(actions[0][:2]);den=float(np.linalg.norm(u));vden=float(np.linalg.norm(v))
+                    private.append(dict(pair_id=identity,at=at,delta_sent_xy=u.tolist(),delta_applied_xy_oracle=v.tolist(),effect_xy=effect.tolist(),
+                        nominal_sent_error=float(np.mean((effect-u)**2)),applied_semantics_error_oracle=float(np.mean((effect-v)**2)),zero_effect_error=float(np.mean(effect**2)),
+                        observed_to_sent_norm_ratio=None if den==0 else float(np.linalg.norm(effect)/den),sent_contrast_zero=den==0,
+                        observed_to_applied_norm_ratio_oracle=None if vden==0 else float(np.linalg.norm(effect)/vden),
+                        applied_contrast_zero_oracle=vden==0,source_noise_cursor=at,shared_noise_does_not_imply_noise_free_response=True))
+                register.append(row)
+        io.require(len(register)==972 and len({r['pair_id'] for r in register})==972,'all162 nodes times6 pairs')
+    compact(out/'public_pairs.json',public);io.write(out/'pair_register.json',register);io.write(out/'oracle_diagnostics.json',private)
+    result=dict(integrity='FOR_INDEPENDENT_AUDIT',registered_pairs=972,available_pairs=len(public),statuses=dict(Counter(r['status'] for r in register)),
+        guard=guard,public_training_file_excludes_private_inputs_and_task_outcomes=True,wall_ns=perf_counter_ns()-start,new_physics=0,new_fits=0,online_LLM_API_calls=0,
+        artifact_sha256={p.name:io.sha(p) for p in out.iterdir() if p.is_file()});io.write(out/'receipt.json',result);return result
+
+
+def weights(rows):
+    groups=defaultdict(lambda:defaultdict(lambda:defaultdict(list)))
+    for i,r in enumerate(rows):groups[r['group']][(r['task'],r['context'])][r['acquisition_action']].append(i)
+    w=np.zeros(len(rows))
+    for units in groups.values():
+        for nodes in units.values():
+            for ix in nodes.values():w[ix]=1/len(groups)/len(units)/len(nodes)/len(ix)
+    io.require(len(rows)>0 and np.isclose(w.sum(),1),'hierarchical group/unit/node/pair weights');return w
+
+
+def dataset(path):
+    rows=io.read(Path(path).parent/'pairs/public_pairs.json')
+    expected={'pair_id','group','task','context','boundary','acquisition_action','rates','input','target'}
+    for r in rows:
+        io.require(type(r) is dict and set(r)==expected and set(r['target'])=={'displacement_a','displacement_b','effect'},'public data only')
+        model.features(r['input']);a=np.asarray(r['target']['displacement_a']);b=np.asarray(r['target']['displacement_b']);e=np.asarray(r['target']['effect'])
+        io.require(a.shape==b.shape==e.shape==(2,) and np.isfinite(np.r_[a,b,e]).all() and np.array_equal(b-a,e),'factual public effect target')
+    return rows
+
+
+def fit_one(rows,kind):
+    w=weights(rows);target=np.asarray([r['target']['effect'] for r in rows])
+    x=np.asarray([model.design(r['input'],kind) for r in rows])
+    if kind=='GLOBAL_SCALAR':x=x.reshape(-1,1);y=target.reshape(-1,1);w=np.repeat(w,2)/2
+    elif kind=='ABSOLUTE_CONTEXT':
+        x=x.reshape(-1,48);y=np.asarray([[r['target']['displacement_a'],r['target']['displacement_b']] for r in rows]).reshape(-1,2);w=np.repeat(w,2)/2
+    else:y=target
+    scale=np.sqrt(w@x**2);scale=np.where(scale==0,1.,scale);z=x/scale
+    coef=np.linalg.solve(z.T@(w[:,None]*z)+RIDGE*np.eye(z.shape[1]),z.T@(w[:,None]*y))
+    return dict(kind=kind,scale=scale.tolist(),coef=coef.tolist(),ridge=RIDGE,physical_response_qualified=False,task_benefit_qualified=False)
+
+
+def fit(path):
+    path=Path(path);m=checked(path);io.require(io.read(path.parent/'pairs/audit.json')['integrity']=='PASSED','independent public-pair audit before fitting')
+    out=path.parent/'models';out.mkdir(exist_ok=False);rows=dataset(path);start=perf_counter_ns();guard={};models={};predictions=[]
+    with read_only(guard,max_solve=36):
+        for fold in range(9):
+            train=[r for r in rows if r['group']!=fold];held=[r for r in rows if r['group']==fold]
+            io.require(train,'nonempty remaining TRAIN groups')
+            for kind in model.KINDS:
+                saved=fit_one(train,kind);name=f'group{fold}_{kind}.json';io.write(out/name,saved);models[f'{fold}/{kind}']=dict(file=name,sha256=io.sha(out/name))
+            for r in held:
+                for kind in model.COMPARATORS:
+                    saved=dict(kind=kind) if kind in ('ZERO_EFFECT','NOMINAL_SENT') else io.read(out/models[f'{fold}/{kind}']['file'])
+                    pred=model.predict(saved,r['input']);target=np.asarray(r['target']['effect'])
+                    predictions.append(dict(pair_id=r['pair_id'],group=fold,kind=kind,prediction=pred,mse=float(np.mean((np.asarray(pred)-target)**2))))
+    io.require(guard['operation_counts']['solve_attempts']==36,'complete36 standard regressions')
+    io.write(out/'bank.json',models);compact(out/'predictions.json',predictions)
+    result=dict(integrity='FOR_INDEPENDENT_REFIT_AUDIT',scientific_ridge_fits=36,neural_training=0,groups_left_out=9,guard=guard,
+        public_dataset_sha256=io.sha(path.parent/'pairs/public_pairs.json'),private_diagnostic_file_not_used_by_fit=True,wall_ns=perf_counter_ns()-start,
+        model_sha256={r['file']:r['sha256'] for r in models.values()},new_physics=0,online_LLM_API_calls=0);io.write(out/'receipt.json',result);return result
+
+
+def source_bindings():
+    c=io.read(CONFIG);paths=[SOURCE/n for n in ('manifest.json','train/cases.jsonl.gz','train/audit.json','train/summary.json')]
+    paths.extend((ROOT/'outputs/correction_scope/common_state_audit_v1/train.json',))
+    result={}
+    for p in paths:
+        name=p.relative_to(ROOT).as_posix();blob=subprocess.check_output(['git','show',c['source_result_commit']+':'+name],cwd=ROOT)
+        io.require(hashlib.sha256(blob).hexdigest()==io.sha(p),'committed source bytes '+name);result[name]=io.sha(p)
+    for n,h in io.read(SOURCE/'train/audit.json')['collection_sha256'].items():
+        p=SOURCE/'train'/n;io.require(io.sha(p)==h,'audited source raw '+n);result[p.relative_to(ROOT).as_posix()]=h
+    return result
+
+
+def prepare(sources):
+    v=io.read(BASE/'freeze_validation/complete.json');io.require(v['integrity']=='PASSED' and not io.git('status','--porcelain','--untracked-files=no'),'clean effect development freeze')
+    io.require(not list(BASE.glob('run_*/manifest.json')),'one effect development allocation')
+    for n,h in v['source_sha256'].items():io.require(io.sha(ROOT/n)==h,'immutable source '+n)
+    head=io.git('rev-parse','HEAD');out=BASE/('run_'+datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')+'_'+head[:12]);out.mkdir(exist_ok=False)
+    m=dict(protocol='CORRECTION_EFFECT_LEARNING_V1',classification='POST_HOC_TRAIN_COMPONENT_LEARNING_NOT_NATIVE_OR_FINAL_QUALIFICATION',source_git_commit=head,
+        config=io.read(CONFIG),source_sha256={n:io.sha(ROOT/n) for n in sources},input_sha256=source_bindings(),new_physics=0,online_LLM_API_calls=0)
+    m['manifest_id']=io.digest(m);io.write(out/'manifest.json',m);return out/'manifest.json'
+
+
+def checked(path):
+    path=Path(path).resolve();m=io.read(path);copy=dict(m);mid=copy.pop('manifest_id')
+    io.require(path.parent.parent==BASE and mid==io.digest(copy) and m['config']==io.read(CONFIG),'effect manifest ownership')
+    for n,h in {**m['source_sha256'],**m['input_sha256']}.items():io.require(io.sha(ROOT/n)==h,'immutable effect source '+n)
+    return m
+
+
+def evaluate(path):
+    path=Path(path);m=checked(path);io.require(io.read(path.parent/'models/audit.json')['integrity']=='PASSED','independent refits before scoring')
+    out=path.parent/'evaluation';out.mkdir(exist_ok=False);rows=dataset(path);predictions=io.read(path.parent/'models/predictions.json')
+    lookup={(p['pair_id'],p['kind']):p for p in predictions};start=perf_counter_ns();guard={};panels=[]
+    with read_only(guard):
+        for keys in ((),('task',),('context',),('boundary',),('task','context'),('task','context','boundary'),('acquisition_action',)):
+            cells=defaultdict(list)
+            for r in rows:cells[tuple(r[k] for k in keys)].append(r)
+            for key,subset in sorted(cells.items(),key=lambda x:str(x[0])):
+                w=weights(subset);metrics={kind:float(sum(float(q)*lookup[(r['pair_id'],kind)]['mse'] for q,r in zip(w,subset))) for kind in model.COMPARATORS}
+                panels.append(dict(axes=list(keys),values=list(key),pairs=len(subset),independent_groups=len({r['group'] for r in subset}),mse=metrics))
+        overall=panels[0];tasks=[p for p in panels if p['axes']==['task']];comparators=('ZERO_EFFECT','GLOBAL_MATRIX','ABSOLUTE_CONTEXT')
+        passed=len(tasks)==3 and all(p['mse']['PAIRED_CONTEXT']<p['mse'][c] for p in [overall,*tasks] for c in comparators)
+        decision=dict(status='DEV_PREDICTIVE_ADVANTAGE' if passed else 'NO_DEV_PREDICTIVE_ADVANTAGE',primary='PAIRED_CONTEXT',comparators=list(comparators),
+            rule='strict weighted MSE below every comparator overall and on each task; no secondary substitution',
+            held_source_groups_only=True,independent_native_or_final_response_qualification=False,task_gain_qualified=False,algorithm_novelty_established=False,
+            no_new_physical_collection_unlocked=True,publication_goal_complete=False)
+        io.write(out/'panels.json',panels);io.write(out/'decision.json',decision)
+    receipt=dict(integrity='FOR_INDEPENDENT_STATISTICS_AUDIT',guard=guard,wall_ns=perf_counter_ns()-start,new_physics=0,new_fits=0,online_LLM_API_calls=0,
+        panels_sha256=io.sha(out/'panels.json'),decision_sha256=io.sha(out/'decision.json'));io.write(out/'receipt.json',receipt);return receipt

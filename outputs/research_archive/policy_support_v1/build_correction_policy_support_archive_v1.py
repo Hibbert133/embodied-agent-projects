@@ -1,0 +1,60 @@
+from pathlib import Path
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects');out=ROOT/'outputs/research_archive/policy_support_v1';out.mkdir(exist_ok=False)
+s=(ROOT/'outputs/research_archive/learned_native_v1/archive_checkpoint.py').read_text('utf8')
+s=s.replace("PARENT='f478a2a73da035d69dd97164b2f1713e85bc4c8a'","PARENT='ea8fe4e9e0601885238d607bf59c0b80ea4e3db0'")
+s=s.replace("SOURCE='2c50164b3a69a044133ef93e51ee280a2a2bf4a7'","SOURCE='6fe16168807e9ae29b1a4fa44c77fadc64a162e4'")
+s=s.replace('outputs/research_archive/transfer_ablation_v1/catalog.json','outputs/research_archive/learned_native_v1/catalog.json')
+s=s.replace('research_archive_build_learned_native_20261027_2c50164','research_archive_build_policy_support_20261027_6fe1616')
+i=s.index("    note=f'''");j=s.index('    extras={',i)
+note="""    note=f'''# 最新存档：廉价固定程序的事实相容性与未知后缀界
+
+来源结果{SOURCE}，冻结769ad2f；父存档{PARENT}，普通快进，无强推/合并。
+上一轮原生资格失败保留：模型MOVE链0，原审计软件失败及其只读补充通过
+均未改写。本轮全部是事后只读描述，不新增环境/重置/控制步/物理帧/
+机器人种子、模型加载/NN或RBF推理/拟合/策略训练或在线LLM。
+
+来源完整54轨迹、18单元、3组；12固定程序=3动作×4原率。主/独立各648
+来源程序尝试，汇总216单元程序。逐条比较所有4维float32字节，完全相同
+才释放该步已有响应；首差之后永不消费反馈，不拼接或伪造未执行状态。
+同单元三来源初始native/Python/RNG witness相同，相容前缀/完整结果一致。
+固定模拟器、相同外生扰动/噪声的确定性一致性是假设，不是实机普遍因果保证。
+
+主参考固定VALIDATE8/.125有15/18完整事实相容支持、3未知。已支持损失973，
+三未知均在组0、最长前缀24，分别保留[25,500]，完整总界[1048,2473]、
+均界[58.222222,137.388889]，相对模型79.722222差界[-21.5,+57.666667]。
+没有证明学习模型优于该廉价程序，也没有证明两者总体等价。边界32/64的
+两组共12单元全部与固定主参考相容；15支持中包含4例决策前成功，不把
+它们称主动适应或新增部署成功。两个CONT/.5和VAL8/.5程序物理等价，
+不是两个独立算法。完整12程序的范围均跨越模型均值，未按结果选最佳。
+
+648来源尝试198全匹配、450首差未知；不是198新成功/450实际失败。未知
+后缀只给[k+1,500]，无结果补零或成功抄用。主旧固定actor与独立动态actor
+强制固定选择、独立读取/struct字节比较/独立PI公式核验全部通过。共享
+TaskMemory和MOVE宏已披露，不称独立物理重模拟或不同机构审计。
+各26822次CPU固定政策查询，合计53644；主释放28348缓存响应，不是新物理
+步。独立26822次PI公式核验。主90.695673秒、独立115.772913秒。
+
+19新数组测试加2183源码绑定旧检查=2202唯一；旧六张量另列，重复开发不
+增数。编译、依赖、全仓秘密与实际索引补充扫描、普通/暂存差异和Git/
+磁盘字节通过。完整648尝试、216界、12程序/3组、未知案例、原始哈希、
+源码、图形和独立复算全发布。新文件均<1MiB，无新大记录需分片。
+
+中文报告reports/correction_policy_support_v1_zh.md。有限界不是置信区间，
+不是新off-policy算法、部署资格、总体收益、新颖性或CCF A完成。MDE/TOM/
+OCCAM/GAUGE/Residual RL/Poke等强参考继续保留；新读PRC、日志replay和
+ICML2024无覆盖部分识别进一步限制贡献主张，未移植其保证或冒称复现。
+下一步仍需可证伪机制、同权限强组合参考和独立自身时序历史，不能换折/
+加样救旧bank0、重开ARX/F20或按旧结果调阈值。完整研究目标仍活跃。
+
+来源树{len(catalog)}文件，发布{sum(r['published'] for r in catalog)}。按已定
+类型/大小规则保留此前选择，旧原始.jsonl.gz和.bin分片/恢复副本不在
+紧凑克隆中，留在本地；不按成败筛除。ARCHIVE_FILE_CATALOG_POLICY_SUPPORT_
+20261027.json登记全部来源对象/大小/SHA，新发布对象实际读取/秘密扫描。
+'''
+"""
+s=s[:i]+note+s[j:]
+s=s.replace('ARCHIVE_FILE_CATALOG_LEARNED_NATIVE_20261027.json','ARCHIVE_FILE_CATALOG_POLICY_SUPPORT_20261027.json')
+s=s.replace('Archive native qualification negative result 2c50164; 54 actual runs, zero LLM','Archive fixed-program support bounds 6fe1616; zero new physics or LLM')
+compile(s,'archive_checkpoint.py','exec')
+with (out/'archive_checkpoint.py').open('x',encoding='utf8',newline='\n') as f:f.write(s)
+print(str(out/'archive_checkpoint.py'))
