@@ -1,0 +1,33 @@
+test_500_step_budget_and_pending_forecast (tests.test_graybox_observer_v1.Graybox) ... ok
+test_affine_row_mapping_is_forward_not_inverse_or_transposed (tests.test_graybox_observer_v1.Graybox) ... ok
+test_covariance_remains_psd_under_repeated_updates (tests.test_graybox_observer_v1.Graybox) ... ok
+test_diagonal_and_cross_axis_parameter_priors_have_correct_orientation (tests.test_graybox_observer_v1.Graybox) ... ok
+test_duplicate_or_skipped_observation_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_empty_training_or_zero_length_segment_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_exact_linear_mean_on_constructed_nominal_model (tests.test_graybox_observer_v1.Graybox) ... ok
+test_finite_grid_recovers_constructed_planted_response (tests.test_graybox_observer_v1.Graybox) ... ok
+test_forecast_branches_do_not_change_actual_filter_state (tests.test_graybox_observer_v1.Graybox) ... ok
+test_future_or_noncontiguous_trace_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_independent_implementation_does_not_call_main_model (tests.test_graybox_observer_v1.Graybox) ... ok
+test_invalid_observation_does_not_partially_update_state (tests.test_graybox_observer_v1.Graybox) ... ok
+test_invalid_parameter_covariance_and_weights_fail_closed (tests.test_graybox_observer_v1.Graybox) ... ok
+test_joint_filter_updates_parameters_from_public_innovation (tests.test_graybox_observer_v1.Graybox) ... ok
+test_model_mismatch_is_not_forced_to_zero_residual (tests.test_graybox_observer_v1.Graybox) ... ok
+test_modified_saved_command_or_state_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_new_plan_before_previous_observation_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_no_fake_earliest_displacement (tests.test_graybox_observer_v1.Graybox) ... ok
+test_noise_clipping_moments_match_independent_quadrature (tests.test_graybox_observer_v1.Graybox) ... ok
+test_noise_must_precede_final_action_clipping (tests.test_graybox_observer_v1.Graybox) ... ok
+test_nominal_declared_training_keeps_affine_parameters_fixed (tests.test_graybox_observer_v1.Graybox) ... ok
+test_parameter_state_cross_covariance_is_retained (tests.test_graybox_observer_v1.Graybox) ... ok
+test_policy_oracle_identity_and_future_fields_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_scalar_prediction_and_conditional_update_match_matrix_form (tests.test_graybox_observer_v1.Graybox) ... ok
+test_snapshot_is_a_copy (tests.test_graybox_observer_v1.Graybox) ... ok
+test_unbounded_nonfloat32_or_boolean_command_rejected (tests.test_graybox_observer_v1.Graybox) ... ok
+test_workspace_clipping_changes_local_jacobian (tests.test_graybox_observer_v1.Graybox) ... ok
+test_zero_noise_and_outside_tail (tests.test_graybox_observer_v1.Graybox) ... ok
+
+----------------------------------------------------------------------
+Ran 28 tests in 1.367s
+
+OK

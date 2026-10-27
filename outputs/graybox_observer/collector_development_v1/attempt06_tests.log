@@ -1,0 +1,35 @@
+test_cal_forecast_matches_separate_scalar_and_batch_reconstruction (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_calibration_is_exact_equal_group_with_stable_ties (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_declared_cost_caps_reconstructed_by_literal_enumeration (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_independent_augmented_fits_for_every_task (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_partial_model_failure_never_substitutes_a_baseline (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_qual_uses_only_locked_process_choice (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_training_all_tasks_and_counted_sources (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_unavailable_population_remains_in_denominator (tests.test_graybox_response_v1.GrayboxLearningContracts) ... ok
+test_arx2_realization_includes_forward_cross_axis_transform_and_bias (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_arx_bank_rejects_truth_and_invalid_covariance (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_arx_does_not_invent_two_earliest_displacements (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_arx_forecast_uses_all_actual_history_without_changing_bank (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_complete_history_keeps_real_initial_observation (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_future_or_private_data_is_rejected (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_initial_and_final_history_boundary_must_match (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_missing_initial_history_is_rejected (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_no_post_terminal_or_unbounded_packet (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_unchanged_reference_projection_is_exact_last16 (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_working_graybox_mean_has_linear_arx2_realization (tests.test_graybox_response_v1.GrayboxResponse) ... ok
+test_both_saved_population_statistics_reconstruct_without_main_scoring (tests.test_graybox_response_v1.GrayboxSavedStatistics) ... ok
+test_short_and_per_method_failures_keep_distinct_reasons (tests.test_graybox_response_v1.GrayboxSavedStatistics) ... ok
+test_independent_audit_disables_production_prediction_and_readers (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_independent_query_rebuilds_real_initial_and_all_actual_history (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_lock_rejects_invalid_cal_and_any_qual_attempt (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_no_offline_bank_fit_allowed_during_collection (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_nominal_literal_audit_rejects_mutated_saved_command (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_ordered_pipeline_has_nominal_and_independent_gates_before_qual (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_qual_model_digest_includes_locked_choice_and_leaves_training_intact (tests.test_graybox_response_v1.GrayboxStageContracts) ... ok
+test_nominal_early_success_keeps_actual_short_length (tests.test_graybox_response_v1.NominalHostContracts) ... ok
+test_nominal_host_completes_without_a_fictional_zero_role (tests.test_graybox_response_v1.NominalHostContracts) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 14.371s
+
+OK

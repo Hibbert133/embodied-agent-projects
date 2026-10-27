@@ -1,0 +1,79 @@
+{
+  "tests": 28,
+  "unique_test_ids": [
+    "tests.test_graybox_observer_v1.Graybox.test_500_step_budget_and_pending_forecast",
+    "tests.test_graybox_observer_v1.Graybox.test_affine_row_mapping_is_forward_not_inverse_or_transposed",
+    "tests.test_graybox_observer_v1.Graybox.test_covariance_remains_psd_under_repeated_updates",
+    "tests.test_graybox_observer_v1.Graybox.test_diagonal_and_cross_axis_parameter_priors_have_correct_orientation",
+    "tests.test_graybox_observer_v1.Graybox.test_duplicate_or_skipped_observation_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_empty_training_or_zero_length_segment_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_exact_linear_mean_on_constructed_nominal_model",
+    "tests.test_graybox_observer_v1.Graybox.test_finite_grid_recovers_constructed_planted_response",
+    "tests.test_graybox_observer_v1.Graybox.test_forecast_branches_do_not_change_actual_filter_state",
+    "tests.test_graybox_observer_v1.Graybox.test_future_or_noncontiguous_trace_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_independent_implementation_does_not_call_main_model",
+    "tests.test_graybox_observer_v1.Graybox.test_invalid_observation_does_not_partially_update_state",
+    "tests.test_graybox_observer_v1.Graybox.test_invalid_parameter_covariance_and_weights_fail_closed",
+    "tests.test_graybox_observer_v1.Graybox.test_joint_filter_updates_parameters_from_public_innovation",
+    "tests.test_graybox_observer_v1.Graybox.test_model_mismatch_is_not_forced_to_zero_residual",
+    "tests.test_graybox_observer_v1.Graybox.test_modified_saved_command_or_state_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_new_plan_before_previous_observation_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_no_fake_earliest_displacement",
+    "tests.test_graybox_observer_v1.Graybox.test_noise_clipping_moments_match_independent_quadrature",
+    "tests.test_graybox_observer_v1.Graybox.test_noise_must_precede_final_action_clipping",
+    "tests.test_graybox_observer_v1.Graybox.test_nominal_declared_training_keeps_affine_parameters_fixed",
+    "tests.test_graybox_observer_v1.Graybox.test_parameter_state_cross_covariance_is_retained",
+    "tests.test_graybox_observer_v1.Graybox.test_policy_oracle_identity_and_future_fields_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_scalar_prediction_and_conditional_update_match_matrix_form",
+    "tests.test_graybox_observer_v1.Graybox.test_snapshot_is_a_copy",
+    "tests.test_graybox_observer_v1.Graybox.test_unbounded_nonfloat32_or_boolean_command_rejected",
+    "tests.test_graybox_observer_v1.Graybox.test_workspace_clipping_changes_local_jacobian",
+    "tests.test_graybox_observer_v1.Graybox.test_zero_noise_and_outside_tail"
+  ],
+  "success": true,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "constructed_numerical_counts": {
+    "main_axis_predict_attempts": 1863,
+    "covariance_eigenvalue_checks": 3531,
+    "main_gaussian_moment_attempts": 1874,
+    "main_axis_observe_attempts": 1588,
+    "constructed_grid_fit_attempts": 4,
+    "constructed_grid_fits_completed": 1,
+    "constructed_grid_candidates": 9,
+    "independent_axis_predictions": 49,
+    "independent_moment_calls": 57,
+    "independent_quadrature_calls": 169,
+    "independent_axis_updates": 48
+  },
+  "wall_ns": 4246456600,
+  "source_sha256": {
+    "src/probe/graybox_observer_v1.py": "96fdb21869a9e8e55dccfc52277160603778694d5c2cf2cc02e7f45dcb7c7c3a",
+    "src/analysis/graybox_observer_independent_v1.py": "e29f30edf98ac6505502f0d5b332ea0c755680e72d982c380630e94c3c9c593b",
+    "tests/test_graybox_observer_v1.py": "2436195909939093945f14d69e3e4e90e1fe0b5a8e7edeb7c63c868a88fe3d00",
+    "docs/research/graybox_observer_reference_v1_zh.md": "f0e773067ab5dae0aa88baf69fc2bc1fc087ff17e8db0aa6a2db39fc2f657435",
+    "scripts/validate_graybox_observer_array_v1.py": "8d2441aeb2414f89178619c168ce680671352356c62f34d133922261172f7be2"
+  },
+  "physical_or_scientific_training_samples": 0
+}
