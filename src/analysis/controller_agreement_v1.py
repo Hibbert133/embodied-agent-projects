@@ -1,0 +1,97 @@
+"""Censored public-controller replay. Never use feedback after first disagreement.
+
+This is a feasibility instrument, not an acquisition rule or an OPE estimator.
+The recorded policy action is reusable only while the factual history agrees.
+"""
+from copy import deepcopy
+import numpy as np
+from src.probe.task_memory_option_v1 import TaskMemory, TaskMemoryMachine
+from src.probe.physical_reprobe_v1 import StepReceipt
+from src.probe.continuous import StepObservation
+from src.analysis.capsule_record_json_v2 import normalize
+
+RATES = (.125, .5, 2., 8.)
+FIELDS = {'at_calls', 'before', 'command', 'raw_policy', 'after'}
+
+
+def require(ok, message):
+    if not ok:
+        raise ValueError(message)
+
+
+def ended(current, step):
+    return step == 500 or any(current[k] for k in ('success', 'terminated', 'truncated'))
+
+
+def replay(entry, rows, receiver_rate):
+    """Only a factual prefix is consumed; no policy/environment/model capability.
+
+    At the differing command, neither its response nor the next row is read.
+    A terminal match is a pathwise certificate under the *same* physical/noise
+    coupling. It is not an unbiased population value or an online forecast.
+    """
+    require(type(receiver_rate) in (int, float) and receiver_rate in RATES, 'registered receiver rate')
+    memory = TaskMemory.from_dict(deepcopy(entry))
+    require(memory.saved_controller == ('UNCORRECTED', ((1., 0.), (0., 1.)), (0., 0., 0., 0.)), 'this study uses identity base only')
+    require(not ended(entry['current'], entry['completed_steps']), 'live post-acquisition entry')
+    machine = TaskMemoryMachine(memory)
+    machine.set_rate(receiver_rate, memory_mode='CARRY')
+    trace = []
+    for row in rows:
+        require(type(row) is dict and set(row) == FIELDS, 'public row only; no future/private extras')
+        m = machine.memory
+        require(not ended(m.to_dict()['current'], m.completed_steps), 'row after terminal/budget')
+        require(row['at_calls'] == m.completed_steps and row['before'] == normalize(m.to_dict()['current']), 'nonconsecutive/stale factual prefix')
+        raw = np.asarray(row['raw_policy'])
+        require(raw.shape == (4,) and raw.dtype.kind in ('f', 'i') and np.isfinite(raw).all()
+            and np.array_equal(raw.astype(float), raw.astype(np.float32).astype(float)), 'saved float32 raw policy required')
+        plan = machine.plan(row['raw_policy'])
+        numbers = plan['pi_plan']['numbers']
+        sent = numbers['sent_command']
+        matches = sent == row['command']
+        trace.append(dict(at_calls=m.completed_steps, raw_policy=list(row['raw_policy']),
+            integral_before=list(m.integral_xy), proposed_command=sent, factual_command=list(row['command']),
+            matches=matches, integral_after_receipt=numbers['integral_after_receipt'] if matches else None))
+        if not matches:
+            return dict(status='FIRST_DISAGREEMENT', matched_steps=len(trace)-1,
+                first_disagreement_at_calls=m.completed_steps, trace=trace)
+        machine.commit(plan, StepReceipt(StepObservation(**row['after']), m.completed_steps + 1))
+    m = machine.memory
+    terminal = ended(m.to_dict()['current'], m.completed_steps)
+    return dict(status='MATCHED_TO_TERMINAL' if terminal else 'RIGHT_CENSORED_RECORD',
+        matched_steps=len(trace), first_disagreement_at_calls=None, trace=trace)
+
+
+def loss_interval(result, entry_step, factual_loss):
+    """A deliberately loose pathwise bound; no model-based tail imputation."""
+    require(result['status'] in ('FIRST_DISAGREEMENT', 'MATCHED_TO_TERMINAL', 'RIGHT_CENSORED_RECORD'), 'known censoring status')
+    require(type(entry_step) is int and 0 <= entry_step < 500 and entry_step + result['matched_steps'] <= 500, 'causal prefix count')
+    require(type(factual_loss) is int and 1 <= factual_loss <= 500, 'full cutoff loss')
+    if result['status'] == 'MATCHED_TO_TERMINAL':
+        return [0, 0]
+    # The target has not succeeded within the matched receipts. Its earliest
+    # possible success is the next physical receipt, including the divergent one.
+    return [entry_step + result['matched_steps'] + 1 - factual_loss, 500 - factual_loss]
+
+
+def aggregate(rows):
+    """One descriptive vote per independent source group, never per time step."""
+    require(rows, 'nonempty registered panel')
+    groups = sorted({r['group'] for r in rows})
+    group_values = []
+    for group in groups:
+        data = [r for r in rows if r['group'] == group]
+        live = [r for r in data if r['missing_reason'] is None]
+        group_values.append(dict(group=group, allocated=len(data), live=len(live),
+            live_fraction=len(live)/len(data),
+            matched_ge1_full=sum(r['missing_reason'] is None and r['matched_steps'] >= 1 for r in data)/len(data),
+            matched_ge8_full=sum(r['missing_reason'] is None and r['matched_steps'] >= 8 for r in data)/len(data),
+            terminal_certificate_full=sum(r.get('status') == 'MATCHED_TO_TERMINAL' for r in data)/len(data),
+            live_mean_matched=None if not live else sum(r['matched_steps'] for r in live)/len(live),
+            live_mean_interval_width=None if not live else sum(r['loss_delta_interval'][1]-r['loss_delta_interval'][0] for r in live)/len(live)))
+    metrics = {}
+    for name in ('live_fraction', 'matched_ge1_full', 'matched_ge8_full', 'terminal_certificate_full', 'live_mean_matched', 'live_mean_interval_width'):
+        values = [r[name] for r in group_values if r[name] is not None]
+        metrics[name] = dict(mean=None if not values else sum(values)/len(values), contributing_groups=len(values))
+    return dict(allocated_pairs=len(rows), live_pairs=sum(r['missing_reason'] is None for r in rows), independent_groups=len(groups),
+        missing_pairs=sum(r['missing_reason'] is not None for r in rows), metrics=metrics, group_values=group_values)

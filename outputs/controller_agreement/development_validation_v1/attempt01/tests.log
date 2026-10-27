@@ -1,0 +1,157 @@
+test_actual_paired_divergence_and_corruption (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_conservative_loss_interval (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_deadline_is_terminal (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_disagreement_does_not_read_its_response (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_disagreement_does_not_read_next_row (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_environment_termination_is_terminal (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_equal_group_weight_not_time_steps_or_rows (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_first_command_agreement_not_full_equivalence (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_full_terminal_match (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_independent_formula_does_not_call_main (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_invalid_rates_and_nonidentity_base_rejected (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_known_pi_numbers (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_literal_agrees_for_all_tasks_rates (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_no_adoption_outcome_check (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_no_step_after_success (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_non_float32_policy_is_not_silently_changed (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_short_and_empty_record_are_censored (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ERROR
+test_stale_and_skipped_rows_rejected (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_unknown_private_and_future_fields_rejected (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+test_zero_denominators_not_filled (tests.test_controller_agreement_v1.ControllerAgreementTests) ... ok
+
+======================================================================
+ERROR: test_actual_paired_divergence_and_corruption (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 122, in test_actual_paired_divergence_and_corruption
+    prediction=main.replay(entry(),a,8.); b=deepcopy(a); b[1]['command']=prediction['trace'][-1]['proposed_command']
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_conservative_loss_interval (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 103, in test_conservative_loss_interval
+    result=main.replay(entry(),rows([[4.,4.,0.,1.],[.1,.1,0.,1.]]),8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_deadline_is_terminal (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 67, in test_deadline_is_terminal
+    result=main.replay(entry(499),rows([[4.,4.,0.,1.]],start=499),8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_disagreement_does_not_read_its_response (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 47, in test_disagreement_does_not_read_its_response
+    result=main.replay(entry(),data,8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_disagreement_does_not_read_next_row (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 55, in test_disagreement_does_not_read_next_row
+    self.assertEqual(main.replay(entry(),records(),8.)['status'],'FIRST_DISAGREEMENT')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_environment_termination_is_terminal (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 63, in test_environment_termination_is_terminal
+    result=main.replay(entry(),rows([[4.,4.,0.,1.]],final=current(terminated=True)),8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_first_command_agreement_not_full_equivalence (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 41, in test_first_command_agreement_not_full_equivalence
+    result=main.replay(entry(),rows([[4.,4.,0.,1.],[.1,.1,0.,1.]]),8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_full_terminal_match (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 58, in test_full_terminal_match
+    result=main.replay(entry(),rows([[4.,4.,0.,1.]],final=current(success=True)),8.)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_known_pi_numbers (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 31, in test_known_pi_numbers
+    self.assertEqual(main.replay(entry(), data, .5)['trace'][0]['proposed_command'], [float(np.float32(.25625)),float(np.float32(-.25625)),0.,1.])
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_literal_agrees_for_all_tasks_rates (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 38, in test_literal_agrees_for_all_tasks_rates
+    self.assertEqual(main.replay(e,data,rate), literal.reconstruct(e,data,rate))
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+======================================================================
+ERROR: test_short_and_empty_record_are_censored (tests.test_controller_agreement_v1.ControllerAgreementTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\tests\test_controller_agreement_v1.py", line 72, in test_short_and_empty_record_are_censored
+    self.assertEqual(main.replay(entry(),data,8.)['status'],'RIGHT_CENSORED_RECORD')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 43, in replay
+    require(row['at_calls'] == m.completed_steps and row['before'] == m.to_dict()['current'], 'nonconsecutive/stale factual prefix')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\controller_agreement_v1.py", line 18, in require
+    raise ValueError(message)
+ValueError: nonconsecutive/stale factual prefix
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.013s
+
+FAILED (errors=11)

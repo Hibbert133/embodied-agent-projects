@@ -1,0 +1,59 @@
+{
+  "tests": 20,
+  "ids": [
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_actual_paired_divergence_and_corruption",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_conservative_loss_interval",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_deadline_is_terminal",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_disagreement_does_not_read_its_response",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_disagreement_does_not_read_next_row",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_environment_termination_is_terminal",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_equal_group_weight_not_time_steps_or_rows",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_first_command_agreement_not_full_equivalence",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_full_terminal_match",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_independent_formula_does_not_call_main",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_invalid_rates_and_nonidentity_base_rejected",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_known_pi_numbers",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_literal_agrees_for_all_tasks_rates",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_no_adoption_outcome_check",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_no_step_after_success",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_non_float32_policy_is_not_silently_changed",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_short_and_empty_record_are_censored",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_stale_and_skipped_rows_rejected",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_unknown_private_and_future_fields_rejected",
+    "tests.test_controller_agreement_v1.ControllerAgreementTests.test_zero_denominators_not_filled"
+  ],
+  "success": false,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_sha256": {
+    "src/analysis/controller_agreement_v1.py": "ad37e3bb971710ad2bef40f0b89c6c1c5dd5a1642399847bf3204cff1d1717c9",
+    "src/analysis/controller_agreement_independent_v1.py": "5a806b901f1171ece027befc666a0d8ca3d819d20d7c9c6e3370c33914f6bd0b",
+    "tests/test_controller_agreement_v1.py": "af707fdb3ed6db032c687705c4c67561776ec4b12e828bd17345ffdd7642c57f",
+    "scripts/run_controller_agreement_v1.py": "bcc9a485867a282c6ee23b57f82964e2a6162fd86588be034939e917092d9736",
+    "scripts/validate_controller_agreement_freeze_v1.py": "7d067032b15318c98aeb1b32138aeaa494c1c70f14fb897728db2389923064f1",
+    "docs/protocols/controller_agreement_v1_zh.md": "702402b125c53cc038d64be220371b5aa27da4950f263f8bd28633b37c5a660e",
+    "docs/research/controller_agreement_decision_v1_zh.md": "06513e092ea3ac0b1cbb1c7851f6846a13747ac1ea798b80bd9cbed161ac1d0c",
+    "configs/movement_task/controller_agreement_v1.json": "dbcca46532fdf4e2aac6c0c11dabc8f040c464319d4305f185d8049e67663ea7"
+  }
+}

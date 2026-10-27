@@ -1,0 +1,70 @@
+{
+  "protocol": "CONTROLLER_AGREEMENT_FEASIBILITY_V1",
+  "classification": "POST_HOC_DESCRIPTIVE_TRAIN_ONLY",
+  "source_git_commit": "0272551690b39902cdd275ac6f4f1aa0ae927f4a",
+  "config": {
+    "protocol": "CONTROLLER_AGREEMENT_FEASIBILITY_V1",
+    "classification": "POST_HOC_DESCRIPTIVE_TRAIN_ONLY",
+    "source": {
+      "source_run": "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2",
+      "source_manifest_id": "1509f474dc7c84de0081b6aa66124027b2502128d42e44fb9410b202a538825a",
+      "source_sha256": {
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/manifest.json": "b0fda6e14035c66db1f33f1024a067db224889aa56cc5998bb11f8ec36e4aa82",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/audit.json": "d7dbbf9c4c19e8ee4d24c5e7eca2830b4c886f6f5e831298f035bf9ded641eb2",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/completion.json": "80785da1cb5a49214d445bdca80773fa5319cf6eb335d73b8b6a7334cecb8f7d",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/cases.jsonl.gz": "151c094e13d7b2c10a7fc0e0bbff0aba433bbd1e919b3b64662ce0a47ce8527b",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/events.jsonl.gz": "76145aab01324bb50cfe75b4f9284fd55980dc433f825b99bf2b0a642abf7e51",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/status.json": "a6d85e5b01c9a6576936a52c869aa4e4c737910c14de145966f593de407f1cd0",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/summary.json": "e954b74ccde7c6428d0955febb50a22c2c0c163b3bfa2b551593eb30eb816c55",
+        "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/train/witnesses.jsonl.gz": "b7661bc22a3703c58a74e5ac00a3b570ca789a268ec37a2b369ed35e19626320"
+      },
+      "source_split": "TRAIN",
+      "historical_cost": {
+        "executions": 648,
+        "control_steps": 77563,
+        "all_resets": 33048,
+        "physical_frames": 16911815
+      }
+    },
+    "source_cases": 648,
+    "ordered_pairs": 1944,
+    "self_replays": 648,
+    "independent_groups": 9,
+    "receiver_rates": [
+      0.125,
+      0.5,
+      2.0,
+      8.0
+    ],
+    "exact_float32_send_equality": true,
+    "stop_before_first_different_response": true,
+    "thresholds_for_descriptive_columns_only": [
+      1,
+      8
+    ],
+    "new_environment_creations": 0,
+    "new_resets": 0,
+    "new_control_steps": 0,
+    "new_physical_frames": 0,
+    "new_policy_queries": 0,
+    "new_model_fits": 0,
+    "online_LLM_API_calls": 0,
+    "main_command_cap": 2000000,
+    "independent_command_cap": 2000000,
+    "new_seed_allocations": 0,
+    "CAL_TEST_content_used": false,
+    "acquisition_rule_developed": false
+  },
+  "source_sha256": {
+    "src/analysis/controller_agreement_v1.py": "f0e26dfc6e1e76d6947ae99a8a6bc69573b782581863857d04fc92404826963a",
+    "src/analysis/controller_agreement_independent_v1.py": "5a806b901f1171ece027befc666a0d8ca3d819d20d7c9c6e3370c33914f6bd0b",
+    "tests/test_controller_agreement_v1.py": "af707fdb3ed6db032c687705c4c67561776ec4b12e828bd17345ffdd7642c57f",
+    "scripts/run_controller_agreement_v1.py": "bcc9a485867a282c6ee23b57f82964e2a6162fd86588be034939e917092d9736",
+    "scripts/validate_controller_agreement_freeze_v1.py": "03336658d44c44208915f84d10634314492283e483fe1455135874a12553190d",
+    "docs/protocols/controller_agreement_v1_zh.md": "702402b125c53cc038d64be220371b5aa27da4950f263f8bd28633b37c5a660e",
+    "docs/research/controller_agreement_decision_v1_zh.md": "06513e092ea3ac0b1cbb1c7851f6846a13747ac1ea798b80bd9cbed161ac1d0c",
+    "configs/movement_task/controller_agreement_v1.json": "dbcca46532fdf4e2aac6c0c11dabc8f040c464319d4305f185d8049e67663ea7"
+  },
+  "started_ns": 1082378357813800,
+  "manifest_id": "cd0202645635c08e3f8afa64c3947107a05ced8feb9ddfbef38fd24c72139e7f"
+}
