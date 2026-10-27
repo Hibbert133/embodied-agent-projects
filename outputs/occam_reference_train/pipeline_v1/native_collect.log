@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\scripts\run_occam_reference_train_v1.py", line 42, in <module>
+    if __name__=='__main__':main()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\scripts\run_occam_reference_train_v1.py", line 16, in main
+    r=str(collect(v.manifest,v.phase))
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_reference_train_collect_v1.py", line 58, in collect
+    if failure is not None:raise RuntimeError('One-shot native stopped; preserve partial '+str(failure))
+RuntimeError: One-shot native stopped; preserve partial {'type': 'CaseFailure', 'message': "{'type': 'ValueError', 'message': 'case ownership override'}"}

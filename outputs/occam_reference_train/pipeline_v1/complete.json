@@ -1,0 +1,31 @@
+{
+  "integrity": "FAILED_PARTIAL",
+  "pid": 13308,
+  "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train\\development_v1\\occam_reference_train_20261027T225148Z_f77e36ba63d1\\manifest.json",
+  "processes": [
+    {
+      "label": "native_collect",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/run_occam_reference_train_v1.py",
+        "collect",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train\\development_v1\\occam_reference_train_20261027T225148Z_f77e36ba63d1\\manifest.json",
+        "--phase",
+        "NATIVE"
+      ],
+      "returncode": 1,
+      "wall_ns": 6021764700
+    }
+  ],
+  "failure": {
+    "type": "ValueError",
+    "message": "one-shot child failed native_collect",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_occam_reference_train_pipeline_v1.py\", line 25, in main\n    for operation in ('collect','audit'):run(phase.lower()+'_'+operation,[sys.executable,'-u','scripts/run_occam_reference_train_v1.py',operation,'--manifest',str(manifest),'--phase',phase])\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_occam_reference_train_pipeline_v1.py\", line 21, in run\n    a.io.require(code==0,'one-shot child failed '+label)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 40, in require\n    if not ok:raise ValueError(message)\nValueError: one-shot child failed native_collect\n"
+  },
+  "scientific_CAL_QUAL_opened": false,
+  "online_LLM_API_calls": 0,
+  "wall_ns": 39933633300,
+  "publication_goal_complete": false
+}

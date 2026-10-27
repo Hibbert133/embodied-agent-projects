@@ -1,0 +1,86 @@
+{
+  "experiment_run_id": "occam_reference_train_20261027T225148Z_f77e36ba63d1",
+  "manifest_id": "b95048a28392cae37c1a986a500c3c177fc57d3d4d31f1e5c1e7773db42e812e",
+  "source_git_commit": "f77e36ba63d1335d2256482f9039fb7096efe1d0",
+  "phase": "NATIVE",
+  "group": 0,
+  "task": "push-v3",
+  "seed": 166000,
+  "context": "UNCHANGED",
+  "planned_boundary": 16,
+  "acquisition_action": "CONTINUE",
+  "behavior": "RANDOM_WINDOW",
+  "completed": false,
+  "error": {
+    "type": "ValueError",
+    "message": "case ownership override"
+  },
+  "close_error": null,
+  "environment_closed": false,
+  "ledger_before": {
+    "counts": {},
+    "by_phase": {}
+  },
+  "initial_fault_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "destination_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "state_witness_refs": [],
+  "ledger_before_close": {
+    "counts": {
+      "reset_attempts": 1
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 1
+      }
+    }
+  },
+  "ledger_after_close": {
+    "counts": {
+      "reset_attempts": 1
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 1
+      }
+    }
+  },
+  "wall_ns": 234483200
+}
