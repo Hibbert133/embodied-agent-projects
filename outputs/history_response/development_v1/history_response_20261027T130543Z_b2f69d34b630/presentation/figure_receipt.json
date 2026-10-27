@@ -1,0 +1,117 @@
+{
+  "status": "RENDERED_PENDING_VISUAL_CHECK",
+  "plotted_saved_panels": [
+    {
+      "field": "mean_endpoint_loss_m",
+      "methods": [
+        "ZERO",
+        "INSTANT",
+        "FIR",
+        "STATE_KERNEL",
+        "HISTORY_NN",
+        "HISTORY_KERNEL"
+      ],
+      "values_mm": [
+        161.22422049074075,
+        155.7498850478395,
+        153.62021475,
+        155.0021540478395,
+        154.3641102361111,
+        154.1356716064815
+      ]
+    },
+    {
+      "field": "available_only_mean_endpoint_loss_m",
+      "methods": [
+        "ZERO",
+        "INSTANT",
+        "FIR",
+        "STATE_KERNEL",
+        "HISTORY_NN",
+        "HISTORY_KERNEL"
+      ],
+      "values_mm": [
+        11.561989400837742,
+        5.235163689947089,
+        2.7432014392416226,
+        4.338277423611111,
+        3.6881122609788357,
+        3.415618195502646
+      ]
+    }
+  ],
+  "plotted_saved_contrasts": [
+    {
+      "baseline": "ZERO",
+      "mean_mm": -7.088548884259259,
+      "bootstrap95_mm": [
+        -9.243644487654322,
+        -5.1968279717592605
+      ]
+    },
+    {
+      "baseline": "INSTANT",
+      "mean_mm": -1.6142134413580247,
+      "bootstrap95_mm": [
+        -1.8650214182098768,
+        -1.3459667237654322
+      ]
+    },
+    {
+      "baseline": "FIR",
+      "mean_mm": 0.5154568564814815,
+      "bootstrap95_mm": [
+        0.18151609205246916,
+        0.8445885956790122
+      ]
+    },
+    {
+      "baseline": "STATE_KERNEL",
+      "mean_mm": -0.8664824413580247,
+      "bootstrap95_mm": [
+        -1.6686090299768521,
+        -0.35109164506172835
+      ]
+    },
+    {
+      "baseline": "HISTORY_NN",
+      "mean_mm": -0.22843862962962963,
+      "bootstrap95_mm": [
+        -0.5877474197530864,
+        0.14861628858024686
+      ]
+    }
+  ],
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_panels_sha256": "a8e9778c225ab23322beff56e767a3b7314f277ffb8bdf80fe63a972b49adc64",
+  "source_result_sha256": "5186dc0c5ad0aadcb5bcc9294d9fc455aa7140eb06a3e489487589f3bec9b940",
+  "output_sha256": {
+    "qualification.png": "3eb45d68b93ca50f9efdc0274b7a70de022dd10e3c81b55e50e2b58506d049d8",
+    "qualification.svg": "348582dd0de68d5e6e6635b656b0fd702cfee781ed7972cbddc37f88d4a4e5c0"
+  },
+  "new_environment_steps": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0
+}

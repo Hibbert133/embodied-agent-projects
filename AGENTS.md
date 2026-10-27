@@ -2089,3 +2089,24 @@ prediction remain direct neighbors. A1 success is not novelty; A1 failure closes
 this predictor without TEST-based gates. Full acquisition/acceptance mechanisms,
 strong controls, independent own-history complete-cost task superiority and
 ablations remain necessary for the unachieved CCF A goal.
+
+## Public-history response qualification successor
+
+The accepted A direction next follows docs/protocols/history_response_v1_zh.md
+on codex/history-conditioned-response-v1. The previous paired-packet FIR remains
+CLOSED_NEGATIVE; packet_structure is post-hoc only. Do not retune either source.
+Before new sampling, freeze collector, strict public history features, all six
+same-data models, independent augmented-LS/eigen/record/statistics audits, tests,
+seed inventory and complete 864-run cost cap. Fresh112000--112999 is reserved;
+source physics/programs and continuous-state/RNG/clock rules remain unchanged.
+HISTORY_KERNEL is preassigned, CAL does not select models or tune thresholds.
+Qualification requires whole-group interval upper<0 versus ZERO, INSTANT, FIR,
+STATE_KERNEL and HISTORY_NN, plus all task/H8/H16 point and availability gates.
+Public state41 versus history153 and nearest8 local reweighting are standard
+references, not algorithmic novelty or proof that public history is informative.
+Caps80640 control steps,44064 all resets,22435200 physical frames; training
+solve<=120, independent augmented LS<=114 and six symmetric eigendecompositions.
+All failures/missingness stay; no retry, extension, inverse/model control or
+online LLM API. A passed component is not complete-task benefit, an acquisition
+mechanism, safety or CCF A. New full-task own-history gains, strong same-privilege
+references, specific prior-art distinction and ablations remain required.

@@ -1,0 +1,3005 @@
+{
+  "integrity": "PASSED_NO_COLLISION",
+  "checked_json_sources": 297,
+  "range_occurrences_checked": 333,
+  "collisions": [],
+  "original_preflight_sha256": "e90ce42628fc210c955363d7fd95da18b4262db67a7e31c8356deab2c9b021c8",
+  "source_sha256": "f8382373d329b65e79539d72a09ca7d3cfce3951582cacd4299d92d439db2081",
+  "checked_sources": [
+    "configs/acquisition_value/development_v1.json",
+    "configs/action_response/development_v1.json",
+    "configs/autoresearch/candidate_micro_evidence_development_v1.json",
+    "configs/autoresearch/candidate_repeatability_decision_change_audit_v1.json",
+    "configs/autoresearch/candidate_repeatability_evidence_v1.json",
+    "configs/autoresearch/default_recovery_config.json",
+    "configs/autoresearch/heldout_allocation_v1.json",
+    "configs/autoresearch/heldout_intervention_v1.json",
+    "configs/autoresearch/intervention_identifiability_development_v1.json",
+    "configs/autoresearch/intervention_identifiability_development_v2.json",
+    "configs/autoresearch/noise_intervention_utility_coverage_v1.json",
+    "configs/autoresearch/noise_intervention_utility_development_v1.json",
+    "configs/autoresearch/noise_repeatability_confirmatory_source_v1.json",
+    "configs/autoresearch/noise_repeatability_source_v1.json",
+    "configs/autoresearch/packet_structure_diagnosis_v1.json",
+    "configs/autoresearch/recovery_policy_r1_c1.json",
+    "configs/autoresearch/staggered_selective_scope_v1.json",
+    "configs/autoresearch/task_value_learner_development_v1.json",
+    "configs/benchmarks/bias_noise_ambiguity_heldout_v1.json",
+    "configs/benchmarks/bias_noise_ambiguity_tuning_v1.json",
+    "configs/benchmarks/phase_conditioned_evidence_development_v1.json",
+    "configs/benchmarks/temporal_evidence_development_v1.json",
+    "configs/cache_continuation_alignment/development_v1.json",
+    "configs/calibrated_tasks/development_v1.json",
+    "configs/campaigns/active_evidence_glm52_dev5.json",
+    "configs/campaigns/active_evidence_glm52_pilot.json",
+    "configs/campaigns/active_evidence_smoke.json",
+    "configs/campaigns/active_evidence_threshold_heldout10.json",
+    "configs/chronological_cache_reference/development_v1.json",
+    "configs/cold_start_evidence/qualification_v1.json",
+    "configs/cold_start_task_bridge/development_v1.json",
+    "configs/cold_start_task_bridge/planning_v1.json",
+    "configs/conditional_continuation/development_v1.json",
+    "configs/continuation_selector/development_v1.json",
+    "configs/continuous_probe/development_v1.json",
+    "configs/controller_tail_value/development_v1.json",
+    "configs/cross_task_cache_validity/development_v1.json",
+    "configs/cross_task_cache_validity/development_v2.json",
+    "configs/delayed_intervention/qualification_v1.json",
+    "configs/delayed_intervention/qualification_v2.json",
+    "configs/delayed_switch_effects/development_v1.json",
+    "configs/early_evidence/development_v1.json",
+    "configs/evidence_persistence/development_v1.json",
+    "configs/evidence_refresh/development_v1.json",
+    "configs/executable_support/development_v1.json",
+    "configs/forward_operator/task_utility_v1.json",
+    "configs/forward_prediction/baselines_v1.json",
+    "configs/frame_evidence/development_v1.json",
+    "configs/integral_reprobe/qualification_v1.json",
+    "configs/inverse_error_attribution/development_v1.json",
+    "configs/local_reprobe/qualification_v1.json",
+    "configs/movement_task/acquisition_anchor_diagnosis_v1.json",
+    "configs/movement_task/acquisition_reference_qualification_v1.json",
+    "configs/movement_task/acquisition_support_audit_v1.json",
+    "configs/movement_task/command_contrast_qualification_v1.json",
+    "configs/movement_task/command_target_diagnostic_reader_v2.json",
+    "configs/movement_task/command_target_diagnostic_v1.json",
+    "configs/movement_task/correction_effect_horizon_v1.json",
+    "configs/movement_task/correction_effect_learning_v1.json",
+    "configs/movement_task/correction_policy_support_v1.json",
+    "configs/movement_task/correction_program_support_v1.json",
+    "configs/movement_task/correction_scope_development_v1.json",
+    "configs/movement_task/correction_scope_risk_reference_v1.json",
+    "configs/movement_task/correction_trace_value_v1.json",
+    "configs/movement_task/correction_transfer_ablation_v1.json",
+    "configs/movement_task/correction_transfer_learning_v1.json",
+    "configs/movement_task/development_v1.json",
+    "configs/movement_task/diagnostic_v1.json",
+    "configs/movement_task/history_response_failure_analysis_v1.json",
+    "configs/movement_task/information_release_learning_v1.json",
+    "configs/movement_task/information_release_prototype_v1.json",
+    "configs/movement_task/information_scope_reference_v1.json",
+    "configs/movement_task/latent_response_diagnosis_v1.json",
+    "configs/movement_task/latent_response_qualification_v1.json",
+    "configs/movement_task/learned_acquisition_native_v1.json",
+    "configs/movement_task/linear_command_preflight_v1.json",
+    "configs/movement_task/memory_acquisition_native_v1.json",
+    "configs/movement_task/memory_reset_qualification_v1.json",
+    "configs/movement_task/memory_terminal_reference_v1.json",
+    "configs/movement_task/native_command_witness_v1.json",
+    "configs/movement_task/observable_history_transfer_design_v1.json",
+    "configs/movement_task/observable_history_transfer_execution_v1.json",
+    "configs/movement_task/paired_packet_response_v1.json",
+    "configs/movement_task/passive_continuation_support_v1.json",
+    "configs/movement_task/planning_v1.json",
+    "configs/movement_task/response_action_execution_v1.json",
+    "configs/movement_task/response_model_qualification_design_v1.json",
+    "configs/movement_task/response_model_qualification_execution_v1.json",
+    "configs/movement_task/response_qualification_failure_analysis_v1.json",
+    "configs/movement_task/response_training_controls_v1.json",
+    "configs/movement_task/state_coupled_actuation_design_v1.json",
+    "configs/movement_task/task_passive_execution_v1.json",
+    "configs/nominal_observer/qualification_v1.json",
+    "configs/online_calibrated_agent/development_v1.json",
+    "configs/paired_probe_effects/development_v1.json",
+    "configs/passive_supported_reference/qualification_v1.json",
+    "configs/physical_reprobe/qualification_v1.json",
+    "configs/point8_baseline/development_v1.json",
+    "configs/post_probe_identity/development_v1.json",
+    "configs/probe_support/development_v1.json",
+    "configs/probemem_acr/conditional_retry_identifiability_audit_v1.json",
+    "configs/probemem_acr/contextual_utility_development_v1.json",
+    "configs/probemem_acr/continuous_feedback_development_v1.json",
+    "configs/probemem_acr/development_v1.json",
+    "configs/probemem_acr/distributional_memory_development_v1.json",
+    "configs/probemem_acr/distributional_memory_development_v2.json",
+    "configs/probemem_acr/glm_shadow_smoke_v1.json",
+    "configs/probemem_acr/persistent_glm_pilot_v1.json",
+    "configs/probemem_acr/persistent_regime_development_v1.json",
+    "configs/probemem_acr/resonance_second_verification_development_v1.json",
+    "configs/probemem_acr/resonance_validation_v1.json",
+    "configs/probemem_acr/retry_utility_replication_v1.json",
+    "configs/probemem_acr/retry_value_identifiability_audit_v1.json",
+    "configs/probemem_acr/seed_registry_v1.json",
+    "configs/probemem_acr/utility_realization_stability_v1.json",
+    "configs/probemem_acr/utility_realization_stability_v2.json",
+    "configs/probemem_acr/v2_provenance_lock.json",
+    "configs/probemem_acr/verification_feedback_sufficiency_development_v1.json",
+    "configs/probemem_additional/ablation_development_v1.json",
+    "configs/probemem_additional/seed_registry_v1.json",
+    "configs/probemem_online/bootstrap_memory_v1.json",
+    "configs/probemem_online/gate_a_collection_v1.json",
+    "configs/probemem_online/interface_ablation_v1.json",
+    "configs/probemem_online/mixed_regime_tuning_v1.json",
+    "configs/probemem_online/seed_registry_v1.json",
+    "configs/probemem_online/seed_registry_v2.json",
+    "configs/probemem_online/selective_override_development_v1.json",
+    "configs/probemem_online/sequential_development_v1.json",
+    "configs/probemem_sciagent/api_reliability_v1_1.json",
+    "configs/probemem_sciagent/api_reliability_v1_2.json",
+    "configs/probemem_sciagent/api_reliability_v1_3.json",
+    "configs/probemem_sciagent/api_reliability_v1_4.json",
+    "configs/probemem_sciagent/api_reliability_v1_5.json",
+    "configs/probemem_sciagent/api_reliability_v1_6.json",
+    "configs/probemem_sciagent/calibration_v1.json",
+    "configs/probemem_sciagent/demo_v1.json",
+    "configs/probemem_sciagent/development_v1.json",
+    "configs/probemem_sciagent/distributional_probe_identifiability_v1_8.json",
+    "configs/probemem_sciagent/micro_probe_utility_v1_7.json",
+    "configs/probemem_sciagent/seed_registry_v1.json",
+    "configs/probemem_sciagent/seed_registry_v2.json",
+    "configs/probemem_sciagent/seed_registry_v3.json",
+    "configs/probemem_sciagent/seed_registry_v4.json",
+    "configs/probemem_sciagent/seed_registry_v5.json",
+    "configs/probemem_sciagent/seed_registry_v6.json",
+    "configs/probemem_sciagent/seed_registry_v7.json",
+    "configs/probemem_sciagent/seed_registry_v8.json",
+    "configs/probemem_sciagent/seed_registry_v9.json",
+    "configs/probemem_v2/coverage_aware_memory_development_v1.json",
+    "configs/probemem_v2/development_smoke_v2.json",
+    "configs/probemem_v2/mujoco_endurance_preflight_v1.json",
+    "configs/probemem_v2/noise_intervention_selector_validation_v1.json",
+    "configs/probemem_v2/noise_intervention_utility_coverage_v1.json",
+    "configs/probemem_v2/paired_intervention_utility_development_v1.json",
+    "configs/probemem_v2/phase_c_intervention_utility_audit_v1.json",
+    "configs/probemem_v2/verified_episode_development_v2.json",
+    "configs/probemem_verifier/calibrated_v2_calibration.json",
+    "configs/probemem_verifier/calibrated_v2_development.json",
+    "configs/probemem_verifier/demo_v1.json",
+    "configs/probemem_verifier/seed_registry_v1.json",
+    "configs/probemem_verifier/seed_registry_v2.json",
+    "configs/relative_update_evidence/qualification_v1.json",
+    "configs/response_calibration/development_v1.json",
+    "configs/selected_response/qualification_v1.json",
+    "configs/short_probe_reference/development_v1.json",
+    "configs/short_probe_reference/planning_v1.json",
+    "configs/stale_reprobe/qualification_v1.json",
+    "configs/state_capsule/qualification_v1.json",
+    "configs/state_capsule/qualification_v2.json",
+    "configs/strong_chronological_reference/development_v1.json",
+    "docs/protocols/acquisition_reference_seeds_v1.json",
+    "docs/protocols/command_contrast_seed_registry_v1.json",
+    "docs/protocols/correction_scope_seeds_v1.json",
+    "docs/protocols/latent_response_seeds_v1.json",
+    "docs/protocols/learned_acquisition_native_seeds_v1.json",
+    "docs/protocols/memory_acquisition_native_seeds_v1.json",
+    "docs/protocols/memory_reset_seeds_v1.json",
+    "docs/protocols/native_command_witness_seeds_v1.json",
+    "docs/protocols/paired_packet_seeds_v1.json",
+    "docs/protocols/response_action_seed_registry_v1.json",
+    "docs/protocols/seed_registry.json",
+    "docs/protocols/task_passive_seed_registry_v1.json",
+    "outputs/acquisition_anchor_diagnosis/analysis_v1/anchor_diagnosis_20261022T120639Z_d2e04db2d872/manifest.json",
+    "outputs/acquisition_reference/qualification_v1/acquisition_reference_20261022T133659Z_dc7058a8f6d5/manifest.json",
+    "outputs/acquisition_support/analysis_v1/acquisition_support_20261022T094319Z_3fdf8c8aef8c/manifest.json",
+    "outputs/acquisition_value/development_v1/acquisition_value_20261014T151159Z_cb935ccb7187/manifest.json",
+    "outputs/action_response/development_v1/action_response_20261014T104928Z_1c3798544481/manifest.json",
+    "outputs/cache_continuation_alignment/development_v1/cache_continuation_alignment_20261016T145633Z_a187714ea263/manifest.json",
+    "outputs/calibrated_tasks/development_v1/calibrated_tasks_20261013T111017Z_972172259b89/manifest.json",
+    "outputs/candidate_micro_evidence/runs/micro_20260731T064558Z_2fa7f211eb53/manifest.json",
+    "outputs/candidate_repeatability/runs/repeatability_20260731T070645Z_9650e171518a/manifest.json",
+    "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/manifest.json",
+    "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/manifest.json",
+    "outputs/cold_start_task_bridge/development_v1/cold_start_task_bridge_20261015T175406Z_44d3e6864ac1/manifest.json",
+    "outputs/command_contrast/qualification_v1/command_contrast_20261022T015501Z_339de06a3036/manifest.json",
+    "outputs/command_target_diagnostic/analysis_v1/command_target_20261022T163258Z_90131875242d/manifest.json",
+    "outputs/command_target_diagnostic/analysis_v2/command_target_reader_v2_20261022T164215Z_c231aa055011/manifest.json",
+    "outputs/conditional_continuation/development_v1/conditional_continuation_20261015T094531Z_784d65befd08/manifest.json",
+    "outputs/continuation_selector/development_v1/causal_continuation_20261015T104523Z_68da2c7ef160/manifest.json",
+    "outputs/continuous_probe/development_v1/continuous_probe_20261013T103104Z_1092996bcf4f/manifest.json",
+    "outputs/controller_tail_value/development_v1/controller_tail_value_20261015T145802Z_66d8e210a9f5/manifest.json",
+    "outputs/correction_scope/development_v1/correction_scope_20261026T042133Z_d74cba1945e2/manifest.json",
+    "outputs/correction_scope/effect_horizon_v1/run_20261027T072057Z_e5a3c3c15503/manifest.json",
+    "outputs/correction_scope/effect_learning_v1/run_20261027T064624Z_db04aa83cabc/manifest.json",
+    "outputs/correction_scope/policy_support_v1/run_20261027T052754Z_769ad2ff3546/manifest.json",
+    "outputs/correction_scope/program_support_v1/run_20261026T113335Z_54295d2a7dd9/manifest.json",
+    "outputs/correction_scope/risk_reference_v1/run_20261026T094817Z_82a3873cdf1b/manifest.json",
+    "outputs/correction_scope/selective_coverage_v1/run_20261027T082111Z_208a2bfa856f/manifest.json",
+    "outputs/correction_scope/selective_coverage_v1/run_20261027T082111Z_208a2bfa856f/reader_audit_v2/manifest.json",
+    "outputs/correction_scope/state_coupled_design_v1/run_20261026T121947Z_657297ca8506/manifest.json",
+    "outputs/correction_scope/trace_value_v1/run_20261026T104715Z_3875955b51d5/manifest.json",
+    "outputs/correction_scope/transfer_ablation_v1/run_20261026T135712Z_ccf762941c9d/manifest.json",
+    "outputs/correction_scope/transfer_learning_v1/run_20261026T132315Z_7a8c4c50b420/manifest.json",
+    "outputs/cross_task_cache_validity/development_v1/cross_task_cache_validity_20261015T200149Z_ae7c22c393b1/manifest.json",
+    "outputs/cross_task_cache_validity/development_v2/cross_task_cache_validity_20261015T201914Z_78cdd6aa3bbf/manifest.json",
+    "outputs/delayed_intervention/qualification_v1/delayed_intervention_20261019T081007Z_72cd966d73d9/manifest.json",
+    "outputs/delayed_intervention/qualification_v2/delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55/manifest.json",
+    "outputs/delayed_switch_effects/development_v1/delayed_switch_effects_20261019T093447Z_5193855b2123/manifest.json",
+    "outputs/early_evidence/development_v1/early_evidence_20261015T015710Z_a9ec09feaf24/manifest.json",
+    "outputs/evidence_persistence/development_v1/evidence_persistence_20261013T085037Z_6b88d1b48e41/manifest.json",
+    "outputs/evidence_refresh/development_v1/evidence_refresh_20261013T092539Z_ac3fa90f6d20/manifest.json",
+    "outputs/executable_support/development_v1/executable_support_20261015T082955Z_48a3e433af85/manifest.json",
+    "outputs/forward_operator/task_utility_v1/forward_operator_20261014T081128Z_37eee13f9943/manifest.json",
+    "outputs/forward_prediction/baselines_v1/forward_prediction_20261014T064233Z_bb812df15401/manifest.json",
+    "outputs/frame_evidence/development_v1/frame_evidence_20261014T041345Z_82a3dd1469d4/manifest.json",
+    "outputs/heldout_allocation/runs/heldout_20260731T014547Z_364f4d851f2e/manifest.json",
+    "outputs/heldout_allocation/runs/heldout_20260731T015847Z_a39271db862f/manifest.json",
+    "outputs/heldout_intervention/runs/intervention_20260731T024143Z_d72191c58554/manifest.json",
+    "outputs/information_release/reference_v1/information_release_20261023T010511Z_eb01a32d4afd/manifest.json",
+    "outputs/information_scope/reference_v1/information_scope_20261022T215656Z_2c6170321ce5/manifest.json",
+    "outputs/integral_reprobe/qualification_v1/integral_reprobe_20261019T132410Z_8014d27d424a/manifest.json",
+    "outputs/intervention_identifiability/runs/development_20260731T030038Z_c3dac4e631fb/manifest.json",
+    "outputs/intervention_identifiability/runs/development_20260731T030710Z_a1756e42d473/manifest.json",
+    "outputs/intervention_identifiability/runs/development_20260731T032936Z_72681fa3b583/manifest.json",
+    "outputs/intervention_identifiability/runs/development_20260731T035004Z_ed696b94484e/manifest.json",
+    "outputs/intervention_identifiability/runs/development_20260731T065555Z_c214dc0f4a08/manifest.json",
+    "outputs/intervention_identifiability/runs/development_20260731T070305Z_1046f463d168/manifest.json",
+    "outputs/inverse_error_attribution/development_v1/inverse_attribution_20261015T120559Z_fcaa4a08b818/manifest.json",
+    "outputs/latent_response/qualification_v1/latent_response_20261022T190735Z_e4410b8985e3/manifest.json",
+    "outputs/latent_response_diagnosis/analysis_v1/latent_response_diagnosis_20261022T210319Z_32b47031cb85/manifest.json",
+    "outputs/learned_acquisition/native_v1/run_20261027T042530Z_3c437c6d3f5d/manifest.json",
+    "outputs/linear_command_preflight/analysis_v1/manifest.json",
+    "outputs/local_reprobe/qualification_v1/local_reprobe_20261019T140639Z_7bf2aa94b5ab/manifest.json",
+    "outputs/memory_acquisition/qualification_v1/memory_acquisition_20261022T112439Z_1d658fea08fc/manifest.json",
+    "outputs/memory_reset/qualification_v1/memory_reset_20261022T224151Z_814c7dbd2ce7/manifest.json",
+    "outputs/memory_terminal_reference/qualification_v1/memory_terminal_20261022T104925Z_a3d10e731af4/manifest.json",
+    "outputs/movement_task/development_v1/movement_task_20261019T191708Z_eee0803df5bf/manifest.json",
+    "outputs/native_command_witness/qualification_v1/native_command_witness_20261022T172319Z_9c64ab52ca23/manifest.json",
+    "outputs/nominal_observer/qualification_v1/nominal_observer_20261014T055743Z_9e6c6e63cc35/manifest.json",
+    "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753/manifest.json",
+    "outputs/online_calibrated_agent/development_v1/online_calibrated_agent_20261014T022239Z_e40d3b2b2c24/manifest.json",
+    "outputs/paired_packet_response/development_v1/paired_packet_20261027T101154Z_bb74926c3c07/manifest.json",
+    "outputs/paired_packet_structure/analysis_v1/packet_structure_20261027T114501Z_28744e2cbde3/manifest.json",
+    "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/manifest.json",
+    "outputs/passive_continuation_support/analysis_v1/passive_support_20261023T064300Z_41161eb6c331/manifest.json",
+    "outputs/passive_supported_reference/engineering_qualification_v1/passive_supported_reference_20261016T151816Z_3aa4ccde0038/manifest.json",
+    "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/manifest.json",
+    "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/manifest.json",
+    "outputs/post_probe_identity/development_v1/post_probe_identity_20261015T134029Z_e0a879a8c014/manifest.json",
+    "outputs/probe_support/development_v1/probe_support_20261013T095304Z_d51c76e77072/manifest.json",
+    "outputs/probemem_acr/contextual_runs/acr_contextual_20260802T134851Z_f54f00df645e/manifest.json",
+    "outputs/probemem_acr/distributional_runs/acr_distributional_20260802T125208Z_ce7d9daa5547/manifest.json",
+    "outputs/probemem_acr/distributional_runs/acr_distributional_v2_20260802T131001Z_6178437d677a/manifest.json",
+    "outputs/probemem_acr/resonance_runs/acr_resonance_20260802T142610Z_af2acb3b380b/manifest.json",
+    "outputs/probemem_acr/retry_replication_runs/acr_retry_replication_20260802T112644Z_1cc12e410025/manifest.json",
+    "outputs/probemem_acr/retry_replication_runs/acr_retry_replication_20260802T112921Z_1c45014434b2/manifest.json",
+    "outputs/probemem_acr/runs/probemem_acr_20260802T102711Z_1b6b32355183/manifest.json",
+    "outputs/probemem_acr/runs/probemem_acr_20260802T103020Z_e0bed07b734d/manifest.json",
+    "outputs/probemem_acr/runs/probemem_acr_20260802T103213Z_8b417cedf46b/manifest.json",
+    "outputs/probemem_acr/runs/probemem_acr_20260802T103454Z_dedbf7f07ec8/manifest.json",
+    "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T115910Z_260c255a243e/manifest.json",
+    "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T120100Z_c2597600b05d/manifest.json",
+    "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T120914Z_8b9c2f827d59/manifest.json",
+    "outputs/probemem_v2/runs/probemem_paired_utility_20260731T172244Z_44bc5d206ddf/manifest.json",
+    "outputs/probemem_v2/runs/probemem_paired_utility_20260731T173200Z_aceee1a6eca2/manifest.json",
+    "outputs/probemem_v2/runs/probemem_paired_utility_20260731T174415Z_ddd061fcec73/manifest.json",
+    "outputs/probemem_v2/runs/probemem_paired_utility_20260731T184353Z_cca94dad8cbe/manifest.json",
+    "outputs/probemem_v2/runs/probemem_phase_c_20260731T094646Z_9dc037acb04c/manifest.json",
+    "outputs/probemem_v2/runs/probemem_phase_c_20260731T155344Z_f7176579eb82/manifest.json",
+    "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T082819Z_d11430b80e3f/manifest.json",
+    "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T085550Z_582bb0cce256/manifest.json",
+    "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T090445Z_1cd7978961a2/manifest.json",
+    "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T091458Z_ee38f29c0731/manifest.json",
+    "outputs/relative_update_evidence/qualification_v1/relative_evidence_20261015T130002Z_10fb84282ecb/manifest.json",
+    "outputs/response_action/development_v1/response_action_20261022T073655Z_401a7f2427df/manifest.json",
+    "outputs/response_calibration/development_v1/response_calibration_20261013T105913Z_bfbd86c7c1dd/manifest.json",
+    "outputs/response_model_qualification/development_v1/response_qualification_20261020T092011Z_636d6b1f9e39/manifest.json",
+    "outputs/response_training_controls/development_v1/training_controls_20261021T191002Z_a7a33756b1c7/manifest.json",
+    "outputs/selected_response/qualification_v1/selected_response_20261019T152657Z_6db2a7662590/manifest.json",
+    "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/manifest.json",
+    "outputs/stale_reprobe/qualification_v1/stale_reprobe_20261019T125614Z_fdb617869c37/manifest.json",
+    "outputs/state_capsule/qualification_v1/state_capsule_20261016T174414Z_70e34299bef0/manifest.json",
+    "outputs/state_capsule/qualification_v2/state_capsule_20261016T180022Z_4498cf0f4fb5/manifest.json",
+    "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/manifest.json",
+    "outputs/task_passive/development_v1/task_passive_20261022T032948Z_67fefc4da922/manifest.json",
+    "outputs/task_passive_diagnosis/analysis_v1/passive_diagnosis_20261022T060222Z_4dcacc870c47/manifest.json",
+    "outputs/task_value_learner/development_v1/task_value_learner_20261014T180054Z_c7a33065b399/manifest.json"
+  ],
+  "range_catalog": [
+    {
+      "source": "configs/acquisition_value/development_v1.json",
+      "key": "",
+      "range": [
+        11200,
+        11200
+      ]
+    },
+    {
+      "source": "configs/acquisition_value/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        11248,
+        11499
+      ]
+    },
+    {
+      "source": "configs/action_response/development_v1.json",
+      "key": "",
+      "range": [
+        10800,
+        10800
+      ]
+    },
+    {
+      "source": "configs/action_response/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        10944,
+        11199
+      ]
+    },
+    {
+      "source": "configs/autoresearch/candidate_repeatability_evidence_v1.json",
+      "key": "required_source_seed_range",
+      "range": [
+        600,
+        699
+      ]
+    },
+    {
+      "source": "configs/autoresearch/heldout_allocation_v1.json",
+      "key": "",
+      "range": [
+        330,
+        339
+      ]
+    },
+    {
+      "source": "configs/autoresearch/intervention_identifiability_development_v1.json",
+      "key": "",
+      "range": [
+        400,
+        409
+      ]
+    },
+    {
+      "source": "configs/autoresearch/intervention_identifiability_development_v2.json",
+      "key": "",
+      "range": [
+        400,
+        409
+      ]
+    },
+    {
+      "source": "configs/autoresearch/noise_intervention_utility_coverage_v1.json",
+      "key": "",
+      "range": [
+        430,
+        489
+      ]
+    },
+    {
+      "source": "configs/autoresearch/noise_intervention_utility_development_v1.json",
+      "key": "",
+      "range": [
+        410,
+        429
+      ]
+    },
+    {
+      "source": "configs/autoresearch/noise_repeatability_confirmatory_source_v1.json",
+      "key": "",
+      "range": [
+        600,
+        699
+      ]
+    },
+    {
+      "source": "configs/autoresearch/noise_repeatability_source_v1.json",
+      "key": "",
+      "range": [
+        500,
+        559
+      ]
+    },
+    {
+      "source": "configs/benchmarks/bias_noise_ambiguity_heldout_v1.json",
+      "key": "",
+      "range": [
+        310,
+        319
+      ]
+    },
+    {
+      "source": "configs/benchmarks/temporal_evidence_development_v1.json",
+      "key": "",
+      "range": [
+        320,
+        329
+      ]
+    },
+    {
+      "source": "configs/calibrated_tasks/development_v1.json",
+      "key": "",
+      "range": [
+        9100,
+        9115
+      ]
+    },
+    {
+      "source": "configs/calibrated_tasks/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        9116,
+        9399
+      ]
+    },
+    {
+      "source": "configs/chronological_cache_reference/development_v1.json",
+      "key": "smoke.",
+      "range": [
+        16000,
+        16005
+      ]
+    },
+    {
+      "source": "configs/chronological_cache_reference/development_v1.json",
+      "key": "main.",
+      "range": [
+        17000,
+        17431
+      ]
+    },
+    {
+      "source": "configs/cold_start_evidence/qualification_v1.json",
+      "key": "training_reserved_seeds",
+      "range": [
+        14384,
+        14599
+      ]
+    },
+    {
+      "source": "configs/cold_start_evidence/qualification_v1.json",
+      "key": "qualification_reserved_seeds",
+      "range": [
+        13848,
+        13999
+      ]
+    },
+    {
+      "source": "configs/cold_start_task_bridge/development_v1.json",
+      "key": "",
+      "range": [
+        14600,
+        14600
+      ]
+    },
+    {
+      "source": "configs/cold_start_task_bridge/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        14768,
+        14999
+      ]
+    },
+    {
+      "source": "configs/conditional_continuation/development_v1.json",
+      "key": "",
+      "range": [
+        12200,
+        12200
+      ]
+    },
+    {
+      "source": "configs/conditional_continuation/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        12224,
+        12599
+      ]
+    },
+    {
+      "source": "configs/continuation_selector/development_v1.json",
+      "key": "",
+      "range": [
+        12600,
+        12600
+      ]
+    },
+    {
+      "source": "configs/continuation_selector/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        12648,
+        12999
+      ]
+    },
+    {
+      "source": "configs/continuous_probe/development_v1.json",
+      "key": "",
+      "range": [
+        8700,
+        8707
+      ]
+    },
+    {
+      "source": "configs/continuous_probe/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        8708,
+        8899
+      ]
+    },
+    {
+      "source": "configs/delayed_intervention/qualification_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        21403,
+        21599
+      ]
+    },
+    {
+      "source": "configs/delayed_intervention/qualification_v2.json",
+      "key": "reserved_seeds",
+      "range": [
+        21603,
+        21799
+      ]
+    },
+    {
+      "source": "configs/delayed_switch_effects/development_v1.json",
+      "key": "reserved_task_seeds",
+      "range": [
+        22016,
+        22399
+      ]
+    },
+    {
+      "source": "configs/early_evidence/development_v1.json",
+      "key": "",
+      "range": [
+        11500,
+        11500
+      ]
+    },
+    {
+      "source": "configs/early_evidence/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        11524,
+        11799
+      ]
+    },
+    {
+      "source": "configs/evidence_persistence/development_v1.json",
+      "key": "",
+      "range": [
+        8000,
+        8015
+      ]
+    },
+    {
+      "source": "configs/evidence_persistence/development_v1.json",
+      "key": "reserved_seed_range",
+      "range": [
+        8016,
+        8199
+      ]
+    },
+    {
+      "source": "configs/evidence_refresh/development_v1.json",
+      "key": "",
+      "range": [
+        8200,
+        8200
+      ]
+    },
+    {
+      "source": "configs/evidence_refresh/development_v1.json",
+      "key": "reserved_seed_range",
+      "range": [
+        8296,
+        8499
+      ]
+    },
+    {
+      "source": "configs/executable_support/development_v1.json",
+      "key": "",
+      "range": [
+        11800,
+        11800
+      ]
+    },
+    {
+      "source": "configs/executable_support/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        11848,
+        12199
+      ]
+    },
+    {
+      "source": "configs/forward_operator/task_utility_v1.json",
+      "key": "",
+      "range": [
+        10600,
+        10607
+      ]
+    },
+    {
+      "source": "configs/forward_operator/task_utility_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        10608,
+        10799
+      ]
+    },
+    {
+      "source": "configs/forward_prediction/baselines_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        10416,
+        10599
+      ]
+    },
+    {
+      "source": "configs/frame_evidence/development_v1.json",
+      "key": "",
+      "range": [
+        9800,
+        9807
+      ]
+    },
+    {
+      "source": "configs/frame_evidence/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        9808,
+        9999
+      ]
+    },
+    {
+      "source": "configs/integral_reprobe/qualification_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        22809,
+        22999
+      ]
+    },
+    {
+      "source": "configs/local_reprobe/qualification_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        23009,
+        23199
+      ]
+    },
+    {
+      "source": "configs/movement_task/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        25162,
+        25399
+      ]
+    },
+    {
+      "source": "configs/movement_task/learned_acquisition_native_v1.json",
+      "key": "used_episode_seed_range",
+      "range": [
+        90000,
+        90008
+      ]
+    },
+    {
+      "source": "configs/movement_task/learned_acquisition_native_v1.json",
+      "key": "reserved_episode_seed_range",
+      "range": [
+        90009,
+        90999
+      ]
+    },
+    {
+      "source": "configs/movement_task/response_model_qualification_design_v1.json",
+      "key": "training.episode_seeds",
+      "range": [
+        26000,
+        26053
+      ]
+    },
+    {
+      "source": "configs/movement_task/response_model_qualification_design_v1.json",
+      "key": "qualification.episode_seeds",
+      "range": [
+        26200,
+        26253
+      ]
+    },
+    {
+      "source": "configs/movement_task/response_model_qualification_design_v1.json",
+      "key": "unused_reserved_episode_seeds",
+      "range": [
+        26300,
+        26599
+      ]
+    },
+    {
+      "source": "configs/movement_task/response_model_qualification_design_v1.json",
+      "key": "calibration.episode_seeds",
+      "range": [
+        26100,
+        26126
+      ]
+    },
+    {
+      "source": "configs/nominal_observer/qualification_v1.json",
+      "key": "",
+      "range": [
+        10000,
+        10015
+      ]
+    },
+    {
+      "source": "configs/nominal_observer/qualification_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        10016,
+        10199
+      ]
+    },
+    {
+      "source": "configs/online_calibrated_agent/development_v1.json",
+      "key": "",
+      "range": [
+        9400,
+        9403
+      ]
+    },
+    {
+      "source": "configs/online_calibrated_agent/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        9404,
+        9599
+      ]
+    },
+    {
+      "source": "configs/paired_probe_effects/development_v1.json",
+      "key": "smoke.",
+      "range": [
+        20000,
+        20008
+      ]
+    },
+    {
+      "source": "configs/paired_probe_effects/development_v1.json",
+      "key": "main.",
+      "range": [
+        19200,
+        19631
+      ]
+    },
+    {
+      "source": "configs/physical_reprobe/qualification_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        22409,
+        22599
+      ]
+    },
+    {
+      "source": "configs/point8_baseline/development_v1.json",
+      "key": "",
+      "range": [
+        13400,
+        13400
+      ]
+    },
+    {
+      "source": "configs/point8_baseline/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        13448,
+        13799
+      ]
+    },
+    {
+      "source": "configs/post_probe_identity/development_v1.json",
+      "key": "",
+      "range": [
+        13000,
+        13000
+      ]
+    },
+    {
+      "source": "configs/post_probe_identity/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        13048,
+        13399
+      ]
+    },
+    {
+      "source": "configs/probe_support/development_v1.json",
+      "key": "",
+      "range": [
+        8500,
+        8515
+      ]
+    },
+    {
+      "source": "configs/probe_support/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        8516,
+        8699
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/contextual_utility_development_v1.json",
+      "key": "seed_partitions.development",
+      "range": [
+        2500,
+        2699
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/contextual_utility_development_v1.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        2700,
+        2749
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/contextual_utility_development_v1.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        2750,
+        2849
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/continuous_feedback_development_v1.json",
+      "key": "seed_partitions.development",
+      "range": [
+        3500,
+        3799
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/continuous_feedback_development_v1.json",
+      "key": "seed_partitions.reserved_not_executed",
+      "range": [
+        3800,
+        3899
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/continuous_feedback_development_v1.json",
+      "key": "seed_partitions.heldout_not_executed",
+      "range": [
+        3100,
+        3199
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/development_v1.json",
+      "key": "seed_range",
+      "range": [
+        1100,
+        1199
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/distributional_memory_development_v1.json",
+      "key": "seed_partitions.development",
+      "range": [
+        2000,
+        2099
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/distributional_memory_development_v1.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        2100,
+        2149
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/distributional_memory_development_v1.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        2150,
+        2199
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/distributional_memory_development_v2.json",
+      "key": "seed_partitions.development",
+      "range": [
+        2200,
+        2349
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/distributional_memory_development_v2.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        2350,
+        2399
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/distributional_memory_development_v2.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        2400,
+        2499
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/persistent_regime_development_v1.json",
+      "key": "seed_range",
+      "range": [
+        3900,
+        3949
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/resonance_second_verification_development_v1.json",
+      "key": "seed_partitions.development",
+      "range": [
+        2850,
+        3049
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/resonance_second_verification_development_v1.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        3050,
+        3099
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/resonance_second_verification_development_v1.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        3100,
+        3199
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/resonance_validation_v1.json",
+      "key": "validation_seed_blocks[0]",
+      "range": [
+        3050,
+        3099
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/resonance_validation_v1.json",
+      "key": "validation_seed_blocks[1]",
+      "range": [
+        3200,
+        3299
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/retry_utility_replication_v1.json",
+      "key": "seed_partitions.development_replication",
+      "range": [
+        1400,
+        1499
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/retry_utility_replication_v1.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        1500,
+        1549
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/retry_utility_replication_v1.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        1550,
+        1599
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/seed_registry_v1.json",
+      "key": "episode_seed_partitions.development",
+      "range": [
+        1100,
+        1199
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/seed_registry_v1.json",
+      "key": "episode_seed_partitions.validation_reserved",
+      "range": [
+        1200,
+        1249
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/seed_registry_v1.json",
+      "key": "episode_seed_partitions.heldout_reserved",
+      "range": [
+        1300,
+        1399
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/utility_realization_stability_v1.json",
+      "key": "seed_partitions.development",
+      "range": [
+        1600,
+        1699
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/utility_realization_stability_v1.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        1700,
+        1749
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/utility_realization_stability_v1.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        1750,
+        1799
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/utility_realization_stability_v2.json",
+      "key": "seed_partitions.development",
+      "range": [
+        1800,
+        1899
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/utility_realization_stability_v2.json",
+      "key": "seed_partitions.validation_reserved",
+      "range": [
+        1900,
+        1949
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/utility_realization_stability_v2.json",
+      "key": "seed_partitions.heldout_reserved",
+      "range": [
+        1950,
+        1999
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/verification_feedback_sufficiency_development_v1.json",
+      "key": "seed_partitions.development",
+      "range": [
+        3300,
+        3499
+      ]
+    },
+    {
+      "source": "configs/probemem_acr/verification_feedback_sufficiency_development_v1.json",
+      "key": "seed_partitions.reserved_not_executed",
+      "range": [
+        3500,
+        3599
+      ]
+    },
+    {
+      "source": "configs/probemem_additional/ablation_development_v1.json",
+      "key": "seed_range",
+      "range": [
+        7200,
+        7399
+      ]
+    },
+    {
+      "source": "configs/probemem_additional/ablation_development_v1.json",
+      "key": "future_reserved_seed_range",
+      "range": [
+        7400,
+        7499
+      ]
+    },
+    {
+      "source": "configs/probemem_online/bootstrap_memory_v1.json",
+      "key": "seed_range",
+      "range": [
+        4100,
+        4199
+      ]
+    },
+    {
+      "source": "configs/probemem_online/gate_a_collection_v1.json",
+      "key": "seed_range",
+      "range": [
+        4000,
+        4099
+      ]
+    },
+    {
+      "source": "configs/probemem_online/mixed_regime_tuning_v1.json",
+      "key": "seed_range",
+      "range": [
+        4200,
+        4224
+      ]
+    },
+    {
+      "source": "configs/probemem_online/selective_override_development_v1.json",
+      "key": "seed_range",
+      "range": [
+        4500,
+        4599
+      ]
+    },
+    {
+      "source": "configs/probemem_online/selective_override_development_v1.json",
+      "key": "segments.[0].seed_range",
+      "range": [
+        4500,
+        4524
+      ]
+    },
+    {
+      "source": "configs/probemem_online/selective_override_development_v1.json",
+      "key": "segments.[1].seed_range",
+      "range": [
+        4525,
+        4549
+      ]
+    },
+    {
+      "source": "configs/probemem_online/selective_override_development_v1.json",
+      "key": "segments.[2].seed_range",
+      "range": [
+        4550,
+        4574
+      ]
+    },
+    {
+      "source": "configs/probemem_online/selective_override_development_v1.json",
+      "key": "segments.[3].seed_range",
+      "range": [
+        4575,
+        4599
+      ]
+    },
+    {
+      "source": "configs/probemem_online/sequential_development_v1.json",
+      "key": "seed_range",
+      "range": [
+        4300,
+        4499
+      ]
+    },
+    {
+      "source": "configs/probemem_online/sequential_development_v1.json",
+      "key": "segments.[0].seed_range",
+      "range": [
+        4300,
+        4349
+      ]
+    },
+    {
+      "source": "configs/probemem_online/sequential_development_v1.json",
+      "key": "segments.[1].seed_range",
+      "range": [
+        4350,
+        4399
+      ]
+    },
+    {
+      "source": "configs/probemem_online/sequential_development_v1.json",
+      "key": "segments.[2].seed_range",
+      "range": [
+        4400,
+        4449
+      ]
+    },
+    {
+      "source": "configs/probemem_online/sequential_development_v1.json",
+      "key": "segments.[3].seed_range",
+      "range": [
+        4450,
+        4499
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/api_reliability_v1_1.json",
+      "key": "seed_range",
+      "range": [
+        5850,
+        5899
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/api_reliability_v1_2.json",
+      "key": "seed_range",
+      "range": [
+        6000,
+        6049
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/api_reliability_v1_3.json",
+      "key": "seed_range",
+      "range": [
+        6150,
+        6199
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/api_reliability_v1_4.json",
+      "key": "seed_range",
+      "range": [
+        6300,
+        6349
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/api_reliability_v1_5.json",
+      "key": "seed_range",
+      "range": [
+        6450,
+        6499
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/api_reliability_v1_6.json",
+      "key": "seed_range",
+      "range": [
+        6600,
+        6649
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/calibration_v1.json",
+      "key": "seed_range",
+      "range": [
+        5350,
+        5449
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/demo_v1.json",
+      "key": "seed_range",
+      "range": [
+        5300,
+        5349
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/development_v1.json",
+      "key": "seed_range",
+      "range": [
+        5450,
+        5649
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/distributional_probe_identifiability_v1_8.json",
+      "key": "seed_range",
+      "range": [
+        6950,
+        7099
+      ]
+    },
+    {
+      "source": "configs/probemem_sciagent/micro_probe_utility_v1_7.json",
+      "key": "seed_range",
+      "range": [
+        6750,
+        6849
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/coverage_aware_memory_development_v1.json",
+      "key": "seed_range",
+      "range": [
+        980,
+        1059
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/coverage_aware_memory_development_v1.json",
+      "key": "heldout_seed_range",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/development_smoke_v2.json",
+      "key": "seed_partitions.smoke",
+      "range": [
+        700,
+        719
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/development_smoke_v2.json",
+      "key": "seed_partitions.development",
+      "range": [
+        720,
+        799
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/development_smoke_v2.json",
+      "key": "seed_partitions.validation",
+      "range": [
+        800,
+        839
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/development_smoke_v2.json",
+      "key": "seed_partitions.reserved",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/development_smoke_v2.json",
+      "key": "seed_partitions.heldout",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/mujoco_endurance_preflight_v1.json",
+      "key": "seed_range",
+      "range": [
+        760,
+        779
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/noise_intervention_selector_validation_v1.json",
+      "key": "seed_range",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/noise_intervention_selector_validation_v1.json",
+      "key": "heldout_seed_range",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/noise_intervention_utility_coverage_v1.json",
+      "key": "seed_range",
+      "range": [
+        760,
+        839
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/noise_intervention_utility_coverage_v1.json",
+      "key": "heldout_seed_range",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/paired_intervention_utility_development_v1.json",
+      "key": "seed_range",
+      "range": [
+        740,
+        759
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/paired_intervention_utility_development_v1.json",
+      "key": "heldout_seed_range",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/verified_episode_development_v2.json",
+      "key": "seed_range",
+      "range": [
+        720,
+        739
+      ]
+    },
+    {
+      "source": "configs/probemem_v2/verified_episode_development_v2.json",
+      "key": "heldout_seed_range",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "configs/probemem_verifier/calibrated_v2_calibration.json",
+      "key": "seed_range",
+      "range": [
+        4800,
+        4899
+      ]
+    },
+    {
+      "source": "configs/probemem_verifier/calibrated_v2_development.json",
+      "key": "seed_range",
+      "range": [
+        4900,
+        5099
+      ]
+    },
+    {
+      "source": "configs/probemem_verifier/demo_v1.json",
+      "key": "seed_range",
+      "range": [
+        4700,
+        4749
+      ]
+    },
+    {
+      "source": "configs/response_calibration/development_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        8916,
+        9099
+      ]
+    },
+    {
+      "source": "configs/selected_response/qualification_v1.json",
+      "key": "reserved_seeds[0]",
+      "range": [
+        24352,
+        24499
+      ]
+    },
+    {
+      "source": "configs/selected_response/qualification_v1.json",
+      "key": "reserved_seeds[1]",
+      "range": [
+        24644,
+        24999
+      ]
+    },
+    {
+      "source": "configs/short_probe_reference/development_v1.json",
+      "key": "smoke.",
+      "range": [
+        21200,
+        21208
+      ]
+    },
+    {
+      "source": "configs/short_probe_reference/development_v1.json",
+      "key": "main.",
+      "range": [
+        20200,
+        20847
+      ]
+    },
+    {
+      "source": "configs/stale_reprobe/qualification_v1.json",
+      "key": "reserved_seeds",
+      "range": [
+        22609,
+        22799
+      ]
+    },
+    {
+      "source": "configs/state_capsule/qualification_v1.json",
+      "key": "",
+      "range": [
+        18800,
+        18811
+      ]
+    },
+    {
+      "source": "configs/state_capsule/qualification_v2.json",
+      "key": "",
+      "range": [
+        19000,
+        19011
+      ]
+    },
+    {
+      "source": "configs/strong_chronological_reference/development_v1.json",
+      "key": "smoke.",
+      "range": [
+        18000,
+        18011
+      ]
+    },
+    {
+      "source": "configs/strong_chronological_reference/development_v1.json",
+      "key": "main.",
+      "range": [
+        18100,
+        18315
+      ]
+    },
+    {
+      "source": "docs/protocols/acquisition_reference_seeds_v1.json",
+      "key": "QUAL_episode_seed_range",
+      "range": [
+        67000,
+        67026
+      ]
+    },
+    {
+      "source": "docs/protocols/acquisition_reference_seeds_v1.json",
+      "key": "QUAL_reserved_episode_seed_range",
+      "range": [
+        67027,
+        67099
+      ]
+    },
+    {
+      "source": "docs/protocols/acquisition_reference_seeds_v1.json",
+      "key": "future_reserved_episode_seed_range",
+      "range": [
+        67100,
+        67199
+      ]
+    },
+    {
+      "source": "docs/protocols/acquisition_reference_seeds_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        67200,
+        67202
+      ]
+    },
+    {
+      "source": "docs/protocols/acquisition_reference_seeds_v1.json",
+      "key": "native_reserved_episode_seed_range",
+      "range": [
+        67203,
+        67299
+      ]
+    },
+    {
+      "source": "docs/protocols/command_contrast_seed_registry_v1.json",
+      "key": "episode_seed_range",
+      "range": [
+        61000,
+        61026
+      ]
+    },
+    {
+      "source": "docs/protocols/command_contrast_seed_registry_v1.json",
+      "key": "reserved_episode_seed_range",
+      "range": [
+        61027,
+        61999
+      ]
+    },
+    {
+      "source": "docs/protocols/command_contrast_seed_registry_v1.json",
+      "key": "native_software_episode_seed_range",
+      "range": [
+        62050,
+        62052
+      ]
+    },
+    {
+      "source": "docs/protocols/command_contrast_seed_registry_v1.json",
+      "key": "native_software_reserved_episode_seed_range",
+      "range": [
+        62053,
+        62099
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        80000,
+        80008
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "TRAIN_episode_seed_range",
+      "range": [
+        80100,
+        80126
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "CAL_episode_seed_range",
+      "range": [
+        80200,
+        80208
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "TEST_episode_seed_range",
+      "range": [
+        80300,
+        80326
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[0]",
+      "range": [
+        80009,
+        80099
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[1]",
+      "range": [
+        80127,
+        80199
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[2]",
+      "range": [
+        80209,
+        80299
+      ]
+    },
+    {
+      "source": "docs/protocols/correction_scope_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[3]",
+      "range": [
+        80327,
+        80999
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "software_episode_seed_range",
+      "range": [
+        71000,
+        71008
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "train_episode_seed_range",
+      "range": [
+        71100,
+        71207
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "cal_episode_seed_range",
+      "range": [
+        71400,
+        71426
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "qual_episode_seed_range",
+      "range": [
+        71600,
+        71653
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[0]",
+      "range": [
+        71009,
+        71099
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[1]",
+      "range": [
+        71208,
+        71399
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[2]",
+      "range": [
+        71427,
+        71599
+      ]
+    },
+    {
+      "source": "docs/protocols/latent_response_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[3]",
+      "range": [
+        71654,
+        71999
+      ]
+    },
+    {
+      "source": "docs/protocols/learned_acquisition_native_seeds_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        90000,
+        90008
+      ]
+    },
+    {
+      "source": "docs/protocols/learned_acquisition_native_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[0]",
+      "range": [
+        90009,
+        90999
+      ]
+    },
+    {
+      "source": "docs/protocols/memory_acquisition_native_seeds_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        65000,
+        65008
+      ]
+    },
+    {
+      "source": "docs/protocols/memory_acquisition_native_seeds_v1.json",
+      "key": "reserved_episode_seed_range",
+      "range": [
+        65009,
+        65099
+      ]
+    },
+    {
+      "source": "docs/protocols/memory_reset_seeds_v1.json",
+      "key": "QUAL_episode_seed_range",
+      "range": [
+        73000,
+        73026
+      ]
+    },
+    {
+      "source": "docs/protocols/memory_reset_seeds_v1.json",
+      "key": "QUAL_reserved_episode_seed_range",
+      "range": [
+        73027,
+        73199
+      ]
+    },
+    {
+      "source": "docs/protocols/memory_reset_seeds_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        73200,
+        73208
+      ]
+    },
+    {
+      "source": "docs/protocols/memory_reset_seeds_v1.json",
+      "key": "native_reserved_episode_seed_range",
+      "range": [
+        73209,
+        73999
+      ]
+    },
+    {
+      "source": "docs/protocols/native_command_witness_seeds_v1.json",
+      "key": "episode_seed_range",
+      "range": [
+        70000,
+        70008
+      ]
+    },
+    {
+      "source": "docs/protocols/native_command_witness_seeds_v1.json",
+      "key": "reserved_episode_seed_range",
+      "range": [
+        70009,
+        70099
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "software_episode_seed_range",
+      "range": [
+        110000,
+        110008
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "train_episode_seed_range",
+      "range": [
+        110100,
+        110126
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "cal_episode_seed_range",
+      "range": [
+        110200,
+        110208
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "qual_episode_seed_range",
+      "range": [
+        110300,
+        110326
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[0]",
+      "range": [
+        110009,
+        110099
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[1]",
+      "range": [
+        110127,
+        110199
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[2]",
+      "range": [
+        110209,
+        110299
+      ]
+    },
+    {
+      "source": "docs/protocols/paired_packet_seeds_v1.json",
+      "key": "reserved_episode_seed_ranges[3]",
+      "range": [
+        110327,
+        110999
+      ]
+    },
+    {
+      "source": "docs/protocols/response_action_seed_registry_v1.json",
+      "key": "DEV_episode_seed_range",
+      "range": [
+        64000,
+        64017
+      ]
+    },
+    {
+      "source": "docs/protocols/response_action_seed_registry_v1.json",
+      "key": "DEV_reserved_episode_seed_range",
+      "range": [
+        64018,
+        64099
+      ]
+    },
+    {
+      "source": "docs/protocols/response_action_seed_registry_v1.json",
+      "key": "QUAL_episode_seed_range",
+      "range": [
+        64100,
+        64126
+      ]
+    },
+    {
+      "source": "docs/protocols/response_action_seed_registry_v1.json",
+      "key": "QUAL_reserved_episode_seed_range",
+      "range": [
+        64127,
+        64199
+      ]
+    },
+    {
+      "source": "docs/protocols/response_action_seed_registry_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        64200,
+        64202
+      ]
+    },
+    {
+      "source": "docs/protocols/response_action_seed_registry_v1.json",
+      "key": "native_reserved_episode_seed_range",
+      "range": [
+        64203,
+        64299
+      ]
+    },
+    {
+      "source": "docs/protocols/seed_registry.json",
+      "key": "validation_seed_blocks[0]",
+      "range": [
+        3050,
+        3099
+      ]
+    },
+    {
+      "source": "docs/protocols/seed_registry.json",
+      "key": "validation_seed_blocks[1]",
+      "range": [
+        3200,
+        3299
+      ]
+    },
+    {
+      "source": "docs/protocols/seed_registry.json",
+      "key": "validation_seed_order",
+      "range": [
+        3050,
+        3099
+      ]
+    },
+    {
+      "source": "docs/protocols/seed_registry.json",
+      "key": "validation_seed_order",
+      "range": [
+        3200,
+        3299
+      ]
+    },
+    {
+      "source": "docs/protocols/task_passive_seed_registry_v1.json",
+      "key": "DEV_episode_seed_range",
+      "range": [
+        63000,
+        63017
+      ]
+    },
+    {
+      "source": "docs/protocols/task_passive_seed_registry_v1.json",
+      "key": "DEV_reserved_episode_seed_range",
+      "range": [
+        63018,
+        63099
+      ]
+    },
+    {
+      "source": "docs/protocols/task_passive_seed_registry_v1.json",
+      "key": "QUAL_episode_seed_range",
+      "range": [
+        63100,
+        63126
+      ]
+    },
+    {
+      "source": "docs/protocols/task_passive_seed_registry_v1.json",
+      "key": "QUAL_reserved_episode_seed_range",
+      "range": [
+        63127,
+        63199
+      ]
+    },
+    {
+      "source": "docs/protocols/task_passive_seed_registry_v1.json",
+      "key": "native_episode_seed_range",
+      "range": [
+        63200,
+        63202
+      ]
+    },
+    {
+      "source": "docs/protocols/task_passive_seed_registry_v1.json",
+      "key": "native_reserved_episode_seed_range",
+      "range": [
+        63203,
+        63299
+      ]
+    },
+    {
+      "source": "outputs/acquisition_value/development_v1/acquisition_value_20261014T151159Z_cb935ccb7187/manifest.json",
+      "key": "config.",
+      "range": [
+        11200,
+        11200
+      ]
+    },
+    {
+      "source": "outputs/acquisition_value/development_v1/acquisition_value_20261014T151159Z_cb935ccb7187/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        11248,
+        11499
+      ]
+    },
+    {
+      "source": "outputs/action_response/development_v1/action_response_20261014T104928Z_1c3798544481/manifest.json",
+      "key": "config.",
+      "range": [
+        10800,
+        10800
+      ]
+    },
+    {
+      "source": "outputs/action_response/development_v1/action_response_20261014T104928Z_1c3798544481/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        10944,
+        11199
+      ]
+    },
+    {
+      "source": "outputs/calibrated_tasks/development_v1/calibrated_tasks_20261013T111017Z_972172259b89/manifest.json",
+      "key": "config.",
+      "range": [
+        9100,
+        9115
+      ]
+    },
+    {
+      "source": "outputs/calibrated_tasks/development_v1/calibrated_tasks_20261013T111017Z_972172259b89/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        9116,
+        9399
+      ]
+    },
+    {
+      "source": "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/manifest.json",
+      "key": "config.smoke.",
+      "range": [
+        16000,
+        16005
+      ]
+    },
+    {
+      "source": "outputs/chronological_cache_reference/development_v1/chronological_cache_reference_20261016T114510Z_88c168320712/manifest.json",
+      "key": "config.main.",
+      "range": [
+        17000,
+        17431
+      ]
+    },
+    {
+      "source": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/manifest.json",
+      "key": "config.training_reserved_seeds",
+      "range": [
+        14384,
+        14599
+      ]
+    },
+    {
+      "source": "outputs/cold_start_evidence/qualification_v1/cold_start_evidence_20261015T170124Z_c5b76fb5ddb6/manifest.json",
+      "key": "config.qualification_reserved_seeds",
+      "range": [
+        13848,
+        13999
+      ]
+    },
+    {
+      "source": "outputs/cold_start_task_bridge/development_v1/cold_start_task_bridge_20261015T175406Z_44d3e6864ac1/manifest.json",
+      "key": "config.",
+      "range": [
+        14600,
+        14600
+      ]
+    },
+    {
+      "source": "outputs/cold_start_task_bridge/development_v1/cold_start_task_bridge_20261015T175406Z_44d3e6864ac1/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        14768,
+        14999
+      ]
+    },
+    {
+      "source": "outputs/conditional_continuation/development_v1/conditional_continuation_20261015T094531Z_784d65befd08/manifest.json",
+      "key": "config.",
+      "range": [
+        12200,
+        12200
+      ]
+    },
+    {
+      "source": "outputs/conditional_continuation/development_v1/conditional_continuation_20261015T094531Z_784d65befd08/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        12224,
+        12599
+      ]
+    },
+    {
+      "source": "outputs/continuation_selector/development_v1/causal_continuation_20261015T104523Z_68da2c7ef160/manifest.json",
+      "key": "config.",
+      "range": [
+        12600,
+        12600
+      ]
+    },
+    {
+      "source": "outputs/continuation_selector/development_v1/causal_continuation_20261015T104523Z_68da2c7ef160/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        12648,
+        12999
+      ]
+    },
+    {
+      "source": "outputs/continuous_probe/development_v1/continuous_probe_20261013T103104Z_1092996bcf4f/manifest.json",
+      "key": "config.",
+      "range": [
+        8700,
+        8707
+      ]
+    },
+    {
+      "source": "outputs/continuous_probe/development_v1/continuous_probe_20261013T103104Z_1092996bcf4f/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        8708,
+        8899
+      ]
+    },
+    {
+      "source": "outputs/delayed_intervention/qualification_v1/delayed_intervention_20261019T081007Z_72cd966d73d9/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        21403,
+        21599
+      ]
+    },
+    {
+      "source": "outputs/delayed_intervention/qualification_v2/delayed_intervention_v2_20261019T090014Z_1ba6b7b81e55/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        21603,
+        21799
+      ]
+    },
+    {
+      "source": "outputs/delayed_switch_effects/development_v1/delayed_switch_effects_20261019T093447Z_5193855b2123/manifest.json",
+      "key": "config.reserved_task_seeds",
+      "range": [
+        22016,
+        22399
+      ]
+    },
+    {
+      "source": "outputs/early_evidence/development_v1/early_evidence_20261015T015710Z_a9ec09feaf24/manifest.json",
+      "key": "config.",
+      "range": [
+        11500,
+        11500
+      ]
+    },
+    {
+      "source": "outputs/early_evidence/development_v1/early_evidence_20261015T015710Z_a9ec09feaf24/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        11524,
+        11799
+      ]
+    },
+    {
+      "source": "outputs/evidence_persistence/development_v1/evidence_persistence_20261013T085037Z_6b88d1b48e41/manifest.json",
+      "key": "config.",
+      "range": [
+        8000,
+        8015
+      ]
+    },
+    {
+      "source": "outputs/evidence_persistence/development_v1/evidence_persistence_20261013T085037Z_6b88d1b48e41/manifest.json",
+      "key": "config.reserved_seed_range",
+      "range": [
+        8016,
+        8199
+      ]
+    },
+    {
+      "source": "outputs/evidence_refresh/development_v1/evidence_refresh_20261013T092539Z_ac3fa90f6d20/manifest.json",
+      "key": "config.",
+      "range": [
+        8200,
+        8200
+      ]
+    },
+    {
+      "source": "outputs/evidence_refresh/development_v1/evidence_refresh_20261013T092539Z_ac3fa90f6d20/manifest.json",
+      "key": "config.reserved_seed_range",
+      "range": [
+        8296,
+        8499
+      ]
+    },
+    {
+      "source": "outputs/executable_support/development_v1/executable_support_20261015T082955Z_48a3e433af85/manifest.json",
+      "key": "config.",
+      "range": [
+        11800,
+        11800
+      ]
+    },
+    {
+      "source": "outputs/executable_support/development_v1/executable_support_20261015T082955Z_48a3e433af85/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        11848,
+        12199
+      ]
+    },
+    {
+      "source": "outputs/forward_operator/task_utility_v1/forward_operator_20261014T081128Z_37eee13f9943/manifest.json",
+      "key": "config.",
+      "range": [
+        10600,
+        10607
+      ]
+    },
+    {
+      "source": "outputs/forward_operator/task_utility_v1/forward_operator_20261014T081128Z_37eee13f9943/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        10608,
+        10799
+      ]
+    },
+    {
+      "source": "outputs/forward_prediction/baselines_v1/forward_prediction_20261014T064233Z_bb812df15401/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        10416,
+        10599
+      ]
+    },
+    {
+      "source": "outputs/frame_evidence/development_v1/frame_evidence_20261014T041345Z_82a3dd1469d4/manifest.json",
+      "key": "config.",
+      "range": [
+        9800,
+        9807
+      ]
+    },
+    {
+      "source": "outputs/frame_evidence/development_v1/frame_evidence_20261014T041345Z_82a3dd1469d4/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        9808,
+        9999
+      ]
+    },
+    {
+      "source": "outputs/integral_reprobe/qualification_v1/integral_reprobe_20261019T132410Z_8014d27d424a/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        22809,
+        22999
+      ]
+    },
+    {
+      "source": "outputs/intervention_identifiability/runs/development_20260731T030038Z_c3dac4e631fb/manifest.json",
+      "key": "seed_range",
+      "range": [
+        400,
+        409
+      ]
+    },
+    {
+      "source": "outputs/intervention_identifiability/runs/development_20260731T030710Z_a1756e42d473/manifest.json",
+      "key": "seed_range",
+      "range": [
+        400,
+        409
+      ]
+    },
+    {
+      "source": "outputs/intervention_identifiability/runs/development_20260731T032936Z_72681fa3b583/manifest.json",
+      "key": "seed_range",
+      "range": [
+        410,
+        429
+      ]
+    },
+    {
+      "source": "outputs/intervention_identifiability/runs/development_20260731T035004Z_ed696b94484e/manifest.json",
+      "key": "seed_range",
+      "range": [
+        430,
+        489
+      ]
+    },
+    {
+      "source": "outputs/intervention_identifiability/runs/development_20260731T065555Z_c214dc0f4a08/manifest.json",
+      "key": "seed_range",
+      "range": [
+        500,
+        559
+      ]
+    },
+    {
+      "source": "outputs/intervention_identifiability/runs/development_20260731T070305Z_1046f463d168/manifest.json",
+      "key": "seed_range",
+      "range": [
+        600,
+        699
+      ]
+    },
+    {
+      "source": "outputs/learned_acquisition/native_v1/run_20261027T042530Z_3c437c6d3f5d/manifest.json",
+      "key": "config.used_episode_seed_range",
+      "range": [
+        90000,
+        90008
+      ]
+    },
+    {
+      "source": "outputs/learned_acquisition/native_v1/run_20261027T042530Z_3c437c6d3f5d/manifest.json",
+      "key": "config.reserved_episode_seed_range",
+      "range": [
+        90009,
+        90999
+      ]
+    },
+    {
+      "source": "outputs/local_reprobe/qualification_v1/local_reprobe_20261019T140639Z_7bf2aa94b5ab/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        23009,
+        23199
+      ]
+    },
+    {
+      "source": "outputs/movement_task/development_v1/movement_task_20261019T191708Z_eee0803df5bf/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        25162,
+        25399
+      ]
+    },
+    {
+      "source": "outputs/nominal_observer/qualification_v1/nominal_observer_20261014T055743Z_9e6c6e63cc35/manifest.json",
+      "key": "config.",
+      "range": [
+        10000,
+        10015
+      ]
+    },
+    {
+      "source": "outputs/nominal_observer/qualification_v1/nominal_observer_20261014T055743Z_9e6c6e63cc35/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        10016,
+        10199
+      ]
+    },
+    {
+      "source": "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753/manifest.json",
+      "key": "seed_scope.proposed_ranges[0]",
+      "range": [
+        60000,
+        60053
+      ]
+    },
+    {
+      "source": "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753/manifest.json",
+      "key": "seed_scope.proposed_ranges[1]",
+      "range": [
+        60100,
+        60126
+      ]
+    },
+    {
+      "source": "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753/manifest.json",
+      "key": "seed_scope.proposed_ranges[2]",
+      "range": [
+        60200,
+        60253
+      ]
+    },
+    {
+      "source": "outputs/observable_history_transfer/development_v1/observable_history_20261021T154956Z_d256a0cf6753/manifest.json",
+      "key": "seed_scope.proposed_ranges[3]",
+      "range": [
+        60300,
+        60599
+      ]
+    },
+    {
+      "source": "outputs/online_calibrated_agent/development_v1/online_calibrated_agent_20261014T022239Z_e40d3b2b2c24/manifest.json",
+      "key": "config.",
+      "range": [
+        9400,
+        9403
+      ]
+    },
+    {
+      "source": "outputs/online_calibrated_agent/development_v1/online_calibrated_agent_20261014T022239Z_e40d3b2b2c24/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        9404,
+        9599
+      ]
+    },
+    {
+      "source": "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/manifest.json",
+      "key": "config.smoke.",
+      "range": [
+        20000,
+        20008
+      ]
+    },
+    {
+      "source": "outputs/paired_probe_effects/development_v1/paired_probe_effects_20261016T191951Z_591c353cd1e2/manifest.json",
+      "key": "config.main.",
+      "range": [
+        19200,
+        19631
+      ]
+    },
+    {
+      "source": "outputs/physical_reprobe/qualification_v1/physical_reprobe_20261019T120619Z_e6ffa2f4deae/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        22409,
+        22599
+      ]
+    },
+    {
+      "source": "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/manifest.json",
+      "key": "config.",
+      "range": [
+        13400,
+        13400
+      ]
+    },
+    {
+      "source": "outputs/point8_baseline/development_v1/point8_baseline_20261015T153211Z_b9506ff0e3ae/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        13448,
+        13799
+      ]
+    },
+    {
+      "source": "outputs/post_probe_identity/development_v1/post_probe_identity_20261015T134029Z_e0a879a8c014/manifest.json",
+      "key": "config.",
+      "range": [
+        13000,
+        13000
+      ]
+    },
+    {
+      "source": "outputs/post_probe_identity/development_v1/post_probe_identity_20261015T134029Z_e0a879a8c014/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        13048,
+        13399
+      ]
+    },
+    {
+      "source": "outputs/probe_support/development_v1/probe_support_20261013T095304Z_d51c76e77072/manifest.json",
+      "key": "config.",
+      "range": [
+        8500,
+        8515
+      ]
+    },
+    {
+      "source": "outputs/probe_support/development_v1/probe_support_20261013T095304Z_d51c76e77072/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        8516,
+        8699
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/contextual_runs/acr_contextual_20260802T134851Z_f54f00df645e/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        2700,
+        2749
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/contextual_runs/acr_contextual_20260802T134851Z_f54f00df645e/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        2750,
+        2849
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/distributional_runs/acr_distributional_20260802T125208Z_ce7d9daa5547/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        2100,
+        2149
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/distributional_runs/acr_distributional_20260802T125208Z_ce7d9daa5547/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        2150,
+        2199
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/distributional_runs/acr_distributional_v2_20260802T131001Z_6178437d677a/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        2350,
+        2399
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/distributional_runs/acr_distributional_v2_20260802T131001Z_6178437d677a/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        2400,
+        2499
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/resonance_runs/acr_resonance_20260802T142610Z_af2acb3b380b/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        3050,
+        3099
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/resonance_runs/acr_resonance_20260802T142610Z_af2acb3b380b/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        3100,
+        3199
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/retry_replication_runs/acr_retry_replication_20260802T112644Z_1cc12e410025/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        1500,
+        1549
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/retry_replication_runs/acr_retry_replication_20260802T112644Z_1cc12e410025/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        1550,
+        1599
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/retry_replication_runs/acr_retry_replication_20260802T112921Z_1c45014434b2/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        1500,
+        1549
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/retry_replication_runs/acr_retry_replication_20260802T112921Z_1c45014434b2/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        1550,
+        1599
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T115910Z_260c255a243e/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        1700,
+        1749
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T115910Z_260c255a243e/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        1750,
+        1799
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T120100Z_c2597600b05d/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        1700,
+        1749
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T120100Z_c2597600b05d/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        1750,
+        1799
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T120914Z_8b9c2f827d59/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.validation",
+      "range": [
+        1900,
+        1949
+      ]
+    },
+    {
+      "source": "outputs/probemem_acr/utility_stability_runs/acr_utility_stability_20260802T120914Z_8b9c2f827d59/manifest.json",
+      "key": "reserved_seed_ranges_not_executed.heldout",
+      "range": [
+        1950,
+        1999
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_paired_utility_20260731T172244Z_44bc5d206ddf/manifest.json",
+      "key": "seed_range",
+      "range": [
+        740,
+        759
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_paired_utility_20260731T173200Z_aceee1a6eca2/manifest.json",
+      "key": "seed_range",
+      "range": [
+        760,
+        839
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_paired_utility_20260731T174415Z_ddd061fcec73/manifest.json",
+      "key": "seed_range",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_paired_utility_20260731T184353Z_cca94dad8cbe/manifest.json",
+      "key": "seed_range",
+      "range": [
+        980,
+        1059
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_phase_c_20260731T094646Z_9dc037acb04c/manifest.json",
+      "key": "seed_range",
+      "range": [
+        720,
+        739
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_phase_c_20260731T155344Z_f7176579eb82/manifest.json",
+      "key": "seed_range",
+      "range": [
+        720,
+        739
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T082819Z_d11430b80e3f/manifest.json",
+      "key": "seed_partitions.smoke",
+      "range": [
+        700,
+        719
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T082819Z_d11430b80e3f/manifest.json",
+      "key": "seed_partitions.development",
+      "range": [
+        720,
+        799
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T082819Z_d11430b80e3f/manifest.json",
+      "key": "seed_partitions.validation",
+      "range": [
+        800,
+        839
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T082819Z_d11430b80e3f/manifest.json",
+      "key": "seed_partitions.reserved",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T082819Z_d11430b80e3f/manifest.json",
+      "key": "seed_partitions.heldout",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T085550Z_582bb0cce256/manifest.json",
+      "key": "seed_partitions.smoke",
+      "range": [
+        700,
+        719
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T085550Z_582bb0cce256/manifest.json",
+      "key": "seed_partitions.development",
+      "range": [
+        720,
+        799
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T085550Z_582bb0cce256/manifest.json",
+      "key": "seed_partitions.validation",
+      "range": [
+        800,
+        839
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T085550Z_582bb0cce256/manifest.json",
+      "key": "seed_partitions.reserved",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T085550Z_582bb0cce256/manifest.json",
+      "key": "seed_partitions.heldout",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T090445Z_1cd7978961a2/manifest.json",
+      "key": "seed_partitions.smoke",
+      "range": [
+        700,
+        719
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T090445Z_1cd7978961a2/manifest.json",
+      "key": "seed_partitions.development",
+      "range": [
+        720,
+        799
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T090445Z_1cd7978961a2/manifest.json",
+      "key": "seed_partitions.validation",
+      "range": [
+        800,
+        839
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T090445Z_1cd7978961a2/manifest.json",
+      "key": "seed_partitions.reserved",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T090445Z_1cd7978961a2/manifest.json",
+      "key": "seed_partitions.heldout",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T091458Z_ee38f29c0731/manifest.json",
+      "key": "seed_partitions.smoke",
+      "range": [
+        700,
+        719
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T091458Z_ee38f29c0731/manifest.json",
+      "key": "seed_partitions.development",
+      "range": [
+        720,
+        799
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T091458Z_ee38f29c0731/manifest.json",
+      "key": "seed_partitions.validation",
+      "range": [
+        800,
+        839
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T091458Z_ee38f29c0731/manifest.json",
+      "key": "seed_partitions.reserved",
+      "range": [
+        840,
+        899
+      ]
+    },
+    {
+      "source": "outputs/probemem_v2/runs/probemem_v2_smoke_20260731T091458Z_ee38f29c0731/manifest.json",
+      "key": "seed_partitions.heldout",
+      "range": [
+        900,
+        979
+      ]
+    },
+    {
+      "source": "outputs/response_calibration/development_v1/response_calibration_20261013T105913Z_bfbd86c7c1dd/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        8916,
+        9099
+      ]
+    },
+    {
+      "source": "outputs/response_model_qualification/development_v1/response_qualification_20261020T092011Z_636d6b1f9e39/manifest.json",
+      "key": "seed_scope.proposed_ranges[0]",
+      "range": [
+        26000,
+        26053
+      ]
+    },
+    {
+      "source": "outputs/response_model_qualification/development_v1/response_qualification_20261020T092011Z_636d6b1f9e39/manifest.json",
+      "key": "seed_scope.proposed_ranges[1]",
+      "range": [
+        26100,
+        26126
+      ]
+    },
+    {
+      "source": "outputs/response_model_qualification/development_v1/response_qualification_20261020T092011Z_636d6b1f9e39/manifest.json",
+      "key": "seed_scope.proposed_ranges[2]",
+      "range": [
+        26200,
+        26253
+      ]
+    },
+    {
+      "source": "outputs/response_model_qualification/development_v1/response_qualification_20261020T092011Z_636d6b1f9e39/manifest.json",
+      "key": "seed_scope.proposed_ranges[3]",
+      "range": [
+        26300,
+        26599
+      ]
+    },
+    {
+      "source": "outputs/selected_response/qualification_v1/selected_response_20261019T152657Z_6db2a7662590/manifest.json",
+      "key": "config.reserved_seeds[0]",
+      "range": [
+        24352,
+        24499
+      ]
+    },
+    {
+      "source": "outputs/selected_response/qualification_v1/selected_response_20261019T152657Z_6db2a7662590/manifest.json",
+      "key": "config.reserved_seeds[1]",
+      "range": [
+        24644,
+        24999
+      ]
+    },
+    {
+      "source": "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/manifest.json",
+      "key": "config.smoke.",
+      "range": [
+        21200,
+        21208
+      ]
+    },
+    {
+      "source": "outputs/short_probe_reference/development_v1/short_probe_reference_20261019T042309Z_39300e556379/manifest.json",
+      "key": "config.main.",
+      "range": [
+        20200,
+        20847
+      ]
+    },
+    {
+      "source": "outputs/stale_reprobe/qualification_v1/stale_reprobe_20261019T125614Z_fdb617869c37/manifest.json",
+      "key": "config.reserved_seeds",
+      "range": [
+        22609,
+        22799
+      ]
+    },
+    {
+      "source": "outputs/state_capsule/qualification_v1/state_capsule_20261016T174414Z_70e34299bef0/manifest.json",
+      "key": "config.",
+      "range": [
+        18800,
+        18811
+      ]
+    },
+    {
+      "source": "outputs/state_capsule/qualification_v2/state_capsule_20261016T180022Z_4498cf0f4fb5/manifest.json",
+      "key": "config.",
+      "range": [
+        19000,
+        19011
+      ]
+    },
+    {
+      "source": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/manifest.json",
+      "key": "config.smoke.",
+      "range": [
+        18000,
+        18011
+      ]
+    },
+    {
+      "source": "outputs/strong_chronological_reference/development_v1/strong_chronological_reference_20261016T160111Z_3d4da2d89a1e/manifest.json",
+      "key": "config.main.",
+      "range": [
+        18100,
+        18315
+      ]
+    }
+  ],
+  "started_utc": "2026-10-27T13:30:05.574759+00:00",
+  "captured_after_collection_started": true,
+  "original_checker_gap": "NESTED_INTEGER_RANGE_ARRAYS_NOT_CHECKED_BY_ORIGINAL_JSON_VISITOR",
+  "allocation_or_model_or_seed_changed": false,
+  "original_source_and_data_unchanged": true,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 2502577700,
+  "new_environment_interactions": 0,
+  "new_model_fits": 0,
+  "online_LLM_API_calls": 0
+}

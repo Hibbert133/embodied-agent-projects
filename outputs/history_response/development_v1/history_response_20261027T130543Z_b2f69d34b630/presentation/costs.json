@@ -1,0 +1,197 @@
+{
+  "by_phase": {
+    "SOFTWARE": {
+      "executions": 108,
+      "completed_executions": 108,
+      "control_steps": 8196,
+      "all_resets": 5508,
+      "physical_frames": 2794980,
+      "fixed_policy_queries": 4032,
+      "independent_policy_queries": 4032,
+      "independent_saved_forecast_rows": 0,
+      "collection_wall_s": 318.4860855,
+      "record_audit_wall_s": 43.0378211,
+      "collection_network_guard": {
+        "attempted_network_calls": 0
+      },
+      "collection_fit_guard": {
+        "attempted_fits": 0
+      }
+    },
+    "TRAIN": {
+      "executions": 324,
+      "completed_executions": 324,
+      "control_steps": 21059,
+      "all_resets": 16524,
+      "physical_frames": 8367295,
+      "fixed_policy_queries": 11040,
+      "independent_policy_queries": 11040,
+      "independent_saved_forecast_rows": 0,
+      "collection_wall_s": 905.1605069,
+      "record_audit_wall_s": 104.3618429,
+      "collection_network_guard": {
+        "attempted_network_calls": 0
+      },
+      "collection_fit_guard": {
+        "attempted_fits": 0
+      }
+    },
+    "CAL": {
+      "executions": 108,
+      "completed_executions": 108,
+      "control_steps": 6633,
+      "all_resets": 5508,
+      "physical_frames": 2787165,
+      "fixed_policy_queries": 3684,
+      "independent_policy_queries": 3684,
+      "independent_saved_forecast_rows": 7776,
+      "collection_wall_s": 302.4121002,
+      "record_audit_wall_s": 35.5007225,
+      "collection_network_guard": {
+        "attempted_network_calls": 0
+      },
+      "collection_fit_guard": {
+        "attempted_fits": 0
+      }
+    },
+    "QUAL": {
+      "executions": 324,
+      "completed_executions": 324,
+      "control_steps": 22019,
+      "all_resets": 16524,
+      "physical_frames": 8372095,
+      "fixed_policy_queries": 11028,
+      "independent_policy_queries": 11028,
+      "independent_saved_forecast_rows": 26496,
+      "collection_wall_s": 891.8169828,
+      "record_audit_wall_s": 107.6803453,
+      "collection_network_guard": {
+        "attempted_network_calls": 0
+      },
+      "collection_fit_guard": {
+        "attempted_fits": 0
+      }
+    }
+  },
+  "total": {
+    "executions": 864,
+    "control_steps": 57907,
+    "all_resets": 44064,
+    "physical_frames": 22321535,
+    "fixed_policy_queries": 29784,
+    "independent_policy_queries": 29784,
+    "independent_saved_forecast_rows": 34272,
+    "primary_scientific_ridge_solves": 93,
+    "independent_augmented_lstsq_solves": 87,
+    "independent_eigendecompositions": 6,
+    "training_main_and_literal_bank_query_checks": 83,
+    "main_training_bank_forecast_rows": 23904,
+    "literal_training_bank_forecast_rows": 23904,
+    "actual_online_local_forecast_counts": {
+      "trajectories_started": 2142,
+      "zero_rows": 5712,
+      "trajectories_completed": 2142,
+      "linear_rows": 28560
+    },
+    "online_LLM_API_calls": 0,
+    "neural_updates": 0,
+    "C4_C8_fits": 0,
+    "model_used_for_control": false,
+    "prefreeze_test_executions": 91,
+    "unique_new_tests": 32,
+    "old_source_bound_checks_reused": 2286,
+    "prefreeze_measured_synthetic_solves": 50,
+    "prefreeze_measured_synthetic_lstsq": 42,
+    "prefreeze_measured_synthetic_eigendecompositions": 6,
+    "earlier_two_synthetic_suite_counts_from_asserted_ledger": {
+      "solves": 100,
+      "lstsq": 84,
+      "eigendecompositions": 12,
+      "not_outer_guard_measured": true
+    },
+    "old_simulation_tests_repeated": false
+  },
+  "historical_sources_separate": {
+    "old_training_samples_reused": 0,
+    "old_learned_weights_loaded": 0,
+    "prior_paired_trial": {
+      "path": "outputs/paired_packet_response/development_v1/paired_packet_20261027T101154Z_bb74926c3c07/presentation/costs.json",
+      "sha256": "c88341ebf9d843e18cf758295ff9dd049644dfe8b36122b23078509c87f14c7b",
+      "total": {
+        "executions": 864,
+        "control_steps": 56801,
+        "all_resets": 44064,
+        "physical_frames": 22316005,
+        "fixed_policy_queries": 30132,
+        "independent_policy_queries": 30132,
+        "primary_scientific_ridge_solves": 57,
+        "independent_augmented_lstsq_solves": 57,
+        "training_main_and_literal_bank_query_checks": 81,
+        "actual_online_forecast_counts": {
+          "trajectories_started": 1680,
+          "zero_rows": 5376,
+          "trajectories_completed": 1680,
+          "linear_rows": 21504
+        },
+        "online_LLM_API_calls": 0,
+        "neural_updates": 0,
+        "C4_C8_fits": 0,
+        "new_model_used_for_control": false,
+        "prefreeze_test_executions": 171,
+        "prefreeze_synthetic_ridge_solves": 15,
+        "prefreeze_synthetic_lstsq_solves": 5,
+        "prefreeze_synthetic_inverse_checks": 5,
+        "unique_new_tests": 37,
+        "old_source_bound_tests_reused": 2228,
+        "old_simulation_tests_repeated": false,
+        "primary_bootstrap_replicates": 10000,
+        "independent_bootstrap_reconstruction_replicates": 10000
+      }
+    },
+    "source_engineering_history": "PRIOR_PAIRED_TRIAL_LEDGER_RETAINS_NATIVE_PI_PID_SOURCES_NOT_DOUBLE_ADDED"
+  },
+  "stage_process_wall_seconds": {
+    "CAL_collect_receipt.json": 308.7521679,
+    "CAL_evaluate_receipt.json": 1.4901047,
+    "CAL_record_audit_receipt.json": 35.5236801,
+    "CAL_statistics_audit_receipt.json": 1.2589971,
+    "model_lock_receipt.json": 0.7771515,
+    "QUAL_collect_receipt.json": 895.6564712,
+    "QUAL_evaluate_receipt.json": 3.2121346,
+    "QUAL_record_audit_receipt.json": 107.7359549,
+    "QUAL_statistics_audit_receipt.json": 3.0710045,
+    "SOFTWARE_audit_receipt.json": 43.0707283,
+    "SOFTWARE_collect_receipt.json": 322.563621,
+    "training_audit_receipt.json": 9.1780704,
+    "TRAIN_audit_receipt.json": 104.4285738,
+    "TRAIN_collect_receipt.json": 912.1217678,
+    "train_receipt.json": 4.1197511,
+    "freeze_validation_s": 232.6148126,
+    "nested_seed_scope_supplement_s": 2.5025777
+  },
+  "parallel_or_nested_durations_not_additive_elapsed_time": true,
+  "full_task_tail_evaluated": false,
+  "analysis_guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  }
+}
