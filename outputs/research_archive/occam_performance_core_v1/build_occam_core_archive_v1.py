@@ -1,0 +1,50 @@
+from pathlib import Path
+import sys
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects');sys.path.insert(0,str(ROOT))
+from src.analysis import response_qualification_io_v1 as io
+source=io.git('rev-parse','HEAD');parent='7ff790502118e695a6ded410c9c3a8c21731977c'
+assert io.read(ROOT/'outputs/occam_performance_core/delivery_v1/complete.json')['integrity']=='PASSED' and not io.git('status','--porcelain','--untracked-files=no')
+out=ROOT/'outputs/research_archive/occam_performance_core_v1';out.mkdir(exist_ok=False)
+s=(ROOT/'outputs/research_archive/policy_mode_diagnostic_v1/archive_checkpoint.py').read_text('utf8')
+for old,new in (("PARENT='9f655181461627bf256e1ff72973814534676227'","PARENT='"+parent+"'"),
+    ("SOURCE='2e1e705a3c96bb583a8ebce0a527ff906891c164'","SOURCE='"+source+"'"),
+    ('outputs/research_archive/controller_agreement_v1/catalog.json','outputs/research_archive/policy_mode_diagnostic_v1/catalog.json'),
+    ('research_archive_build_policy_mode_20261028_2e1e705a3c96','research_archive_build_occam_core_20261028_'+source[:12]),
+    ('ARCHIVE_FILE_CATALOG_POLICY_MODE_20261028.json','ARCHIVE_FILE_CATALOG_OCCAM_CORE_20261028.json'),
+    ("name.startswith(('outputs/controller_agreement/','outputs/policy_mode_diagnostic/'))","name.startswith(('outputs/controller_agreement/','outputs/policy_mode_diagnostic/','outputs/occam_performance_core/'))"),
+    ('Archive TRAIN-only policy-mode functional diagnostic; zero new physics, fits or online LLM','Archive standard OCCAM-related performance core and software verification; no robot results')):
+    assert old in s,old;s=s.replace(old,new)
+s=s.replace('publish bounded controller_agreement and policy_mode_diagnostic jsonl.gz after decompressed scan','publish bounded completed controller_agreement, policy_mode_diagnostic and occam_performance_core artifacts after decompressed scan')
+i=s.index("    note=f'''");j=s.index('    extras={',i)
+note=f'''# 最新归档：OCCAM相关递归表现强参考的软件核心
+
+本地来源 {source}，核心冻结14fb5796887350cef18f266b3a300d29ed43ffa7，父归档 {parent}。
+本阶段补已要求的强参考，尚非完整OCCAM复现、机器人基线资格或新算法。
+固定原论文及作者源f0d3afb，独立实现公开因果历史、元基函数网络/可微滤波、
+NumPy生产推理、带符号奖励不确定性评分、声明/反馈/短窗顺序及JSON导出。
+四合法T有限枚举不冒充作者连续/进化搜索；未来原生主机和数据协议尚缺。
+
+18项主运行时＋24项隔离运行时检查，去重24唯一；旧2463按源哈希复用共2487。
+12个锁定作者纯数学函数/NumPy/Torch/整段高斯条件化对照，最大差3.330669e-15；
+跨运行时导出推理差1.110223e-16。这是实现一致性，不是机器人预测或任务收益。
+构造工作明确含1次合成Adam、12次作者逆、主NumPy12次求解、隔离NumPy37次、
+Torch26次求解；完整谱/前向和时间见costs.json，显式入口不是全部底层FLOPs。
+
+新增机器人环境/重置/控制步/帧/政策查询、机器人科学模型训练及在线LLM API均0；
+未用旧TRAIN/CAL/QUAL训练或调阈值，未安装库，既有CPU环境和机器人环境保持。
+元数据CRLF字节核对失败与原件保留，仅规范来源JSON和写入行，不重复数值检查
+或优化。编译、两环境依赖、完整秘密及实际暂存BASIC/EXTRA/解压、差异/字节检查通过。
+
+完整中文报告reports/occam_performance_core_v1_zh.md。下一阶段仍需公开性能窗口、
+全500步截止损失、独立TRAIN/CAL/自身历史评价、真实反馈主机和全部费用协议。
+不能用静态风险回归/小协方差/测试通过冒称OCCAM比较或新方法。A、旧负结果、
+全部强对照和CCF A完整目标保持；当前未建立新颖性或独立任务优势。
+
+旧原始大日志、分片和恢复副本均保留。源树发布/省略、大小与SHA见
+ARCHIVE_FILE_CATALOG_OCCAM_CORE_20261028.json；不声称旧省略数据在远端。
+普通快进，无强推、合并或删除历史；归档不计研究贡献。
+'''
+tail='\n完整本地源树{len(catalog)}项，发布{sum(r["published"] for r in catalog)}项；保留完整省略目录。\n'
+s=s[:i]+"    note=f'''"+note+tail+"'''\n"+s[j:];compile(s,'archive_checkpoint.py','exec');(out/'archive_checkpoint.py').write_bytes(s.encode('utf8'))
+p=(ROOT/'outputs/research_archive/policy_mode_diagnostic_v1/push_policy_mode_archive_v1.py').read_text('utf8').replace('outputs/research_archive/policy_mode_diagnostic_v1','outputs/research_archive/occam_performance_core_v1')
+(out/'push_occam_core_archive_v1.py').write_bytes(p.encode('utf8'));print(source)

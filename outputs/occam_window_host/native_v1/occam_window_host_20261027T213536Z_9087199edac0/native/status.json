@@ -1,0 +1,55 @@
+{
+  "experiment_run_id": "occam_window_host_20261027T213536Z_9087199edac0",
+  "manifest_id": "0515d338dcdf6eadb636ded9cf1a941005afb6d5eab998c39114880a0d04a902",
+  "source_git_commit": "9087199edac099f13e29932e4bf28d6c66d25745",
+  "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+  "allocated_executions": 36,
+  "executions": 36,
+  "control_steps": 4203,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 1836,
+      "simulation_attempts": 187803,
+      "simulation_frames_attempted": 939015,
+      "simulation_completed": 187803,
+      "simulation_frames_completed": 939015,
+      "reset_completed": 1836
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 1800,
+        "simulation_attempts": 180000,
+        "simulation_frames_attempted": 900000,
+        "simulation_completed": 180000,
+        "simulation_frames_completed": 900000,
+        "reset_completed": 1800
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 36,
+        "simulation_attempts": 3600,
+        "simulation_frames_attempted": 18000,
+        "simulation_completed": 3600,
+        "simulation_frames_completed": 18000,
+        "reset_completed": 36
+      },
+      "CONTROL": {
+        "simulation_attempts": 4203,
+        "simulation_frames_attempted": 21015,
+        "simulation_completed": 4203,
+        "simulation_frames_completed": 21015
+      }
+    }
+  },
+  "events": 30050,
+  "private_records": 236,
+  "failure": null,
+  "wall_ns": 318012144600,
+  "network_guard": {
+    "attempted_network_calls": 0
+  },
+  "online_LLM_API_calls": 0,
+  "scientific_model_training": 0,
+  "untrained_software_contract": true,
+  "execution_git_head": "9087199edac099f13e29932e4bf28d6c66d25745",
+  "publication_goal_complete": false
+}

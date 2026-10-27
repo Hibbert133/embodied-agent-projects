@@ -1,0 +1,44 @@
+{
+  "integrity": "FAILED",
+  "manifest_id": "0515d338dcdf6eadb636ded9cf1a941005afb6d5eab998c39114880a0d04a902",
+  "source_git_commit": "1d4962396460724924be2b7e9b67316ca02a1cb5",
+  "source_sha256": {
+    "src/analysis/occam_window_audit_v2.py": "daf7de86b7d0ffb9df9d99b5548bd2198063bf921212cf4511bbbc30b3bb8fe1",
+    "scripts/audit_occam_window_host_v2.py": "28079e9cbf5d46d8a33c91cb732d3c25a90ebd645c5ed12e6794a6aa89a214c5",
+    "docs/protocols/occam_window_audit_repair_v2_zh.md": "215253f26726a07fcec489c8524e6a47baed75ffbb278537d0cf03ec767a6885"
+  },
+  "result": null,
+  "failure": {
+    "type": "ValueError",
+    "message": "sequence and clock cursors",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\audit_occam_window_host_v2.py\", line 29, in main\n    result=audit(arg.manifest)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\occam_window_audit_v2.py\", line 195, in audit\n    previous=bind_case(manifest,spec,case,es,ps,previous)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\occam_window_envelope_v1.py\", line 10, in bind_case\n    require(type(previous) is tuple and len(previous)==4,'sequence and clock cursors')\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 40, in require\n    if not ok:raise ValueError(message)\nValueError: sequence and clock cursors\n"
+  },
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 36,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 5000,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 18793182900,
+  "new_environment_interactions": 0,
+  "scientific_model_training": 0,
+  "online_LLM_API_calls": 0,
+  "original_native_records_unchanged": true
+}

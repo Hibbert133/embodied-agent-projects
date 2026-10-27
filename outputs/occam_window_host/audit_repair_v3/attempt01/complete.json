@@ -1,0 +1,118 @@
+{
+  "integrity": "PASSED",
+  "manifest_id": "0515d338dcdf6eadb636ded9cf1a941005afb6d5eab998c39114880a0d04a902",
+  "source_git_commit": "b623f39b9408d633da274447b2191e295df503d7",
+  "source_sha256": {
+    "src/analysis/occam_window_audit_v3.py": "1d65bdbceb0108a8c0564c7a78780671a5b0ebd71abae7638792691321240329",
+    "scripts/audit_occam_window_host_v3.py": "896ed91eee7b67fe996b5b32334b13abf8fc8c2991d22ad4551b3ec00fbc3884",
+    "tests/test_occam_window_population_reader_v3.py": "9eb277beeaaa707055f8e4b1681d08e4a60b01e4edb856a07589d92a082bd9a1",
+    "docs/protocols/occam_window_population_reader_v3_zh.md": "62c0ce70d585f0772d69030df0bb8eecb9173d3c035ea66abf89d22f8a8dfc1b"
+  },
+  "result": {
+    "integrity": "PASSED",
+    "manifest_id": "0515d338dcdf6eadb636ded9cf1a941005afb6d5eab998c39114880a0d04a902",
+    "counts": {
+      "executions": 36,
+      "control_steps": 4203,
+      "audit_fixed_policy_queries": 3845,
+      "audit_filter_updates": 142,
+      "independent_batch_solves": 24,
+      "live_fixture_pairs": 14,
+      "first_actual_command_different": 14,
+      "early_end_fixture_pairs": 4
+    },
+    "ledger": {
+      "counts": {
+        "reset_attempts": 1836,
+        "simulation_attempts": 187803,
+        "simulation_completed": 187803,
+        "simulation_frames_attempted": 939015,
+        "simulation_frames_completed": 939015,
+        "reset_completed": 1836
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 1800,
+          "simulation_attempts": 180000,
+          "simulation_completed": 180000,
+          "simulation_frames_attempted": 900000,
+          "simulation_frames_completed": 900000,
+          "reset_completed": 1800
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 36,
+          "simulation_attempts": 3600,
+          "simulation_completed": 3600,
+          "simulation_frames_attempted": 18000,
+          "simulation_frames_completed": 18000,
+          "reset_completed": 36
+        },
+        "CONTROL": {
+          "simulation_attempts": 4203,
+          "simulation_completed": 4203,
+          "simulation_frames_attempted": 21015,
+          "simulation_frames_completed": 21015
+        }
+      }
+    },
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 166,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 5000,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "independent_physics_resimulation": false,
+    "shared_actor_replay_disclosed": true,
+    "scalar_cost_and_joint_gaussian_are_independent": true,
+    "online_LLM_API_calls": 0,
+    "scientific_model_training": 0,
+    "task_benefit_or_paper_qualification": false,
+    "wall_ns": 71010373200
+  },
+  "failure": null,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 166,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 5000,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "wall_ns": 74529894800,
+  "new_environment_interactions": 0,
+  "scientific_model_training": 0,
+  "online_LLM_API_calls": 0,
+  "original_native_records_unchanged": true
+}

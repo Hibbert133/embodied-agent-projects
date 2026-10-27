@@ -1,0 +1,11 @@
+Retained from the first audit command tool output (no physical collection repeated).
+Command: .venv\Scripts\python.exe scripts/run_occam_window_host_v1.py audit --manifest outputs/occam_window_host/native_v1/occam_window_host_20261027T213536Z_9087199edac0/manifest.json
+Exit code: 1
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\scripts\run_occam_window_host_v1.py", line 23, in <module>
+    if __name__=='__main__':main()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\scripts\run_occam_window_host_v1.py", line 19, in main
+    result=audit(v.manifest)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_window_audit_v1.py", line 206, in audit
+    io.require(compare_witnesses(pw['POST_ACQUISITION']['witness'],witnesses['POST_ACQUISITION']['witness'])['comparison_equal'],'common post-acquisition native state differs')
+NameError: name 'compare_witnesses' is not defined
