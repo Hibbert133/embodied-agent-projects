@@ -1,0 +1,105 @@
+"""Source-bound two-runtime software verification; no robot population."""
+from pathlib import Path
+from time import perf_counter_ns
+from contextlib import ExitStack
+from unittest.mock import patch
+import json,shutil,subprocess,sys,unittest
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT))
+from src.analysis import response_qualification_io_v1 as io
+from src.analysis.release_learning_guard_v1 import read_only
+from src.probe import occam_performance_core_v1 as core
+from outputs.information_release.validation_v1.validate_freeze import index_bytes
+from outputs.research_archive.preflight_v1.scan_snapshot import EXTRA
+BASE=ROOT/'outputs/occam_performance_core'
+CONFIG=ROOT/'configs/movement_task/occam_performance_core_v1.json'
+TRAIN_PYTHON=Path(r'C:/Users/Administrator/Documents/ChatGPT/robotic agent/.venv-history-training-cpu22/Scripts/python.exe')
+REVIEW=Path(r'C:/Users/Administrator/Documents/ChatGPT/robotic agent/occam_primary_review_v1')
+OWN=('src/probe/occam_performance_core_v1.py','src/probe/occam_public_history_v1.py',
+    'src/analysis/occam_performance_independent_v1.py','src/analysis/occam_meta_torch_v1.py',
+    'tests/test_occam_performance_core_v1.py','tests/test_occam_meta_torch_v1.py',
+    'scripts/check_occam_core_isolated_v1.py','scripts/validate_occam_performance_core_v1.py')
+DOCS=('docs/protocols/occam_performance_core_v1_zh.md','docs/research/occam_performance_reference_decision_v1_zh.md','configs/movement_task/occam_performance_core_v1.json')
+
+
+def config():
+    return dict(protocol='OCCAM_PERFORMANCE_CORE_SOFTWARE_V1',classification='STANDARD_REFERENCE_CORE_NOT_ROBOT_BASELINE_QUALIFICATION',
+        new_unique_tests=24,main_runtime_tests=18,isolated_runtime_tests=24,upstream_contract_cases=12,
+        isolated_python=str(TRAIN_PYTHON),upstream_commit='f0d3afb3b9369d19b3ed3cd20408c88628296b02',
+        formal_synthetic_Adam_steps=1,maximum_software_attempts=4,maximum_cumulative_synthetic_Adam_steps=4,
+        max_linear_solve_per_kind_per_attempt=1000,max_covariance_spectra_per_kind_per_attempt=5000,max_basis_forward_per_attempt=5000,
+        source_helper_inverse_calls_per_attempt=12,scientific_model_training=0,new_robot_interactions=0,new_robot_policy_queries=0,
+        online_LLM_API_calls=0,old_TRAIN_CAL_QUAL_used=False,new_robot_seed_allocations=0,new_packages_installed=0,
+        paper_reproduction_complete=False,CCF_A_goal_complete=False)
+
+
+def main():
+    started=perf_counter_ns();out=BASE/'software_validation_v1';out.mkdir(parents=True,exist_ok=False)
+    io.require(not io.git('diff','--name-only') and not io.git('diff','--cached','--name-only'),'unchanged old tracked sources and empty index')
+    io.require(io.read(CONFIG)==config(),'exact software-only scope')
+    old_path=ROOT/'outputs/policy_mode_diagnostic/freeze_validation_v1/source_reuse.json';phase_path=ROOT/'outputs/policy_mode_diagnostic/freeze_validation_v1/complete.json'
+    old=io.read(old_path);phase=io.read(phase_path);io.require(old['integrity']==phase['integrity']=='PASSED' and phase['unique_test_total']==2463,'2463 source-bound prior checks')
+    prior={**old['source_sha256'],**phase['source_sha256']}
+    for n,h in prior.items():io.require(io.sha(ROOT/n)==h,'unchanged previously tested source '+n)
+    review=BASE/'source_review_v1';review.mkdir(exist_ok=False);shutil.copyfile(REVIEW/'provenance.json',review/'provenance.json')
+    before={n:io.sha(ROOT/n) for n in (*OWN,*DOCS)};io.write(out/'source_before_tests.json',before);guard={};ids=[];spectra=0
+    eigen=__import__('numpy').linalg.eigvalsh
+    def counted_eigen(*args,**kwargs):
+        nonlocal spectra
+        spectra+=1;io.require(spectra<=5000,'root covariance-spectrum cap');return eigen(*args,**kwargs)
+    with (out/'main_runtime_tests.log').open('x',encoding='utf8',newline='\n') as log,read_only(guard,max_solve=1000),patch('numpy.linalg.eigvalsh',counted_eigen):
+        suite=unittest.defaultTestLoader.loadTestsFromName('tests.test_occam_performance_core_v1')
+        def collect(s):
+            for t in s:
+                if isinstance(t,unittest.TestSuite):collect(t)
+                else:ids.append(t.id())
+        collect(suite);result=unittest.TextTestRunner(stream=log,verbosity=2).run(suite)
+    io.write(out/'main_runtime_tests.json',dict(success=result.wasSuccessful(),tests=result.testsRun,ids=ids,guard=guard,covariance_spectra=spectra))
+    io.require(result.wasSuccessful() and result.testsRun==len(set(ids))==18,'18 main runtime checks')
+    def run(name,args):
+        t=perf_counter_ns();p=subprocess.run(args,cwd=ROOT,capture_output=True,text=True,encoding='utf8',errors='replace')
+        io.write(out/name,dict(args=args,returncode=p.returncode,stdout=p.stdout,stderr=p.stderr,wall_ns=perf_counter_ns()-t));io.require(p.returncode==0,name)
+    run('isolated_process.json',[str(TRAIN_PYTHON),'scripts/check_occam_core_isolated_v1.py','--output',str(out/'isolated'),
+        '--upstream-repository',str(REVIEW/'source'),'--source-provenance',str(review/'provenance.json')])
+    isolated=io.read(out/'isolated/complete.json');io.require(isolated['integrity']=='PASSED' and isolated['tests']==24 and not isolated['skipped'],'all24 isolated checks')
+    unique=set(ids)|set(isolated['ids']);io.require(len(unique)==24,'do not count repeated NumPy tests twice')
+    fixture=io.read(out/'isolated/constructed_export_fixture.json');export_guard={}
+    with read_only(export_guard):
+        actual=core.basis_forward(fixture['basis'],fixture['history'],fixture['descriptor'])
+        import numpy as np
+        error=float(np.max(abs(actual-np.asarray(fixture['expected_basis']))));io.require(error<=1e-12,'current NumPy2 actor consumes isolated Torch export')
+    io.write(out/'export_actor_check.json',dict(integrity='PASSED',max_absolute_difference=error,guard=export_guard,scientific_model=False))
+    io.write(out/'source_reuse.json',dict(integrity='PASSED',unique_tests=2487,new_unique_tests=24,reused_unique_tests=2463,source_sha256=prior,
+        prior_receipt_sha256={p.relative_to(ROOT).as_posix():io.sha(p) for p in (old_path,phase_path)},old_simulation_tests_repeated=False))
+    run('compile.json',[sys.executable,'-m','compileall','-q','src','scripts','tests']);run('main_dependencies.json',[sys.executable,'-m','pip','check'])
+    run('isolated_dependencies.json',[str(TRAIN_PYTHON),'-m','pip','check'])
+    run('isolated_runtime.json',[str(TRAIN_PYTHON),'-c',"import sys,torch,numpy,json; print(json.dumps({'python':sys.version,'executable':sys.executable,'torch':torch.__version__,'numpy':numpy.__version__,'cuda':torch.cuda.is_available(),'torch_file':torch.__file__,'numpy_file':numpy.__file__}))"])
+    runtime=json.loads(io.read(out/'isolated_runtime.json')['stdout']);critical=[TRAIN_PYTHON,TRAIN_PYTHON.parent.parent/'pyvenv.cfg',Path(runtime['torch_file']),Path(runtime['numpy_file'])]
+    io.write(out/'runtime_entry_hashes.json',dict(runtime=runtime,critical_entry_sha256={str(p):io.sha(p) for p in critical},new_packages_installed=0,
+        complete_old_runtime_manifest_sha256=io.sha(ROOT/'outputs/observable_history_transfer/runtime_v1/environment.json'),full_binary_supply_chain_reverification_claimed=False))
+    names=set(OWN)|set(DOCS)|{p.relative_to(ROOT).as_posix() for p in review.iterdir() if p.is_file()}
+    development=BASE/'development_validation_v1'
+    if development.exists():names|={p.relative_to(ROOT).as_posix() for p in development.rglob('*') if p.is_file()}
+    def stage(label):
+        nonlocal names
+        names|={p.relative_to(ROOT).as_posix() for p in out.rglob('*') if p.is_file()}
+        path=out/(label+'.nul');names.add(path.relative_to(ROOT).as_posix());path.write_bytes(b'\0'.join(n.encode() for n in sorted(names))+b'\0')
+        io.git('-c','maintenance.auto=false','-c','gc.auto=0','add','--pathspec-from-file='+path.relative_to(ROOT).as_posix(),'--pathspec-file-nul')
+    def check():
+        actual=index_bytes(names)
+        for n in actual:
+            data=(ROOT/n).read_bytes()
+            if b'\0' not in data:
+                for label,p in EXTRA.items():io.require(p.search(data.decode('utf8',errors='replace')) is None,'actual staged credential '+label+' '+n)
+        io.require(not io.git('diff','--check') and not io.git('diff','--cached','--check'),'ordinary and staged diff');return actual
+    stage('owned_initial');run('full_tracked_secrets.json',[sys.executable,'scripts/check_tracked_secrets.py'])
+    stage('owned_checked');actual=check();io.write(out/'index_disk_proof.json',dict(integrity='PASSED',actual_index_extra_secret_scan=True,object_sha256=actual))
+    for n,h in before.items():io.require(io.sha(ROOT/n)==h,'tested source changed '+n)
+    io.write(out/'complete.json',dict(integrity='PASSED',classification='STANDARD_REFERENCE_CORE_NOT_ROBOT_BASELINE_QUALIFICATION',source_sha256=before,
+        unique_test_total=2487,new_unique_tests=24,reused_unique_tests=2463,root_guard=guard,isolated_guard=isolated['guard'],
+        isolated_operations=isolated['operation_counts'],upstream_contract_cases=12,max_export_basis_difference=error,
+        new_robot_interactions=0,scientific_model_training=0,synthetic_Adam_steps=isolated['operation_counts']['synthetic_Adam_steps'],online_LLM_API_calls=0,
+        paper_reproduction_complete=False,publication_goal_complete=False,receipt_sha256={p.relative_to(out).as_posix():io.sha(p) for p in out.rglob('*') if p.is_file()},wall_ns=perf_counter_ns()-started))
+    stage('owned_final');check();print(dict(integrity='PASSED',owned_objects=len(names),new_unique_tests=24,upstream_contract_cases=12,synthetic_Adam_steps=1,robot_data_used=False),flush=True)
+
+
+if __name__=='__main__':main()

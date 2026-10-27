@@ -1,0 +1,142 @@
+{
+  "integrity": "PASSED",
+  "tests": 24,
+  "ids": [
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_declaration_used_once_and_basis_is_saved",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_forecast_separates_latent_and_measurement_uncertainty",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_inputs_not_mutated",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_linear_reward_propagates_cross_covariance",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_missing_history_and_terminal_feedback_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_nested_oracle_future_unknown_fields_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_non_square_sequence_matches_whole_gaussian_conditioning",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_orientation_private_and_invalid_covariance_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_partial_end_keeps_posterior_and_elapsed_steps",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_pending_and_budget_cannot_be_bypassed",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_public_empty_history_is_masked_with_real_initial",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_real_history_masks_and_candidate_only_feature_difference",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_scalar_update_known_values",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_signed_confidence_score_changes_choice",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_stable_ties_use_given_candidate_order",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_stale_history_nonfloat32_send_and_budget_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_tamper_mismatched_gain_early_feedback_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_zero_process_noise_and_rank_deficient_prior",
+    "tests.test_occam_meta_torch_v1.MetaPerformanceTests.test_exported_numpy_basis_matches_tensor",
+    "tests.test_occam_meta_torch_v1.MetaPerformanceTests.test_meta_gradient_matches_central_difference",
+    "tests.test_occam_meta_torch_v1.MetaPerformanceTests.test_meta_support_is_explicit_and_full_loss_has_all_rows",
+    "tests.test_occam_meta_torch_v1.MetaPerformanceTests.test_one_synthetic_optimizer_step_updates_all_parameter_families",
+    "tests.test_occam_meta_torch_v1.MetaPerformanceTests.test_tensor_filter_matches_numpy_and_joint_conditioning",
+    "tests.test_occam_meta_torch_v1.MetaPerformanceTests.test_transposed_basis_and_singular_measurement_rejected"
+  ],
+  "skipped": 0,
+  "guard": {
+    "counts": {
+      "forbidden_physics_import_attempts": 0,
+      "old_experiment_data_open_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_physics": 0,
+    "online_LLM_API_calls": 0
+  },
+  "operation_counts": {
+    "numpy_covariance_spectra": 182,
+    "numpy_filter_entries": 27,
+    "numpy_solve_attempts": 37,
+    "basis_forward_calls": 10,
+    "torch_filter_entries": 28,
+    "torch_covariance_spectra": 82,
+    "torch_solve_attempts": 26,
+    "synthetic_Adam_steps": 1,
+    "reviewed_upstream_inverse_attempts": 12
+  },
+  "source_contract_cases": [
+    {
+      "bases": 1,
+      "outputs": 1,
+      "replicate": 0,
+      "max_absolute_difference": 0.0
+    },
+    {
+      "bases": 1,
+      "outputs": 1,
+      "replicate": 1,
+      "max_absolute_difference": 5.551115123125783e-17
+    },
+    {
+      "bases": 1,
+      "outputs": 1,
+      "replicate": 2,
+      "max_absolute_difference": 2.7755575615628914e-17
+    },
+    {
+      "bases": 3,
+      "outputs": 1,
+      "replicate": 0,
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "bases": 3,
+      "outputs": 1,
+      "replicate": 1,
+      "max_absolute_difference": 1.4432899320127035e-15
+    },
+    {
+      "bases": 3,
+      "outputs": 1,
+      "replicate": 2,
+      "max_absolute_difference": 1.8318679906315083e-15
+    },
+    {
+      "bases": 3,
+      "outputs": 2,
+      "replicate": 0,
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "bases": 3,
+      "outputs": 2,
+      "replicate": 1,
+      "max_absolute_difference": 1.3322676295501878e-15
+    },
+    {
+      "bases": 3,
+      "outputs": 2,
+      "replicate": 2,
+      "max_absolute_difference": 2.220446049250313e-16
+    },
+    {
+      "bases": 5,
+      "outputs": 3,
+      "replicate": 0,
+      "max_absolute_difference": 1.7208456881689926e-15
+    },
+    {
+      "bases": 5,
+      "outputs": 3,
+      "replicate": 1,
+      "max_absolute_difference": 1.7763568394002505e-15
+    },
+    {
+      "bases": 5,
+      "outputs": 3,
+      "replicate": 2,
+      "max_absolute_difference": 3.3306690738754696e-15
+    }
+  ],
+  "upstream_commit": "f0d3afb3b9369d19b3ed3cd20408c88628296b02",
+  "upstream_file_sha256": "512374b35662360c27be5e2fe92293744cdf163d71c339484c48e797529a8984",
+  "only_reviewed_upstream_function_executed": true,
+  "upstream_training_and_collection_not_executed": true,
+  "runtime": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.2.2+cpu",
+    "numpy": "1.26.4",
+    "cuda": false,
+    "threads": 1
+  },
+  "wall_ns": 2808197900,
+  "new_physics": 0,
+  "scientific_model_training": 0,
+  "online_LLM_API_calls": 0
+}

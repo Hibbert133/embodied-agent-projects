@@ -1,0 +1,48 @@
+{
+  "success": true,
+  "tests": 18,
+  "ids": [
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_declaration_used_once_and_basis_is_saved",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_forecast_separates_latent_and_measurement_uncertainty",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_inputs_not_mutated",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_linear_reward_propagates_cross_covariance",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_missing_history_and_terminal_feedback_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_nested_oracle_future_unknown_fields_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_non_square_sequence_matches_whole_gaussian_conditioning",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_orientation_private_and_invalid_covariance_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_partial_end_keeps_posterior_and_elapsed_steps",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_pending_and_budget_cannot_be_bypassed",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_public_empty_history_is_masked_with_real_initial",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_real_history_masks_and_candidate_only_feature_difference",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_scalar_update_known_values",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_signed_confidence_score_changes_choice",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_stable_ties_use_given_candidate_order",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_stale_history_nonfloat32_send_and_budget_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_tamper_mismatched_gain_early_feedback_rejected",
+    "tests.test_occam_performance_core_v1.PerformanceCoreTests.test_zero_process_noise_and_rank_deficient_prior"
+  ],
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 12,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 1000,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "covariance_spectra": 146
+}
