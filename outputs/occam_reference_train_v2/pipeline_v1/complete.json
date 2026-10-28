@@ -1,0 +1,46 @@
+{
+  "integrity": "FAILED_PARTIAL",
+  "pid": 4432,
+  "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+  "processes": [
+    {
+      "label": "native_collect",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/run_occam_reference_train_v2.py",
+        "collect",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+        "--phase",
+        "NATIVE"
+      ],
+      "returncode": 0,
+      "wall_ns": 291562994400
+    },
+    {
+      "label": "native_audit",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/run_occam_reference_train_v2.py",
+        "audit",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+        "--phase",
+        "NATIVE"
+      ],
+      "returncode": 1,
+      "wall_ns": 2362279900
+    }
+  ],
+  "failure": {
+    "type": "ValueError",
+    "message": "one-shot child failed native_audit",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_occam_reference_train_pipeline_v2.py\", line 25, in main\n    for operation in ('collect','audit'):run(phase.lower()+'_'+operation,[sys.executable,'-u','scripts/run_occam_reference_train_v2.py',operation,'--manifest',str(manifest),'--phase',phase])\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_occam_reference_train_pipeline_v2.py\", line 21, in run\n    a.io.require(code==0,'one-shot child failed '+label)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 40, in require\n    if not ok:raise ValueError(message)\nValueError: one-shot child failed native_audit\n"
+  },
+  "scientific_CAL_QUAL_opened": false,
+  "online_LLM_API_calls": 0,
+  "wall_ns": 311090885400,
+  "publication_goal_complete": false
+}
