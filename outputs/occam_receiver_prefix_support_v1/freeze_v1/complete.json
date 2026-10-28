@@ -1,0 +1,82 @@
+{
+  "integrity": "FROZEN_TRAIN_ONLY_RECEIVER_PREFIX_DESCRIPTION",
+  "source_sha256": {
+    "outputs/occam_receiver_prefix_support_v1/tools/prefix_audit_v1.py": "678aff0d7992d30bc79b19b469369c52556cb4e54135ce44afc23df7ef523531",
+    "outputs/occam_receiver_prefix_support_v1/tools/prefix_engine_v1.py": "8335061b54e1026322a4dd8de50ff28253396b68db4591db27d8104c735c6ceb",
+    "outputs/occam_receiver_prefix_support_v1/tools/run_prefix_support_v1.py": "5c11eecdf0e9b9b72ae6abdf043ce1c5cf5593dd62caef5190600cb9b033ccde",
+    "outputs/occam_receiver_prefix_support_v1/tools/test_prefix_support_v1.py": "eb8f3bf8c2a07f00aa8b00a01a720547e33fdddb00abc151a08707a6f86cdda9",
+    "outputs/occam_receiver_prefix_support_v1/.gitattributes": "9871ac5d7f5decf5c31ae260a4292e515c9207a52c5435fffdab87fe403f8bc2",
+    "docs/protocols/occam_receiver_prefix_support_v1_zh.md": "c8fb274f513e8c3ce2db2e2c72a873ae762195334e6974baf4432f3d67882e7d"
+  },
+  "input_sha256": {
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/manifest.json": "7416700122909b15ffeda1a3ca2925d325bebe92b1eab00cbe3dfea329e0a413",
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/train/audit.json": "a4d1a5d8ac1e2357c82ea129b454802e9c376f8777daeccf06a4dae07ee3e5db",
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/train/process_audit.json": "2b77793a50aeab8c008e9d3ffb11dc72261d9694033d2a369eef137546e5e745",
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/train/summary.json": "507d16e3b15d9c7e3e937e4a79c85c05ab3080c762ef484092215bc10b205040",
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/train/public_trajectories.jsonl.gz": "f4c5c0a774c6116308feffee18e69739c6f02696a78ed47d540cd103167727e3",
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/learning/META_FINAL_raw.json": "f09a294a09ef2883fb6a8b4f7ffdc07da4281a6be6ce238af9ff60809caaaa2d",
+    "outputs/occam_reference_train_v3/development_v1/occam_reference_train_v3_20261028T071949Z_c92356173d9e/learning/MATCHED_ERM_FINAL_raw.json": "0f01c0e37e9a2795718040d96827670d2fec5a0c98ed2829e8b7ede05255a755",
+    "outputs/occam_reference_qualification_v1/qualification_v1/occam_reference_qualification_v1_20261028T125131Z_7abaec83b085/manifest.json": "7e202e5511e0024771088218ab88981081a1a167bac88a47209941f16810b56a"
+  },
+  "component_sha256": {
+    "src/probe/occam_performance_core_v1.py": "b60f72fe83bb8939bb1ac9eff41392de2041d401c07982ed5b37d3a6fcc01372",
+    "src/probe/occam_public_history_v1.py": "300807277bcb9359802952bd735c5db4fe2561d341e06fc72a613ae417983b14",
+    "src/probe/occam_training_program_v1.py": "e23b475101bc86d0975f5cfd4666319f710c324f5493986d93e85ce0ebd5aa17",
+    "src/probe/occam_qualification_provider_v1.py": "e334746927145aae0da62dbf76a6ce2568c80efab73c1e48e1a72009c9db6ee7",
+    "src/analysis/occam_qualification_math_audit_v1.py": "854c7274e7a3b58af275cddfbd851a1c0f0c2667f1e46a07f346b5cefbc17f4b",
+    "src/analysis/occam_performance_independent_v1.py": "2e29e1bf8912db5f609409231c479ea76a7859429f04444c9d950e098bc26085",
+    "src/probe/occam_qualification_program_v1.py": "f5f6d5335c1393ffd66e21cf1e68e07a70336eac229b64b5f077037e13e46b72"
+  },
+  "unit_tests": 20,
+  "development_test_executions": 20,
+  "formal_test_executions": 20,
+  "synthetic_arithmetic": {
+    "linear_solves": 4,
+    "symmetric_eigendecompositions": 117,
+    "forbidden_batch_fit_attempts": 0,
+    "basis_batches": 7
+  },
+  "unit_log_sha256": "c2dec3e41514dafaa1c97a00fd891b6abbe2cd168cc2661738831a54e58b7d7d",
+  "targets": [
+    "META_ADAPT",
+    "META_FROZEN",
+    "ERM_ADAPT",
+    "ERM_FROZEN"
+  ],
+  "source_executions": 648,
+  "receiver_analyses": 2592,
+  "actual_source_windows": 3296,
+  "independent_groups": 18,
+  "per_pass_caps": {
+    "model_declarations": 13184,
+    "candidate_predictions": 52736,
+    "analysis_posterior_updates": 13184,
+    "linear_solves": 13184
+  },
+  "semantic_public_parses": 2,
+  "additional_byte_hash_passes_disclosed": true,
+  "active_wall_seconds": 1800,
+  "strict_in_sample_description": true,
+  "current_QUAL_outcomes_used": false,
+  "task_value_estimation": false,
+  "counters": {
+    "environment_interactions": 0,
+    "controlled_resets": 0,
+    "all_resets": 0,
+    "physical_frames": 0,
+    "fixed_policy_queries": 0,
+    "neural_training": 0,
+    "batch_model_fits": 0,
+    "new_episode_allocations": 0,
+    "online_LLM_API_calls": 0
+  },
+  "numpy_version": "2.2.6",
+  "python_version": "3.10.11 (tags/v3.10.11:7d4cc5a, Apr  5 2023, 00:38:17) [MSC v.1929 64 bit (AMD64)]",
+  "thread_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1"
+  },
+  "wall_ns": 585346000,
+  "publication_goal_complete": false
+}

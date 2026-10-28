@@ -1,0 +1,44 @@
+{
+  "integrity": "RECORDED_TWO_COMPLETED_SYNTHETIC_RUNTIME_PROBES",
+  "purpose": "Runtime diagnosis while the read-only job was running; later direct stream reads confirmed progress despite stale Windows directory sizes. No interruption or restart occurred.",
+  "metadata_recorded_after_execution_from_tool_console": true,
+  "baseline": {
+    "bank_read_seconds": 0.08876140000211308,
+    "provider_init_seconds": 0.2690398000013374,
+    "profiled_declare_seconds": 0.3078968999980134,
+    "command_wall_seconds": 2.2271804
+  },
+  "guarded": {
+    "profiled_declare_seconds": 0.3654516999995394,
+    "command_wall_seconds": 2.2182997
+  },
+  "source_model_raw_sha256": "f09a294a09ef2883fb6a8b4f7ffdc07da4281a6be6ce238af9ff60809caaaa2d",
+  "input": "test_prefix_support_v1.fixture((0,)) first query: constructed zero public observations; no source trajectory queried",
+  "model_declarations": 2,
+  "basis_batches": 2,
+  "candidate_predictions": 8,
+  "posterior_updates": 0,
+  "linear_solves": 0,
+  "prior_session_initializations": 2,
+  "symmetric_eigendecompositions_reconstructed_from_code": 30,
+  "eig_count_method": "Each successful declaration: prior P/Q/R validation 3 + four forecasts P/R 8 + four choose latent covariances 4; 15 per declaration. Not directly profiled as a runtime counter.",
+  "cProfile_overhead_included": true,
+  "timings_not_real_time_robot_qualification": true,
+  "source_sha256": {
+    "src/probe/occam_performance_core_v1.py": "b60f72fe83bb8939bb1ac9eff41392de2041d401c07982ed5b37d3a6fcc01372",
+    "src/probe/occam_qualification_provider_v1.py": "e334746927145aae0da62dbf76a6ce2568c80efab73c1e48e1a72009c9db6ee7",
+    "outputs/occam_receiver_prefix_support_v1/tools/test_prefix_support_v1.py": "eb8f3bf8c2a07f00aa8b00a01a720547e33fdddb00abc151a08707a6f86cdda9",
+    "outputs/occam_receiver_prefix_support_v1/tools/run_prefix_support_v1.py": "5c11eecdf0e9b9b72ae6abdf043ce1c5cf5593dd62caef5190600cb9b033ccde"
+  },
+  "input_bank_dimensions": {
+    "history": 664,
+    "descriptor": 87,
+    "outputs": 1,
+    "bases": 9
+  },
+  "no_additional_TRAIN_public_semantic_pass": true,
+  "new_environment_interactions": 0,
+  "new_training_or_batch_fits": 0,
+  "online_LLM_API_calls": 0,
+  "wall_times_overlap_main_analysis_not_additive": true
+}
