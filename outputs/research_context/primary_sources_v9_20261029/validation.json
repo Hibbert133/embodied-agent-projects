@@ -1,0 +1,58 @@
+{
+  "integrity": "PASSED_SOURCE_BOUND_PRIMARY_SOURCE_REVIEW",
+  "source_parent_commit": "0fd53ae7fb82673ae744f5bca1e7d01f04021cc3",
+  "document": "docs/research/correction_scope_contribution_review_v9_zh.md",
+  "document_sha256": "336342fc5f38660e7ed46f822af48afe0e8184268ea94d45d6cd4d390caea4d7",
+  "new_primary_sources": [
+    {
+      "url": "https://arxiv.org/html/2606.07890v1",
+      "read_scope": "abstract,sections1-2,section5opening",
+      "proof_or_replication": false
+    },
+    {
+      "url": "https://arxiv.org/html/2410.23251v1",
+      "read_scope": "abstract,section3,selected_section4_result_statements",
+      "proof_or_replication": false
+    },
+    {
+      "url": "https://proceedings.mlr.press/v238/feng24b/feng24b.pdf",
+      "read_scope": "abstract,sections4.1-4.3,section5opening,PDF_text_only",
+      "proof_or_replication": false
+    }
+  ],
+  "RSS2020_recheck_not_new": true,
+  "blocked_openreview_browser_verification_not_bypassed": true,
+  "original_manifest_id": "19347fbe7b039fabd536c411d74e87a823bd0925cd2bee9e5705329cdb77f78d",
+  "frozen_scientific_sources_checked": 1393,
+  "tracked_secret_scan": {
+    "returncode": 0,
+    "wall_ns": 222370403500,
+    "stdout_sha256": "26746f4e323ad9a3e4752a676d449497c13c89d8de89e2b18fe24688fc1b3308",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "actual_index_basic_and_extra_scan_required": true,
+  "source_unchanged_tests_and_dependencies_reused_from_costs_freeze": true,
+  "QUAL_outcomes_read": false,
+  "new_environment_interactions": 0,
+  "new_scientific_fits": 0,
+  "new_real_model_queries": 0,
+  "online_LLM_API_calls": 0,
+  "new_collection_authorized": false,
+  "new_algorithm_or_theorem_established": false,
+  "publication_goal_complete": false,
+  "delivery_attempts": [
+    {
+      "attempt": 1,
+      "returncode": 1,
+      "reason": "UnicodeDecodeError from platform-default cp1252 during supplemental text scan",
+      "scientific_inputs_changed": false
+    },
+    {
+      "attempt": 2,
+      "repair": "explicit UTF8 text decoding for same unchanged documents; reuse passed full scan",
+      "full_secret_scan_repeated": false
+    }
+  ],
+  "pre_repair_validation_sha256": "960cb29ec92939b7a49e2f8ad59e6134b3208707ace0e9fbf0316179471dffb9",
+  "pre_repair_helper_sha256": "a96fc74e9e74bfc5c41043daf073001120cb5794d08a7b686c84a9355089ea2c"
+}
