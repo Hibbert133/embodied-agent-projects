@@ -1,11 +1,11 @@
 {
   "integrity": "PASSED",
-  "source_local_commit": "c92356173d9e99dada69da6a032f880a4f763259",
-  "previous_archive_commit": "587128a167e0a4ea909072134693aa33efd5468f",
-  "prior_catalog_sha256": "8dbb1ef8f8a5fb5c9fe2fb440067b921ccc1239e7c225f77eace528ec4bbdda5",
+  "source_local_commit": "c49b4268eb4e739256fcd7e2d9b3a2fed976198f",
+  "previous_archive_commit": "e642553f55bf906e13b7fccf2e5163bc627f307a",
+  "prior_catalog_sha256": "84e2414f1c6b96c7c3b0e4b667b699b01e3033a7c9b8d64d294651e6ef29ab93",
   "decoded_record_parts": {
-    "strategy": "reuse seven actual Git stream recoveries only after exact Git object identity for every index, part and collection completion",
-    "prior_archive_commit": "587128a167e0a4ea909072134693aa33efd5468f",
+    "strategy": "reuse historical actual recoveries after exact Git identity; native499-file ZIP has its own committed actual recovery and decoded credential scan",
+    "prior_archive_commit": "e642553f55bf906e13b7fccf2e5163bc627f307a",
     "prior_catalog_sha256": "f78e346e364cc3ed91f026434df0f67a7bf00c9347ef17503e64ce5c587c4856",
     "unchanged_git_objects": {
       "outputs/occam_window_host/delivery_v1/record_parts_index.json": "6c018c90865179ebd13321a74810f3b42192d383",
@@ -126,13 +126,35 @@
         ]
       }
     ],
-    "new_recovery_or_physics": false
+    "new_recovery_or_physics": false,
+    "native_zip_bundle": {
+      "index_path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_index.json",
+      "index_sha256": "b448bf3dbdd88aafdee687a6042e694c342447050cabd6ad8532425261213369",
+      "proof_path": "outputs/occam_reference_train_v3/native_delivery_v1/actual_git_recovery.json",
+      "proof_sha256": "ceddf8f7afabf9a982926952cbd3ea2d1d65b12a43257a42f5a9386d8801de08",
+      "source_commit": "d2dc35e56e174a1e26388068f617f82caf89df34",
+      "part_git_oids": {
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_001.bin": "de14a72f5cb9d662c9c5ba08f1b1b67a29e5443d",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_002.bin": "2f3e85a7aeddf3aac51ab0808205e35a2fa61909",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_003.bin": "b4a8f1428858c8662b754b21da8c24984c2e89cc",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_004.bin": "5ead3c4acdf8f4157bb7c945f671e7408a521db1",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_005.bin": "fad90f47e58929bfffe5e484befec67cea82fad8",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_006.bin": "cbfe2caeca1bc79a8b99adacb09aaecbc185fe34",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_007.bin": "434fafd757bfffb489aa202323ec0b146e9ac6e9",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_008.bin": "955e5d5cb381e55bbcb37d1f016cf6c59c371721",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_009.bin": "f80703c2a8048f374049655f27215d3cd43b6833",
+        "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_010.bin": "06ec80aa427bb2511a18aeb288b8976a9747fea1"
+      },
+      "files": 499,
+      "parts": 10,
+      "decoded_gzip_lines": 91106
+    }
   },
-  "all_source_files": 12150,
-  "selected_files": 9539,
-  "reused_content_hash_rows": 12127,
-  "new_actual_git_bytes_hashed": 4122924,
-  "newly_secret_scanned_blob_objects": 23,
+  "all_source_files": 12175,
+  "selected_files": 9564,
+  "reused_content_hash_rows": 12150,
+  "new_actual_git_bytes_hashed": 39484339,
+  "newly_secret_scanned_blob_objects": 25,
   "selection": "retain prior per-path selection; publish bounded completed controller_agreement, policy_mode_diagnostic and occam_performance_core artifacts after decompressed scan; other raw jsonl.gz, binary .bin, environment and >8MiB remain omitted",
   "selected_secret_scan": "unchanged Git objects reuse earlier selected-byte scan; newly published objects scanned before publication",
   "original_history_and_raw_data_preserved": true,
@@ -51450,6 +51472,198 @@
       "published": true
     },
     {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/actual_git_recovery.json",
+      "mode": "100644",
+      "oid": "94539c457b9d9d5ff17b25e4822fdb4fef537b7e",
+      "bytes": 2280,
+      "sha256": "ceddf8f7afabf9a982926952cbd3ea2d1d65b12a43257a42f5a9386d8801de08",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/all_36_cases.csv",
+      "mode": "100644",
+      "oid": "6ccf4bbafbbe977f8871a78b2e553dafa37fac98",
+      "bytes": 3346,
+      "sha256": "e2562efc1cded04589d63cb109c115bddecef25ce37da6c65c0ba9aee2311239",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_index.json",
+      "mode": "100644",
+      "oid": "3c45f17a7414eb6bf514073e5eb0e3ebf62cc6a5",
+      "bytes": 137431,
+      "sha256": "b448bf3dbdd88aafdee687a6042e694c342447050cabd6ad8532425261213369",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_001.bin",
+      "mode": "100644",
+      "oid": "de14a72f5cb9d662c9c5ba08f1b1b67a29e5443d",
+      "bytes": 4194304,
+      "sha256": "453317b53e7e8543557d0584d0ae704f8eec0c117ed9a731d2de50272dccf46e",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_002.bin",
+      "mode": "100644",
+      "oid": "2f3e85a7aeddf3aac51ab0808205e35a2fa61909",
+      "bytes": 4194304,
+      "sha256": "ec0bb6555465db9a264257593f7e63b90b80824d9a6b0c04c0aaaffbd760896e",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_003.bin",
+      "mode": "100644",
+      "oid": "b4a8f1428858c8662b754b21da8c24984c2e89cc",
+      "bytes": 4194304,
+      "sha256": "f5ecea5c81fb250cd1a64fc8f8cbc0f6d2a2f21a6a72d42261d3b1603ee168e2",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_004.bin",
+      "mode": "100644",
+      "oid": "5ead3c4acdf8f4157bb7c945f671e7408a521db1",
+      "bytes": 4194304,
+      "sha256": "da380930d73224c89c1b55b20d2d576b6fe9ccbf4e072a3737cd2331604994db",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_005.bin",
+      "mode": "100644",
+      "oid": "fad90f47e58929bfffe5e484befec67cea82fad8",
+      "bytes": 4194304,
+      "sha256": "3eee31dbfcdc1dc4e9cd463234bf326ef0989933f4ae9f0dffa00233d423c4a0",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_006.bin",
+      "mode": "100644",
+      "oid": "cbfe2caeca1bc79a8b99adacb09aaecbc185fe34",
+      "bytes": 4194304,
+      "sha256": "120ea4b42aadf877537578e7450b4bc1089d62246fdd5fdfdfafade5231f4a20",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_007.bin",
+      "mode": "100644",
+      "oid": "434fafd757bfffb489aa202323ec0b146e9ac6e9",
+      "bytes": 4194304,
+      "sha256": "eed18a0f3e67681d5d1f92297b0bb226c093c54ff2c9e17c42bc8429180b24b2",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_008.bin",
+      "mode": "100644",
+      "oid": "955e5d5cb381e55bbcb37d1f016cf6c59c371721",
+      "bytes": 4194304,
+      "sha256": "ce78a21bcc2bc532fd39d4c19732d9cde36817f8f00c1b89f283ff4df182b1a4",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_009.bin",
+      "mode": "100644",
+      "oid": "f80703c2a8048f374049655f27215d3cd43b6833",
+      "bytes": 4194304,
+      "sha256": "ee58155c0164165c433e1bbfc9a10713a42e808068322f60a2ed815c0ca6c461",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/bundle_parts/part_010.bin",
+      "mode": "100644",
+      "oid": "06ec80aa427bb2511a18aeb288b8976a9747fea1",
+      "bytes": 1559560,
+      "sha256": "41a37c9ac39291239aa60bda6990c9bd42b377e3c1901ebb07a657ab6b234350",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/complete.json",
+      "mode": "100644",
+      "oid": "f20a77877d1da0a3aaffc2ac04fb9388984c4704",
+      "bytes": 774,
+      "sha256": "9912221f4bb3a98ef34cb68e9edef044cd0e80a029ac0987c984d416f26617c5",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/git_recovery_index_proof.json",
+      "mode": "100644",
+      "oid": "c568b7b0d03de85642076281dbc97df35f101c45",
+      "bytes": 824,
+      "sha256": "f8ab29a92bca0ed299d19b18babb70f65c4a0fd229e696038ed15e5d1d9a4e84",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/index_disk_proof.json",
+      "mode": "100644",
+      "oid": "744b4621b9899102426ce5fb55a2d55a3732a09c",
+      "bytes": 2659,
+      "sha256": "1000d646b04a93e8c3857b3a1eef2027410c7ccf7af708759cc0d35d0e0c45af",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/local_restoration.json",
+      "mode": "100644",
+      "oid": "97953043b44a2d7ad4cd9f904752b64cf209f479",
+      "bytes": 295,
+      "sha256": "a735639699b3fd263a01f06974824899a01b3813e816e6661632f40809c94e36",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/native_costs.json",
+      "mode": "100644",
+      "oid": "5222e90075707d7912a9fd615102634989396ac0",
+      "bytes": 622,
+      "sha256": "5cf540a90de67484553896bcf2cb7c74c2c3b1f77ed0912ea35f19265b125ffb",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/owned_checked.nul",
+      "mode": "100644",
+      "oid": "1fd9b7d9bed7039c8bede5401ead0f100887a8a0",
+      "bytes": 1266,
+      "sha256": "931838990643a1bb62e48b3b82166f5e3864419acc44140dc8ab29383a339355",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/owned_final.nul",
+      "mode": "100644",
+      "oid": "2c7dad49725a5322dda0a07a9a68e7c40d041388",
+      "bytes": 1474,
+      "sha256": "721c8baad15cef231501db38773584a63c6900e3885bb52535a2ee21c6e3548b",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/prepare_occam_native_delivery_v3.py",
+      "mode": "100644",
+      "oid": "6bc58624aa88d4bb5e34758a18a9f2223a072691",
+      "bytes": 12574,
+      "sha256": "2b0c3db305c79b9f24e6f58af395781a0c5d586d48f07b78dfb8430ae5aec6b5",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/recover_occam_native_git_v3.py",
+      "mode": "100644",
+      "oid": "abaacb222815b7069359264aecbebb9a1ba5afbe",
+      "bytes": 2508,
+      "sha256": "f9942c98340644eb55433766e9dc4943c8f1f50d1cbdb87e94ead69783e91f2d",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/recovery_owned.nul",
+      "mode": "100644",
+      "oid": "730cfaddfb2c73ad1a79fe710a3115444d4dc164",
+      "bytes": 355,
+      "sha256": "08ddd85d1f9135c429f915db8a819b1eeef7d7aafba5025aaa3e275e064d7b51",
+      "published": true
+    },
+    {
+      "path": "outputs/occam_reference_train_v3/native_delivery_v1/source_committed_bytes.json",
+      "mode": "100644",
+      "oid": "b599334841360e1f709e04d65438700cece1e142",
+      "bytes": 5386,
+      "sha256": "5bc1d03065e5d97c069a9b66675f29ab47d37000922c7d5d11e55de606971370",
+      "published": true
+    },
+    {
       "path": "outputs/occam_reference_train_v3/preparation_attempts_v1/attempt_1114731719879100_9590a447af00/complete.json",
       "mode": "100644",
       "oid": "e4164fff172c5da55b5bed5a77a86f16a8ca9214",
@@ -85383,6 +85597,14 @@
       "oid": "632fceed39434acfdb47d62363ae00d394075aee",
       "bytes": 7093,
       "sha256": "32d556ce5c5a9295afc07287cba05a09565870ad498620e0f280fb6674978b7f",
+      "published": true
+    },
+    {
+      "path": "reports/occam_native_qualification_v3_zh.md",
+      "mode": "100644",
+      "oid": "684f7b0438f10f528fdd9dedc640ac2203bd5027",
+      "bytes": 4249,
+      "sha256": "86e6a6e491a993828347eae60030232dcd054f3d9c82ff48294bf521b6ac766f",
       "published": true
     },
     {
