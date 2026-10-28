@@ -1,0 +1,41 @@
+{
+  "integrity": "PASSED_SUPPLEMENTARY_POST_HOC_DESCRIPTION",
+  "source_statistics_sha256": "0214bd46cb101b982de982ca93e75b228cf218d09bad97abf28b490b660c960a",
+  "rule": "all four actually executed fixed CONTINUE programs failed in a unit",
+  "allocated_units": 54,
+  "affected_units": 3,
+  "affected_independent_groups": 2,
+  "affected_unit_keys": [
+    {
+      "group": 0,
+      "task": "door-open-v3",
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "seed": 175102
+    },
+    {
+      "group": 0,
+      "task": "door-open-v3",
+      "context": "UNCHANGED",
+      "planned_boundary": 16,
+      "seed": 175102
+    },
+    {
+      "group": 6,
+      "task": "push-v3",
+      "context": "CHANGED",
+      "planned_boundary": 16,
+      "seed": 175118
+    }
+  ],
+  "affected_acquisition_gap_sum": 1116,
+  "all_acquisition_gap_sum": 1168,
+  "chosen_after_census_results": true,
+  "no_new_qualification_gate": true,
+  "unique_causal_failure_reason_claimed": false,
+  "no_training_or_selection_on_QUAL": true,
+  "new_environment_interactions": 0,
+  "new_model_queries": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0
+}
