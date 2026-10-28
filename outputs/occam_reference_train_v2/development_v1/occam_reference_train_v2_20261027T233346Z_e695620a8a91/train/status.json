@@ -1,0 +1,58 @@
+{
+  "experiment_run_id": "occam_reference_train_v2_20261027T233346Z_e695620a8a91",
+  "manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+  "source_git_commit": "e695620a8a91667fdfdd043171c14819a921e9c7",
+  "status": "FAILED_PARTIAL",
+  "allocated_executions": 648,
+  "executions": 188,
+  "control_steps": 24871,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 9639,
+      "simulation_attempts": 988771,
+      "simulation_frames_attempted": 4943855,
+      "simulation_completed": 988771,
+      "simulation_frames_completed": 4943855,
+      "reset_completed": 9639
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 9450,
+        "simulation_attempts": 945000,
+        "simulation_frames_attempted": 4725000,
+        "simulation_completed": 945000,
+        "simulation_frames_completed": 4725000,
+        "reset_completed": 9450
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 189,
+        "simulation_attempts": 18900,
+        "simulation_frames_attempted": 94500,
+        "simulation_completed": 18900,
+        "simulation_frames_completed": 94500,
+        "reset_completed": 189
+      },
+      "CONTROL": {
+        "simulation_attempts": 24871,
+        "simulation_frames_attempted": 124355,
+        "simulation_completed": 24871,
+        "simulation_frames_completed": 124355
+      }
+    }
+  },
+  "events": 175563,
+  "private_records": 1240,
+  "failure": {
+    "type": "CaseFailure",
+    "message": "{'type': 'RuntimeError', 'message': 'Could not allocate bytes object!'}"
+  },
+  "wall_ns": 1792231323200,
+  "network_guard": {
+    "attempted_network_calls": 0
+  },
+  "online_LLM_API_calls": 0,
+  "scientific_model_training": 0,
+  "training_behavior_data_not_task_qualification": true,
+  "execution_git_head": "be387b8f073beea835acc85e7b8f98a4b50aec7f",
+  "publication_goal_complete": false
+}

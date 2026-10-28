@@ -1,0 +1,162 @@
+{
+  "integrity": "PASSED_STREAM_CLOSURE_AND_ACCOUNTING_ONLY",
+  "source_manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+  "allocated_TRAIN": 648,
+  "completed_TRAIN": 188,
+  "partial_TRAIN": 1,
+  "not_started_TRAIN": 459,
+  "completed_success": 169,
+  "completed_task_failure": 19,
+  "complete_prefix_is_unbalanced_and_descriptive_only": true,
+  "full_population_success_rate": null,
+  "full_TRAIN_qualification": false,
+  "model_training_allowed": false,
+  "failure_boundary": {
+    "last_saved_event": "NOISE_COMMITMENT",
+    "next_unsaved_boundary": "INITIAL_WITNESS",
+    "exact_native_call_known": false,
+    "original_error": {
+      "type": "RuntimeError",
+      "message": "Could not allocate bytes object!"
+    },
+    "full_native_traceback_available": false,
+    "environment_closed_flag": true,
+    "task_outcome_available": false
+  },
+  "source_record_counts": {
+    "events": 175563,
+    "private": 1240
+  },
+  "decoded_source_sha256": {
+    "events": "91cdf9af6d72782a9cbfd5e8055f29f295b34a48defcd61e6b2182d0e3055b1d",
+    "private": "0f2713823f57a2a3d5ed02d71dddac76491e144cdf042b1c56358f92c2e11c7a"
+  },
+  "last_events": [
+    {
+      "sequence": 175555,
+      "event": "LIFECYCLE_RESET_COMPLETE",
+      "saved_ns": 1099311652680400
+    },
+    {
+      "sequence": 175556,
+      "event": "LIFECYCLE_RESET_INTENT",
+      "saved_ns": 1099311652979300
+    },
+    {
+      "sequence": 175557,
+      "event": "LIFECYCLE_RESET_COMPLETE",
+      "saved_ns": 1099311668901700
+    },
+    {
+      "sequence": 175558,
+      "event": "FACTORY_COMPLETE",
+      "saved_ns": 1099311850090400
+    },
+    {
+      "sequence": 175559,
+      "event": "LIFECYCLE_RESET_INTENT",
+      "saved_ns": 1099311850539000
+    },
+    {
+      "sequence": 175560,
+      "event": "LIFECYCLE_RESET_COMPLETE",
+      "saved_ns": 1099311863750800
+    },
+    {
+      "sequence": 175561,
+      "event": "CONTROLLED_INITIAL",
+      "saved_ns": 1099311864299500
+    },
+    {
+      "sequence": 175562,
+      "event": "NOISE_COMMITMENT",
+      "saved_ns": 1099311866286700
+    }
+  ],
+  "TRAIN_ledger": {
+    "counts": {
+      "reset_attempts": 9639,
+      "simulation_attempts": 988771,
+      "simulation_frames_attempted": 4943855,
+      "simulation_completed": 988771,
+      "simulation_frames_completed": 4943855,
+      "reset_completed": 9639
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 9450,
+        "simulation_attempts": 945000,
+        "simulation_frames_attempted": 4725000,
+        "simulation_completed": 945000,
+        "simulation_frames_completed": 4725000,
+        "reset_completed": 9450
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 189,
+        "simulation_attempts": 18900,
+        "simulation_frames_attempted": 94500,
+        "simulation_completed": 18900,
+        "simulation_frames_completed": 94500,
+        "reset_completed": 189
+      },
+      "CONTROL": {
+        "simulation_attempts": 24871,
+        "simulation_frames_attempted": 124355,
+        "simulation_completed": 24871,
+        "simulation_frames_completed": 124355
+      }
+    }
+  },
+  "whole_allocation_actual_cost": {
+    "control_steps": 27982,
+    "all_resets": 11475,
+    "physical_frames": 5877410
+  },
+  "resource_observation": {
+    "message": "Windows successfully diagnosed a low virtual memory condition. The following programs consumed the most virtual memory: svchost.exe (5176) consumed 1947332608 bytes, ChatGPT.exe (16540) consumed 1488646144 bytes, and Code.exe (8508) consumed 792137728 bytes.",
+    "event_utc": "2026-10-28T00:21:02.6537572Z",
+    "provider": "Microsoft-Windows-Resource-Exhaustion-Detector",
+    "memory": {
+      "FreeVirtualMemory": 1665640,
+      "FreePhysicalMemory": 4105104,
+      "TotalVisibleMemorySize": 16771404,
+      "TotalVirtualMemorySize": 20965708
+    },
+    "event_id": 2004,
+    "utc": "2026-10-28T00:30:09.3206545Z",
+    "original_event_xml_sha256": "717660570393a6d0331738529bd34551c597660ec487d0a0441f326139b7116e",
+    "original_xml_retained_local_only": true,
+    "observation_is_after_failure": true,
+    "supports_system_virtual_memory_pressure_not_unique_allocation_cause": true
+  },
+  "no_full_policy_PI_actuator_replay_disclosed": true,
+  "policy_queries": 0,
+  "new_environment_interactions": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "publication_goal_complete": false,
+  "wall_ns": 105642970300
+}

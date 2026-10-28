@@ -1,0 +1,44 @@
+{
+  "integrity": "FAILED_PARTIAL",
+  "pid": 15556,
+  "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+  "processes": [
+    {
+      "label": "native_audit_v3",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/audit_occam_reference_train_v3.py",
+        "--phase",
+        "NATIVE"
+      ],
+      "returncode": 0,
+      "wall_ns": 43333225800
+    },
+    {
+      "label": "train_collect",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/run_occam_reference_train_v2.py",
+        "collect",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+        "--phase",
+        "TRAIN"
+      ],
+      "returncode": 1,
+      "wall_ns": 1801225398800
+    }
+  ],
+  "failure": {
+    "type": "ValueError",
+    "message": "one-shot extension child failed train_collect",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\resume_occam_reference_train_v3.py\", line 27, in main\n    run('train_collect',[sys.executable,'-u','scripts/run_occam_reference_train_v2.py','collect','--manifest',str(e.TARGET),'--phase','TRAIN'])\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\resume_occam_reference_train_v3.py\", line 23, in run\n    e.io.require(code==0,'one-shot extension child failed '+label)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\response_qualification_io_v1.py\", line 40, in require\n    if not ok:raise ValueError(message)\nValueError: one-shot extension child failed train_collect\n"
+  },
+  "original_failed_pipeline_sha256": "9032c2b46c5d7330b21800d01ff72d33b24e9747928f5124089ce4669caaae2b",
+  "online_LLM_API_calls": 0,
+  "scientific_CAL_QUAL_opened": false,
+  "publication_goal_complete": false,
+  "wall_ns": 1848765899300
+}

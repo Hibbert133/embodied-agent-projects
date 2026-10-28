@@ -1,0 +1,217 @@
+{
+  "experiment_run_id": "occam_reference_train_v2_20261027T233346Z_e695620a8a91",
+  "manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+  "source_git_commit": "e695620a8a91667fdfdd043171c14819a921e9c7",
+  "cohort": "TRAIN",
+  "group": 5,
+  "task": "push-v3",
+  "seed": 169115,
+  "context": "CHANGED",
+  "planned_boundary": 64,
+  "acquisition_action": "VALIDATE8",
+  "behavior": "RANDOM_WINDOW",
+  "completed": false,
+  "error": {
+    "type": "RuntimeError",
+    "message": "Could not allocate bytes object!"
+  },
+  "close_error": null,
+  "environment_closed": true,
+  "ledger_before": {
+    "counts": {
+      "reset_attempts": 9588,
+      "simulation_attempts": 983671,
+      "simulation_frames_attempted": 4918355,
+      "simulation_completed": 983671,
+      "simulation_frames_completed": 4918355,
+      "reset_completed": 9588
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 9400,
+        "simulation_attempts": 940000,
+        "simulation_frames_attempted": 4700000,
+        "simulation_completed": 940000,
+        "simulation_frames_completed": 4700000,
+        "reset_completed": 9400
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 188,
+        "simulation_attempts": 18800,
+        "simulation_frames_attempted": 94000,
+        "simulation_completed": 18800,
+        "simulation_frames_completed": 94000,
+        "reset_completed": 188
+      },
+      "CONTROL": {
+        "simulation_attempts": 24871,
+        "simulation_frames_attempted": 124355,
+        "simulation_completed": 24871,
+        "simulation_frames_completed": 124355
+      }
+    }
+  },
+  "initial_fault_oracle": {
+    "matrix_xy": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "bias_xy": [
+      0.12,
+      -0.08
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "destination_oracle": {
+    "matrix_xy": [
+      [
+        0.7705869161142176,
+        0.04622304978074293
+      ],
+      [
+        0.1564265865706843,
+        1.1528341828976454
+      ]
+    ],
+    "bias_xy": [
+      0.07429063976774697,
+      0.19602398464448506
+    ],
+    "deadzone_xy": [
+      0.0,
+      0.0
+    ]
+  },
+  "state_witness_refs": [],
+  "initial": {
+    "observation": [
+      0.00458420042438939,
+      0.6013881136259893,
+      0.19514345491770427,
+      1.0,
+      0.02886383900583464,
+      0.6667475053998191,
+      0.019404683840342662,
+      -0.00010047584420645385,
+      0.000164304061406359,
+      -9.370336514490798e-08,
+      0.9999999814543855,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.00458420042438939,
+      0.6013881136259893,
+      0.19514345491770427,
+      1.0,
+      0.02886383900583464,
+      0.6667475053998191,
+      0.019404683840342662,
+      -0.00010047584420645385,
+      0.000164304061406359,
+      -9.370336514490798e-08,
+      0.9999999814543855,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      -0.06932987669870133,
+      0.8766252597662156,
+      0.019404683840342662
+    ],
+    "terminated": false,
+    "truncated": false,
+    "success": false
+  },
+  "host_attempts": 0,
+  "host_returned": 0,
+  "total_steps": 0,
+  "policy_queries": 0,
+  "captures": 0,
+  "restores": 0,
+  "physical_rows_count": 0,
+  "ledger_before_close": {
+    "counts": {
+      "reset_attempts": 9639,
+      "simulation_attempts": 988771,
+      "simulation_frames_attempted": 4943855,
+      "simulation_completed": 988771,
+      "simulation_frames_completed": 4943855,
+      "reset_completed": 9639
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 9450,
+        "simulation_attempts": 945000,
+        "simulation_frames_attempted": 4725000,
+        "simulation_completed": 945000,
+        "simulation_frames_completed": 4725000,
+        "reset_completed": 9450
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 189,
+        "simulation_attempts": 18900,
+        "simulation_frames_attempted": 94500,
+        "simulation_completed": 18900,
+        "simulation_frames_completed": 94500,
+        "reset_completed": 189
+      },
+      "CONTROL": {
+        "simulation_attempts": 24871,
+        "simulation_frames_attempted": 124355,
+        "simulation_completed": 24871,
+        "simulation_frames_completed": 124355
+      }
+    }
+  },
+  "ledger_after_close": {
+    "counts": {
+      "reset_attempts": 9639,
+      "simulation_attempts": 988771,
+      "simulation_frames_attempted": 4943855,
+      "simulation_completed": 988771,
+      "simulation_frames_completed": 4943855,
+      "reset_completed": 9639
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 9450,
+        "simulation_attempts": 945000,
+        "simulation_frames_attempted": 4725000,
+        "simulation_completed": 945000,
+        "simulation_frames_completed": 4725000,
+        "reset_completed": 9450
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 189,
+        "simulation_attempts": 18900,
+        "simulation_frames_attempted": 94500,
+        "simulation_completed": 18900,
+        "simulation_frames_completed": 94500,
+        "reset_completed": 189
+      },
+      "CONTROL": {
+        "simulation_attempts": 24871,
+        "simulation_frames_attempted": 124355,
+        "simulation_completed": 24871,
+        "simulation_frames_completed": 124355
+      }
+    }
+  },
+  "wall_ns": 1625508800
+}

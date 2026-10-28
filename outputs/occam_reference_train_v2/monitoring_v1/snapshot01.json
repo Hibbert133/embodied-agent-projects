@@ -1,0 +1,64 @@
+{
+  "timestamp_UTC": "2026-10-27T23:53:24.277212+00:00",
+  "pipeline_state": {
+    "status": "RUNNING",
+    "pid": 15556,
+    "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+    "current": "train_collect",
+    "processes": [
+      {
+        "label": "native_audit_v3",
+        "args": [
+          "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+          "-u",
+          "scripts/audit_occam_reference_train_v3.py",
+          "--phase",
+          "NATIVE"
+        ],
+        "returncode": 0,
+        "wall_ns": 43333225800
+      }
+    ],
+    "wall_ns": 47537821500
+  },
+  "live_child": {
+    "parent_pid": 15556,
+    "child_pid": 13924,
+    "label": "train_collect",
+    "args": [
+      "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "-u",
+      "scripts/run_occam_reference_train_v2.py",
+      "collect",
+      "--manifest",
+      "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+      "--phase",
+      "TRAIN"
+    ]
+  },
+  "TRAIN_status": {
+    "status": "RUNNING",
+    "completed": 10,
+    "control_steps": 1649
+  },
+  "execution_head": "be387b8f073beea835acc85e7b8f98a4b50aec7f",
+  "source_manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+  "extension_freeze_sha256": "95071aa7cb642ed8f7af89bc34053e04ae64cf8f23030421e85d333eba62586d",
+  "native_audit_sha256": "bd87c61972d5aefb669ec96552a95fd43f533f501e41cc821d3328ae77653d21",
+  "native_counts": {
+    "executions": 36,
+    "control_steps": 3111,
+    "audit_fixed_policy_queries": 2805,
+    "audit_filter_updates": 0,
+    "observed_window_labels": 148,
+    "live_behavior_pairs": 18
+  },
+  "source_and_original_records_unchanged": true,
+  "free_disk_bytes": 5210669056,
+  "unified_exec_session_id": 8412,
+  "online_LLM_API_calls": 0,
+  "scientific_model_training_started": false,
+  "scientific_CAL_QUAL_opened": false,
+  "publication_goal_complete": false,
+  "do_not_restart_live_pipeline": true
+}

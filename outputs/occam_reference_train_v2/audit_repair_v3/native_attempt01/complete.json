@@ -1,0 +1,108 @@
+{
+  "integrity": "PASSED",
+  "result": {
+    "integrity": "PASSED",
+    "phase": "NATIVE",
+    "manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+    "public_trajectories_sha256": "c47021592eca3b56da3697af0a5f27bdc6469b9d75d8eddb32c834375cee7d45",
+    "counts": {
+      "executions": 36,
+      "control_steps": 3111,
+      "audit_fixed_policy_queries": 2805,
+      "audit_filter_updates": 0,
+      "observed_window_labels": 148,
+      "live_behavior_pairs": 18
+    },
+    "ledger": {
+      "counts": {
+        "reset_attempts": 1836,
+        "simulation_attempts": 186711,
+        "simulation_completed": 186711,
+        "simulation_frames_attempted": 933555,
+        "simulation_frames_completed": 933555,
+        "reset_completed": 1836
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 1800,
+          "simulation_attempts": 180000,
+          "simulation_completed": 180000,
+          "simulation_frames_attempted": 900000,
+          "simulation_frames_completed": 900000,
+          "reset_completed": 1800
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 36,
+          "simulation_attempts": 3600,
+          "simulation_completed": 3600,
+          "simulation_frames_attempted": 18000,
+          "simulation_frames_completed": 18000,
+          "reset_completed": 36
+        },
+        "CONTROL": {
+          "simulation_attempts": 3111,
+          "simulation_completed": 3111,
+          "simulation_frames_attempted": 15555,
+          "simulation_frames_completed": 15555
+        }
+      }
+    },
+    "guard": {
+      "operation_counts": {
+        "environment_creations": 0,
+        "resets": 0,
+        "simulation": 0,
+        "solve_attempts": 0,
+        "lstsq_attempts": 0,
+        "cold_fit_attempts": 0,
+        "cold_estimator_entries": 0,
+        "cold_linear_solve_attempts": 0,
+        "cold_linear_lstsq_attempts": 0
+      },
+      "network": {
+        "attempted_network_calls": 0
+      },
+      "zero_new_physical_interactions": true,
+      "registered_budgets": {
+        "solve": 0,
+        "lstsq": 0,
+        "cold_fits": 0
+      },
+      "online_LLM_API_calls": 0
+    },
+    "independent_physics_resimulation": false,
+    "shared_actor_replay_disclosed": true,
+    "scalar_cost_and_PI_actuator_are_independent": true,
+    "online_LLM_API_calls": 0,
+    "scientific_model_training": 0,
+    "task_benefit_or_paper_qualification": false,
+    "wall_ns": 36183696600
+  },
+  "failure": null,
+  "guard": {
+    "operation_counts": {
+      "environment_creations": 0,
+      "resets": 0,
+      "simulation": 0,
+      "solve_attempts": 0,
+      "lstsq_attempts": 0,
+      "cold_fit_attempts": 0,
+      "cold_estimator_entries": 0,
+      "cold_linear_solve_attempts": 0,
+      "cold_linear_lstsq_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "zero_new_physical_interactions": true,
+    "registered_budgets": {
+      "solve": 0,
+      "lstsq": 0,
+      "cold_fits": 0
+    },
+    "online_LLM_API_calls": 0
+  },
+  "source_manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+  "extension_freeze_sha256": "95071aa7cb642ed8f7af89bc34053e04ae64cf8f23030421e85d333eba62586d",
+  "wall_ns": 39882538000
+}

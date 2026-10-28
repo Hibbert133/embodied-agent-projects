@@ -1,0 +1,63 @@
+{
+  "timestamp_UTC": "2026-10-28T00:11:03.600685+00:00",
+  "previous_goal_turn_classification": "progress",
+  "current_goal_turn_classification": "progress_with_verified_live_wait",
+  "pipeline_state": {
+    "status": "RUNNING",
+    "pid": 15556,
+    "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+    "current": "train_collect",
+    "processes": [
+      {
+        "label": "native_audit_v3",
+        "args": [
+          "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+          "-u",
+          "scripts/audit_occam_reference_train_v3.py",
+          "--phase",
+          "NATIVE"
+        ],
+        "returncode": 0,
+        "wall_ns": 43333225800
+      }
+    ],
+    "wall_ns": 47537821500
+  },
+  "live_child": {
+    "parent_pid": 15556,
+    "child_pid": 13924,
+    "label": "train_collect",
+    "args": [
+      "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+      "-u",
+      "scripts/run_occam_reference_train_v2.py",
+      "collect",
+      "--manifest",
+      "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+      "--phase",
+      "TRAIN"
+    ]
+  },
+  "TRAIN_status": {
+    "status": "RUNNING",
+    "completed": 116,
+    "control_steps": 17494
+  },
+  "execution_head": "be387b8f073beea835acc85e7b8f98a4b50aec7f",
+  "source_manifest_id": "5c3b6565eee628b32f1ca1eed1b15eb5dc6191b8f47b8293d25efb973a26f510",
+  "extension_freeze_sha256": "95071aa7cb642ed8f7af89bc34053e04ae64cf8f23030421e85d333eba62586d",
+  "unified_exec_session_id": 8412,
+  "actual_collector_pid": 18984,
+  "remote_archive_commit": "ee1162c775c3e54f94b78c9d595ced211c2a5c91",
+  "archive_source_commit": "be387b8f073beea835acc85e7b8f98a4b50aec7f",
+  "archive_phase_files_published": 57,
+  "main_receipt_commit_deferred_until_pipeline_terminal": true,
+  "contribution_review_sha256": "1c8d3d550724cf01e5c4a7efab171afe4f0347ef70320e025be930df95249da5",
+  "source_and_original_records_unchanged": true,
+  "free_disk_bytes": 5137944576,
+  "online_LLM_API_calls": 0,
+  "scientific_model_training_started": false,
+  "scientific_CAL_QUAL_opened": false,
+  "publication_goal_complete": false,
+  "do_not_restart_live_pipeline": true
+}

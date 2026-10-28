@@ -1,0 +1,41 @@
+{
+  "timestamp_UTC": "2026-10-28T00:16:38.474240+00:00",
+  "previous_goal_turn_classification": "progress",
+  "current_goal_turn_classification": "verified_wait",
+  "specific_pipeline_pid": 15556,
+  "specific_collector_pid": 18984,
+  "unified_exec_session_id": 8412,
+  "pipeline": {
+    "status": "RUNNING",
+    "pid": 15556,
+    "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+    "current": "train_collect",
+    "processes": [
+      {
+        "label": "native_audit_v3",
+        "args": [
+          "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+          "-u",
+          "scripts/audit_occam_reference_train_v3.py",
+          "--phase",
+          "NATIVE"
+        ],
+        "returncode": 0,
+        "wall_ns": 43333225800
+      }
+    ],
+    "wall_ns": 47537821500
+  },
+  "TRAIN": {
+    "status": "RUNNING",
+    "completed": 155,
+    "control_steps": 21606
+  },
+  "frozen_sources_and_original_native_records_unchanged": true,
+  "free_disk_bytes": 5116219392,
+  "online_LLM_API_calls": 0,
+  "scientific_model_training_started": false,
+  "publication_goal_complete": false,
+  "process_liveness_independently_checked_by_Get_CimInstance": true,
+  "no_restart_performed": true
+}

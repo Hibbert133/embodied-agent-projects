@@ -1,0 +1,36 @@
+{
+  "status": "FAILED_PARTIAL",
+  "pid": 15556,
+  "manifest": "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+  "current": "train_collect",
+  "processes": [
+    {
+      "label": "native_audit_v3",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/audit_occam_reference_train_v3.py",
+        "--phase",
+        "NATIVE"
+      ],
+      "returncode": 0,
+      "wall_ns": 43333225800
+    },
+    {
+      "label": "train_collect",
+      "args": [
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\.venv\\Scripts\\python.exe",
+        "-u",
+        "scripts/run_occam_reference_train_v2.py",
+        "collect",
+        "--manifest",
+        "C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\outputs\\occam_reference_train_v2\\development_v1\\occam_reference_train_v2_20261027T233346Z_e695620a8a91\\manifest.json",
+        "--phase",
+        "TRAIN"
+      ],
+      "returncode": 1,
+      "wall_ns": 1801225398800
+    }
+  ],
+  "wall_ns": 1848766637700
+}
