@@ -1,0 +1,49 @@
+{
+  "integrity": "PASSED_SOURCE_BOUND_COST_DISCLOSURE",
+  "trained_performance_banks": {
+    "executions": 684,
+    "control_steps": 85789,
+    "controlled_resets": 684,
+    "all_resets": 34884,
+    "physical_frames": 17870945,
+    "actual_joint_AdamW_updates": 9000,
+    "per_method_standalone_AdamW_updates": 5000,
+    "shared_pretrain_updates": 1000,
+    "training_solves": 66712,
+    "mathematical_audit_solves": 918,
+    "source_report": "reports/occam_reference_learning_v3_zh.md"
+  },
+  "closed_v2_partial_source": {
+    "control_steps": 27982,
+    "all_resets": 11475,
+    "physical_frames": 5877410,
+    "not_training_input": true
+  },
+  "C8_nominal_training": {
+    "control_steps": 3072,
+    "controlled_resets": 384,
+    "all_resets": 19584,
+    "physical_frames": 9807360,
+    "charged_to_legacy_C8_users_only": true
+  },
+  "C8_complete_source_study_including_training_not_additive": {
+    "control_steps": 3840,
+    "controlled_resets": 480,
+    "all_resets": 24480,
+    "physical_frames": 12259200,
+    "source_report": "reports/cold_start_evidence_qualification_v1.md",
+    "source_report_sha256": "31b0f3cd7e625ba90c51043a458e42f976ca4f0ccacfa1628492d3c35f65e2b6"
+  },
+  "older_history_trace": {
+    "old_ARX_control_steps": 21010,
+    "old_ARX_controlled_resets": 288,
+    "old_ARX_not_current_model_input": true,
+    "older_legacy_control_steps": 2304,
+    "older_legacy_offline_resets": 144,
+    "full_lifecycle_unknown_not_zero": true
+  },
+  "historical_qualification_fees_separate": true,
+  "no_duplicate_source_cost_per_program": true,
+  "new_physics": 0,
+  "online_LLM_API_calls": 0
+}
