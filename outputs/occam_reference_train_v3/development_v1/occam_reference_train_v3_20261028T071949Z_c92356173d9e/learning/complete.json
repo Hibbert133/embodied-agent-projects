@@ -1,0 +1,51 @@
+{
+  "integrity": "PASSED",
+  "failure": null,
+  "guard": {
+    "counts": {
+      "physics_import_attempts": 0,
+      "private_or_old_output_read_attempts": 0
+    },
+    "network": {
+      "attempted_network_calls": 0
+    },
+    "new_physics": 0,
+    "online_LLM_API_calls": 0
+  },
+  "counters": {
+    "Adam_updates": 9000,
+    "optimizer_step_attempts": 9000,
+    "attempts": 9000,
+    "allocated_episode_draws": 72000,
+    "inner_filter_updates": 66712,
+    "empty_batches": 0
+  },
+  "Torch_solve_attempts": 66712,
+  "checkpoints": {
+    "PRETRAIN": {
+      "normalized_sha256": "9a886f8531c7cdb99eb90488239786f4c78d40d6e2edc9eaad3274a8ca81c462",
+      "raw_sha256": "ad94a8ae43013959f7f4f04cd5c1600dc704201198d6713f8d2d38081cde3371"
+    },
+    "META_FINAL": {
+      "normalized_sha256": "76f1d857a5d7bd0e2aecb79d3330a2133cb2debb4024cfaf2af9694fb9e7c2ed",
+      "raw_sha256": "f09a294a09ef2883fb6a8b4f7ffdc07da4281a6be6ce238af9ff60809caaaa2d"
+    },
+    "MATCHED_ERM_FINAL": {
+      "normalized_sha256": "5b04ef7cdc08f8b3cb61af2512c38f42f11eff14e24fd2d8ad35dc8348c4bdca",
+      "raw_sha256": "0f01c0e37e9a2795718040d96827670d2fec5a0c98ed2829e8b7ede05255a755"
+    }
+  },
+  "public_source_sha256": "f4c5c0a774c6116308feffee18e69739c6f02696a78ed47d540cd103167727e3",
+  "allocated_episodes": 648,
+  "nonempty_episodes": 542,
+  "available_episodes_by_task": {
+    "push-v3": 188,
+    "reach-v3": 138,
+    "door-open-v3": 216
+  },
+  "no_checkpoint_selection": true,
+  "new_environment_interactions": 0,
+  "online_LLM_API_calls": 0,
+  "wall_ns": 348024752800,
+  "publication_goal_complete": false
+}

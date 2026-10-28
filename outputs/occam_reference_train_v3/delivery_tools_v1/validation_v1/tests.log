@@ -1,0 +1,95 @@
+test_alias_chain_and_wrong_original_hash_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ERROR
+test_audit_failure_and_unstarted_cases_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ok
+test_canonical_gzip_contents_reach_the_scanner (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ERROR
+test_complete_metadata_requires_all648 (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ok
+test_corrupt_archive_or_changed_original_is_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ERROR
+test_exact_two_members_restore_without_duplicate_zip_storage (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ERROR
+test_member_overlap_gap_and_uncovered_tail_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ERROR
+test_mismatched_manifest_and_costs_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ok
+test_path_escape_is_rejected_before_external_write (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ok
+test_running_study_rejected_before_any_output (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests) ... ok
+
+======================================================================
+ERROR: test_alias_chain_and_wrong_original_hash_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 61, in test_alias_chain_and_wrong_original_hash_rejected
+    target,index=self.fixture();bad=deepcopy(index['aliases']);bad['one.gz']['anchor']='two.gz'
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 28, in fixture
+    paths={self.root/name for name in ('canonical.gz','one.gz','two.gz','meta.json')};target=self.root/'records.zip';index=b.bundle(self.root,paths,aliases,target)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in bundle
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in <dictcomp>
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmp7jqfck79\\meta.json' is not in the subpath of 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\tmp7jqfck79' OR one path is relative and the other is absolute.
+
+======================================================================
+ERROR: test_canonical_gzip_contents_reach_the_scanner (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 78, in test_canonical_gzip_contents_reach_the_scanner
+    target,index=self.fixture()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 28, in fixture
+    paths={self.root/name for name in ('canonical.gz','one.gz','two.gz','meta.json')};target=self.root/'records.zip';index=b.bundle(self.root,paths,aliases,target)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in bundle
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in <dictcomp>
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmprem0wln9\\one.gz' is not in the subpath of 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\tmprem0wln9' OR one path is relative and the other is absolute.
+
+======================================================================
+ERROR: test_corrupt_archive_or_changed_original_is_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 66, in test_corrupt_archive_or_changed_original_is_rejected
+    target,index=self.fixture();before=target.read_bytes();target.write_bytes(before+b'corrupt')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 28, in fixture
+    paths={self.root/name for name in ('canonical.gz','one.gz','two.gz','meta.json')};target=self.root/'records.zip';index=b.bundle(self.root,paths,aliases,target)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in bundle
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in <dictcomp>
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmpku0z27dd\\canonical.gz' is not in the subpath of 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\tmpku0z27dd' OR one path is relative and the other is absolute.
+
+======================================================================
+ERROR: test_exact_two_members_restore_without_duplicate_zip_storage (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 49, in test_exact_two_members_restore_without_duplicate_zip_storage
+    target,index=self.fixture();seen=[];r=b.recover(self.root,target,index,self.root/'restore',scan=lambda raw,name:seen.append((name,raw)))
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 28, in fixture
+    paths={self.root/name for name in ('canonical.gz','one.gz','two.gz','meta.json')};target=self.root/'records.zip';index=b.bundle(self.root,paths,aliases,target)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in bundle
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in <dictcomp>
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmp995hr05y\\one.gz' is not in the subpath of 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\tmp995hr05y' OR one path is relative and the other is absolute.
+
+======================================================================
+ERROR: test_member_overlap_gap_and_uncovered_tail_rejected (outputs.occam_reference_train_v3.delivery_tools_v1.test_train_bundle_v1.TrainBundleTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 54, in test_member_overlap_gap_and_uncovered_tail_rejected
+    target,index=self.fixture()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\test_train_bundle_v1.py", line 28, in fixture
+    paths={self.root/name for name in ('canonical.gz','one.gz','two.gz','meta.json')};target=self.root/'records.zip';index=b.bundle(self.root,paths,aliases,target)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in bundle
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_reference_train_v3\delivery_tools_v1\train_bundle_v1.py", line 74, in <dictcomp>
+    root=Path(root).resolve();target=Path(target);names={p.relative_to(root).as_posix():p for p in paths}
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\pathlib.py", line 818, in relative_to
+    raise ValueError("{!r} is not in the subpath of {!r}"
+ValueError: 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\tmpthze4u4w\\canonical.gz' is not in the subpath of 'C:\\Users\\Administrator\\AppData\\Local\\Temp\\tmpthze4u4w' OR one path is relative and the other is absolute.
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.088s
+
+FAILED (errors=5)
