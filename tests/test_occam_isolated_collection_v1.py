@@ -1,0 +1,283 @@
+"""Arrays/fake handles only; real Popen, Env/reset/step and fits forbidden."""
+from contextlib import ExitStack
+from copy import deepcopy
+from pathlib import Path
+from types import SimpleNamespace as NS
+from unittest import TestCase
+from unittest.mock import patch,Mock
+import ast,gzip,hashlib,inspect,json,os,random,subprocess,tempfile,time,traceback
+import numpy as np
+from src.analysis import occam_native_case_io_v1 as c
+from src.analysis import occam_native_case_process_v1 as p
+from src.analysis import occam_native_case_audit_v1 as audit
+from src.analysis import occam_reference_train_io_v3 as a
+from src.analysis import occam_reference_train_case_v3 as core
+from src.analysis import occam_reference_train_collect_v3 as collector
+from src.analysis import occam_reference_train_host_v3 as host
+from src.analysis.occam_live_rng_guard_v1 import no_global_reseed
+from tests.test_occam_resources_v3 import sample as resource_sample
+
+
+class ArrayProcess:
+    def __init__(self,pid,code=0):self.pid=pid;self._handle=pid+1;self.code=code;self.terminations=0
+    def poll(self):return self.code
+    def terminate(self):self.terminations+=1;self.code=9
+    def wait(self,timeout):return self.code
+
+
+class ArrayFixture:
+    def __init__(self,path,*,cases=3,fail_case=None,hang=False):
+        self.path=Path(path);self.output=self.path/'allocations';self.run=self.output/'ARRAY_FIXTURE_NOT_RESEARCH';self.run.mkdir(parents=True)
+        self.fail_case=fail_case;self.hang=hang;self.launches=[];self.callbacks=dict(resets=0,simulations=0,cases=0)
+        self.specs=deepcopy(a.population('NATIVE')[:cases]);self.manifest=self.run/'manifest.json'
+        cfg=a.config();cfg['populations']['NATIVE']=self.specs
+        self.m=dict(experiment_run_id='ARRAY_FIXTURE_NOT_RESEARCH',manifest_id='a'*64,source_git_commit='b'*40,config=cfg,native_runtime_bindings=c.runtime_bindings())
+        c.write(self.manifest,self.m)
+    def sample(self,root=None,*,process_handle=None,process_id=None):
+        return resource_sample(process_id,stamp=time.perf_counter_ns())
+    def install(self,stack):
+        stack.enter_context(patch.object(c,'OUTPUT',self.output));stack.enter_context(patch.object(c,'check_manifest',return_value=deepcopy(self.m)))
+        stack.enter_context(patch.object(a,'checked',return_value=deepcopy(self.m)));stack.enter_context(patch.object(a,'phase_gate',return_value=deepcopy(self.m)))
+        stack.enter_context(patch.object(a,'population',return_value=deepcopy(self.specs)))
+        # Each mock spawn synchronously executes real collector/journal/ledger
+        # plumbing with ordinary array callbacks. Never creates an Env/process.
+        original=p.attempt
+        stack.enter_context(patch.object(collector.processes,'attempt',side_effect=lambda folder,request,**kwargs:original(folder,request,
+            spawn=kwargs.pop('spawn',self.spawn),observe=kwargs.pop('observe',self.sample),**kwargs)))
+    def dependencies(self):
+        fixture=self
+        class Reset:
+            def reset(self):
+                fixture.callbacks['resets']+=1
+                if fixture.fail_case==fixture.callbacks['cases']:raise RuntimeError('constructed array reset failure')
+                return np.zeros(39),{}
+        class Simulate:
+            def do_simulation(self,ctrl,n_frames):fixture.callbacks['simulations']+=1
+        factory=NS(_make_tasks=lambda:Reset().reset());self.reset=Reset;self.simulation=Simulate;self.factory=factory
+        return Reset,Simulate,factory
+    def execute(self,spec,emit,private,ledger,budget,position,sync):
+        self.callbacks['cases']+=1;before=ledger.snapshot();guard={}
+        emit('FACTORY_INTENT',dict(ledger=ledger.snapshot()))
+        with ledger.scope('FACTORY_SETUP'):self.factory._make_tasks()
+        emit('FACTORY_COMPLETE',dict(ledger=ledger.snapshot()))
+        with ledger.scope('CONTROLLED_RESET'):self.reset().reset()
+        with no_global_reseed(guard):
+            for i,phase in enumerate(('PREFIX_TASK','VALIDATION_TASK','REPOSITION','WARM_PROBE','TAIL_TASK')):
+                emit('STEP_INTENT',dict(logical_step=i,phase=phase))
+                with ledger.scope('CONTROL'):self.simulation().do_simulation(np.zeros(4),5)
+                budget['completed']+=1;np.random.random();random.random();emit('STEP_COMPLETE',dict(logical_step=i,phase=phase))
+        private('ARRAY_PRIVATE_EVENT',dict(phase='CONTROL',logical_step=5))
+        return {**spec,'array_fixture':True,'completed':True,'environment_closed':True,'error':None,'close_error':None,'live_global_rng_guard':guard,
+            'ledger_before':before,'ledger_after_close':ledger.snapshot(),'total_steps':5,'deadline_loss':500,'success':False,'policy_queries':0,
+            'performance_windows':0,'full_feedback_windows':0,'boundary_applied':False}
+    def spawn(self,command,**kwargs):
+        self.launches.append(command);folder=Path(command[-1]).parent;request=c.read(folder/'request.json');process=ArrayProcess(7700000+len(self.launches))
+        started=time.perf_counter_ns();identity=c.child_identity(request,c.sha(folder/'request.json'),process.pid,os.getpid())
+        c.write(folder/'start.json',dict(**identity,started_ns=started,resource=resource_sample(process.pid,process.pid,time.perf_counter_ns())))
+        names=('environment_creations','resets','simulation','solve_attempts','lstsq_attempts','cold_fit_attempts','cold_estimator_entries','cold_linear_solve_attempts','cold_linear_lstsq_attempts')
+        boot=dict(runtime_verified=True,before_native_factory=True,completed_ns=time.perf_counter_ns(),
+            dependency_guard=dict(operation_counts={k:0 for k in names},zero_new_physical_interactions=True,network=dict(attempted_network_calls=0),online_LLM_API_calls=0),
+            platform_query=dict(schema='OCCAM_PLATFORM_BOOTSTRAP_V1',platform_module_sha256=request['native_runtime_bindings']['platform_module_sha256'],
+                native_windows_version=[10,0,33333],optional_command_calls_suppressed=1,optional_shell_probe_disabled=True,original_function_restored=True))
+        c.write(folder/'bootstrap.json',boot);state='RETURNED';error=None;payload={}
+        if self.hang:process.code=None;self.process=process;return process
+        try:
+            accounting=core.run_case(request,folder,dependencies=self.dependencies,execute=self.execute)
+            payload=dict(accounting_sha256=c.sha(folder/'accounting.json'),case_sha256=c.sha(folder/'case.json'),status=accounting['status'])
+        except Exception:
+            state='ERROR';process.code=1;error=dict(type='RuntimeError',traceback=traceback.format_exc())
+        finish=resource_sample(process.pid,process.pid,time.perf_counter_ns())
+        c.write(folder/'receipt.json',dict(**identity,started_ns=started,completed_ns=time.perf_counter_ns(),state=state,error=error,payload=payload,resource_at_finish=finish))
+        return process
+    def previous(self):return dict(ledger=dict(counts={},by_phase={}),control_steps=0,cursors=dict(events=0,private=0,last_event_ns=-1,last_private_ns=-1))
+    def request(self,index=1):
+        v=self.previous();return c.request(self.manifest,'NATIVE',index,v['ledger'],v['control_steps'],v['cursors'])
+    def collect(self):return collector.collect(self.manifest,'NATIVE')
+
+
+class IsolatedCollectionTests(TestCase):
+    def setUp(self):
+        self.temporary=tempfile.TemporaryDirectory();self.addCleanup(self.temporary.cleanup);self.path=Path(self.temporary.name)
+        self.stack=ExitStack();self.addCleanup(self.stack.close)
+        self.real_spawn=self.stack.enter_context(patch('subprocess.Popen',side_effect=AssertionError('real worker forbidden in unit fixtures')))
+        self.original_manifest_check=c.check_manifest
+        self.np_state=np.random.get_state();self.py_state=random.getstate()
+        self.addCleanup(lambda:np.random.set_state(self.np_state));self.addCleanup(lambda:random.setstate(self.py_state))
+    def fixture(self,**kwargs):
+        fixture=ArrayFixture(self.path,**kwargs);fixture.install(self.stack);return fixture
+    def test_complete_scientific_design_and_learning_unchanged(self):
+        from src.analysis import occam_reference_train_io_v2 as old
+        self.assertEqual(a.learning(),old.learning());self.assertEqual(a.config()['complete_limits'],old.config()['complete_limits'])
+        self.assertEqual([len(a.population(p)) for p in a.PHASES],[36,648]);self.assertEqual({s['planned_boundary'] for s in a.population('TRAIN')},{16,32,64})
+        self.assertTrue(all(172000<=s['seed']<=174999 for p in a.PHASES for s in a.population(p)))
+    def test_live_control_program_body_is_source_identical(self):
+        from src.analysis import occam_reference_train_host_v2 as old
+        x=ast.parse(inspect.getsource(old.run_live)).body[0];y=ast.parse(inspect.getsource(host._run_live_registered)).body[0];x.name=y.name='same_live_body'
+        self.assertEqual(ast.dump(x,include_attributes=False),ast.dump(y,include_attributes=False))
+    def test_registered_request_rejects_foreign_case_and_extra_commands(self):
+        f=self.fixture();request=f.request()
+        for key,value in (('script','forbidden'),('seed',169000),('restore_state',{})):
+            bad=deepcopy(request);bad[key]=value
+            with self.subTest(key=key),self.assertRaises(ValueError):c.validate_request(bad)
+        bad=deepcopy(request);bad['case']['seed']=169000
+        with self.assertRaises(ValueError):c.validate_request(bad)
+    def test_fixed_timeout_and_unknown_runtime_rejected(self):
+        f=self.fixture();request=f.request()
+        for key,value in (('timeout_seconds',211),('native_runtime_bindings',{}),('case_index',0)):
+            bad=deepcopy(request);bad[key]=value
+            with self.subTest(key=key),self.assertRaises(ValueError):c.validate_request(bad)
+    def test_remaining_budget_and_phase_ledger_sum_rejected(self):
+        f=self.fixture();request=f.request();bad=deepcopy(request);bad['control_steps_start']=f.m['config']['limits']['NATIVE']['control_steps']
+        with self.assertRaises(ValueError):c.validate_request(bad)
+        bad=deepcopy(request);bad['ledger_start']['counts']['reset_attempts']=1
+        with self.assertRaisesRegex(ValueError,'sum'):c.validate_request(bad)
+    def test_two_global_initial_states_match_without_dropping_rng_roots(self):
+        first=core.initialize_global_rng(a.registry());np.random.random(4);random.random();second=core.initialize_global_rng(a.registry())
+        self.assertEqual(first,second);self.assertEqual(first['scope'],'BEFORE_FACTORY_ONLY_NO_WITHIN_CASE_RESEED')
+    def test_live_reseed_setstate_calls_rejected(self):
+        for name,fn,args in (('numpy_seed',np.random.seed,(1,)),('numpy_set_state',np.random.set_state,(self.np_state,)),
+            ('python_seed',random.seed,(1,)),('python_setstate',random.setstate,(self.py_state,))):
+            receipt={}
+            with self.subTest(name=name),self.assertRaises(RuntimeError):
+                with no_global_reseed(receipt):
+                    target={'numpy_seed':np.random.seed,'numpy_set_state':np.random.set_state,'python_seed':random.seed,'python_setstate':random.setstate}[name];target(*args)
+            self.assertEqual(receipt['attempts'][name],1)
+    def test_live_draws_advance_and_are_not_rewound(self):
+        np.random.seed(23);random.seed(24);expected_n=np.random.RandomState(23);expected_p=random.Random(24);receipt={}
+        with no_global_reseed(receipt):self.assertEqual(np.random.random(),expected_n.random());self.assertEqual(random.random(),expected_p.random())
+        self.assertEqual(np.random.random(),expected_n.random());self.assertEqual(random.random(),expected_p.random());self.assertFalse(any(receipt['attempts'].values()))
+    def test_full_collector_process_journal_ledger_two_cases_and_raw_join(self):
+        f=self.fixture(cases=2);root=f.collect();summary=c.read(root/'summary.json');self.assertEqual(summary['executions'],2)
+        self.assertEqual(f.callbacks,dict(resets=4,simulations=10,cases=2));self.assertEqual(summary['control_steps'],10)
+        self.assertEqual(summary['lifecycle']['counts']['reset_attempts'],4)
+        for name in ('events.jsonl.gz','witnesses.jsonl.gz'):
+            self.assertEqual((root/name).read_bytes(),b''.join((root/('case_%04d'%i)/name).read_bytes() for i in (1,2)))
+        result=audit.audit_cohort(f.manifest,'NATIVE');self.assertEqual(result['executions'],2);self.real_spawn.assert_not_called()
+    def test_task_failures_remain_complete_and_do_not_stop_population(self):
+        f=self.fixture(cases=3);root=f.collect();summary=c.read(root/'summary.json')
+        self.assertEqual([r['success'] for r in summary['rows']],[False]*3);self.assertEqual([r['deadline_loss'] for r in summary['rows']],[500]*3)
+        self.assertEqual(summary['executions'],3);self.assertEqual(len(f.launches),3)
+    def test_technical_failure_closes_once_keeps_partial_and_unstarted(self):
+        f=self.fixture(cases=3,fail_case=2)
+        with self.assertRaises(RuntimeError):f.collect()
+        root=f.run/'native';summary=c.read(root/'summary.json')
+        self.assertEqual([x['status'] for x in summary['outcomes']],['COMPLETE','FAILED_TECHNICAL','NOT_STARTED'])
+        self.assertIsNone(summary['outcomes'][2]['task_metrics']);self.assertEqual(f.callbacks['resets'],3);self.assertEqual(len(f.launches),2)
+        self.assertTrue((f.run/'CLOSED_TECHNICAL_FAILURE.json').exists());self.assertIn('constructed array reset failure',c.read(root/'case_0002/execution_error.json')['traceback'])
+        self.assertEqual(summary['cost_accounting']['last_attempt_ledger']['counts']['reset_errors'],1)
+    def test_resource_rejection_happens_before_any_callback_or_spawn(self):
+        f=self.fixture();request=f.request()
+        def low(*args,**kwargs):s=f.sample();s['system_commit_available_bytes']=0;return s
+        result=p.attempt(f.run/'native/case_0001',request,spawn=f.spawn,observe=low)
+        self.assertEqual(result['status'],'ADMISSION_REJECTED');self.assertEqual(f.launches,[]);self.assertEqual(f.callbacks['resets'],0)
+    def test_request_failure_before_dispatch_has_known_zero_native_cost(self):
+        f=self.fixture()
+        with patch.object(c,'request',side_effect=ValueError('constructed request rejection')),self.assertRaises(RuntimeError):f.collect()
+        s=c.read(f.run/'native/summary.json');self.assertFalse(s['cost_accounting']['unresolved_case_cost']);self.assertEqual(s['outcomes'][0]['process_launches'],0)
+    def test_independent_audit_disables_classifier_and_ledger_formula(self):
+        f=self.fixture(cases=2);f.collect()
+        with patch.object(p,'classify',side_effect=AssertionError),patch.object(c,'check_ledger',side_effect=AssertionError),patch.object(p.resources,'gate',side_effect=AssertionError):
+            r=audit.audit_cohort(f.manifest,'NATIVE')
+        self.assertEqual(r['executions'],2)
+    def test_member_offset_and_original_raw_bytes_tampering_rejected(self):
+        f=self.fixture(cases=2);root=f.collect();index=c.read(root/'member_index.json');index['members'][1]['files']['events.jsonl.gz']['offset']+=1
+        (root/'member_index.json').write_text(json.dumps(index),encoding='utf8')
+        with self.assertRaisesRegex(ValueError,'offset'):audit.audit_cohort(f.manifest,'NATIVE')
+    def test_stale_cross_case_cursor_rejected(self):
+        f=self.fixture(cases=2);root=f.collect();request=c.read(root/'case_0002/request.json');request['cursors_start']['events']=0
+        with self.assertRaises(ValueError):audit.check_case(root/'case_0002',f.m,'NATIVE',2,f.previous())
+    def test_new_learner_scope_cannot_consume_closed_v2_or_native(self):
+        source=(a.ROOT/'src/analysis/occam_reference_learner_v3.py').read_text(encoding='utf8');node=next(n for n in ast.parse(source).body if isinstance(n,ast.FunctionDef) and n.name=='validate_spec')
+        namespace={'io':a.io,'Path':Path,'allocation':a};exec(compile(ast.Module(body=[node],type_ignores=[]),'frozen_v3_scope_function','exec'),namespace)
+        for base,phase in ((a.ROOT/'outputs/occam_reference_train_v2/development_v1/closed','train'),(a.OUTPUT/'fake','native')):
+            spec=dict(schema='OCCAM_PUBLIC_LEARNING_SPEC_V1',learning=a.learning(),allocated_episodes=648,public_trajectories=str(base/phase/'public_trajectories.jsonl.gz'),
+                public_sha256='a'*64,learning_source_sha256={},source_manifest_id='b'*64,no_private_or_registry_input=True)
+            with self.subTest(phase=phase),self.assertRaises(ValueError):namespace['validate_spec'](spec,base/'learning_spec.json',base/'learning')
+    def test_three_tasks_boundaries_and_actions_keep_live_rng_guard(self):
+        from tests.test_learned_acquisition_native_v1 import FakeSession
+        specs=a.population('TRAIN')
+        for group in range(3):
+            for task in ('push-v3','reach-v3','door-open-v3'):
+                for context in ('UNCHANGED','CHANGED'):
+                    for action in a.ACTIONS:
+                        for behavior in a.BEHAVIORS:
+                            spec=next(s for s in specs if s['group']==group and s['task']==task and s['context']==context and s['acquisition_action']==action and s['behavior']==behavior)
+                            session=FakeSession(end=120);guard={};r=host.run_live(spec,session,lambda name:None,lambda:None,rng_guard=guard)
+                            self.assertEqual(r['total_steps'],120);self.assertFalse(any(guard['attempts'].values()))
+    def test_native_timeout_only_terminates_owned_handle_once(self):
+        from tests.test_occam_resources_v3 import Clock
+        f=self.fixture(hang=True);request=f.request();clock=Clock()
+        result=p.attempt(f.run/'native/case_0001',request,spawn=f.spawn,observe=f.sample,clock=clock,sleep=clock.sleep)
+        self.assertEqual(result['status'],'TIMEOUT_TERMINATED');self.assertEqual(f.process.terminations,1);self.assertEqual(len(f.launches),1)
+        self.assertEqual(f.callbacks['resets'],0)
+    def test_closed_marker_rejected_before_any_frozen_or_native_loading(self):
+        f=self.fixture();c.write(f.run/'CLOSED_TECHNICAL_FAILURE.json',dict(status='ARRAY_CLOSED'))
+        with self.assertRaisesRegex(ValueError,'closed'):self.original_manifest_check(f.manifest)
+        self.assertEqual(f.callbacks['resets'],0)
+    def test_array_manifest_cannot_gain_production_admission(self):
+        f=self.fixture()
+        with self.assertRaisesRegex(ValueError,'array fixtures forbidden'):self.original_manifest_check(f.manifest)
+    def test_preexisting_case_directory_never_relaunched(self):
+        f=self.fixture();request=f.request();folder=f.run/'native/case_0001';folder.mkdir(parents=True)
+        with self.assertRaises(FileExistsError):p.attempt(folder,request,spawn=f.spawn,observe=f.sample)
+        self.assertEqual(f.launches,[])
+    def test_independent_audit_rejects_future_receipt_even_if_hash_updated(self):
+        f=self.fixture(cases=1);root=f.collect();folder=root/'case_0001';result=c.read(folder/'result.json');receipt=c.read(folder/'receipt.json')
+        receipt['completed_ns']=result['completed_ns']+1;(folder/'receipt.json').write_text(json.dumps(receipt),encoding='utf8')
+        result['artifact_sha256']['receipt.json']=c.sha(folder/'receipt.json');(folder/'result.json').write_text(json.dumps(result),encoding='utf8')
+        with self.assertRaisesRegex(ValueError,'timestamps'):audit.check_case(folder,f.m,'NATIVE',1,f.previous())
+    def test_missing_import_guard_cannot_be_forged_by_parent_status(self):
+        f=self.fixture(cases=1);root=f.collect();folder=root/'case_0001';result=c.read(folder/'result.json');boot=c.read(folder/'bootstrap.json')
+        boot['dependency_guard']['operation_counts']={};(folder/'bootstrap.json').write_text(json.dumps(boot),encoding='utf8')
+        result['artifact_sha256']['bootstrap.json']=c.sha(folder/'bootstrap.json');(folder/'result.json').write_text(json.dumps(result),encoding='utf8')
+        with self.assertRaisesRegex(ValueError,'import guard'):audit.check_case(folder,f.m,'NATIVE',1,f.previous())
+    def test_train_dispatch_requires_positive_native_audit(self):
+        f=self.fixture();v=f.previous()
+        with self.assertRaisesRegex(ValueError,'native audit before TRAIN'):c.request(f.manifest,'TRAIN',1,v['ledger'],v['control_steps'],v['cursors'])
+
+    def registered_entry_fixture(self):
+        f=self.fixture();f.m['experiment_run_id']='occam_reference_train_v3_ARRAY_ONLY_NOT_REGISTERED';f.manifest.write_text(json.dumps(f.m),encoding='utf8')
+        return f
+    def test_preparation_failure_retains_full_trace_without_allocating(self):
+        from scripts import run_occam_reference_train_v3 as entry
+        with patch.object(c,'BASE',self.path),patch.object(entry,'dispatch',side_effect=ValueError('constructed memory floor rejection')),self.assertRaises(RuntimeError):entry.run_entry('prepare')
+        receipts=list(self.path.glob('preparation_attempts_v1/*/complete.json'));self.assertEqual(len(receipts),1)
+        saved=c.read(receipts[0]);self.assertEqual(saved['integrity'],'FAILED');self.assertIn('constructed memory floor rejection',saved['failure']['traceback'])
+        self.assertFalse(list(self.path.glob('**/manifest.json')));self.real_spawn.assert_not_called()
+    def test_audit_entry_failure_retains_guard_and_closes_owned_allocation(self):
+        from scripts import run_occam_reference_train_v3 as entry
+        from src.analysis import release_learning_guard_v1 as guards
+        f=self.registered_entry_fixture()
+        def fail(*args):
+            with guards.read_only({}):raise ValueError('constructed reader failure')
+        with patch.object(entry,'dispatch',side_effect=fail),self.assertRaises(RuntimeError):entry.run_entry('audit',str(f.manifest),'NATIVE')
+        receipt=c.read(f.run/'entry_attempts_v1/audit_NATIVE_attempt01/complete.json')
+        self.assertIn('constructed reader failure',receipt['failure']['traceback']);self.assertTrue(receipt['guard']['zero_new_physical_interactions'])
+        marker=f.run/'CLOSED_TECHNICAL_FAILURE.json';before=marker.read_bytes()
+        self.assertTrue(c.close_failed_allocation(f.manifest,'TRAIN',{'message':'must not overwrite'}));self.assertEqual(marker.read_bytes(),before)
+        with self.assertRaises(FileExistsError):entry.run_entry('audit',str(f.manifest),'NATIVE')
+    def test_phase_gate_failure_closes_before_worker_or_reset(self):
+        f=self.registered_entry_fixture()
+        with patch.object(a,'phase_gate',side_effect=ValueError('constructed phase resource failure')),self.assertRaises(ValueError):f.collect()
+        self.assertTrue((f.run/'CLOSED_TECHNICAL_FAILURE.json').exists());self.assertEqual(f.launches,[]);self.assertEqual(f.callbacks['resets'],0)
+    def test_foreign_allocation_cannot_be_closed_by_v3_helper(self):
+        f=self.fixture();self.assertFalse(c.close_failed_allocation(f.manifest,'NATIVE',{'message':'foreign fixture'}))
+        self.assertFalse((f.run/'CLOSED_TECHNICAL_FAILURE.json').exists())
+    def test_killed_gzip_retains_last_reported_prefix_and_unknown_final_cost(self):
+        folder=self.path/'partial';folder.mkdir();row=dict(ledger=dict(counts={'reset_attempts':1},by_phase={'CONTROLLED_RESET':{'reset_attempts':1}}),control_steps=0)
+        raw=gzip.compress((json.dumps(row)+'\n').encode());(folder/'accounting_progress.jsonl.gz').write_bytes(raw[:-8])
+        prefix=collector.progress_prefix(folder);self.assertEqual(prefix['complete_rows'],1);self.assertEqual(prefix['last_reported'],row)
+        self.assertEqual(prefix['read_error']['type'],'EOFError');self.assertIn('NOT_FINAL_PHYSICAL_COST',prefix['semantics'])
+    def test_denied_live_reseed_attempt_is_not_reported_as_zero(self):
+        f=self.fixture();request=f.request();folder=f.run/'native/case_0001';folder.mkdir(parents=True)
+        record=dict(live_global_rng_guard=dict(attempts={'numpy_seed':1}))
+        def fail(*args):raise host.CaseFailure(record)
+        with self.assertRaises(RuntimeError):core.run_case(request,folder,dependencies=f.dependencies,execute=fail)
+        self.assertEqual(c.read(folder/'accounting.json')['within_case_global_rng_reseeds'],1)
+    def test_all_learner_numerical_functions_are_source_identical(self):
+        paths=[a.ROOT/('src/analysis/occam_reference_learner_v%d.py'%version) for version in (2,3)]
+        functions=[{n.name:ast.dump(n,include_attributes=False) for n in ast.parse(path.read_text(encoding='utf8')).body if isinstance(n,ast.FunctionDef)} for path in paths]
+        self.assertEqual(functions[0],functions[1])
+
+
+if __name__=='__main__':__import__('unittest').main()
