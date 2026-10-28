@@ -1,0 +1,39 @@
+{
+  "sample": {
+    "schema": "OCCAM_RESOURCE_SAMPLE_V1",
+    "timestamp_UTC": "2026-10-28T04:40:48.768656+00:00",
+    "sample_started_ns": 1114899306131800,
+    "sample_completed_ns": 1114899311107100,
+    "observer_pid": 4648,
+    "measured_process_pid": 4648,
+    "pointer_bits": 64,
+    "disk_free_bytes": 4659273728,
+    "system_commit_total_bytes": 19790594048,
+    "system_commit_limit_bytes": 21468884992,
+    "system_commit_available_bytes": 1678290944,
+    "system_commit_peak_bytes": 21468811264,
+    "system_commit_total_pages": 4831688,
+    "system_commit_limit_pages": 5241427,
+    "system_commit_peak_pages": 5241409,
+    "current_process_available_commit_bytes": 1678290944,
+    "physical_total_bytes": 17173917696,
+    "physical_available_bytes": 3985571840,
+    "process_private_commit_bytes": 269590528,
+    "process_peak_private_commit_bytes": 273104896,
+    "process_working_set_bytes": 42340352,
+    "process_peak_working_set_bytes": 45707264,
+    "observer_available_address_space_bytes": 140732776886272,
+    "page_size_bytes": 4096
+  },
+  "decision": {
+    "allowed": false,
+    "reasons": [
+      "AVAILABLE_COMMIT_BELOW_FLOOR"
+    ],
+    "minimum_commit_bytes": 4294967296,
+    "minimum_disk_bytes": 4294967296,
+    "maximum_private_bytes": null,
+    "volatile_observation_not_memory_reservation": true
+  },
+  "read_only_no_automatic_retry": true
+}

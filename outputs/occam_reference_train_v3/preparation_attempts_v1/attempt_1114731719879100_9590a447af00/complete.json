@@ -1,0 +1,27 @@
+{
+  "integrity": "FAILED",
+  "command": "prepare",
+  "result": null,
+  "failure": {
+    "type": "ValueError",
+    "message": "scientific resource admission rejected: AVAILABLE_COMMIT_BELOW_FLOOR",
+    "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_occam_reference_train_v3.py\", line 55, in run_entry\n    result=dispatch(command,manifest,phase)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\scripts\\run_occam_reference_train_v3.py\", line 12, in dispatch\n    if command=='prepare':return str(a.prepare())\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\occam_reference_train_io_v3.py\", line 78, in prepare\n    require_science_resources(initial=True)\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\occam_native_case_io_v1.py\", line 38, in require_science_resources\n    require(decision['allowed'],'scientific resource admission rejected: '+','.join(decision['reasons']))\n  File \"C:\\Users\\Administrator\\Desktop\\embodied-agent-projects\\src\\analysis\\occam_native_case_io_v1.py\", line 26, in require\n    if not ok:raise ValueError(message)\nValueError: scientific resource admission rejected: AVAILABLE_COMMIT_BELOW_FLOOR\n"
+  },
+  "guard": {},
+  "platform_query": {
+    "schema": "OCCAM_PLATFORM_BOOTSTRAP_V1",
+    "platform_module_sha256": "275b3d17d1f5ef4a0a7d3fcc7d5dbf72422a72ce234eb7c8a9d0d9975f6f70c3",
+    "native_windows_version": [
+      10,
+      0,
+      20348
+    ],
+    "optional_command_calls_suppressed": 0,
+    "optional_shell_probe_disabled": true,
+    "original_function_restored": true
+  },
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "wall_ns": 118944700,
+  "online_LLM_API_calls": 0
+}
