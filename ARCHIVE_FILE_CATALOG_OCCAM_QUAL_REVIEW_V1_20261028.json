@@ -1,11 +1,11 @@
 {
   "integrity": "PASSED",
-  "source_local_commit": "cefff065163e79fbe81c4f26412999f139d6f8e5",
-  "previous_archive_commit": "fe1bf36891de8f0b38d242fd77d81f966c7896da",
-  "prior_catalog_sha256": "1a0e75ee753dbca31ad039def3789fe12ce4e70b4af3eec1795dd708cfb5d5c2",
+  "source_local_commit": "d6b38a11d5ccc6c4f253feb4b0a85fd5f7f2683f",
+  "previous_archive_commit": "16de5ce6fe97e25240ac34be6b3585d4fe71740e",
+  "prior_catalog_sha256": "b2261f6a079df62bff7e7b40517aa75f1ab6b55a7d024218dc62542af4f26a3a",
   "decoded_record_parts": {
     "strategy": "reuse historical actual recoveries after exact Git identity; native499-file ZIP has its own committed actual recovery and decoded credential scan",
-    "prior_archive_commit": "fe1bf36891de8f0b38d242fd77d81f966c7896da",
+    "prior_archive_commit": "16de5ce6fe97e25240ac34be6b3585d4fe71740e",
     "prior_catalog_sha256": "f78e346e364cc3ed91f026434df0f67a7bf00c9347ef17503e64ce5c587c4856",
     "unchanged_git_objects": {
       "outputs/occam_window_host/delivery_v1/record_parts_index.json": "6c018c90865179ebd13321a74810f3b42192d383",
@@ -150,11 +150,11 @@
       "decoded_gzip_lines": 91106
     }
   },
-  "all_source_files": 12206,
-  "selected_files": 9595,
-  "reused_content_hash_rows": 12176,
-  "new_actual_git_bytes_hashed": 8176475,
-  "newly_secret_scanned_blob_objects": 30,
+  "all_source_files": 12214,
+  "selected_files": 9603,
+  "reused_content_hash_rows": 12206,
+  "new_actual_git_bytes_hashed": 24300,
+  "newly_secret_scanned_blob_objects": 8,
   "selection": "retain prior per-path selection; publish bounded completed controller_agreement, policy_mode_diagnostic and occam_performance_core artifacts after decompressed scan; other raw jsonl.gz, binary .bin, environment and >8MiB remain omitted",
   "selected_secret_scan": "unchanged Git objects reuse earlier selected-byte scan; newly published objects scanned before publication",
   "original_history_and_raw_data_preserved": true,
@@ -4405,6 +4405,14 @@
       "oid": "290f5056994d172dfd32762cadf39fa9c15ba30b",
       "bytes": 4357,
       "sha256": "0e9966549cb610b9c1900bc98f2ae6ddb0c1205850e08df26d04f48d5da166b0",
+      "published": true
+    },
+    {
+      "path": "docs/research/occam_independent_qualification_requirements_v1_zh.md",
+      "mode": "100644",
+      "oid": "ca828054631ca81050adb8361cedb1832029daf3",
+      "bytes": 9613,
+      "sha256": "3522fe1bbb751e6f2c556fa8fbb9c0cd09bd3ce2e50ea937c54a14fd190aa362",
       "published": true
     },
     {
@@ -74965,6 +74973,62 @@
       "oid": "45237e4ca536fe7912a9b40476c810b948ff5020",
       "bytes": 1762,
       "sha256": "de80590dc0c7c167a820d6d6a20f6106e2561738bdc1b3997880fe3f465398be",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/attempt01/failure.json",
+      "mode": "100644",
+      "oid": "70e57c5a0b1298fc84f93d7a99c831fcf52adf95",
+      "bytes": 432,
+      "sha256": "799e1145fdf1adbcbd2687e1577c382b7cb9c1449ff38ae37d4c6f6d8e3b628b",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/attempt01/source_before_AST_lookup_fix.py.saved",
+      "mode": "100644",
+      "oid": "3d12ba03e4aeaacdbbf8ea5f168ba59a403e08f0",
+      "bytes": 4582,
+      "sha256": "65482c21e71d529b01234880c71377256832c045e0e7ea06246673a785a61dc2",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/index_disk_proof.json",
+      "mode": "100644",
+      "oid": "f6c7d70a58597b39db800c2959f56abf1532d49a",
+      "bytes": 1246,
+      "sha256": "066d94886db462b6f63b4b5c734d855d11ac16ab8e744483838f9ce7bbc0be29",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/inspection.json",
+      "mode": "100644",
+      "oid": "47a1977f662a5e17e5fa85a868b53ad2d4f32bad",
+      "bytes": 1147,
+      "sha256": "b37df263abb988c40f0f1754d869b4e1aad89f9447c80d8705cef29610230cf1",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/owned_checked.nul",
+      "mode": "100644",
+      "oid": "efc247a9c7fba5e699a18531f41ee6398a21db55",
+      "bytes": 586,
+      "sha256": "92f6974761180d0efc55ba0fa420523eb112c80f6b2331941a40b55989295397",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/record_occam_qualification_review_v1.py",
+      "mode": "100644",
+      "oid": "c3cc4cd88feaf10c738c16859c50d8c5d1975899",
+      "bytes": 4597,
+      "sha256": "6a2dbac24055dcbe9cdd9fb58e183e073877ba37ea62cfa29d5b49cdbeefc85b",
+      "published": true
+    },
+    {
+      "path": "outputs/research_review/occam_qualification_requirements_v1/sources.json",
+      "mode": "100644",
+      "oid": "4f53fbbba13cb4851aa167785f16d7031e644914",
+      "bytes": 2097,
+      "sha256": "a4eacc50eceb61c1ec5c879876d2027cfefa9ea9c4db818e7f5c0dbd21709c58",
       "published": true
     },
     {

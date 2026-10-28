@@ -1,0 +1,52 @@
+"""Source/obligation review only; frozen training and its data remain untouched."""
+from contextlib import contextmanager
+from datetime import datetime,timezone
+from pathlib import Path
+from time import perf_counter_ns
+import ast,hashlib,json,shutil,sys
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects');sys.path.insert(0,str(ROOT))
+from src.analysis import occam_native_case_io_v1 as c
+OUT=ROOT/'outputs/research_review/occam_qualification_requirements_v1'
+DOC=ROOT/'docs/research/occam_independent_qualification_requirements_v1_zh.md'
+
+
+def main():
+    start=perf_counter_ns();OUT.mkdir(parents=True,exist_ok=False);frozen=c.read(c.FREEZE)
+    for name,h in {**frozen['source_sha256'],**frozen['input_sha256']}.items():assert c.sha(ROOT/name)==h,name
+    inputs=('src/analysis/occam_meta_torch_v1.py','src/analysis/occam_training_data_v1.py','src/analysis/occam_reference_learner_v3.py',
+        'src/analysis/occam_reference_learning_io_v3.py','src/probe/occam_performance_core_v1.py','src/probe/occam_window_cost_v1.py',
+        'docs/protocols/occam_performance_core_v1_zh.md','docs/protocols/occam_reference_train_v3_zh.md','docs/research/correction_scope_contribution_review_v5_zh.md',
+        'docs/research/occam_performance_reference_decision_v1_zh.md')
+    source={name:c.sha(ROOT/name) for name in inputs};source[DOC.relative_to(ROOT).as_posix()]=c.sha(DOC)
+    trees={name:ast.parse((ROOT/name).read_text(encoding='utf8')) for name in inputs if name.endswith('.py')}
+    assert all(tree.body for tree in trees.values())
+    meta=trees['src/analysis/occam_meta_torch_v1.py'];loss=next(n for n in meta.body if isinstance(n,ast.FunctionDef) and n.name=='meta_loss')
+    assert any(isinstance(n,ast.For) for n in ast.walk(loss)) and 'score all rows' in ast.get_docstring(loss)
+    core=trees['src/probe/occam_performance_core_v1.py'];functions={n.name:n for n in core.body if isinstance(n,ast.FunctionDef)}
+    assert {'forecast','update','choose','basis_forward'}<=set(functions)
+    labels={n.value for n in ast.walk(functions['forecast']) if isinstance(n,ast.Constant) and type(n.value) is str}
+    assert {'mean','latent_covariance','observation_covariance'}<=labels
+    run=c.OUTPUT/'occam_reference_train_v3_20261028T071949Z_c92356173d9e';m=c.read(run/'manifest.json');train=c.read(run/'train/status.json')
+    assert m['config']['learning']['Adam_updates_max']==9000 and m['config']['learning']['all_training_linear_solves_max']==1000000
+    assert c.read(run/'native/audit.json')['integrity']=='PASSED' and c.read(run/'native/process_audit.json')['executions']==36
+    assert train['status']=='RUNNING' and train['completed']<648 and not (run/'learning').exists()
+    c.write(OUT/'sources.json',dict(primary_sources=[dict(url='https://arxiv.org/html/2406.17620v1',version='v1',
+        retrieved_UTC=datetime.now(timezone.utc).isoformat(),read_sections=['4.1','4.2 Algorithm1','4.3','5.2','5.3'],
+        paper_text_not_republished=True,no_claim_to_exhaustive_or_latest_version_review=True)],
+        source_sha256=source,source_freeze_sha256=c.sha(c.FREEZE),science_config_sha256=c.sha(c.CONFIG),
+        reading_scope='primary paper plus exact local training/projection/scoring source; no new robot observations used to choose anything'))
+    c.write(OUT/'inspection.json',dict(integrity='PASSED_SOURCE_OBLIGATION_REVIEW',
+        findings=['offline support-conditioned all-window MSE is not prequential error',
+            'forecast latent and observation covariance differ from update innovation covariance',
+            'unregularized mean loss alone does not identify the common covariance scale',
+            'TRAIN export agreement on16 episodes per bank is not independent qualification',
+            'receiver-specific full continuation risk is not a one-window cost predictor',
+            'meta-training and online-adaptation effects need separate actual-deployment ablations'],
+        source_AST_inspection_only=True,TRAIN_snapshot=train,TRAIN_result_outcomes_used_for_design=False,model_training_started=False,
+        no_new_population_or_threshold_frozen=True,new_environment_interactions=0,new_policy_queries=0,new_fits=0,new_linear_solves=0,
+        Adam_updates=0,online_LLM_API_calls=0,unit_test_count_not_increased=True,publication_goal_complete=False,wall_ns=perf_counter_ns()-start))
+    shutil.copyfile(Path(__file__),OUT/Path(__file__).name)
+    print(dict(integrity='PASSED_SOURCE_OBLIGATION_REVIEW',TRAIN_snapshot=train['completed'],science_code_unchanged=True,new_fits=0),flush=True)
+
+
+if __name__=='__main__':main()

@@ -9,8 +9,8 @@ from src.analysis import response_qualification_io_v1 as io
 from outputs.research_archive.preflight_v1.scan_snapshot import EXTRA
 OUT=Path(__file__).parent
 BRANCH='codex/archive-20261023-information-release-v2'
-PARENT='fe1bf36891de8f0b38d242fd77d81f966c7896da'
-SOURCE='cefff065163e79fbe81c4f26412999f139d6f8e5'
+PARENT='16de5ce6fe97e25240ac34be6b3585d4fe71740e'
+SOURCE='d6b38a11d5ccc6c4f253feb4b0a85fd5f7f2683f'
 
 
 def git(*args,data=None,env=None):
@@ -71,7 +71,7 @@ def main():
     state=git('status','--porcelain','--untracked-files=no');io.require(not state and not git('diff','--cached','--name-only').strip(),'clean tracked checkout/index')
     io.require(git('rev-parse','refs/heads/'+BRANCH).decode().strip()==PARENT,'unchanged verified archival parent')
     allowed_parts,record_parts_scan=scan_all_record_parts()
-    baseline_path=ROOT/'outputs/research_archive/occam_native_qualification_v3/catalog.json'
+    baseline_path=ROOT/'outputs/research_archive/occam_native_stage_log_v3/catalog.json'
     baseline=io.read(baseline_path);io.require(baseline['integrity']=='PASSED' and not baseline.get('credential_findings',[]),'audited prior catalog')
     old={r['path']:r for r in baseline['files']};cache={r['oid']:r for r in old.values()}
     scanned={r['oid'] for r in old.values() if r['published']};catalog=[];read_bytes=0;reused=0;new_scans=0
@@ -109,7 +109,7 @@ def main():
         selected_secret_scan='unchanged Git objects reuse earlier selected-byte scan; newly published objects scanned before publication',
         original_history_and_raw_data_preserved=True,files=catalog)
     io.write(OUT/'catalog.json',cache_receipt)
-    build=Path(r'C:/Users/Administrator/Documents/ChatGPT/robotic agent/research_archive_build_occam_native_log_v3_20261028_cefff065163e');build.mkdir(exist_ok=False)
+    build=Path(r'C:/Users/Administrator/Documents/ChatGPT/robotic agent/research_archive_build_occam_qual_review_v1_20261028_d6b38a11d5cc');build.mkdir(exist_ok=False)
     entries={}
     # Keep the previous archival metadata as historical records, not a new source claim.
     for raw in git('ls-tree','-r','-z',PARENT).split(b'\0'):
@@ -117,28 +117,24 @@ def main():
         meta,path=raw.split(b'\t',1);mode,kind,oid=meta.decode().split();name=path.decode()
         if name.startswith('ARCHIVE_'):entries[name]=(mode,oid)
     entries.update({r['path']:(r['mode'],r['oid']) for r in catalog if r['published']})
-    note=f'''# 原生资格v3阶段日志与已核对归档
+    note=f'''# 独立资格要求与来源核对
 
-来源{SOURCE}，父归档{PARENT}。已核对Native25项阶段文件全部发布，再追加
-根目录Research_Log，旧条目前缀字节不变。Native36全部完整及双审计通过，
-35任务成功/1失败保留；18对共同获取后完整状态一致，295个实际窗口。
-只有1组与边界16，不是独立预测/任务收益或CCF A证明。
+来源{SOURCE}，父归档{PARENT}。新增文献/源码义务清单，分开数值、完整训练、
+数学导出、前瞻预测、完整自身历史任务收益和研究贡献。原文OCCAM与当前
+受限参考的差异、离线支持集MSE及两种预测方差/创新方差的口径均明确。
+共同协方差缩放是标准代数边界，不称新理论；既有训练损失不充当校准证明。
 
-原始499文件/10片实际Git恢复、91106行gzip扫描及原有负结果完整保存。
-Native实际5399步/1836全部reset/944995帧，实际及审计政策查询各5083，
-科学拟合/Adam/在线LLM均0。研究日志快照TRAIN140/648仅用于运维，完整
-新TRAIN及双审计前不学习，不用旧188项填充或挑选有利子集。
+仅文档和只读来源检查，源码/配置/种子/参数/预算未变，未新增科学人口、
+拟合、求解、优化或在线LLM。AST检查器首次键查找错误保留，修复检查器，
+不增加单位测试计数。TRAIN同一原分配继续运行，前缀不作为完整训练或
+模型选择证据；科学CAL/QUAL和完整任务收益仍未开放或证明，CCF A未完成。
 
-本次仅整理报告/回执/日志，冻结科学代码/参数/种子不变；正在运行的
-TRAIN没有纳入本次静态记录包。旧7流28片及Native10片证明均经Git对象
-一致性绑定复用，不重复收费或冒称新恢复。下一步完整TRAIN后学习标准
-参考，再制定并执行独立自身历史科学资格、完整强对照任务收益及消融。
-
-源树{len(catalog)}项，发布{sum(r["published"] for r in catalog)}项，原始大文件
-和恢复副本留本地，省略目录公开；普通快进，无强推合并。
+全部旧失败及原始数据保留，旧7流/28片和Native499文件/10片的实际恢复
+证明经原Git对象身份核对复用，未重做或重复收费。源树{len(catalog)}项，
+发布{sum(r["published"] for r in catalog)}项；省略目录公开，普通快进，无强推合并。
 '''
     extras={'ARCHIVE_LATEST.md':note.encode('utf-8'),
-        'ARCHIVE_FILE_CATALOG_OCCAM_NATIVE_LOG_V3_20261028.json':(json.dumps(cache_receipt,ensure_ascii=False,indent=2)+'\n').encode('utf-8'),
+        'ARCHIVE_FILE_CATALOG_OCCAM_QUAL_REVIEW_V1_20261028.json':(json.dumps(cache_receipt,ensure_ascii=False,indent=2)+'\n').encode('utf-8'),
         (OUT/'archive_checkpoint.py').relative_to(ROOT).as_posix():(OUT/'archive_checkpoint.py').read_bytes(),
         (OUT/'catalog.json').relative_to(ROOT).as_posix():(OUT/'catalog.json').read_bytes()}
     extra_sha={}
@@ -149,7 +145,7 @@ TRAIN没有纳入本次静态记录包。旧7流28片及Native10片证明均经G
     env=os.environ.copy();env['GIT_INDEX_FILE']=str(build/'snapshot.index');git('read-tree','--empty',env=env)
     git('update-index','-z','--index-info',data=b''.join((mode+' '+oid+'\t'+n).encode()+b'\0' for n,(mode,oid) in sorted(entries.items())),env=env)
     tree=git('write-tree',env=env).decode().strip()
-    commit=git('commit-tree',tree,'-p',PARENT,data=b'Archive native stage Research_Log, verified full record publication and ongoing TRAIN checkpoint\n').decode().strip()
+    commit=git('commit-tree',tree,'-p',PARENT,data=b'Archive independent qualification obligations and source review without changing ongoing TRAIN\n').decode().strip()
     actual={}
     for raw in git('ls-tree','-r','-z',commit).split(b'\0'):
         if not raw:continue
