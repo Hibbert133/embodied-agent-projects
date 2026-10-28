@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_resource_process_v3.py", line 167, in _nested_failure
+    try:raise ValueError('constructed inner fixture cause')
+ValueError: constructed inner fixture cause
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_resource_process_v3.py", line 190, in fixture
+    elif kind=='RAISE_NESTED':_nested_failure()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_resource_process_v3.py", line 168, in _nested_failure
+    except ValueError as cause:raise RuntimeError('constructed outer fixture failure') from cause
+RuntimeError: constructed outer fixture failure
