@@ -1,0 +1,91 @@
+{
+  "integrity": "UNEXPECTED_FAILURE",
+  "outcomes": [
+    {
+      "job_id": 1,
+      "state": "RETURNED",
+      "result_sha256": "75d1f511ec9b24ef36b9c65bf66a68bbc2ea6ffd300052f533bba7f2498cb60b"
+    },
+    {
+      "job_id": 2,
+      "state": "RETURNED",
+      "result_sha256": "f7d854d7e9550b0152b13bc60788a6e435e62f9d55faee7dd360fa34f913ac76"
+    },
+    {
+      "job_id": 3,
+      "state": "WORKER_EXCEPTION",
+      "result_sha256": "773b49e4decd0a902cf3c45d5f1bbd1b268a29fc47f7c17b8180188cf4bc937a"
+    },
+    {
+      "job_id": 4,
+      "state": "UNRECEIPTED_EXIT",
+      "result_sha256": "3d2a84453ba21dfc66588c9ca1c4a4926d739013870408b052e65e237f4236ef"
+    },
+    {
+      "job_id": 5,
+      "state": "TIMEOUT_TERMINATED",
+      "result_sha256": "c0a0da06c20ba710a2c46cabbcad4105c2958f5eba419243c6de984ab36bd35f"
+    },
+    {
+      "job_id": 6,
+      "state": "INVALID_RECEIPT",
+      "result_sha256": "ccd801f08f67b8630a553e60f07435cc2b9b31e45785b9607b4e19a1f0d95714"
+    },
+    {
+      "job_id": 7,
+      "state": "WORKER_EXCEPTION",
+      "result_sha256": "bb935b62f51976ca4a9296700620e6b6bfdf1b8554fc8aa48ac92a1c230756e7"
+    },
+    {
+      "job_id": 8,
+      "state": "NOT_STARTED",
+      "task_metrics": null
+    }
+  ],
+  "launches": 7,
+  "unresolved_attempts": [],
+  "science_preflight": {
+    "sample": {
+      "schema": "OCCAM_RESOURCE_SAMPLE_V1",
+      "timestamp_UTC": "2026-10-28T01:53:16.608282+00:00",
+      "sample_started_ns": 1104847290142600,
+      "sample_completed_ns": 1104847297434200,
+      "observer_pid": 19540,
+      "measured_process_pid": 19540,
+      "pointer_bits": 64,
+      "disk_free_bytes": 4757286912,
+      "system_commit_total_bytes": 19211808768,
+      "system_commit_limit_bytes": 21468884992,
+      "system_commit_available_bytes": 2257076224,
+      "system_commit_peak_bytes": 21468811264,
+      "system_commit_total_pages": 4690383,
+      "system_commit_limit_pages": 5241427,
+      "system_commit_peak_pages": 5241409,
+      "current_process_available_commit_bytes": 2257076224,
+      "physical_total_bytes": 17173917696,
+      "physical_available_bytes": 4356747264,
+      "process_private_commit_bytes": 10145792,
+      "process_peak_private_commit_bytes": 11948032,
+      "process_working_set_bytes": 16179200,
+      "process_peak_working_set_bytes": 17907712,
+      "observer_available_address_space_bytes": 140733076701184,
+      "page_size_bytes": 4096
+    },
+    "decision": {
+      "allowed": false,
+      "reasons": [
+        "AVAILABLE_COMMIT_BELOW_FLOOR"
+      ],
+      "minimum_commit_bytes": 4294967296,
+      "minimum_disk_bytes": 4294967296,
+      "maximum_private_bytes": null,
+      "volatile_observation_not_memory_reservation": true
+    },
+    "observed_once": true
+  },
+  "science_collection_opened": false,
+  "new_environment_operations": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0,
+  "wall_ns": 3885233800
+}

@@ -1,0 +1,51 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 833, in uname
+    system, node, release, version, machine = infos = os.uname()
+AttributeError: module 'os' has no attribute 'uname'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_resource_process_v1.py", line 197, in fixture
+    from src.analysis.response_action_io_v1 import verify_runtime
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\response_action_io_v1.py", line 9, in <module>
+    from src.probe.response_action_program_v1 import Program,CONTROLS,PI_STYLES,LOCKED_PI
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\response_action_program_v1.py", line 5, in <module>
+    from src.probe import task_passive_program_v1 as old
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\task_passive_program_v1.py", line 6, in <module>
+    from src.probe.cold_start_response import ColdPrefix,validate_model,infer_operator
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\probe\cold_start_response.py", line 10, in <module>
+    from scipy.optimize import least_squares
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\optimize\__init__.py", line 422, in <module>
+    from ._optimize import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\optimize\_optimize.py", line 34, in <module>
+    from scipy.linalg import cholesky, issymmetric, LinAlgError
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\linalg\__init__.py", line 205, in <module>
+    from ._basic import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\linalg\_basic.py", line 14, in <module>
+    from ._decomp import _asarray_validated
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\linalg\_decomp.py", line 24, in <module>
+    from scipy._lib._util import _asarray_validated
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\_lib\_util.py", line 13, in <module>
+    from scipy._lib._array_api import array_namespace, is_numpy, xp_size
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\_lib\_array_api.py", line 18, in <module>
+    from scipy._lib.array_api_compat import (
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\scipy\_lib\array_api_compat\numpy\__init__.py", line 1, in <module>
+    from numpy import * # noqa: F403
+  File "<frozen importlib._bootstrap>", line 1073, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 1075, in _handle_fromlist
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\numpy\__init__.py", line 368, in __getattr__
+    import numpy.testing as testing
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\numpy\testing\__init__.py", line 11, in <module>
+    from ._private.utils import *
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\Lib\site-packages\numpy\testing\_private\utils.py", line 92, in <module>
+    IS_WASM = platform.machine() in ["wasm32", "wasm64"]
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 947, in machine
+    return uname().machine
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 836, in uname
+    node = _node()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\platform.py", line 582, in _node
+    return socket.gethostname()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\src\analysis\occam_resource_process_v1.py", line 171, in _worker_audit
+    raise RuntimeError('network or descendant creation forbidden in software worker')
+RuntimeError: network or descendant creation forbidden in software worker

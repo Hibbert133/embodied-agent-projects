@@ -1,0 +1,81 @@
+{
+  "schema": "OCCAM_RESOURCE_QUALIFICATION_V1",
+  "source_local_commit": "196bcba0c88508c19b2fcae6b4fbf3f9e558df8a",
+  "freeze_sha256": "a2b898b4b0af3fb613eb68655d16939bbb10702e1824c83e7857c9a6d29d886e",
+  "source_sha256": {
+    "src/analysis/occam_resource_observation_v1.py": "6a5e62d3ef9df6efcb5a078bfe0887db19bfdab590a5363f6b4d919bac0f9d8c",
+    "src/analysis/occam_resource_process_v1.py": "91d2f23a77547c1686c02f1f4e4d17279c774b8df69b5d9c6714929891ad886d",
+    "scripts/occam_resource_fixture_v1.py": "9ff51e3030af47fa0812b76ef5690b5bb85657ce282760308134a1c0b10ef846",
+    "src/analysis/occam_resource_qualification_v1.py": "6ceb2851f6aca8148d07c800503081cf162d5ca23f7c7e98c8eb2efeda854a56",
+    "scripts/qualify_occam_resources_v1.py": "92302854c2902ab64e96858dea09f91a60a2939ff535a1e01ae39021a544f4a5",
+    "tests/test_occam_resources_v1.py": "edb7c5f2c26299ecda6768356b103eaa49f5513ff397c8a4311e031e196dc6f3",
+    "docs/protocols/occam_resource_software_qualification_v1_zh.md": "4790063bfc22dd4876d4fd855180df8a681300ab90726dfaa7e64fc9ea884af6"
+  },
+  "timestamp_UTC": "2026-10-28T01:53:12.778253+00:00",
+  "jobs": [
+    {
+      "job_id": 1,
+      "kind": "RETURN",
+      "bytes": 4096,
+      "timeout_seconds": 10,
+      "expected_status": "RETURNED"
+    },
+    {
+      "job_id": 2,
+      "kind": "RETURN",
+      "bytes": 8192,
+      "timeout_seconds": 10,
+      "expected_status": "RETURNED"
+    },
+    {
+      "job_id": 3,
+      "kind": "RAISE_NESTED",
+      "bytes": 0,
+      "timeout_seconds": 10,
+      "expected_status": "WORKER_EXCEPTION"
+    },
+    {
+      "job_id": 4,
+      "kind": "EXIT",
+      "bytes": 0,
+      "timeout_seconds": 10,
+      "expected_status": "UNRECEIPTED_EXIT"
+    },
+    {
+      "job_id": 5,
+      "kind": "HANG",
+      "bytes": 0,
+      "timeout_seconds": 1,
+      "expected_status": "TIMEOUT_TERMINATED"
+    },
+    {
+      "job_id": 6,
+      "kind": "TAMPER",
+      "bytes": 0,
+      "timeout_seconds": 10,
+      "expected_status": "INVALID_RECEIPT"
+    },
+    {
+      "job_id": 7,
+      "kind": "IMPORT_RUNTIME",
+      "bytes": 0,
+      "timeout_seconds": 90,
+      "expected_status": "RETURNED"
+    },
+    {
+      "job_id": 8,
+      "kind": "RETURN",
+      "bytes": 65536,
+      "timeout_seconds": 10,
+      "expected_status": "RETURNED"
+    }
+  ],
+  "software_profile": {
+    "minimum_commit_bytes": 536870912,
+    "minimum_disk_bytes": 67108864,
+    "maximum_private_bytes": 1073741824
+  },
+  "new_environment_operations": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0
+}
