@@ -1,0 +1,79 @@
+from pathlib import Path
+ROOT=Path(r'C:/Users/Administrator/Desktop/embodied-agent-projects')
+text=Path(r'C:/Users/Administrator/Documents/ChatGPT/robotic agent/close_occam_resource_qualification_v1.py').read_text(encoding='utf8')
+for a,b in (('occam_resource_process_v1','occam_resource_process_v2'),('occam_resource_qualification_v1','occam_resource_qualification_v2'),
+    ('196bcba0c88508c19b2fcae6b4fbf3f9e558df8a','1b80c23e7abe8e150840323bd06393852b3c9ae7'),
+    ('occam_core_postcommit_196bcba0c885.json','occam_core_postcommit_1b80c23e7abe.json'),
+    ('2257076224','2470645760'),('4757286912','4751642624'),
+    ("('socket.gethostname()','_worker_audit','platform.py','numpy','scipy','network or descendant creation forbidden')",
+     "('_syscmd_ver','subprocess.Popen','_worker_audit','platform.py','numpy','scipy','network or descendant creation forbidden')")):
+    assert a in text,a;text=text.replace(a,b)
+i=text.index("    f.write('''");j=text.index("''')",i)
+report='''# 资源观测与进程软件资格v2：失败交付
+
+2026-10-28。**资格仍未通过，v2已关闭，不续接或重跑。** 本阶段只是工程
+前提，不是机器人／模型实验，也不证明新获取机制或CCF A贡献。
+
+冻结1b80c23e7abe8e150840323bd06393852b3c9ae7。35项纯字典／假进程检查通过：
+33项原契约回归重新执行（不重复记新增），2项本机事件窄放行与DNS拒绝新增；
+旧2619项来源绑定检查累计2621项。编译、两个依赖环境、秘密／实际暂存补扫、
+普通和暂存差异及字节核对通过。v1原始代码、失败和未启动全部保留。
+
+## 一次实际v2资格
+
+| 项目 | 实际结果 | 判定 |
+| --- | --- | --- |
+| 1 RETURN4096 | RETURNED | 符合期望 |
+| 2 RETURN8192 | RETURNED | 符合期望 |
+| 3 构造嵌套异常 | WORKER_EXCEPTION | 符合期望，完整栈；不是旧OOM复现 |
+| 4 无回执exit17 | UNRECEIPTED_EXIT | 符合期望，无备用成功回执 |
+| 5 短挂起 | TIMEOUT_TERMINATED | 符合期望，仅终止自己的句柄 |
+| 6 篡改nonce | INVALID_RECEIPT | 符合期望 |
+| 7 只读运行时导入 | WORKER_EXCEPTION | 非预期失败，退出1 |
+| 8 RETURN65536 | NOT_STARTED | 指标null，不启动、不重试 |
+
+本次7个真实软件进程；主执行约3.421秒。v1另有7个／约3.885秒，累计14个
+软件进程／约7.306秒（主执行和，不含开发、扫描或归档）。两次第8项均
+未启动。两次环境创建／重置／控制步／物理帧／政策查询／科学拟合／优化／
+在线LLM API均0；软件构造异常不算科学负任务或科学样本。
+
+## 错误栈与可区分的原因
+
+v2允许无参数本机主机名事件后，导入进入下一个链路：
+SciPy→NumPy→platform.machine→win32_ver→_syscmd_ver→subprocess.Popen。
+Python3.10的Windows版本辅助查询尝试启动ver，审计事件在创建后代前被
+守卫拒绝。它发生在read_only上下文进入的依赖导入阶段，正式守卫未进入，
+不能伪造运行时依赖核对通过或完整物理守卫回执。完整stderr与receipt栈
+一致，峰值私有提交501653504 bytes（约478.4MiB），不是原生工厂峰值。
+
+这次新栈说明v1的局部修复不足；不说明原科学TRAIN的bytes分配失败已经
+定位。标准库源码显示win32_ver在可选命令解析不可用时，已有基于
+sys.getwindowsversion().platform_version的进程内回退。后继应先明确并
+测试这个路径，保持禁止后代进程，而不是逐个允许外部命令。
+本地核对源码：.python310/Lib/platform.py，win32_ver与_syscmd_ver。
+
+独立闭合审计禁用主执行／分类／规格、资源读取／计算／门与Popen；前六项
+按字典复算，非预期项核对所有身份、来源、原字节哈希、时间、完整栈和退出；
+第8项没有目录或启动，保留null。它只证明失败闭合，不是完整八项软件资格。
+
+## 资源、边界与下一步
+
+一次科学入口观测：提交余量2470645760 bytes（2.30GiB），磁盘4751642624
+bytes（4.43GiB）。4GiB提交门未通过；科学采集仍关闭。可用物理内存、
+地址空间、工作集不能代替提交余量。观测易变，门槛不是资源预留或安全保证。
+
+下一步先冻结独立软件v3：在受限导入期间禁止可选ver命令，使原CPython
+使用其已有的系统版本回退；绑定标准库源码哈希，记录回退次数和系统版本，
+不伪造运行时或放开连接／DNS／后代进程。原八类契约、资源门槛和停止规则
+不变。成功仍只说明软件契约，真实原生collector、峰值、世界／随机数／时钟
+连续性及新独立科学分配仍需分别资格和预算。
+
+原TRAIN188完整／1部分／459未启动及全部预留继续关闭；没有训练新模型，
+不削弱科学见证，不用前缀绕过完整训练门。A方向的获取机制区别、强参考
+上的独立自身历史完整任务收益、消融与前瞻验证仍未建立。
+'''
+text=text[:i]+"    f.write('''"+report+text[j:]
+destination=Path(r'C:/Users/Administrator/Documents/ChatGPT/robotic agent/close_occam_resource_qualification_v2.py')
+compile(text,str(destination),'exec')
+with destination.open('x',encoding='utf8',newline='\n') as f:f.write(text)
+print(destination)
