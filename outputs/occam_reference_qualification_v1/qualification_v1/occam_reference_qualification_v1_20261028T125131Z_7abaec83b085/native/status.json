@@ -1,0 +1,94 @@
+{
+  "experiment_run_id": "occam_reference_qualification_v1_20261028T125131Z_7abaec83b085",
+  "manifest_id": "19347fbe7b039fabd536c411d74e87a823bd0925cd2bee9e5705329cdb77f78d",
+  "source_git_commit": "7abaec83b0854f099d6f13f308cc8cd552f50e2b",
+  "status": "COLLECTED_FOR_INDEPENDENT_AUDIT",
+  "allocated_executions": 174,
+  "executions": 174,
+  "control_steps": 14894,
+  "lifecycle": {
+    "counts": {
+      "reset_attempts": 8874,
+      "simulation_attempts": 902294,
+      "simulation_frames_attempted": 4511470,
+      "simulation_completed": 902294,
+      "simulation_frames_completed": 4511470,
+      "reset_completed": 8874
+    },
+    "by_phase": {
+      "GOAL_GENERATION": {
+        "reset_attempts": 8700,
+        "simulation_attempts": 870000,
+        "simulation_frames_attempted": 4350000,
+        "simulation_completed": 870000,
+        "simulation_frames_completed": 4350000,
+        "reset_completed": 8700
+      },
+      "CONTROLLED_RESET": {
+        "reset_attempts": 174,
+        "simulation_attempts": 17400,
+        "simulation_frames_attempted": 87000,
+        "simulation_completed": 17400,
+        "simulation_frames_completed": 87000,
+        "reset_completed": 174
+      },
+      "CONTROL": {
+        "simulation_attempts": 14894,
+        "simulation_frames_attempted": 74470,
+        "simulation_completed": 14894,
+        "simulation_frames_completed": 74470
+      }
+    }
+  },
+  "events": 108886,
+  "private_records": 1242,
+  "failure": null,
+  "cost_accounting": {
+    "completed_case_ledger": {
+      "counts": {
+        "reset_attempts": 8874,
+        "simulation_attempts": 902294,
+        "simulation_frames_attempted": 4511470,
+        "simulation_completed": 902294,
+        "simulation_frames_completed": 4511470,
+        "reset_completed": 8874
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 8700,
+          "simulation_attempts": 870000,
+          "simulation_frames_attempted": 4350000,
+          "simulation_completed": 870000,
+          "simulation_frames_completed": 4350000,
+          "reset_completed": 8700
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 174,
+          "simulation_attempts": 17400,
+          "simulation_frames_attempted": 87000,
+          "simulation_completed": 17400,
+          "simulation_frames_completed": 87000,
+          "reset_completed": 174
+        },
+        "CONTROL": {
+          "simulation_attempts": 14894,
+          "simulation_frames_attempted": 74470,
+          "simulation_completed": 14894,
+          "simulation_frames_completed": 74470
+        }
+      }
+    },
+    "completed_case_control_steps": 14894,
+    "unresolved_case_cost": false
+  },
+  "logical_attempts": 174,
+  "owned_native_process_launches_known": 174,
+  "unresolved_process_launches": [],
+  "unstarted": 0,
+  "online_LLM_API_calls": 0,
+  "new_neural_or_response_training": 0,
+  "standard_reference_deployment": true,
+  "collection_active_wall_limit_seconds": 10800,
+  "wall_ns": 2325364730800,
+  "publication_goal_complete": false
+}

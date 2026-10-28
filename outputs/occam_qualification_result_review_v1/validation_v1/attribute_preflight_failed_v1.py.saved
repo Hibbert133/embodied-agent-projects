@@ -1,0 +1,88 @@
+"""Own the scoped Git attributes and verify the final exact-byte result index."""
+from pathlib import Path
+import hashlib
+import json
+import subprocess
+import sys
+import prepare_delivery_v1 as v
+
+
+def main():
+    assert v.git('rev-parse', 'HEAD').decode().strip() == v.PARENT
+    assert not (v.OUT / 'complete.json').exists()
+    assert v.read(v.OUT / 'tracked_secret_scan.json')['returncode'] == 0
+    changed = set(v.git('diff', '--name-only').decode().splitlines())
+    assert '.gitattributes' in changed and changed <= {
+        '.gitattributes', 'reports/occam_reference_qualification_v1_delivery_zh.md'}
+    old = v.git('show', v.PARENT + ':.gitattributes')
+    now = (v.ROOT / '.gitattributes').read_bytes()
+    expected = [
+        '# Completed qualification results retain their original CSV and receipt bytes.',
+        'outputs/occam_reference_qualification_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol',
+        'outputs/occam_qualification_costs_v2/analysis_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol',
+        'outputs/occam_first_window_diagnostic_v1/analysis_v1/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol',
+    ]
+    assert now.decode('utf-8').splitlines() == old.decode('utf-8').splitlines() + expected
+    v.verify(v.read(v.OUT / 'source_binding.json')['all_checked_source_sha256'])
+    assert v.sha(v.RUN / 'statistics_v1/statistics.json') == v.STATS
+    owned = set(v.git('diff', '--cached', '--name-only').decode().splitlines())
+    assert owned == {s.decode() for s in (v.OUT / 'owned_scanned_v2.nul').read_bytes().split(b'\0') if s}
+    # The completed full scan is reusable; every later owned byte is rescanned below.
+    proc = subprocess.run(['git', '-c', 'maintenance.auto=false', '-c', 'gc.auto=0', 'diff', '--cached', '--check'],
+                          cwd=v.ROOT, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    assert proc.returncode == 2
+    with (v.OUT / 'preparation_v2_cached_diff_before_attributes.log').open('xb') as stream:
+        stream.write(proc.stdout + proc.stderr)
+    v.write(v.OUT / 'preparation_v2_failure.json', dict(
+        integrity='PRESERVED_CACHED_DIFF_PREPARATION_FAILURE', returncode=1, cached_diff_returncode=2,
+        source_sha256=v.sha(v.BASE / 'tools/prepare_delivery_v2.py'),
+        cause='Exact-byte CSV staging succeeded, but scoped CR-at-EOL attributes were not yet staged for cached diff checking',
+        original_CSV_files_not_modified=True, full_tracked_secret_scan_passed=True,
+        original_failure_trace='CalledProcessError: git diff --cached --check returned non-zero exit status 2',
+        repair='Stage the scoped attributes with their results, then repeat actual-index and both diff checks',
+        new_environment_interactions=0, new_fits=0, online_LLM_API_calls=0))
+    owned.update({'.gitattributes', Path(__file__).relative_to(v.ROOT).as_posix()})
+    owned.update(p.relative_to(v.ROOT).as_posix() for p in v.OUT.iterdir() if p.is_file())
+
+    def stage(label):
+        spec = v.OUT / (label + '.nul')
+        owned.add(spec.relative_to(v.ROOT).as_posix())
+        spec.write_bytes(b'\0'.join(n.encode('utf-8') for n in sorted(owned)) + b'\0')
+        for flags in ((), ('--renormalize',)):
+            v.git('add', *flags, '--pathspec-from-file=' + spec.relative_to(v.ROOT).as_posix(), '--pathspec-file-nul')
+
+    stage('owned_attributes_checked')
+    objects = v.index_check(owned)
+    v.write(v.OUT / 'attributes_and_final_index_proof.json', dict(
+        integrity='PASSED_SCOPED_ATTRIBUTES_AND_FINAL_EXACT_BYTE_INDEX', parent_commit=v.PARENT,
+        previous_Git_attributes_sha256=hashlib.sha256(old).hexdigest(), current_Git_attributes_sha256=v.sha(v.ROOT / '.gitattributes'),
+        previous_attribute_rules_preserved=True, only_completed_phase_patterns_appended=True,
+        global_Git_configuration_modified=False, original_CSV_disk_bytes_modified=False,
+        all_owned_actual_index_basic_EXTRA_and_decoded_gzip_checked=True, objects=objects,
+        full_tracked_scan_receipt_sha256=v.sha(v.OUT / 'tracked_secret_scan.json'),
+        original_scientific_sources_and_statistics_unchanged=True,
+        full_raw_delivery_complete=False, new_environment_interactions=0, new_fits=0, online_LLM_API_calls=0))
+    owned.add((v.OUT / 'attributes_and_final_index_proof.json').relative_to(v.ROOT).as_posix())
+    v.write(v.OUT / 'complete.json', dict(
+        integrity='PASSED_SUMMARY_DIAGNOSTICS_COST_DELIVERY_WITH_RAW_ARCHIVE_PENDING', parent_commit=v.PARENT,
+        manifest_id=v.read(v.RUN / 'manifest.json')['manifest_id'], primary_statistics_sha256=v.STATS,
+        numerical_qualification=True, predictive_qualification=True, task_qualification=False,
+        source_bound_2695_scientific_checks_reused=True, no_new_scientific_or_simulation_tests=True,
+        all_newly_staged_Python_compiled_in_memory=True, dependency_check_returncode=0,
+        full_tracked_secret_scan_returncode=0, actual_index_gzip_basic_EXTRA_scan=True,
+        ordinary_and_staged_diff_check=True, earlier_preparation_failures_preserved=2,
+        exact_seed_metadata_decompression_checked=True, figure_visually_reviewed=True,
+        full_raw_data_delivery_complete=False, raw_records_preserved=True,
+        new_environment_interactions=0, new_real_model_queries=0, new_fits=0,
+        new_episode_seed_allocations=0, online_LLM_API_calls=0, publication_goal_complete=False))
+    owned.add((v.OUT / 'complete.json').relative_to(v.ROOT).as_posix())
+    stage('owned_delivery_commit')
+    objects = v.index_check(owned)
+    assert not v.git('diff', '--name-only').strip()
+    print(json.dumps(dict(integrity='PASSED_FINAL_LOCAL_SUMMARY_COMMIT_INDEX_RAW_ARCHIVE_PENDING',
+        files=len(objects), bytes=sum(row['bytes'] for row in objects.values()), original_statistics_sha256=v.STATS)), flush=True)
+
+
+if __name__ == '__main__':
+    sys.stdout.reconfigure(encoding='utf-8')
+    main()

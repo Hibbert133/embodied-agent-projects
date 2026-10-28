@@ -1,0 +1,14 @@
+{
+  "integrity": "PRESERVED_CACHED_DIFF_PREPARATION_FAILURE",
+  "returncode": 1,
+  "cached_diff_returncode": 2,
+  "source_sha256": "f3856ac02bccc94f39111a5747e58a2364b924c6912e7735b62fe7d5f83aa91c",
+  "cause": "Exact-byte CSV staging succeeded, but scoped CR-at-EOL attributes were not yet staged for cached diff checking",
+  "original_CSV_files_not_modified": true,
+  "full_tracked_secret_scan_passed": true,
+  "original_failure_trace": "CalledProcessError: git diff --cached --check returned non-zero exit status 2",
+  "repair": "Stage the scoped attributes with their results, then repeat actual-index and both diff checks",
+  "new_environment_interactions": 0,
+  "new_fits": 0,
+  "online_LLM_API_calls": 0
+}

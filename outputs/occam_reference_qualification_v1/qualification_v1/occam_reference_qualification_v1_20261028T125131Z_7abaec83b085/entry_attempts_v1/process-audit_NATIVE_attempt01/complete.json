@@ -1,0 +1,66 @@
+{
+  "integrity": "PASSED",
+  "command": "process-audit",
+  "result": {
+    "integrity": "PASSED_ISOLATED_PROCESS_AND_BYTE_CONTINUITY_ONLY",
+    "executions": 174,
+    "control_steps": 14894,
+    "ledger": {
+      "counts": {
+        "reset_attempts": 8874,
+        "simulation_attempts": 902294,
+        "simulation_frames_attempted": 4511470,
+        "simulation_completed": 902294,
+        "simulation_frames_completed": 4511470,
+        "reset_completed": 8874
+      },
+      "by_phase": {
+        "GOAL_GENERATION": {
+          "reset_attempts": 8700,
+          "simulation_attempts": 870000,
+          "simulation_frames_attempted": 4350000,
+          "simulation_completed": 870000,
+          "simulation_frames_completed": 4350000,
+          "reset_completed": 8700
+        },
+        "CONTROLLED_RESET": {
+          "reset_attempts": 174,
+          "simulation_attempts": 17400,
+          "simulation_frames_attempted": 87000,
+          "simulation_completed": 17400,
+          "simulation_frames_completed": 87000,
+          "reset_completed": 174
+        },
+        "CONTROL": {
+          "simulation_attempts": 14894,
+          "simulation_frames_attempted": 74470,
+          "simulation_completed": 14894,
+          "simulation_frames_completed": 74470
+        }
+      }
+    },
+    "peak_private_commit_bytes": 851972096,
+    "raw_files_not_rewritten": true,
+    "new_physics_during_audit": 0,
+    "online_LLM_API_calls": 0,
+    "dynamics_and_full_witness_audit_required": true
+  },
+  "failure": null,
+  "guard": {},
+  "platform_query": {
+    "schema": "OCCAM_PLATFORM_BOOTSTRAP_V1",
+    "platform_module_sha256": "275b3d17d1f5ef4a0a7d3fcc7d5dbf72422a72ce234eb7c8a9d0d9975f6f70c3",
+    "native_windows_version": [
+      10,
+      0,
+      20348
+    ],
+    "optional_command_calls_suppressed": 1,
+    "optional_shell_probe_disabled": true,
+    "original_function_restored": true
+  },
+  "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "wall_ns": 10069457700,
+  "online_LLM_API_calls": 0
+}

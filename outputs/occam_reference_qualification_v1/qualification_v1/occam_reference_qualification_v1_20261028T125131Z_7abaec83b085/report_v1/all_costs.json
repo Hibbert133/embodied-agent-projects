@@ -1,0 +1,179 @@
+{
+  "phases": [
+    {
+      "phase": "NATIVE",
+      "allocated": 174,
+      "complete": 174,
+      "actual_control_steps_from_completed_cases": 14894,
+      "complete_case_ledger": {
+        "counts": {
+          "reset_attempts": 8874,
+          "simulation_attempts": 902294,
+          "simulation_frames_attempted": 4511470,
+          "simulation_completed": 902294,
+          "simulation_frames_completed": 4511470,
+          "reset_completed": 8874
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 8700,
+            "simulation_attempts": 870000,
+            "simulation_frames_attempted": 4350000,
+            "simulation_completed": 870000,
+            "simulation_frames_completed": 4350000,
+            "reset_completed": 8700
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 174,
+            "simulation_attempts": 17400,
+            "simulation_frames_attempted": 87000,
+            "simulation_completed": 17400,
+            "simulation_frames_completed": 87000,
+            "reset_completed": 174
+          },
+          "CONTROL": {
+            "simulation_attempts": 14894,
+            "simulation_frames_attempted": 74470,
+            "simulation_completed": 14894,
+            "simulation_frames_completed": 74470
+          }
+        }
+      },
+      "partial_and_unknown_cost_accounting": {
+        "completed_case_ledger": {
+          "counts": {
+            "reset_attempts": 8874,
+            "simulation_attempts": 902294,
+            "simulation_frames_attempted": 4511470,
+            "simulation_completed": 902294,
+            "simulation_frames_completed": 4511470,
+            "reset_completed": 8874
+          },
+          "by_phase": {
+            "GOAL_GENERATION": {
+              "reset_attempts": 8700,
+              "simulation_attempts": 870000,
+              "simulation_frames_attempted": 4350000,
+              "simulation_completed": 870000,
+              "simulation_frames_completed": 4350000,
+              "reset_completed": 8700
+            },
+            "CONTROLLED_RESET": {
+              "reset_attempts": 174,
+              "simulation_attempts": 17400,
+              "simulation_frames_attempted": 87000,
+              "simulation_completed": 17400,
+              "simulation_frames_completed": 87000,
+              "reset_completed": 174
+            },
+            "CONTROL": {
+              "simulation_attempts": 14894,
+              "simulation_frames_attempted": 74470,
+              "simulation_completed": 14894,
+              "simulation_frames_completed": 74470
+            }
+          }
+        },
+        "completed_case_control_steps": 14894,
+        "unresolved_case_cost": false
+      },
+      "collection_active_wall_ns": 2325364730800
+    },
+    {
+      "phase": "QUAL",
+      "allocated": 1566,
+      "complete": 1566,
+      "actual_control_steps_from_completed_cases": 172511,
+      "complete_case_ledger": {
+        "counts": {
+          "reset_attempts": 79866,
+          "simulation_attempts": 8159111,
+          "simulation_frames_attempted": 40795555,
+          "simulation_completed": 8159111,
+          "simulation_frames_completed": 40795555,
+          "reset_completed": 79866
+        },
+        "by_phase": {
+          "GOAL_GENERATION": {
+            "reset_attempts": 78300,
+            "simulation_attempts": 7830000,
+            "simulation_frames_attempted": 39150000,
+            "simulation_completed": 7830000,
+            "simulation_frames_completed": 39150000,
+            "reset_completed": 78300
+          },
+          "CONTROLLED_RESET": {
+            "reset_attempts": 1566,
+            "simulation_attempts": 156600,
+            "simulation_frames_attempted": 783000,
+            "simulation_completed": 156600,
+            "simulation_frames_completed": 783000,
+            "reset_completed": 1566
+          },
+          "CONTROL": {
+            "simulation_attempts": 172511,
+            "simulation_frames_attempted": 862555,
+            "simulation_completed": 172511,
+            "simulation_frames_completed": 862555
+          }
+        }
+      },
+      "partial_and_unknown_cost_accounting": {
+        "completed_case_ledger": {
+          "counts": {
+            "reset_attempts": 79866,
+            "simulation_attempts": 8159111,
+            "simulation_frames_attempted": 40795555,
+            "simulation_completed": 8159111,
+            "simulation_frames_completed": 40795555,
+            "reset_completed": 79866
+          },
+          "by_phase": {
+            "GOAL_GENERATION": {
+              "reset_attempts": 78300,
+              "simulation_attempts": 7830000,
+              "simulation_frames_attempted": 39150000,
+              "simulation_completed": 7830000,
+              "simulation_frames_completed": 39150000,
+              "reset_completed": 78300
+            },
+            "CONTROLLED_RESET": {
+              "reset_attempts": 1566,
+              "simulation_attempts": 156600,
+              "simulation_frames_attempted": 783000,
+              "simulation_completed": 156600,
+              "simulation_frames_completed": 783000,
+              "reset_completed": 1566
+            },
+            "CONTROL": {
+              "simulation_attempts": 172511,
+              "simulation_frames_attempted": 862555,
+              "simulation_completed": 172511,
+              "simulation_frames_completed": 862555
+            }
+          }
+        },
+        "completed_case_control_steps": 172511,
+        "unresolved_case_cost": false
+      },
+      "collection_active_wall_ns": 21931817925200
+    }
+  ],
+  "new_online_LLM_API_calls": 0,
+  "prior_new_training_data": {
+    "executions": 684,
+    "control_steps": 85789,
+    "all_resets": 34884,
+    "physical_frames": 17870945,
+    "AdamW_updates": 9000,
+    "training_solves": 66712,
+    "mathematical_audit_solves": 918
+  },
+  "closed_v2_source": {
+    "control_steps": 27982,
+    "all_resets": 11475,
+    "physical_frames": 5877410
+  },
+  "older_C8_and_design_sources_separate_and_not_charged_once_per_program": true,
+  "unknown_costs_are_not_zero": true
+}

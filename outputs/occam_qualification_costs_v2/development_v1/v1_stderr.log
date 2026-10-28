@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_qualification_costs_v1\tools\run_costs_v1.py", line 123, in <module>
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('command',choices=('freeze','analyze'));x=p.parse_args();print(json.dumps(freeze() if x.command=='freeze' else analyze()))
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_qualification_costs_v1\tools\run_costs_v1.py", line 77, in analyze
+    catalog[path.relative_to(ROOT).as_posix()]=gate.sha(path);rows.append(e.case_cost(case,spec))
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\occam_qualification_costs_v1\tools\costs_engine_v1.py", line 56, in case_cost
+    require(case['online_LLM_API_calls']==0 and type(case['wall_ns']) is int and case['wall_ns']>=0,'current qualification API and inclusive host wall accounting')
+KeyError: 'online_LLM_API_calls'
