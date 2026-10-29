@@ -1,0 +1,798 @@
+{
+  "STATE_CHANGE": [
+    {
+      "gain_actions": [
+        "K0",
+        "K1"
+      ],
+      "options": {
+        "C": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "V": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V0",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V1",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "M": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "M0",
+              "before_steps": 16,
+              "after_steps": 36,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 4,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "M1",
+              "before_steps": 16,
+              "after_steps": 36,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 6
+            }
+          }
+        ]
+      },
+      "logging": {
+        "C": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        }
+      }
+    },
+    {
+      "C": {
+        "K0": 212,
+        "K1": 70
+      },
+      "V0": {
+        "K0": 24,
+        "K1": 80
+      },
+      "V1": {
+        "K0": 400,
+        "K1": 60
+      },
+      "M0": {
+        "K0": 4,
+        "K1": 80
+      },
+      "M1": {
+        "K0": 400,
+        "K1": 6
+      }
+    },
+    {
+      "C": {
+        "K0": 0,
+        "K1": 1
+      },
+      "V0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "V1": {
+        "K0": 0,
+        "K1": 1
+      },
+      "M0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "M1": {
+        "K0": 0,
+        "K1": 1
+      }
+    }
+  ],
+  "NO_STATE_EFFECT": [
+    {
+      "gain_actions": [
+        "K0",
+        "K1"
+      ],
+      "options": {
+        "C": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "V": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V0",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V1",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "M": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "M0",
+              "before_steps": 16,
+              "after_steps": 36,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "M1",
+              "before_steps": 16,
+              "after_steps": 36,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ]
+      },
+      "logging": {
+        "C": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        }
+      }
+    },
+    {
+      "C": {
+        "K0": 212,
+        "K1": 70
+      },
+      "V0": {
+        "K0": 24,
+        "K1": 80
+      },
+      "V1": {
+        "K0": 400,
+        "K1": 60
+      },
+      "M0": {
+        "K0": 24,
+        "K1": 80
+      },
+      "M1": {
+        "K0": 400,
+        "K1": 60
+      }
+    },
+    {
+      "C": {
+        "K0": 0,
+        "K1": 1
+      },
+      "V0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "V1": {
+        "K0": 0,
+        "K1": 1
+      },
+      "M0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "M1": {
+        "K0": 0,
+        "K1": 1
+      }
+    }
+  ],
+  "TERMINAL_FAILURE": [
+    {
+      "gain_actions": [
+        "K0",
+        "K1"
+      ],
+      "options": {
+        "C": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "V": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V0",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "VF",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": true,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 0,
+              "K1": 0
+            }
+          }
+        ]
+      },
+      "logging": {
+        "C": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        }
+      }
+    },
+    {
+      "C": {
+        "K0": 212,
+        "K1": 70
+      },
+      "V0": {
+        "K0": 24,
+        "K1": 80
+      },
+      "V1": {
+        "K0": 400,
+        "K1": 60
+      },
+      "M0": {
+        "K0": 4,
+        "K1": 80
+      },
+      "M1": {
+        "K0": 400,
+        "K1": 6
+      }
+    },
+    {
+      "C": {
+        "K0": 0,
+        "K1": 1
+      },
+      "V0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "V1": {
+        "K0": 0,
+        "K1": 1
+      },
+      "M0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "M1": {
+        "K0": 0,
+        "K1": 1
+      }
+    }
+  ],
+  "TERMINAL_SUCCESS": [
+    {
+      "gain_actions": [
+        "K0",
+        "K1"
+      ],
+      "options": {
+        "C": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 100,
+              "K1": 100
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 100,
+              "K1": 100
+            }
+          }
+        ],
+        "V": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V0",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 160,
+              "K1": 200
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "VS",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": true,
+              "success": true
+            },
+            "remaining_losses": {
+              "K0": 0,
+              "K1": 0
+            }
+          }
+        ]
+      },
+      "logging": {
+        "C": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        }
+      }
+    },
+    {
+      "C": {
+        "K0": 100,
+        "K1": 100
+      },
+      "V0": {
+        "K0": 160,
+        "K1": 200
+      },
+      "V1": {
+        "K0": 400,
+        "K1": 60
+      },
+      "M0": {
+        "K0": 4,
+        "K1": 80
+      },
+      "M1": {
+        "K0": 400,
+        "K1": 6
+      }
+    },
+    {
+      "C": {
+        "K0": 0,
+        "K1": 1
+      },
+      "V0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "V1": {
+        "K0": 0,
+        "K1": 1
+      },
+      "M0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "M1": {
+        "K0": 0,
+        "K1": 1
+      }
+    }
+  ],
+  "NO_OVERLAP": [
+    {
+      "gain_actions": [
+        "K0",
+        "K1"
+      ],
+      "options": {
+        "C": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "C",
+              "before_steps": 16,
+              "after_steps": 16,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "V": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V0",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 24,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "V1",
+              "before_steps": 16,
+              "after_steps": 24,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 60
+            }
+          }
+        ],
+        "M": [
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "M0",
+              "before_steps": 16,
+              "after_steps": 36,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 4,
+              "K1": 80
+            }
+          },
+          {
+            "mass": "1/2",
+            "public_return": {
+              "schema": "FINITE_PUBLIC_RETURN_V1",
+              "history_token": "M1",
+              "before_steps": 16,
+              "after_steps": 36,
+              "terminal": false,
+              "success": false
+            },
+            "remaining_losses": {
+              "K0": 400,
+              "K1": 6
+            }
+          }
+        ]
+      },
+      "logging": {
+        "C": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "V1": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M0": {
+          "K0": "1/4",
+          "K1": "3/4"
+        },
+        "M1": {
+          "K0": 1,
+          "K1": 0
+        }
+      }
+    },
+    {
+      "C": {
+        "K0": 212,
+        "K1": 70
+      },
+      "V0": {
+        "K0": 24,
+        "K1": 80
+      },
+      "V1": {
+        "K0": 400,
+        "K1": 60
+      },
+      "M0": {
+        "K0": 4,
+        "K1": 80
+      },
+      "M1": {
+        "K0": 400,
+        "K1": 6
+      }
+    },
+    {
+      "C": {
+        "K0": 0,
+        "K1": 1
+      },
+      "V0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "V1": {
+        "K0": 0,
+        "K1": 1
+      },
+      "M0": {
+        "K0": 1,
+        "K1": 0
+      },
+      "M1": {
+        "K0": 0,
+        "K1": 1
+      }
+    }
+  ]
+}
