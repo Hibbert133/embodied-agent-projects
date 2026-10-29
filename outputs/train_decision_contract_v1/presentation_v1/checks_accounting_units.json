@@ -1,0 +1,110 @@
+{
+  "integrity": "PASSED_LITERAL_CHECK_UNITS_DISCLOSURE",
+  "original_frozen_audit_sha256": "1462339de82e7890555b28d40915ab12ca9351322084d946cf95859a0b9aa79b",
+  "frozen_bookkeeping_units": 121240,
+  "components": {
+    "actual_step_units": 85789,
+    "window_units": 3591,
+    "per_case_units": 20520,
+    "overall_and_cohort_panel_units": 30,
+    "cell_panel_units": 360,
+    "alias_member_units": 10944,
+    "alias_summary_units": 6
+  },
+  "actual_assertion_invocation_count_not_instrumented": true,
+  "not_independent_samples": true,
+  "original_pre_addendum_report_sha256": "137a423e46f570e7089e8ebf99e3a873b8a9024acf84374548ec6e83956ece5b",
+  "all_12_context_pair_cells": [
+    {
+      "cohort": "NATIVE",
+      "acquisition_action": "CONTINUE",
+      "point": "before",
+      "EQUAL": 6
+    },
+    {
+      "cohort": "NATIVE",
+      "acquisition_action": "CONTINUE",
+      "point": "after",
+      "EQUAL": 6
+    },
+    {
+      "cohort": "NATIVE",
+      "acquisition_action": "VALIDATE8",
+      "point": "before",
+      "EQUAL": 6
+    },
+    {
+      "cohort": "NATIVE",
+      "acquisition_action": "VALIDATE8",
+      "point": "after",
+      "DIFFERENT": 6
+    },
+    {
+      "cohort": "NATIVE",
+      "acquisition_action": "MOVE_MEASURE",
+      "point": "before",
+      "EQUAL": 6
+    },
+    {
+      "cohort": "NATIVE",
+      "acquisition_action": "MOVE_MEASURE",
+      "point": "after",
+      "DIFFERENT": 6
+    },
+    {
+      "cohort": "TRAIN",
+      "acquisition_action": "CONTINUE",
+      "point": "before",
+      "EQUAL": 94,
+      "MISSING": 14
+    },
+    {
+      "cohort": "TRAIN",
+      "acquisition_action": "CONTINUE",
+      "point": "after",
+      "EQUAL": 94,
+      "MISSING": 14
+    },
+    {
+      "cohort": "TRAIN",
+      "acquisition_action": "VALIDATE8",
+      "point": "before",
+      "EQUAL": 94,
+      "MISSING": 14
+    },
+    {
+      "cohort": "TRAIN",
+      "acquisition_action": "VALIDATE8",
+      "point": "after",
+      "DIFFERENT": 94,
+      "MISSING": 14
+    },
+    {
+      "cohort": "TRAIN",
+      "acquisition_action": "MOVE_MEASURE",
+      "point": "before",
+      "EQUAL": 94,
+      "MISSING": 14
+    },
+    {
+      "cohort": "TRAIN",
+      "acquisition_action": "MOVE_MEASURE",
+      "point": "after",
+      "DIFFERENT": 94,
+      "MISSING": 14
+    }
+  ],
+  "counters": {
+    "environment_interactions": 0,
+    "controlled_resets": 0,
+    "all_resets": 0,
+    "physical_frames": 0,
+    "policy_queries": 0,
+    "model_queries": 0,
+    "model_fits": 0,
+    "neural_training": 0,
+    "filter_updates": 0,
+    "new_episode_seeds": 0,
+    "online_LLM_API_calls": 0
+  }
+}
