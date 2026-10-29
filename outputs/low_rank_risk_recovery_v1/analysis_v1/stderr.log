@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_recovery_v1\tools\run_saved_v1.py", line 156, in <module>
+    worker() if a.worker else analyze()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_recovery_v1\tools\run_saved_v1.py", line 69, in worker
+    c=saved.certificate(b,x[train],y[train],g[train],kind,ids[train]);c.update(context=tag,kind=kind)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_recovery_v1\tools\saved_audit_v1.py", line 59, in certificate
+    close(p@saved['alpha'],np.zeros(12),'dual intercept constraint')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_recovery_v1\tools\saved_audit_v1.py", line 15, in close
+    need(delta<=tol,msg);return delta
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_recovery_v1\tools\saved_audit_v1.py", line 8, in need
+    if not ok:raise ValueError('saved certificate: '+msg)
+ValueError: saved certificate: dual intercept constraint

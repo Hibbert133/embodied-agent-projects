@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_pilot_v1\tools\run_rank_v1.py", line 282, in <module>
+    worker() if args.worker else analyze()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_pilot_v1\tools\run_rank_v1.py", line 201, in worker
+    with np.load(OLD/'models'/('static_'+kind+'.npz'),allow_pickle=False) as old:
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\lib\_npyio_impl.py", line 468, in load
+    ret = NpzFile(fid, own_fid=own_fid, allow_pickle=allow_pickle,
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\lib\_npyio_impl.py", line 188, in __init__
+    _zip = zipfile_factory(fid)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.venv\lib\site-packages\numpy\lib\_npyio_impl.py", line 103, in zipfile_factory
+    return zipfile.ZipFile(file, *args, **kwargs)
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\zipfile.py", line 1269, in __init__
+    self._RealGetContents()
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\zipfile.py", line 1376, in _RealGetContents
+    filename = filename.decode('cp437')
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\.python310\lib\encodings\__init__.py", line 99, in search_function
+    mod = __import__('encodings.' + modname, fromlist=_import_tail,
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1073, in get_data
+  File "C:\Users\Administrator\Desktop\embodied-agent-projects\outputs\low_rank_risk_pilot_v1\tools\run_rank_v1.py", line 95, in hook
+    if not writing and not inside and p not in allowed:counts['undeclared_reads']+=1;raise RuntimeError('undeclared data read')
+RuntimeError: undeclared data read
